@@ -1,4 +1,4 @@
-# M13 v0.13.7 — routine full-source run
+# M13 v0.13.8 — routine full-source run
 
 ## Routine use
 
@@ -61,7 +61,7 @@ PYTHONPATH=src python3 scripts/m13_prod.py finalize --run /path/to/run
 PYTHONPATH=src python3 scripts/m13_prod.py combine --runs /path/to/batch/runs --out /path/to/Combined_Royalty_Research.xlsx
 ```
 
-Add `--legacy-xlsx` to `finalize` for the optional 16-sheet technical workbook. The default export is the established five-sheet workbook. `combine` lists unfinished runs in its result and workbook overview; they are not silently treated as complete.
+Add `--legacy-xlsx` to `finalize` for the optional 16-sheet technical workbook. The default export is the established five-sheet workbook. `combine` lists unfinished runs in its result and workbook overview; they are not silently treated as complete. The default workbook also opens with sheet `00 Run Summary` (v0.13.8): one row per run folder with Status (EXPORTED / NOT_FINISHED - n of m reading calls done / FAILED - reason), QC state and royalty row count, a counts line, and counts of candidates the batch did not read. `Usable for royalty benchmark` is NO with first reason `needs review: <state>` for `SOURCE_CHECK_FAILED`, `SECOND_READER_FAILED_SOURCE_CHECK` and `TWO_READERS_DIFFER`, and for any row with its own source-check error; `TWO_READERS_AGREE_ON_NUMBERS` stays YES with a note to read the STRUCTURE differences.
 
 ## Status and interpretation
 

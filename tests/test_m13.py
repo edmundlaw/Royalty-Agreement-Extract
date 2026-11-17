@@ -303,11 +303,30 @@ class Pipeline(unittest.TestCase):
         self.assertNotIn('source_flags', rows)
         from openpyxl import load_workbook
         research = load_workbook(self.root / 'output' / 'Royalty_Research_M13.xlsx')
-        self.assertEqual(research.sheetnames, ['01 Royalty Database','02 Tiers & Mechanics', '03 Other Payments', '04 Source Evidence', '05 QC & Issues', '06 Other Terms'])
+        self.assertEqual(research.sheetnames, ['00 Run Summary', '01 Royalty Database','02 Tiers & Mechanics', '03 Other Payments', '04 Source Evidence', '05 QC & Issues', '06 Other Terms'])
         wb = load_workbook(self.root / 'output' / 'Royalty_Research_M13_Detailed.xlsx')
         self.assertEqual(wb.sheetnames[:3], ['Overview', 'Reader Check', 'Reader Differences'])
         self.assertEqual(wb['Royalty Terms'].cell(row=2, column=[c.value for c in wb['Royalty Terms'][1]].index('QC_State') + 1).value,
                          'TWO_READERS_DIFFER')
+
+    def test_run_summary_for_single_run_and_failed_run(self):
+        from openpyxl import load_workbook
+        from royalty_research import m13_two_reader as m13
+        prepare(SYNTHETIC_MAP, self.root, engine='codex', model='mock-a')
+        a = self.fake('reader_a_cli', 'mock-a')
+        self.run_all({'reader_a': a})
+        _, _, run_map, _ = m13._load(self.root)
+        (self.root / 'finalize_error.txt').write_text('ValueError: Bad agreement evidence\n')
+        row = m13._unfinished_row(self.root, run_map)
+        self.assertTrue(row[3].startswith('FAILED \u2013 ValueError: Bad agreement evidence'), row)
+        finalize(self.root)
+        self.assertFalse((self.root / 'finalize_error.txt').exists())   # a later success clears the failure note
+        ws = load_workbook(self.root / 'output' / 'Royalty_Research_M13.xlsx')['00 Run Summary']
+        rows = [r for r in ws.iter_rows(min_row=8, values_only=True) if r[0]]
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0][3], 'EXPORTED')
+        self.assertIn('1 agreement: 1 exported', ws['A4'].value)
+        self.assertEqual(ws.freeze_panes, 'B8')
 
     def test_without_check_exports_first_reading(self):
         prepare(SYNTHETIC_MAP, self.root, engine='codex', model='mock-a', check_engine='codex', check_model='mock-b')
@@ -332,7 +351,14 @@ class Pipeline(unittest.TestCase):
         self.assertEqual(result['not_finished'], ['not_started'])
         from openpyxl import load_workbook
         research = load_workbook(out)
-        self.assertEqual(len(research.sheetnames), 6)
+        self.assertEqual(len(research.sheetnames), 7)
+        summary = [r for r in research['00 Run Summary'].iter_rows(min_row=8, max_row=10, values_only=True) if r[0]]
+        self.assertEqual(len(summary), 3)
+        self.assertIn('3 agreements: 2 exported, 1 not finished', research['00 Run Summary']['A4'].value)
+        self.assertEqual(sum(1 for r in summary if str(r[3]).startswith('EXPORTED')), 2)
+        unfinished = [r for r in summary if str(r[3]).startswith('NOT_FINISHED')]
+        self.assertEqual(len(unfinished), 1)
+        self.assertIn('0 of', unfinished[0][3])
         wb = load_workbook(self.base / 'all_Detailed.xlsx')
         self.assertEqual(wb['Reader Check'].max_row, 3)
         rate = [c.value for c in wb['Tiers'][1]].index('Rate_Numeric') + 1

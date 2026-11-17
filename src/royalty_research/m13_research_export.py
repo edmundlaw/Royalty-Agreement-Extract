@@ -48,8 +48,10 @@ SHORT_LIMIT = 150      # cap for long agreement-level text in sheet 01
 # separate 'recovery' family, so SUBLICENSING_RECEIPTS is the whole list.
 PASS_THROUGH_FAMILIES = {'SUBLICENSING_RECEIPTS'}
 # Term sheet / conditional agreements: simple wording match on contractual_status.
-_CONDITIONAL = re.compile(r'term sheet|letter of intent|heads of terms|memorandum of understanding|non-?binding|'
-                          r'conditional|conditions? precedent|subject to[^.;]{0,60}conditions?', re.I)
+# "conditional" must not match inside "unconditional" (an "Unconditional and binding" licence is not a
+# term sheet); "non-binding" matches, a bare "binding" does not.
+_CONDITIONAL = re.compile(r'term sheet|letter of intent|heads of terms|memorandum of understanding|\bnon-?\s?binding\b|'
+                          r'(?<![A-Za-z])conditional|conditions? precedent|subject to[^.;]{0,60}conditions?', re.I)
 _IA_KEYWORDS = (('PATENT', re.compile(r'\bpatents?\b', re.I)),
                 ('TRADEMARK_BRAND', re.compile(r'\btrade ?marks?\b|\bbrand marks?\b', re.I)),
                 ('COPYRIGHT', re.compile(r'\bcopyrights?\b', re.I)),
@@ -83,13 +85,35 @@ def _related_hint(texts):
     return None
 
 
-def benchmark_usable(term, related, status, *, nature=None, grant_found=None):
+# Document QC states that make a reading unfit for use as a benchmark until a person has looked at it.
+NEEDS_REVIEW_STATES = ('SOURCE_CHECK_FAILED','SECOND_READER_FAILED_SOURCE_CHECK','TWO_READERS_DIFFER')
+
+
+def _record_error_codes(term_id, source_errors):
+    """Codes of source-check errors tied to one royalty term (ref is the term, one of its tiers, or its evidence)."""
+    tid=str(term_id or '')
+    if not tid:return []
+    out=[]
+    for e in source_errors or []:
+        ref=str((e or {}).get('ref') or '')
+        if ref==tid or ref.startswith(tid+':'):out.append(str(e.get('code') or 'ERROR'))
+    return out
+
+
+def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc_state=None, record_errors=None):
     """Python rule, zero AI. Returns ('YES'|'NO', note). Any one reason makes it NO.
 
     nature is the reader's own licensed_ip_nature; grant_found is True/False when the source text was
     scanned for licence-grant wording, None when no text is available (then that reason is skipped).
+    qc_state is the document's QC state: SOURCE_CHECK_FAILED, SECOND_READER_FAILED_SOURCE_CHECK and
+    TWO_READERS_DIFFER force NO ("needs review: <state>" is the first reason). record_errors lists the
+    source-check error codes tied to this very row; any of them forces NO. TWO_READERS_AGREE_ON_NUMBERS
+    stays allowed (same numbers in the same clauses) with a note to read the STRUCTURE differences.
+    SINGLE_READER_NOT_CHECKED is the normal mode and stays allowed.
     """
     reasons=[]
+    if qc_state in NEEDS_REVIEW_STATES:reasons.append(f'needs review: {qc_state}')
+    if record_errors:reasons.append('needs review: source-check error on this row ('+', '.join(sorted(set(record_errors)))+')')
     if nature=='UNDETERMINED' and grant_found is False:
         reasons.append('no IP licence grant found (e.g. services / profit share)')
     family=term.get('Family')
@@ -106,7 +130,9 @@ def benchmark_usable(term, related, status, *, nature=None, grant_found=None):
     if related.startswith('YES'):reasons.append('related-party agreement'+(' (keyword hint)' if 'hint' in related else ''))
     if _CONDITIONAL.search(status or ''):reasons.append('term sheet or conditional agreement')
     if reasons:return 'NO','; '.join(reasons)
-    return 'YES','No exclusion rule triggered; still confirm at point of use'
+    note='No exclusion rule triggered; still confirm at point of use'
+    if qc_state=='TWO_READERS_AGREE_ON_NUMBERS':note+='; both readers agree on the numbers, check sheet 05 STRUCTURE differences'
+    return 'YES',note
 
 
 def _records(rows, name):
@@ -190,7 +216,8 @@ def _payment_references(payments: list[dict]):
                     for p in payments if p.get('Payment_ID'))
 
 
-def research_rows(rows: dict, first_readings: dict | None = None, source_texts: dict | None = None) -> dict:
+def research_rows(rows: dict, first_readings: dict | None = None, source_texts: dict | None = None,
+                  source_errors: dict | None = None) -> dict:
     """Derive a presentational database. All primary evidence remains in rows.
 
     first_readings maps Document_ID to its *first reader* extraction. This does
@@ -246,7 +273,9 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
                 if word:related=f'YES (keyword hint: "{word}")'
         grant_text=' '.join(list(source_texts.get(did) or [])+[e.get('Exact_Quotation') or '' for (d_,_i),e in evid_by_doc.items() if d_==did])
         usable,usable_note=benchmark_usable(t,related,doc.get('Contract_Status'),nature=agreement.get('licensed_ip_nature'),
-                                            grant_found=(grant_hits(grant_text)>0 if grant_text.strip() else None))
+                                            grant_found=(grant_hits(grant_text)>0 if grant_text.strip() else None),
+                                            qc_state=t.get('QC_State') or doc.get('Extraction_Status'),
+                                            record_errors=_record_error_codes(t.get('Term_ID'),(source_errors or {}).get(did)))
         license_text=doc.get('Licensed_IP') or agreement.get('licensed_ip')
         rights=agreement.get('sublicensing_rights') or 'NOT_ASSESSED'
         material=agreement.get('other_material_terms') or []
@@ -351,7 +380,71 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
     return {name:[[_safe(x) for x in row] for row in result[name]] for name in NAMES}
 
 
-def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | None = None, source_texts: dict | None = None):
+SUMMARY_NAME = '00 Run Summary'
+SUMMARY_HEADERS = ['Document ID','Company / licensor \u2013 licensee','SEC source link','Status','QC state','Royalty rows','Note']
+
+
+def _write_run_summary(wb, summary):
+    """Sheet 00: one row per run folder of the batch, so an unfinished or failed agreement is never silent.
+
+    summary = {'counts': str, 'rows': [[...SUMMARY_HEADERS...]], 'candidates': [(status, count, meaning)], 'candidate_line': str}
+    """
+    from .m3_export import official_sec_url
+    from .m3_workbook import _clean
+    from openpyxl.styles import Font, PatternFill, Border, Side, Alignment
+    from openpyxl.utils import get_column_letter
+    orange='FD5108'; black='000000'; light='F5F7F8'
+    ws=wb.create_sheet(SUMMARY_NAME,0)
+    ws.sheet_view.showGridLines=False
+    ws.sheet_properties.tabColor=orange
+    n=len(SUMMARY_HEADERS); last_col=get_column_letter(n)
+    ws.cell(1,1,'RUN SUMMARY  |  Every agreement of this batch').font=Font(name='Georgia',size=15,bold=True,color=black)
+    ws.merge_cells(start_row=1,start_column=1,end_row=1,end_column=min(n,7)); ws.row_dimensions[1].height=29
+    for c in range(1,n+1):ws.cell(2,c).border=Border(bottom=Side(style='medium',color=orange))
+    ws.row_dimensions[2].height=8
+    lines=['One row per run folder; agreements that are not finished or failed are listed here and are NOT in sheets 01-06',
+           summary.get('counts') or '',
+           summary.get('candidate_line') or 'Candidates the batch did not read: not recorded for this workbook']
+    for i,text in enumerate(lines,3):
+        cell=ws.cell(i,1,text);cell.font=Font(name='Arial',size=10,bold=(i==4),color=black)
+        cell.alignment=Alignment(vertical='center',wrap_text=True)
+        ws.merge_cells(start_row=i,start_column=1,end_row=i,end_column=n);ws.row_dimensions[i].height=20 if i!=5 else 34
+    ws.row_dimensions[6].height=8
+    for c,title in enumerate(SUMMARY_HEADERS,1):
+        cell=ws.cell(7,c,title);cell.font=Font(name='Arial',size=10,bold=True,color=black)
+        cell.fill=PatternFill('solid',fgColor='FFFFFF');cell.alignment=Alignment(vertical='center',wrap_text=True)
+        cell.border=Border(top=Side(style='medium',color=orange),bottom=Side(style='medium',color=orange))
+        ws.column_dimensions[get_column_letter(c)].width=[26,44,38,40,30,14,50][c-1]
+    ws.row_dimensions[7].height=37
+    rows=summary.get('rows') or []
+    for ridx,row in enumerate(rows,8):
+        ws.row_dimensions[ridx].height=33
+        for c,val in enumerate(row,1):
+            cell=ws.cell(ridx,c,_clean(val))
+            if isinstance(cell.value,str):cell.data_type='s'
+            cell.font=Font(name='Arial',size=10,bold=(c==4 and not str(val).startswith('EXPORTED')),color=black)
+            cell.alignment=Alignment(vertical='center',wrap_text=True)
+            if ridx%2==1:cell.fill=PatternFill('solid',fgColor=light)
+            if isinstance(cell.value,str) and 'sec.gov/' in cell.value and official_sec_url(cell.value):cell.hyperlink=cell.value
+    end=7+len(rows)
+    if rows:ws.auto_filter.ref=f'A7:{last_col}{end}'
+    cands=summary.get('candidates') or []
+    if cands:
+        r=end+2
+        ws.cell(r,1,'Candidates not read, by register status').font=Font(name='Arial',size=10,bold=True,color=black)
+        for i,(status,count,meaning) in enumerate(cands,r+1):
+            ws.cell(i,1,status).font=Font(name='Arial',size=10,color=black)
+            ws.cell(i,2,count).font=Font(name='Arial',size=10,color=black)
+            ws.cell(i,2).alignment=Alignment(horizontal='left')
+            m=ws.cell(i,3,meaning);m.font=Font(name='Arial',size=10,color=black);m.alignment=Alignment(wrap_text=True,vertical='top')
+            ws.merge_cells(start_row=i,start_column=3,end_row=i,end_column=n);ws.row_dimensions[i].height=20
+    ws.freeze_panes='B8'
+    ws.sheet_view.zoomScale=85
+    ws.page_setup.orientation='landscape'
+
+
+def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | None = None, source_texts: dict | None = None,
+                        source_errors: dict | None = None, run_summary: dict | None = None):
     """Optional dependency matches existing M13 writer; no network or model calls."""
     from .m3_export import official_sec_url
     from .m3_workbook import _clean
@@ -361,7 +454,7 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
         from openpyxl.utils import get_column_letter
     except ImportError as exc:
         raise RuntimeError('M13 research XLSX needs the existing optional openpyxl dependency') from exc
-    sheets=research_rows(legacy_rows,first_readings,source_texts)
+    sheets=research_rows(legacy_rows,first_readings,source_texts,source_errors)
     wb=Workbook();wb.remove(wb.active)
     orange='FD5108'; gray='DFE3E6'; light='F5F7F8'; black='000000'
     for idx,(name,matrix) in enumerate(sheets.items()):
@@ -426,6 +519,7 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
         ws.sheet_view.zoomScale=85
         ws.print_options.horizontalCentered=False
         ws.page_setup.orientation='landscape'
+    if run_summary is not None:_write_run_summary(wb,run_summary)
     out=Path(destination);out.parent.mkdir(parents=True,exist_ok=True)
     tmp=out.with_name('.'+out.name+'.tmp.xlsx')
     try:

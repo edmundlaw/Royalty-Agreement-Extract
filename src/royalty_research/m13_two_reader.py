@@ -899,7 +899,25 @@ def _batch_metadata(root, document_id) -> dict:
 
 
 def finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False) -> dict:
-    """Merge, check, compare (when a second reader exists) and export. No model call."""
+    """Merge, check, compare (when a second reader exists) and export. No model call.
+
+    When it fails, a one-line reason is saved as finalize_error.txt in the run folder (next to, not inside,
+    the immutable inputs) so the combined workbook's sheet 00 can say why the agreement is missing.
+    """
+    try:
+        result = _finalize(root, export_xlsx=export_xlsx, without_check=without_check, legacy_xlsx=legacy_xlsx)
+    except FileExistsError:
+        raise
+    except Exception as exc:
+        try: (Path(root).expanduser() / 'finalize_error.txt').write_text(f'{type(exc).__name__}: {exc}'[:400] + '\n', encoding='utf-8')
+        except OSError: pass
+        raise
+    try: (Path(root).expanduser() / 'finalize_error.txt').unlink()
+    except OSError: pass
+    return result
+
+
+def _finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False) -> dict:
     from .m3_workspace import init, register_map, register_extraction
     from .m3_export import build_rows, write_csvs
     from .m3_workbook import write_xlsx
@@ -952,8 +970,11 @@ def finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False) 
         write_csvs(rows, out / 'csv')
         if export_xlsx:
             from .m13_research_export import write_research_xlsx
+            summary_row = _summary_row(mapping, 'EXPORTED', state, rows, first)
             write_research_xlsx(rows, out / 'Royalty_Research_M13.xlsx', {mapping['document_id']: first},
-                                {mapping['document_id']: [x.get('text') or '' for x in mapping.get('passages', [])]})
+                                {mapping['document_id']: [x.get('text') or '' for x in mapping.get('passages', [])]},
+                                source_errors={mapping['document_id']: first_check['errors']},
+                                run_summary=_summary_block([summary_row]))
             if legacy_xlsx:
                 write_xlsx(rows, out / 'Royalty_Research_M13_Detailed.xlsx')
         manifest = {'schema': 'm13-output-manifest.1', 'source_map_sha256': meta['map_sha256'], 'state': state,
@@ -972,6 +993,78 @@ def finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False) 
             'spreadsheet': str(target / 'Royalty_Research_M13.xlsx') if export_xlsx else None}
 
 
+def _summary_row(mapping, status, state, rows, first=None, note='', extra_meta=None):
+    """One row of sheet 00 (columns: see m13_research_export.SUMMARY_HEADERS)."""
+    did = mapping['document_id']
+    meta = {**(extra_meta or {}), **(mapping.get('document_metadata') or {})}
+    agreement = (first or {}).get('agreement') if isinstance((first or {}).get('agreement'), dict) else {}
+    parties = ' \u2013 '.join(x for x in (agreement.get('licensor'), agreement.get('licensee')) if x)
+    who = ' | '.join(x for x in (meta.get('company'), parties) if x)
+    n = 0
+    if rows is not None and 'Royalty Terms' in rows:
+        d = rows['Royalty Terms'][0].index('Document_ID')
+        n = sum(1 for r in rows['Royalty Terms'][1:] if r[d] == did)
+    return [did, who, mapping.get('source_url') or meta.get('source_url') or '', status, state or '', n, note]
+
+
+def _summary_block(rows, candidates=None, total_candidates=None):
+    """The run_summary argument of write_research_xlsx: counts line, run rows, skipped-candidate counts."""
+    exported = sum(1 for r in rows if str(r[3]).startswith('EXPORTED'))
+    failed = sum(1 for r in rows if str(r[3]).startswith('FAILED'))
+    notdone = len(rows) - exported - failed
+    parts = [f'{exported} exported'] + ([f'{notdone} not finished'] if notdone else []) + ([f'{failed} failed'] if failed else [])
+    block = {'rows': rows, 'counts': f"{len(rows)} agreement{'' if len(rows) == 1 else 's'}: " + ', '.join(parts)}
+    if notdone or failed:
+        block['counts'] += ' (not-finished and failed agreements are NOT in sheets 01-06)'
+    if candidates:
+        skipped = sum(c for _, c, _ in candidates)
+        block['candidates'] = candidates
+        block['candidate_line'] = (f'Batch candidate register: {total_candidates} candidates, {len(rows)} read, {skipped} not read: '
+                                   + '; '.join(f'{c} {k}' for k, c, _ in candidates))
+    return block
+
+
+_REGISTER_MEANING = {
+    'NOT_PREPARED_AGREEMENT_LIMIT': 'Not read: the batch reached its agreement limit first (not judged either way unless its licence gate result says so)',
+    'NOT_PREPARED_NOT_LICENCE_LIKE': 'Failed the zero-AI licence gate (not a licence, or no royalty wording)',
+    'NOT_PREPARED_TOO_LARGE': 'Licence-like but over the source-size limit; read it with --big',
+    'LOW_SIGNAL_REVIEW_REQUIRED': 'Few royalty signals; a person should decide whether to read it',
+}
+
+
+def _register_counts(runs_dir):
+    """(candidates, total) from <batch>/candidate_register.json when it exists; read-only, never fails."""
+    path = Path(runs_dir).parent / 'candidate_register.json'
+    try:
+        rows = json.loads(path.read_text(encoding='utf-8')) if path.is_file() else None
+    except (OSError, ValueError):
+        rows = None
+    if not isinstance(rows, list): return None, None
+    from collections import Counter
+    counts = Counter(str(r.get('status') or 'UNKNOWN') for r in rows if isinstance(r, dict))
+    counts.pop('FULL_SOURCE_PREPARED', None)
+    return [(k, v, _REGISTER_MEANING.get(k, 'See candidate_register.json')) for k, v in sorted(counts.items(), key=lambda kv: -kv[1])], len(rows)
+
+
+def _unfinished_row(run, run_map):
+    """Status row for a run folder without an exported result: NOT_FINISHED (n of m calls) or FAILED (reason)."""
+    from .m4_operator import status as plan_status
+    meta = _batch_metadata(run, run_map['document_id'])
+    done = total = 0
+    for _, folder in _readers(run):
+        st = plan_status(folder); done += st['captured']; total += st['total']
+    err = run / 'finalize_error.txt'
+    if total and done == total and err.is_file():
+        reason = ' '.join(err.read_text(encoding='utf-8', errors='replace').split())[:160]
+        return _summary_row(run_map, f'FAILED \u2013 {reason}', '', None, extra_meta=meta,
+                            note='All reading calls are done but finalize failed; see finalize_error.txt in the run folder')
+    if total and done == total:
+        return _summary_row(run_map, 'NOT_FINISHED \u2013 readings done, not finalized yet', '', None, extra_meta=meta,
+                            note='Run finalize (./royalty.sh --resume ... --go)')
+    return _summary_row(run_map, f'NOT_FINISHED \u2013 {done} of {total} reading calls done', '', None, extra_meta=meta,
+                        note='Finish it with ./royalty.sh --resume <folder> --go, then combine again')
+
+
 # ---------------------------------------------------------------------------
 # 4. One workbook for many agreements
 # ---------------------------------------------------------------------------
@@ -987,10 +1080,12 @@ def combine(runs_dir, destination, *, legacy_xlsx=False) -> dict:
     if destination.exists(): raise FileExistsError('Combined workbook already exists; choose a new file name')
     if destination.suffix.lower() != '.xlsx': raise ValueError('The combined workbook must be an .xlsx file')
     combined = None; states = Counter(); used = []; unfinished = []; first_readings = {}; source_texts = {}
+    source_errors = {}; summary_rows = []
     for run in sorted(p for p in runs_dir.iterdir() if p.is_dir() and (p / 'm13_run.json').is_file()):
         _, _, run_map, _ = _load(run)                          # refuses a run folder that was altered
         out = next((run / n for n in ('output_checked', 'output') if (run / n / 'rows.json').is_file()), None)
-        if out is None: unfinished.append(run.name); continue
+        if out is None:
+            unfinished.append(run.name); summary_rows.append(_unfinished_row(run, run_map)); continue
         manifest = read_json(out / 'output_manifest.json')
         if manifest['output_files_sha256'].get('rows.json') != sha256((out / 'rows.json').read_bytes()):
             raise ValueError(f'{run.name}: exported rows were changed after export')
@@ -1002,6 +1097,9 @@ def combine(runs_dir, destination, *, legacy_xlsx=False) -> dict:
         # Legacy combine allows multiple runs of the same SEC document; preserve
         # the first metadata record. Each detailed source row still remains.
         first_readings.setdefault(did, extraction)
+        try: source_errors.setdefault(did, read_json(out / 'source_check.json').get('errors') or [])
+        except (OSError, ValueError): pass
+        summary_rows.append(_summary_row(run_map, 'EXPORTED', read_json(out / 'reader_check.json')['state'], rows, extraction, extra_meta=_batch_metadata(run, did)))
         source_texts.setdefault(did, [x.get('text') or '' for x in run_map.get('passages', [])])
         used.append(run.name)
         if combined is None:
@@ -1023,7 +1121,9 @@ def combine(runs_dir, destination, *, legacy_xlsx=False) -> dict:
     from .m13_research_export import write_research_xlsx
     detailed = destination.with_name(destination.stem + '_Detailed.xlsx')
     if legacy_xlsx and detailed.exists(): raise FileExistsError('Detailed combined XLSX already exists')
-    write_research_xlsx(combined, destination, first_readings, source_texts)
+    candidates, total = _register_counts(runs_dir)
+    write_research_xlsx(combined, destination, first_readings, source_texts, source_errors=source_errors,
+                        run_summary=_summary_block(summary_rows, candidates, total))
     if legacy_xlsx:
         write_xlsx(combined, detailed)
     return {'status': 'COMBINED', 'agreements': len(used), 'states': dict(states), 'not_finished': unfinished,

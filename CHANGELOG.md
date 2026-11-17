@@ -1,3 +1,11 @@
+# v0.13.8 changes
+
+- `Usable for royalty benchmark` now looks at the document QC state. `SOURCE_CHECK_FAILED`, `SECOND_READER_FAILED_SOURCE_CHECK` and `TWO_READERS_DIFFER` force NO with first reason `needs review: <state>`; any source-check error tied to the row (its term, tiers or evidence) also forces NO. `TWO_READERS_AGREE_ON_NUMBERS` stays allowed (same numbers in the same clauses) with a note to read the STRUCTURE differences in sheet 05. `SINGLE_READER_NOT_CHECKED` (normal mode) and `TWO_READERS_AGREE` stay allowed with the usual point-of-use note. Applies in `finalize` and `combine` (the combined workbook reads each run's `source_check.json`).
+- New first sheet `00 Run Summary` in the default research workbook: one row per run folder (Document ID, company / licensor - licensee, SEC link, Status, QC state, royalty rows), a counts line ("3 agreements: 2 exported, 1 not finished") and counts of candidates the batch did not read, by register status (from `batch/candidate_register.json`). Unfinished agreements (v0.13.7 combined workbook never mentioned Trevena) show `NOT_FINISHED - n of m reading calls done`; a finalize failure shows `FAILED - reason` (saved as `finalize_error.txt` in the run folder, removed again on a later success). A single-run `finalize` workbook has the sheet with its one row. `scripts/verify_research_export_parity.py` checks the sheet (optional, must be first, royalty rows add up).
+- Term-sheet / conditional wording match no longer fires on "unconditional" ("Unconditional and binding license agreement" is not a term sheet); "non-binding" still matches, a bare "binding" does not.
+- `licence_gate`: a short licence with fewer than 3 "royalt" mentions now passes when it states a rate ("5% of Net Sales", "5 percent of gross revenue") and has at least one licence-grant phrase, unless its title is a services / purchase / loan / ... title. Calibration on 283 maps (149 distinct documents) under the earlier test folders and `runs_*/batch/maps`: no verdict changed, so no previously rejected non-licence now passes.
+- `scripts/verify_release.py` and `RELEASE_SHA256.json` were not regenerated for 0.13.8.
+
 # v0.13.7 changes
 
 Fixes from the first live run (3 agreements, 12-14 Jan 2026).

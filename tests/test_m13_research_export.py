@@ -80,12 +80,19 @@ class ResearchRows(unittest.TestCase):
         self.assertEqual(row['IA evidence IDs'],'E1')
         self.assertEqual(row['Sublicensing evidence IDs'],'E2')
 
-    def _hint_row(self,agreement,texts,status=None,source=None):
-        raw=fixture_rows()
+    @staticmethod
+    def _with_state(raw,state):
+        for sheet,col in (('Documents','Extraction_Status'),('Royalty Terms','QC_State'),('Tiers','QC_State')):
+            c=raw[sheet][0].index(col)
+            for r in raw[sheet][1:]:r[c]=state
+        return raw
+
+    def _hint_row(self,agreement,texts,status=None,source=None,state='SINGLE_READER_NOT_CHECKED',errors=None):
+        raw=self._with_state(fixture_rows(),state)
         ev=raw['Evidence'];i=ev[0].index('Exact_Quotation')
         for r in ev[1:]:r[i]=texts.pop(0) if texts else r[i]
         if status:raw['Documents'][1][raw['Documents'][0].index('Contract_Status')]=status
-        v=research_rows(raw,{'DOC-DEMO':{'agreement':agreement}},source)
+        v=research_rows(raw,{'DOC-DEMO':{'agreement':agreement}},source,errors)
         return dict(zip(v[NAMES[0]][0],v[NAMES[0]][1]))
 
     def test_ia_nature_inferred_and_keyword_hint_never_override_reader(self):
@@ -110,6 +117,37 @@ class ResearchRows(unittest.TestCase):
         self.assertEqual(r['Related party'],'NOT_ASSESSED')
         r=self._hint_row({'related_party':'NOT_STATED'},[],status='Signed binding term sheet')
         self.assertEqual(r['Usable for royalty benchmark'],'NO');self.assertIn('term sheet',r['Benchmark note'])
+
+    def test_qc_state_matrix_for_benchmark_flag(self):
+        expected={'SOURCE_CHECK_FAILED':'NO','SECOND_READER_FAILED_SOURCE_CHECK':'NO','TWO_READERS_DIFFER':'NO',
+                  'TWO_READERS_AGREE_ON_NUMBERS':'YES','TWO_READERS_AGREE':'YES','SINGLE_READER_NOT_CHECKED':'YES'}
+        for state,flag in expected.items():
+            r=self._hint_row({'related_party':'NOT_STATED'},[],state=state)
+            self.assertEqual(r['Usable for royalty benchmark'],flag,state)
+            if flag=='NO':self.assertTrue(r['Benchmark note'].startswith('needs review: '+state),r['Benchmark note'])
+        r=self._hint_row({'related_party':'NOT_STATED'},[],state='TWO_READERS_AGREE_ON_NUMBERS')
+        self.assertIn('STRUCTURE',r['Benchmark note'])
+        r=self._hint_row({'related_party':'NOT_STATED'},[],state='SINGLE_READER_NOT_CHECKED')
+        self.assertEqual(r['Benchmark note'],'No exclusion rule triggered; still confirm at point of use')
+        # needs-review reason comes first even when other reasons exist
+        r=self._hint_row({'related_party':'YES'},[],state='SOURCE_CHECK_FAILED')
+        self.assertTrue(r['Benchmark note'].startswith('needs review: SOURCE_CHECK_FAILED; '))
+
+    def test_record_level_source_error_forces_no_only_on_its_row(self):
+        err=[{'code':'M13_RATE_NOT_IN_QUOTE','message':'x','ref':'R1:tier1'}]
+        r=self._hint_row({'related_party':'NOT_STATED'},[],errors={'DOC-DEMO':err})
+        self.assertEqual(r['Usable for royalty benchmark'],'NO')
+        self.assertIn('M13_RATE_NOT_IN_QUOTE',r['Benchmark note'])
+        other=[{'code':'M13_RATE_NOT_IN_QUOTE','message':'x','ref':'R10'},{'code':'M13_NOT_FULL_READ','message':'x','ref':None}]
+        r=self._hint_row({'related_party':'NOT_STATED'},[],errors={'DOC-DEMO':other})
+        self.assertEqual(r['Usable for royalty benchmark'],'YES')   # R10 is not R1; document-level error has no row
+
+    def test_unconditional_is_not_conditional(self):
+        term={'Rate_Numeric':3.5,'Rate_Unit':'PERCENT','Family':'PRODUCT_SALES','Disclosure_Status':'DISCLOSED'}
+        for text,flag in (('Unconditional and binding license agreement','YES'),('unconditional','YES'),('Binding license agreement','YES'),
+                          ('Non-binding term sheet','NO'),('nonbinding','NO'),('Conditional license','NO'),
+                          ('Agreement is conditional on closing','NO'),('Subject to the satisfaction of certain conditions','NO')):
+            self.assertEqual(benchmark_usable(term,'NOT_STATED',text)[0],flag,text)
 
     def test_payment_summary_keeps_four_distinct_categories_and_source_ids(self):
         raw=fixture_rows()

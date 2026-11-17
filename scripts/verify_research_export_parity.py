@@ -22,7 +22,20 @@ def go(original,research):
     v=load_workbook(research,read_only=True,data_only=True)
     names=['01 Royalty Database','02 Tiers & Mechanics','03 Other Payments','04 Source Evidence','05 QC & Issues','06 Other Terms']
     errs=[];checks={}
-    if v.sheetnames!=names:errs.append('Research workbook does not have exactly the approved six sheets (01-05 map to the original rows; 06 Other Terms is new)')
+    summary_name='00 Run Summary'   # new in 0.13.8: one row per run folder; optional for workbooks written by other callers
+    sheets=[x for x in v.sheetnames if x!=summary_name]
+    if sheets!=names:errs.append('Research workbook does not have exactly the approved six sheets (01-05 map to the original rows; 06 Other Terms is new; 00 Run Summary is optional)')
+    if summary_name in v.sheetnames:
+        if v.sheetnames[0]!=summary_name:errs.append('00 Run Summary must be the first sheet')
+        summ=[r for r in v[summary_name].iter_rows(min_row=8,values_only=True) if r[0] and str(r[0]).startswith('DOC-')]
+        hdr=[c.value for c in v[summary_name][7]]
+        if hdr[:1]!=['Document ID'] or 'Status' not in hdr:errs.append('00 Run Summary: header row 7 missing')
+        else:
+            si=hdr.index('Status');ri=hdr.index('Royalty rows')
+            exported=[r for r in summ if str(r[si]).startswith('EXPORTED')]
+            if sum((r[ri] or 0) for r in exported)!=len(tab(w,'Royalty Terms')):errs.append('00 Run Summary: royalty row counts do not add up to the original rows')
+            if any(not str(r[si]).startswith(('EXPORTED','NOT_FINISHED','FAILED')) for r in summ):errs.append('00 Run Summary: unknown status')
+        checks['run_summary_rows']=len(summ)
     a=tab(w,'Royalty Terms');b=tab(v,names[0],7)
     key='Observation_ID'; old={r[key]:r for r in a};new={r['Observation ID']:r for r in b}
     if len(a)!=len(b) or set(old)!=set(new):errs.append('Missing, extra, or duplicate royalty observations')
