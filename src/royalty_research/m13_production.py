@@ -12,6 +12,7 @@ from .parsing import parse_document
 from .sec_client import SECClient
 from .storage import atomic_json, read_json, sha256, utc_now
 from .m7_triage import triage_document
+from .licence_grant import document_title, grant_hits, title_kind
 
 
 def prepare_one(mapping, run, *, mode, engine, model, check_engine=None, check_model=None,
@@ -33,20 +34,47 @@ DEFAULT_MAX_SOURCE_CHARS=120000
 LICENCE_TITLE=re.compile(r'licen[cs]|royalt|franchis|collaboration|term sheet',re.I)
 
 
+# Thresholds for licence_gate (v0.13.7), calibrated on 40+ known licences and the live-run negatives.
+MIN_ROYALTY_MENTIONS=3
+MIN_GRANT_HITS=1          # path without a licence-type title: at least one licence-grant phrase
+NON_LICENCE_TITLE_GRANT_HITS=25   # a services/purchase/loan/... title needs this many grant phrases to pass
+
+
 def licence_gate(mapping):
     """Zero-token check that a document looks like a royalty-bearing licence before any AI reads it.
 
-    Passes when "royalt" appears at least 3 times AND either the opening 1,000 characters name a
-    licence/royalty/franchise/collaboration/term-sheet document, or royalty wording is dense
-    (at least 1 mention per 10,000 characters). Purchase, credit and merger agreements that only
-    mention royalties in boilerplate fail and stay in the register as NOT_PREPARED_NOT_LICENCE_LIKE.
+    1. At least 3 mentions of "royalt".
+    2. The document title (first short non-legend lines in the opening ~1,500 characters) decides:
+       - names a licence / royalty / collaboration / franchise  -> passes.
+       - names services, purchase, loan, credit, security, guarantee, employment, consulting,
+         separation, settlement, assignment, merger, underwriting, indenture, lease, supply, joint
+         venture ... and no licence word -> passes only with 25+ licence-grant phrases AND dense
+         royalty wording (a real licence with an unusual title). Trevena's royalty-financing unwind
+         (12 grant phrases, title "Assignment and Release Agreement") and N2OFF's services
+         agreement (0) fail.
+       - no clear title type (legends, schedules) -> the old test (opening 1,000 characters name a
+         licence, or 1+ royalty mention per 10,000 characters) AND at least one licence-grant phrase
+         ("grants ... a licence", "hereby licenses", "exclusive licence", "Licensed Product", ...).
+    Rejected documents stay in the register as NOT_PREPARED_NOT_LICENCE_LIKE with these details.
     """
-    text=' '.join(p.get('text','') for p in mapping.get('passages',[]))
+    passages=mapping.get('passages',[])
+    text=' '.join(p.get('text','') for p in passages)
     hits=len(re.findall(r'royalt',text,re.I))
-    title=bool(LICENCE_TITLE.search(text[:1000]))
+    opening=bool(LICENCE_TITLE.search(text[:1000]))
     density=hits/max(len(text)/10000,1)
-    return {'royalty_mentions':hits,'licence_title':title,'source_chars':len(text),
-            'passed':hits>=3 and (title or density>=1.0)}
+    title=document_title(passages);kind=title_kind(title);grants=grant_hits(text)
+    if hits<MIN_ROYALTY_MENTIONS:passed=False;reason='fewer than 3 royalty mentions'
+    elif kind=='LICENCE':passed=True;reason='title names a licence/royalty/collaboration/franchise agreement'
+    elif kind=='NON_LICENCE':
+        passed=grants>=NON_LICENCE_TITLE_GRANT_HITS and density>=1.0
+        reason=('non-licence title but strong licence-grant wording' if passed else
+                f'title names a non-licence agreement and only {grants} licence-grant phrase(s)')
+    else:
+        passed=(opening or density>=1.0) and grants>=MIN_GRANT_HITS
+        reason=('licence-like wording and a licence grant' if passed else
+                'no licence-grant wording found' if grants<MIN_GRANT_HITS else 'royalty wording too sparse')
+    return {'royalty_mentions':hits,'licence_title':opening and kind!='NON_LICENCE','source_chars':len(text),
+            'title':title,'title_kind':kind,'grant_hits':grants,'reason':reason,'passed':passed}
 
 
 def candidate_rank(r):
@@ -60,6 +88,14 @@ def candidate_rank(r):
     route=r.get('candidate_route')
     group=0 if ft.startswith('EX-10') else 1 if route=='CONTRACT_EXHIBIT' else 2
     return (group,-len(r.get('matched_queries') or []),str(r.get('filing_date') or ''),str(r.get('source_url') or ''))
+
+
+def document_metadata(record, did, url):
+    """Map metadata for a discovered candidate: SEC filing facts travel with the immutable map."""
+    meta={'document_id':did,'source_url':url}
+    for k in ('cik','accession','filing_date','file_type','company','form'):
+        if record.get(k):meta[k]=record[k]
+    return meta
 
 
 def batch(candidates, root, *, user_agent, mode, engine, model, check_engine=None,check_model=None,
@@ -84,7 +120,8 @@ def batch(candidates, root, *, user_agent, mode, engine, model, check_engine=Non
     index=[];prepared=0;processed=0
     for n,r in enumerate(unique,1):
         url=r.get('source_url');item={'index':n,'source_url':url,'document_id':r.get('document_id'),
-                                      'file_type':r.get('file_type'),'company':r.get('company')}
+                                      'file_type':r.get('file_type'),'company':r.get('company'),
+                                      'filing_date':r.get('filing_date'),'accession':r.get('accession')}
         parsed=urlparse(url or '')
         if parsed.scheme!='https' or parsed.hostname not in {'sec.gov','www.sec.gov'} or not parsed.path.startswith('/Archives/edgar/data/'):
             item['status']='INVALID_SOURCE_URL';index.append(item);continue
@@ -97,7 +134,7 @@ def batch(candidates, root, *, user_agent, mode, engine, model, check_engine=Non
             raw=client.fetch(url)
             paragraphs,parser=parse_document(raw,Path(parsed.path).name)
             did=r.get('document_id') or 'DOC-'+sha256(url.encode())[:16]
-            mapping=map_contract(paragraphs,{'document_id':did,'source_url':url},raw_hash=sha256(raw),
+            mapping=map_contract(paragraphs,document_metadata(r,did,url),raw_hash=sha256(raw),
                                  fetched_at=utc_now(),parser_type=parser)
             triage=triage_document(mapping);item['priority']=triage['priority']
             item['source_sha256']=sha256(raw)
@@ -140,37 +177,43 @@ def run_boundary(runs, *, max_calls, max_prompt_chars, max_reported_tokens=None,
         return {'calls_attempted':0,'outcomes':[{'status':'STOPPED_USAGE_UNAVAILABLE'}]}
     if max_reported_tokens is not None and reported>=max_reported_tokens:
         return {'calls_attempted':0,'outcomes':[{'status':'STOPPED_TOKEN_BUDGET'}]}
+    stop=False
     for root in sorted(p for p in Path(runs).iterdir() if p.is_dir() and (p/'m13_run.json').exists()):
-        if len(outcomes)>=max_calls:break
-        st=m13.status(root)
-        if all(v['captured']==v['total'] for v in st['readers'].values()):continue
-        next_reader=next((name for name,v in st['readers'].items() if v['captured']<v['total']),None)
-        if not next_reader:continue
-        folder=root/next_reader
-        rs=reader_status(folder)
-        task=next((t for t in rs['tasks'] if t['state']!='CAPTURED_NOT_QC_APPROVED'),None)
-        if task is None:continue
-        if task['state']!='PENDING':
-            outcomes.append({'run':root.name,'status':'STOPPED_TASK_REQUIRES_MANUAL_ACTION','task':task['task_id']});break
-        if task['attempts']>=max_retries+1:
-            outcomes.append({'run':root.name,'status':'STOPPED_RETRY_BUDGET','task':task['task_id']});break
-        prompt=folder/'prompts'/(task['task_id']+'.txt')
-        if len(prompt.read_text())>max_prompt_chars:
-            outcomes.append({'run':root.name,'status':'STOPPED_PROMPT_BUDGET','task':task['task_id']});break
-        if read_json(folder/'plan.json')['engine']=='manual':
-            outcomes.append({'run':root.name,'status':'MANUAL_RESULT_REQUIRED','task':task['task_id']});break
-        result=m13.next_call(root,execute=execute,confirm_subscription=confirm_subscription,
-                             confirm_credit_controls=confirm_credit_controls,timeout=timeout)
-        outcomes.append({'run':root.name,'result':result})
-        if not execute or result.get('status') not in {'CAPTURED_MORE_PENDING','ALL_READINGS_CAPTURED'}:break
-        if max_reported_tokens is not None:
-            receipt=folder/'results'/(task['task_id']+'.receipt.json')
-            u=read_json(receipt).get('usage') if receipt.exists() else None
-            if not u:
-                outcomes.append({'run':root.name,'status':'STOPPED_USAGE_UNAVAILABLE'});break
-            reported+=sum(v for k,v in u.items() if k in {'input_tokens','output_tokens'} and isinstance(v,int))
-            if reported>=max_reported_tokens:
-                outcomes.append({'run':root.name,'status':'STOPPED_TOKEN_BUDGET'});break
+        if stop:break
+        # Keep reading the SAME agreement until all its tasks are captured (v0.13.7; v0.13.6 made one
+        # call per agreement and left multi-chunk agreements half read), then move to the next.
+        while True:
+            if len(outcomes)>=max_calls:stop=True;break
+            st=m13.status(root)
+            if all(v['captured']==v['total'] for v in st['readers'].values()):break
+            next_reader=next((name for name,v in st['readers'].items() if v['captured']<v['total']),None)
+            if not next_reader:break
+            folder=root/next_reader
+            rs=reader_status(folder)
+            task=next((t for t in rs['tasks'] if t['state']!='CAPTURED_NOT_QC_APPROVED'),None)
+            if task is None:break
+            if task['state']!='PENDING':
+                outcomes.append({'run':root.name,'status':'STOPPED_TASK_REQUIRES_MANUAL_ACTION','task':task['task_id']});stop=True;break
+            if task['attempts']>=max_retries+1:
+                outcomes.append({'run':root.name,'status':'STOPPED_RETRY_BUDGET','task':task['task_id']});stop=True;break
+            prompt=folder/'prompts'/(task['task_id']+'.txt')
+            if len(prompt.read_text())>max_prompt_chars:
+                outcomes.append({'run':root.name,'status':'STOPPED_PROMPT_BUDGET','task':task['task_id']});stop=True;break
+            if read_json(folder/'plan.json')['engine']=='manual':
+                outcomes.append({'run':root.name,'status':'MANUAL_RESULT_REQUIRED','task':task['task_id']});stop=True;break
+            result=m13.next_call(root,execute=execute,confirm_subscription=confirm_subscription,
+                                 confirm_credit_controls=confirm_credit_controls,timeout=timeout)
+            outcomes.append({'run':root.name,'result':result})
+            if not execute:break          # dry run: show the next call of each agreement, then go on to the next agreement
+            if result.get('status') not in {'CAPTURED_MORE_PENDING','ALL_READINGS_CAPTURED'}:stop=True;break
+            if max_reported_tokens is not None:
+                receipt=folder/'results'/(task['task_id']+'.receipt.json')
+                u=read_json(receipt).get('usage') if receipt.exists() else None
+                if not u:
+                    outcomes.append({'run':root.name,'status':'STOPPED_USAGE_UNAVAILABLE'});stop=True;break
+                reported+=sum(v for k,v in u.items() if k in {'input_tokens','output_tokens'} and isinstance(v,int))
+                if reported>=max_reported_tokens:
+                    outcomes.append({'run':root.name,'status':'STOPPED_TOKEN_BUDGET'});stop=True;break
     return {'calls_attempted':sum('result' in o and execute for o in outcomes),'outcomes':outcomes}
 
 

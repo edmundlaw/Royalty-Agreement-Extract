@@ -6,7 +6,7 @@ from pathlib import Path
 
 from royalty_research.m13_two_reader import source_check
 from royalty_research.storage import read_json
-from royalty_research.m13_research_export import NAMES, research_rows, write_research_xlsx
+from royalty_research.m13_research_export import NAMES, research_rows, write_research_xlsx, benchmark_usable
 from royalty_research.m3_export import HEADERS
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -231,6 +231,45 @@ class AdditionalSourceEvidence(unittest.TestCase):
         for k in ('licensed_ip_nature','licensed_ip_nature_details','sublicensing_rights'):
             a['field_evidence'][k]=[eid]
         self.assertEqual(source_check(self.mapping,self.extraction)['errors'],[])
+
+class V0137Rules(unittest.TestCase):
+    def test_royalty_cap_column_ignores_caps_on_service_consideration(self):
+        raw=fixture_rows(); headers=raw['Other Payments'][0]
+        def add(**kw): raw['Other Payments'].append([kw.get(k) for k in headers])
+        add(Payment_ID='P9',Document_ID='DOC-DEMO',Kind='CAP',Amount_Text='1000000',Currency='USD',
+            Basis='Absolute aggregate cap on deferred cash service consideration installments',
+            Condition='Cumulative installments shall not exceed US$1,000,000.',Evidence_IDs='E1')
+        v=research_rows(raw)
+        row=dict(zip(v[NAMES[0]][0],v[NAMES[0]][1]))
+        self.assertEqual(row['Royalty cap'],'NOT_ASSESSED')
+        self.assertIn('P9',[r[0] for r in v[NAMES[2]][1:]])       # still listed in sheet 03
+        add(Payment_ID='P10',Document_ID='DOC-DEMO',Kind='CAP',Amount_Text='500000',Currency='USD',
+            Condition='Annual royalties shall not exceed this amount',Evidence_IDs='E1')
+        v=research_rows(raw)
+        row=dict(zip(v[NAMES[0]][0],v[NAMES[0]][1]))
+        self.assertEqual(row['Royalty cap'],'USD 500,000 [P10]')
+
+    def test_benchmark_note_says_no_licence_for_undetermined_nature_without_grant(self):
+        term={'Rate_Numeric':3.5,'Rate_Unit':'PERCENT','Family':'PRODUCT_SALES','Disclosure_Status':'DISCLOSED'}
+        usable,note=benchmark_usable(term,'NOT_STATED',None,nature='UNDETERMINED',grant_found=False)
+        self.assertEqual(usable,'NO');self.assertTrue(note.startswith('no IP licence grant found'))
+        usable,note=benchmark_usable(term,'NOT_STATED',None,nature='UNDETERMINED',grant_found=True)
+        self.assertEqual(usable,'YES')
+        usable,note=benchmark_usable(term,'NOT_STATED',None,nature='PATENT',grant_found=False)
+        self.assertEqual(usable,'YES')                           # a reader-classified nature is never overridden
+        bad=dict(term,Rate_Numeric=None)
+        usable,note=benchmark_usable(bad,'NOT_STATED',None,nature='UNDETERMINED',grant_found=False)
+        self.assertTrue(note.startswith('no IP licence grant found'));self.assertIn('rate not disclosed',note)
+
+    def test_exporter_uses_source_text_for_grant_detection(self):
+        raw=fixture_rows()
+        def row(texts):
+            v=research_rows(raw,{'DOC-DEMO':{'agreement':{'licensed_ip_nature':'UNDETERMINED'}}},{'DOC-DEMO':texts})
+            return dict(zip(v[NAMES[0]][0],v[NAMES[0]][1]))
+        r=row(['N2OFF provides services and receives a share of gross profit.'])
+        self.assertEqual(r['Usable for royalty benchmark'],'NO');self.assertIn('no IP licence grant',r['Benchmark note'])
+        r=row(['Licensor hereby grants Licensee an exclusive license under the Licensed Patents.'])
+        self.assertNotIn('no IP licence grant',r['Benchmark note'])
 
 
 if __name__=='__main__':unittest.main()

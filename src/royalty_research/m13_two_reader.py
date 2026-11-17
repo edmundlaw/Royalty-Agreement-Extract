@@ -17,6 +17,7 @@ No model API is used. Model calls go through the M4 subscription CLI runner.
 """
 from __future__ import annotations
 
+import json
 import re
 import tempfile
 from decimal import Decimal, InvalidOperation
@@ -335,6 +336,10 @@ def source_check(mapping: dict, extraction: dict) -> dict:
             # An INFERRED nature may cite the context it was inferred from
             # (patent-term wording, the asset description) under a neighbouring field.
             refs = [r for k in ('licensed_ip_nature_details', 'licensed_ip', 'duration') for r in _ids(header_refs.get(k))]
+        if key == 'licensed_ip_nature_details' and not refs:
+            # The details only explain the nature; FIRST_READER rule 10 has the reader cite the evidence
+            # under field_evidence.licensed_ip_nature (live OSR/VXM01 run, v0.13.7).
+            refs = [r for k in ('licensed_ip_nature', 'licensed_ip', 'duration') for r in _ids(header_refs.get(k))]
         known(refs, f'agreement.{key}')
         if not refs:
             err('M13_AGREEMENT_FIELD_WITHOUT_EVIDENCE',
@@ -867,6 +872,32 @@ def decorate_rows(rows: dict, *, document_id: str, state: str, first_check: dict
     return ordered
 
 
+_SEC_META_KEYS = ('cik', 'accession', 'filing_date', 'file_type', 'company', 'form', 'filename')
+
+
+def _batch_metadata(root, document_id) -> dict:
+    """SEC filing metadata for a run made before v0.13.7 (its immutable map carries only id + URL).
+
+    Looks the document up in the batch's discovery.jsonl, then its candidate_register.json. Read-only;
+    returns {} when the run was not produced by ./royalty.sh or the document is not listed.
+    """
+    root = Path(root)
+    batch_root = root.parent.parent                      # <batch>/runs/<DOC>
+    found = {}
+    for path in (batch_root.parent / 'discovery.jsonl', batch_root / 'candidate_register.json'):
+        try:
+            if not path.is_file(): continue
+            text = path.read_text(encoding='utf-8')
+            rows = json.loads(text) if path.suffix == '.json' else [json.loads(x) for x in text.splitlines() if x.strip()]
+        except (OSError, ValueError):
+            continue
+        for r in rows:
+            if isinstance(r, dict) and r.get('document_id') == document_id:
+                for k in _SEC_META_KEYS:
+                    if r.get(k) and not found.get(k): found[k] = r[k]
+    return found
+
+
 def finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False) -> dict:
     """Merge, check, compare (when a second reader exists) and export. No model call."""
     from .m3_workspace import init, register_map, register_extraction
@@ -893,7 +924,13 @@ def finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False) 
     comparison = compare_readers(mapping, first, second) if use_b else None
     state = decide_state(first_check, second_check, comparison)
     workspace = root / ('workspace' if target.name == 'output' else 'workspace_checked')
-    init(workspace); register_map(workspace, mapping)
+    export_map = mapping
+    meta_have = mapping.get('document_metadata') or {}
+    if not meta_have.get('filing_date'):                 # runs prepared before v0.13.7 carry no SEC filing metadata
+        extra = _batch_metadata(root, mapping['document_id'])
+        if extra:
+            export_map = dict(mapping); export_map['document_metadata'] = {**extra, **meta_have}
+    init(workspace); register_map(workspace, export_map)
     register_extraction(workspace, mapping['document_id'], first, select=True)
     rows = decorate_rows(build_rows(workspace), document_id=mapping['document_id'], state=state, first_check=first_check,
                          second_check=second_check, comparison=comparison, first=first, second=second,

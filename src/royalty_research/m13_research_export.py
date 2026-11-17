@@ -10,6 +10,7 @@ import re
 import json
 from pathlib import Path
 from collections import defaultdict
+from .licence_grant import grant_hits
 
 NAMES = ('01 Royalty Database', '02 Tiers & Mechanics', '03 Other Payments',
          '04 Source Evidence', '05 QC & Issues', '06 Other Terms')
@@ -82,9 +83,15 @@ def _related_hint(texts):
     return None
 
 
-def benchmark_usable(term, related, status):
-    """Python rule, zero AI. Returns ('YES'|'NO', note). Any one reason makes it NO."""
+def benchmark_usable(term, related, status, *, nature=None, grant_found=None):
+    """Python rule, zero AI. Returns ('YES'|'NO', note). Any one reason makes it NO.
+
+    nature is the reader's own licensed_ip_nature; grant_found is True/False when the source text was
+    scanned for licence-grant wording, None when no text is available (then that reason is skipped).
+    """
     reasons=[]
+    if nature=='UNDETERMINED' and grant_found is False:
+        reasons.append('no IP licence grant found (e.g. services / profit share)')
     family=term.get('Family')
     if family in PASS_THROUGH_FAMILIES:reasons.append('pass-through of sublicensee receipts, not a sales royalty')
     rate=term.get('Rate_Numeric')
@@ -137,7 +144,10 @@ def _observation_reference(term_id, document_id):
     return f'{document_id}:{term_id}'
 
 
-def _payment_summary(payments: list[dict], kinds: set[str], *, minimum=False):
+_ROYALTY_WORD=re.compile(r'royalt',re.I)
+
+
+def _payment_summary(payments: list[dict], kinds: set[str], *, minimum=False, royalty_only=False):
     """Faithful non-additive list of classified agreement-level payment records.
 
     Never reinterpret a signing advance as a separate upfront fee, never sum
@@ -147,6 +157,8 @@ def _payment_summary(payments: list[dict], kinds: set[str], *, minimum=False):
     for p in payments:
         kind=p.get('Kind')
         if kind not in kinds:continue
+        if royalty_only and not _ROYALTY_WORD.search(' '.join(str(p.get(k) or '') for k in ('Basis','Condition'))):
+            continue   # e.g. a cap on deferred service consideration: stays in sheet 03 only
         if minimum and kind=='GUARANTEE':
             # 'GUARANTEE' may be e.g. share-price or performance guarantees.
             # Only explicitly royalty/minimum-labelled guarantees go here.
@@ -232,7 +244,9 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
                 word=_related_hint(field_ev('licensed_ip','contractual_status') + [e.get('Exact_Quotation') or '' for (d_,_i),e in evid_by_doc.items() if d_==did]
                                    + list(source_texts.get(did) or []))
                 if word:related=f'YES (keyword hint: "{word}")'
-        usable,usable_note=benchmark_usable(t,related,doc.get('Contract_Status'))
+        grant_text=' '.join(list(source_texts.get(did) or [])+[e.get('Exact_Quotation') or '' for (d_,_i),e in evid_by_doc.items() if d_==did])
+        usable,usable_note=benchmark_usable(t,related,doc.get('Contract_Status'),nature=agreement.get('licensed_ip_nature'),
+                                            grant_found=(grant_hits(grant_text)>0 if grant_text.strip() else None))
         license_text=doc.get('Licensed_IP') or agreement.get('licensed_ip')
         rights=agreement.get('sublicensing_rights') or 'NOT_ASSESSED'
         material=agreement.get('other_material_terms') or []
@@ -243,7 +257,7 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
         summary=_short(summary,120)
         payments_present=payments_by_doc.get(did,[])
         min_hint=_payment_summary(payments_present,{'MINIMUM_ROYALTY','GUARANTEE'},minimum=True)
-        cap_hint=_payment_summary(payments_present,{'CAP'})
+        cap_hint=_payment_summary(payments_present,{'CAP'},royalty_only=True)
         advance_hint=_payment_summary(payments_present,{'ADVANCE'})
         upfront_hint=_payment_summary(payments_present,{'UPFRONT'})
         payment_ids=_payment_references(payments_present)

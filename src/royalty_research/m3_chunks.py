@@ -9,8 +9,19 @@ from __future__ import annotations
 from .storage import json_bytes, sha256, stable_id
 from .mapping import validate_map
 from .m2_validation import validate_extraction
+from .m2_schema_check import schema as _m2_schema
 
 CHUNK_SCHEMA = "m3-chunk.1"
+
+
+def agreement_scalar_fields():
+    """Every agreement field the bundled schema allows, except the two that are merged as collections.
+
+    Derived from the schema (v0.13.7) so a field added there can never again be rejected by the
+    merge ("Bad agreement evidence" on related_party / licensed_ip_nature_basis in the live run).
+    """
+    props=_m2_schema()["$defs"]["agreement"]["properties"]
+    return tuple(k for k in props if k not in ("field_evidence","other_material_terms"))
 
 
 def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
@@ -88,9 +99,7 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
         ids=[r.get(key) for r in chunks_merged[kind]]
         if any(not isinstance(v,str) or not v for v in ids) or len(ids)!=len(set(ids)):
             raise ValueError(f"Cross-chunk duplicate or missing {key}. Do not silently merge economic terms")
-    base_fields=("title","licensor","licensee","industry","licensed_ip","execution_date",
-                 "effective_date","duration","territory","exclusivity","contractual_status",
-                 "licensed_ip_nature","licensed_ip_nature_details","sublicensing_rights","exclusivity_scope")
+    base_fields=agreement_scalar_fields()
     agreement={key:None for key in base_fields}; agreement["field_evidence"]={}; agreement["other_material_terms"]=[]
     header_conflicts=[]
     for part in ordered:
