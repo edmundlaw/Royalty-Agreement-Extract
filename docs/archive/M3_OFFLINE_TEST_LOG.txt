@@ -1,0 +1,26 @@
+ERROR FileExistsError: Output exists. Pass --force to overwrite or --skip-existing to skip: /tmp/tmpsg0zwlp5/map.json
+EOF marker not found
+ERROR ParseError: No readable text found
+ERROR ValueError: Cannot skip stale M2 artifact: source, extraction, or options differ
+ERROR ValueError: Cannot skip stale M2 artifact: source, extraction, or options differ
+ERROR FileExistsError: Export directory is not empty; specify --force or a new empty directory
+ERROR ValueError: Live SEC access requires --user-agent 'Your research project contact@yourdomain.com'
+ERROR ValueError: Search window 1826 days is invalid/too long; run bounded daily or monthly tasks
+----------------------------------------------------------------------
+Ran 92 tests in 13.219s
+
+OK
+{"status": "MAPPED_NOT_INTERPRETED", "passages": 12, "candidates": 8, "output": "/tmp/tmpsg0zwlp5/map.json"}
+SKIP_EXISTS /tmp/tmpsg0zwlp5/map.json
+{"status": "PASS", "errors": []}
+{"status": "PACKET_PREPARED", "output": "/tmp/tmpb20f7q5t/p.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "PACKET_PREPARED", "output": "/tmp/tmpb20f7q5t/r.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "PASS_DETERMINISTIC_ONLY", "output": "/tmp/tmp22rw_t9o/qc.json", "document_id": "DOC-dc937b59892604f5a8"}
+SKIP_VALIDATED /tmp/tmp22rw_t9o/qc.json
+{"status": "PACKET_PREPARED", "output": "/tmp/tmpw8lj_qvy/packet.json", "document_id": "DOC-dc937b59892604f5a8"}
+SKIP_VALIDATED /tmp/tmpw8lj_qvy/packet.json
+{"status": "FAIL", "output": "/tmp/tmpqrgn561d/report.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "REGISTERED", "document_id": "DOC-dc937b59892604f5a8", "map_sha256": "b3671ddfce424e751787159123078d880e8e42717d51339085a3b563932395bb"}
+{"schema": "m3-attempt.1", "document_id": "DOC-dc937b59892604f5a8", "extraction_sha256": "769b7a4f2c55019a7fdbbe73d339c17c8a64750abe20abd9b13190d064a79fab", "map_sha256": "b3671ddfce424e751787159123078d880e8e42717d51339085a3b563932395bb", "deterministic_status": "PASS_DETERMINISTIC_ONLY", "blocking_issues": ["ISSUE-RED-1"], "created_at_utc": "2026-11-13T14:18:19+00:00"}
+{"schema": "m3-status.1", "documents": 1, "states": {"QC_PASSED_OPEN_HIGH_ISSUE": 1}, "jobs": [{"document_id": "DOC-dc937b59892604f5a8", "state": "QC_PASSED_OPEN_HIGH_ISSUE", "attempts": 1, "ai_reviews": 0, "selected_sha256": "769b7a4f2c55019a7fdbbe73d339c17c8a64750abe20abd9b13190d064a79fab"}]}
+{"status": "EXPORTED_HISTORICAL_STAGING_NOT_AUDIT_APPROVED", "output": "/tmp/tmpdbazlmyz/publish", "row_counts": {"Overview": 9, "Agreements": 1, "Documents": 1, "Royalty Terms": 3, "Tiers": 4, "Other Payments": 1, "Evidence": 9, "Conditions": 0, "Adjustments": 1, "Amendments": 0, "QC": 1, "Open Issues": 1, "Pending Jobs": 1, "Human Reviewed": 0, "Data Dictionary": 13}, "snapshot_sha256": "78c5aadaa8fc441c9e91c31d7db9638e0a448ab4d8b9030af497633e95f1c796"}

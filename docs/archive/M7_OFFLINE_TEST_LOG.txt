@@ -1,0 +1,30 @@
+Royalty Research M7 v0.7.0 — Offline regression log
+Command: PYTHONPATH=src python -m unittest discover -s tests -q
+Environment: container Python 3.13; no live Claude/Codex inference; no SEC network
+
+The test suite deliberately calls CLI error paths and emits expected diagnostics
+(e.g., parse failures, stale-output refusals, and SEC safety guards). Such lines
+are expected and do not indicate unhandled test failures.
+ERROR FileExistsError: Output exists. Pass --force to overwrite or --skip-existing to skip: /tmp/tmp_kpvpca3/map.json
+EOF marker not found
+ERROR ParseError: No readable text found
+ERROR ValueError: Cannot skip stale M2 artifact: source, extraction, or options differ
+ERROR ValueError: Cannot skip stale M2 artifact: source, extraction, or options differ
+ERROR FileExistsError: Export directory is not empty; specify --force or a new empty directory
+ERROR FileExistsError: M5 probe report already exists; use a new path or --force
+ERROR ValueError: Live SEC access requires --user-agent 'Your research project contact@yourdomain.com'
+ERROR ValueError: Search window 1826 days is invalid/too long; run bounded daily or monthly tasks
+----------------------------------------------------------------------
+Ran 188 tests in 11.171s
+
+OK
+
+--- Selected stdout (not every normal CLI message) ---
+{"status": "MAPPED_NOT_INTERPRETED", "passages": 12, "candidates": 8, "output": "/tmp/tmp_kpvpca3/map.json"}
+SKIP_EXISTS /tmp/tmp_kpvpca3/map.json
+{"status": "PASS", "errors": []}
+{"status": "PACKET_PREPARED", "output": "/tmp/tmp45redlwl/p.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "PACKET_PREPARED", "output": "/tmp/tmp45redlwl/r.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "PASS_DETERMINISTIC_ONLY", "output": "/tmp/tmphh1xfqj6/qc.json", "document_id": "DOC-dc937b59892604f5a8"}
+SKIP_VALIDATED /tmp/tmphh1xfqj6/qc.json
+{"status": "PACKET_PREPARED", "output": "/tmp/tmpck48y3b0/packet.json", "document_id": "DOC-dc937b59892604f5a8"}

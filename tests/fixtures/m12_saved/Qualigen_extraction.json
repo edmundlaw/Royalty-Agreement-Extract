@@ -1,0 +1,1253 @@
+{
+  "agreement": {
+    "contractual_status": "Signature blocks present in filed exhibit; current operative status not verified",
+    "duration": "Commences on the Effective Date and continues until terminated as provided in the agreement",
+    "effective_date": "February 15, 2024",
+    "exclusivity": "Exclusive license under QLGN RAS Technology; exclusive (even as to QLGN) sublicense under Licensed Patents and Licensed Methods; non-exclusive sublicense under Licensed Technical Knowledge",
+    "execution_date": null,
+    "field_evidence": {
+      "contractual_status": [
+        "c1-ev32"
+      ],
+      "duration": [
+        "c1-ev19"
+      ],
+      "effective_date": [
+        "c1-ev01"
+      ],
+      "exclusivity": [
+        "c1-ev05",
+        "c1-ev06",
+        "c1-ev07"
+      ],
+      "industry": [
+        "c1-ev31"
+      ],
+      "licensed_ip": [
+        "c1-ev05",
+        "c1-ev06",
+        "c1-ev07"
+      ],
+      "licensee": [
+        "c1-ev04"
+      ],
+      "licensor": [
+        "c1-ev03"
+      ],
+      "territory": [
+        "c1-ev05",
+        "c1-ev06",
+        "c1-ev07"
+      ],
+      "title": [
+        "c1-ev02"
+      ]
+    },
+    "industry": "Pharmaceutical drug development (RAS compounds and drugs)",
+    "licensed_ip": "QLGN RAS Technology (license); QLGN's licensee rights under the Licensed Patents and Licensed Methods and Licensed Technical Knowledge under the ULRF License Agreement (sublicense)",
+    "licensee": "Pan-RAS Holdings, Inc. (Pan-RAS)",
+    "licensor": "Qualigen Therapeutics, Inc. (QLGN); underlying licensor under the referenced License Agreement is University of Louisville Research Foundation, Inc. (ULRF)",
+    "territory": "Worldwide",
+    "title": "License and Sublicense Agreement"
+  },
+  "amendment_status": "REFERENCED_UNRESOLVED",
+  "dispositions": [
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000001",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit label only; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-ev02"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000002",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Agreement title; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-ev01",
+        "c1-ev03",
+        "c1-ev04"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000003",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Identifies parties and Effective Date; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000005",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Generic consideration recital with no stated amounts.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000007",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Definition of Applicable Law; referenced by the interest cap but has no economics itself.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c1-ev21"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000008",
+      "payment_ids": [
+        "c1-p01"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Closing Date is tied to payment of the Upfront Fee, and the license grants take effect on that date.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000009",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Definition of Person; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c1-ev31"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000010",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines QLGN RAS Technology, the licensed IP scope; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000011",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Definition of Representatives; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000012",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Definition of Third Party; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-ev06"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000016",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exclusive sublicense grant defining the rights scope; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-ev07"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000017",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Non-exclusive sublicense grant defining the rights scope; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev24"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000022",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence covenant that references Net Sales; supports the royalty base term but defines nothing.",
+      "term_ids": [
+        "c1-t01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev23"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000023",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Refers to diligence milestones in Section 4.2 and Exhibit C of the License Agreement, which are not supplied.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000025",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Introductory lead-in to the Financial Terms article.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-ev08",
+        "c1-ev09"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000026",
+      "payment_ids": [
+        "c1-p01"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "$1,000,000 cash Upfront Fee payable to QLGN within 30 days of the Effective Date.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-ev10"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000027",
+      "payment_ids": [
+        "c1-p02"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Pass-through of ULRF milestone payments; amounts are in the License Agreement and not stated here.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000028",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Heading for 'Royalties; Reports'; no operative terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev11",
+        "c1-ev12"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000029",
+      "payment_ids": [
+        "c1-p03"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Pass-through of ULRF running royalty and Annual Minimum; rates and amounts are in the License Agreement and an unsupplied schedule.",
+      "term_ids": [
+        "c1-t02"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "c1-ev13",
+        "c1-ev14"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000030",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "1.0%",
+          "rationale": "Flat royalty rate payable to QLGN on Net Sales and Licensed Services.",
+          "term_id": "c1-t01"
+        }
+      ],
+      "rationale": "Royalty of 1.0% of Net Sales and Licensed Services payable to QLGN, paid semiannually.",
+      "term_ids": [
+        "c1-t01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev29"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000031",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Incorporates the Licensee royalty-report and development-report obligations by reference; no rates.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-ev15"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000032",
+      "payment_ids": [
+        "c1-p04"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Pass-through of ULRF Patent Costs incurred after the Effective Date; amounts not stated.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000033",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Lets Pan-RAS request termination of QLGN's Patent Costs obligations under Section 9.3 of the License Agreement; no amounts given.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-ev20"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000035",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Payments are not reduced by foreign taxes; recorded as an adjustment on the QLGN royalty term.",
+      "term_ids": [
+        "c1-t01"
+      ]
+    },
+    {
+      "categories": [
+        "UNRELATED_PERCENT",
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-ev16"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000036",
+      "payment_ids": [
+        "c1-p05"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "1.5%",
+          "rationale": "Late-payment interest rate, not a royalty or sublicensing rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Late-payment interest of 1.5% per month, capped at the highest lawful rate; not a royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-ev27"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000037",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Payment currency and method (USD wire); no rates.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000054",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Representation that no third-party licenses exist; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000056",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Representation of right to grant license; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000064",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Incorporates Section 7.4 of the License Agreement (liability limitation); no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000065",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Limitation of liability with an Article 8 cross-reference; no royalty economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000066",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Warranty disclaimer referencing Article 6; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000070",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Indemnification obligations incorporating Section 8.1 of the License Agreement; no royalty terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "UNRELATED_PERCENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev18"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000073",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "100%",
+          "rationale": "Refers to the whole undisputed amount owed in a material-breach clause, not a rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Termination for breach; the 100% refers to full undisputed amounts owed counting as a material breach, not a royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev30"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000075",
+      "payment_ids": [
+        "c1-p01"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Pan-RAS may terminate before the 30th day after the Effective Date (or the extended deadline), which affects the Upfront Fee timing.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev26"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000078",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "If Pan-RAS terminates under Section 9.2, 9.3 or 9.4, it has no Article 4 payment liability.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev25"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000079",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Article 4 and Article 8 payments continue after other terminations; this affects payment survival.",
+      "term_ids": [
+        "c1-t01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000082",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Pan-RAS accepts Sublicensee status under Section 3.1 of the License Agreement, which is not supplied.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev17"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000083",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Waives the ULRF Non-Royalty Sublicense Income percentage payment for establishing Pan-RAS as Sublicensee; the underlying percentage is not stated.",
+      "term_ids": [
+        "c1-t03"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-ev28"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000084",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Litigation under Section 11 of the License Agreement is at Pan-RAS's cost, and any sums recovered go to Pan-RAS; no rates.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-45877780bb055401a0:P000110",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Further-assurances boilerplate; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-ev32"
+      ],
+      "passage_id": "DOC-45877780bb055401a0:P000115",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Execution clause; no economics.",
+      "term_ids": []
+    }
+  ],
+  "document_id": "DOC-45877780bb055401a0",
+  "evidence": [
+    {
+      "evidence_id": "c1-ev01",
+      "passage_id": "DOC-45877780bb055401a0:P000003",
+      "quote": "entered into as of February 15, 2024 (the “Effective Date”)",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev02",
+      "passage_id": "DOC-45877780bb055401a0:P000002",
+      "quote": "LICENSE AND SUBLICENSE AGREEMENT",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev03",
+      "passage_id": "DOC-45877780bb055401a0:P000003",
+      "quote": "by Qualigen Therapeutics, Inc., a Delaware corporation (“QLGN”)",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev04",
+      "passage_id": "DOC-45877780bb055401a0:P000003",
+      "quote": "Pan-RAS Holdings, Inc., a New York corporation (“Pan-RAS”)",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev05",
+      "passage_id": "DOC-45877780bb055401a0:P000015",
+      "quote": "a worldwide, exclusive license under the QLGN RAS Technology",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c1-ev06",
+      "passage_id": "DOC-45877780bb055401a0:P000016",
+      "quote": "a worldwide, exclusive (even as to QLGN) Sublicense under all of QLGN’s License Agreement licensee rights under the Licensed Patents and the Licensed Methods",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c1-ev07",
+      "passage_id": "DOC-45877780bb055401a0:P000017",
+      "quote": "a worldwide, non-exclusive Sublicense under all of QLGN’s License Agreement licensee rights under the Licensed Technical Knowledge",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c1-ev08",
+      "passage_id": "DOC-45877780bb055401a0:P000026",
+      "quote": "Pan-RAS shall pay to QLGN $1,000,000 in cash within 30 calendar days after the Effective Date",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "c1-ev09",
+      "passage_id": "DOC-45877780bb055401a0:P000026",
+      "quote": "which deadline date may be extended by consent of QLGN",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev10",
+      "passage_id": "DOC-45877780bb055401a0:P000027",
+      "quote": "Pan-RAS shall pay to ULRF, as and when required by the License Agreement to be paid by QLGN to ULRF, all milestone payments required by the License Agreement to be paid by QLGN to ULRF.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev11",
+      "passage_id": "DOC-45877780bb055401a0:P000029",
+      "quote": "all running-royalty (“Royalty”) and minimum-royalty (“Annual Minimum”) payments required by the License Agreement to be paid by QLGN to ULRF",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev12",
+      "passage_id": "DOC-45877780bb055401a0:P000029",
+      "quote": "has been provided to Pan-RAS prior to the Effective Date",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev13",
+      "passage_id": "DOC-45877780bb055401a0:P000030",
+      "quote": "royalties equal to 1.0% of Net Sales and Licensed Services",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "c1-ev14",
+      "passage_id": "DOC-45877780bb055401a0:P000030",
+      "quote": "on a semiannual basis (at the same times as Royalty payments are required by the License Agreement to be paid by QLGN to ULRF)",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev15",
+      "passage_id": "DOC-45877780bb055401a0:P000032",
+      "quote": "all Patent Costs required by Sections 9.2(b) and 9.2(c) of the License Agreement to be paid by QLGN to ULRF",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev16",
+      "passage_id": "DOC-45877780bb055401a0:P000036",
+      "quote": "at the lower of 1.5% per month or the highest rate permitted under Applicable Law",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev17",
+      "passage_id": "DOC-45877780bb055401a0:P000083",
+      "quote": "Pan-RAS shall not be required to make any Non-Royalty Sublicense Income percentage payment to ULRF in respect of establishing Pan-RAS as a Sublicensee pursuant to this Agreement",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev18",
+      "passage_id": "DOC-45877780bb055401a0:P000073",
+      "quote": "100% of any amount of money owing from Pan-RAS to QLGN",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev19",
+      "passage_id": "DOC-45877780bb055401a0:P000072",
+      "quote": "The term of this Agreement shall commence on the Effective Date and shall continue until terminated as provided herein.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev20",
+      "passage_id": "DOC-45877780bb055401a0:P000035",
+      "quote": "shall be paid to ULRF or QLGN free and clear of all foreign taxes",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev21",
+      "passage_id": "DOC-45877780bb055401a0:P000008",
+      "quote": "“Closing Date” means the date on which Pan-RAS pays QLGN the Upfront Fee",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c1-ev22",
+      "passage_id": "DOC-45877780bb055401a0:P000004",
+      "quote": "as amended by Amendment 1 dated March 17, 2021, and by Amendment 2 dated June 15, 2023",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev23",
+      "passage_id": "DOC-45877780bb055401a0:P000023",
+      "quote": "diligence milestones identified in Section 4.2 of and Exhibit C of the License Agreement",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev24",
+      "passage_id": "DOC-45877780bb055401a0:P000022",
+      "quote": "commercialization of Licensed Products to generate Net Sales",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "c1-ev25",
+      "passage_id": "DOC-45877780bb055401a0:P000079",
+      "quote": "Pan-RAS shall make any and all payments pursuant to Article 4 and Article 8 in accordance with the terms thereof",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev26",
+      "passage_id": "DOC-45877780bb055401a0:P000078",
+      "quote": "If Pan-RAS terminates this Agreement pursuant to Section 9.2, 9.3 or 9.4",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev27",
+      "passage_id": "DOC-45877780bb055401a0:P000037",
+      "quote": "paid in United States Dollars (USD) by wire transfer",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev28",
+      "passage_id": "DOC-45877780bb055401a0:P000084",
+      "quote": "such sums shall be for Pan-RAS’ benefit rather than for QLGN’s benefit",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-ev29",
+      "passage_id": "DOC-45877780bb055401a0:P000031",
+      "quote": "comply with the obligations of “Licensee” under Sections 6.1, 6.2 and 6.3 of the License Agreement",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev30",
+      "passage_id": "DOC-45877780bb055401a0:P000075",
+      "quote": "Pan-RAS may terminate this Agreement at any time prior to the 30th day after the Effective Date",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-ev31",
+      "passage_id": "DOC-45877780bb055401a0:P000010",
+      "quote": "covering the composition of matter or use of RAS compounds and drugs",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c1-ev32",
+      "passage_id": "DOC-45877780bb055401a0:P000115",
+      "quote": "to be executed and delivered so as to be effective on the date first set forth above",
+      "role": "OTHER"
+    }
+  ],
+  "occurrence_dispositions": [
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-9247b68b796b0e6c26",
+      "payment_id": "c1-p01",
+      "rationale": "Section 4.1 Upfront Fee of $1,000,000 cash payable within 30 days of Effective Date; matches upfront payment c1-p01.",
+      "term_id": null
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-ceecaa5ed489906b77",
+      "payment_id": null,
+      "rationale": "Pan-RAS pays QLGN royalties equal to 1.0% of Net Sales and Licensed Services, semiannual; matches flat 1.0% term c1-t01, which cites P000030.",
+      "term_id": "c1-t01"
+    },
+    {
+      "classification": "ADJUSTMENT",
+      "occurrence_id": "OCC-7537055e946ea30178",
+      "payment_id": "c1-p05",
+      "rationale": "Late-payment interest at lower of 1.5% per month or highest lawful rate; not a running royalty. Matches interest payment c1-p05.",
+      "term_id": null
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-a7925173f270265dd7",
+      "payment_id": null,
+      "rationale": "Non-payment of 100% of undisputed amounts owed deemed a material breach; a termination/breach condition, not a rate. Excerpt truncated.",
+      "term_id": null
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-a7cfbb1bc420013a41",
+      "payment_id": null,
+      "rationale": "Failure to pay 100% of the undisputed portion deemed a material breach; breach condition, not a royalty or payment amount.",
+      "term_id": null
+    }
+  ],
+  "occurrence_manifest_sha256": "6b5d66312a03d0ab53afd7ab9025efd80aa634d80a8bd68944924d3d1b4daf5a",
+  "open_issues": [
+    {
+      "description": "'Net Sales', 'Licensed Services', 'Licensed Products', 'Licensed Patents' and 'Licensed Methods' are not defined in this chunk. Section 1 says capitalized terms take their meanings from the ULRF License Agreement, which is not supplied. The royalty base for the 1.0% rate cannot be verified.",
+      "issue_id": "c1-i01",
+      "kind": "MISSING_DEFINITION",
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000006",
+        "DOC-45877780bb055401a0:P000030"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "The ULRF running royalty, Annual Minimum, milestone payments and Patent Costs that Pan-RAS passes through are set in the ULRF License Agreement and a schedule 'provided to Pan-RAS prior to the Effective Date'. Neither is in the supplied text, so the rates and amounts are unknown.",
+      "issue_id": "c1-i02",
+      "kind": "CROSS_REFERENCE_UNAVAILABLE",
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000027",
+        "DOC-45877780bb055401a0:P000029",
+        "DOC-45877780bb055401a0:P000032"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "The Non-Royalty Sublicense Income percentage owed to ULRF is referenced but not stated. Only a waiver for establishing Pan-RAS as Sublicensee is given. Any sublicensing receipt economics for later sublicenses by Pan-RAS are not addressed in this chunk.",
+      "issue_id": "c1-i03",
+      "kind": "CROSS_REFERENCE_UNAVAILABLE",
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000083"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "The ULRF License Agreement was amended by Amendment 1 (March 17, 2021) and Amendment 2 (June 15, 2023) and novated March 1, 2021. Those documents were not reviewed and may change the pass-through economics. Amendments to this Agreement were not checked.",
+      "issue_id": "c1-i04",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000004",
+        "DOC-45877780bb055401a0:P000089"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "It is unclear whether the 1.0% on 'Net Sales and Licensed Services' applies to Pan-RAS sales only or also to sublicensee sales, and no royalty term or expiry is stated. No geographic or product limits on the royalty are stated.",
+      "issue_id": "c1-i05",
+      "kind": "INTERPRETATION",
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000030"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Pan-RAS is described as a New York corporation in the preamble but as a Delaware limited liability company in Section 6.3. This does not change the economics but affects party identification.",
+      "issue_id": "c1-i06",
+      "kind": "INCONSISTENCY",
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000003",
+        "DOC-45877780bb055401a0:P000060"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "This is chunk 1 of 2. Chunk 2 was not read here, so any schedules, exhibits, redactions or other economic terms there, including a possible Net Sales definition, must be reconciled against c1-t01, c1-t02, c1-t03 and c1-p01 to c1-p05.",
+      "issue_id": "c1-i07",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "The agreement execution date is not separately stated; only the Effective Date is. The current operative status of this historical SEC filing is not established.",
+      "issue_id": "c1-i08",
+      "kind": "CURRENT_STATUS",
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000115"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "This chunk (2 of 2) contains only two signature-block passages (name and title of a General Counsel, Paul Rachmuth) and no economic terms. All candidate royalty/payment passages (P000001 through P000115) lie outside the passages supplied for this chunk and were not read here. Any royalty rates, tiers, sublicensing, reductions, minimums, payments and amendment terms must be extracted and reconciled from the other chunk (chunk 1).",
+      "issue_id": "2-ISSUE-001",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000122",
+        "DOC-45877780bb055401a0:P000123"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Amendment history was not checked in this chunk; the signature block provides no information on amendments or current operative status.",
+      "issue_id": "2-ISSUE-002",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000122",
+        "DOC-45877780bb055401a0:P000123"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    }
+  ],
+  "other_payments": [
+    {
+      "amount_value": "1,000,000",
+      "basis": "Upfront Fee payable by Pan-RAS to QLGN in cash",
+      "condition": "Within 30 calendar days after the Effective Date, extendable by consent of QLGN; payment date defines the Closing Date",
+      "currency": "USD",
+      "evidence_ids": [
+        "c1-ev08",
+        "c1-ev09",
+        "c1-ev21"
+      ],
+      "kind": "UPFRONT",
+      "payment_id": "c1-p01"
+    },
+    {
+      "amount_value": null,
+      "basis": "Pass-through of all milestone payments QLGN owes ULRF under the License Agreement; amounts not stated",
+      "condition": "As and when required by the License Agreement to be paid by QLGN to ULRF",
+      "currency": null,
+      "evidence_ids": [
+        "c1-ev10"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "c1-p02"
+    },
+    {
+      "amount_value": null,
+      "basis": "Pass-through of ULRF 'Annual Minimum' payments under the License Agreement; amount not stated",
+      "condition": "As and when required by the License Agreement to be paid by QLGN to ULRF",
+      "currency": null,
+      "evidence_ids": [
+        "c1-ev11",
+        "c1-ev12"
+      ],
+      "kind": "MINIMUM_ROYALTY",
+      "payment_id": "c1-p03"
+    },
+    {
+      "amount_value": null,
+      "basis": "Patent Costs under Sections 9.2(b) and 9.2(c) of the License Agreement, for expenses incurred after the Effective Date",
+      "condition": "As and when required by the License Agreement to be paid by QLGN to ULRF",
+      "currency": null,
+      "evidence_ids": [
+        "c1-ev15"
+      ],
+      "kind": "OTHER",
+      "payment_id": "c1-p04"
+    },
+    {
+      "amount_value": "1.5% per month or the highest lawful rate, whichever is lower",
+      "basis": "Late payments to QLGN not made when due (excluding portions in good faith dispute)",
+      "condition": "Accrues from due date until paid",
+      "currency": null,
+      "evidence_ids": [
+        "c1-ev16"
+      ],
+      "kind": "INTEREST",
+      "payment_id": "c1-p05"
+    }
+  ],
+  "reader": {
+    "engine": "claude",
+    "model": "sonnet",
+    "read_scope": "FULL_DOCUMENT",
+    "reviewed_passage_ids": [
+      "DOC-45877780bb055401a0:P000001",
+      "DOC-45877780bb055401a0:P000002",
+      "DOC-45877780bb055401a0:P000003",
+      "DOC-45877780bb055401a0:P000004",
+      "DOC-45877780bb055401a0:P000005",
+      "DOC-45877780bb055401a0:P000006",
+      "DOC-45877780bb055401a0:P000007",
+      "DOC-45877780bb055401a0:P000008",
+      "DOC-45877780bb055401a0:P000009",
+      "DOC-45877780bb055401a0:P000010",
+      "DOC-45877780bb055401a0:P000011",
+      "DOC-45877780bb055401a0:P000012",
+      "DOC-45877780bb055401a0:P000013",
+      "DOC-45877780bb055401a0:P000014",
+      "DOC-45877780bb055401a0:P000015",
+      "DOC-45877780bb055401a0:P000016",
+      "DOC-45877780bb055401a0:P000017",
+      "DOC-45877780bb055401a0:P000018",
+      "DOC-45877780bb055401a0:P000019",
+      "DOC-45877780bb055401a0:P000020",
+      "DOC-45877780bb055401a0:P000021",
+      "DOC-45877780bb055401a0:P000022",
+      "DOC-45877780bb055401a0:P000023",
+      "DOC-45877780bb055401a0:P000024",
+      "DOC-45877780bb055401a0:P000025",
+      "DOC-45877780bb055401a0:P000026",
+      "DOC-45877780bb055401a0:P000027",
+      "DOC-45877780bb055401a0:P000028",
+      "DOC-45877780bb055401a0:P000029",
+      "DOC-45877780bb055401a0:P000030",
+      "DOC-45877780bb055401a0:P000031",
+      "DOC-45877780bb055401a0:P000032",
+      "DOC-45877780bb055401a0:P000033",
+      "DOC-45877780bb055401a0:P000034",
+      "DOC-45877780bb055401a0:P000035",
+      "DOC-45877780bb055401a0:P000036",
+      "DOC-45877780bb055401a0:P000037",
+      "DOC-45877780bb055401a0:P000038",
+      "DOC-45877780bb055401a0:P000039",
+      "DOC-45877780bb055401a0:P000040",
+      "DOC-45877780bb055401a0:P000041",
+      "DOC-45877780bb055401a0:P000042",
+      "DOC-45877780bb055401a0:P000043",
+      "DOC-45877780bb055401a0:P000044",
+      "DOC-45877780bb055401a0:P000045",
+      "DOC-45877780bb055401a0:P000046",
+      "DOC-45877780bb055401a0:P000047",
+      "DOC-45877780bb055401a0:P000048",
+      "DOC-45877780bb055401a0:P000049",
+      "DOC-45877780bb055401a0:P000050",
+      "DOC-45877780bb055401a0:P000051",
+      "DOC-45877780bb055401a0:P000052",
+      "DOC-45877780bb055401a0:P000053",
+      "DOC-45877780bb055401a0:P000054",
+      "DOC-45877780bb055401a0:P000055",
+      "DOC-45877780bb055401a0:P000056",
+      "DOC-45877780bb055401a0:P000057",
+      "DOC-45877780bb055401a0:P000058",
+      "DOC-45877780bb055401a0:P000059",
+      "DOC-45877780bb055401a0:P000060",
+      "DOC-45877780bb055401a0:P000061",
+      "DOC-45877780bb055401a0:P000062",
+      "DOC-45877780bb055401a0:P000063",
+      "DOC-45877780bb055401a0:P000064",
+      "DOC-45877780bb055401a0:P000065",
+      "DOC-45877780bb055401a0:P000066",
+      "DOC-45877780bb055401a0:P000067",
+      "DOC-45877780bb055401a0:P000068",
+      "DOC-45877780bb055401a0:P000069",
+      "DOC-45877780bb055401a0:P000070",
+      "DOC-45877780bb055401a0:P000071",
+      "DOC-45877780bb055401a0:P000072",
+      "DOC-45877780bb055401a0:P000073",
+      "DOC-45877780bb055401a0:P000074",
+      "DOC-45877780bb055401a0:P000075",
+      "DOC-45877780bb055401a0:P000076",
+      "DOC-45877780bb055401a0:P000077",
+      "DOC-45877780bb055401a0:P000078",
+      "DOC-45877780bb055401a0:P000079",
+      "DOC-45877780bb055401a0:P000080",
+      "DOC-45877780bb055401a0:P000081",
+      "DOC-45877780bb055401a0:P000082",
+      "DOC-45877780bb055401a0:P000083",
+      "DOC-45877780bb055401a0:P000084",
+      "DOC-45877780bb055401a0:P000085",
+      "DOC-45877780bb055401a0:P000086",
+      "DOC-45877780bb055401a0:P000087",
+      "DOC-45877780bb055401a0:P000088",
+      "DOC-45877780bb055401a0:P000089",
+      "DOC-45877780bb055401a0:P000090",
+      "DOC-45877780bb055401a0:P000091",
+      "DOC-45877780bb055401a0:P000092",
+      "DOC-45877780bb055401a0:P000093",
+      "DOC-45877780bb055401a0:P000094",
+      "DOC-45877780bb055401a0:P000095",
+      "DOC-45877780bb055401a0:P000096",
+      "DOC-45877780bb055401a0:P000097",
+      "DOC-45877780bb055401a0:P000098",
+      "DOC-45877780bb055401a0:P000099",
+      "DOC-45877780bb055401a0:P000100",
+      "DOC-45877780bb055401a0:P000101",
+      "DOC-45877780bb055401a0:P000102",
+      "DOC-45877780bb055401a0:P000103",
+      "DOC-45877780bb055401a0:P000104",
+      "DOC-45877780bb055401a0:P000105",
+      "DOC-45877780bb055401a0:P000106",
+      "DOC-45877780bb055401a0:P000107",
+      "DOC-45877780bb055401a0:P000108",
+      "DOC-45877780bb055401a0:P000109",
+      "DOC-45877780bb055401a0:P000110",
+      "DOC-45877780bb055401a0:P000111",
+      "DOC-45877780bb055401a0:P000112",
+      "DOC-45877780bb055401a0:P000113",
+      "DOC-45877780bb055401a0:P000114",
+      "DOC-45877780bb055401a0:P000115",
+      "DOC-45877780bb055401a0:P000116",
+      "DOC-45877780bb055401a0:P000117",
+      "DOC-45877780bb055401a0:P000118",
+      "DOC-45877780bb055401a0:P000119",
+      "DOC-45877780bb055401a0:P000120",
+      "DOC-45877780bb055401a0:P000121",
+      "DOC-45877780bb055401a0:P000122",
+      "DOC-45877780bb055401a0:P000123"
+    ],
+    "run_id": "MERGE-01eb994d8cf3afceb1"
+  },
+  "royalty_terms": [
+    {
+      "adjustments": [
+        {
+          "description": "Amounts payable to ULRF or QLGN are not reduced on account of foreign taxes and are paid free and clear of foreign taxes",
+          "evidence_ids": [
+            "c1-ev20"
+          ]
+        }
+      ],
+      "base": "Net Sales and Licensed Services",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "c1-ev13",
+        "c1-ev24"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "c1-ev14"
+          ],
+          "text": "Paid by Pan-RAS to QLGN semiannually, at the same times Royalty payments are due from QLGN to ULRF under the License Agreement"
+        }
+      ],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": null,
+      "evidence_ids": [
+        "c1-ev13",
+        "c1-ev14",
+        "c1-ev24",
+        "c1-ev20"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": "Licensed Products and Licensed Services (definitions not in this chunk)",
+      "rate_evidence_ids": [
+        "c1-ev13"
+      ],
+      "rate_unit": "PERCENT",
+      "rate_value": "1.0",
+      "structure": "FLAT",
+      "term_id": "c1-t01",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Per the ULRF License Agreement (not supplied)",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "c1-ev11"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "c1-ev11",
+            "c1-ev12"
+          ],
+          "text": "Pan-RAS pays ULRF the running-royalty and Annual Minimum amounts as and when QLGN is required to pay them under the License Agreement; a schedule was provided to Pan-RAS before the Effective Date but is not in the text"
+        }
+      ],
+      "disclosure_status": "NOT_VERIFIED",
+      "effective_period": null,
+      "evidence_ids": [
+        "c1-ev11",
+        "c1-ev12"
+      ],
+      "family": "OTHER",
+      "product_scope": null,
+      "rate_evidence_ids": [],
+      "rate_unit": "UNKNOWN",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "c1-t02",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Non-Royalty Sublicense Income (ULRF License Agreement concept; not defined in this document)",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "c1-ev17"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "c1-ev17"
+          ],
+          "text": "Pan-RAS is not required to make any Non-Royalty Sublicense Income percentage payment to ULRF in respect of establishing Pan-RAS as a Sublicensee under this Agreement; the underlying percentage is not stated here"
+        }
+      ],
+      "disclosure_status": "NOT_VERIFIED",
+      "effective_period": null,
+      "evidence_ids": [
+        "c1-ev17"
+      ],
+      "family": "SUBLICENSING_RECEIPTS",
+      "product_scope": null,
+      "rate_evidence_ids": [],
+      "rate_unit": "UNKNOWN",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "c1-t03",
+      "territory_scope": null,
+      "tiers": []
+    }
+  ],
+  "schema_version": "m2.0",
+  "source_text_sha256": "1ee08c7d38e32fb4d981a13115800bb30ffad72535eaaf1a4428d643953fca55",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1460702/000149315224007562/ex10-1.htm"
+}

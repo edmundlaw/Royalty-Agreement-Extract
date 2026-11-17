@@ -1,0 +1,45 @@
+{
+  "can_claim_complete": false,
+  "checks": [
+    {
+      "check": "EVIDENCE_SUBSTRING_CHECKED",
+      "status": "PASS"
+    },
+    {
+      "check": "CANDIDATE_DISPOSITION_LEDGER",
+      "status": "PASS"
+    },
+    {
+      "check": "SOURCE_MAP_BINDING",
+      "status": "PASS"
+    },
+    {
+      "check": "ALL_CANDIDATES_LISTED_AS_READ",
+      "status": "PASS"
+    }
+  ],
+  "deterministic_status": "PASS_DETERMINISTIC_ONLY",
+  "document_id": "DOC-dc937b59892604f5a8",
+  "errors": [],
+  "notice": "Numbers/quotes/coverage bookkeeping checks are not semantic validation or measured recall.",
+  "professional_review_status": "NOT_ASSESSED",
+  "schema": "m2-qc.1",
+  "source_text_sha256": "808fc8f094d4f5bce7982c0822d10e52d4432eefea8129385e4d86ade25a7794",
+  "warnings": [
+    {
+      "code": "READING_CLAIM_NOT_PROOF",
+      "message": "A complete ID list cannot prove actual cognitive or model reading",
+      "ref": null
+    },
+    {
+      "code": "BLOCKING_OPEN_ISSUE",
+      "message": "High-risk issue still open",
+      "ref": "ISSUE-RED-1"
+    },
+    {
+      "code": "AMENDMENT_HISTORY_NOT_VERIFIED",
+      "message": "Historical current status not established by this document",
+      "ref": null
+    }
+  ]
+}

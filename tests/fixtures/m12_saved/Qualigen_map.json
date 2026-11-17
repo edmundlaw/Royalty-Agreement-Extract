@@ -1,0 +1,1862 @@
+{
+  "candidate_passages": [
+    "DOC-45877780bb055401a0:P000001",
+    "DOC-45877780bb055401a0:P000002",
+    "DOC-45877780bb055401a0:P000003",
+    "DOC-45877780bb055401a0:P000005",
+    "DOC-45877780bb055401a0:P000007",
+    "DOC-45877780bb055401a0:P000008",
+    "DOC-45877780bb055401a0:P000009",
+    "DOC-45877780bb055401a0:P000010",
+    "DOC-45877780bb055401a0:P000011",
+    "DOC-45877780bb055401a0:P000012",
+    "DOC-45877780bb055401a0:P000016",
+    "DOC-45877780bb055401a0:P000017",
+    "DOC-45877780bb055401a0:P000022",
+    "DOC-45877780bb055401a0:P000023",
+    "DOC-45877780bb055401a0:P000025",
+    "DOC-45877780bb055401a0:P000026",
+    "DOC-45877780bb055401a0:P000027",
+    "DOC-45877780bb055401a0:P000028",
+    "DOC-45877780bb055401a0:P000029",
+    "DOC-45877780bb055401a0:P000030",
+    "DOC-45877780bb055401a0:P000031",
+    "DOC-45877780bb055401a0:P000032",
+    "DOC-45877780bb055401a0:P000033",
+    "DOC-45877780bb055401a0:P000035",
+    "DOC-45877780bb055401a0:P000036",
+    "DOC-45877780bb055401a0:P000037",
+    "DOC-45877780bb055401a0:P000054",
+    "DOC-45877780bb055401a0:P000056",
+    "DOC-45877780bb055401a0:P000064",
+    "DOC-45877780bb055401a0:P000065",
+    "DOC-45877780bb055401a0:P000066",
+    "DOC-45877780bb055401a0:P000070",
+    "DOC-45877780bb055401a0:P000073",
+    "DOC-45877780bb055401a0:P000075",
+    "DOC-45877780bb055401a0:P000078",
+    "DOC-45877780bb055401a0:P000079",
+    "DOC-45877780bb055401a0:P000082",
+    "DOC-45877780bb055401a0:P000083",
+    "DOC-45877780bb055401a0:P000084",
+    "DOC-45877780bb055401a0:P000110",
+    "DOC-45877780bb055401a0:P000115"
+  ],
+  "candidate_reason_counts": {
+    "CROSS_REFERENCE": 12,
+    "DEFINED_TERM": 6,
+    "FINANCE_VOCAB": 25,
+    "MONEY": 1,
+    "PERCENT": 3
+  },
+  "cross_references": [
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000001",
+      "references": [
+        "Exhibit 10.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000023",
+      "references": [
+        "Section 4.2",
+        "Exhibit C"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000033",
+      "references": [
+        "Section 9.3"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000064",
+      "references": [
+        "Section 7.4"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000065",
+      "references": [
+        "Article 8"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000066",
+      "references": [
+        "Article 6"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000070",
+      "references": [
+        "Section 8.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000075",
+      "references": [
+        "Section 4.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000078",
+      "references": [
+        "Section 9.2"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000079",
+      "references": [
+        "Section 9.2",
+        "Article 4",
+        "Article 8"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000082",
+      "references": [
+        "Section 3.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000084",
+      "references": [
+        "Section 11"
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000007",
+      "term": "Applicable Law"
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000008",
+      "term": "Closing Date"
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000009",
+      "term": "Person"
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000010",
+      "term": "QLGN RAS Technology"
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000011",
+      "term": "Representatives"
+    },
+    {
+      "passage_id": "DOC-45877780bb055401a0:P000012",
+      "term": "Third Party"
+    }
+  ],
+  "document_id": "DOC-45877780bb055401a0",
+  "document_metadata": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1460702/000149315224007562/ex10-1.htm"
+  },
+  "mapped_at_utc": "2026-11-14T10:18:56+00:00",
+  "occurrence_manifest_sha256": "6b5d66312a03d0ab53afd7ab9025efd80aa634d80a8bd68944924d3d1b4daf5a",
+  "original_sha256": "7f9f00ba74f2c6915744c9213ac2b4f366b885012f03ee29289c68dd7c3a2550",
+  "parser_type": "HTML_TEXT",
+  "passages": [
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 12,
+      "passage_id": "DOC-45877780bb055401a0:P000001",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 1,
+      "start_offset": 0,
+      "text": "Exhibit 10.1"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 45,
+      "passage_id": "DOC-45877780bb055401a0:P000002",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 2,
+      "start_offset": 13,
+      "text": "LICENSE AND SUBLICENSE AGREEMENT"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 330,
+      "passage_id": "DOC-45877780bb055401a0:P000003",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 3,
+      "start_offset": 46,
+      "text": "This License and Sublicense Agreement (this “Agreement”) is entered into as of February 15, 2024 (the “Effective Date”) by Qualigen Therapeutics, Inc., a Delaware corporation (“QLGN”), on the one hand, and Pan-RAS Holdings, Inc., a New York corporation (“Pan-RAS”), on the other hand."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 769,
+      "passage_id": "DOC-45877780bb055401a0:P000004",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 4,
+      "start_offset": 331,
+      "text": "Reference is made to the Exclusive License Agreement dated July 17, 2020, between QLGN’s predecessor in interest Qualigen, Inc. and University of Louisville Research Foundation, Inc. (“ULRF”), as amended by Amendment 1 dated March 17, 2021, and by Amendment 2 dated June 15, 2023 (as so amended, the “License Agreement”). Pursuant to a Novation Agreement dated March 1, 2021, the License Agreement was novated from Qualigen, Inc. to QLGN."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 1005,
+      "passage_id": "DOC-45877780bb055401a0:P000005",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 5,
+      "start_offset": 770,
+      "text": "In consideration of the mutual covenants and promises set forth in this Agreement and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged by the parties, the parties agree as follows:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1159,
+      "passage_id": "DOC-45877780bb055401a0:P000006",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 6,
+      "start_offset": 1006,
+      "text": "1. Definitions. All capitalized terms not otherwise defined in this Agreement shall have the meanings ascribed to them in the License Agreement. Further:"
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 1510,
+      "passage_id": "DOC-45877780bb055401a0:P000007",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 7,
+      "start_offset": 1160,
+      "text": "1.1 “Applicable Law” means all applicable common-law, constitutions, statutes, ordinances, regulations, rules, or orders of any kind whatsoever of any governmental authority, all as amended from time to time, together with any rules, regulations, and compliance guidance promulgated thereunder, as well as foreign equivalents of any of the foregoing."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 1623,
+      "passage_id": "DOC-45877780bb055401a0:P000008",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 8,
+      "start_offset": 1511,
+      "text": "1.2 “Closing Date” means the date on which Pan-RAS pays QLGN the Upfront Fee as set forth in Section ‎4.1 below."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 1677,
+      "passage_id": "DOC-45877780bb055401a0:P000009",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 9,
+      "start_offset": 1624,
+      "text": "1.3 “Person” means any person or entity or authority."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 2350,
+      "passage_id": "DOC-45877780bb055401a0:P000010",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 10,
+      "start_offset": 1678,
+      "text": "1.4 “QLGN RAS Technology” means all inventions, innovations, improvements, developments, discoveries, know-how and all intellectual property rights therein, which are in each case owned or in-licensed by QLGN (other than the Licensed Patents and the Licensed Technical Knowledge), covering the composition of matter or use of RAS compounds and drugs, as well as all data, information, documentation, scientific results, methods, processes, techniques, practices, processes, vendor/provider lists, developments, specifications, reports, studies, analyses, and plans constituting or arising from QLGN’s programs for the evaluation and development of RAS compounds and drugs."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 2536,
+      "passage_id": "DOC-45877780bb055401a0:P000011",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 11,
+      "start_offset": 2351,
+      "text": "1.5 “Representatives” means a party’s Affiliates, and the party’s and its Affiliates’ respective employees, officers, directors, managers, agents, contractors, consultants and advisors."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 2638,
+      "passage_id": "DOC-45877780bb055401a0:P000012",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 12,
+      "start_offset": 2537,
+      "text": "1.6 “Third Party” means any Person other than (a) QLGN or Pan-RAS or (b) an Affiliate of any of them."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2667,
+      "passage_id": "DOC-45877780bb055401a0:P000013",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 13,
+      "start_offset": 2639,
+      "text": "2. Licenses and Sublicenses."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2679,
+      "passage_id": "DOC-45877780bb055401a0:P000014",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.1",
+      "sequence": 14,
+      "start_offset": 2668,
+      "text": "2.1 Grants."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2955,
+      "passage_id": "DOC-45877780bb055401a0:P000015",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.1",
+      "sequence": 15,
+      "start_offset": 2680,
+      "text": "(a) Effective as of the Closing Date, QLGN grants Pan-RAS a worldwide, exclusive license under the QLGN RAS Technology for the following field of use: to use, make, have made, sell, have sold, offer for sale, import, and otherwise exploit and commercialize Licensed Products."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 3239,
+      "passage_id": "DOC-45877780bb055401a0:P000016",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.1",
+      "sequence": 16,
+      "start_offset": 2956,
+      "text": "(b) Effective as of the Closing Date, QLGN grants Pan-RAS a worldwide, exclusive (even as to QLGN) Sublicense under all of QLGN’s License Agreement licensee rights under the Licensed Patents and the Licensed Methods (but subject to the terms and conditions of the License Agreement)."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 3496,
+      "passage_id": "DOC-45877780bb055401a0:P000017",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.1",
+      "sequence": 17,
+      "start_offset": 3240,
+      "text": "(c) Effective as of the Closing Date, QLGN grants Pan-RAS a worldwide, non-exclusive Sublicense under all of QLGN’s License Agreement licensee rights under the Licensed Technical Knowledge (but subject to the terms and conditions of the License Agreement)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 4042,
+      "passage_id": "DOC-45877780bb055401a0:P000018",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.1",
+      "sequence": 18,
+      "start_offset": 3497,
+      "text": "2.2 Technology Transfer. QLGN shall forthwith disclose, technology-transfer and transition to Pan-RAS (in cooperation with Pan-RAS) the QLGN RAS Technology and QLGN’s ongoing programs for the evaluation and development of RAS compounds and drugs. QLGN shall also make available its personnel to provide consulting services (at Pan-RAS’ expense) to Pan-RAS as reasonably requested in connection with Pan-RAS’ conduct of the programs. QLGN consents to Pan-RAS contracting with and paying QLGN personnel to provide it with such consulting services."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 4703,
+      "passage_id": "DOC-45877780bb055401a0:P000019",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.1",
+      "sequence": 19,
+      "start_offset": 4043,
+      "text": "2.3 Reservation of Rights. Except for the rights specifically and unambiguously granted in this Agreement, no right or license under any intellectual property owned or in-licensed by QLGN is hereunder granted or implied. Nothing herein shall be construed to limit or restrict, in any manner, QLGN’s ability to use or exploit, or allow any Person to use or exploit, any non-RAS compounds, drugs, programs or other assets and business, provided that it does not therein use or permit the use of any RAS-related ULRF Confidential Information, any Pan-RAS Confidential Information, any Licensed Patents, any Licensed Technical Knowledge or any QLGN RAS Technology."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 4741,
+      "passage_id": "DOC-45877780bb055401a0:P000020",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 20,
+      "start_offset": 4704,
+      "text": "3. Development and Commercialization."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 4756,
+      "passage_id": "DOC-45877780bb055401a0:P000021",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.1",
+      "sequence": 21,
+      "start_offset": 4742,
+      "text": "3.1 Diligence."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5021,
+      "passage_id": "DOC-45877780bb055401a0:P000022",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.1",
+      "sequence": 22,
+      "start_offset": 4757,
+      "text": "(a) Pan-RAS covenants and agrees to use its good-faith efforts to bring about ultimately the development of Licensed Products, the obtaining of regulatory approval for Licensed Products, and the overall commercialization of Licensed Products to generate Net Sales."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 5249,
+      "passage_id": "DOC-45877780bb055401a0:P000023",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.1",
+      "sequence": 23,
+      "start_offset": 5022,
+      "text": "(b) Pan-RAS covenants and agrees to use good-faith efforts to achieve the diligence milestones identified in Section 4.2 of and Exhibit C of the License Agreement to be satisfied by the respective indicated milestone due dates."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 5685,
+      "passage_id": "DOC-45877780bb055401a0:P000024",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.1",
+      "sequence": 24,
+      "start_offset": 5250,
+      "text": "3.2 Allocation of Responsibility. As between QLGN and Pan-RAS, Pan-RAS owns all rights, title and interest in and to any and all Licensed Products, and all intellectual property rights related thereto. As between QLGN and Pan-RAS, Pan-RAS has the sole responsibility to research, develop, obtain regulatory approval for, and commercialize each Licensed Product. As between QLGN and Pan-RAS, Pan-RAS is responsible for its own expenses."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5817,
+      "passage_id": "DOC-45877780bb055401a0:P000025",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 25,
+      "start_offset": 5686,
+      "text": "4. Financial Terms. In partial consideration of the licenses, sublicenses and other rights granted to Pan-RAS under this Agreement:"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5985,
+      "passage_id": "DOC-45877780bb055401a0:P000026",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.1",
+      "sequence": 26,
+      "start_offset": 5818,
+      "text": "4.1 Upfront Fee. Pan-RAS shall pay to QLGN $1,000,000 in cash within 30 calendar days after the Effective Date, which deadline date may be extended by consent of QLGN."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 6195,
+      "passage_id": "DOC-45877780bb055401a0:P000027",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 27,
+      "start_offset": 5986,
+      "text": "4.2 Milestone Payments. Pan-RAS shall pay to ULRF, as and when required by the License Agreement to be paid by QLGN to ULRF, all milestone payments required by the License Agreement to be paid by QLGN to ULRF."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 6219,
+      "passage_id": "DOC-45877780bb055401a0:P000028",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.3",
+      "sequence": 28,
+      "start_offset": 6196,
+      "text": "4.3 Royalties; Reports."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 6635,
+      "passage_id": "DOC-45877780bb055401a0:P000029",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.3",
+      "sequence": 29,
+      "start_offset": 6220,
+      "text": "(a) Payments to ULRF. Pan-RAS shall pay to ULRF, as and when required by the License Agreement to be paid by QLGN to ULRF, all running-royalty (“Royalty”) and minimum-royalty (“Annual Minimum”) payments required by the License Agreement to be paid by QLGN to ULRF. A schedule of such payments, Royalty and Annual Minimum, referenced in this Section ‎4.3‎(a) has been provided to Pan-RAS prior to the Effective Date."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 6885,
+      "passage_id": "DOC-45877780bb055401a0:P000030",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.3",
+      "sequence": 30,
+      "start_offset": 6636,
+      "text": "(b) Payments to QLGN. In addition, Pan-RAS shall pay to QLGN, on a semiannual basis (at the same times as Royalty payments are required by the License Agreement to be paid by QLGN to ULRF), royalties equal to 1.0% of Net Sales and Licensed Services."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 7477,
+      "passage_id": "DOC-45877780bb055401a0:P000031",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.3",
+      "sequence": 31,
+      "start_offset": 6886,
+      "text": "(c) Royalty Reports and Development Reports. Pan-RAS agrees (for the benefit of QLGN and the benefit of ULRF as a third-party beneficiary) to comply with the obligations of “Licensee” under Sections 6.1, 6.2 and 6.3 of the License Agreement as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder. Pan-RAS also and separately agrees to comply with the obligations of “Licensee” under Sections 6.1 and 6.2 of the License Agreement, mutatis mutandis, as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder and QLGN were “ULRF” thereunder."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 7783,
+      "passage_id": "DOC-45877780bb055401a0:P000032",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.3",
+      "sequence": 32,
+      "start_offset": 7478,
+      "text": "4.4 Patent Costs. Pan-RAS shall pay to ULRF, as and when required by the License Agreement to be paid by QLGN to ULRF, all Patent Costs required by Sections 9.2(b) and 9.2(c) of the License Agreement to be paid by QLGN to ULRF regarding such patenting expenses which are incurred after the Effective Date."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 8045,
+      "passage_id": "DOC-45877780bb055401a0:P000033",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.3",
+      "sequence": 33,
+      "start_offset": 7784,
+      "text": "(a) When and if Pan-RAS so requests, QLGN agrees to terminate (as contemplated by Section 9.3 of the License Agreement) QLGN’s Patent Costs obligations with respect to any given patent application or patent within the Licensed Patents in any designated country."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8623,
+      "passage_id": "DOC-45877780bb055401a0:P000034",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.3",
+      "sequence": 34,
+      "start_offset": 8046,
+      "text": "4.5 Records; Examinations. Pan-RAS agrees (for the benefit of QLGN and for the benefit of ULRF as a third-party beneficiary) to comply with the obligations of “Licensee” under Sections 5.4, 5.5 and 5.6 of the License Agreement as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder. Pan-RAS also and separately agrees to comply with the obligations of “Licensee” under Sections 5.4 and 5.5 of the License Agreement, mutatis mutandis, as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder and QLGN were “ULRF” thereunder."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 8839,
+      "passage_id": "DOC-45877780bb055401a0:P000035",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.6",
+      "sequence": 35,
+      "start_offset": 8624,
+      "text": "4.6 Taxes. Any amounts payable by Pan-RAS to ULRF or QLGN hereunder are exclusive of, and shall not be reduced on account of, any foreign taxes, and shall be paid to ULRF or QLGN free and clear of all foreign taxes."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 9325,
+      "passage_id": "DOC-45877780bb055401a0:P000036",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.6",
+      "sequence": 36,
+      "start_offset": 8840,
+      "text": "4.7 Late Payments. Accrual and payment of interest shall not be deemed to excuse or cure breaches of contract arising from late payment or nonpayment. Cumulative with and not exclusive of any or all other available remedies, payments that are not made to QLGN when due hereunder shall (except for any portions thereof which are subject to a good faith dispute) accrue interest, from due date until paid, at the lower of 1.5% per month or the highest rate permitted under Applicable Law"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 9604,
+      "passage_id": "DOC-45877780bb055401a0:P000037",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.8",
+      "sequence": 37,
+      "start_offset": 9326,
+      "text": "4.8 Method of Payment. All payments due to QLGN under this Agreement shall be paid in United States Dollars (USD) by wire transfer to a bank in the United States designated in writing by QLGN. All references to “dollars”, USD, or “$” herein shall refer to United States Dollars."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9624,
+      "passage_id": "DOC-45877780bb055401a0:P000038",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 38,
+      "start_offset": 9605,
+      "text": "5. Confidentiality."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10084,
+      "passage_id": "DOC-45877780bb055401a0:P000039",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 39,
+      "start_offset": 9625,
+      "text": "5.1 As to ULRF. Pan-RAS acknowledges, accepts and agrees (for the benefit of QLGN and also for the benefit of ULRF and ULRF’s Affiliates as third-party beneficiaries) to comply with the obligations of “Licensee” (including, where applicable, as a “Receiving Party”) under Sections 13.1, 13.2, 13.3 and 13.4 of the License Agreement as if such provisions were set forth herein and Pan-RAS were “Licensee” (or, where applicable, a “Receiving Party”) thereunder."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10619,
+      "passage_id": "DOC-45877780bb055401a0:P000040",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 40,
+      "start_offset": 10085,
+      "text": "5.2 QLGN RAS Technology. As between Pan-RAS and QLGN, the QLGN RAS Technology shall be treated as if it were Confidential Information owned by Pan-RAS and as if it were first disclosed by Pan-RAS to QLGN, and as being governed (on such premises) under Sections 13.1, 13.2, 13.3 and 13.4 of the License Agreement as if such provisions were set forth herein (mutatis mutandis) and QLGN were “Licensee” (or, where applicable, a “Receiving Party”) thereunder and Pan-RAS were “ULRF” (or, where applicable, a “Receiving Party”) thereunder."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10952,
+      "passage_id": "DOC-45877780bb055401a0:P000041",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 41,
+      "start_offset": 10620,
+      "text": "5.3 Public Announcements. QLGN and Pan-RAS shall cooperatively prepare a joint press release to be issued announcing execution of this Agreement. In addition, it is understood that (as required by Applicable Law) QLGN will publicly disclose this Agreement in a filing on the Securities and Exchange Commission’s EDGAR filing system."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10987,
+      "passage_id": "DOC-45877780bb055401a0:P000042",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 42,
+      "start_offset": 10953,
+      "text": "6. Representations and Warranties."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11097,
+      "passage_id": "DOC-45877780bb055401a0:P000043",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.1",
+      "sequence": 43,
+      "start_offset": 10988,
+      "text": "6.1 Representations and Warranties of Each Party. Each party represents and warrants to the other party that:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11404,
+      "passage_id": "DOC-45877780bb055401a0:P000044",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.1",
+      "sequence": 44,
+      "start_offset": 11098,
+      "text": "(a) it has full power and authority to execute, deliver, and perform under this Agreement, and has taken all action required by Applicable Law and its organizational documents to authorize the execution and delivery of this Agreement and the consummation of the transactions contemplated by this Agreement;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11871,
+      "passage_id": "DOC-45877780bb055401a0:P000045",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.1",
+      "sequence": 45,
+      "start_offset": 11405,
+      "text": "(b) this Agreement has been duly authorized, executed and delivered by such party and constitutes a legal, valid and binding obligation of such party enforceable against such party in accordance with its terms except as enforceability may be limited by applicable bankruptcy, insolvency, reorganization, receivership, moratorium, fraudulent transfer, or other similar laws affecting the rights and remedies of creditors generally and by general principles of equity;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12097,
+      "passage_id": "DOC-45877780bb055401a0:P000046",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.1",
+      "sequence": 46,
+      "start_offset": 11872,
+      "text": "(c) all consents, approvals and authorizations from all governmental authorities or other Third Parties required to be obtained by such party in connection with the execution and delivery of this Agreement have been obtained;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12637,
+      "passage_id": "DOC-45877780bb055401a0:P000047",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.1",
+      "sequence": 47,
+      "start_offset": 12098,
+      "text": "(d) the execution and delivery of this Agreement and all other instruments and documents required to be executed pursuant to this Agreement do not, and the consummation of the transactions contemplated hereby and the party’s due performance of its obligations hereunder would not, (i) conflict with or result in a breach of any provision of its organizational documents, (ii) result in a breach of any agreement to which it is a party that would impair the performance of its obligations hereunder, or (iii) violate any Applicable Law; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12944,
+      "passage_id": "DOC-45877780bb055401a0:P000048",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.1",
+      "sequence": 48,
+      "start_offset": 12638,
+      "text": "(e) no Person has or will have, because of the transactions contemplated by this Agreement, any right, interest, or valid claim against or upon the other party hereto (or ULRF) for any commission, fee or other compensation as a finder or broker because of any act by such party or its Affiliates or agents."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13100,
+      "passage_id": "DOC-45877780bb055401a0:P000049",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 49,
+      "start_offset": 12945,
+      "text": "6.2 Further Representations and Warranties of QLGN. QLGN represents and warrants to Pan-RAS that, to the best of QLGN’s knowledge as of the Effective Date:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13207,
+      "passage_id": "DOC-45877780bb055401a0:P000050",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 50,
+      "start_offset": 13101,
+      "text": "(a) it is a corporation duly organized, validly existing, and in good standing under the laws of Delaware;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13463,
+      "passage_id": "DOC-45877780bb055401a0:P000051",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 51,
+      "start_offset": 13208,
+      "text": "(b) the License Agreement is in full force and effect, and except pursuant to the contracts specified in the definition of “License Agreement,” QLGN has not amended the License Agreement or waived any obligation of ULRF set forth in the License Agreement;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13555,
+      "passage_id": "DOC-45877780bb055401a0:P000052",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 52,
+      "start_offset": 13464,
+      "text": "(c) neither QLGN nor ULRF is in material default of any provision of the License Agreement;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13707,
+      "passage_id": "DOC-45877780bb055401a0:P000053",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 53,
+      "start_offset": 13556,
+      "text": "(d) there are no existing or asserted Third Party rights that would prevent QLGN from granting the licenses and other rights granted thereto hereunder;"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 13869,
+      "passage_id": "DOC-45877780bb055401a0:P000054",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 54,
+      "start_offset": 13708,
+      "text": "(e) QLGN has not granted to any Third Party any right, license or sublicense to any of the Licensed Patents, Licensed Technical Knowledge or QLGN RAS Technology;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14010,
+      "passage_id": "DOC-45877780bb055401a0:P000055",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 55,
+      "start_offset": 13870,
+      "text": "(f) There is not outstanding any security interest against any of the Licensed Patents, Licensed Technical Knowledge or QLGN RAS Technology;"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 14142,
+      "passage_id": "DOC-45877780bb055401a0:P000056",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 56,
+      "start_offset": 14011,
+      "text": "(g) QLGN has the complete and unencumbered right to grant the license, sublicense and other rights as granted under this Agreement;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14307,
+      "passage_id": "DOC-45877780bb055401a0:P000057",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 57,
+      "start_offset": 14143,
+      "text": "(h) any and all issued Licensed Patents are valid and subsisting and have not been determined by any court of competent jurisdiction to be invalid or unenforceable;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14644,
+      "passage_id": "DOC-45877780bb055401a0:P000058",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 58,
+      "start_offset": 14308,
+      "text": "(i) there are no complaints filed in court or otherwise overtly threatened, in each case relating to the QLGN RAS Technology or any Licensed Patents or any Licensed Technical Knowledge, which, if decided in a manner adverse to QLGN or ULRF, might reasonably be expected to materially affect rights as contemplated by this Agreement; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14830,
+      "passage_id": "DOC-45877780bb055401a0:P000059",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 59,
+      "start_offset": 14645,
+      "text": "(j) there are no judgments or settlements against QLGN or to which it is party which might reasonably be expected to materially affect Pan-RAS’ rights as contemplated in this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 15044,
+      "passage_id": "DOC-45877780bb055401a0:P000060",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.3",
+      "sequence": 60,
+      "start_offset": 14831,
+      "text": "6.3 Further Representation and Warranty of Pan-RAS. Pan-RAS represents and warrants to QLGN that it is a limited liability company duly organized, validly existing, and in good standing under the laws of Delaware."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 15131,
+      "passage_id": "DOC-45877780bb055401a0:P000061",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 61,
+      "start_offset": 15045,
+      "text": "7. Exclusions and Negations of Warranties; Limitation of Liability; Patent Challenges."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 15752,
+      "passage_id": "DOC-45877780bb055401a0:P000062",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 62,
+      "start_offset": 15132,
+      "text": "7.1 Exclusions and Negations of Warranties. Pan-RAS acknowledges, accepts and agrees (for the benefit of QLGN and also for the benefit of ULRF and the University of Louisville as third-party beneficiaries) as set forth in Sections 7.1, 7.2 and 7.3 of the License Agreement as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder. Pan-RAS also and separately acknowledges, accepts, and agrees as set forth in Sections 7.1, 7.2 and 7.3 of the License Agreement, mutatis mutandis, as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder and QLGN were “ULRF” thereunder."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 15796,
+      "passage_id": "DOC-45877780bb055401a0:P000063",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 63,
+      "start_offset": 15753,
+      "text": "7.2 Limitation of Liability and Disclaimer."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 16107,
+      "passage_id": "DOC-45877780bb055401a0:P000064",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 64,
+      "start_offset": 15797,
+      "text": "(a) As to ULRF. Pan-RAS acknowledges, accepts, and agrees (for the benefit of QLGN and for the benefit of ULRF and the University of Louisville as third-party beneficiaries) as set forth in Section 7.4 of the License Agreement as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 16831,
+      "passage_id": "DOC-45877780bb055401a0:P000065",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 65,
+      "start_offset": 16108,
+      "text": "(b) Limitation of Liability as to QLGN. Except with respect to: (a) Pan-RAS’ indemnification obligations as set forth in Article 8, or (b) intentional misconduct or willful and knowing breach, in no event shall a party or its Representatives be responsible or liable in connection with this Agreement for any indirect, special, punitive, incidental or consequential damages or lost profits, lost savings, lost business or interruption of business to the other party hereto or its licensees, agents, or any other Person regardless of the form of action or legal theory and whether in contract, tort, strict liability or otherwise, and regardless of whether the Person may have been advised of the possibility of such damage."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 18059,
+      "passage_id": "DOC-45877780bb055401a0:P000066",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 66,
+      "start_offset": 16832,
+      "text": "(c) Disclaimer as to QLGN. Notwithstanding the representations and warranties set forth in Article 6, Pan-RAS acknowledges and accepts the risks inherent in drug development and in attempting to develop and commercialize any pharmaceutical product. The parties agree that there is no implied representation that any Licensed Products can be successfully developed or commercialized. As between the parties, Pan-RAS ALONE ASSUMES THE ENTIRE RISK AND RESPONSIBILITY FOR THE PATENTABILITY, SAFETY, EFFICACY, PERFORMANCE, DESIGN, MARKETABILITY, TITLE AND QUALITY OF ALL PRODUCTS, INCLUDING WHETHER SUCH PRODUCTS INFRINGE ANY THIRD-PARTY RIGHTS. The express warranties set forth in Article 6 are provided in lieu of, and EXCEPT AS MAY BE (IF AT ALL) EXPRESSLY PROVIDED IN THIS AGREEMENT, NEITHER PARTY PROVIDES, ANY WARRANTIES, WHETHER WRITTEN OR ORAL, EXPRESS OR IMPLIED, AND EACH PARTY DISCLAIMS ALL OTHER WARRANTIES, WHETHER WRITTEN OR ORAL, EXPRESS AND IMPLIED, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. EXCEPT AS MAY BE (IF AT ALL) EXPRESSLY WARRANTED OTHERWISE HEREIN, EVERYTHING PROVIDED BY OR ON BEHALF OF QLGN PURSUANT TO THIS AGREEMENT IS PROVIDED “AS IS.”"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 18373,
+      "passage_id": "DOC-45877780bb055401a0:P000067",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 67,
+      "start_offset": 18060,
+      "text": "7.3 Patent Challenges. Pan-RAS accepts and agrees (for the benefit of QLGN and for the benefit of ULRF and the University of Louisville as third-party beneficiaries) as set forth in Sections 10.1 and 10.2 of the License Agreement as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 18407,
+      "passage_id": "DOC-45877780bb055401a0:P000068",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 68,
+      "start_offset": 18374,
+      "text": "8. Indemnification and Insurance."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 18735,
+      "passage_id": "DOC-45877780bb055401a0:P000069",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 69,
+      "start_offset": 18408,
+      "text": "8.1 As to ULRF. Pan-RAS agrees (for the benefit of QLGN and for the benefit of ULRF and the University of Louisville as third-party beneficiaries) to comply with the obligations of “Licensee” under Sections 8.1 and 8.2 of the License Agreement as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 20158,
+      "passage_id": "DOC-45877780bb055401a0:P000070",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 70,
+      "start_offset": 18736,
+      "text": "8.2 As to QLGN. Pan-RAS also and separately agrees to comply with the obligations of “Licensee” under Section 8.1 of the License Agreement, mutatis mutandis, as if such provisions were set forth herein and Pan-RAS were “Licensee” thereunder and QLGN and its Representatives were “ULRF” thereunder. If Pan-RAS is indemnifying and defending QLGN and/or QLGN’s Representatives as to such a claim, Pan-RAS shall have the right to settle such claim; provided, that Pan-RAS agrees to obtain the prior written consent (which shall not be unreasonably withheld, conditioned or delayed) of the indemnified Person before entering into any settlement of (or resolving by consent to the entry of judgment upon) such claim unless (A) there is no finding or admission of any violation of Applicable Law or any violation of the rights of any Person by any indemnified Person (whether or not such Person is named in the claim), no requirement that any indemnified Person (whether or not such Person is named in the claim) admit fault or culpability, and no adverse effect on any other claims that may be made by or against any indemnified Person (whether or not such Person is named in the claim) and (B) the sole relief provided is monetary damages that are paid in full by Pan-RAS and such settlement does not require any indemnified Person (whether or not such Person is named in the claim) to take (or refrain from taking) any action."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 20183,
+      "passage_id": "DOC-45877780bb055401a0:P000071",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9",
+      "sequence": 71,
+      "start_offset": 20159,
+      "text": "9. Term and Termination."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 20313,
+      "passage_id": "DOC-45877780bb055401a0:P000072",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.1",
+      "sequence": 72,
+      "start_offset": 20184,
+      "text": "9.1 Term. The term of this Agreement shall commence on the Effective Date and shall continue until terminated as provided herein."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 21802,
+      "passage_id": "DOC-45877780bb055401a0:P000073",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.1",
+      "sequence": 73,
+      "start_offset": 20314,
+      "text": "9.2 Termination for Breach. If a party should materially violate or materially fail to perform any material term or covenant of this Agreement, then the other party may give written notice of such default to such party. If such party should fail to cure such default within 30 days (or 10 days with respect to any payment obligation not otherwise subject to a good faith dispute) after such notice, the other party shall have the right to (in addition to and not in lieu of all other available rights and remedies) terminate this Agreement by giving a second written notice (a “Notice of Termination”) to such party. If Notice of Termination is given to such party, this Agreement shall automatically terminate on the effective date of such Notice of Termination. Notwithstanding the foregoing, if the breach, by its nature, is incurable, the non-breaching party may terminate this Agreement immediately upon written notice to the breaching party. The parties agree that any failure by Pan-RAS to pay when due (subject to the 10-day cure period) and as required 100% of any amount of money owing from Pan-RAS to QLGN as is not disputed in good faith by Pan-RAS (or, if some portion of the amount of money owing from Pan-RAS to QLGN is not disputed in good faith by Pan-RAS and the remaining portion is disputed in good faith by Pan-RAS, 100% of the portion which is not disputed in good faith by Pan-RAS) shall conclusively be deemed to constitute a “material” breach under this Agreement"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22496,
+      "passage_id": "DOC-45877780bb055401a0:P000074",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.1",
+      "sequence": 74,
+      "start_offset": 21803,
+      "text": "9.3 Termination for Bankruptcy, Etc. QLGN may, to the extent permitted by Applicable Law, terminate this Agreement immediately upon written notice to Pan-RAS if Pan-RAS files in any court or agency pursuant to any Applicable Law, a petition in bankruptcy or insolvency or for reorganization or for an arrangement or for the appointment of a receiver or trustee of Pan-RAS or of its assets, or if Pan-RAS is served with an involuntary petition against it, filed in any proceeding of such sort, and such petition is not dismissed within 60 days after the filing thereof, or if Pan-RAS overtly proposes to dissolve or liquidate, or if Pan-RAS makes an assignment for the benefit of its creditors."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 22759,
+      "passage_id": "DOC-45877780bb055401a0:P000075",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.4",
+      "sequence": 75,
+      "start_offset": 22497,
+      "text": "9.4 Termination by Pan-RAS prior to Closing. Pan-RAS may terminate this Agreement at any time prior to the 30th day after the Effective Date (or, if there has been an extension of time under Section 4.1, at any time prior to the last day of such time extension)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22786,
+      "passage_id": "DOC-45877780bb055401a0:P000076",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.5",
+      "sequence": 76,
+      "start_offset": 22760,
+      "text": "9.5 Effect of Termination."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23239,
+      "passage_id": "DOC-45877780bb055401a0:P000077",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.5",
+      "sequence": 77,
+      "start_offset": 22787,
+      "text": "(a) Upon termination of this Agreement by QLGN for any reason, all rights and licenses granted to Pan-RAS hereunder (other than those provisions that expressly survive such termination) shall terminate. The following provisions shall survive termination of this Agreement: Articles 1, 3, 4, 5, 7, 8, 9 and 10 and Sections 2.3, 3.2 and 9.4. All previously accrued liabilities, whether for breach or not, shall also survive termination of this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 23518,
+      "passage_id": "DOC-45877780bb055401a0:P000078",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.5",
+      "sequence": 78,
+      "start_offset": 23240,
+      "text": "(b) If Pan-RAS terminates this Agreement pursuant to Section 9.2, 9.3 or 9.4, it shall not receive or retain any licenses, sublicenses or rights set forth in Article ‎2 above, nor shall it have any liability with respect to the payment obligations set forth in Article ‎4 above."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 23801,
+      "passage_id": "DOC-45877780bb055401a0:P000079",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.5",
+      "sequence": 79,
+      "start_offset": 23519,
+      "text": "(c) For avoidance of doubt, unless Pan-RAS terminates this Agreement pursuant to Section 9.2, 9.3 or 9.4 - and notwithstanding any other termination of this Agreement - Pan-RAS shall make any and all payments pursuant to Article 4 and Article 8 in accordance with the terms thereof."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23825,
+      "passage_id": "DOC-45877780bb055401a0:P000080",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 80,
+      "start_offset": 23802,
+      "text": "10. General Provisions."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23849,
+      "passage_id": "DOC-45877780bb055401a0:P000081",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 81,
+      "start_offset": 23826,
+      "text": "10.1 License Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 23954,
+      "passage_id": "DOC-45877780bb055401a0:P000082",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 82,
+      "start_offset": 23850,
+      "text": "(a) Pan-RAS accepts the status of a Sublicensee as contemplated by Section 3.1 of the License Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 24957,
+      "passage_id": "DOC-45877780bb055401a0:P000083",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 83,
+      "start_offset": 23955,
+      "text": "(b) In addition to Pan-RAS’ giving in this Agreement various express acknowledgements, acceptances and agreements to comply with License Agreement “Licensee” obligations, etc., Pan-RAS acknowledges that in order to keep the License Agreement in effect, Pan-RAS will have to (at its own expense) perform all the various ongoing obligations of QLGN to ULRF under the License Agreement and comply with all the various ongoing restrictions imposed upon QLGN under the License Agreement, and accordingly Pan-RAS (for the benefit of QLGN and also for the benefit of ULRF as a third-party beneficiary) assumes and undertakes to perform all the various ongoing obligations of QLGN to ULRF under the License Agreement and comply with all the various ongoing restrictions imposed upon QLGN under the License Agreement; provided, that Pan-RAS shall not be required to make any Non-Royalty Sublicense Income percentage payment to ULRF in respect of establishing Pan-RAS as a Sublicensee pursuant to this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 25483,
+      "passage_id": "DOC-45877780bb055401a0:P000084",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 84,
+      "start_offset": 24958,
+      "text": "(c) Regarding potential or actual litigation as contemplated by Section 11 of the License Agreement, QLGN agrees to act thereunder as Pan-RAS from time to time instructs (provided that any such action taken by QLGN thereunder shall be at Pan-RAS’s sole risk and expense, which QLGN shall be entitled to require be paid by Pan-RAS in advance). It is understood that if QLGN would be entitled to any sums as a result of such Pan-RAS-instructed litigation, such sums shall be for Pan-RAS’ benefit rather than for QLGN’s benefit."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25634,
+      "passage_id": "DOC-45877780bb055401a0:P000085",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 85,
+      "start_offset": 25484,
+      "text": "(d) QLGN shall not, without Pan-RAS’ consent, terminate or amend the License Agreement or waive any of ULRF’s obligations under the License Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26127,
+      "passage_id": "DOC-45877780bb055401a0:P000086",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 86,
+      "start_offset": 25635,
+      "text": "10.2 Compliance with Law. Each party agrees that in the exercise of its rights and performance of its obligations under this Agreement (expressly including the development, manufacture, handling, marketing, sale, distribution and use of Licensed Products), it shall (and with respect to Pan-RAS, Pan-RAS agrees to ensure that its Affiliates, distributors, contract manufacturing organizations and contract research organizations shall) comply in all material respects with all Applicable Law."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26911,
+      "passage_id": "DOC-45877780bb055401a0:P000087",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 87,
+      "start_offset": 26128,
+      "text": "(a) Without limitation, Pan-RAS agrees (for the benefit of QLGN and also for the benefit of ULRF as a third-party beneficiary): (i) that Pan-RAS will observe all United States and foreign Applicable Laws governing the transfer to other countries of technical data related to Licensed Products, Licensed Services or Licensed Methods, including without limitation ITAR and EAR; (ii) Pan-RAS will obtain (and will require its Affiliates (if applicable) to obtain, such written assurances regarding export and re-export of technical data (including Licensed Products made by use of technical data) as may be required by EAR and any similar foreign laws or regulations; and (iii) Pan-RAS hereby gives to ULRF and to QLGN such written assurances as may be required under those Regulations."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27318,
+      "passage_id": "DOC-45877780bb055401a0:P000088",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 88,
+      "start_offset": 26912,
+      "text": "10.3 Relationship of Parties. Each of the parties hereto is an independent contractor and nothing in this Agreement is intended or shall be deemed to constitute a partnership, agency, employer-employee or joint venture relationship between the parties. Neither party shall have the right to, and each party agrees not to purport to, incur any debts or make any commitments or contracts for the other party."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 28510,
+      "passage_id": "DOC-45877780bb055401a0:P000089",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 89,
+      "start_offset": 27319,
+      "text": "10.4 Entire Agreement; Amendment. This Agreement contains the entire agreement of the parties relating to the subject matter hereof and supersedes any and all prior or contemporaneous agreements, negotiations, promises and commitments, written or oral, between the parties relating to the subject matter hereof; provided, that any prior written confidentiality agreement is not superseded and remains in effect. Notwithstanding the foregoing, neither party shall be relieved from any liability for any past breach of any such prior written agreement or from any express indemnification obligation thereunder. Neither party has made any promises, representations, warranties, covenants, or undertakings, other than those expressly set forth or referred to herein, to induce the other party to execute, deliver or authorize the execution or delivery of this Agreement, and each party acknowledges that it has not executed, delivered or authorized the execution or delivery of this Agreement in reliance upon any such promise, representation, or warranty, covenant or undertaking not contained herein. This Agreement may not be amended unless and except as agreed to in writing by both parties."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 29527,
+      "passage_id": "DOC-45877780bb055401a0:P000090",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 90,
+      "start_offset": 28511,
+      "text": "10.5 Waiver. The privileges, powers, options and rights of a party under this Agreement may be exercised from time to time, singularly or in combination, and the exercise of one or more such privileges, powers, options or rights shall not be deemed to be a waiver of any one or more of the others. No waiver in connection with this Agreement shall be deemed to have been made by a party unless such waiver is addressed in writing and signed by an authorized representative of that party. The failure of a party to enforce or insist upon the strict performance of any of the terms, provisions or conditions of this Agreement, or to exercise any option, privilege, power or right contained in this Agreement (and/or any delay in doing any of the foregoing things), shall not be construed as a waiver or relinquishment for the future of any such term, provision, condition or option, privilege, power or right or the waiver or relinquishment of any other term, provision, condition or option, privilege, power or right."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30821,
+      "passage_id": "DOC-45877780bb055401a0:P000091",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 91,
+      "start_offset": 29528,
+      "text": "10.6 Severability. This Agreement is severable. When possible, each provision of this Agreement will be interpreted in such manner as to be effective and valid under Applicable Law; but if any provision of this Agreement is determined by a final and binding court judgment (for which no further appeal is possible) to be invalid, illegal or unenforceable to any extent, such provision shall not be affected or impaired up to the limits of such invalidity, illegality or unenforceability; the validity, legality and enforceability of the remaining provisions of this Agreement shall not be affected or impaired in any way; the affected provision shall be construed to the extent possible as if it had been written in such a way as to both be valid, legal and enforceable and to achieve, to the greatest lawful extent, the evident economic, business and other purposes of such invalid, illegal or unenforceable provision (or portion of provision); and the parties agree to negotiate in good faith to replace such invalid, illegal or unenforceable provision (or portion of provision) with a valid, legal and enforceable provision that achieves, to the greatest lawful extent, the economic, business and other purposes of such invalid, illegal or unenforceable provision (or portion of provision)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31406,
+      "passage_id": "DOC-45877780bb055401a0:P000092",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 92,
+      "start_offset": 30822,
+      "text": "10.7 Governing Law. This Agreement, and all claims or causes of action (whether in contract, tort or statute) that may be based upon, arise out of or relate to this Agreement or the negotiation, execution or performance of this Agreement (including any claim or cause of action based upon, arising out of or related to any representation or warranty made in or in connection with this Agreement or as an inducement to enter into this Agreement), shall be governed by, construed in accordance with and enforced in accordance with the internal Applicable Law of the State of California."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32103,
+      "passage_id": "DOC-45877780bb055401a0:P000093",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 93,
+      "start_offset": 31407,
+      "text": "10.8 Jurisdiction and Venue. The parties hereby irrevocably consent to personal jurisdiction and venue in the state and federal courts located in San Diego County, California, and irrevocably agree to service of process issued or authorized by any such court in any such action or proceeding. The parties hereby irrevocably waive any objection which they may now have or hereafter have to the laying of venue in the federal or state courts located in San Diego County, California in any such action or proceeding, and hereby irrevocably waive and agree not to plead or claim in any such court that any such action or proceeding brought in any such court has been brought in an inconvenient forum."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32276,
+      "passage_id": "DOC-45877780bb055401a0:P000094",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 94,
+      "start_offset": 32104,
+      "text": "10.9 Notices. Any notice, report, request, approval or consent required or permitted to be given under this Agreement shall be in writing and shall be addressed as follows:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32292,
+      "passage_id": "DOC-45877780bb055401a0:P000095",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 95,
+      "start_offset": 32277,
+      "text": "If to QLGN, to:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32320,
+      "passage_id": "DOC-45877780bb055401a0:P000096",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 96,
+      "start_offset": 32293,
+      "text": "Qualigen Therapeutics, Inc."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32349,
+      "passage_id": "DOC-45877780bb055401a0:P000097",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 97,
+      "start_offset": 32321,
+      "text": "5857 Owens Avenue, Suite 300"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32376,
+      "passage_id": "DOC-45877780bb055401a0:P000098",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 98,
+      "start_offset": 32350,
+      "text": "Carlsbad, California 92008"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32411,
+      "passage_id": "DOC-45877780bb055401a0:P000099",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 99,
+      "start_offset": 32377,
+      "text": "Attention: Chief Executive Officer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32438,
+      "passage_id": "DOC-45877780bb055401a0:P000100",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 100,
+      "start_offset": 32412,
+      "text": "Email: mpoirier@qlgntx.com"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32457,
+      "passage_id": "DOC-45877780bb055401a0:P000101",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 101,
+      "start_offset": 32439,
+      "text": "If to Pan-RAS, to:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32480,
+      "passage_id": "DOC-45877780bb055401a0:P000102",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 102,
+      "start_offset": 32458,
+      "text": "Pan-RAS Holdings, Inc."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32512,
+      "passage_id": "DOC-45877780bb055401a0:P000103",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 103,
+      "start_offset": 32481,
+      "text": "265 Sunrise Highway, Suite 1515"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32545,
+      "passage_id": "DOC-45877780bb055401a0:P000104",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 104,
+      "start_offset": 32513,
+      "text": "Rockville Centre, New York 11570"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32574,
+      "passage_id": "DOC-45877780bb055401a0:P000105",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 105,
+      "start_offset": 32546,
+      "text": "Attn: Paul A. Rachmuth, Esq."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32597,
+      "passage_id": "DOC-45877780bb055401a0:P000106",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 106,
+      "start_offset": 32575,
+      "text": "Email: paul@paresq.com"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32718,
+      "passage_id": "DOC-45877780bb055401a0:P000107",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 107,
+      "start_offset": 32598,
+      "text": "or, in each case, to the most recent address, specified by written notice, given to the sender pursuant to this Section."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33801,
+      "passage_id": "DOC-45877780bb055401a0:P000108",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.9",
+      "sequence": 108,
+      "start_offset": 32719,
+      "text": "Any such written notice, report, request, approval or consent shall be deemed to have been given on the earliest of (a) actual receipt, or (b) if personally delivered to the party to whom notice is to be given, the date of delivery, or (c) if sent by email, the date of transmission, if sent to such email address before 5:00 p.m. at the location of receipt on a business day, or the first business day after the date of transmission, if sent to such email address at or after 5:00 p.m. at the location of receipt on a business day or on a day that is not a business day, or (d) if sent by overnight courier and addressed as set forth above, the next business day after the date of deposit with such courier (by the courier’s stated time for enabling next-business-day delivery), or if deposited after such stated time shall be deemed to be the second business day after the date of deposit, or (e) if sent in the United States by United States certified mail, return receipt requested, postage prepaid and addressed as set forth above, on the fifth business day after such mailing."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34016,
+      "passage_id": "DOC-45877780bb055401a0:P000109",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.10",
+      "sequence": 109,
+      "start_offset": 33802,
+      "text": "10.10 Costs and Expenses. Except as otherwise expressly provided in this Agreement, each party agrees to bear all costs and expenses associated with the performance of such party’s obligations under this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 34350,
+      "passage_id": "DOC-45877780bb055401a0:P000110",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.10",
+      "sequence": 110,
+      "start_offset": 34017,
+      "text": "10.11 Further Assurances. The parties hereby covenant and agree without the necessity of any further consideration, to execute, acknowledge and deliver any and all such other documents and instruments and take any such other action as may be reasonably necessary or appropriate to carry out the intent and purposes of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 35014,
+      "passage_id": "DOC-45877780bb055401a0:P000111",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.10",
+      "sequence": 111,
+      "start_offset": 34351,
+      "text": "10.12 Interpretation. Pan-RAS and QLGN have participated jointly in the negotiation and drafting of this Agreement and, in the event an ambiguity or question of intent or interpretation arises, this Agreement shall be construed as jointly drafted by Pan-RAS and QLGN and no presumption or burden of proof shall arise favoring or disfavoring either party by virtue of the authorship of any provision of this Agreement. The wording used in this Agreement is the wording chosen by Pan-RAS and QLGN to express their mutual intent, and no provision of this Agreement shall be interpreted for or against a party because that party or its attorney drafted the provision."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 35212,
+      "passage_id": "DOC-45877780bb055401a0:P000112",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 112,
+      "start_offset": 35015,
+      "text": "10.13 Headings. The descriptive headings of this Agreement are for convenience and shall not be of dispositive force or effect in construing or interpreting any of the provisions of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 35756,
+      "passage_id": "DOC-45877780bb055401a0:P000113",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 113,
+      "start_offset": 35213,
+      "text": "10.14 Counterparts. This Agreement may be executed and delivered in counterparts, each of which shall constitute an original document, but all of which shall constitute one and the same instrument, it being understood and agreed that delivery of a signed counterpart signature page to this Agreement by electronic mail attachment in portable document format (“.pdf”) form, or by any other electronic means intended to preserve the original graphic and pictorial appearance of a document, shall constitute valid and sufficient delivery thereof."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 35848,
+      "passage_id": "DOC-45877780bb055401a0:P000114",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 114,
+      "start_offset": 35757,
+      "text": "[The remainder of this page has been left blank intentionally. The signature page follows.]"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 36044,
+      "passage_id": "DOC-45877780bb055401a0:P000115",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 115,
+      "start_offset": 35849,
+      "text": "IN WITNESS WHEREOF, the parties hereto have caused this License and Sublicense Agreement to be executed and delivered so as to be effective on the date first set forth above (the Effective Date)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36072,
+      "passage_id": "DOC-45877780bb055401a0:P000116",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 116,
+      "start_offset": 36045,
+      "text": "Qualigen Therapeutics, Inc."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36100,
+      "passage_id": "DOC-45877780bb055401a0:P000117",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 117,
+      "start_offset": 36073,
+      "text": "By: | /s/Michael S. Poirier"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36127,
+      "passage_id": "DOC-45877780bb055401a0:P000118",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 118,
+      "start_offset": 36101,
+      "text": "Name: | Michael S. Poirier"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36160,
+      "passage_id": "DOC-45877780bb055401a0:P000119",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 119,
+      "start_offset": 36128,
+      "text": "Title: | Chief Executive Officer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36183,
+      "passage_id": "DOC-45877780bb055401a0:P000120",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 120,
+      "start_offset": 36161,
+      "text": "Pan-RAS Holdings, Inc."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36206,
+      "passage_id": "DOC-45877780bb055401a0:P000121",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 121,
+      "start_offset": 36184,
+      "text": "By: | /s/Paul Rachmuth"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36228,
+      "passage_id": "DOC-45877780bb055401a0:P000122",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 122,
+      "start_offset": 36207,
+      "text": "Name: | Paul Rachmuth"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36253,
+      "passage_id": "DOC-45877780bb055401a0:P000123",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.13",
+      "sequence": 123,
+      "start_offset": 36229,
+      "text": "Title: | General Counsel"
+    }
+  ],
+  "quality_control_profile": "M7_ISSUED_OCCURRENCES",
+  "quality_flags": [
+    "ALL_PASSAGES_UNREVIEWED",
+    "CANDIDATE_COVERAGE_NOT_ESTABLISHED"
+  ],
+  "retrieved_at_utc": null,
+  "schema_version": "m1.0",
+  "screening_conclusion": "UNKNOWN_NEEDS_AI_SCREENING",
+  "screening_priority": "HIGH_REVIEW_PRIORITY",
+  "sections": [
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000001",
+        "DOC-45877780bb055401a0:P000002",
+        "DOC-45877780bb055401a0:P000003",
+        "DOC-45877780bb055401a0:P000005"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000001",
+        "DOC-45877780bb055401a0:P000002",
+        "DOC-45877780bb055401a0:P000003",
+        "DOC-45877780bb055401a0:P000004",
+        "DOC-45877780bb055401a0:P000005"
+      ],
+      "section": "Exhibit 10.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000007",
+        "DOC-45877780bb055401a0:P000008",
+        "DOC-45877780bb055401a0:P000009",
+        "DOC-45877780bb055401a0:P000010",
+        "DOC-45877780bb055401a0:P000011",
+        "DOC-45877780bb055401a0:P000012"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000006",
+        "DOC-45877780bb055401a0:P000007",
+        "DOC-45877780bb055401a0:P000008",
+        "DOC-45877780bb055401a0:P000009",
+        "DOC-45877780bb055401a0:P000010",
+        "DOC-45877780bb055401a0:P000011",
+        "DOC-45877780bb055401a0:P000012"
+      ],
+      "section": "1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000013"
+      ],
+      "section": "2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000016",
+        "DOC-45877780bb055401a0:P000017"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000014",
+        "DOC-45877780bb055401a0:P000015",
+        "DOC-45877780bb055401a0:P000016",
+        "DOC-45877780bb055401a0:P000017",
+        "DOC-45877780bb055401a0:P000018",
+        "DOC-45877780bb055401a0:P000019"
+      ],
+      "section": "2.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000020"
+      ],
+      "section": "3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000022",
+        "DOC-45877780bb055401a0:P000023"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000021",
+        "DOC-45877780bb055401a0:P000022",
+        "DOC-45877780bb055401a0:P000023",
+        "DOC-45877780bb055401a0:P000024"
+      ],
+      "section": "3.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000025"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000025"
+      ],
+      "section": "4"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000026"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000026"
+      ],
+      "section": "4.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000027"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000027"
+      ],
+      "section": "4.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000028",
+        "DOC-45877780bb055401a0:P000029",
+        "DOC-45877780bb055401a0:P000030",
+        "DOC-45877780bb055401a0:P000031",
+        "DOC-45877780bb055401a0:P000032",
+        "DOC-45877780bb055401a0:P000033"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000028",
+        "DOC-45877780bb055401a0:P000029",
+        "DOC-45877780bb055401a0:P000030",
+        "DOC-45877780bb055401a0:P000031",
+        "DOC-45877780bb055401a0:P000032",
+        "DOC-45877780bb055401a0:P000033",
+        "DOC-45877780bb055401a0:P000034"
+      ],
+      "section": "4.3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000035",
+        "DOC-45877780bb055401a0:P000036"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000035",
+        "DOC-45877780bb055401a0:P000036"
+      ],
+      "section": "4.6"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000037"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000037"
+      ],
+      "section": "4.8"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000038",
+        "DOC-45877780bb055401a0:P000039",
+        "DOC-45877780bb055401a0:P000040",
+        "DOC-45877780bb055401a0:P000041"
+      ],
+      "section": "5"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000042"
+      ],
+      "section": "6"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000043",
+        "DOC-45877780bb055401a0:P000044",
+        "DOC-45877780bb055401a0:P000045",
+        "DOC-45877780bb055401a0:P000046",
+        "DOC-45877780bb055401a0:P000047",
+        "DOC-45877780bb055401a0:P000048"
+      ],
+      "section": "6.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000054",
+        "DOC-45877780bb055401a0:P000056"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000049",
+        "DOC-45877780bb055401a0:P000050",
+        "DOC-45877780bb055401a0:P000051",
+        "DOC-45877780bb055401a0:P000052",
+        "DOC-45877780bb055401a0:P000053",
+        "DOC-45877780bb055401a0:P000054",
+        "DOC-45877780bb055401a0:P000055",
+        "DOC-45877780bb055401a0:P000056",
+        "DOC-45877780bb055401a0:P000057",
+        "DOC-45877780bb055401a0:P000058",
+        "DOC-45877780bb055401a0:P000059"
+      ],
+      "section": "6.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000060"
+      ],
+      "section": "6.3"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000061",
+        "DOC-45877780bb055401a0:P000062"
+      ],
+      "section": "7"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000064",
+        "DOC-45877780bb055401a0:P000065",
+        "DOC-45877780bb055401a0:P000066"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000063",
+        "DOC-45877780bb055401a0:P000064",
+        "DOC-45877780bb055401a0:P000065",
+        "DOC-45877780bb055401a0:P000066",
+        "DOC-45877780bb055401a0:P000067"
+      ],
+      "section": "7.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000070"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000068",
+        "DOC-45877780bb055401a0:P000069",
+        "DOC-45877780bb055401a0:P000070"
+      ],
+      "section": "8"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000071"
+      ],
+      "section": "9"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000073"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000072",
+        "DOC-45877780bb055401a0:P000073",
+        "DOC-45877780bb055401a0:P000074"
+      ],
+      "section": "9.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000075"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000075"
+      ],
+      "section": "9.4"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000078",
+        "DOC-45877780bb055401a0:P000079"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000076",
+        "DOC-45877780bb055401a0:P000077",
+        "DOC-45877780bb055401a0:P000078",
+        "DOC-45877780bb055401a0:P000079"
+      ],
+      "section": "9.5"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000080"
+      ],
+      "section": "10"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000082",
+        "DOC-45877780bb055401a0:P000083",
+        "DOC-45877780bb055401a0:P000084"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000081",
+        "DOC-45877780bb055401a0:P000082",
+        "DOC-45877780bb055401a0:P000083",
+        "DOC-45877780bb055401a0:P000084",
+        "DOC-45877780bb055401a0:P000085",
+        "DOC-45877780bb055401a0:P000086",
+        "DOC-45877780bb055401a0:P000087",
+        "DOC-45877780bb055401a0:P000088",
+        "DOC-45877780bb055401a0:P000089",
+        "DOC-45877780bb055401a0:P000090",
+        "DOC-45877780bb055401a0:P000091",
+        "DOC-45877780bb055401a0:P000092",
+        "DOC-45877780bb055401a0:P000093"
+      ],
+      "section": "10.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000094",
+        "DOC-45877780bb055401a0:P000095",
+        "DOC-45877780bb055401a0:P000096",
+        "DOC-45877780bb055401a0:P000097",
+        "DOC-45877780bb055401a0:P000098",
+        "DOC-45877780bb055401a0:P000099",
+        "DOC-45877780bb055401a0:P000100",
+        "DOC-45877780bb055401a0:P000101",
+        "DOC-45877780bb055401a0:P000102",
+        "DOC-45877780bb055401a0:P000103",
+        "DOC-45877780bb055401a0:P000104",
+        "DOC-45877780bb055401a0:P000105",
+        "DOC-45877780bb055401a0:P000106",
+        "DOC-45877780bb055401a0:P000107",
+        "DOC-45877780bb055401a0:P000108"
+      ],
+      "section": "10.9"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000110"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000109",
+        "DOC-45877780bb055401a0:P000110",
+        "DOC-45877780bb055401a0:P000111"
+      ],
+      "section": "10.10"
+    },
+    {
+      "candidate_ids": [
+        "DOC-45877780bb055401a0:P000115"
+      ],
+      "passage_ids": [
+        "DOC-45877780bb055401a0:P000112",
+        "DOC-45877780bb055401a0:P000113",
+        "DOC-45877780bb055401a0:P000114",
+        "DOC-45877780bb055401a0:P000115",
+        "DOC-45877780bb055401a0:P000116",
+        "DOC-45877780bb055401a0:P000117",
+        "DOC-45877780bb055401a0:P000118",
+        "DOC-45877780bb055401a0:P000119",
+        "DOC-45877780bb055401a0:P000120",
+        "DOC-45877780bb055401a0:P000121",
+        "DOC-45877780bb055401a0:P000122",
+        "DOC-45877780bb055401a0:P000123"
+      ],
+      "section": "10.13"
+    }
+  ],
+  "source_segmentation": {
+    "fragment_limit_chars": 12000,
+    "preservation": "FRAGMENTS_CONCATENATE_EXACTLY_TO_EACH_ORIGINAL_NORMALIZED_LINE",
+    "schema": "m4-source-segmentation.1",
+    "split_original_paragraphs": []
+  },
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1460702/000149315224007562/ex10-1.htm",
+  "stage": "MAPPED_NOT_INTERPRETED",
+  "text_sha256": "1ee08c7d38e32fb4d981a13115800bb30ffad72535eaaf1a4428d643953fca55",
+  "total_candidates": 41,
+  "total_passages": 123
+}

@@ -1,0 +1,8 @@
+﻿Metric,Value,Interpretation
+Reader check result,SINGLE_READER_NOT_CHECKED,One AI reading only. Quotes and numbers were checked against the source; completeness was not checked by a second reading.
+Readers,codex / gpt-6.1-sol; second: none,A second reading is optional; see sheet Reader Check
+Total source documents,1,"Documents are SEC filing items, NOT unique licensing agreements"
+Provisional agreement groups,1,Includes one provisional group per unlinked document
+Unreconciled exact-text source duplicates,0,M3 never automatically deduplicates or discards sources
+Workbook scope,HISTORICAL NOT CURRENT,Amendment/effective economics require separate interpretation
+Inference billing,NONE,Local scripts do not invoke AI model APIs

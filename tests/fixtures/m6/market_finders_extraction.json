@@ -1,0 +1,1515 @@
+{
+  "agreement": {
+    "contractual_status": null,
+    "duration": "Exclusive Term of 50 years from the Effective Date, extendable by Licensee for 25 years; Non-Exclusive Term continues indefinitely thereafter",
+    "effective_date": "January 1, 2009 (Effective Date is defined as the date hereof)",
+    "exclusivity": "Worldwide exclusive license during the Exclusive Term; worldwide non-exclusive perpetual license thereafter",
+    "execution_date": "January 1, 2009 (made as of)",
+    "field_evidence": {
+      "duration": [
+        "c1-E05",
+        "c1-E52",
+        "c1-E53"
+      ],
+      "effective_date": [
+        "c1-E50"
+      ],
+      "exclusivity": [
+        "c1-E03",
+        "c1-E51"
+      ],
+      "execution_date": [
+        "c1-E01"
+      ],
+      "industry": [
+        "c1-E47"
+      ],
+      "licensed_ip": [
+        "c1-E48",
+        "c1-E49"
+      ],
+      "licensee": [
+        "c1-E02"
+      ],
+      "licensor": [
+        "c1-E01"
+      ],
+      "territory": [
+        "c1-E03"
+      ],
+      "title": [
+        "c1-E46"
+      ]
+    },
+    "industry": "Food (Italian prepared meats with sauce)",
+    "licensed_ip": "Trade secret Recipes and related Know-How",
+    "licensee": "Market Finders Brokerage, Inc",
+    "licensor": "Daniel Daugherty",
+    "territory": "Worldwide",
+    "title": "Development and License Agreement"
+  },
+  "amendment_status": "NOT_CHECKED",
+  "dispositions": [
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-E44"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000006",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Excludes Other Products from the agreement unless they become Licensee Products under Section 1.5; scope-defining, no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-E45"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000007",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Allocates manufacturing and marketing costs to Licensee; no royalty rate or payment amount stated.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-E54"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000008",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Licensee Improvements ownership clause; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c1-E36"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000009",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Licensee Products and expands Products (the royalty base) to Other Products sold under the MamaMancini Marks.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [
+        "c1-E03",
+        "c1-E04",
+        "c1-E51"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000010",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Grant, territory, exclusivity and right to sublicense; no sublicensing royalty or receipts share is stated, flagged as open issue.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c1-E55"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000011",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Agreement Year, the measurement period for royalty tiers and minimums.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-E05",
+        "c1-E24",
+        "c1-E42",
+        "c1-E52"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000012",
+      "payment_ids": [
+        "c1-PAY01",
+        "c1-PAY02",
+        "c1-PAY03",
+        "c1-PAY04",
+        "c1-PAY05"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Exclusive Term length and Licensor termination right tied to Minimum Royalty non-payment; links to minimum royalty schedule.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-E56"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000015",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Cross-reference preserving termination rights under Section 10; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-E57"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000016",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Section heading only, no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "DEFINITION",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-E06",
+        "c1-E07",
+        "c1-E08",
+        "c1-E09",
+        "c1-E10",
+        "c1-E11",
+        "c1-E12",
+        "c1-E13"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000017",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Royalty obligation and Net Sales definition with five deductions; subject to Section 4.13 cap.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "c1-E14",
+        "c1-E15",
+        "c1-E16",
+        "c1-E17"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000018",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "6%",
+          "rationale": "Tier 1 rate on Net Sales up to $500,000 per Agreement Year.",
+          "term_id": "c1-T01"
+        },
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "4%",
+          "rationale": "Tier 2 rate on Net Sales from $500,000 to $2,500,000 per Agreement Year.",
+          "term_id": "c1-T01"
+        },
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "2%",
+          "rationale": "Tier 3 rate on Net Sales from $2,500,000 to $20,000,000 per Agreement Year.",
+          "term_id": "c1-T01"
+        },
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "1%",
+          "rationale": "Tier 4 rate on Net Sales above $20,000,000 per Agreement Year.",
+          "term_id": "c1-T01"
+        }
+      ],
+      "rationale": "Four-tier Royalty Rate schedule on annual Net Sales, each tier extracted separately.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-E18"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000019",
+      "payment_ids": [
+        "c1-PAY01",
+        "c1-PAY02",
+        "c1-PAY03",
+        "c1-PAY04",
+        "c1-PAY05"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Introduces the Minimum Royalty schedule required to continue the Exclusive Term.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-E58"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000020",
+      "payment_ids": [
+        "c1-PAY01",
+        "c1-PAY02",
+        "c1-PAY03",
+        "c1-PAY04",
+        "c1-PAY05"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Column header of the Minimum Royalty table; no amount itself.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-E19"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000023",
+      "payment_ids": [
+        "c1-PAY01"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Minimum Royalty of $0.00 for Agreement Years 1 and 2.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-E20"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000024",
+      "payment_ids": [
+        "c1-PAY02"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Minimum Royalty of $50,000 for Agreement Years 3 and 4.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-E21"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000025",
+      "payment_ids": [
+        "c1-PAY03"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Minimum Royalty of $75,000 for Agreement Years 5 through 7.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-E22"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000026",
+      "payment_ids": [
+        "c1-PAY04"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Minimum Royalty of $100,000 for Agreement Years 8 and 9.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-E23"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000027",
+      "payment_ids": [
+        "c1-PAY05"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Minimum Royalty of $125,000 for Agreement Year 10 and thereafter.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "c1-E32"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000029",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Quarterly calculation and payment timing (60 days) for the royalty; a condition of term c1-T01.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "c1-E37"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000030",
+      "payment_ids": [
+        "c1-PAY01",
+        "c1-PAY02",
+        "c1-PAY03",
+        "c1-PAY04",
+        "c1-PAY05"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "States royalty and minimum-royalty termination right are in lieu of any best-efforts duty; contextual to the minimum royalty mechanism.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "c1-E33"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000031",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Royalty accrues on sale regardless of collection; Licensee credited for later Discounts and Credits.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-E59"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000032",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Acceptance of statements does not waive Licensor's right to challenge; no new economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "c1-E34"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000033",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Royalty obligation survives expiration or termination while Licensee continues to sell Products.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-E43"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000034",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Form-of-payment clause (US currency); no economic rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-E39"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000035",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Tax reimbursement obligation with no stated amount or rate; not a royalty term.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "UNRELATED_PERCENT"
+      ],
+      "evidence_ids": [
+        "c1-E29"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000036",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": ".5%",
+          "rationale": "Interest on late payments, not a royalty rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Late-payment interest of 0.5% per month is not a royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "UNRELATED_PERCENT",
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-E27",
+        "c1-E28"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000038",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "40%",
+          "rationale": "Licensee gross profit margin on sales to Licensor; a transfer-pricing rule, not a royalty rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Licensor direct-to-consumer purchases are excluded from Net Sales; the 40% is a Licensee gross-profit pricing margin, not a royalty rate.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-E25",
+        "c1-E26",
+        "c1-E41"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000039",
+      "payment_ids": [
+        "c1-PAY06"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Annual royalty cap of $200,000 if Licensor fails to provide support services; overrides Sections 4.1 and 4.2.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "UNRELATED_PERCENT"
+      ],
+      "evidence_ids": [
+        "c1-E30",
+        "c1-E31"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000041",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "5%",
+          "rationale": "Audit shortfall threshold triggering reimbursement of accountant fees.",
+          "term_id": null
+        },
+        {
+          "classification": "UNRELATED",
+          "literal": ".5 %",
+          "rationale": "Interest rate on audit discrepancies.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Audit shortfall tolerance of 5% (cost shifting) and 0.5% monthly interest on audit discrepancies are not royalty rates.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-E38"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000049",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Licensee compensates Licensor for litigation cooperation costs; no amount or rate stated.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c1-E40"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000052",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Insurance coverage minimum of $2,000,000 is a coverage requirement, not a payment to Licensor.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "c1-E35"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000058",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Post-termination 3-month inventory sell-off remains subject to Royalty accounting and payment within 30 days.",
+      "term_ids": [
+        "c1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-E60"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000059",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Reversion of rights on termination; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-E61"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000061",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Non-compete with exception referencing Section 4.12; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c1-E62"
+      ],
+      "passage_id": "DOC-8b310076a226efbbb6:P000088",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Governing law clause with a dangling reference to paragraph 14.1, which does not appear in this document; no economics.",
+      "term_ids": []
+    }
+  ],
+  "document_id": "DOC-8b310076a226efbbb6",
+  "evidence": [
+    {
+      "evidence_id": "c1-E01",
+      "passage_id": "DOC-8b310076a226efbbb6:P000003",
+      "quote": "made as of January 1, 2009 between Daniel Daugherty",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E02",
+      "passage_id": "DOC-8b310076a226efbbb6:P000003",
+      "quote": "Market Finders Brokerage, Inc",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E03",
+      "passage_id": "DOC-8b310076a226efbbb6:P000010",
+      "quote": "a worldwide, exclusive, license during the Exclusive Term",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c1-E04",
+      "passage_id": "DOC-8b310076a226efbbb6:P000010",
+      "quote": "Such License shall include the right to sublicense.",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c1-E05",
+      "passage_id": "DOC-8b310076a226efbbb6:P000012",
+      "quote": "ends on the 50th anniversary of the Effective Date",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E06",
+      "passage_id": "DOC-8b310076a226efbbb6:P000017",
+      "quote": "Licensee will pay Licensor a royalty",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "c1-E07",
+      "passage_id": "DOC-8b310076a226efbbb6:P000017",
+      "quote": "gross invoiced sales of Products, directly or indirectly to unrelated third parties, less",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "c1-E08",
+      "passage_id": "DOC-8b310076a226efbbb6:P000017",
+      "quote": "less (a) discounts (including cash discounts), and retroactive price reductions or allowances actually allowed or granted from the billed amount",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c1-E09",
+      "passage_id": "DOC-8b310076a226efbbb6:P000017",
+      "quote": "(b) credits, rebates, and allowances actually granted upon claims, rejections or returns, including recalls (voluntary or otherwise)",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c1-E10",
+      "passage_id": "DOC-8b310076a226efbbb6:P000017",
+      "quote": "(c) freight, postage, shipping and insurance charges",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c1-E11",
+      "passage_id": "DOC-8b310076a226efbbb6:P000017",
+      "quote": "(d) taxes, duties or other governmental charges levied on or measured by the billing amount",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c1-E12",
+      "passage_id": "DOC-8b310076a226efbbb6:P000017",
+      "quote": "(e) provisions for uncollectible accounts determined in accordance with reasonable accounting methods, consistently applied",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c1-E13",
+      "passage_id": "DOC-8b310076a226efbbb6:P000017",
+      "quote": "During the Exclusive Term and the Non-Exclusive Term, subject to Section 4.13",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E14",
+      "passage_id": "DOC-8b310076a226efbbb6:P000018",
+      "quote": "6% of Net Sales up to $500,000 of Net Sales for each Agreement Year",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "c1-E15",
+      "passage_id": "DOC-8b310076a226efbbb6:P000018",
+      "quote": "4% of Net Sales from $500,000 up to $2,500,000 of Net Sales for each Agreement Year",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "c1-E16",
+      "passage_id": "DOC-8b310076a226efbbb6:P000018",
+      "quote": "2% of Net Sales from $2,500,000 up to $20,000,000 of Net Sales for each Agreement Year",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "c1-E17",
+      "passage_id": "DOC-8b310076a226efbbb6:P000018",
+      "quote": "1% of Net Sales in excess of $20,000,000 of Net Sales for each Agreement Year",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "c1-E18",
+      "passage_id": "DOC-8b310076a226efbbb6:P000019",
+      "quote": "Licensee shall pay Licensor a Minimum Royalty with respect to the preceding Agreement Year as follows:",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E19",
+      "passage_id": "DOC-8b310076a226efbbb6:P000023",
+      "quote": "lst and 2nd | $0.00",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "c1-E20",
+      "passage_id": "DOC-8b310076a226efbbb6:P000024",
+      "quote": "3rd and 4th | $50,000.00",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "c1-E21",
+      "passage_id": "DOC-8b310076a226efbbb6:P000025",
+      "quote": "5th, 6th and 7th | $75,000.00",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "c1-E22",
+      "passage_id": "DOC-8b310076a226efbbb6:P000026",
+      "quote": "8th and 9th | $100,000.00",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "c1-E23",
+      "passage_id": "DOC-8b310076a226efbbb6:P000027",
+      "quote": "10th and thereafter | $125,000.00",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "c1-E24",
+      "passage_id": "DOC-8b310076a226efbbb6:P000012",
+      "quote": "Licensor, at its option, may terminate the Exclusive Term by notice in writing to Licensee",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E25",
+      "passage_id": "DOC-8b310076a226efbbb6:P000039",
+      "quote": "Royalties for such Agreement Year shall be limited to $200,000",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "c1-E26",
+      "passage_id": "DOC-8b310076a226efbbb6:P000039",
+      "quote": "If Licensor is unable or unwilling",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E27",
+      "passage_id": "DOC-8b310076a226efbbb6:P000038",
+      "quote": "Such sales shall be excluded from",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E28",
+      "passage_id": "DOC-8b310076a226efbbb6:P000038",
+      "quote": "equal to 40% of the total sales price",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E29",
+      "passage_id": "DOC-8b310076a226efbbb6:P000036",
+      "quote": "Late payments shall incur interest at the rate of one half percent (.5%) per month",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E30",
+      "passage_id": "DOC-8b310076a226efbbb6:P000041",
+      "quote": "shortfall of five percent (5%) or more in Royalties reported for any Agreement Year",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E31",
+      "passage_id": "DOC-8b310076a226efbbb6:P000041",
+      "quote": "calculated at the rate of one half percent (.5 %) per month",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E32",
+      "passage_id": "DOC-8b310076a226efbbb6:P000029",
+      "quote": "payable no later than 60 days following the close of each calendar quarter",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E33",
+      "passage_id": "DOC-8b310076a226efbbb6:P000031",
+      "quote": "Licensee shall be entitled to a credit for any subsequent Discounts and Credits.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E34",
+      "passage_id": "DOC-8b310076a226efbbb6:P000033",
+      "quote": "will continue for so long as Licensee continues to manufacture, sell or otherwise market the Products",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E35",
+      "passage_id": "DOC-8b310076a226efbbb6:P000058",
+      "quote": "to an accounting for and the payment of a Royalty thereon",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E36",
+      "passage_id": "DOC-8b310076a226efbbb6:P000009",
+      "quote": "If and to the extent that Licensee uses the MamaMancini Marks in connection with marketing and selling Other Products",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E37",
+      "passage_id": "DOC-8b310076a226efbbb6:P000030",
+      "quote": "Licensor accepts this duty and right in lieu of any best efforts obligation",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E38",
+      "passage_id": "DOC-8b310076a226efbbb6:P000049",
+      "quote": "will be compensated by Licensee for costs associated with such cooperation",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E39",
+      "passage_id": "DOC-8b310076a226efbbb6:P000035",
+      "quote": "Licensee agrees to reimburse and hold Licensor harmless from any sales, use, excise",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E40",
+      "passage_id": "DOC-8b310076a226efbbb6:P000052",
+      "quote": "in an amount not less than $2,000,000",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E41",
+      "passage_id": "DOC-8b310076a226efbbb6:P000039",
+      "quote": "not fewer than 80 hours per month",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E42",
+      "passage_id": "DOC-8b310076a226efbbb6:P000012",
+      "quote": "Licensee has not paid Licensor Royalties",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E43",
+      "passage_id": "DOC-8b310076a226efbbb6:P000034",
+      "quote": "United States currency drawn on a United States bank",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E44",
+      "passage_id": "DOC-8b310076a226efbbb6:P000006",
+      "quote": "Subject to the Section 1.5 below, such Other Products shall not be subject to this Agreement",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c1-E45",
+      "passage_id": "DOC-8b310076a226efbbb6:P000007",
+      "quote": "Licensee, at its sole expense, shall: purchase raw materials",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E46",
+      "passage_id": "DOC-8b310076a226efbbb6:P000001",
+      "quote": "DEVELOPMENT AND LICENSE AGREEMENT BETWEEN MARKET",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E47",
+      "passage_id": "DOC-8b310076a226efbbb6:P000005",
+      "quote": "a line of beef meat balls with sauce, Italian sausage with sauce and other similar Italian meats with sauces",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E48",
+      "passage_id": "DOC-8b310076a226efbbb6:P000005",
+      "quote": "trade secret recipes, formulas methods and ingredients for the preparation and production of such Licensor Products",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c1-E49",
+      "passage_id": "DOC-8b310076a226efbbb6:P000010",
+      "quote": "right to use all know-how (if any) related thereto",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c1-E50",
+      "passage_id": "DOC-8b310076a226efbbb6:P000012",
+      "quote": "begins on the date hereof",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E51",
+      "passage_id": "DOC-8b310076a226efbbb6:P000010",
+      "quote": "a worldwide, non-exclusive, perpetual license thereafter during the Non-Exclusive Term",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c1-E52",
+      "passage_id": "DOC-8b310076a226efbbb6:P000012",
+      "quote": "Licensee may extend the Exclusive Term for an additional twenty five (25) years",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E53",
+      "passage_id": "DOC-8b310076a226efbbb6:P000014",
+      "quote": "continues indefinitely thereafter",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E54",
+      "passage_id": "DOC-8b310076a226efbbb6:P000008",
+      "quote": "Licensee may make such modifications and changes to Recipes",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E55",
+      "passage_id": "DOC-8b310076a226efbbb6:P000011",
+      "quote": "The 12-month period beginning on each January 1 and ending on each December 31",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c1-E56",
+      "passage_id": "DOC-8b310076a226efbbb6:P000015",
+      "quote": "pursuant to Section 10 below",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E57",
+      "passage_id": "DOC-8b310076a226efbbb6:P000016",
+      "quote": "4. Royalties and Payments.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E58",
+      "passage_id": "DOC-8b310076a226efbbb6:P000020",
+      "quote": "Minimum Royalty to be",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E59",
+      "passage_id": "DOC-8b310076a226efbbb6:P000032",
+      "quote": "shall not prevent Licensor from subsequently challenging the validity or accuracy of such statement or payment",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E60",
+      "passage_id": "DOC-8b310076a226efbbb6:P000059",
+      "quote": "shall forthwith terminate and immediately revert to Licensor",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E61",
+      "passage_id": "DOC-8b310076a226efbbb6:P000061",
+      "quote": "except as provided in Section 4.12 above",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c1-E62",
+      "passage_id": "DOC-8b310076a226efbbb6:P000088",
+      "quote": "service of process may be made upon it in the manner in which notices are given under paragraph 14.1 hereof",
+      "role": "OTHER"
+    }
+  ],
+  "open_issues": [
+    {
+      "description": "Section 2 grants the right to sublicense, but no sublicensing royalty or share of sublicense receipts appears in the supplied passages. Whether sublicensee sales or receipts feed into Net Sales is unstated. No sublicensing term was extracted.",
+      "issue_id": "c1-ISS01",
+      "kind": "SUBLICENSE_ECONOMICS_NOT_STATED",
+      "passage_ids": [
+        "DOC-8b310076a226efbbb6:P000010",
+        "DOC-8b310076a226efbbb6:P000017"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Tier language ('6% of Net Sales up to $500,000 ... 4% of Net Sales from $500,000 up to $2,500,000') suggests marginal bands, but the clause does not say so expressly. MARGINAL is an interpretation and needs review.",
+      "issue_id": "c1-ISS02",
+      "kind": "TIER_CALCULATION_INTERPRETATION",
+      "passage_ids": [
+        "DOC-8b310076a226efbbb6:P000018"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "The Minimum Royalty is not a stated stand-alone payment obligation. It is the threshold that Licensor royalties for an Agreement Year must reach to avoid Licensor's right to terminate the Exclusive Term. The table's 'Agreement Year' numbering and its relation to calendar-year Agreement Years (starting 2009) should be confirmed. It is unclear whether the minimum is a top-up payment or only a termination trigger.",
+      "issue_id": "c1-ISS03",
+      "kind": "MINIMUM_ROYALTY_MECHANISM",
+      "passage_ids": [
+        "DOC-8b310076a226efbbb6:P000012",
+        "DOC-8b310076a226efbbb6:P000019",
+        "DOC-8b310076a226efbbb6:P000030"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Section 4.13 caps Royalties at $200,000 for an Agreement Year if Licensor does not provide support services. Its interaction with the Minimum Royalty (e.g., years 10+ at $125,000) and with the pre-condition 'as requested by Licensee' is not resolved by the text.",
+      "issue_id": "c1-ISS04",
+      "kind": "CAP_INTERACTION",
+      "passage_ids": [
+        "DOC-8b310076a226efbbb6:P000039",
+        "DOC-8b310076a226efbbb6:P000017"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Section 1.3 refers to Section 4.4 (royalty payment timing) for a subject that appears unrelated. Section 13.3 references paragraph 14.1, which does not exist in the supplied text. Section numbering has anomalies (no Section 5; two Sections numbered 6). Possible text omissions or drafting errors.",
+      "issue_id": "c1-ISS05",
+      "kind": "BROKEN_OR_MISNUMBERED_CROSS_REFERENCES",
+      "passage_ids": [
+        "DOC-8b310076a226efbbb6:P000007",
+        "DOC-8b310076a226efbbb6:P000088",
+        "DOC-8b310076a226efbbb6:P000041",
+        "DOC-8b310076a226efbbb6:P000043"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "The Appendix describing accepted Licensor Products and Recipes contains only blank form fields. Product scope for the royalty base cannot be confirmed from this document.",
+      "issue_id": "c1-ISS06",
+      "kind": "APPENDIX_BLANK",
+      "passage_ids": [
+        "DOC-8b310076a226efbbb6:P000104",
+        "DOC-8b310076a226efbbb6:P000105",
+        "DOC-8b310076a226efbbb6:P000106"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Section 13.6 requires written, signed amendments. No amendment is included or identified in this document, and a historical SEC exhibit does not establish current operative terms.",
+      "issue_id": "c1-ISS07",
+      "kind": "AMENDMENT_HISTORY_UNAVAILABLE",
+      "passage_ids": [
+        "DOC-8b310076a226efbbb6:P000091"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Net Sales is defined as Licensee's sales to unrelated third parties; the grant also covers Licensee's affiliates and sublicensees. Whether affiliate or sublicensee sales are included in the royalty base is not specified.",
+      "issue_id": "c1-ISS08",
+      "kind": "AFFILIATE_SALES_SCOPE",
+      "passage_ids": [
+        "DOC-8b310076a226efbbb6:P000010",
+        "DOC-8b310076a226efbbb6:P000017"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    }
+  ],
+  "other_payments": [
+    {
+      "amount_value": "0.00",
+      "basis": "Minimum Royalty with respect to Agreement Years 1st and 2nd",
+      "condition": "Minimum Royalty must be paid for the preceding Agreement Year to continue the Exclusive Term; otherwise Licensor may terminate the Exclusive Term (Sections 3.1, 4.3)",
+      "currency": "USD",
+      "evidence_ids": [
+        "c1-E18",
+        "c1-E19",
+        "c1-E24",
+        "c1-E42"
+      ],
+      "kind": "MINIMUM_ROYALTY",
+      "payment_id": "c1-PAY01"
+    },
+    {
+      "amount_value": "50000.00",
+      "basis": "Minimum Royalty with respect to Agreement Years 3rd and 4th",
+      "condition": "Same Exclusive Term continuation / Licensor termination right condition",
+      "currency": "USD",
+      "evidence_ids": [
+        "c1-E18",
+        "c1-E20",
+        "c1-E24",
+        "c1-E42"
+      ],
+      "kind": "MINIMUM_ROYALTY",
+      "payment_id": "c1-PAY02"
+    },
+    {
+      "amount_value": "75000.00",
+      "basis": "Minimum Royalty with respect to Agreement Years 5th, 6th and 7th",
+      "condition": "Same Exclusive Term continuation / Licensor termination right condition",
+      "currency": "USD",
+      "evidence_ids": [
+        "c1-E18",
+        "c1-E21",
+        "c1-E24",
+        "c1-E42"
+      ],
+      "kind": "MINIMUM_ROYALTY",
+      "payment_id": "c1-PAY03"
+    },
+    {
+      "amount_value": "100000.00",
+      "basis": "Minimum Royalty with respect to Agreement Years 8th and 9th",
+      "condition": "Same Exclusive Term continuation / Licensor termination right condition",
+      "currency": "USD",
+      "evidence_ids": [
+        "c1-E18",
+        "c1-E22",
+        "c1-E24",
+        "c1-E42"
+      ],
+      "kind": "MINIMUM_ROYALTY",
+      "payment_id": "c1-PAY04"
+    },
+    {
+      "amount_value": "125000.00",
+      "basis": "Minimum Royalty with respect to Agreement Year 10th and thereafter",
+      "condition": "Same Exclusive Term continuation / Licensor termination right condition",
+      "currency": "USD",
+      "evidence_ids": [
+        "c1-E18",
+        "c1-E23",
+        "c1-E24",
+        "c1-E42"
+      ],
+      "kind": "MINIMUM_ROYALTY",
+      "payment_id": "c1-PAY05"
+    },
+    {
+      "amount_value": "200000",
+      "basis": "Maximum Royalties for an Agreement Year, notwithstanding Sections 4.1 and 4.2",
+      "condition": "Applies if Licensor is unable or unwilling (including retirement, disability or death) to provide requested marketing/sales support services of not fewer than 80 hours per month during that Agreement Year",
+      "currency": "USD",
+      "evidence_ids": [
+        "c1-E25",
+        "c1-E26",
+        "c1-E41"
+      ],
+      "kind": "CAP",
+      "payment_id": "c1-PAY06"
+    }
+  ],
+  "reader": {
+    "engine": "claude",
+    "model": "sonnet",
+    "read_scope": "FULL_DOCUMENT",
+    "reviewed_passage_ids": [
+      "DOC-8b310076a226efbbb6:P000001",
+      "DOC-8b310076a226efbbb6:P000002",
+      "DOC-8b310076a226efbbb6:P000003",
+      "DOC-8b310076a226efbbb6:P000004",
+      "DOC-8b310076a226efbbb6:P000005",
+      "DOC-8b310076a226efbbb6:P000006",
+      "DOC-8b310076a226efbbb6:P000007",
+      "DOC-8b310076a226efbbb6:P000008",
+      "DOC-8b310076a226efbbb6:P000009",
+      "DOC-8b310076a226efbbb6:P000010",
+      "DOC-8b310076a226efbbb6:P000011",
+      "DOC-8b310076a226efbbb6:P000012",
+      "DOC-8b310076a226efbbb6:P000013",
+      "DOC-8b310076a226efbbb6:P000014",
+      "DOC-8b310076a226efbbb6:P000015",
+      "DOC-8b310076a226efbbb6:P000016",
+      "DOC-8b310076a226efbbb6:P000017",
+      "DOC-8b310076a226efbbb6:P000018",
+      "DOC-8b310076a226efbbb6:P000019",
+      "DOC-8b310076a226efbbb6:P000020",
+      "DOC-8b310076a226efbbb6:P000021",
+      "DOC-8b310076a226efbbb6:P000022",
+      "DOC-8b310076a226efbbb6:P000023",
+      "DOC-8b310076a226efbbb6:P000024",
+      "DOC-8b310076a226efbbb6:P000025",
+      "DOC-8b310076a226efbbb6:P000026",
+      "DOC-8b310076a226efbbb6:P000027",
+      "DOC-8b310076a226efbbb6:P000028",
+      "DOC-8b310076a226efbbb6:P000029",
+      "DOC-8b310076a226efbbb6:P000030",
+      "DOC-8b310076a226efbbb6:P000031",
+      "DOC-8b310076a226efbbb6:P000032",
+      "DOC-8b310076a226efbbb6:P000033",
+      "DOC-8b310076a226efbbb6:P000034",
+      "DOC-8b310076a226efbbb6:P000035",
+      "DOC-8b310076a226efbbb6:P000036",
+      "DOC-8b310076a226efbbb6:P000037",
+      "DOC-8b310076a226efbbb6:P000038",
+      "DOC-8b310076a226efbbb6:P000039",
+      "DOC-8b310076a226efbbb6:P000040",
+      "DOC-8b310076a226efbbb6:P000041",
+      "DOC-8b310076a226efbbb6:P000042",
+      "DOC-8b310076a226efbbb6:P000043",
+      "DOC-8b310076a226efbbb6:P000044",
+      "DOC-8b310076a226efbbb6:P000045",
+      "DOC-8b310076a226efbbb6:P000046",
+      "DOC-8b310076a226efbbb6:P000047",
+      "DOC-8b310076a226efbbb6:P000048",
+      "DOC-8b310076a226efbbb6:P000049",
+      "DOC-8b310076a226efbbb6:P000050",
+      "DOC-8b310076a226efbbb6:P000051",
+      "DOC-8b310076a226efbbb6:P000052",
+      "DOC-8b310076a226efbbb6:P000053",
+      "DOC-8b310076a226efbbb6:P000054",
+      "DOC-8b310076a226efbbb6:P000055",
+      "DOC-8b310076a226efbbb6:P000056",
+      "DOC-8b310076a226efbbb6:P000057",
+      "DOC-8b310076a226efbbb6:P000058",
+      "DOC-8b310076a226efbbb6:P000059",
+      "DOC-8b310076a226efbbb6:P000060",
+      "DOC-8b310076a226efbbb6:P000061",
+      "DOC-8b310076a226efbbb6:P000062",
+      "DOC-8b310076a226efbbb6:P000063",
+      "DOC-8b310076a226efbbb6:P000064",
+      "DOC-8b310076a226efbbb6:P000065",
+      "DOC-8b310076a226efbbb6:P000066",
+      "DOC-8b310076a226efbbb6:P000067",
+      "DOC-8b310076a226efbbb6:P000068",
+      "DOC-8b310076a226efbbb6:P000069",
+      "DOC-8b310076a226efbbb6:P000070",
+      "DOC-8b310076a226efbbb6:P000071",
+      "DOC-8b310076a226efbbb6:P000072",
+      "DOC-8b310076a226efbbb6:P000073",
+      "DOC-8b310076a226efbbb6:P000074",
+      "DOC-8b310076a226efbbb6:P000075",
+      "DOC-8b310076a226efbbb6:P000076",
+      "DOC-8b310076a226efbbb6:P000077",
+      "DOC-8b310076a226efbbb6:P000078",
+      "DOC-8b310076a226efbbb6:P000079",
+      "DOC-8b310076a226efbbb6:P000080",
+      "DOC-8b310076a226efbbb6:P000081",
+      "DOC-8b310076a226efbbb6:P000082",
+      "DOC-8b310076a226efbbb6:P000083",
+      "DOC-8b310076a226efbbb6:P000084",
+      "DOC-8b310076a226efbbb6:P000085",
+      "DOC-8b310076a226efbbb6:P000086",
+      "DOC-8b310076a226efbbb6:P000087",
+      "DOC-8b310076a226efbbb6:P000088",
+      "DOC-8b310076a226efbbb6:P000089",
+      "DOC-8b310076a226efbbb6:P000090",
+      "DOC-8b310076a226efbbb6:P000091",
+      "DOC-8b310076a226efbbb6:P000092",
+      "DOC-8b310076a226efbbb6:P000093",
+      "DOC-8b310076a226efbbb6:P000094",
+      "DOC-8b310076a226efbbb6:P000095",
+      "DOC-8b310076a226efbbb6:P000096",
+      "DOC-8b310076a226efbbb6:P000097",
+      "DOC-8b310076a226efbbb6:P000098",
+      "DOC-8b310076a226efbbb6:P000099",
+      "DOC-8b310076a226efbbb6:P000100",
+      "DOC-8b310076a226efbbb6:P000101",
+      "DOC-8b310076a226efbbb6:P000102",
+      "DOC-8b310076a226efbbb6:P000103",
+      "DOC-8b310076a226efbbb6:P000104",
+      "DOC-8b310076a226efbbb6:P000105",
+      "DOC-8b310076a226efbbb6:P000106",
+      "DOC-8b310076a226efbbb6:P000107",
+      "DOC-8b310076a226efbbb6:P000108",
+      "DOC-8b310076a226efbbb6:P000109",
+      "DOC-8b310076a226efbbb6:P000110",
+      "DOC-8b310076a226efbbb6:P000111",
+      "DOC-8b310076a226efbbb6:P000112"
+    ],
+    "run_id": "MERGE-c4bd9ca9c2f462d61e"
+  },
+  "royalty_terms": [
+    {
+      "adjustments": [
+        {
+          "description": "Net Sales deduction: discounts and retroactive price reductions/allowances",
+          "evidence_ids": [
+            "c1-E08"
+          ]
+        },
+        {
+          "description": "Net Sales deduction: credits, rebates, allowances, returns and recalls",
+          "evidence_ids": [
+            "c1-E09"
+          ]
+        },
+        {
+          "description": "Net Sales deduction: freight, postage, shipping and insurance charges",
+          "evidence_ids": [
+            "c1-E10"
+          ]
+        },
+        {
+          "description": "Net Sales deduction: taxes, duties or governmental charges in billing",
+          "evidence_ids": [
+            "c1-E11"
+          ]
+        },
+        {
+          "description": "Net Sales deduction: provisions for uncollectible accounts",
+          "evidence_ids": [
+            "c1-E12"
+          ]
+        },
+        {
+          "description": "Licensee credited for subsequent Discounts and Credits",
+          "evidence_ids": [
+            "c1-E33"
+          ]
+        },
+        {
+          "description": "Sales by Licensee to Licensor for direct sale to individual consumers are excluded from Net Sales",
+          "evidence_ids": [
+            "c1-E27"
+          ]
+        },
+        {
+          "description": "Royalties for an Agreement Year limited to $200,000 if Licensor is unable or unwilling to provide support services (see payment c1-PAY06)",
+          "evidence_ids": [
+            "c1-E25",
+            "c1-E26"
+          ]
+        }
+      ],
+      "base": "Licensee's Net Sales of Products",
+      "base_definition": "Gross invoiced sales of Products, directly or indirectly to unrelated third parties, less (a) discounts, (b) credits/rebates/allowances/returns, (c) freight, postage, shipping and insurance, (d) taxes/duties/governmental charges included in billing, and (e) provisions for uncollectible accounts",
+      "base_evidence_ids": [
+        "c1-E06",
+        "c1-E07"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "c1-E13"
+          ],
+          "text": "Royalty applies during both the Exclusive Term and the Non-Exclusive Term, subject to Section 4.13"
+        },
+        {
+          "evidence_ids": [
+            "c1-E55",
+            "c1-E14"
+          ],
+          "text": "Tier thresholds are measured per Agreement Year (12-month period January 1 to December 31)"
+        },
+        {
+          "evidence_ids": [
+            "c1-E36",
+            "c1-E44"
+          ],
+          "text": "Other Products become Products subject to royalty only to the extent Licensee uses the MamaMancini Marks on them"
+        },
+        {
+          "evidence_ids": [
+            "c1-E32"
+          ],
+          "text": "Royalty payable quarterly, no later than 60 days after each calendar quarter close"
+        },
+        {
+          "evidence_ids": [
+            "c1-E34"
+          ],
+          "text": "Royalty obligation survives expiration/termination while Licensee continues to sell Products"
+        },
+        {
+          "evidence_ids": [
+            "c1-E35"
+          ],
+          "text": "Inventory sold in the post-termination sell-off period remains subject to accounting and payment of Royalty"
+        }
+      ],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": "During the Exclusive Term and the Non-Exclusive Term, subject to Section 4.13",
+      "evidence_ids": [
+        "c1-E06",
+        "c1-E07",
+        "c1-E13",
+        "c1-E14",
+        "c1-E15",
+        "c1-E16",
+        "c1-E17"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": "Products, i.e., Licensor Products plus Licensee Products (Other Products to the extent sold using the MamaMancini Marks)",
+      "rate_evidence_ids": [
+        "c1-E14",
+        "c1-E15",
+        "c1-E16",
+        "c1-E17"
+      ],
+      "rate_unit": "PERCENT",
+      "rate_value": null,
+      "structure": "TIERED",
+      "term_id": "c1-T01",
+      "territory_scope": null,
+      "tiers": [
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "c1-E14"
+          ],
+          "lower": null,
+          "measurement_period": "each Agreement Year",
+          "rate_unit": "PERCENT",
+          "rate_value": "6",
+          "sequence": 1,
+          "threshold_basis": "Net Sales (USD)",
+          "threshold_evidence_ids": [
+            "c1-E14"
+          ],
+          "upper": "500000"
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "c1-E15"
+          ],
+          "lower": "500000",
+          "measurement_period": "each Agreement Year",
+          "rate_unit": "PERCENT",
+          "rate_value": "4",
+          "sequence": 2,
+          "threshold_basis": "Net Sales (USD)",
+          "threshold_evidence_ids": [
+            "c1-E15"
+          ],
+          "upper": "2500000"
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "c1-E16"
+          ],
+          "lower": "2500000",
+          "measurement_period": "each Agreement Year",
+          "rate_unit": "PERCENT",
+          "rate_value": "2",
+          "sequence": 3,
+          "threshold_basis": "Net Sales (USD)",
+          "threshold_evidence_ids": [
+            "c1-E16"
+          ],
+          "upper": "20000000"
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "c1-E17"
+          ],
+          "lower": "20000000",
+          "measurement_period": "each Agreement Year",
+          "rate_unit": "PERCENT",
+          "rate_value": "1",
+          "sequence": 4,
+          "threshold_basis": "Net Sales (USD)",
+          "threshold_evidence_ids": [
+            "c1-E17"
+          ],
+          "upper": null
+        }
+      ]
+    }
+  ],
+  "schema_version": "m2.0",
+  "source_text_sha256": "c26ed583c7f5725b64ad7bee1acfca828a7627c63f231f41bbfc3bc0ac68292f",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1520358/000149315213000675/ex10-2.htm"
+}

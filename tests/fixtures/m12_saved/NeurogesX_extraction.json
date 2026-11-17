@@ -1,0 +1,3031 @@
+{
+  "agreement": {
+    "contractual_status": "Signed by both parties per signature block in this chunk",
+    "duration": "Country-by-country, per Licensed Product, until no Valid Claim covers sale or use; whole agreement expires at last licensed patent expiration or abandonment of all applications",
+    "effective_date": "November 1, 2000",
+    "exclusivity": "Exclusive for the life of the Agreement except as otherwise provided; Regents reserves non-commercial research and education use",
+    "execution_date": "Licensee signature dated 27 October ‘00; Regents signature dated 10/30/00",
+    "field_evidence": {
+      "duration": [
+        "1-E008"
+      ],
+      "effective_date": [
+        "1-E001"
+      ],
+      "exclusivity": [
+        "1-E006"
+      ],
+      "execution_date": [
+        "2-E016"
+      ],
+      "industry": [
+        "1-E004"
+      ],
+      "licensed_ip": [
+        "1-E004"
+      ],
+      "licensee": [
+        "1-E003",
+        "2-E015"
+      ],
+      "licensor": [
+        "1-E002",
+        "2-E014"
+      ],
+      "territory": [
+        "1-E005"
+      ],
+      "title": [
+        "1-E071"
+      ]
+    },
+    "industry": "Pharmaceutical (high dose capsaicin for neuropathic pain)",
+    "licensed_ip": "Regents' Patent Rights (capsaicin and capsaicin analog patent applications, continuations and resulting patents; non-exclusive license to related know-how)",
+    "licensee": "NeuroGesX, Inc.",
+    "licensor": "The Regents of the University of California (acting through UCSF Office of Technology Management)",
+    "territory": "World-wide",
+    "title": "EXCLUSIVE LICENSE AGREEMENT"
+  },
+  "amendment_status": "NOT_CHECKED",
+  "dispositions": [
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E059"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000001",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit label only; contains no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E052"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000021",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Recital confirming royalties are payable on pending applications as well as issued patents; qualifies the royalty base.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000024",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Regents' Patent Rights (licensed patent families); no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000025",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Licensed Product by reference to Valid Claim infringement; sets royalty scope but no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000026",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Licensed Method; no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E011",
+        "1-E012",
+        "1-E055"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000027",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Net Sales definition is the royalty base for T001, with deductions and affiliate/sublicensee transfer treatment; cross-references Article 7.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "UNRELATED_PERCENT"
+      ],
+      "evidence_ids": [
+        "1-E046"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000028",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "fifty percent (50%)",
+          "rationale": "Ownership/voting-control threshold in the Affiliate definition, not a payment rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Affiliate ownership-control percentages (50%) are not royalty rates.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E007"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000029",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Field of Use is all fields and uses, so no field-based rate differentiation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E056"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000031",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Commercial Sale definition affects maintenance fee, minimum royalty and milestone triggers; no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000032",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "IND definition used in the 7.7(a) milestone trigger.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000033",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "NDA definition used in the 7.7(c) milestone trigger.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000034",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Phase I definition; used in due diligence milestones, not payments.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000035",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Phase III definition used in the 7.7(b) milestone trigger.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E053"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000036",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Valid Claim definition limits royalty duration (pending claims lose status after 10 years from priority until issuance).",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E054"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000037",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Sublicensee definition includes certain distributors, widening both Net Sales and sublicense fee scope.",
+      "term_ids": [
+        "1-T001",
+        "1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E006"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000041",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exclusivity statement referencing Paragraph 2.1; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E015"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000047",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Introduces sublicense fee obligation as a percentage of non-royalty sublicensee compensation.",
+      "term_ids": [
+        "1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E019",
+        "1-E022"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000049",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines sublicense fee base (up-front fees and milestones) and exclusions.",
+      "term_ids": [
+        "1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E072"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000050",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Table header showing tiers are keyed to Aggregate Sublicense Fees.",
+      "term_ids": [
+        "1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E016"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000051",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "25%",
+          "rationale": "Tier 1 percentage of sublicense fees.",
+          "term_id": "1-T002"
+        }
+      ],
+      "rationale": "Sublicense fee tier 1: 25% below $250,000.",
+      "term_ids": [
+        "1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E017"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000052",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "10%",
+          "rationale": "Tier 2 percentage of sublicense fees.",
+          "term_id": "1-T002"
+        }
+      ],
+      "rationale": "Sublicense fee tier 2: 10% for $250,000 to $2,000,000.",
+      "term_ids": [
+        "1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E018"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000053",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "5%",
+          "rationale": "Tier 3 percentage of sublicense fees.",
+          "term_id": "1-T002"
+        }
+      ],
+      "rationale": "Sublicense fee tier 3: 5% above $2,000,000.",
+      "term_ids": [
+        "1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E020",
+        "1-E021"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000054",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Aggregate Sublicense Fees for tier selection and states actual payments follow fees received per calendar year.",
+      "term_ids": [
+        "1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000055",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Administrative duties on sublicense copies and collection; Licensee may redact sublicense terms. No rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000056",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Assignment of sublicenses on termination; no payment rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E064"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000057",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Section heading for payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E013",
+        "1-E014"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000058",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Obligation to pay earned royalties on Net Sales per product and country, with duration; cross-references Section 7 for the rate.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E050"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000060",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Quarterly payment timing for earned royalties.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E051"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000061",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Annual payment timing for sublicense fee percentages.",
+      "term_ids": [
+        "1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E049"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000062",
+      "payment_ids": [
+        "1-P002"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Payment timing for the annual maintenance fee, cross-referencing Section 6.1.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E043"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000063",
+      "payment_ids": [
+        "1-P009"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "OTHER_PAYMENT",
+          "literal": "twenty-five (25%)",
+          "rationale": "Revenue-based ceiling on amounts payable; recorded as a cap, not a royalty rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Currency conversion mechanics plus a cap of 25% of total annual Licensed Product revenue on payments to The Regents.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E048"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000064",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "No reduction for foreign withholding taxes, but taxes paid on The Regents' behalf are credited against royalties.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E067"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000065",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Blocked-currency deposit mechanics; no change to economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E047"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000066",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Royalty obligation ceases for a patent or Valid Claim finally held invalid.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E044"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000067",
+      "payment_ids": [
+        "1-P010"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "OTHER_PAYMENT",
+          "literal": "ten percent (10%)",
+          "rationale": "Interest rate on overdue amounts.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Late-payment interest at 10% per annum or legal maximum; not a royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E026"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000070",
+      "payment_ids": [
+        "1-P001"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "License-issue fee equal to reimbursed patent costs; amount not stated in this passage.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E023",
+        "1-E024",
+        "1-E025"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000072",
+      "payment_ids": [
+        "1-P002"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "$5,000 annual maintenance fee with waiver on Commercial Sales and a deduction against earned royalties.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E065"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000073",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Article 7 heading.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E009",
+        "1-E010"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000074",
+      "payment_ids": [
+        "1-P008"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "one percent (1%)",
+          "rationale": "Earned royalty rate on Net Sales.",
+          "term_id": "1-T001"
+        }
+      ],
+      "rationale": "Core 1% worldwide Net Sales earned royalty with $1,000,000 annual cap.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E037",
+        "1-E038",
+        "1-E039"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000075",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "THRESHOLD",
+          "literal": "eleven percent (11%)",
+          "rationale": "Combined royalty level above which the reduction applies.",
+          "term_id": "1-T001"
+        },
+        {
+          "classification": "ADJUSTMENT",
+          "literal": "one-half (1/2)",
+          "rationale": "Share of the excess over 11% by which the Regents royalty is reduced.",
+          "term_id": "1-T001"
+        },
+        {
+          "classification": "ADJUSTMENT",
+          "literal": "fifty percent (50%)",
+          "rationale": "Floor limiting the stacking reduction to half of the original royalty.",
+          "term_id": "1-T001"
+        }
+      ],
+      "rationale": "Third-party royalty stacking reduction with 11% trigger, one-half sharing and 50% floor.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E040"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000076",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Anti-stacking across multiple Regents patents.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E041"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000077",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exclusion of research, clinical, sample and other non-Commercial Sale transfers from royalty.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E042"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000079",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Combination product A/B allocation of Net Sales.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E027",
+        "1-E028",
+        "1-E060"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000080",
+      "payment_ids": [
+        "1-P003"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "$10,000 minimum annual royalty, creditable and carried forward, pro-rated in first year.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E066"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000081",
+      "payment_ids": [
+        "1-P004",
+        "1-P005",
+        "1-P006",
+        "1-P007"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Lead-in to the milestone payments listed in 7.7(a)-(e).",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E029"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000082",
+      "payment_ids": [
+        "1-P004"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "$50,000 IND milestone.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E030"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000083",
+      "payment_ids": [
+        "1-P005"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "$100,000 Phase III first-dosing milestone.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E031"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000084",
+      "payment_ids": [
+        "1-P006"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "$1,000,000 NDA approval milestone.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E032"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000086",
+      "payment_ids": [
+        "1-P004",
+        "1-P005",
+        "1-P006"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "ADJUSTMENT",
+          "literal": "fifty percent (50%)",
+          "rationale": "Per-quarter limit on crediting milestone payments against earned royalties.",
+          "term_id": "1-T001"
+        }
+      ],
+      "rationale": "Milestones (a)-(c) creditable against royalties, limited to 50% of earned royalties per quarter.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E033",
+        "1-E034",
+        "1-E035",
+        "1-E058"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000087",
+      "payment_ids": [
+        "1-P007"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "OTHER_PAYMENT",
+          "literal": "one percent (1%)",
+          "rationale": "Share-count factor in the IPO/acquisition payment formula.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Non-creditable change-of-control/IPO payment computed as X times P with installments; the 1% is a share-count factor, not a royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E036"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000088",
+      "payment_ids": [
+        "1-P004",
+        "1-P005",
+        "1-P006",
+        "1-P007"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Milestones not due if no patent has issued, Licensee stopped funding prosecution, and (for 7.7(e)) first Commercial Sale already occurred.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000095",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Due diligence default remedy (termination or conversion to non-exclusive); no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E063"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000096",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Reports section heading.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000098",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Reference to progress reports under Paragraph 9.1; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E061"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000106",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Reporting of first Commercial Sale dates; administrative.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E062"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000107",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Quarterly royalty report content; administrative.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E068"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000111",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Record-keeping duty; no payment rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "UNRELATED_PERCENT"
+      ],
+      "evidence_ids": [
+        "1-E045"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000112",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "five percent (5%)",
+          "rationale": "Audit error threshold allocating examination costs, not a royalty rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Audit tolerance: examination cost shifts to Licensee if royalty error exceeds 5%.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000116",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival list entry (Article 1); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000117",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival list entry (Article 10); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000118",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival list entry (Article 14); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000119",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival list entry (Article 15); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000120",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival list entry (Article 20); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000121",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival list entry (Article 24); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000122",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival list entry (Article 29); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000123",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival list entry (Article 30); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E070"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000127",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Termination does not relieve accrued fees; cross-reference to Article 21 notices.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-fd1c198349c98f801e:P000129",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Licensee termination right and notice reference; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E069"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000130",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Accrued obligations and prior payments survive licensee termination; no new rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E057"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000132",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Sell-off of inventory for 180 days after termination remains subject to royalties and reports.",
+      "term_ids": [
+        "1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "2-E007"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000143",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Cross-reference to Article 19 on infringement suits; no economic terms stated here.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E004"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000147",
+      "payment_ids": [
+        "2-PAY001"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Prosecution covenant conditioned on Licensee paying patent costs; the cost obligation itself is captured in 17.5.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "2-E001",
+        "2-E002",
+        "2-E003"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000152",
+      "payment_ids": [
+        "2-PAY001",
+        "2-PAY002"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Patent cost reimbursement obligations: ongoing quarterly rebilling and prior costs of at least approx. $37,000; cross-references Article 5.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "2-E005"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000153",
+      "payment_ids": [
+        "2-PAY001"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Foreign patent election notice reaffirms Licensee's obligation to bear foreign filing costs; no amount stated.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "2-E006"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000154",
+      "payment_ids": [
+        "2-PAY001"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Duration and termination mechanics of the patent cost payment obligation; no amount stated.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E008"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000165",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Indemnification clause; mentions sublicense only as a source of liability, not a payment or royalty on sublicense receipts.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E009"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000170",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Insurance coverage limit, not a payment to the licensor or a royalty.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E010"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000171",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Insurance aggregate limit, not a payment to the licensor or a royalty.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E011"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000172",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Insurance coverage limit, not a payment to the licensor or a royalty.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E012"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000173",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Insurance aggregate limit, not a payment to the licensor or a royalty.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E013"
+      ],
+      "passage_id": "DOC-fd1c198349c98f801e:P000180",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Notice mechanics that also cover delivery of payments; no economic terms.",
+      "term_ids": []
+    }
+  ],
+  "document_id": "DOC-fd1c198349c98f801e",
+  "evidence": [
+    {
+      "evidence_id": "1-E001",
+      "passage_id": "DOC-fd1c198349c98f801e:P000014",
+      "quote": "is made effective November 1, 2000 (the “Effective Date”)",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E002",
+      "passage_id": "DOC-fd1c198349c98f801e:P000014",
+      "quote": "THE REGENTS OF THE UNIVERSITY OF CALIFORNIA, a California corporation",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E003",
+      "passage_id": "DOC-fd1c198349c98f801e:P000014",
+      "quote": "NEUROGESX, INC., a California corporation",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E004",
+      "passage_id": "DOC-fd1c198349c98f801e:P000008",
+      "quote": "HIGH DOSE CAPSAICIN FOR NEUROPATHIC PAIN",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E005",
+      "passage_id": "DOC-fd1c198349c98f801e:P000040",
+      "quote": "a world-wide license under Regents’ Patent Rights",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-E006",
+      "passage_id": "DOC-fd1c198349c98f801e:P000041",
+      "quote": "the license granted in Paragraph 2.1 is exclusive for the life of this Agreement",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-E007",
+      "passage_id": "DOC-fd1c198349c98f801e:P000029",
+      "quote": "“Field of Use” means all fields and uses.",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E008",
+      "passage_id": "DOC-fd1c198349c98f801e:P000114",
+      "quote": "shall expire on a country-by-country basis as to each Licensed Product on the date that neither the sale nor use of such Licensed Product would be covered by a Valid Claim in such country",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E009",
+      "passage_id": "DOC-fd1c198349c98f801e:P000074",
+      "quote": "an earned royalty of one percent (1%) of the Net Sales of Licensed Products worldwide",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E010",
+      "passage_id": "DOC-fd1c198349c98f801e:P000074",
+      "quote": "up to a maximum of one million dollars ($1,000,000) per year",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "1-E011",
+      "passage_id": "DOC-fd1c198349c98f801e:P000027",
+      "quote": "“Net Sales” means the total of the gross invoice prices of Licensed Products sold or Licensed Methods performed by the Licensee, an Affiliate, or a Sublicensee",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "1-E012",
+      "passage_id": "DOC-fd1c198349c98f801e:P000027",
+      "quote": "less the sum of the following actual and customary deductions where applicable: cash, trade, or quantity discounts",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "1-E013",
+      "passage_id": "DOC-fd1c198349c98f801e:P000058",
+      "quote": "earned royalties (as specified in Section 7) on Net Sales of Licensed Products on a Licensed Product-by-Licensed Product and country-by-country basis",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "1-E014",
+      "passage_id": "DOC-fd1c198349c98f801e:P000058",
+      "quote": "until the sale of a Licensed Product in such country does not infringe a Valid Claim",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E015",
+      "passage_id": "DOC-fd1c198349c98f801e:P000047",
+      "quote": "a percentage of all compensation received by Licensee from Sublicensees, other than royalties on sales of products and Licensed Products",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "1-E016",
+      "passage_id": "DOC-fd1c198349c98f801e:P000051",
+      "quote": "25% | < $250,000",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E017",
+      "passage_id": "DOC-fd1c198349c98f801e:P000052",
+      "quote": "10% | $250,000 -- $2,000,000",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E018",
+      "passage_id": "DOC-fd1c198349c98f801e:P000053",
+      "quote": "5% | > $2,000,000",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E019",
+      "passage_id": "DOC-fd1c198349c98f801e:P000049",
+      "quote": "Sublicense fees shall consist of amounts received in the form of up-front fees and milestone payments",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "1-E020",
+      "passage_id": "DOC-fd1c198349c98f801e:P000054",
+      "quote": "“Aggregate Sublicense Fees” shall be the cumulative amount of sublicense fees stated in each sublicense of Regents’ Patent Rights",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "1-E021",
+      "passage_id": "DOC-fd1c198349c98f801e:P000054",
+      "quote": "the actual sublicensee fee payments due The Regents from Licensee shall be determined based on the actual amounts of sublicensee fees received by Licensee in each calendar year",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E022",
+      "passage_id": "DOC-fd1c198349c98f801e:P000049",
+      "quote": "but shall not include any amounts received as support for research and development activities",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E023",
+      "passage_id": "DOC-fd1c198349c98f801e:P000072",
+      "quote": "a license maintenance fee of five thousand dollars ($5,000) beginning on the second anniversary of the Effective Date",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E024",
+      "passage_id": "DOC-fd1c198349c98f801e:P000072",
+      "quote": "This license maintenance fee is not due on any anniversary of the Effective Date if, as of that Date, the Licensee, its Affiliates, or its Sublicensees are engaged in Commercial Sales of a Licensed Product",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E025",
+      "passage_id": "DOC-fd1c198349c98f801e:P000072",
+      "quote": "then Licensee may deduct such amount from the earned royalties that would otherwise be due The Regents",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E026",
+      "passage_id": "DOC-fd1c198349c98f801e:P000070",
+      "quote": "Within sixty (60) days after the Effective Date, the Licensee shall pay to The Regents a license-issue fee equal to the total amount of out-of-pocket costs and expenses of patent prosecution of the Regents’ Patent Rights incurred by The Regents through the Effective Date",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E027",
+      "passage_id": "DOC-fd1c198349c98f801e:P000080",
+      "quote": "a minimum annual royalty equal to ten thousand dollars ($10,000), which shall be creditable against future earned royalties",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "1-E028",
+      "passage_id": "DOC-fd1c198349c98f801e:P000080",
+      "quote": "the Licensee’s obligation to pay the minimum annual royalty will be pro-rated",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E029",
+      "passage_id": "DOC-fd1c198349c98f801e:P000082",
+      "quote": "Fifty thousand dollars ($50,000) upon the first filing of an IND for the first Licensed Product",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E030",
+      "passage_id": "DOC-fd1c198349c98f801e:P000083",
+      "quote": "One hundred thousand dollars ($100,000) upon first dosing of a patient in a Phase III clinical trial for the first Licensed Product in a major market",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E031",
+      "passage_id": "DOC-fd1c198349c98f801e:P000084",
+      "quote": "One million dollars ($1,000,000) upon first approval of a NDA, for a Licensed Product in a major market",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E032",
+      "passage_id": "DOC-fd1c198349c98f801e:P000086",
+      "quote": "The foregoing milestone payments are creditable against earned royalties (but subject to reduction of no more than fifty percent (50%) of the earned royalties in any calendar quarter)",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E033",
+      "passage_id": "DOC-fd1c198349c98f801e:P000087",
+      "quote": "total cash payments equal to X times P, where X is equal to one percent (1%) of the number of shares of the Licensee’s common stock",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E034",
+      "passage_id": "DOC-fd1c198349c98f801e:P000087",
+      "quote": "non-creditable milestone payments should either of the following occur while Commercial Sales or commercialization of a Licensed Product by Licensee are continuing",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E035",
+      "passage_id": "DOC-fd1c198349c98f801e:P000087",
+      "quote": "Such payments shall be paid in three (3) installments",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E036",
+      "passage_id": "DOC-fd1c198349c98f801e:P000088",
+      "quote": "no milestone payments shall be due from Licensee under Section 7.7 in the event that",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E037",
+      "passage_id": "DOC-fd1c198349c98f801e:P000075",
+      "quote": "the combined earned royalty due The Regents and unaffiliated third parties exceeds eleven percent (11%)",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "1-E038",
+      "passage_id": "DOC-fd1c198349c98f801e:P000075",
+      "quote": "reduced by an amount equal to one-half (1/2) the excess over eleven percent (11%) of the royalty rate(s) due to the unaffiliated third party(ies)",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E039",
+      "passage_id": "DOC-fd1c198349c98f801e:P000075",
+      "quote": "in no event shall the amount paid to The Regents be reduced below fifty percent (50%) of the original earned royalty amounts due The Regents",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "1-E040",
+      "passage_id": "DOC-fd1c198349c98f801e:P000076",
+      "quote": "No cumulation of earned royalties shall be made in the event a Licensed Product is covered by Valid Claims of more than one patent",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E041",
+      "passage_id": "DOC-fd1c198349c98f801e:P000077",
+      "quote": "No earned royalty shall be payable under this Article 7 with respect to transfers of Licensed Product to customers or prospective customers for use in research and/or development",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E042",
+      "passage_id": "DOC-fd1c198349c98f801e:P000079",
+      "quote": "multiplying the Net Sales of the combination product by the fraction A/B",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "1-E043",
+      "passage_id": "DOC-fd1c198349c98f801e:P000063",
+      "quote": "In no event shall the Licensee be required to pay The Regents more than twenty-five (25%) of its total annual revenue derived from Licensed Products.",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "1-E044",
+      "passage_id": "DOC-fd1c198349c98f801e:P000067",
+      "quote": "interest charges on the unpaid amount at a rate of ten percent (10%) per annum or the maximum permitted by law, whichever is less",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E045",
+      "passage_id": "DOC-fd1c198349c98f801e:P000112",
+      "quote": "if an error in royalties of more than five percent (5%) of the total royalties due for any year is discovered",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E046",
+      "passage_id": "DOC-fd1c198349c98f801e:P000028",
+      "quote": "at least fifty percent (50%) of the outstanding stock or other voting rights",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E047",
+      "passage_id": "DOC-fd1c198349c98f801e:P000066",
+      "quote": "all obligation to pay earned royalties based on that patent or Valid Claim or any Valid Claim patentably indistinct therefrom will cease as of the date of final decision",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E048",
+      "passage_id": "DOC-fd1c198349c98f801e:P000064",
+      "quote": "all payments made by the Licensee in fulfillment of The Regents’ tax liability in any particular country will be credited against earned royalties or fees due The Regents",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E049",
+      "passage_id": "DOC-fd1c198349c98f801e:P000062",
+      "quote": "the Licensee shall pay the annual maintenance fee (as defined in Section 6.1) to The Regents on or before each anniversary of the Effective Date",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E050",
+      "passage_id": "DOC-fd1c198349c98f801e:P000060",
+      "quote": "Licensee shall pay earned royalties quarterly on or before February 28, May 31, August 31 and November 30 of each calendar year",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E051",
+      "passage_id": "DOC-fd1c198349c98f801e:P000061",
+      "quote": "Licensee shall pay the applicable percentage of sublicense fees to The Regents on or before February 28 of each calendar year",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E052",
+      "passage_id": "DOC-fd1c198349c98f801e:P000021",
+      "quote": "royalties due under this Agreement will be paid on both pending patent applications and issued patents",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E053",
+      "passage_id": "DOC-fd1c198349c98f801e:P000036",
+      "quote": "within ten (10) years after the filing date from which such claim takes priority",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E054",
+      "passage_id": "DOC-fd1c198349c98f801e:P000037",
+      "quote": "a non-Affiliate third party to whom Licensee has granted directly or indirectly a right to distribute such Licensed Product",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E055",
+      "passage_id": "DOC-fd1c198349c98f801e:P000027",
+      "quote": "transfers to an Affiliate or Sublicensee for end use by the Affiliate or Sublicensee will be treated as sales to an independent third party",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "1-E056",
+      "passage_id": "DOC-fd1c198349c98f801e:P000031",
+      "quote": "a bona fide commercial sale of such Licensed Product following marketing approval by the regulatory authority in such country",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E057",
+      "passage_id": "DOC-fd1c198349c98f801e:P000132",
+      "quote": "provided that the sale of those Licensed Products is subject to the terms of this Agreement, including but not limited to the rendering of reports and payment of royalties",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E058",
+      "passage_id": "DOC-fd1c198349c98f801e:P000087",
+      "quote": "(i) the closing of an Initial Public Offering (“IPO”) of the Licensee’s common stock",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E059",
+      "passage_id": "DOC-fd1c198349c98f801e:P000001",
+      "quote": "Exhibit 10.6",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E060",
+      "passage_id": "DOC-fd1c198349c98f801e:P000080",
+      "quote": "the excess amount of minimum annual royalty may be applied by Licensee against earned royalties due The Regents for the next year",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E061",
+      "passage_id": "DOC-fd1c198349c98f801e:P000106",
+      "quote": "the date of first Commercial Sale of a Licensed Product in each country",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E062",
+      "passage_id": "DOC-fd1c198349c98f801e:P000107",
+      "quote": "the earned royalties, in U.S. dollars, payable with respect to sales of Licensed Products",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E063",
+      "passage_id": "DOC-fd1c198349c98f801e:P000096",
+      "quote": "9. PROGRESS AND ROYALTY REPORTS",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E064",
+      "passage_id": "DOC-fd1c198349c98f801e:P000057",
+      "quote": "4. PAYMENT TERMS",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E065",
+      "passage_id": "DOC-fd1c198349c98f801e:P000073",
+      "quote": "7. EARNED ROYALTIES, MINIMUM ANNUAL ROYALTIES AND MILESTONE PAYMENTS",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E066",
+      "passage_id": "DOC-fd1c198349c98f801e:P000081",
+      "quote": "The Licensee shall pay The Regents the following milestone payments:",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E067",
+      "passage_id": "DOC-fd1c198349c98f801e:P000065",
+      "quote": "deposit the amount owed in an interest-bearing account within that country",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E068",
+      "passage_id": "DOC-fd1c198349c98f801e:P000111",
+      "quote": "Books and records must be preserved for at least five (5) years",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E069",
+      "passage_id": "DOC-fd1c198349c98f801e:P000130",
+      "quote": "does not relieve the Licensee of any obligation or liability accrued under this Agreement prior to termination",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E070",
+      "passage_id": "DOC-fd1c198349c98f801e:P000127",
+      "quote": "Termination will not relieve the Licensee of its obligation to pay any fees owing at the time of termination",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E071",
+      "passage_id": "DOC-fd1c198349c98f801e:P000002",
+      "quote": "EXCLUSIVE LICENSE AGREEMENT",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E072",
+      "passage_id": "DOC-fd1c198349c98f801e:P000050",
+      "quote": "Percentage | Aggregate Sublicense Fees",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "2-E001",
+      "passage_id": "DOC-fd1c198349c98f801e:P000152",
+      "quote": "Costs billed by The Regents’ counsel will be rebilled to the Licensee and are to be paid quarterly for the calendar quarter in which The Regents’ costs were incurred, within thirty (30) days after Licensee receives such rebilling.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "2-E002",
+      "passage_id": "DOC-fd1c198349c98f801e:P000152",
+      "quote": "Prior costs will be paid subject to Article 5 and are at least approximately $37,000. Such prior costs may be paid in installments over the course of six (6) months from the Effective Date hereof.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E003",
+      "passage_id": "DOC-fd1c198349c98f801e:P000152",
+      "quote": "The Licensee shall bear the costs of preparing, filing, prosecuting and maintaining all United States and foreign patent applications contemplated by this Agreement incurred after the Effective Date, and as required under Article 5.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E004",
+      "passage_id": "DOC-fd1c198349c98f801e:P000147",
+      "quote": "As long as the Licensee has paid patent costs as provided for in this Article",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "2-E005",
+      "passage_id": "DOC-fd1c198349c98f801e:P000153",
+      "quote": "must reaffirm the Licensee’s obligation to underwrite the costs thereof",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "2-E006",
+      "passage_id": "DOC-fd1c198349c98f801e:P000154",
+      "quote": "The Licensee’s obligation to underwrite and to pay patent prosecution costs will continue for so long as this Agreement remains in effect, but the Licensee may terminate its obligations with respect to any given patent application or patent upon three (3) months written notice to The Regents.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "2-E007",
+      "passage_id": "DOC-fd1c198349c98f801e:P000143",
+      "quote": "except as provided in Article 19",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E008",
+      "passage_id": "DOC-fd1c198349c98f801e:P000165",
+      "quote": "resulting from or arising out of exercise of this license or any voluntary sublicense",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E009",
+      "passage_id": "DOC-fd1c198349c98f801e:P000170",
+      "quote": "Each Occurrence $1,000,000",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E010",
+      "passage_id": "DOC-fd1c198349c98f801e:P000171",
+      "quote": "Products/Completed Operations Aggregate $5,000,000",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E011",
+      "passage_id": "DOC-fd1c198349c98f801e:P000172",
+      "quote": "Personal and Advertising Injury $1,000,000",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E012",
+      "passage_id": "DOC-fd1c198349c98f801e:P000173",
+      "quote": "General Aggregate (commercial form only) $5,000,000",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E013",
+      "passage_id": "DOC-fd1c198349c98f801e:P000180",
+      "quote": "Any notice or payment required to be given to either party is properly given and effective",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E014",
+      "passage_id": "DOC-fd1c198349c98f801e:P000225",
+      "quote": "LICENSEE | THE REGENTS OF THE UNIVERSITY OF CALIFORNIA",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E015",
+      "passage_id": "DOC-fd1c198349c98f801e:P000181",
+      "quote": "In the case of the Licensee: | NeurogesX, Inc.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E016",
+      "passage_id": "DOC-fd1c198349c98f801e:P000231",
+      "quote": "Date: | 27 October ‘00 | Date: | 10/30/00",
+      "role": "OTHER"
+    }
+  ],
+  "occurrence_dispositions": [
+    {
+      "classification": "NON_ROYALTY",
+      "occurrence_id": "OCC-0b47d7d9953c3b4158",
+      "payment_id": null,
+      "rationale": "Section 1.5 Affiliate definition: fifty percent is an ownership/voting-control threshold, not a payment.",
+      "term_id": null
+    },
+    {
+      "classification": "NON_ROYALTY",
+      "occurrence_id": "OCC-46de2676568298013d",
+      "payment_id": null,
+      "rationale": "Numeric form (50%) of the Affiliate ownership/control threshold in 1.5; not a royalty.",
+      "term_id": null
+    },
+    {
+      "classification": "NON_ROYALTY",
+      "occurrence_id": "OCC-e7b00278a37266bf43",
+      "payment_id": null,
+      "rationale": "Second Affiliate definition reference: fifty percent of stock/voting rights, an ownership test.",
+      "term_id": null
+    },
+    {
+      "classification": "NON_ROYALTY",
+      "occurrence_id": "OCC-a9b54dbeafb9de78ae",
+      "payment_id": null,
+      "rationale": "Numeric (50%) restatement of Affiliate ownership/voting-control test in 1.5.",
+      "term_id": null
+    },
+    {
+      "classification": "NON_ROYALTY",
+      "occurrence_id": "OCC-a67f4fe68c6bf06205",
+      "payment_id": null,
+      "rationale": "Refers to foreign equity participation of at least fifty percent in Affiliate definition; ownership test.",
+      "term_id": null
+    },
+    {
+      "classification": "NON_ROYALTY",
+      "occurrence_id": "OCC-258e293faf7d84f415",
+      "payment_id": null,
+      "rationale": "Numeric (50%) foreign equity participation threshold within Affiliate definition; not a payment.",
+      "term_id": null
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-bfaadd181e4ad0e280",
+      "payment_id": null,
+      "rationale": "Tier 1 row '25% | < $250,000' in P000051 matches 1-T002 tier 1 sublicensing rate of 25 percent.",
+      "term_id": "1-T002"
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-70c54aba76e055dfb9",
+      "payment_id": null,
+      "rationale": "$250,000 is the upper bound of tier 1 in the sublicensing receipts tier table (1-T002).",
+      "term_id": "1-T002"
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-f37709172d1c1a1373",
+      "payment_id": null,
+      "rationale": "Tier 2 row '10% | $250,000 -- $2,000,000' in P000052 matches 1-T002 tier 2 rate of 10 percent.",
+      "term_id": "1-T002"
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-71e198a324d9b882bf",
+      "payment_id": null,
+      "rationale": "$250,000 is the lower bound of tier 2 in the 1-T002 sublicensing tier table.",
+      "term_id": "1-T002"
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-5b5588c4e2a9e2bad3",
+      "payment_id": null,
+      "rationale": "$2,000,000 is the upper bound of tier 2 in the 1-T002 sublicensing tier table.",
+      "term_id": "1-T002"
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-fcafe62bb8c28a7dae",
+      "payment_id": null,
+      "rationale": "Tier 3 row '5% | > $2,000,000' in P000053 matches 1-T002 tier 3 rate of 5 percent.",
+      "term_id": "1-T002"
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-2b7762916b86525fc2",
+      "payment_id": null,
+      "rationale": "$2,000,000 is the lower bound of tier 3 in the 1-T002 sublicensing tier table.",
+      "term_id": "1-T002"
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-556a7f53ff471259d5",
+      "payment_id": "1-P009",
+      "rationale": "'In no event ... pay more than twenty-five (25%) of total annual revenue' is a cap on payments, matching cap payment 1-P009 in P000063.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-dd543ce572e8f9ef07",
+      "payment_id": "1-P010",
+      "rationale": "Section 4.9 late-payment interest at ten percent per annum; interest, not a running royalty; matches 1-P010.",
+      "term_id": null
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-0a209dde637ac453bc",
+      "payment_id": "1-P010",
+      "rationale": "Numeric (10%) of the section 4.9 per-annum interest charge on late payments; matches 1-P010.",
+      "term_id": null
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-5d7590f0c96d5adacd",
+      "payment_id": "1-P002",
+      "rationale": "Section 6.1 annual license maintenance fee of $5,000 from second anniversary; matches 1-P002.",
+      "term_id": null
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-044dfe70d8ea43fa34",
+      "payment_id": null,
+      "rationale": "Section 7.1 earned royalty of 'one percent' of Net Sales of Licensed Products; matches flat product-sales term 1-T001, which cites P000074.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-28429a3b8ef0ee0b02",
+      "payment_id": null,
+      "rationale": "Numeric '1%' restates the spelled one percent earned royalty on Net Sales in 7.1; same running rate as term 1-T001.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-abd65c5f0273bed306",
+      "payment_id": "1-P008",
+      "rationale": "$1,000,000 is the annual maximum on the 7.1 earned royalty ('up to a maximum ... per year'); a cap, matching CAP payment 1-P008.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-fc0d075514a535949c",
+      "payment_id": null,
+      "rationale": "'eleven percent' is the combined-royalty level above which third-party royalty stacking reduction applies; a trigger, not a running rate.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-e37e6e01d44862818c",
+      "payment_id": null,
+      "rationale": "'11%' restates the combined royalty stacking trigger in P000075; not an independent running royalty rate.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "ADJUSTMENT",
+      "occurrence_id": "OCC-62509f20a8e6c53e29",
+      "payment_id": null,
+      "rationale": "'shall be reduced' states that earned royalties to The Regents are reduced when combined third-party royalties exceed the threshold.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "ADJUSTMENT",
+      "occurrence_id": "OCC-40faf596033a0ad71d",
+      "payment_id": null,
+      "rationale": "'one-half' is the proportion of the excess over 11% by which the Regents' royalty is reduced; a royalty-stacking adjustment factor.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-700ae3789c3f367dda",
+      "payment_id": null,
+      "rationale": "Second 'eleven percent' marks the point above which the excess is measured for the one-half reduction; a threshold, not a rate.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-af9304752d74448926",
+      "payment_id": null,
+      "rationale": "'11%' restates the excess-over threshold for the reduction calculation; not a running royalty rate.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-0c8c307a64cc01d593",
+      "payment_id": null,
+      "rationale": "'fifty percent' is a floor: royalty cannot be reduced below 50% of the original earned royalty amounts; limits the adjustment.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-61edc2057b32996c45",
+      "payment_id": null,
+      "rationale": "'50%' restates the floor on the stacking reduction (no reduction below 50% of original royalty); a condition, not a rate.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-f4f5e01b867a6a7d6c",
+      "payment_id": "1-P003",
+      "rationale": "Section 7.6 minimum annual royalty of $10,000, creditable against earned royalties; matches MINIMUM_ROYALTY payment 1-P003.",
+      "term_id": null
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-576c99973f21961ceb",
+      "payment_id": "1-P004",
+      "rationale": "$50,000 payable upon first IND filing for the first Licensed Product; a milestone payment matching 1-P004.",
+      "term_id": null
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-ef5eaf163ab9ba41fc",
+      "payment_id": "1-P005",
+      "rationale": "$100,000 payable upon first Phase III patient dosing in a major market; a milestone payment matching 1-P005.",
+      "term_id": null
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-4b9a7592d0f1076d50",
+      "payment_id": "1-P006",
+      "rationale": "One million dollars due upon first approval of a NDA in a major market; matches milestone payment 1-P006 ($1,000,000).",
+      "term_id": null
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-be2fe74b8a3cc82a1b",
+      "payment_id": null,
+      "rationale": "Spelled 'fifty percent' caps creditable milestone offset against earned royalties per quarter; a condition, not a rate.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-4758df401b6594bbbe",
+      "payment_id": null,
+      "rationale": "Numeric '50%' restates the cap on milestone creditability against earned royalties per quarter; not a running royalty rate.",
+      "term_id": "1-T001"
+    },
+    {
+      "classification": "ADJUSTMENT",
+      "occurrence_id": "OCC-bf5873fc1bba8cb37b",
+      "payment_id": "1-P007",
+      "rationale": "'one percent' sets X in formula X times P for cash payment on a financing/liquidity event; share-based multiplier, not a royalty rate.",
+      "term_id": null
+    },
+    {
+      "classification": "ADJUSTMENT",
+      "occurrence_id": "OCC-e4e690557ab1e099e6",
+      "payment_id": "1-P007",
+      "rationale": "'1%' numeric form of the same X multiplier based on issued/reserved shares in the payment formula for 1-P007.",
+      "term_id": null
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-e21537174e0fabf8d0",
+      "payment_id": "1-P007",
+      "rationale": "First 'one third' installment of the total payment, due 12 months after closing; payment schedule, not a rate.",
+      "term_id": null
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-768b4475df2e4a1608",
+      "payment_id": "1-P007",
+      "rationale": "Second 'one third' installment, due 24 months after closing; payment schedule term for 1-P007.",
+      "term_id": null
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-a787e19c52bbc41688",
+      "payment_id": "1-P007",
+      "rationale": "Remaining 'one third' installment, due 36 months after closing; payment schedule term for 1-P007.",
+      "term_id": null
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-c236a82cd21f851f0e",
+      "payment_id": null,
+      "rationale": "Spelled 'five percent' is an audit threshold: royalty error above it shifts examination costs to Licensee; not a rate.",
+      "term_id": null
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-ee0239b3850f0082dd",
+      "payment_id": null,
+      "rationale": "Numeric '5%' restates the audit error threshold for shifting examination fees to Licensee; not a running royalty.",
+      "term_id": null
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-5e741bcc35d6623032",
+      "payment_id": "2-PAY002",
+      "rationale": "Approx. $37,000 prior patent costs to be reimbursed, payable in installments over six months; matches 2-PAY002.",
+      "term_id": null
+    },
+    {
+      "classification": "UNRESOLVED",
+      "occurrence_id": "OCC-6a31f39f6d66366e84",
+      "payment_id": null,
+      "rationale": "Each Occurrence $1,000,000 looks like an insurance coverage limit, but the snippet lacks the heading, so it is not confirmed.",
+      "term_id": null
+    },
+    {
+      "classification": "UNRESOLVED",
+      "occurrence_id": "OCC-2da93da1788f1d9331",
+      "payment_id": null,
+      "rationale": "Products/Completed Operations Aggregate $5,000,000 appears to be an insurance limit, but the snippet gives no insurance context.",
+      "term_id": null
+    },
+    {
+      "classification": "UNRESOLVED",
+      "occurrence_id": "OCC-8118882ceb99511467",
+      "payment_id": null,
+      "rationale": "Personal and Advertising Injury $1,000,000 appears to be an insurance limit, but the snippet lacks surrounding insurance context.",
+      "term_id": null
+    },
+    {
+      "classification": "UNRESOLVED",
+      "occurrence_id": "OCC-3a65999725cb5cf629",
+      "payment_id": null,
+      "rationale": "General Aggregate $5,000,000 appears to be an insurance limit, but the snippet lacks surrounding insurance context.",
+      "term_id": null
+    }
+  ],
+  "occurrence_manifest_sha256": "453babb3a8636949c878208993559fe800c4ac3d1e301798234c78ad75d49796",
+  "open_issues": [
+    {
+      "description": "This is chunk 1 of 2. The input candidate list includes passage IDs beyond P000134 (e.g., P000143, P000147, P000152 through P000180) that belong to chunk 2 and were not read here. Any economics there (e.g., Article 5, Article 19 cross-references, later amendments or schedules) require cross-chunk reconciliation.",
+      "issue_id": "1-I001",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Sublicense fee tiers (25%/10%/5%) are keyed to cumulative Aggregate Sublicense Fees but payments are based on fees received each calendar year; the text does not say whether tiers apply marginally or to all fees, so calculation is recorded as UNKNOWN. Boundary treatment at exactly $250,000 and $2,000,000 is also unclear.",
+      "issue_id": "1-I002",
+      "kind": "INTERPRETATION",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000049",
+        "DOC-fd1c198349c98f801e:P000051",
+        "DOC-fd1c198349c98f801e:P000052",
+        "DOC-fd1c198349c98f801e:P000053",
+        "DOC-fd1c198349c98f801e:P000054"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "The $1,000,000 annual maximum in 7.1 is stated 'up to a maximum' and it is unclear whether it caps only the 1% earned royalty or aggregate payments; the separate 25%-of-total-annual-revenue ceiling in 4.5 uses undefined 'total annual revenue' and its interaction with fees, minimums and milestones is unclear.",
+      "issue_id": "1-I003",
+      "kind": "INTERPRETATION",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000074",
+        "DOC-fd1c198349c98f801e:P000063"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Net Sales includes sales by Sublicensees at a 1% royalty rate, while sublicense fees exclude earned royalties on net sales; whether any separate royalty share applies to Sublicensee sales royalties received by Licensee is not stated in this chunk.",
+      "issue_id": "1-I004",
+      "kind": "INTERPRETATION",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000027",
+        "DOC-fd1c198349c98f801e:P000047",
+        "DOC-fd1c198349c98f801e:P000049"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Recitals jump from B to E and omit C and D; numbering anomalies also appear (e.g., 3.2.2 and 7.8 placement, '7.4' sections). Possible omitted text could contain additional economics; the license-issue fee dollar amount is not stated.",
+      "issue_id": "1-I005",
+      "kind": "MISSING_TEXT",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000017",
+        "DOC-fd1c198349c98f801e:P000018",
+        "DOC-fd1c198349c98f801e:P000070"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Milestone 7.7(e) formula depends on share counts and per-share price not available in the document; the 7.7(d) crediting limit is stated to apply to 'the foregoing milestone payments' though 7.7(e) is separately non-creditable.",
+      "issue_id": "1-I006",
+      "kind": "INTERPRETATION",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000086",
+        "DOC-fd1c198349c98f801e:P000087"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "No amendments were identified in this chunk, and an historical SEC exhibit does not establish current operative status; amendment history was not checked.",
+      "issue_id": "1-I007",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "This chunk contains no royalty rates, tiers, sublicense royalties or minimums. All royalty economics (Article 4, 7, Net Sales, etc.) are in chunk 1 and must be reconciled there. Article 5 is referenced for prior patent costs and may govern crediting or timing; its content is not in this chunk.",
+      "issue_id": "2-ISS001",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000152"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "The Effective Date, which sets the six-month installment window for prior patent costs, is not stated in this chunk; it must be taken from chunk 1.",
+      "issue_id": "2-ISS002",
+      "kind": "MISSING_DEFINITION",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000152"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Prior patent costs are stated as 'at least approximately $37,000', so the final amount is not fixed by the text.",
+      "issue_id": "2-ISS003",
+      "kind": "AMOUNT_UNCERTAINTY",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000152"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Section 30.3 requires amendments in writing signed by both parties. No amendments are identified in this chunk, and operative status of this historical filing has not been checked.",
+      "issue_id": "2-ISS004",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000220"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensor' was worded differently by two reading tasks. Kept: 'The Regents of the University of California (acting through UCSF Office of Technology Management)'. Task 2 gave: 'The Regents of the University of California'.",
+      "issue_id": "ISSUE-MERGE-41cfdf21fc6531e724",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensee' was worded differently by two reading tasks. Kept: 'NeuroGesX, Inc.'. Task 2 gave: 'NeurogesX, Inc.'.",
+      "issue_id": "ISSUE-MERGE-3cf71726f062ef8b6b",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Automatic evidence issue: source occurrence $1,000,000 was unresolved by the occurrence reader. Requires subsequent source-based AI correction; no human sign-off.",
+      "issue_id": "ISSUE-M7-efd933e21b526c5c44",
+      "kind": "M7_AUTOMATED_OCCURRENCE_UNRESOLVED",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000170"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Automatic evidence issue: source occurrence $5,000,000 was unresolved by the occurrence reader. Requires subsequent source-based AI correction; no human sign-off.",
+      "issue_id": "ISSUE-M7-56c881756aa6483002",
+      "kind": "M7_AUTOMATED_OCCURRENCE_UNRESOLVED",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000171"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Automatic evidence issue: source occurrence $1,000,000 was unresolved by the occurrence reader. Requires subsequent source-based AI correction; no human sign-off.",
+      "issue_id": "ISSUE-M7-c9f766cb53c5b4c72b",
+      "kind": "M7_AUTOMATED_OCCURRENCE_UNRESOLVED",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000172"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Automatic evidence issue: source occurrence $5,000,000 was unresolved by the occurrence reader. Requires subsequent source-based AI correction; no human sign-off.",
+      "issue_id": "ISSUE-M7-a7386e61994883f691",
+      "kind": "M7_AUTOMATED_OCCURRENCE_UNRESOLVED",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000173"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "A contractual cross-reference points to a section supplied in a different model task; source completeness does not prove joint interpretation.",
+      "issue_id": "ISSUE-M8-7f3600cd6f31bfb3ca",
+      "kind": "M8_ECONOMIC_REFERENCE_ACROSS_AI_TASKS",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000120",
+        "DOC-fd1c198349c98f801e:P000164",
+        "DOC-fd1c198349c98f801e:P000165"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "A contractual cross-reference points to a section supplied in a different model task; source completeness does not prove joint interpretation.",
+      "issue_id": "ISSUE-M8-e04eda6e5c7cb3a4dd",
+      "kind": "M8_ECONOMIC_REFERENCE_ACROSS_AI_TASKS",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000121",
+        "DOC-fd1c198349c98f801e:P000196"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "A contractual cross-reference points to a section supplied in a different model task; source completeness does not prove joint interpretation.",
+      "issue_id": "ISSUE-M8-8fb5b155a01e6b51dd",
+      "kind": "M8_ECONOMIC_REFERENCE_ACROSS_AI_TASKS",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000122",
+        "DOC-fd1c198349c98f801e:P000207"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "A contractual cross-reference points to a section supplied in a different model task; source completeness does not prove joint interpretation.",
+      "issue_id": "ISSUE-M8-3bbaa885ffd3a7a690",
+      "kind": "M8_ECONOMIC_REFERENCE_ACROSS_AI_TASKS",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000123",
+        "DOC-fd1c198349c98f801e:P000216"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "A contractual cross-reference points to a section supplied in a different model task; source completeness does not prove joint interpretation.",
+      "issue_id": "ISSUE-M8-40547f3efd6fba6120",
+      "kind": "M8_ECONOMIC_REFERENCE_ACROSS_AI_TASKS",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000127",
+        "DOC-fd1c198349c98f801e:P000179",
+        "DOC-fd1c198349c98f801e:P000180",
+        "DOC-fd1c198349c98f801e:P000181"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "A contractual cross-reference points to a section supplied in a different model task; source completeness does not prove joint interpretation.",
+      "issue_id": "ISSUE-M8-28eea526bac8163c85",
+      "kind": "M8_ECONOMIC_REFERENCE_ACROSS_AI_TASKS",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000129",
+        "DOC-fd1c198349c98f801e:P000179",
+        "DOC-fd1c198349c98f801e:P000180",
+        "DOC-fd1c198349c98f801e:P000181"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "A contractual cross-reference points to a section supplied in a different model task; source completeness does not prove joint interpretation.",
+      "issue_id": "ISSUE-M8-526e67e3c35051a812",
+      "kind": "M8_ECONOMIC_REFERENCE_ACROSS_AI_TASKS",
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000069",
+        "DOC-fd1c198349c98f801e:P000152"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    }
+  ],
+  "other_payments": [
+    {
+      "amount_value": null,
+      "basis": "License-issue fee equal to out-of-pocket patent prosecution costs incurred by The Regents through the Effective Date; non-refundable, not an advance against royalties",
+      "condition": "Due within 60 days after the Effective Date",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E026"
+      ],
+      "kind": "UPFRONT",
+      "payment_id": "1-P001"
+    },
+    {
+      "amount_value": "5000",
+      "basis": "Annual license maintenance fee, beginning on second anniversary of Effective Date",
+      "condition": "Not due on an anniversary if Licensee, Affiliates or Sublicensees are engaged in Commercial Sales and paying earned royalties; deductible from earned royalties if first Commercial Sale occurs after payment but before next anniversary",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E023",
+        "1-E024",
+        "1-E025",
+        "1-E049"
+      ],
+      "kind": "OTHER",
+      "payment_id": "1-P002"
+    },
+    {
+      "amount_value": "10000",
+      "basis": "Minimum annual royalty following first Commercial Sale of first Licensed Product; creditable against earned royalties; pro-rated first year",
+      "condition": "Ceases when all Commercial Sales cease; decreased pro rata as agreement expires or terminates per Licensed Product",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E027",
+        "1-E028",
+        "1-E060"
+      ],
+      "kind": "MINIMUM_ROYALTY",
+      "payment_id": "1-P003"
+    },
+    {
+      "amount_value": "50000",
+      "basis": "First filing of an IND for the first Licensed Product",
+      "condition": "Creditable against earned royalties (50% per-quarter limit); subject to Section 7.8 exclusion",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E029",
+        "1-E032",
+        "1-E036"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "1-P004"
+    },
+    {
+      "amount_value": "100000",
+      "basis": "First dosing of a patient in a Phase III trial for first Licensed Product in a major market",
+      "condition": "Creditable against earned royalties (50% per-quarter limit); subject to Section 7.8 exclusion",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E030",
+        "1-E032",
+        "1-E036"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "1-P005"
+    },
+    {
+      "amount_value": "1000000",
+      "basis": "First approval of an NDA for a Licensed Product in a major market",
+      "condition": "Creditable against earned royalties (50% per-quarter limit); subject to Section 7.8 exclusion",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E031",
+        "1-E032",
+        "1-E036"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "1-P006"
+    },
+    {
+      "amount_value": null,
+      "basis": "Non-creditable payment of X times P on IPO or merger/sale of Licensee, where X is 1% of shares issued or reserved under incentive stock plans before first financing round and P is IPO price or average acquisition price per share; paid in three annual installments",
+      "condition": "Occurs while Commercial Sales or commercialization continue; subject to Section 7.8 exclusion",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E033",
+        "1-E034",
+        "1-E035",
+        "1-E036",
+        "1-E058"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "1-P007"
+    },
+    {
+      "amount_value": "1000000",
+      "basis": "Maximum earned royalty per year under the 1% worldwide Net Sales royalty",
+      "condition": "Applies to Section 7.1 earned royalty",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E010"
+      ],
+      "kind": "CAP",
+      "payment_id": "1-P008"
+    },
+    {
+      "amount_value": null,
+      "basis": "Total payments to The Regents capped at 25% of Licensee's total annual revenue derived from Licensed Products",
+      "condition": "Applies to amounts due The Regents; scope relative to fees and milestones unclear",
+      "currency": null,
+      "evidence_ids": [
+        "1-E043"
+      ],
+      "kind": "CAP",
+      "payment_id": "1-P009"
+    },
+    {
+      "amount_value": null,
+      "basis": "Interest on late payments at 10% per annum or maximum permitted by law, whichever is less",
+      "condition": "Applies to unpaid payments, rebillings or fees",
+      "currency": null,
+      "evidence_ids": [
+        "1-E044"
+      ],
+      "kind": "INTEREST",
+      "payment_id": "1-P010"
+    },
+    {
+      "amount_value": null,
+      "basis": "Reimbursement of patent prosecution and maintenance costs billed by The Regents' counsel, rebilled to Licensee and paid quarterly within 30 days of receiving rebilling",
+      "condition": "Costs incurred after the Effective Date; Licensee may terminate its obligation per patent application/patent on 3 months' written notice",
+      "currency": null,
+      "evidence_ids": [
+        "2-E001",
+        "2-E003",
+        "2-E006"
+      ],
+      "kind": "OTHER",
+      "payment_id": "2-PAY001"
+    },
+    {
+      "amount_value": "37000",
+      "basis": "Reimbursement of prior patent prosecution costs incurred by The Regents before execution; stated as at least approximately $37,000; may be paid in installments over six months from the Effective Date; subject to Article 5",
+      "condition": "Amount is a floor estimate ('at least approximately'); final amount not fixed in this chunk",
+      "currency": "USD",
+      "evidence_ids": [
+        "2-E002"
+      ],
+      "kind": "OTHER",
+      "payment_id": "2-PAY002"
+    }
+  ],
+  "reader": {
+    "engine": "claude",
+    "model": "sonnet",
+    "read_scope": "FULL_DOCUMENT",
+    "reviewed_passage_ids": [
+      "DOC-fd1c198349c98f801e:P000001",
+      "DOC-fd1c198349c98f801e:P000002",
+      "DOC-fd1c198349c98f801e:P000003",
+      "DOC-fd1c198349c98f801e:P000004",
+      "DOC-fd1c198349c98f801e:P000005",
+      "DOC-fd1c198349c98f801e:P000006",
+      "DOC-fd1c198349c98f801e:P000007",
+      "DOC-fd1c198349c98f801e:P000008",
+      "DOC-fd1c198349c98f801e:P000009",
+      "DOC-fd1c198349c98f801e:P000010",
+      "DOC-fd1c198349c98f801e:P000011",
+      "DOC-fd1c198349c98f801e:P000012",
+      "DOC-fd1c198349c98f801e:P000013",
+      "DOC-fd1c198349c98f801e:P000014",
+      "DOC-fd1c198349c98f801e:P000015",
+      "DOC-fd1c198349c98f801e:P000016",
+      "DOC-fd1c198349c98f801e:P000017",
+      "DOC-fd1c198349c98f801e:P000018",
+      "DOC-fd1c198349c98f801e:P000019",
+      "DOC-fd1c198349c98f801e:P000020",
+      "DOC-fd1c198349c98f801e:P000021",
+      "DOC-fd1c198349c98f801e:P000022",
+      "DOC-fd1c198349c98f801e:P000023",
+      "DOC-fd1c198349c98f801e:P000024",
+      "DOC-fd1c198349c98f801e:P000025",
+      "DOC-fd1c198349c98f801e:P000026",
+      "DOC-fd1c198349c98f801e:P000027",
+      "DOC-fd1c198349c98f801e:P000028",
+      "DOC-fd1c198349c98f801e:P000029",
+      "DOC-fd1c198349c98f801e:P000030",
+      "DOC-fd1c198349c98f801e:P000031",
+      "DOC-fd1c198349c98f801e:P000032",
+      "DOC-fd1c198349c98f801e:P000033",
+      "DOC-fd1c198349c98f801e:P000034",
+      "DOC-fd1c198349c98f801e:P000035",
+      "DOC-fd1c198349c98f801e:P000036",
+      "DOC-fd1c198349c98f801e:P000037",
+      "DOC-fd1c198349c98f801e:P000038",
+      "DOC-fd1c198349c98f801e:P000039",
+      "DOC-fd1c198349c98f801e:P000040",
+      "DOC-fd1c198349c98f801e:P000041",
+      "DOC-fd1c198349c98f801e:P000042",
+      "DOC-fd1c198349c98f801e:P000043",
+      "DOC-fd1c198349c98f801e:P000044",
+      "DOC-fd1c198349c98f801e:P000045",
+      "DOC-fd1c198349c98f801e:P000046",
+      "DOC-fd1c198349c98f801e:P000047",
+      "DOC-fd1c198349c98f801e:P000048",
+      "DOC-fd1c198349c98f801e:P000049",
+      "DOC-fd1c198349c98f801e:P000050",
+      "DOC-fd1c198349c98f801e:P000051",
+      "DOC-fd1c198349c98f801e:P000052",
+      "DOC-fd1c198349c98f801e:P000053",
+      "DOC-fd1c198349c98f801e:P000054",
+      "DOC-fd1c198349c98f801e:P000055",
+      "DOC-fd1c198349c98f801e:P000056",
+      "DOC-fd1c198349c98f801e:P000057",
+      "DOC-fd1c198349c98f801e:P000058",
+      "DOC-fd1c198349c98f801e:P000059",
+      "DOC-fd1c198349c98f801e:P000060",
+      "DOC-fd1c198349c98f801e:P000061",
+      "DOC-fd1c198349c98f801e:P000062",
+      "DOC-fd1c198349c98f801e:P000063",
+      "DOC-fd1c198349c98f801e:P000064",
+      "DOC-fd1c198349c98f801e:P000065",
+      "DOC-fd1c198349c98f801e:P000066",
+      "DOC-fd1c198349c98f801e:P000067",
+      "DOC-fd1c198349c98f801e:P000068",
+      "DOC-fd1c198349c98f801e:P000069",
+      "DOC-fd1c198349c98f801e:P000070",
+      "DOC-fd1c198349c98f801e:P000071",
+      "DOC-fd1c198349c98f801e:P000072",
+      "DOC-fd1c198349c98f801e:P000073",
+      "DOC-fd1c198349c98f801e:P000074",
+      "DOC-fd1c198349c98f801e:P000075",
+      "DOC-fd1c198349c98f801e:P000076",
+      "DOC-fd1c198349c98f801e:P000077",
+      "DOC-fd1c198349c98f801e:P000078",
+      "DOC-fd1c198349c98f801e:P000079",
+      "DOC-fd1c198349c98f801e:P000080",
+      "DOC-fd1c198349c98f801e:P000081",
+      "DOC-fd1c198349c98f801e:P000082",
+      "DOC-fd1c198349c98f801e:P000083",
+      "DOC-fd1c198349c98f801e:P000084",
+      "DOC-fd1c198349c98f801e:P000085",
+      "DOC-fd1c198349c98f801e:P000086",
+      "DOC-fd1c198349c98f801e:P000087",
+      "DOC-fd1c198349c98f801e:P000088",
+      "DOC-fd1c198349c98f801e:P000089",
+      "DOC-fd1c198349c98f801e:P000090",
+      "DOC-fd1c198349c98f801e:P000091",
+      "DOC-fd1c198349c98f801e:P000092",
+      "DOC-fd1c198349c98f801e:P000093",
+      "DOC-fd1c198349c98f801e:P000094",
+      "DOC-fd1c198349c98f801e:P000095",
+      "DOC-fd1c198349c98f801e:P000096",
+      "DOC-fd1c198349c98f801e:P000097",
+      "DOC-fd1c198349c98f801e:P000098",
+      "DOC-fd1c198349c98f801e:P000099",
+      "DOC-fd1c198349c98f801e:P000100",
+      "DOC-fd1c198349c98f801e:P000101",
+      "DOC-fd1c198349c98f801e:P000102",
+      "DOC-fd1c198349c98f801e:P000103",
+      "DOC-fd1c198349c98f801e:P000104",
+      "DOC-fd1c198349c98f801e:P000105",
+      "DOC-fd1c198349c98f801e:P000106",
+      "DOC-fd1c198349c98f801e:P000107",
+      "DOC-fd1c198349c98f801e:P000108",
+      "DOC-fd1c198349c98f801e:P000109",
+      "DOC-fd1c198349c98f801e:P000110",
+      "DOC-fd1c198349c98f801e:P000111",
+      "DOC-fd1c198349c98f801e:P000112",
+      "DOC-fd1c198349c98f801e:P000113",
+      "DOC-fd1c198349c98f801e:P000114",
+      "DOC-fd1c198349c98f801e:P000115",
+      "DOC-fd1c198349c98f801e:P000116",
+      "DOC-fd1c198349c98f801e:P000117",
+      "DOC-fd1c198349c98f801e:P000118",
+      "DOC-fd1c198349c98f801e:P000119",
+      "DOC-fd1c198349c98f801e:P000120",
+      "DOC-fd1c198349c98f801e:P000121",
+      "DOC-fd1c198349c98f801e:P000122",
+      "DOC-fd1c198349c98f801e:P000123",
+      "DOC-fd1c198349c98f801e:P000124",
+      "DOC-fd1c198349c98f801e:P000125",
+      "DOC-fd1c198349c98f801e:P000126",
+      "DOC-fd1c198349c98f801e:P000127",
+      "DOC-fd1c198349c98f801e:P000128",
+      "DOC-fd1c198349c98f801e:P000129",
+      "DOC-fd1c198349c98f801e:P000130",
+      "DOC-fd1c198349c98f801e:P000131",
+      "DOC-fd1c198349c98f801e:P000132",
+      "DOC-fd1c198349c98f801e:P000133",
+      "DOC-fd1c198349c98f801e:P000134",
+      "DOC-fd1c198349c98f801e:P000135",
+      "DOC-fd1c198349c98f801e:P000136",
+      "DOC-fd1c198349c98f801e:P000137",
+      "DOC-fd1c198349c98f801e:P000138",
+      "DOC-fd1c198349c98f801e:P000139",
+      "DOC-fd1c198349c98f801e:P000140",
+      "DOC-fd1c198349c98f801e:P000141",
+      "DOC-fd1c198349c98f801e:P000142",
+      "DOC-fd1c198349c98f801e:P000143",
+      "DOC-fd1c198349c98f801e:P000144",
+      "DOC-fd1c198349c98f801e:P000145",
+      "DOC-fd1c198349c98f801e:P000146",
+      "DOC-fd1c198349c98f801e:P000147",
+      "DOC-fd1c198349c98f801e:P000148",
+      "DOC-fd1c198349c98f801e:P000149",
+      "DOC-fd1c198349c98f801e:P000150",
+      "DOC-fd1c198349c98f801e:P000151",
+      "DOC-fd1c198349c98f801e:P000152",
+      "DOC-fd1c198349c98f801e:P000153",
+      "DOC-fd1c198349c98f801e:P000154",
+      "DOC-fd1c198349c98f801e:P000155",
+      "DOC-fd1c198349c98f801e:P000156",
+      "DOC-fd1c198349c98f801e:P000157",
+      "DOC-fd1c198349c98f801e:P000158",
+      "DOC-fd1c198349c98f801e:P000159",
+      "DOC-fd1c198349c98f801e:P000160",
+      "DOC-fd1c198349c98f801e:P000161",
+      "DOC-fd1c198349c98f801e:P000162",
+      "DOC-fd1c198349c98f801e:P000163",
+      "DOC-fd1c198349c98f801e:P000164",
+      "DOC-fd1c198349c98f801e:P000165",
+      "DOC-fd1c198349c98f801e:P000166",
+      "DOC-fd1c198349c98f801e:P000167",
+      "DOC-fd1c198349c98f801e:P000168",
+      "DOC-fd1c198349c98f801e:P000169",
+      "DOC-fd1c198349c98f801e:P000170",
+      "DOC-fd1c198349c98f801e:P000171",
+      "DOC-fd1c198349c98f801e:P000172",
+      "DOC-fd1c198349c98f801e:P000173",
+      "DOC-fd1c198349c98f801e:P000174",
+      "DOC-fd1c198349c98f801e:P000175",
+      "DOC-fd1c198349c98f801e:P000176",
+      "DOC-fd1c198349c98f801e:P000177",
+      "DOC-fd1c198349c98f801e:P000178",
+      "DOC-fd1c198349c98f801e:P000179",
+      "DOC-fd1c198349c98f801e:P000180",
+      "DOC-fd1c198349c98f801e:P000181",
+      "DOC-fd1c198349c98f801e:P000182",
+      "DOC-fd1c198349c98f801e:P000183",
+      "DOC-fd1c198349c98f801e:P000184",
+      "DOC-fd1c198349c98f801e:P000185",
+      "DOC-fd1c198349c98f801e:P000186",
+      "DOC-fd1c198349c98f801e:P000187",
+      "DOC-fd1c198349c98f801e:P000188",
+      "DOC-fd1c198349c98f801e:P000189",
+      "DOC-fd1c198349c98f801e:P000190",
+      "DOC-fd1c198349c98f801e:P000191",
+      "DOC-fd1c198349c98f801e:P000192",
+      "DOC-fd1c198349c98f801e:P000193",
+      "DOC-fd1c198349c98f801e:P000194",
+      "DOC-fd1c198349c98f801e:P000195",
+      "DOC-fd1c198349c98f801e:P000196",
+      "DOC-fd1c198349c98f801e:P000197",
+      "DOC-fd1c198349c98f801e:P000198",
+      "DOC-fd1c198349c98f801e:P000199",
+      "DOC-fd1c198349c98f801e:P000200",
+      "DOC-fd1c198349c98f801e:P000201",
+      "DOC-fd1c198349c98f801e:P000202",
+      "DOC-fd1c198349c98f801e:P000203",
+      "DOC-fd1c198349c98f801e:P000204",
+      "DOC-fd1c198349c98f801e:P000205",
+      "DOC-fd1c198349c98f801e:P000206",
+      "DOC-fd1c198349c98f801e:P000207",
+      "DOC-fd1c198349c98f801e:P000208",
+      "DOC-fd1c198349c98f801e:P000209",
+      "DOC-fd1c198349c98f801e:P000210",
+      "DOC-fd1c198349c98f801e:P000211",
+      "DOC-fd1c198349c98f801e:P000212",
+      "DOC-fd1c198349c98f801e:P000213",
+      "DOC-fd1c198349c98f801e:P000214",
+      "DOC-fd1c198349c98f801e:P000215",
+      "DOC-fd1c198349c98f801e:P000216",
+      "DOC-fd1c198349c98f801e:P000217",
+      "DOC-fd1c198349c98f801e:P000218",
+      "DOC-fd1c198349c98f801e:P000219",
+      "DOC-fd1c198349c98f801e:P000220",
+      "DOC-fd1c198349c98f801e:P000221",
+      "DOC-fd1c198349c98f801e:P000222",
+      "DOC-fd1c198349c98f801e:P000223",
+      "DOC-fd1c198349c98f801e:P000224",
+      "DOC-fd1c198349c98f801e:P000225",
+      "DOC-fd1c198349c98f801e:P000226",
+      "DOC-fd1c198349c98f801e:P000227",
+      "DOC-fd1c198349c98f801e:P000228",
+      "DOC-fd1c198349c98f801e:P000229",
+      "DOC-fd1c198349c98f801e:P000230",
+      "DOC-fd1c198349c98f801e:P000231",
+      "DOC-fd1c198349c98f801e:P000232"
+    ],
+    "run_id": "MERGE-f8e4011f73b1624bab"
+  },
+  "royalty_terms": [
+    {
+      "adjustments": [
+        {
+          "description": "Third-party royalty stacking: if combined royalties to The Regents and unaffiliated third parties exceed 11%, Regents royalty reduced by one-half of the excess over 11%",
+          "evidence_ids": [
+            "1-E037",
+            "1-E038"
+          ]
+        },
+        {
+          "description": "Floor on stacking reduction: Regents royalty not reduced below 50% of the original earned royalty amounts",
+          "evidence_ids": [
+            "1-E039"
+          ]
+        },
+        {
+          "description": "Combination products: Net Sales of Licensed Product determined by fraction A/B of combination product Net Sales based on average unit prices",
+          "evidence_ids": [
+            "1-E042"
+          ]
+        },
+        {
+          "description": "No cumulation of royalties where multiple Regents patents cover one Licensed Product",
+          "evidence_ids": [
+            "1-E040"
+          ]
+        },
+        {
+          "description": "Milestone payments in 7.7(a)-(c) creditable against earned royalties, limited to 50% of earned royalties in any calendar quarter",
+          "evidence_ids": [
+            "1-E032"
+          ]
+        },
+        {
+          "description": "Minimum annual royalty creditable against earned royalties, with excess carried to next year",
+          "evidence_ids": [
+            "1-E027",
+            "1-E060"
+          ]
+        },
+        {
+          "description": "License maintenance fee paid before first Commercial Sale may be deducted from earned royalties",
+          "evidence_ids": [
+            "1-E025"
+          ]
+        },
+        {
+          "description": "Taxes paid on The Regents' behalf in a country credited against earned royalties or fees for that country",
+          "evidence_ids": [
+            "1-E048"
+          ]
+        }
+      ],
+      "base": "Net Sales of Licensed Products (including sales by Licensee, Affiliates and Sublicensees)",
+      "base_definition": "Total gross invoice prices of Licensed Products sold or Licensed Methods performed by Licensee, an Affiliate or a Sublicensee, less actual and customary deductions (discounts, excise/sales taxes and duties, transportation and insurance, credits for returns); transfers to Affiliates or Sublicensees for end use treated as arm's-length sales",
+      "base_evidence_ids": [
+        "1-E011",
+        "1-E012",
+        "1-E013"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "1-E010"
+          ],
+          "text": "Royalty capped at a maximum of $1,000,000 per year"
+        },
+        {
+          "evidence_ids": [
+            "1-E013",
+            "1-E014"
+          ],
+          "text": "Earned royalty payable on a Licensed Product-by-Licensed Product and country-by-country basis until sale no longer infringes a Valid Claim"
+        },
+        {
+          "evidence_ids": [
+            "1-E052"
+          ],
+          "text": "Royalties payable on both pending patent applications and issued patents"
+        },
+        {
+          "evidence_ids": [
+            "1-E041"
+          ],
+          "text": "No earned royalty on transfers for research/development, clinical trials, regulatory purposes, samples, or other non-Commercial Sale transfers"
+        },
+        {
+          "evidence_ids": [
+            "1-E047"
+          ],
+          "text": "Obligation to pay royalties based on a patent or Valid Claim finally held invalid ceases from date of final decision; accrued royalties remain due"
+        },
+        {
+          "evidence_ids": [
+            "1-E043"
+          ],
+          "text": "Total payment to The Regents not to exceed 25% of Licensee's total annual revenue derived from Licensed Products"
+        }
+      ],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": "Per country until sale of a Licensed Product no longer infringes a Valid Claim; ceases for an invalidated claim from date of final decision",
+      "evidence_ids": [
+        "1-E009",
+        "1-E010",
+        "1-E011",
+        "1-E012",
+        "1-E013",
+        "1-E014",
+        "1-E037",
+        "1-E038",
+        "1-E039",
+        "1-E040",
+        "1-E041",
+        "1-E042",
+        "1-E043",
+        "1-E047",
+        "1-E048",
+        "1-E052",
+        "1-E055"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": "Licensed Products, on a Licensed Product-by-Licensed Product basis; Licensed Methods included in Net Sales definition",
+      "rate_evidence_ids": [
+        "1-E009"
+      ],
+      "rate_unit": "PERCENT",
+      "rate_value": "1",
+      "structure": "FLAT",
+      "term_id": "1-T001",
+      "territory_scope": "Worldwide, country-by-country basis",
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Sublicense fees: compensation received by Licensee from Sublicensees consisting of up-front fees and milestone payments, excluding earned royalties on net sales",
+      "base_definition": "Excludes R&D support, loans, debt financing income, equity purchase amounts, patent expense reimbursement, earned royalties on net sales, and consideration for IP other than Regents' Patent Rights",
+      "base_evidence_ids": [
+        "1-E015",
+        "1-E019",
+        "1-E022"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "1-E020"
+          ],
+          "text": "Tier selected by Aggregate Sublicense Fees: cumulative sublicense fees stated in each sublicense, assuming all milestones are paid"
+        },
+        {
+          "evidence_ids": [
+            "1-E021"
+          ],
+          "text": "Actual payments due determined on actual sublicense fees received by Licensee in each calendar year"
+        },
+        {
+          "evidence_ids": [
+            "1-E022"
+          ],
+          "text": "Excluded categories of receipts are not subject to the sublicense fee percentage"
+        }
+      ],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": "Annual payment based on fees received in each calendar year during the term",
+      "evidence_ids": [
+        "1-E015",
+        "1-E016",
+        "1-E017",
+        "1-E018",
+        "1-E019",
+        "1-E020",
+        "1-E021",
+        "1-E022",
+        "1-E051",
+        "1-E072"
+      ],
+      "family": "SUBLICENSING_RECEIPTS",
+      "product_scope": "Sublicenses of Regents' Patent Rights for Licensed Products or Licensed Methods",
+      "rate_evidence_ids": [
+        "1-E016",
+        "1-E017",
+        "1-E018"
+      ],
+      "rate_unit": "PERCENT",
+      "rate_value": null,
+      "structure": "TIERED",
+      "term_id": "1-T002",
+      "territory_scope": null,
+      "tiers": [
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "1-E016"
+          ],
+          "lower": null,
+          "measurement_period": "Aggregate Sublicense Fees (cumulative across sublicenses); payment determined on fees received per calendar year",
+          "rate_unit": "PERCENT",
+          "rate_value": "25",
+          "sequence": 1,
+          "threshold_basis": "Aggregate Sublicense Fees below $250,000",
+          "threshold_evidence_ids": [
+            "1-E016",
+            "1-E020"
+          ],
+          "upper": "$250,000"
+        },
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "1-E017"
+          ],
+          "lower": "$250,000",
+          "measurement_period": "Aggregate Sublicense Fees (cumulative across sublicenses); payment determined on fees received per calendar year",
+          "rate_unit": "PERCENT",
+          "rate_value": "10",
+          "sequence": 2,
+          "threshold_basis": "Aggregate Sublicense Fees from $250,000 to $2,000,000",
+          "threshold_evidence_ids": [
+            "1-E017",
+            "1-E020"
+          ],
+          "upper": "$2,000,000"
+        },
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "1-E018"
+          ],
+          "lower": "$2,000,000",
+          "measurement_period": "Aggregate Sublicense Fees (cumulative across sublicenses); payment determined on fees received per calendar year",
+          "rate_unit": "PERCENT",
+          "rate_value": "5",
+          "sequence": 3,
+          "threshold_basis": "Aggregate Sublicense Fees above $2,000,000",
+          "threshold_evidence_ids": [
+            "1-E018",
+            "1-E020"
+          ],
+          "upper": null
+        }
+      ]
+    }
+  ],
+  "schema_version": "m2.0",
+  "source_text_sha256": "5ec3375005ddedd68fa2736aca8cddf99be0236bd1ea3de560049d284d25d8b0",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1385830/000119312507022650/dex106.htm"
+}

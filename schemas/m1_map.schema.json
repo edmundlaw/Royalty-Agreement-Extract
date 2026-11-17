@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "M1 candidate passage map",
+  "type": "object",
+  "required": ["schema_version", "stage", "document_id", "text_sha256", "total_passages", "candidate_passages", "total_candidates", "screening_priority", "sections", "passages", "quality_flags", "screening_conclusion"],
+  "properties": {
+    "schema_version": {"const":"m1.0"},
+    "stage": {"const":"MAPPED_NOT_INTERPRETED"},
+    "document_id": {"type":"string", "minLength":1},
+    "source_url": {"type":["string", "null"]},
+    "original_sha256": {"type":["string", "null"]},
+    "text_sha256": {"type":"string", "pattern":"^[0-9a-f]{64}$"},
+    "retrieved_at_utc": {"type":["string", "null"]},
+    "mapped_at_utc": {"type":"string"},
+    "parser_type": {"type":"string"},
+    "total_passages": {"type":"integer", "minimum":1},
+    "total_candidates": {"type":"integer", "minimum":0},
+    "candidate_passages": {"type":"array", "items":{"type":"string"}},
+    "candidate_reason_counts": {"type":"object", "additionalProperties":{"type":"integer", "minimum":0}},
+    "screening_priority": {"enum":["HIGH_REVIEW_PRIORITY","MEDIUM_REVIEW_PRIORITY","LOW_SIGNAL_REVIEW_REQUIRED"]},
+    "screening_conclusion": {"const":"UNKNOWN_NEEDS_AI_OR_HUMAN_REVIEW"},
+    "sections": {"type":"array", "items":{"type":"object", "required":["section","passage_ids","candidate_ids"], "properties":{"section":{"type":"string"},"passage_ids":{"type":"array", "items":{"type":"string"}}, "candidate_ids":{"type":"array","items":{"type":"string"}}}}},
+    "definitions": {"type":"array"},
+    "cross_references": {"type":"array"},
+    "quality_flags": {"type":"array", "items":{"type":"string"}},
+    "document_metadata": {"type":"object"},
+    "passages": {"type":"array", "items":{"type":"object", "required":["passage_id","sequence","start_offset","end_offset","text","candidate_reasons","review_disposition"], "properties":{"passage_id":{"type":"string"},"sequence":{"type":"integer"},"section_guess":{"type":["string","null"]},"start_offset":{"type":"integer"},"end_offset":{"type":"integer"},"text":{"type":"string"},"candidate_reasons":{"type":"array", "items":{"type":"string"}},"review_disposition":{"const":"UNREVIEWED"}}}}
+  },
+  "additionalProperties": false
+}

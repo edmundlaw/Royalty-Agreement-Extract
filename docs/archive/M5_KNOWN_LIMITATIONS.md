@@ -1,0 +1,15 @@
+# M5 limitations — required disclosure to Fable and all reviewers
+
+1. **No complete raw SEC original parsed in this environment.** External SEC pages were checked using accessible textual web views; outbound HTTP from the local Python runtime failed name resolution. The 3 M5 fixtures are **not** downloaded SEC files, and they are not gold truth.
+2. **No live subscription model tests.** The real Claude/Codex account authentication, output envelopes, CLI permissions, limits and potential use of purchased credits remain unverified. Codex/Claude tools must be tested locally with explicit account billing controls before any paid-capable run.
+3. **No empirical completeness claim.** Anchor probes only show successful detection of pre-registered examples; the unregistered remainder of any contract is not validated. Full-document independent human review remains mandatory to measure recall.
+4. **All percentages are candidates, not classified royalties.** Interest, audit thresholds, ownership and other financial percentages deliberately reach AI classification. Deterministic QC checks syntax and source anchoring, not economic meaning.
+5. **Broad vocabulary has tradeoffs.** Expansion to Annex, Attachment, Addendum and remittance language increases some candidate coverage while increasing false positives and model usage. Measure this on full, held-out original exhibits.
+6. **Tables, appendices, images and PDFs.** Synthetic HTML table tests do not prove extraction from every SEC filing format. Image-only PDFs require manual/OCR review and M1 does not silently pass those documents.
+7. **Hidden CSS text and broken legacy markup.** The HTML parser is not a browser renderer; text in CSS-hidden elements may be included and some ill-formed HTML may lose layout cues. Review source hashes, visible text against originals, and table arrangements.
+8. **False certainty from empty issue lists.** M5 closes one explicit UNKNOWN/UNCERTAIN bypass. A model can still incorrectly label an actual royalty as UNRELATED; only truly independent complete reads and human-grounded testing can quantify this risk.
+9. **Historical source versus contract date.** A 2021–2025 SEC *filing* may contain an agreement executed in a much earlier year. Do not conflate execution date, disclosure date, or effective rate/current rate.
+10. **Commercial use.** Recheck original source availability and the legal right to distribute curated excerpts before publishing externally. An Excel workbook with source URLs is not a substitute for professional comparability analysis.
+11. **Account charge guarantees impossible from environment checks alone.** Confirm subscription sign-in and credit/auto-reload status in each product. No model-API billing was initiated by M5 offline testing.
+
+12. **Validator upgrades are a deliberate compatibility boundary.** M5 rejects extraction attempts created with an older/unspecified checker revision; original attempts remain unchanged and must be re-mapped/re-ingested in a new versioned workspace to obtain current QC. This avoids silently treating old PASS states as new PASS states.

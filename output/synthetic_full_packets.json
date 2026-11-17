@@ -1,0 +1,215 @@
+{
+  "candidate_passage_ids": [
+    "DOC-dc937b59892604f5a8:P000003",
+    "DOC-dc937b59892604f5a8:P000004",
+    "DOC-dc937b59892604f5a8:P000005",
+    "DOC-dc937b59892604f5a8:P000006",
+    "DOC-dc937b59892604f5a8:P000007",
+    "DOC-dc937b59892604f5a8:P000008",
+    "DOC-dc937b59892604f5a8:P000010",
+    "DOC-dc937b59892604f5a8:P000011"
+  ],
+  "chunks": [
+    {
+      "chunk_count": 1,
+      "chunk_index": 1,
+      "passages": [
+        {
+          "candidate_reasons": [],
+          "passage_id": "DOC-dc937b59892604f5a8:P000001",
+          "section": null,
+          "text": "SYNTHETIC LICENSE AGREEMENT — NOT AN ACTUAL SEC DOCUMENT"
+        },
+        {
+          "candidate_reasons": [],
+          "passage_id": "DOC-dc937b59892604f5a8:P000002",
+          "section": "1.1",
+          "text": "1.1 Grant. Licensor grants Licensee a licence to use the described technology."
+        },
+        {
+          "candidate_reasons": [
+            "FINANCE_VOCAB",
+            "DEFINED_TERM"
+          ],
+          "passage_id": "DOC-dc937b59892604f5a8:P000003",
+          "section": "1.1",
+          "text": "2.1 \"Net Sales\" means invoice value less permitted returns."
+        },
+        {
+          "candidate_reasons": [
+            "PERCENT",
+            "MONEY",
+            "FINANCE_VOCAB"
+          ],
+          "passage_id": "DOC-dc937b59892604f5a8:P000004",
+          "section": "3.1",
+          "text": "3.1 Running Royalty. Licensee must pay 6% of Net Sales for the first $500,000 and 4% of Net Sales above that threshold."
+        },
+        {
+          "candidate_reasons": [
+            "PERCENT",
+            "MONEY",
+            "FINANCE_VOCAB",
+            "CROSS_REFERENCE"
+          ],
+          "passage_id": "DOC-dc937b59892604f5a8:P000005",
+          "section": "3.2",
+          "text": "3.2 Sublicense Fees. Licensee shall pay 25% of sublicense receipts up to $250,000 and 10% thereafter, according to Schedule B."
+        },
+        {
+          "candidate_reasons": [
+            "PERCENT",
+            "FINANCE_VOCAB"
+          ],
+          "passage_id": "DOC-dc937b59892604f5a8:P000006",
+          "section": "4.1",
+          "text": "4.1 Late Payment. Interest accrues at 1.5% monthly on overdue amounts."
+        },
+        {
+          "candidate_reasons": [
+            "CROSS_REFERENCE"
+          ],
+          "passage_id": "DOC-dc937b59892604f5a8:P000007",
+          "section": "5.1",
+          "text": "5.1 Adjustment. Earned compensation will be reduced according to Section 7.2 when patent claims expire."
+        },
+        {
+          "candidate_reasons": [
+            "FINANCE_VOCAB",
+            "CROSS_REFERENCE"
+          ],
+          "passage_id": "DOC-dc937b59892604f5a8:P000008",
+          "section": "Schedule B — Participation Fee",
+          "text": "Schedule B — Participation Fee"
+        },
+        {
+          "candidate_reasons": [],
+          "passage_id": "DOC-dc937b59892604f5a8:P000009",
+          "section": "Schedule B — Participation Fee",
+          "text": "Territory Participation"
+        },
+        {
+          "candidate_reasons": [
+            "MONEY",
+            "PER_UNIT"
+          ],
+          "passage_id": "DOC-dc937b59892604f5a8:P000010",
+          "section": "Schedule B — Participation Fee",
+          "text": "United States $2 per device"
+        },
+        {
+          "candidate_reasons": [
+            "REDACTION"
+          ],
+          "passage_id": "DOC-dc937b59892604f5a8:P000011",
+          "section": "7.2",
+          "text": "7.2 Reduction. In specified circumstances the rate will be [***] until revised terms are agreed."
+        },
+        {
+          "candidate_reasons": [],
+          "passage_id": "DOC-dc937b59892604f5a8:P000012",
+          "section": "8.1",
+          "text": "8.1 Rights. Licensor retains a right to approve sub-licenses."
+        }
+      ]
+    }
+  ],
+  "cross_references": [
+    {
+      "passage_id": "DOC-dc937b59892604f5a8:P000005",
+      "references": [
+        "Schedule B"
+      ]
+    },
+    {
+      "passage_id": "DOC-dc937b59892604f5a8:P000007",
+      "references": [
+        "Section 7.2"
+      ]
+    },
+    {
+      "passage_id": "DOC-dc937b59892604f5a8:P000008",
+      "references": [
+        "Schedule B"
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "passage_id": "DOC-dc937b59892604f5a8:P000003",
+      "term": "Net Sales"
+    }
+  ],
+  "document_id": "DOC-dc937b59892604f5a8",
+  "excluded_passage_ids": [],
+  "included_passage_ids": [
+    "DOC-dc937b59892604f5a8:P000001",
+    "DOC-dc937b59892604f5a8:P000002",
+    "DOC-dc937b59892604f5a8:P000003",
+    "DOC-dc937b59892604f5a8:P000004",
+    "DOC-dc937b59892604f5a8:P000005",
+    "DOC-dc937b59892604f5a8:P000006",
+    "DOC-dc937b59892604f5a8:P000007",
+    "DOC-dc937b59892604f5a8:P000008",
+    "DOC-dc937b59892604f5a8:P000009",
+    "DOC-dc937b59892604f5a8:P000010",
+    "DOC-dc937b59892604f5a8:P000011",
+    "DOC-dc937b59892604f5a8:P000012"
+  ],
+  "mode": "full",
+  "packet_schema": "m2-packet.1",
+  "read_scope_label": "FULL_DOCUMENT_CHUNKED",
+  "section_inventory": [
+    {
+      "candidate_count": 0,
+      "passage_count": 1,
+      "section": "PREAMBLE_OR_UNNUMBERED"
+    },
+    {
+      "candidate_count": 1,
+      "passage_count": 2,
+      "section": "1.1"
+    },
+    {
+      "candidate_count": 1,
+      "passage_count": 1,
+      "section": "3.1"
+    },
+    {
+      "candidate_count": 1,
+      "passage_count": 1,
+      "section": "3.2"
+    },
+    {
+      "candidate_count": 1,
+      "passage_count": 1,
+      "section": "4.1"
+    },
+    {
+      "candidate_count": 1,
+      "passage_count": 1,
+      "section": "5.1"
+    },
+    {
+      "candidate_count": 2,
+      "passage_count": 3,
+      "section": "Schedule B — Participation Fee"
+    },
+    {
+      "candidate_count": 1,
+      "passage_count": 1,
+      "section": "7.2"
+    },
+    {
+      "candidate_count": 0,
+      "passage_count": 1,
+      "section": "8.1"
+    }
+  ],
+  "source_original_sha256": "c189c212aed0ff0f83d172259bba1905edcef10a8835a384ef7e43b7e74ed0ca",
+  "source_passage_count": 12,
+  "source_text_sha256": "808fc8f094d4f5bce7982c0822d10e52d4432eefea8129385e4d86ade25a7794",
+  "source_url": null,
+  "unflagged_sample_ids": [],
+  "warning": "Full document passages supplied; model reading/completeness NOT independently established"
+}

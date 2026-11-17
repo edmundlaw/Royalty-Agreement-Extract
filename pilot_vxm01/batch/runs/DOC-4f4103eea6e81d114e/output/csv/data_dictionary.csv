@@ -1,0 +1,15 @@
+﻿Sheet,Purpose,Caution
+Agreements,Curated linkage groups and provisional one-document groups; not verified distinct transaction count,Facts and historical rates require source and point-of-use professional review
+Documents,One per SEC mapped source; status and source hash bound to chosen extraction,Facts and historical rates require source and point-of-use professional review
+Royalty Terms,"Source-document-specific royalty rules, not contract-level unique observations",Facts and historical rates require source and point-of-use professional review
+Tiers,A separate row per royalty rate tier; amounts and bounds remain literal strings,Facts and historical rates require source and point-of-use professional review
+Other Payments,"Upfront, milestone, interest, guarantee, and other items, not automatically running royalties",Facts and historical rates require source and point-of-use professional review
+Evidence,Exact source excerpts and passage IDs; full map retained in workspace,Facts and historical rates require source and point-of-use professional review
+Conditions,Conditions linked to each royalty term,Facts and historical rates require source and point-of-use professional review
+Adjustments,Rate reductions and offsets linked to each royalty term,Facts and historical rates require source and point-of-use professional review
+Amendments,Source-evidenced or proposed relationships; no automatic operative-rate decisions,Facts and historical rates require source and point-of-use professional review
+QC,Machine checks only; PASS is not proof of correct legal/economic interpretation,Facts and historical rates require source and point-of-use professional review
+Open Issues,Ambiguity/redactions and unresolved blockers,Facts and historical rates require source and point-of-use professional review
+Pending Jobs,Includes incomplete/failed sources; no silent omissions from research log,Facts and historical rates require source and point-of-use professional review
+Reader Check,"Result of the source check and, when a second reader was used, of the comparison of the two readings",Agreement of two AI readings lowers the chance of an omission; it is not proof of correctness
+Reader Differences,"One row per difference between the two readings: CORE, STRUCTURE or NOTE",The workbook rows come from the first reader; a CORE row means the second reader saw it differently

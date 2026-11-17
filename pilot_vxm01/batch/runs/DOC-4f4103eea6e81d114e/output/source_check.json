@@ -1,0 +1,36 @@
+{
+  "can_claim_complete": false,
+  "checks": [
+    {
+      "check": "BOUND_TO_SOURCE",
+      "status": "PASS"
+    },
+    {
+      "check": "QUOTES_ARE_IN_SOURCE",
+      "status": "PASS"
+    },
+    {
+      "check": "RECORDS_HAVE_EVIDENCE",
+      "status": "PASS"
+    },
+    {
+      "check": "NUMBERS_ARE_IN_QUOTES",
+      "status": "PASS"
+    },
+    {
+      "check": "EVERY_FLAGGED_PASSAGE_ACCOUNTED",
+      "status": "PASS"
+    },
+    {
+      "check": "ADDITIONAL_LICENSING_FIELDS_HAVE_EVIDENCE",
+      "status": "PASS"
+    }
+  ],
+  "deterministic_status": "PASS_DETERMINISTIC_ONLY",
+  "document_id": "DOC-4f4103eea6e81d114e",
+  "errors": [],
+  "notice": "Checks that quotes and numbers are in the cited source and that records carry evidence. It does not check that every term was found; that is the purpose of the second reader.",
+  "schema": "m13-source-check.1",
+  "verification_scope": "SOURCE_CHECK_ONLY",
+  "warnings": []
+}

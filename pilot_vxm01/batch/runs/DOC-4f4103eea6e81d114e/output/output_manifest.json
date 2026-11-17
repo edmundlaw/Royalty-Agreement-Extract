@@ -1,0 +1,29 @@
+{
+  "final_extraction_sha256": "24f3c1f981c176f80eb1cc8d8884089b7d73934c073fd4f40b32d46cec0dbaff",
+  "output_files_sha256": {
+    "Royalty_Research_M13.xlsx": "1cf357083cff8b2be2a5b270a8baf4aeba23add32ba45737be87195cfa94f09c",
+    "csv/adjustments.csv": "5c58db9d8d469934b597da1344398ac280f22e6ee3e2e66d62201e81ba0d18ae",
+    "csv/agreements.csv": "2ad83ae956e41a30773aa660ae8e1e7bc8f337fd7189df3ce7d2cd6c71f1a972",
+    "csv/amendments.csv": "4476da139c2c5f919f92d4c0c0049f2a3d6ae645a872aa2c1d992dd87a783fe1",
+    "csv/conditions.csv": "5e6afbd41c24d20d95b3fe9022e18103541d18a31fc8065d264b3f9c54748ec3",
+    "csv/data_dictionary.csv": "3d7789590adc71931da7881344f10279e6a061fa8c58b168ef6a454b28d22497",
+    "csv/documents.csv": "52ac3e70c27e3989ddfc76f19ad2a1461ba7517852eb84cb9afbb79b2cf4276c",
+    "csv/evidence.csv": "ddfe32f7e9a097a10ae03d72f8b83e22168968c5ef36462f209d35738950b54d",
+    "csv/open_issues.csv": "5f06b4a288e31077db652c91b0588459f6f7671487f9c1eb43bbf9d140b5087d",
+    "csv/other_payments.csv": "457dfc6d7efe407d966969de262215bae143c892804860e5f0fb7efb77e18ce3",
+    "csv/overview.csv": "7a8aa8dc832a8f7406a2fb2e6bb0adc25d51581e2cf3266a68904c046c9319ba",
+    "csv/pending_jobs.csv": "edcd054f363a23ea81b6aec39164a10cc5d2a0f39b4f5e1eb3e762cd853e2fd9",
+    "csv/qc.csv": "eaf089ae90e1c16982576be63eef60e04c887916c118185a037aaf413f258c2e",
+    "csv/reader_check.csv": "d8baef21b307b1a16970543bc649f16c6fc6c83f1394ef4613995ba7e9f297ee",
+    "csv/reader_differences.csv": "c37ebef7066ac7d6d2047e67a45094874beff463a32d2cd648811986a90788bf",
+    "csv/royalty_terms.csv": "1d0f7f5e3763de951363b2b2b0decd2173ba4895c589fe3af04930bbae25c6e1",
+    "csv/tiers.csv": "29d198e804ac870160cecc761a4298170306df7f16b2334b8840935f086d36da",
+    "final_extraction.json": "24f3c1f981c176f80eb1cc8d8884089b7d73934c073fd4f40b32d46cec0dbaff",
+    "reader_check.json": "72c11dbe40756b73cd5cc4ec9ba9bf372da1400e2d26c674a93784599ed9b54c",
+    "rows.json": "b09fcd11c3af04a50bb00ccb88455a0d1cd4a507f487026f0c8a910a7c79113c",
+    "source_check.json": "5cdea44cc41d0ad42473e858b48b6ec3585499c59f6c2992621dc38397e159a4"
+  },
+  "schema": "m13-output-manifest.1",
+  "source_map_sha256": "3cd0a9ea573c5a7f8d916c37ca0dfec267c6cac6625ebea472e408ca43847fef",
+  "state": "SINGLE_READER_NOT_CHECKED"
+}

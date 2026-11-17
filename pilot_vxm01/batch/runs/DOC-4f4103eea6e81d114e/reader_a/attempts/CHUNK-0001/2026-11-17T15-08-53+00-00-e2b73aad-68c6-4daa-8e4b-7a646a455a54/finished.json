@@ -1,0 +1,7 @@
+{
+  "completed_at_utc": "2026-11-17T15:14:26+00:00",
+  "remaining": 0,
+  "result": "batch/runs/DOC-4f4103eea6e81d114e/reader_a/results/CHUNK-0001.json",
+  "status": "CAPTURED_NOT_QC_APPROVED",
+  "task_id": "CHUNK-0001"
+}

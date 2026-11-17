@@ -1,0 +1,9 @@
+# Architecture and token efficiency — v0.13.5
+
+`discover` → unique SEC candidate register → one download and immutable M1 map per processed document → M7 Python priority (no irrelevant finding) → full M13 packet and immutable per-reader plans → manual import or bounded Claude/Codex CLI calls → M13 source check and optional blind reader comparison → five-sheet individual/combined workbook.
+
+Python owns file operations, state, retries, limits and reporting. CLI readers receive source packets via stdin in fresh, tool-disabled, temporary working directories. They do not need to read this package's code or historical reports. The second reader gets its own plan and no first-reader answer. No continuous AI polling or nested AI agents are required. Full-source packets enumerate every mapped passage; incomplete chunks cannot merge or finalize. Excerpt-only `lean_research.py` remains a separate preliminary mode.
+
+Token controls: reuse one map and packet, avoid duplicate discovery, cap agreements and calls, configure model/effort, limit prompt size, stop at task boundaries, record available CLI usage. The existing substantive M13 schema and source-led QC remain, so token consumption is not minimized by dropping evidence. The previous 33.27 million controller/subagent tokens are not a measured per-agreement model cost. No v0.13.5 live model benchmark was run; **token savings are NOT MEASURED**. Cached input, output and reasoning tokens are recorded only when the CLI exposes them. Reported-token budgets cannot preempt a running single call.
+
+Mechanical source check verifies document binding, passage IDs, quotations and numbers; it cannot establish legal meaning. Two-reader agreement is a discrepancy screen, not accuracy proof. Human review remains necessary for rates used in valuation.

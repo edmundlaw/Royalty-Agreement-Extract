@@ -1,0 +1,3714 @@
+{
+  "candidate_passages": [
+    "DOC-fd1c198349c98f801e:P000001",
+    "DOC-fd1c198349c98f801e:P000021",
+    "DOC-fd1c198349c98f801e:P000024",
+    "DOC-fd1c198349c98f801e:P000025",
+    "DOC-fd1c198349c98f801e:P000026",
+    "DOC-fd1c198349c98f801e:P000027",
+    "DOC-fd1c198349c98f801e:P000028",
+    "DOC-fd1c198349c98f801e:P000029",
+    "DOC-fd1c198349c98f801e:P000031",
+    "DOC-fd1c198349c98f801e:P000032",
+    "DOC-fd1c198349c98f801e:P000033",
+    "DOC-fd1c198349c98f801e:P000034",
+    "DOC-fd1c198349c98f801e:P000035",
+    "DOC-fd1c198349c98f801e:P000036",
+    "DOC-fd1c198349c98f801e:P000037",
+    "DOC-fd1c198349c98f801e:P000041",
+    "DOC-fd1c198349c98f801e:P000047",
+    "DOC-fd1c198349c98f801e:P000049",
+    "DOC-fd1c198349c98f801e:P000050",
+    "DOC-fd1c198349c98f801e:P000051",
+    "DOC-fd1c198349c98f801e:P000052",
+    "DOC-fd1c198349c98f801e:P000053",
+    "DOC-fd1c198349c98f801e:P000054",
+    "DOC-fd1c198349c98f801e:P000055",
+    "DOC-fd1c198349c98f801e:P000056",
+    "DOC-fd1c198349c98f801e:P000057",
+    "DOC-fd1c198349c98f801e:P000058",
+    "DOC-fd1c198349c98f801e:P000060",
+    "DOC-fd1c198349c98f801e:P000061",
+    "DOC-fd1c198349c98f801e:P000062",
+    "DOC-fd1c198349c98f801e:P000063",
+    "DOC-fd1c198349c98f801e:P000064",
+    "DOC-fd1c198349c98f801e:P000065",
+    "DOC-fd1c198349c98f801e:P000066",
+    "DOC-fd1c198349c98f801e:P000067",
+    "DOC-fd1c198349c98f801e:P000070",
+    "DOC-fd1c198349c98f801e:P000072",
+    "DOC-fd1c198349c98f801e:P000073",
+    "DOC-fd1c198349c98f801e:P000074",
+    "DOC-fd1c198349c98f801e:P000075",
+    "DOC-fd1c198349c98f801e:P000076",
+    "DOC-fd1c198349c98f801e:P000077",
+    "DOC-fd1c198349c98f801e:P000079",
+    "DOC-fd1c198349c98f801e:P000080",
+    "DOC-fd1c198349c98f801e:P000081",
+    "DOC-fd1c198349c98f801e:P000082",
+    "DOC-fd1c198349c98f801e:P000083",
+    "DOC-fd1c198349c98f801e:P000084",
+    "DOC-fd1c198349c98f801e:P000086",
+    "DOC-fd1c198349c98f801e:P000087",
+    "DOC-fd1c198349c98f801e:P000088",
+    "DOC-fd1c198349c98f801e:P000095",
+    "DOC-fd1c198349c98f801e:P000096",
+    "DOC-fd1c198349c98f801e:P000098",
+    "DOC-fd1c198349c98f801e:P000106",
+    "DOC-fd1c198349c98f801e:P000107",
+    "DOC-fd1c198349c98f801e:P000111",
+    "DOC-fd1c198349c98f801e:P000112",
+    "DOC-fd1c198349c98f801e:P000116",
+    "DOC-fd1c198349c98f801e:P000117",
+    "DOC-fd1c198349c98f801e:P000118",
+    "DOC-fd1c198349c98f801e:P000119",
+    "DOC-fd1c198349c98f801e:P000120",
+    "DOC-fd1c198349c98f801e:P000121",
+    "DOC-fd1c198349c98f801e:P000122",
+    "DOC-fd1c198349c98f801e:P000123",
+    "DOC-fd1c198349c98f801e:P000127",
+    "DOC-fd1c198349c98f801e:P000129",
+    "DOC-fd1c198349c98f801e:P000130",
+    "DOC-fd1c198349c98f801e:P000132",
+    "DOC-fd1c198349c98f801e:P000143",
+    "DOC-fd1c198349c98f801e:P000147",
+    "DOC-fd1c198349c98f801e:P000152",
+    "DOC-fd1c198349c98f801e:P000153",
+    "DOC-fd1c198349c98f801e:P000154",
+    "DOC-fd1c198349c98f801e:P000165",
+    "DOC-fd1c198349c98f801e:P000170",
+    "DOC-fd1c198349c98f801e:P000171",
+    "DOC-fd1c198349c98f801e:P000172",
+    "DOC-fd1c198349c98f801e:P000173",
+    "DOC-fd1c198349c98f801e:P000180"
+  ],
+  "candidate_reason_counts": {
+    "CROSS_REFERENCE": 21,
+    "DEFINED_TERM": 13,
+    "FINANCE_VOCAB": 43,
+    "INDIRECT_ECONOMICS": 1,
+    "MONEY": 14,
+    "PERCENT": 11,
+    "SPELLED_FRACTION": 2,
+    "SPELLED_RATE": 7
+  },
+  "cross_references": [
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000001",
+      "references": [
+        "Exhibit 10.6"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000027",
+      "references": [
+        "Article 7"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000041",
+      "references": [
+        "Paragraph 2.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000058",
+      "references": [
+        "Section 7"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000062",
+      "references": [
+        "Section 6.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000077",
+      "references": [
+        "Article 7"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000088",
+      "references": [
+        "Section 7.7"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000095",
+      "references": [
+        "Article 2"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000098",
+      "references": [
+        "Paragraph 9.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000116",
+      "references": [
+        "Article 1"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000117",
+      "references": [
+        "Article 10"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000118",
+      "references": [
+        "Article 14"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000119",
+      "references": [
+        "Article 15"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000120",
+      "references": [
+        "Article 20"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000121",
+      "references": [
+        "Article 24"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000122",
+      "references": [
+        "Article 29"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000123",
+      "references": [
+        "Article 30"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000127",
+      "references": [
+        "Article 21"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000129",
+      "references": [
+        "Article 21"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000143",
+      "references": [
+        "Article 19"
+      ]
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000152",
+      "references": [
+        "Article 5"
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000024",
+      "term": "Regents’ Patent Rights"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000025",
+      "term": "Licensed Product"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000026",
+      "term": "Licensed Method"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000027",
+      "term": "Net Sales"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000028",
+      "term": "Affiliate"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000029",
+      "term": "Field of Use"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000031",
+      "term": "Commercial Sale"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000032",
+      "term": "IND"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000033",
+      "term": "NDA"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000034",
+      "term": "Phase I"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000035",
+      "term": "Phase III"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000036",
+      "term": "Valid Claim"
+    },
+    {
+      "passage_id": "DOC-fd1c198349c98f801e:P000037",
+      "term": "Sublicensee"
+    }
+  ],
+  "document_id": "DOC-fd1c198349c98f801e",
+  "document_metadata": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1385830/000119312507022650/dex106.htm"
+  },
+  "mapped_at_utc": "2026-11-14T04:28:22+00:00",
+  "occurrence_manifest_sha256": "453babb3a8636949c878208993559fe800c4ac3d1e301798234c78ad75d49796",
+  "original_sha256": null,
+  "parser_type": "HTML_TEXT",
+  "passages": [
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 12,
+      "passage_id": "DOC-fd1c198349c98f801e:P000001",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 1,
+      "start_offset": 0,
+      "text": "Exhibit 10.6"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40,
+      "passage_id": "DOC-fd1c198349c98f801e:P000002",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 2,
+      "start_offset": 13,
+      "text": "EXCLUSIVE LICENSE AGREEMENT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 48,
+      "passage_id": "DOC-fd1c198349c98f801e:P000003",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 3,
+      "start_offset": 41,
+      "text": "between"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 92,
+      "passage_id": "DOC-fd1c198349c98f801e:P000004",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 4,
+      "start_offset": 49,
+      "text": "THE REGENTS OF THE UNIVERSITY OF CALIFORNIA"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 96,
+      "passage_id": "DOC-fd1c198349c98f801e:P000005",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 5,
+      "start_offset": 93,
+      "text": "and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 112,
+      "passage_id": "DOC-fd1c198349c98f801e:P000006",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 6,
+      "start_offset": 97,
+      "text": "NEUROGESX, INC."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 116,
+      "passage_id": "DOC-fd1c198349c98f801e:P000007",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 7,
+      "start_offset": 113,
+      "text": "for"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 157,
+      "passage_id": "DOC-fd1c198349c98f801e:P000008",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 8,
+      "start_offset": 117,
+      "text": "HIGH DOSE CAPSAICIN FOR NEUROPATHIC PAIN"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 180,
+      "passage_id": "DOC-fd1c198349c98f801e:P000009",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 9,
+      "start_offset": 158,
+      "text": "UCSF Case No. SF00-056"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 201,
+      "passage_id": "DOC-fd1c198349c98f801e:P000010",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 10,
+      "start_offset": 181,
+      "text": "UC Case No. SF00-056"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 229,
+      "passage_id": "DOC-fd1c198349c98f801e:P000011",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 11,
+      "start_offset": 202,
+      "text": "EXCLUSIVE LICENSE AGREEMENT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 233,
+      "passage_id": "DOC-fd1c198349c98f801e:P000012",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 12,
+      "start_offset": 230,
+      "text": "For"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 274,
+      "passage_id": "DOC-fd1c198349c98f801e:P000013",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 13,
+      "start_offset": 234,
+      "text": "HIGH DOSE CAPSAICIN FOR NEUROPATHIC PAIN"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 898,
+      "passage_id": "DOC-fd1c198349c98f801e:P000014",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 14,
+      "start_offset": 275,
+      "text": "This license agreement (the “Agreement”) is made effective November 1, 2000 (the “Effective Date”) between THE REGENTS OF THE UNIVERSITY OF CALIFORNIA, a California corporation having its statewide administrative offices at 1111 Franklin Street, Oakland, California 94607-5200, (“The Regents”), and acting through its Office of Technology Management, University of California San Francisco, 1294 Ninth Avenue - Suite 1, Box 1209, San Francisco, CA 94143-1209 (“UCSF”), and NEUROGESX, INC., a California corporation having a principal place of business at 969C Industrial Boulevard, San Carlos, California, (the “Licensee”)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 909,
+      "passage_id": "DOC-fd1c198349c98f801e:P000015",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 15,
+      "start_offset": 899,
+      "text": "BACKGROUND"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1245,
+      "passage_id": "DOC-fd1c198349c98f801e:P000016",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 16,
+      "start_offset": 910,
+      "text": "A. Certain inventions, generally characterized as “High Dose Capsaicin Relieves Neuropathic Pain” (collectively the “Invention”), were made in the course of research at the University of California San Francisco by Wendye R. Robbins as described in UCSF Case Number SF00-056, and are covered by Regents’ Patent Rights as defined below;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1391,
+      "passage_id": "DOC-fd1c198349c98f801e:P000017",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 17,
+      "start_offset": 1246,
+      "text": "B. The Licensee has evaluated the Invention under a Secrecy Agreement with The Regents effective August 20, 1999 (U.C. Control No. 2000-20-0104);"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1575,
+      "passage_id": "DOC-fd1c198349c98f801e:P000018",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 18,
+      "start_offset": 1392,
+      "text": "E. The Licensee and The Regents have executed a Letter of Intent dated June 1, 2000 (U.C. Control No. 2000-30-0050) for the purpose of negotiating a license to Regents’ Patent Rights;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1865,
+      "passage_id": "DOC-fd1c198349c98f801e:P000019",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 19,
+      "start_offset": 1576,
+      "text": "F. The Licensee wishes to obtain rights from The Regents for the commercial development, use, and sale of products from the Invention, and The Regents is willing to grant those rights so that the Invention may be developed to its fullest and the benefits enjoyed by the general public; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1938,
+      "passage_id": "DOC-fd1c198349c98f801e:P000020",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 20,
+      "start_offset": 1866,
+      "text": "G. The Licensee is a “small business firm” as defined in 15 U.S.C. §632;"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 2081,
+      "passage_id": "DOC-fd1c198349c98f801e:P000021",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 21,
+      "start_offset": 1939,
+      "text": "H. Licensee recognizes and agrees that royalties due under this Agreement will be paid on both pending patent applications and issued patents;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2126,
+      "passage_id": "DOC-fd1c198349c98f801e:P000022",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.6",
+      "sequence": 22,
+      "start_offset": 2082,
+      "text": "In view of the foregoing, the parties agree:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2141,
+      "passage_id": "DOC-fd1c198349c98f801e:P000023",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 23,
+      "start_offset": 2127,
+      "text": "1. DEFINITIONS"
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3193,
+      "passage_id": "DOC-fd1c198349c98f801e:P000024",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 24,
+      "start_offset": 2142,
+      "text": "1.1 “Regents’ Patent Rights” means the Regents’ interest in any subject matter claimed in or covered by any of the following: Pending U.S. Patent Application Serial No. 08/746,207 entitled “Therapeutic Method with Capsaicin and Capsaicin Analogs” filed November 6, 1996, the continuation-in-part U.S. Patent Application Serial No. 08/990,633 entitled “Transdermal Therapeutic Device and Method with Capsaicin and Capsaicin Analogs” filed December 15, 1997 and assigned to The Regents; pending PCT Patent Application Serial No. PCT/US98/25794 of the same title, filed December 8, 1998 and assigned to The Regents; and continuing applications thereof including divisions, substitutions, continuation-in-part applications (but only to the extent however, that claims in the continuation-in-part applications are entitled to the priority filing date of the foregoing applications); any patents issuing on said applications including reissues, reexaminations and extensions; and any corresponding foreign applications or patents based on said applications."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3436,
+      "passage_id": "DOC-fd1c198349c98f801e:P000025",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 25,
+      "start_offset": 3194,
+      "text": "1.2 “Licensed Product” means any material for which the manufacture, use, sale, or import would constitute an infringement of a Valid Claim within the Regents’ Patent Rights if not for the license granted to the Licensee under this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3654,
+      "passage_id": "DOC-fd1c198349c98f801e:P000026",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 26,
+      "start_offset": 3437,
+      "text": "1.3 “Licensed Method” means any method for which the use or sale would constitute an infringement of a Valid Claim within the Regents’ Patent Rights if not for the license granted to the Licensee under this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 4414,
+      "passage_id": "DOC-fd1c198349c98f801e:P000027",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 27,
+      "start_offset": 3655,
+      "text": "1.4 “Net Sales” means the total of the gross invoice prices of Licensed Products sold or Licensed Methods performed by the Licensee, an Affiliate, or a Sublicensee, less the sum of the following actual and customary deductions where applicable: cash, trade, or quantity discounts; sales, use, tariff, import/export duties or other excise taxes imposed on particular sales; transportation charges and allowances (including insurance); or credits to customers because of rejections, returns, or expired goods. For purposes of calculating Net Sales, transfers to an Affiliate or Sublicensee for end use by the Affiliate or Sublicensee will be treated as sales to an independent third party for purposes of calculating earned royalties (as specified in Article 7)"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_RATE",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 5163,
+      "passage_id": "DOC-fd1c198349c98f801e:P000028",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 28,
+      "start_offset": 4415,
+      "text": "1.5 “Affiliate” means any corporation or other business entity in which the Licensee owns or controls, directly or indirectly, at least fifty percent (50%) of the outstanding stock or other voting rights entitled to elect directors, or in which the Licensee is owned or controlled directly or indirectly by at least fifty percent (50%) of the outstanding stock or other voting rights entitled to elect directors; but in any country where the local law does not permit foreign equity participation of at least fifty percent (50%), then an “Affiliate” includes any company in which the Licensee owns or controls or is owned or controlled by, directly or indirectly, the maximum percentage of outstanding stock or voting rights permitted by local law."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 5209,
+      "passage_id": "DOC-fd1c198349c98f801e:P000029",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 29,
+      "start_offset": 5164,
+      "text": "1.6 “Field of Use” means all fields and uses."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 5213,
+      "passage_id": "DOC-fd1c198349c98f801e:P000030",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 30,
+      "start_offset": 5210,
+      "text": "-2-"
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 5819,
+      "passage_id": "DOC-fd1c198349c98f801e:P000031",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 31,
+      "start_offset": 5214,
+      "text": "1.7 “Commercial Sale” means with respect to each Licensed Product in each country, a bona fide commercial sale of such Licensed Product following marketing approval by the regulatory authority in such country; provided that where such a first commercial sale has occurred in a country for which government pricing or government reimbursement approval is needed for widespread commercial sale (for clarification, the parties acknowledge that no such approval is required in the United States) then a sale shall not be deemed a Commercial Sale until such pricing or reimbursement approval has been obtained."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 6076,
+      "passage_id": "DOC-fd1c198349c98f801e:P000032",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 32,
+      "start_offset": 5820,
+      "text": "1.8 “IND” means an Investigational New Drug Application, as defined in the U.S. Federal Food, Drug and Cosmetic Act and the regulations promulgated thereunder, or comparable filing in a foreign jurisdiction, in each case with respect to a Licensed Product."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 6466,
+      "passage_id": "DOC-fd1c198349c98f801e:P000033",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 33,
+      "start_offset": 6077,
+      "text": "1.9 “NDA” means a New Drug Application, as defined in the U.S. Food, Drug and Cosmetic Act and the regulations promulgated thereunder, and all subsequent supplements to that NDA, as well as any equivalent foreign application, registration or certification in the relevant country, such as a Marketing Approval Application (“MAA”) in Europe, in each case with respect to a Licensed Product."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 6794,
+      "passage_id": "DOC-fd1c198349c98f801e:P000034",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 34,
+      "start_offset": 6467,
+      "text": "1.10 “Phase I” means a clinical trial involving the initial introduction of a Licensed Product into humans and which is designed to determine the metabolism and pharmacologic actions of the Licensed Product in humans, the side effects associated with increasing doses, and, if possible, to gain early evidence on effectiveness."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 7230,
+      "passage_id": "DOC-fd1c198349c98f801e:P000035",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 35,
+      "start_offset": 6795,
+      "text": "1.11 “Phase III” means human clinical trials of a Licensed Product performed after obtaining preliminary evidence suggesting effectiveness of the drug, and are intended to gather the additional information about effectiveness and safety that is needed to evaluate the overall benefit-risk relationship of the drug, to provide an adequate basis for physician labeling, and to form the basis for approval to market such Licensed Product."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 7967,
+      "passage_id": "DOC-fd1c198349c98f801e:P000036",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 36,
+      "start_offset": 7231,
+      "text": "1.12 “Valid Claim” means a claim of an issued and unexpired patent or a claim of a pending patent application within the Regents’ Patent Rights which has not been held invalid or unenforceable by a court or other government agency of competent jurisdiction from which no appeal can be or has been taken, and has not been admitted to be invalid or unenforceable through re-examination, disclaimer or otherwise; provided that if a claim of a pending application has not issued as a claim of an issued patent within the Regents’ Patent Rights within ten (10) years after the filing date from which such claim takes priority, such pending claim shall not be a Valid Claim for purposes of this Agreement until such time as such claim issues."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 8560,
+      "passage_id": "DOC-fd1c198349c98f801e:P000037",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 37,
+      "start_offset": 7968,
+      "text": "1.13 “Sublicensee” means, with respect to a particular Licensed Product, a third party to whom Licensee has granted a right or license to make, use, sell or import such Licensed Product or practice the Licensed Method. As used in this Agreement, “Sublicensee” shall also include a non-Affiliate third party to whom Licensee has granted directly or indirectly a right to distribute such Licensed Product, provided that such third party is responsible for some or all of the marketing and promotion of such Licensed Product within the territorial region in which it has such sublicensed rights."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8564,
+      "passage_id": "DOC-fd1c198349c98f801e:P000038",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 38,
+      "start_offset": 8561,
+      "text": "-3-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8598,
+      "passage_id": "DOC-fd1c198349c98f801e:P000039",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 39,
+      "start_offset": 8565,
+      "text": "2. LIFE OF PATENT EXCLUSIVE GRANT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8886,
+      "passage_id": "DOC-fd1c198349c98f801e:P000040",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.1",
+      "sequence": 40,
+      "start_offset": 8599,
+      "text": "2.1 Subject to the limitations set forth in this Agreement, The Regents grants to the Licensee a world-wide license under Regents’ Patent Rights to make, have made, use, sell, offer to sell, import, have imported, and otherwise exploit Licensed Products and to practice Licensed Methods."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 9020,
+      "passage_id": "DOC-fd1c198349c98f801e:P000041",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.2",
+      "sequence": 41,
+      "start_offset": 8887,
+      "text": "2.2 Except as otherwise provided in this Agreement, the license granted in Paragraph 2.1 is exclusive for the life of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9221,
+      "passage_id": "DOC-fd1c198349c98f801e:P000042",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.3",
+      "sequence": 42,
+      "start_offset": 9021,
+      "text": "2.3 The license granted in Paragraphs 2.1 and 2.2 is limited to methods and products that are within the Field of Use. For other methods and products, the Licensee has no license under this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9535,
+      "passage_id": "DOC-fd1c198349c98f801e:P000043",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.3",
+      "sequence": 43,
+      "start_offset": 9222,
+      "text": "2.4 To the extent it is legally able, The Regents also grants Licensee a non-exclusive license to any proprietary know-how relating to Regents’ Patent Rights that The Regents has an interest in and is reasonably needed by Licensee to practice and/or commercially develop Licensed Products and/or Licensed Methods."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9703,
+      "passage_id": "DOC-fd1c198349c98f801e:P000044",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2.5",
+      "sequence": 44,
+      "start_offset": 9536,
+      "text": "2.5 The Regents reserves the nontransferable right to use the Invention and associated technology for its own bona fide non-commercial research and education purposes."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9718,
+      "passage_id": "DOC-fd1c198349c98f801e:P000045",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 45,
+      "start_offset": 9704,
+      "text": "3. SUBLICENSES"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10201,
+      "passage_id": "DOC-fd1c198349c98f801e:P000046",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 46,
+      "start_offset": 9719,
+      "text": "3.1 The Regents also grants to the Licensee the worldwide right to issue sublicenses to third parties to make, have made, use, sell, offer to sell, import, have imported, and otherwise exploit Licensed Products and to practice Licensed Methods, as long as the Licensee has current exclusive rights thereto under this Agreement. To the extent applicable, sublicenses must include, at a minimum, all of the rights of and obligations due to The Regents and contained in this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 10557,
+      "passage_id": "DOC-fd1c198349c98f801e:P000047",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2",
+      "sequence": 47,
+      "start_offset": 10202,
+      "text": "3.2 In addition, Licensee shall pay The Regents a percentage of all compensation received by Licensee from Sublicensees, other than royalties on sales of products and Licensed Products, as direct consideration for the grant of a sublicense for Licensed Products or Licensed Methods under the Regents’ Patent Rights, as set forth below (“sublicense fees”)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10561,
+      "passage_id": "DOC-fd1c198349c98f801e:P000048",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2",
+      "sequence": 48,
+      "start_offset": 10558,
+      "text": "-4-"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 11174,
+      "passage_id": "DOC-fd1c198349c98f801e:P000049",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2.1",
+      "sequence": 49,
+      "start_offset": 10562,
+      "text": "3.2.1 Sublicense fees shall consist of amounts received in the form of up-front fees and milestone payments, but shall not include any amounts received as support for research and development activities, as a loan, as income derived from debt financing, for the purchase of an equity interest in the Licensee, as reimbursement for patent and patent related expenses, as earned royalties on net sales, or as consideration for the grant of intellectual property rights and materials other than those claimed under Regents’ Patent Rights. Licensee shall pay The Regents the following percentages of sublicense fees:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 11213,
+      "passage_id": "DOC-fd1c198349c98f801e:P000050",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2.1",
+      "sequence": 50,
+      "start_offset": 11175,
+      "text": "Percentage | Aggregate Sublicense Fees"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "MONEY"
+      ],
+      "end_offset": 11230,
+      "passage_id": "DOC-fd1c198349c98f801e:P000051",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2.1",
+      "sequence": 51,
+      "start_offset": 11214,
+      "text": "25% | < $250,000"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "MONEY"
+      ],
+      "end_offset": 11259,
+      "passage_id": "DOC-fd1c198349c98f801e:P000052",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2.1",
+      "sequence": 52,
+      "start_offset": 11231,
+      "text": "10% | $250,000 -- $2,000,000"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "MONEY"
+      ],
+      "end_offset": 11277,
+      "passage_id": "DOC-fd1c198349c98f801e:P000053",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2.1",
+      "sequence": 53,
+      "start_offset": 11260,
+      "text": "5% | > $2,000,000"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 11803,
+      "passage_id": "DOC-fd1c198349c98f801e:P000054",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2.1",
+      "sequence": 54,
+      "start_offset": 11278,
+      "text": "3.2.2 For purposes of calculating the applicable percentage for the foregoing, “Aggregate Sublicense Fees” shall be the cumulative amount of sublicense fees stated in each sublicense of Regents’ Patent Rights entered into by Licensee and assuming that all milestone payments therein are made to Licensee. However, the actual sublicensee fee payments due The Regents from Licensee shall be determined based on the actual amounts of sublicensee fees received by Licensee in each calendar year during the term of this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 12196,
+      "passage_id": "DOC-fd1c198349c98f801e:P000055",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2.1",
+      "sequence": 55,
+      "start_offset": 11804,
+      "text": "3.3 The Licensee shall promptly provide The Regents with a copy of each sublicense issued; collect all payments due The Regents from Sublicensees; and summarize and deliver all reports due The Regents from Sublicensees, provided that the Licensee may redact from such copy any terms which are not necessary to determine whether Licensee has complied with its obligations under this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 12776,
+      "passage_id": "DOC-fd1c198349c98f801e:P000056",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2.1",
+      "sequence": 56,
+      "start_offset": 12197,
+      "text": "3.4 Upon termination of this Agreement for any reason, the Licensee shall assign to The Regents all sublicenses which are consistent with the rights and obligations due The Regents hereunder. The Regents, at its sole discretion, shall determine whether the Licensee shall cancel or assign to The Regents any sublicenses that are inconsistent with the rights and obligations due The Regents hereunder, provided however, that prior to terminating any such sublicense, The Regents shall discuss with the Sublicensee the terms under which such Sublicensee may retain such sublicense."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 12793,
+      "passage_id": "DOC-fd1c198349c98f801e:P000057",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 57,
+      "start_offset": 12777,
+      "text": "4. PAYMENT TERMS"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 13178,
+      "passage_id": "DOC-fd1c198349c98f801e:P000058",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.1",
+      "sequence": 58,
+      "start_offset": 12794,
+      "text": "4.1 Licensee shall pay to The Regents earned royalties (as specified in Section 7) on Net Sales of Licensed Products on a Licensed Product-by-Licensed Product and country-by-country basis. The earned royalty due pursuant to this Section will continue on such basis until the sale of a Licensed Product in such country does not infringe a Valid Claim within the Regents’ Patent Rights."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13182,
+      "passage_id": "DOC-fd1c198349c98f801e:P000059",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.1",
+      "sequence": 59,
+      "start_offset": 13179,
+      "text": "-5-"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 13429,
+      "passage_id": "DOC-fd1c198349c98f801e:P000060",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 60,
+      "start_offset": 13183,
+      "text": "4.2 Licensee shall pay earned royalties quarterly on or before February 28, May 31, August 31 and November 30 of each calendar year. Each payment will be for earned royalties accrued within the Licensee’s most recently completed calendar quarter."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 13673,
+      "passage_id": "DOC-fd1c198349c98f801e:P000061",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.3",
+      "sequence": 61,
+      "start_offset": 13430,
+      "text": "4.3 Licensee shall pay the applicable percentage of sublicense fees to The Regents on or before February 28 of each calendar year. Each payment will be for sublicensee fees received by Licensee during the most recently completed calendar year."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 13842,
+      "passage_id": "DOC-fd1c198349c98f801e:P000062",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.4",
+      "sequence": 62,
+      "start_offset": 13674,
+      "text": "4.4 Beginning in 2001, the Licensee shall pay the annual maintenance fee (as defined in Section 6.1) to The Regents on or before each anniversary of the Effective Date."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 14444,
+      "passage_id": "DOC-fd1c198349c98f801e:P000063",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.5",
+      "sequence": 63,
+      "start_offset": 13843,
+      "text": "4.5 All monies due The Regents are payable in United States dollars. When Licensed Products are sold for monies other than United States dollars, the Licensee shall first determine the applicable earned royalty in the currency of the country in which Licensed Products were sold and then convert the amount into equivalent United States funds, using the exchange rate quoted in the Wall Street Journal on the last business day of the reporting period. In no event shall the Licensee be required to pay The Regents more than twenty-five (25%) of its total annual revenue derived from Licensed Products."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 14969,
+      "passage_id": "DOC-fd1c198349c98f801e:P000064",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.6",
+      "sequence": 64,
+      "start_offset": 14445,
+      "text": "4.6 Earned royalties earned on sales occurring in any country outside the United States may not be reduced by any taxes, fees, or other charges imposed by the government of such country on the payment of royalty income. The Licensee is also responsible for all bank transfer charges. Notwithstanding this, all payments made by the Licensee in fulfillment of The Regents’ tax liability in any particular country will be credited against earned royalties or fees due The Regents for sales of Licensed Products in that country."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 15413,
+      "passage_id": "DOC-fd1c198349c98f801e:P000065",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.7",
+      "sequence": 65,
+      "start_offset": 14970,
+      "text": "4.7 If at any time legal restrictions prevent the prompt remittance of earned royalties by the Licensee from any country where a Licensed Product is sold, the Licensee shall deposit the amount owed in an interest-bearing account within that country until such time as the restrictions are lifted, at which time the Licensee shall promptly convert the current balance of said account into United States funds and pay such amount to The Regents."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 16014,
+      "passage_id": "DOC-fd1c198349c98f801e:P000066",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.8",
+      "sequence": 66,
+      "start_offset": 15414,
+      "text": "4.8 If any patent or Valid Claim within Regents’ Patent Rights is held invalid in a final decision by a court of competent jurisdiction and last resort and from which no appeal has or can be taken, all obligation to pay earned royalties based on that patent or Valid Claim or any Valid Claim patentably indistinct therefrom will cease as of the date of final decision. The Licensee will not, however, be relieved from paying any earned royalties that accrued before the final decision or that are based on another patent within Regents’ Patent Right or Valid Claim not involved in the final decision."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_RATE",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 16342,
+      "passage_id": "DOC-fd1c198349c98f801e:P000067",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.8",
+      "sequence": 67,
+      "start_offset": 16015,
+      "text": "4.9 If payments, rebillings or fees are not received by The Regents when due, the Licensee shall pay to The Regents interest charges on the unpaid amount at a rate of ten percent (10%) per annum or the maximum permitted by law, whichever is less. Interest is calculated from the date due until actually received by The Regents."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 16346,
+      "passage_id": "DOC-fd1c198349c98f801e:P000068",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.8",
+      "sequence": 68,
+      "start_offset": 16343,
+      "text": "-6-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 16367,
+      "passage_id": "DOC-fd1c198349c98f801e:P000069",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 69,
+      "start_offset": 16347,
+      "text": "5. LICENSE-ISSUE FEE"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 16736,
+      "passage_id": "DOC-fd1c198349c98f801e:P000070",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.1",
+      "sequence": 70,
+      "start_offset": 16368,
+      "text": "5.1 Within sixty (60) days after the Effective Date, the Licensee shall pay to The Regents a license-issue fee equal to the total amount of out-of-pocket costs and expenses of patent prosecution of the Regents’ Patent Rights incurred by The Regents through the Effective Date. This fee is non-refundable, non-cancelable, and is not an advance against earned royalties."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 16763,
+      "passage_id": "DOC-fd1c198349c98f801e:P000071",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 71,
+      "start_offset": 16737,
+      "text": "6. LICENSE MAINTENANCE FEE"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 17700,
+      "passage_id": "DOC-fd1c198349c98f801e:P000072",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.1",
+      "sequence": 72,
+      "start_offset": 16764,
+      "text": "6.1 The Licensee shall also pay to The Regents a royalty in the form of a license maintenance fee of five thousand dollars ($5,000) beginning on the second anniversary of the Effective Date and continuing annually on each anniversary of the Effective Date thereafter. This license maintenance fee is not due on any anniversary of the Effective Date if, as of that Date, the Licensee, its Affiliates, or its Sublicensees are engaged in Commercial Sales of a Licensed Product and paying earned royalties to The Regents on the sales of such Licensed Product. License maintenance fees are non-refundable and not an advance against earned royalties, except that, if Licensee completes the first Commercial Sale of a Licensed Product after making such License Maintenance Fee payment but before the next anniversary of the Effective Date, then Licensee may deduct such amount from the earned royalties that would otherwise be due The Regents."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 17769,
+      "passage_id": "DOC-fd1c198349c98f801e:P000073",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 73,
+      "start_offset": 17701,
+      "text": "7. EARNED ROYALTIES, MINIMUM ANNUAL ROYALTIES AND MILESTONE PAYMENTS"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "MONEY",
+        "SPELLED_RATE",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 17965,
+      "passage_id": "DOC-fd1c198349c98f801e:P000074",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.1",
+      "sequence": 74,
+      "start_offset": 17770,
+      "text": "7.1 The Licensee shall also pay to The Regents an earned royalty of one percent (1%) of the Net Sales of Licensed Products worldwide, up to a maximum of one million dollars ($1,000,000) per year."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_FRACTION",
+        "SPELLED_RATE",
+        "INDIRECT_ECONOMICS",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 18714,
+      "passage_id": "DOC-fd1c198349c98f801e:P000075",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 75,
+      "start_offset": 17966,
+      "text": "7.2 If it becomes necessary for Licensee to license intellectual property rights from an unaffiliated third party, and Licensee is required to pay a royalty to that unaffiliated third party in order to practice Licensed Methods and make, use or sell Licensed Products, and the combined earned royalty due The Regents and unaffiliated third parties exceeds eleven percent (11%), then the earned royalties to be paid to The Regents by Licensee shall be reduced by an amount equal to one-half (1/2) the excess over eleven percent (11%) of the royalty rate(s) due to the unaffiliated third party(ies). However, in no event shall the amount paid to The Regents be reduced below fifty percent (50%) of the original earned royalty amounts due The Regents."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 18880,
+      "passage_id": "DOC-fd1c198349c98f801e:P000076",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.3",
+      "sequence": 76,
+      "start_offset": 18715,
+      "text": "7.3 No cumulation of earned royalties shall be made in the event a Licensed Product is covered by Valid Claims of more than one patent within Regents’ Patent Rights."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 19181,
+      "passage_id": "DOC-fd1c198349c98f801e:P000077",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.4",
+      "sequence": 77,
+      "start_offset": 18881,
+      "text": "7.4 No earned royalty shall be payable under this Article 7 with respect to transfers of Licensed Product to customers or prospective customers for use in research and/or development, in clinical trials or other regulatory purposes, as samples, or in any other transfer that is not a Commercial Sale."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 19185,
+      "passage_id": "DOC-fd1c198349c98f801e:P000078",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.4",
+      "sequence": 78,
+      "start_offset": 19182,
+      "text": "-7-"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 20304,
+      "passage_id": "DOC-fd1c198349c98f801e:P000079",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.5",
+      "sequence": 79,
+      "start_offset": 19186,
+      "text": "7.5 In the event that a Licensed Product is sold in combination with other products, components or services (other than another Licensed Product) for which no amounts would be payable to The Regents if such other products, components or services were sold or performed separately, amounts invoiced for such combination sales for purposes of calculating Net Sales of the Licensed Product in such combination shall be the Net Sales of the Licensed Product calculated by multiplying the Net Sales of the combination product by the fraction A/B where A is the average price on a unit basis of Licensed Product containing a certain amount (by weight) of active ingredient, and B is the average unit price of the combination product containing the same amount of that active ingredient. In the event that such average sale price cannot be determined for both the Licensed Product and the other product(s) in combination, Net Sales for purposes of determining royalty payment shall be mutually agreed by the parties based on relative value contributed by each component, and such agreement shall not be unreasonably withheld."
+    },
+    {
+      "candidate_reasons": [
+        "MONEY",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 21799,
+      "passage_id": "DOC-fd1c198349c98f801e:P000080",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.6",
+      "sequence": 80,
+      "start_offset": 20305,
+      "text": "7.6 Following the first Commercial Sale of the first Licensed Product, the Licensee shall pay to The Regents a minimum annual royalty equal to ten thousand dollars ($10,000), which shall be creditable against future earned royalties due for the term of Regents’ Patent Rights, beginning with the year of the first Commercial Sale of Licensed Product. For the first year of Commercial Sales, the Licensee’s obligation to pay the minimum annual royalty will be pro-rated for the number of months remaining in that calendar year when Commercial Sales commence and will be due the following February 28, to allow for crediting of the pro-rated year’s earned royalties. For subsequent years, the minimum annual royalty will be paid to The Regents by February 28 of each year and will be credited against the earned royalties due for the calendar year in which the minimum annual royalty payment was made. In the event that the minimum annual royalty due for a calendar year exceeds the earned royalties due The Regents for such calendar year, the excess amount of minimum annual royalty may be applied by Licensee against earned royalties due The Regents for the next year. Such minimum annual royalty shall cease to be due in the year in which Licensee or its Sublicensees or Affiliates cease all Commercial Sales of all Licensed Products. Such minimum annual royalty shall be decreased on a pro rata basis as this Agreement expires or is terminated on a Licensed Product-by-Licensed Product basis."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 21872,
+      "passage_id": "DOC-fd1c198349c98f801e:P000081",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.7",
+      "sequence": 81,
+      "start_offset": 21800,
+      "text": "7.7 The Licensee shall pay The Regents the following milestone payments:"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 21973,
+      "passage_id": "DOC-fd1c198349c98f801e:P000082",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.7",
+      "sequence": 82,
+      "start_offset": 21873,
+      "text": "(a) Fifty thousand dollars ($50,000) upon the first filing of an IND for the first Licensed Product;"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 22205,
+      "passage_id": "DOC-fd1c198349c98f801e:P000083",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.7",
+      "sequence": 83,
+      "start_offset": 21974,
+      "text": "(b) One hundred thousand dollars ($100,000) upon first dosing of a patient in a Phase III clinical trial for the first Licensed Product in a major market (United States, Japan, Germany, France, Italy, Spain, or the United Kingdom);"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 22391,
+      "passage_id": "DOC-fd1c198349c98f801e:P000084",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.7",
+      "sequence": 84,
+      "start_offset": 22206,
+      "text": "(c) One million dollars ($1,000,000) upon first approval of a NDA, for a Licensed Product in a major market (United States, Japan, Germany, France, Italy, Spain, or the United Kingdom);"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22395,
+      "passage_id": "DOC-fd1c198349c98f801e:P000085",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.7",
+      "sequence": 85,
+      "start_offset": 22392,
+      "text": "-8-"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_RATE",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 22584,
+      "passage_id": "DOC-fd1c198349c98f801e:P000086",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.7",
+      "sequence": 86,
+      "start_offset": 22396,
+      "text": "(d) The foregoing milestone payments are creditable against earned royalties (but subject to reduction of no more than fifty percent (50%) of the earned royalties in any calendar quarter);"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_FRACTION",
+        "SPELLED_RATE",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 24452,
+      "passage_id": "DOC-fd1c198349c98f801e:P000087",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.7",
+      "sequence": 87,
+      "start_offset": 22585,
+      "text": "(e) In addition, Licensee shall pay The Regents non-creditable milestone payments should either of the following occur while Commercial Sales or commercialization of a Licensed Product by Licensee are continuing: (i) the closing of an Initial Public Offering (“IPO”) of the Licensee’s common stock pursuant to a registration statement on Form S-1 filed with the U.S. Securities and Exchange Commission; or (ii) the closing of (x) a consolidation or merger of the Licensee with any other entity, (y) sale of all or substantially all of the assets of Licensee, or (z) sale of all or substantially all of the outstanding stock of the Licensee, pursuant to which the shareholders of the Licensee receive cash or publicly traded securities. Upon the occurrence of such event, the Licensee shall pay to The Regents total cash payments equal to X times P, where X is equal to one percent (1%) of the number of shares of the Licensee’s common stock which have been issued or reserved for future issuance pursuant to then-existing incentive stock plans immediately prior to the Licensee’s first round of financing, and P is equal to either the IPO offering price per share of common stock, or in the case of a merger, acquisition, or sale, the average price per share actually received by shareholders of the Licensee’s common stock from the acquirer. Such payments shall be paid in three (3) installments, with one third (1/3) of the total to be paid twelve (12) months after the closing date of such transaction, one third (1/3) to be paid twenty four (24) months after such closing date, and the remaining one third (1/3) to be paid thirty six (36) months after such closing date. In the event that the transaction contemplated hereunder involves more than one closing date, the due date for payments owed to The Regents shall be measured from the date of the last closing."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 25023,
+      "passage_id": "DOC-fd1c198349c98f801e:P000088",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.7",
+      "sequence": 88,
+      "start_offset": 24453,
+      "text": "7.8 Notwithstanding the foregoing Section 7.7, no milestone payments shall be due from Licensee under Section 7.7 in the event that: (i) a patent with a claim covering a Licensed Product has not issued under the Regents’ Patent Rights at the time such milestone payment is due; and (ii) Licensee is no longer funding active prosecution of the Regents’ Patent rights in the United States patent office or a foreign equivalent; and (iii) only with respect to the milestone payable under Section 7.7(e), the first Commercial Sale of a Licensed Product has already occurred."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25040,
+      "passage_id": "DOC-fd1c198349c98f801e:P000089",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 89,
+      "start_offset": 25024,
+      "text": "8. DUE DILIGENCE"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25335,
+      "passage_id": "DOC-fd1c198349c98f801e:P000090",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8.1",
+      "sequence": 90,
+      "start_offset": 25041,
+      "text": "8.1 The Licensee, on execution of this Agreement, shall use commercially reasonable efforts to develop, manufacture and sell Licensed Products, or cause a Sublicensee to do so, and shall use the same level of effort to market the same within a reasonable time after execution of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25497,
+      "passage_id": "DOC-fd1c198349c98f801e:P000091",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8.2",
+      "sequence": 91,
+      "start_offset": 25336,
+      "text": "8.2 The Licensee shall use commercially reasonable efforts to obtain all governmental approvals necessary for the manufacture, use and sale of Licensed Products."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25772,
+      "passage_id": "DOC-fd1c198349c98f801e:P000092",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8.3",
+      "sequence": 92,
+      "start_offset": 25498,
+      "text": "8.3 The Licensee shall commit to use commercially reasonable efforts (either itself or through a Sublicensee) to develop and commercialize at least one Licensed Product, including achievement of the following milestones: (i) dosing of the first human patient with a Licensed"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25776,
+      "passage_id": "DOC-fd1c198349c98f801e:P000093",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8.3",
+      "sequence": 93,
+      "start_offset": 25773,
+      "text": "-9-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26103,
+      "passage_id": "DOC-fd1c198349c98f801e:P000094",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8.3",
+      "sequence": 94,
+      "start_offset": 25777,
+      "text": "Product in support of a Phase I clinical trials by the end of the third year after the Effective Date; (ii) filing at least one NDA by the end of the fifth year after the Effective Date; and (iii) commencing the marketing of at least one Licensed Product in one country by the end of the seventh year after the Effective Date."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 26487,
+      "passage_id": "DOC-fd1c198349c98f801e:P000095",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8.3",
+      "sequence": 95,
+      "start_offset": 26104,
+      "text": "8.4 If the Licensee fails to complete any of the above provisions, and The Regents do not otherwise extend or waive such period of performance, then The Regents has the right and option to either terminate this Agreement or reduce the Licensee’s exclusive license to a nonexclusive license. This right, if exercised by The Regents, supersedes the rights granted in Article 2 (GRANT)."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 26519,
+      "passage_id": "DOC-fd1c198349c98f801e:P000096",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9",
+      "sequence": 96,
+      "start_offset": 26488,
+      "text": "9. PROGRESS AND ROYALTY REPORTS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27166,
+      "passage_id": "DOC-fd1c198349c98f801e:P000097",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9",
+      "sequence": 97,
+      "start_offset": 26520,
+      "text": "9.1 Beginning February 28, 2001 and semi-annually thereafter, the Licensee shall submit to The Regents a progress report covering the Licensee’s (and any Affiliate or Sublicensee’s) activities regarding the development and testing of all Licensed Products and the obtaining of any governmental approvals necessary for marketing. Progress reports are required until the first Commercial Sale of the first Licensed Product occurs in the United States, at which time the Licensee may discontinue such reports; provided that such reports may again be required by The Regents if Commercial Sales of such Licensed Product are suspended or discontinued."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 27327,
+      "passage_id": "DOC-fd1c198349c98f801e:P000098",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 98,
+      "start_offset": 27167,
+      "text": "9.2 Progress reports submitted under Paragraph 9.1 shall include, but are not limited to, the following topics, as they specifically refer to Licensed Products:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27357,
+      "passage_id": "DOC-fd1c198349c98f801e:P000099",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 99,
+      "start_offset": 27328,
+      "text": "• | summary of work completed"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27388,
+      "passage_id": "DOC-fd1c198349c98f801e:P000100",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 100,
+      "start_offset": 27358,
+      "text": "• | key scientific discoveries"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27420,
+      "passage_id": "DOC-fd1c198349c98f801e:P000101",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 101,
+      "start_offset": 27389,
+      "text": "• | summary of work in progress"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27477,
+      "passage_id": "DOC-fd1c198349c98f801e:P000102",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 102,
+      "start_offset": 27421,
+      "text": "• | current schedule of anticipated events or milestones"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27537,
+      "passage_id": "DOC-fd1c198349c98f801e:P000103",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 103,
+      "start_offset": 27478,
+      "text": "• | market plans for introduction of Licensed Products, and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27610,
+      "passage_id": "DOC-fd1c198349c98f801e:P000104",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 104,
+      "start_offset": 27538,
+      "text": "• | a summary of resources (dollar value) spent in the reporting period."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27836,
+      "passage_id": "DOC-fd1c198349c98f801e:P000105",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.3",
+      "sequence": 105,
+      "start_offset": 27611,
+      "text": "9.3 The Licensee has a continuing obligation to keep The Regents’ informed of the large/small business entity status (as defined by the United States Patent and Trademark Office) of itself and its Sublicensees and Affiliates."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 28020,
+      "passage_id": "DOC-fd1c198349c98f801e:P000106",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.4",
+      "sequence": 106,
+      "start_offset": 27837,
+      "text": "9.4 The Licensee shall report to The Regents the date of first Commercial Sale of a Licensed Product in each country in its immediately subsequent royalty report (as described below)."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 28712,
+      "passage_id": "DOC-fd1c198349c98f801e:P000107",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.5",
+      "sequence": 107,
+      "start_offset": 28021,
+      "text": "9.5 After the first Commercial Sale of a Licensed Product anywhere in the world, the Licensee shall make quarterly royalty reports to The Regents on or before each February 28, May 31, August 31 and November 30 of each year. Each royalty report will cover the Licensee’s most recently completed calendar quarter and will show (a) the gross sales and Net Sales of Licensed Products sold during the most recently completed calendar quarter; (b) the number of each type of Licensed Product sold; (c) the earned royalties, in U.S. dollars, payable with respect to sales of Licensed Products; (d) the method used to calculate the earned royalties; and (e) the exchange rates used (if applicable)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 28717,
+      "passage_id": "DOC-fd1c198349c98f801e:P000108",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.5",
+      "sequence": 108,
+      "start_offset": 28713,
+      "text": "-10-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 28849,
+      "passage_id": "DOC-fd1c198349c98f801e:P000109",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.6",
+      "sequence": 109,
+      "start_offset": 28718,
+      "text": "9.6 If no sales of Licensed Products have been made during any reporting period, Licensee shall provide a statement to this effect."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 28871,
+      "passage_id": "DOC-fd1c198349c98f801e:P000110",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 110,
+      "start_offset": 28850,
+      "text": "10. BOOKS AND RECORDS"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 29148,
+      "passage_id": "DOC-fd1c198349c98f801e:P000111",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.1",
+      "sequence": 111,
+      "start_offset": 28872,
+      "text": "10.1 The Licensee shall keep accurate books and records showing all Licensed Products manufactured, used, and/or sold under the terms of this Agreement. Books and records must be preserved for at least five (5) years from the date of the royalty payment to which they pertain."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_RATE",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 29548,
+      "passage_id": "DOC-fd1c198349c98f801e:P000112",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10.2",
+      "sequence": 112,
+      "start_offset": 29149,
+      "text": "10.2 Books and records must be open to inspection by mutually acceptable representatives or agents of The Regents at reasonable times. The Regents shall bear the fees and expenses of examination but if an error in royalties of more than five percent (5%) of the total royalties due for any year is discovered in any examination then the Licensee shall bear the fees and expenses of that examination."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 29574,
+      "passage_id": "DOC-fd1c198349c98f801e:P000113",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "11",
+      "sequence": 113,
+      "start_offset": 29549,
+      "text": "11. LIFE OF THE AGREEMENT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30259,
+      "passage_id": "DOC-fd1c198349c98f801e:P000114",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "11",
+      "sequence": 114,
+      "start_offset": 29575,
+      "text": "11.1 Unless otherwise terminated by operation of law or by acts of the parties in accordance with the terms of this Agreement, this Agreement will be in force from the Effective Date and shall expire on a country-by-country basis as to each Licensed Product on the date that neither the sale nor use of such Licensed Product would be covered by a Valid Claim in such country. This Agreement shall expire in its entirety, unless otherwise terminated or otherwise provided herein, upon the last expiration date of a patent licensed under this Agreement; or until the last patent application licensed under this Agreement is abandoned and no patent in Regents’ Patent Rights ever issues."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30378,
+      "passage_id": "DOC-fd1c198349c98f801e:P000115",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "11.2",
+      "sequence": 115,
+      "start_offset": 30260,
+      "text": "11.2 Any termination of this Agreement will not affect the rights and obligations set forth in the following Articles:"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 30400,
+      "passage_id": "DOC-fd1c198349c98f801e:P000116",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 116,
+      "start_offset": 30379,
+      "text": "Article 1 Definitions"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 30429,
+      "passage_id": "DOC-fd1c198349c98f801e:P000117",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 117,
+      "start_offset": 30401,
+      "text": "Article 10 Books and Records"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 30496,
+      "passage_id": "DOC-fd1c198349c98f801e:P000118",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 118,
+      "start_offset": 30430,
+      "text": "Article 14 Disposition of Licensed Products on Hand on Termination"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 30535,
+      "passage_id": "DOC-fd1c198349c98f801e:P000119",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 119,
+      "start_offset": 30497,
+      "text": "Article 15 Use of Names and Trademarks"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 30562,
+      "passage_id": "DOC-fd1c198349c98f801e:P000120",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20",
+      "sequence": 120,
+      "start_offset": 30536,
+      "text": "Article 20 Indemnification"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 30592,
+      "passage_id": "DOC-fd1c198349c98f801e:P000121",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "24",
+      "sequence": 121,
+      "start_offset": 30563,
+      "text": "Article 24 Failure to Perform"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 30611,
+      "passage_id": "DOC-fd1c198349c98f801e:P000122",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29",
+      "sequence": 122,
+      "start_offset": 30593,
+      "text": "Article 29 Secrecy"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 30636,
+      "passage_id": "DOC-fd1c198349c98f801e:P000123",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30",
+      "sequence": 123,
+      "start_offset": 30612,
+      "text": "Article 30 Miscellaneous"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30667,
+      "passage_id": "DOC-fd1c198349c98f801e:P000124",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 124,
+      "start_offset": 30637,
+      "text": "12. TERMINATION BY THE REGENTS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31146,
+      "passage_id": "DOC-fd1c198349c98f801e:P000125",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 125,
+      "start_offset": 30668,
+      "text": "12.1 If the Licensee fails to materially perform or materially violates any term of this Agreement, then The Regents may give written notice of default (“Notice of Default”) to the Licensee. If the Licensee fails to repair the default within sixty (60) days of the effective date of Notice of Default, The Regents may terminate this Agreement and its licenses by a second written notice (Notice of Termination). If a Notice of Termination is sent to the Licensee, this Agreement"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31151,
+      "passage_id": "DOC-fd1c198349c98f801e:P000126",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 126,
+      "start_offset": 31147,
+      "text": "-11-"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 31432,
+      "passage_id": "DOC-fd1c198349c98f801e:P000127",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 127,
+      "start_offset": 31152,
+      "text": "will automatically terminate on the effective date of such Notice. Termination will not relieve the Licensee of its obligation to pay any fees owing at the time of termination and will not impair any accrued right of The Regents. These notices are subject to Article 21 (Notices)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31460,
+      "passage_id": "DOC-fd1c198349c98f801e:P000128",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 128,
+      "start_offset": 31433,
+      "text": "13. TERMINATION BY LICENSEE"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 31797,
+      "passage_id": "DOC-fd1c198349c98f801e:P000129",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 129,
+      "start_offset": 31461,
+      "text": "13.1 The Licensee has the right at any time to terminate this Agreement in whole or as to any portion of Regents’ Patent Rights by giving notice in writing to The Regents. Notice of termination will be subject to Article 21 (Notices) and termination of this Agreement will be effective sixty (60) days from the effective date of notice."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 32195,
+      "passage_id": "DOC-fd1c198349c98f801e:P000130",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 130,
+      "start_offset": 31798,
+      "text": "13.2 Any termination under the above paragraph does not relieve the Licensee of any obligation or liability accrued under this Agreement prior to termination or rescind any payment made to The Regents or anything done by Licensee prior to the time termination becomes effective. Termination does not affect in any manner any rights of The Regents arising under this Agreement prior to termination."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32257,
+      "passage_id": "DOC-fd1c198349c98f801e:P000131",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 131,
+      "start_offset": 32196,
+      "text": "14. DISPOSITION OF LICENSED PRODUCTS ON HAND UPON TERMINATION"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 32661,
+      "passage_id": "DOC-fd1c198349c98f801e:P000132",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.1",
+      "sequence": 132,
+      "start_offset": 32258,
+      "text": "14.1 Upon termination of this Agreement the Licensee is entitled to dispose of all previously made or partially made Licensed Products, but no more, within a period of one hundred and eighty (180) days provided that the sale of those Licensed Products is subject to the terms of this Agreement, including but not limited to the rendering of reports and payment of royalties required under this Agreement"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32693,
+      "passage_id": "DOC-fd1c198349c98f801e:P000133",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 133,
+      "start_offset": 32662,
+      "text": "15. USE OF NAMES AND TRADEMARKS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33151,
+      "passage_id": "DOC-fd1c198349c98f801e:P000134",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 134,
+      "start_offset": 32694,
+      "text": "15.1 Nothing contained in this Agreement confers any right to use in advertising, publicity, or other promotional activities any name, trade name, trademark, or other designation of either party hereto (including contraction, abbreviation or simulation of any of the foregoing). Unless required by law, the use by the Licensee of the name “The Regents of the University of California” or the name of any campus of the University of California is prohibited."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33172,
+      "passage_id": "DOC-fd1c198349c98f801e:P000135",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16",
+      "sequence": 135,
+      "start_offset": 33152,
+      "text": "16. LIMITED WARRANTY"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33467,
+      "passage_id": "DOC-fd1c198349c98f801e:P000136",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.1",
+      "sequence": 136,
+      "start_offset": 33173,
+      "text": "16.1 The Regents, as represented by the actual knowledge of the undersigned on behalf of the Regents as of the Effective Date, warrants to the Licensee that that it owns all right, title, and interest in and to the Regents’ Patent Rights, and that it has the lawful right to grant this license."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33811,
+      "passage_id": "DOC-fd1c198349c98f801e:P000137",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.1",
+      "sequence": 137,
+      "start_offset": 33468,
+      "text": "16.2 This license and the associated Invention are provided WITHOUT WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR ANY OTHER WARRANTY, EXPRESS OR IMPLIED. THE REGENTS MAKES NO REPRESENTATION OR WARRANTY THAT THE LICENSED PRODUCTS OR LICENSED METHODS WILL NOT INFRINGE ANY PATENT OR OTHER PROPRIETARY RIGHT OF A THIRD PARTY."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33816,
+      "passage_id": "DOC-fd1c198349c98f801e:P000138",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.1",
+      "sequence": 138,
+      "start_offset": 33812,
+      "text": "-12-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34017,
+      "passage_id": "DOC-fd1c198349c98f801e:P000139",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.3",
+      "sequence": 139,
+      "start_offset": 33817,
+      "text": "16.3 IN NO EVENT WILL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES RESULTING FROM EXERCISE OF THIS LICENSE OR THE USE OF THE INVENTION OR LICENSED PRODUCTS."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34047,
+      "passage_id": "DOC-fd1c198349c98f801e:P000140",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.4",
+      "sequence": 140,
+      "start_offset": 34018,
+      "text": "16.4 This Agreement does not:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34162,
+      "passage_id": "DOC-fd1c198349c98f801e:P000141",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.4.1",
+      "sequence": 141,
+      "start_offset": 34048,
+      "text": "16.4.1 express or imply a warranty or representation as to the validity or scope of any of Regents’ Patent Rights;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34411,
+      "passage_id": "DOC-fd1c198349c98f801e:P000142",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.4.2",
+      "sequence": 142,
+      "start_offset": 34163,
+      "text": "16.4.2 express or imply a warranty or representation that anything made, used, sold, offered for sale or imported or otherwise disposed of under any license granted in this Agreement is or will be free from infringement of patents of third parties;"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 34558,
+      "passage_id": "DOC-fd1c198349c98f801e:P000143",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.4.3",
+      "sequence": 143,
+      "start_offset": 34412,
+      "text": "16.4.3 obligate The Regents to bring or prosecute actions or suits against third parties for patent infringement except as provided in Article 19;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34823,
+      "passage_id": "DOC-fd1c198349c98f801e:P000144",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.4.4",
+      "sequence": 144,
+      "start_offset": 34559,
+      "text": "16.4.4 confer by implication, estoppel or otherwise any license or rights under any patents of The Regents other than Regents’ Patent Rights as defined in this Agreement, regardless of whether those patents are dominant or subordinate to Regent’s Patent Rights; or"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34915,
+      "passage_id": "DOC-fd1c198349c98f801e:P000145",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "16.4.5",
+      "sequence": 145,
+      "start_offset": 34824,
+      "text": "16.4.5 obligate The Regents to furnish any know-how not provided in Regents’ Patent Rights."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34954,
+      "passage_id": "DOC-fd1c198349c98f801e:P000146",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 146,
+      "start_offset": 34916,
+      "text": "17. PATENT PROSECUTION AND MAINTENANCE"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 36132,
+      "passage_id": "DOC-fd1c198349c98f801e:P000147",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 147,
+      "start_offset": 34955,
+      "text": "17.1 As long as the Licensee has paid patent costs as provided for in this Article, The Regents shall diligently prosecute and maintain the United States and foreign patents comprising Regents’ Patent Rights using counsel of its choice, reasonably acceptable to Licensee. If Licensee objects to the choice of patent counsel, then The Regents may appoint a foreign choice of patent counsel with Licensee’s approval. The Regents shall provide the Licensee with copies of all relevant documentation and correspondence so that the Licensee may be informed of the continuing prosecution and submit timely comments and guidance for consideration by patent counsel. The Licensee agrees to keep such correspondence and documentation confidential. The Regents agrees to allow Licensee to submit advice, counsel, and guidance regarding patent prosecution to The Regents’ counsel, although such counsel will take instructions only from The Regents. All patents and patent applications under this Agreement which are based solely on research performed at UCSF and filed prior to the Execution Date will be assigned solely to The Regents, subject to the grant of exclusive rights hereunder."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36466,
+      "passage_id": "DOC-fd1c198349c98f801e:P000148",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 148,
+      "start_offset": 36133,
+      "text": "17.2 The Regents shall use best efforts to amend any patent application to include claims reasonably requested by the Licensee to protect the products contemplated to be sold under this Agreement and shall ensure that the Licensee is kept apprised of patent-related activities so that it may provide such requests in a timely manner."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36471,
+      "passage_id": "DOC-fd1c198349c98f801e:P000149",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 149,
+      "start_offset": 36467,
+      "text": "-13-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36922,
+      "passage_id": "DOC-fd1c198349c98f801e:P000150",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 150,
+      "start_offset": 36472,
+      "text": "17.3 The Licensee shall apply for an extension of the term of any patent included within Regents’ Patent Rights if appropriate under the Drug Price Competition and Patent Term Restoration Act of 1984 and/or European, Japanese and other foreign counterparts of this Law. The Licensee shall prepare all documents, and The Regents agrees to execute the documents and to take additional action as the Licensee reasonably requests in connection therewith."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 37415,
+      "passage_id": "DOC-fd1c198349c98f801e:P000151",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 151,
+      "start_offset": 36923,
+      "text": "17.4 If either party (in the case of the Regents, the actual knowledge of the Licensing Officer responsible for administration of this Agreement) receives notice pertaining to infringement or potential infringement of any issued patent included within Regents’ Patent Rights under the Drug Price Competition and Patent Term Restoration Act of 1984 (and/or foreign counterparts of this Law), that party shall notify the other party within ten (10) days after receipt of notice of infringement."
+    },
+    {
+      "candidate_reasons": [
+        "MONEY",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 38364,
+      "passage_id": "DOC-fd1c198349c98f801e:P000152",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 152,
+      "start_offset": 37416,
+      "text": "17.5 The Licensee shall bear the costs of preparing, filing, prosecuting and maintaining all United States and foreign patent applications contemplated by this Agreement incurred after the Effective Date, and as required under Article 5. Costs billed by The Regents’ counsel will be rebilled to the Licensee and are to be paid quarterly for the calendar quarter in which The Regents’ costs were incurred, within thirty (30) days after Licensee receives such rebilling. These costs include patent prosecution costs for the Invention incurred by The Regents prior to the execution of this Agreement and any patent prosecution costs that may be incurred for patentability opinions, re-examination, re-issue, interferences, or inventorship determinations. Prior costs will be paid subject to Article 5 and are at least approximately $37,000. Such prior costs may be paid in installments over the course of six (6) months from the Effective Date hereof."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 39030,
+      "passage_id": "DOC-fd1c198349c98f801e:P000153",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 153,
+      "start_offset": 38365,
+      "text": "17.6 The Licensee may request The Regents to obtain patent protection on the Invention in foreign countries if available and if it so desires. The Licensee shall notify The Regents of its decision to obtain or maintain foreign patents not less than sixty (60) days prior to the deadline for any payment, filing, or action to be taken in connection therewith. This notice concerning foreign filing must be in writing, must identify the countries desired, and must reaffirm the Licensee’s obligation to underwrite the costs thereof. The absence of such a notice from the Licensee to The Regents will be considered an election not to obtain or maintain foreign rights."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 39760,
+      "passage_id": "DOC-fd1c198349c98f801e:P000154",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 154,
+      "start_offset": 39031,
+      "text": "17.7 The Licensee’s obligation to underwrite and to pay patent prosecution costs will continue for so long as this Agreement remains in effect, but the Licensee may terminate its obligations with respect to any given patent application or patent upon three (3) months written notice to The Regents. The Regents will use its best efforts to curtail patent costs when a notice of termination is received from the Licensee. The Regents may prosecute and maintain such application(s) or patent(s) at its sole discretion and expense, but the Licensee will have no further right or licenses thereunder. Non-payment of patent costs may be deemed by The Regents as an election by the Licensee not to maintain application(s) or patent(s)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40070,
+      "passage_id": "DOC-fd1c198349c98f801e:P000155",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 155,
+      "start_offset": 39761,
+      "text": "17.8 The Regents may file, prosecute or maintain patent applications at its own expense in any country in which the Licensee has not elected to file, prosecute, or maintain patent applications in accordance with this Article, and those applications and resultant patents will not be subject to this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40075,
+      "passage_id": "DOC-fd1c198349c98f801e:P000156",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "17",
+      "sequence": 156,
+      "start_offset": 40071,
+      "text": "-14-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40094,
+      "passage_id": "DOC-fd1c198349c98f801e:P000157",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "18",
+      "sequence": 157,
+      "start_offset": 40076,
+      "text": "18. PATENT MARKING"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40275,
+      "passage_id": "DOC-fd1c198349c98f801e:P000158",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "18.1",
+      "sequence": 158,
+      "start_offset": 40095,
+      "text": "18.1 The Licensee shall mark all Licensed Products made, used or sold under the terms of this Agreement, or their containers, in accordance with the applicable patent marking laws."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40299,
+      "passage_id": "DOC-fd1c198349c98f801e:P000159",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "19",
+      "sequence": 159,
+      "start_offset": 40276,
+      "text": "19. PATENT INFRINGEMENT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40847,
+      "passage_id": "DOC-fd1c198349c98f801e:P000160",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "19",
+      "sequence": 160,
+      "start_offset": 40300,
+      "text": "19.1 If the Licensee learns of the substantial infringement of any patent licensed under this Agreement, the Licensee shall call The Regents’ attention thereto in writing and provide The Regents with reasonable evidence of infringement. Neither party will notify a third party of the infringement of any of Regents’ Patent Rights without first obtaining consent of the other party, which consent will not be unreasonably denied. Both parties shall use their best efforts in cooperation with each other to terminate infringement without litigation."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 41887,
+      "passage_id": "DOC-fd1c198349c98f801e:P000161",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "19",
+      "sequence": 161,
+      "start_offset": 40848,
+      "text": "19.2 The Licensee may request that The Regents take legal action against the infringement of Regents’ Patent Rights. Request must be in writing and must include reasonable evidence of infringement and damages to the Licensee. If the infringing activity has not abated within ninety (90) days following the effective date of request, The Regents then has the right to: commence suit on its own account; or refuse to participate in the suit, and The Regents shall give notice of its election in writing to the Licensee by the end of the one-hundredth (100th) day after receiving notice of written request from the Licensee. The Licensee may thereafter bring suit for patent infringement, at its own expense, if and only if The Regents elects not to commence suit and if the infringement occurred during the period and in a jurisdiction where the Licensee had exclusive rights under this Agreement. If, however, the Licensee elects to bring suit in accordance with this paragraph, The Regents may thereafter join that suit at its own expense."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 42297,
+      "passage_id": "DOC-fd1c198349c98f801e:P000162",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "19",
+      "sequence": 162,
+      "start_offset": 41888,
+      "text": "19.3 Legal action as is decided on will be at the expense of the party bringing suit and all damages recovered thereby will belong to the party bringing suit, but legal action brought jointly by The Regents and the Licensee and fully participated in by both will be at the joint expense of the parties and all recoveries will be shared jointly by them in proportion to the share of expense paid by each party."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 42605,
+      "passage_id": "DOC-fd1c198349c98f801e:P000163",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "19",
+      "sequence": 163,
+      "start_offset": 42298,
+      "text": "19.4 Each party shall cooperate with the other in litigation proceedings instituted hereunder but at the expense of the party bringing suit. Litigation will be controlled by the party bringing the suit, except that The Regents may be represented by counsel of its choice in any suit brought by the Licensee."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 42625,
+      "passage_id": "DOC-fd1c198349c98f801e:P000164",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20",
+      "sequence": 164,
+      "start_offset": 42606,
+      "text": "20. INDEMNIFICATION"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 43223,
+      "passage_id": "DOC-fd1c198349c98f801e:P000165",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20",
+      "sequence": 165,
+      "start_offset": 42626,
+      "text": "20.1 The Licensee shall indemnify, hold harmless and defend The Regents, its officers, employees, and agents; the sponsors of the research that led to the invention; and the inventors of the patents and patent applications in Regents’ Patent Rights and their employers against any and all claims, suits, losses, liabilities, damages, costs, fees, and expenses resulting from or arising out of exercise of this license or any voluntary sublicense. This indemnification includes, but is not limited to, any product liability. Notwithstanding the foregoing, the Licensee shall have no obligations for"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43228,
+      "passage_id": "DOC-fd1c198349c98f801e:P000166",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20",
+      "sequence": 166,
+      "start_offset": 43224,
+      "text": "-15-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43450,
+      "passage_id": "DOC-fd1c198349c98f801e:P000167",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20",
+      "sequence": 167,
+      "start_offset": 43229,
+      "text": "any claim if the person (as listed above) seeking indemnification makes any admission or settlement regarding such claim without the prior written consent of the Licensee, which consent shall not be unreasonably withheld."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43777,
+      "passage_id": "DOC-fd1c198349c98f801e:P000168",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20",
+      "sequence": 168,
+      "start_offset": 43451,
+      "text": "20.2 The Licensee, at its sole cost and expense, shall insure its activities in connection with the work under this Agreement and obtain (not later than the start of Phase I clinical trials of a product intended for Commercial Sale), keep in force and maintain insurance as follows, or an equivalent program of self insurance."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43900,
+      "passage_id": "DOC-fd1c198349c98f801e:P000169",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.3",
+      "sequence": 169,
+      "start_offset": 43778,
+      "text": "20.3 Comprehensive or commercial form general liability insurance (contractual liability included) with limits as follows:"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 43931,
+      "passage_id": "DOC-fd1c198349c98f801e:P000170",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.3",
+      "sequence": 170,
+      "start_offset": 43901,
+      "text": "• | Each Occurrence $1,000,000"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 43986,
+      "passage_id": "DOC-fd1c198349c98f801e:P000171",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.3",
+      "sequence": 171,
+      "start_offset": 43932,
+      "text": "• | Products/Completed Operations Aggregate $5,000,000"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 44033,
+      "passage_id": "DOC-fd1c198349c98f801e:P000172",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.3",
+      "sequence": 172,
+      "start_offset": 43987,
+      "text": "• | Personal and Advertising Injury $1,000,000"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 44089,
+      "passage_id": "DOC-fd1c198349c98f801e:P000173",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.3",
+      "sequence": 173,
+      "start_offset": 44034,
+      "text": "• | General Aggregate (commercial form only) $5,000,000"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44327,
+      "passage_id": "DOC-fd1c198349c98f801e:P000174",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.3",
+      "sequence": 174,
+      "start_offset": 44090,
+      "text": "The coverage and limits referred to under the above do not in any way limit the liability of the Licensee. The Licensee shall furnish The Regents with certificates of insurance showing compliance with all requirements. Certificates must:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44420,
+      "passage_id": "DOC-fd1c198349c98f801e:P000175",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.3",
+      "sequence": 175,
+      "start_offset": 44328,
+      "text": "• | Provide for thirty (30) days’ advance written notice to The Regents of any modification."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44541,
+      "passage_id": "DOC-fd1c198349c98f801e:P000176",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.3",
+      "sequence": 176,
+      "start_offset": 44421,
+      "text": "• | Indicate that The Regents has been endorsed as an additional Insured under the coverage referred to under the above."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44756,
+      "passage_id": "DOC-fd1c198349c98f801e:P000177",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.3",
+      "sequence": 177,
+      "start_offset": 44542,
+      "text": "• | Include a provision that the coverage will be primary and will not participate with nor will be excess over any valid and collectable insurance or program of self-insurance carried or maintained by The Regents."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45054,
+      "passage_id": "DOC-fd1c198349c98f801e:P000178",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "20.4",
+      "sequence": 178,
+      "start_offset": 44757,
+      "text": "20.4 The Regents shall notify the Licensee in writing of any claim or suit brought against The Regents in respect of which The Regents intends to invoke the provisions of this Article. The Licensee shall keep The Regents informed on a current basis of its defense of any claims under this Article."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45066,
+      "passage_id": "DOC-fd1c198349c98f801e:P000179",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 179,
+      "start_offset": 45055,
+      "text": "21. NOTICES"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 45427,
+      "passage_id": "DOC-fd1c198349c98f801e:P000180",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 180,
+      "start_offset": 45067,
+      "text": "21.1 Any notice or payment required to be given to either party is properly given and effective (a) on the date of delivery if delivered in person or (b) five (5) days after mailing if mailed by first-class certified mail, postage paid, to the respective addresses given below, or to another address as is designated by written notice given to the other party."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45474,
+      "passage_id": "DOC-fd1c198349c98f801e:P000181",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 181,
+      "start_offset": 45428,
+      "text": "In the case of the Licensee: | NeurogesX, Inc."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45500,
+      "passage_id": "DOC-fd1c198349c98f801e:P000182",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 182,
+      "start_offset": 45475,
+      "text": "969C Industrial Boulevard"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45529,
+      "passage_id": "DOC-fd1c198349c98f801e:P000183",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 183,
+      "start_offset": 45501,
+      "text": "San Carlos, California 94070"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45551,
+      "passage_id": "DOC-fd1c198349c98f801e:P000184",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 184,
+      "start_offset": 45530,
+      "text": "Attn: Howard Palefsky"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45556,
+      "passage_id": "DOC-fd1c198349c98f801e:P000185",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 185,
+      "start_offset": 45552,
+      "text": "-16-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45618,
+      "passage_id": "DOC-fd1c198349c98f801e:P000186",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 186,
+      "start_offset": 45557,
+      "text": "In the case of The Regents: | Office of Technology Management"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45657,
+      "passage_id": "DOC-fd1c198349c98f801e:P000187",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 187,
+      "start_offset": 45619,
+      "text": "University of California San Francisco"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45686,
+      "passage_id": "DOC-fd1c198349c98f801e:P000188",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 188,
+      "start_offset": 45658,
+      "text": "1294 Ninth Avenue - Box 1209"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45715,
+      "passage_id": "DOC-fd1c198349c98f801e:P000189",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 189,
+      "start_offset": 45687,
+      "text": "San Francisco, CA 94143-1209"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45735,
+      "passage_id": "DOC-fd1c198349c98f801e:P000190",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 190,
+      "start_offset": 45716,
+      "text": "Attention: Director"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45772,
+      "passage_id": "DOC-fd1c198349c98f801e:P000191",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "21",
+      "sequence": 191,
+      "start_offset": 45736,
+      "text": "Referring to: UCSF Case No. SF00-056"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45790,
+      "passage_id": "DOC-fd1c198349c98f801e:P000192",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "22",
+      "sequence": 192,
+      "start_offset": 45773,
+      "text": "22. ASSIGNABILITY"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 46364,
+      "passage_id": "DOC-fd1c198349c98f801e:P000193",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "22",
+      "sequence": 193,
+      "start_offset": 45791,
+      "text": "22.1 This Agreement may be assigned by The Regents, but is personal to the Licensee and assignable by the Licensee only with the written consent of The Regents, which consent will not be unreasonably withheld; provided that the Licensee may assign this Agreement without The Regents’ consent to an entity that acquires substantially all of the business or assets of the Licensee (or that portion thereof to which this Agreement relates), in each case whether by merger, acquisition, or otherwise the acquiring party assumes this Agreement in writing or by operation of law."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 46378,
+      "passage_id": "DOC-fd1c198349c98f801e:P000194",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "23",
+      "sequence": 194,
+      "start_offset": 46365,
+      "text": "23. NO WAIVER"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 46503,
+      "passage_id": "DOC-fd1c198349c98f801e:P000195",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "23.1",
+      "sequence": 195,
+      "start_offset": 46379,
+      "text": "23.1 No waiver by either party of any default of this Agreement may be deemed a waiver of any subsequent or similar default."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 46526,
+      "passage_id": "DOC-fd1c198349c98f801e:P000196",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "24",
+      "sequence": 196,
+      "start_offset": 46504,
+      "text": "24. FAILURE TO PERFORM"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 46791,
+      "passage_id": "DOC-fd1c198349c98f801e:P000197",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "24.1",
+      "sequence": 197,
+      "start_offset": 46527,
+      "text": "24.1 If either party finds it necessary to undertake legal action against the other on account of failure of performance due under this Agreement, then the prevailing party is entitled to reasonable attorney’s fees in addition to costs and necessary disbursements."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 46810,
+      "passage_id": "DOC-fd1c198349c98f801e:P000198",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "25",
+      "sequence": 198,
+      "start_offset": 46792,
+      "text": "25. GOVERNING LAWS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 47075,
+      "passage_id": "DOC-fd1c198349c98f801e:P000199",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "25.1",
+      "sequence": 199,
+      "start_offset": 46811,
+      "text": "25.1 THIS AGREEMENT WILL BE INTERPRETED AND CONSTRUED IN ACCORDANCE WITH THE LAWS OF THE STATE OF CALIFORNIA, but the scope and validity of any patent or patent application will be governed by the applicable laws of the country of the patent or patent application."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 47117,
+      "passage_id": "DOC-fd1c198349c98f801e:P000200",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "26",
+      "sequence": 200,
+      "start_offset": 47076,
+      "text": "26. PREFERENCE FOR UNITED STATES INDUSTRY"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 47396,
+      "passage_id": "DOC-fd1c198349c98f801e:P000201",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "26.1",
+      "sequence": 201,
+      "start_offset": 47118,
+      "text": "26.1 Because this Agreement grants the exclusive right to use or sell the Invention in the United States, the Licensee agrees that any products sold in the U.S. embodying this Invention or produced through the use thereof will be manufactured substantially in the United States."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 47436,
+      "passage_id": "DOC-fd1c198349c98f801e:P000202",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "27",
+      "sequence": 202,
+      "start_offset": 47397,
+      "text": "27. GOVERNMENT APPROVAL OR REGISTRATION"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 47768,
+      "passage_id": "DOC-fd1c198349c98f801e:P000203",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "27",
+      "sequence": 203,
+      "start_offset": 47437,
+      "text": "27.1 Licensee shall notify The Regents if it becomes aware that this Agreement is subject to any U.S. or foreign government reporting or approval requirement. Licensee shall make all necessary filings and pay all costs including fees, penalties, and all other out-of-pocket costs associated with such reporting or approval process."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 47773,
+      "passage_id": "DOC-fd1c198349c98f801e:P000204",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "27",
+      "sequence": 204,
+      "start_offset": 47769,
+      "text": "-17-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 47797,
+      "passage_id": "DOC-fd1c198349c98f801e:P000205",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "28",
+      "sequence": 205,
+      "start_offset": 47774,
+      "text": "28. EXPORT CONTROL LAWS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 48101,
+      "passage_id": "DOC-fd1c198349c98f801e:P000206",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "28",
+      "sequence": 206,
+      "start_offset": 47798,
+      "text": "28.1 The Licensee shall observe all applicable United States and foreign laws with respect to the transfer of Licensed Products and related technical data to foreign countries, including, without limitation, the International Traffic in Arms Regulations (ITAR) and the Export Administration Regulations."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 48113,
+      "passage_id": "DOC-fd1c198349c98f801e:P000207",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29",
+      "sequence": 207,
+      "start_offset": 48102,
+      "text": "29. SECRECY"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 48279,
+      "passage_id": "DOC-fd1c198349c98f801e:P000208",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29.1",
+      "sequence": 208,
+      "start_offset": 48114,
+      "text": "29.1 With regard to confidential information (“Data”), which can be oral or written or both, received from The Regents regarding this Invention, the Licensee agrees:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 48383,
+      "passage_id": "DOC-fd1c198349c98f801e:P000209",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29.1.1",
+      "sequence": 209,
+      "start_offset": 48280,
+      "text": "29.1.1 not to use the Data except for the sole purpose of performing under the terms of this Agreement;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 48521,
+      "passage_id": "DOC-fd1c198349c98f801e:P000210",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29.1.2",
+      "sequence": 210,
+      "start_offset": 48384,
+      "text": "29.1.2 to safeguard Data against disclosure to others with the same degree of care as it exercises with its own data of a similar nature;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 48822,
+      "passage_id": "DOC-fd1c198349c98f801e:P000211",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29.1.3",
+      "sequence": 211,
+      "start_offset": 48522,
+      "text": "29.1.3 not to disclose Data to others (except to its employees, agents or consultants who are bound to the Licensee by a like obligation of confidentiality) without the express written permission of The Regents, except that the Licensee is not prevented from using or disclosing any of the Data that:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 48902,
+      "passage_id": "DOC-fd1c198349c98f801e:P000212",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29.1.3",
+      "sequence": 212,
+      "start_offset": 48823,
+      "text": "(i) the Licensee can demonstrate by written records was previously known to it;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 49015,
+      "passage_id": "DOC-fd1c198349c98f801e:P000213",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29.1.3",
+      "sequence": 213,
+      "start_offset": 48903,
+      "text": "(ii) is now, or becomes in the future, public knowledge other than through acts or omissions of the Licensee; or"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 49103,
+      "passage_id": "DOC-fd1c198349c98f801e:P000214",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29.1.3",
+      "sequence": 214,
+      "start_offset": 49016,
+      "text": "(iii) is lawfully obtained by the Licensee from sources independent of The Regents; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 49270,
+      "passage_id": "DOC-fd1c198349c98f801e:P000215",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "29.1.4",
+      "sequence": 215,
+      "start_offset": 49104,
+      "text": "29.1.4 that the secrecy obligations of the Licensee with respect to Data will continue for a period ending five (5) years from the termination date of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 49288,
+      "passage_id": "DOC-fd1c198349c98f801e:P000216",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30",
+      "sequence": 216,
+      "start_offset": 49271,
+      "text": "30. MISCELLANEOUS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 49476,
+      "passage_id": "DOC-fd1c198349c98f801e:P000217",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.1",
+      "sequence": 217,
+      "start_offset": 49289,
+      "text": "30.1 The headings of the several sections are inserted for convenience of reference only and are not intended to be a part of or to affect the meaning or interpretation of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 49629,
+      "passage_id": "DOC-fd1c198349c98f801e:P000218",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.2",
+      "sequence": 218,
+      "start_offset": 49477,
+      "text": "30.2 This Agreement is not binding on the parties until it has been signed below on behalf of each party. It is then effective as of the Effective Date."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 49634,
+      "passage_id": "DOC-fd1c198349c98f801e:P000219",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.2",
+      "sequence": 219,
+      "start_offset": 49630,
+      "text": "-18-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 49780,
+      "passage_id": "DOC-fd1c198349c98f801e:P000220",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 220,
+      "start_offset": 49635,
+      "text": "30.3 No amendment or modification of this Agreement is valid or binding on the parties unless made in writing and signed on behalf of each party."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 50244,
+      "passage_id": "DOC-fd1c198349c98f801e:P000221",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 221,
+      "start_offset": 49781,
+      "text": "30.4 For the purposes of this Agreement and all services to be provided hereunder, the parties shall be, and shall be deemed to be, independent contractors and not agents or employees of either of the other parties. No party shall have authority to make any statements, representations or commitments of any kind, or to take any action which shall be binding on either of the other parties, except as may be expressly provided for herein or authorized in writing."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 50577,
+      "passage_id": "DOC-fd1c198349c98f801e:P000222",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 222,
+      "start_offset": 50245,
+      "text": "30.5 This Agreement embodies the entire understanding of the parties and supersedes all previous communications, representations or understandings, either oral or written, between the parties relating to the subject matter hereof. The Secrecy Agreement effective August 20, 1999 (U.C. Control No. 2000-20-0104) is hereby terminated."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 50934,
+      "passage_id": "DOC-fd1c198349c98f801e:P000223",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 223,
+      "start_offset": 50578,
+      "text": "30.6 In case any of the provisions contained in this Agreement is held to be invalid, illegal, or unenforceable in any respect, that invalidity, illegality or unenforceability will not affect any other provisions of this Agreement, and this Agreement will be construed as if the invalid, illegal, or unenforceable provisions bad never been contained in it."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 51120,
+      "passage_id": "DOC-fd1c198349c98f801e:P000224",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 224,
+      "start_offset": 50935,
+      "text": "IN WITNESS WHEREOF, both The Regents and the Licensee have executed this Agreement, in duplicate originals, by their respective and duly authorized officers on the day and year written."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 51175,
+      "passage_id": "DOC-fd1c198349c98f801e:P000225",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 225,
+      "start_offset": 51121,
+      "text": "LICENSEE | THE REGENTS OF THE UNIVERSITY OF CALIFORNIA"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 51235,
+      "passage_id": "DOC-fd1c198349c98f801e:P000226",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 226,
+      "start_offset": 51176,
+      "text": "By: | /s/ Howard D. Palefsky | By: | /s/ Joel B. Kirschbaum"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 51261,
+      "passage_id": "DOC-fd1c198349c98f801e:P000227",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 227,
+      "start_offset": 51236,
+      "text": "(Signature) | (Signature)"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 51317,
+      "passage_id": "DOC-fd1c198349c98f801e:P000228",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 228,
+      "start_offset": 51262,
+      "text": "Name: | Howard D. Palefsky | Name: | Joel B. Kirschbaum"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 51349,
+      "passage_id": "DOC-fd1c198349c98f801e:P000229",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 229,
+      "start_offset": 51318,
+      "text": "(Please Print) | (Please Print)"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 51388,
+      "passage_id": "DOC-fd1c198349c98f801e:P000230",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 230,
+      "start_offset": 51350,
+      "text": "Title: | CEO | Title: | Director – OTM"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 51430,
+      "passage_id": "DOC-fd1c198349c98f801e:P000231",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 231,
+      "start_offset": 51389,
+      "text": "Date: | 27 October ‘00 | Date: | 10/30/00"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 51435,
+      "passage_id": "DOC-fd1c198349c98f801e:P000232",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "30.3",
+      "sequence": 232,
+      "start_offset": 51431,
+      "text": "-19-"
+    }
+  ],
+  "quality_control_profile": "M7_ISSUED_OCCURRENCES",
+  "quality_flags": [
+    "ALL_PASSAGES_UNREVIEWED",
+    "CANDIDATE_COVERAGE_NOT_ESTABLISHED"
+  ],
+  "retrieved_at_utc": null,
+  "schema_version": "m1.0",
+  "screening_conclusion": "UNKNOWN_NEEDS_AI_SCREENING",
+  "screening_priority": "HIGH_REVIEW_PRIORITY",
+  "sections": [
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000001",
+        "DOC-fd1c198349c98f801e:P000021"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000001",
+        "DOC-fd1c198349c98f801e:P000002",
+        "DOC-fd1c198349c98f801e:P000003",
+        "DOC-fd1c198349c98f801e:P000004",
+        "DOC-fd1c198349c98f801e:P000005",
+        "DOC-fd1c198349c98f801e:P000006",
+        "DOC-fd1c198349c98f801e:P000007",
+        "DOC-fd1c198349c98f801e:P000008",
+        "DOC-fd1c198349c98f801e:P000009",
+        "DOC-fd1c198349c98f801e:P000010",
+        "DOC-fd1c198349c98f801e:P000011",
+        "DOC-fd1c198349c98f801e:P000012",
+        "DOC-fd1c198349c98f801e:P000013",
+        "DOC-fd1c198349c98f801e:P000014",
+        "DOC-fd1c198349c98f801e:P000015",
+        "DOC-fd1c198349c98f801e:P000016",
+        "DOC-fd1c198349c98f801e:P000017",
+        "DOC-fd1c198349c98f801e:P000018",
+        "DOC-fd1c198349c98f801e:P000019",
+        "DOC-fd1c198349c98f801e:P000020",
+        "DOC-fd1c198349c98f801e:P000021",
+        "DOC-fd1c198349c98f801e:P000022"
+      ],
+      "section": "Exhibit 10.6"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000024",
+        "DOC-fd1c198349c98f801e:P000025",
+        "DOC-fd1c198349c98f801e:P000026",
+        "DOC-fd1c198349c98f801e:P000027",
+        "DOC-fd1c198349c98f801e:P000028",
+        "DOC-fd1c198349c98f801e:P000029",
+        "DOC-fd1c198349c98f801e:P000031",
+        "DOC-fd1c198349c98f801e:P000032",
+        "DOC-fd1c198349c98f801e:P000033",
+        "DOC-fd1c198349c98f801e:P000034",
+        "DOC-fd1c198349c98f801e:P000035",
+        "DOC-fd1c198349c98f801e:P000036",
+        "DOC-fd1c198349c98f801e:P000037",
+        "DOC-fd1c198349c98f801e:P000116"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000023",
+        "DOC-fd1c198349c98f801e:P000024",
+        "DOC-fd1c198349c98f801e:P000025",
+        "DOC-fd1c198349c98f801e:P000026",
+        "DOC-fd1c198349c98f801e:P000027",
+        "DOC-fd1c198349c98f801e:P000028",
+        "DOC-fd1c198349c98f801e:P000029",
+        "DOC-fd1c198349c98f801e:P000030",
+        "DOC-fd1c198349c98f801e:P000031",
+        "DOC-fd1c198349c98f801e:P000032",
+        "DOC-fd1c198349c98f801e:P000033",
+        "DOC-fd1c198349c98f801e:P000034",
+        "DOC-fd1c198349c98f801e:P000035",
+        "DOC-fd1c198349c98f801e:P000036",
+        "DOC-fd1c198349c98f801e:P000037",
+        "DOC-fd1c198349c98f801e:P000038",
+        "DOC-fd1c198349c98f801e:P000116"
+      ],
+      "section": "1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000039"
+      ],
+      "section": "2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000040"
+      ],
+      "section": "2.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000041"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000041"
+      ],
+      "section": "2.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000042",
+        "DOC-fd1c198349c98f801e:P000043"
+      ],
+      "section": "2.3"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000044"
+      ],
+      "section": "2.5"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000045",
+        "DOC-fd1c198349c98f801e:P000046"
+      ],
+      "section": "3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000047"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000047",
+        "DOC-fd1c198349c98f801e:P000048"
+      ],
+      "section": "3.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000049",
+        "DOC-fd1c198349c98f801e:P000050",
+        "DOC-fd1c198349c98f801e:P000051",
+        "DOC-fd1c198349c98f801e:P000052",
+        "DOC-fd1c198349c98f801e:P000053",
+        "DOC-fd1c198349c98f801e:P000054",
+        "DOC-fd1c198349c98f801e:P000055",
+        "DOC-fd1c198349c98f801e:P000056"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000049",
+        "DOC-fd1c198349c98f801e:P000050",
+        "DOC-fd1c198349c98f801e:P000051",
+        "DOC-fd1c198349c98f801e:P000052",
+        "DOC-fd1c198349c98f801e:P000053",
+        "DOC-fd1c198349c98f801e:P000054",
+        "DOC-fd1c198349c98f801e:P000055",
+        "DOC-fd1c198349c98f801e:P000056"
+      ],
+      "section": "3.2.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000057"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000057"
+      ],
+      "section": "4"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000058"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000058",
+        "DOC-fd1c198349c98f801e:P000059"
+      ],
+      "section": "4.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000060"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000060"
+      ],
+      "section": "4.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000061"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000061"
+      ],
+      "section": "4.3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000062"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000062"
+      ],
+      "section": "4.4"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000063"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000063"
+      ],
+      "section": "4.5"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000064"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000064"
+      ],
+      "section": "4.6"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000065"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000065"
+      ],
+      "section": "4.7"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000066",
+        "DOC-fd1c198349c98f801e:P000067"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000066",
+        "DOC-fd1c198349c98f801e:P000067",
+        "DOC-fd1c198349c98f801e:P000068"
+      ],
+      "section": "4.8"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000069"
+      ],
+      "section": "5"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000070"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000070"
+      ],
+      "section": "5.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000071"
+      ],
+      "section": "6"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000072"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000072"
+      ],
+      "section": "6.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000073"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000073"
+      ],
+      "section": "7"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000074"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000074"
+      ],
+      "section": "7.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000075"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000075"
+      ],
+      "section": "7.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000076"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000076"
+      ],
+      "section": "7.3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000077"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000077",
+        "DOC-fd1c198349c98f801e:P000078"
+      ],
+      "section": "7.4"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000079"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000079"
+      ],
+      "section": "7.5"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000080"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000080"
+      ],
+      "section": "7.6"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000081",
+        "DOC-fd1c198349c98f801e:P000082",
+        "DOC-fd1c198349c98f801e:P000083",
+        "DOC-fd1c198349c98f801e:P000084",
+        "DOC-fd1c198349c98f801e:P000086",
+        "DOC-fd1c198349c98f801e:P000087",
+        "DOC-fd1c198349c98f801e:P000088"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000081",
+        "DOC-fd1c198349c98f801e:P000082",
+        "DOC-fd1c198349c98f801e:P000083",
+        "DOC-fd1c198349c98f801e:P000084",
+        "DOC-fd1c198349c98f801e:P000085",
+        "DOC-fd1c198349c98f801e:P000086",
+        "DOC-fd1c198349c98f801e:P000087",
+        "DOC-fd1c198349c98f801e:P000088"
+      ],
+      "section": "7.7"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000089"
+      ],
+      "section": "8"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000090"
+      ],
+      "section": "8.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000091"
+      ],
+      "section": "8.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000095"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000092",
+        "DOC-fd1c198349c98f801e:P000093",
+        "DOC-fd1c198349c98f801e:P000094",
+        "DOC-fd1c198349c98f801e:P000095"
+      ],
+      "section": "8.3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000096"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000096",
+        "DOC-fd1c198349c98f801e:P000097"
+      ],
+      "section": "9"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000098"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000098",
+        "DOC-fd1c198349c98f801e:P000099",
+        "DOC-fd1c198349c98f801e:P000100",
+        "DOC-fd1c198349c98f801e:P000101",
+        "DOC-fd1c198349c98f801e:P000102",
+        "DOC-fd1c198349c98f801e:P000103",
+        "DOC-fd1c198349c98f801e:P000104"
+      ],
+      "section": "9.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000105"
+      ],
+      "section": "9.3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000106"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000106"
+      ],
+      "section": "9.4"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000107"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000107",
+        "DOC-fd1c198349c98f801e:P000108"
+      ],
+      "section": "9.5"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000109"
+      ],
+      "section": "9.6"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000117"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000110",
+        "DOC-fd1c198349c98f801e:P000117"
+      ],
+      "section": "10"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000111"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000111"
+      ],
+      "section": "10.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000112"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000112"
+      ],
+      "section": "10.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000113",
+        "DOC-fd1c198349c98f801e:P000114"
+      ],
+      "section": "11"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000115"
+      ],
+      "section": "11.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000118"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000118",
+        "DOC-fd1c198349c98f801e:P000131"
+      ],
+      "section": "14"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000119"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000119",
+        "DOC-fd1c198349c98f801e:P000133",
+        "DOC-fd1c198349c98f801e:P000134"
+      ],
+      "section": "15"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000120",
+        "DOC-fd1c198349c98f801e:P000165"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000120",
+        "DOC-fd1c198349c98f801e:P000164",
+        "DOC-fd1c198349c98f801e:P000165",
+        "DOC-fd1c198349c98f801e:P000166",
+        "DOC-fd1c198349c98f801e:P000167",
+        "DOC-fd1c198349c98f801e:P000168"
+      ],
+      "section": "20"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000121"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000121",
+        "DOC-fd1c198349c98f801e:P000196"
+      ],
+      "section": "24"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000122"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000122",
+        "DOC-fd1c198349c98f801e:P000207"
+      ],
+      "section": "29"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000123"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000123",
+        "DOC-fd1c198349c98f801e:P000216"
+      ],
+      "section": "30"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000127"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000124",
+        "DOC-fd1c198349c98f801e:P000125",
+        "DOC-fd1c198349c98f801e:P000126",
+        "DOC-fd1c198349c98f801e:P000127"
+      ],
+      "section": "12"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000129",
+        "DOC-fd1c198349c98f801e:P000130"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000128",
+        "DOC-fd1c198349c98f801e:P000129",
+        "DOC-fd1c198349c98f801e:P000130"
+      ],
+      "section": "13"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000132"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000132"
+      ],
+      "section": "14.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000135"
+      ],
+      "section": "16"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000136",
+        "DOC-fd1c198349c98f801e:P000137",
+        "DOC-fd1c198349c98f801e:P000138"
+      ],
+      "section": "16.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000139"
+      ],
+      "section": "16.3"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000140"
+      ],
+      "section": "16.4"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000141"
+      ],
+      "section": "16.4.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000142"
+      ],
+      "section": "16.4.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000143"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000143"
+      ],
+      "section": "16.4.3"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000144"
+      ],
+      "section": "16.4.4"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000145"
+      ],
+      "section": "16.4.5"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000147",
+        "DOC-fd1c198349c98f801e:P000152",
+        "DOC-fd1c198349c98f801e:P000153",
+        "DOC-fd1c198349c98f801e:P000154"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000146",
+        "DOC-fd1c198349c98f801e:P000147",
+        "DOC-fd1c198349c98f801e:P000148",
+        "DOC-fd1c198349c98f801e:P000149",
+        "DOC-fd1c198349c98f801e:P000150",
+        "DOC-fd1c198349c98f801e:P000151",
+        "DOC-fd1c198349c98f801e:P000152",
+        "DOC-fd1c198349c98f801e:P000153",
+        "DOC-fd1c198349c98f801e:P000154",
+        "DOC-fd1c198349c98f801e:P000155",
+        "DOC-fd1c198349c98f801e:P000156"
+      ],
+      "section": "17"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000157"
+      ],
+      "section": "18"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000158"
+      ],
+      "section": "18.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000159",
+        "DOC-fd1c198349c98f801e:P000160",
+        "DOC-fd1c198349c98f801e:P000161",
+        "DOC-fd1c198349c98f801e:P000162",
+        "DOC-fd1c198349c98f801e:P000163"
+      ],
+      "section": "19"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000170",
+        "DOC-fd1c198349c98f801e:P000171",
+        "DOC-fd1c198349c98f801e:P000172",
+        "DOC-fd1c198349c98f801e:P000173"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000169",
+        "DOC-fd1c198349c98f801e:P000170",
+        "DOC-fd1c198349c98f801e:P000171",
+        "DOC-fd1c198349c98f801e:P000172",
+        "DOC-fd1c198349c98f801e:P000173",
+        "DOC-fd1c198349c98f801e:P000174",
+        "DOC-fd1c198349c98f801e:P000175",
+        "DOC-fd1c198349c98f801e:P000176",
+        "DOC-fd1c198349c98f801e:P000177"
+      ],
+      "section": "20.3"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000178"
+      ],
+      "section": "20.4"
+    },
+    {
+      "candidate_ids": [
+        "DOC-fd1c198349c98f801e:P000180"
+      ],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000179",
+        "DOC-fd1c198349c98f801e:P000180",
+        "DOC-fd1c198349c98f801e:P000181",
+        "DOC-fd1c198349c98f801e:P000182",
+        "DOC-fd1c198349c98f801e:P000183",
+        "DOC-fd1c198349c98f801e:P000184",
+        "DOC-fd1c198349c98f801e:P000185",
+        "DOC-fd1c198349c98f801e:P000186",
+        "DOC-fd1c198349c98f801e:P000187",
+        "DOC-fd1c198349c98f801e:P000188",
+        "DOC-fd1c198349c98f801e:P000189",
+        "DOC-fd1c198349c98f801e:P000190",
+        "DOC-fd1c198349c98f801e:P000191"
+      ],
+      "section": "21"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000192",
+        "DOC-fd1c198349c98f801e:P000193"
+      ],
+      "section": "22"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000194"
+      ],
+      "section": "23"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000195"
+      ],
+      "section": "23.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000197"
+      ],
+      "section": "24.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000198"
+      ],
+      "section": "25"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000199"
+      ],
+      "section": "25.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000200"
+      ],
+      "section": "26"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000201"
+      ],
+      "section": "26.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000202",
+        "DOC-fd1c198349c98f801e:P000203",
+        "DOC-fd1c198349c98f801e:P000204"
+      ],
+      "section": "27"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000205",
+        "DOC-fd1c198349c98f801e:P000206"
+      ],
+      "section": "28"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000208"
+      ],
+      "section": "29.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000209"
+      ],
+      "section": "29.1.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000210"
+      ],
+      "section": "29.1.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000211",
+        "DOC-fd1c198349c98f801e:P000212",
+        "DOC-fd1c198349c98f801e:P000213",
+        "DOC-fd1c198349c98f801e:P000214"
+      ],
+      "section": "29.1.3"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000215"
+      ],
+      "section": "29.1.4"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000217"
+      ],
+      "section": "30.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000218",
+        "DOC-fd1c198349c98f801e:P000219"
+      ],
+      "section": "30.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-fd1c198349c98f801e:P000220",
+        "DOC-fd1c198349c98f801e:P000221",
+        "DOC-fd1c198349c98f801e:P000222",
+        "DOC-fd1c198349c98f801e:P000223",
+        "DOC-fd1c198349c98f801e:P000224",
+        "DOC-fd1c198349c98f801e:P000225",
+        "DOC-fd1c198349c98f801e:P000226",
+        "DOC-fd1c198349c98f801e:P000227",
+        "DOC-fd1c198349c98f801e:P000228",
+        "DOC-fd1c198349c98f801e:P000229",
+        "DOC-fd1c198349c98f801e:P000230",
+        "DOC-fd1c198349c98f801e:P000231",
+        "DOC-fd1c198349c98f801e:P000232"
+      ],
+      "section": "30.3"
+    }
+  ],
+  "source_segmentation": {
+    "fragment_limit_chars": 12000,
+    "preservation": "FRAGMENTS_CONCATENATE_EXACTLY_TO_EACH_ORIGINAL_NORMALIZED_LINE",
+    "schema": "m4-source-segmentation.1",
+    "split_original_paragraphs": []
+  },
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1385830/000119312507022650/dex106.htm",
+  "stage": "MAPPED_NOT_INTERPRETED",
+  "text_sha256": "5ec3375005ddedd68fa2736aca8cddf99be0236bd1ea3de560049d284d25d8b0",
+  "total_candidates": 81,
+  "total_passages": 232
+}

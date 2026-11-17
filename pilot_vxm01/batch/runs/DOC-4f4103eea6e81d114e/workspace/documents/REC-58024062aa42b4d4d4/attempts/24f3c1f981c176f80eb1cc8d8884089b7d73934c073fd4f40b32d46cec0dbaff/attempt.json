@@ -1,0 +1,16 @@
+{
+  "blocking_issues": [
+    "1-I001",
+    "1-I002",
+    "1-I003",
+    "1-I004",
+    "1-I005"
+  ],
+  "created_at_utc": "2026-11-17T15:14:31+00:00",
+  "deterministic_status": "PASS_DETERMINISTIC_ONLY",
+  "document_id": "DOC-4f4103eea6e81d114e",
+  "extraction_sha256": "24f3c1f981c176f80eb1cc8d8884089b7d73934c073fd4f40b32d46cec0dbaff",
+  "map_sha256": "3cd0a9ea573c5a7f8d916c37ca0dfec267c6cac6625ebea472e408ca43847fef",
+  "schema": "m3-attempt.1",
+  "validator_revision": "m13.0-source-check-and-two-reader-comparison"
+}

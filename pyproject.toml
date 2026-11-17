@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "royalty-research"
+version = "0.13.5"
+description = "Local SEC discovery, contract mapping and omission-resistant AI extraction verification"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+pdf = ["pypdf>=5,<7"]
+xlsx = ["openpyxl>=3.1"]
+
+[project.scripts]
+royalty-research = "royalty_research.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+royalty_research = ["schemas/*.json"]

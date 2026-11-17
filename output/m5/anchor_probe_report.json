@@ -1,0 +1,202 @@
+{
+  "not_a_gold_standard": true,
+  "results": [
+    {
+      "anchors": [
+        {
+          "anchor_id": "market-four-rates",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-6465c7a15fbb3ddffe:P000003"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "market-minimum-guarantee",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-6465c7a15fbb3ddffe:P000004"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "market-conditional-cap",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-6465c7a15fbb3ddffe:P000007"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "market-interest-not-royalty",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-6465c7a15fbb3ddffe:P000005"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "market-unrelated-audit-percentage",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-6465c7a15fbb3ddffe:P000008"
+          ],
+          "present": true
+        }
+      ],
+      "candidate_count": 7,
+      "case_label": "Market Finders / Daugherty — paraphrased web excerpts only",
+      "input_sha256": "6a5ada63f1f83f4628a6a140d1d8be41481a65d44a899889b564d598a4f3f769",
+      "not_validated": [
+        "Complete original document authentication",
+        "Full-contract semantic recall",
+        "Model interpretation accuracy",
+        "SEC link availability",
+        "Subscription CLI"
+      ],
+      "note": "Anchor matches are deterministic screening tests only. Input may be a paraphrase, not the SEC document.",
+      "parser": "HTML_TEXT",
+      "passage_count": 8,
+      "schema": "m5-probe.1",
+      "source_filename": "market_excerpt_paraphrase.html",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1520358/000149315213000675/ex10-2.htm",
+      "status": "ANCHORS_PASS_NOT_RECALL_VALIDATED",
+      "text_sha256": "bf677d08d65a914577e85953226bccfd728f8a9b2d8ade68d9b05efd458c23b7",
+      "unflagged_count": 1
+    },
+    {
+      "anchors": [
+        {
+          "anchor_id": "uc-sublicense-25",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-4402cc3ce2408caba9:P000004"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "uc-sublicense-10",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-4402cc3ce2408caba9:P000005"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "uc-sublicense-5",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-4402cc3ce2408caba9:P000006"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "uc-royalty-rate",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-4402cc3ce2408caba9:P000009"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "uc-annual-cap",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-4402cc3ce2408caba9:P000008"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "uc-equity-not-royalty",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-4402cc3ce2408caba9:P000011"
+          ],
+          "present": true
+        }
+      ],
+      "candidate_count": 9,
+      "case_label": "UC / NeurogesX — paraphrased web excerpts only",
+      "input_sha256": "9eea1206763ca686b74484aa3469601f5d1bb1857b4211aac8d2fe9303ea5356",
+      "not_validated": [
+        "Complete original document authentication",
+        "Full-contract semantic recall",
+        "Model interpretation accuracy",
+        "SEC link availability",
+        "Subscription CLI"
+      ],
+      "note": "Anchor matches are deterministic screening tests only. Input may be a paraphrase, not the SEC document.",
+      "parser": "HTML_TEXT",
+      "passage_count": 11,
+      "schema": "m5-probe.1",
+      "source_filename": "neurogesx_excerpt_paraphrase.html",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1385830/000119312507022650/dex106.htm",
+      "status": "ANCHORS_PASS_NOT_RECALL_VALIDATED",
+      "text_sha256": "3ad0294bc0a3d8f95ddfd4fab43ef639610eb26a503f08b957f406641803a72e",
+      "unflagged_count": 2
+    },
+    {
+      "anchors": [
+        {
+          "anchor_id": "annex-c",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-ac52865db4769d8d1d:P000001"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "attachment-d",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-ac52865db4769d8d1d:P000002"
+          ],
+          "present": true
+        },
+        {
+          "anchor_id": "addendum-a",
+          "candidate_detected": true,
+          "pass": true,
+          "passage_ids": [
+            "DOC-ac52865db4769d8d1d:P000003"
+          ],
+          "present": true
+        }
+      ],
+      "candidate_count": 4,
+      "case_label": "Qualitative obligations",
+      "input_sha256": "86574c4939fedd0b46f8de23e5cc615a71a9d4060e0a68638fd5997e50f081fa",
+      "not_validated": [
+        "Complete original document authentication",
+        "Full-contract semantic recall",
+        "Model interpretation accuracy",
+        "SEC link availability",
+        "Subscription CLI"
+      ],
+      "note": "Anchor matches are deterministic screening tests only. Input may be a paraphrase, not the SEC document.",
+      "parser": "HTML_TEXT",
+      "passage_count": 4,
+      "schema": "m5-probe.1",
+      "source_filename": "indirect_payment.html",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1520358/000149315213000675/ex10-2.htm",
+      "status": "ANCHORS_PASS_NOT_RECALL_VALIDATED",
+      "text_sha256": "dd8b441f74dce158c78de17d9e1c9ebbeafd9d9f81bf859ff01edaeff2c701dc",
+      "unflagged_count": 0
+    }
+  ],
+  "schema": "m5-manifest-probes.1",
+  "status": "ALL_ANCHORS_PASS_NOT_RECALL_VALIDATED"
+}

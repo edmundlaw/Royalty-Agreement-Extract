@@ -1,0 +1,2536 @@
+{
+  "candidate_passages": [
+    "DOC-1a0c0bd2d22d32e9da:P000001",
+    "DOC-1a0c0bd2d22d32e9da:P000004",
+    "DOC-1a0c0bd2d22d32e9da:P000005",
+    "DOC-1a0c0bd2d22d32e9da:P000007",
+    "DOC-1a0c0bd2d22d32e9da:P000012",
+    "DOC-1a0c0bd2d22d32e9da:P000013",
+    "DOC-1a0c0bd2d22d32e9da:P000016",
+    "DOC-1a0c0bd2d22d32e9da:P000017",
+    "DOC-1a0c0bd2d22d32e9da:P000018",
+    "DOC-1a0c0bd2d22d32e9da:P000019",
+    "DOC-1a0c0bd2d22d32e9da:P000023",
+    "DOC-1a0c0bd2d22d32e9da:P000027",
+    "DOC-1a0c0bd2d22d32e9da:P000031",
+    "DOC-1a0c0bd2d22d32e9da:P000033",
+    "DOC-1a0c0bd2d22d32e9da:P000056",
+    "DOC-1a0c0bd2d22d32e9da:P000065",
+    "DOC-1a0c0bd2d22d32e9da:P000067",
+    "DOC-1a0c0bd2d22d32e9da:P000069",
+    "DOC-1a0c0bd2d22d32e9da:P000071",
+    "DOC-1a0c0bd2d22d32e9da:P000073",
+    "DOC-1a0c0bd2d22d32e9da:P000075",
+    "DOC-1a0c0bd2d22d32e9da:P000077",
+    "DOC-1a0c0bd2d22d32e9da:P000079",
+    "DOC-1a0c0bd2d22d32e9da:P000081",
+    "DOC-1a0c0bd2d22d32e9da:P000085",
+    "DOC-1a0c0bd2d22d32e9da:P000087",
+    "DOC-1a0c0bd2d22d32e9da:P000091",
+    "DOC-1a0c0bd2d22d32e9da:P000095",
+    "DOC-1a0c0bd2d22d32e9da:P000099",
+    "DOC-1a0c0bd2d22d32e9da:P000103",
+    "DOC-1a0c0bd2d22d32e9da:P000111",
+    "DOC-1a0c0bd2d22d32e9da:P000114",
+    "DOC-1a0c0bd2d22d32e9da:P000116",
+    "DOC-1a0c0bd2d22d32e9da:P000130",
+    "DOC-1a0c0bd2d22d32e9da:P000132",
+    "DOC-1a0c0bd2d22d32e9da:P000135",
+    "DOC-1a0c0bd2d22d32e9da:P000140"
+  ],
+  "candidate_reason_counts": {
+    "CROSS_REFERENCE": 18,
+    "DEFINED_TERM": 7,
+    "FINANCE_VOCAB": 16,
+    "INDIRECT_ECONOMICS": 1,
+    "MONEY": 3,
+    "PERCENT": 3,
+    "SPELLED_RATE": 3
+  },
+  "cross_references": [
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000001",
+      "references": [
+        "Exhibit 10.5"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000005",
+      "references": [
+        "Schedule A"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000023",
+      "references": [
+        "Section 6",
+        "Section 2.2"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000027",
+      "references": [
+        "Section 6"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000031",
+      "references": [
+        "Schedule B"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000033",
+      "references": [
+        "Schedule A",
+        "Section 8"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000056",
+      "references": [
+        "Schedule A"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000087",
+      "references": [
+        "Section 6.7"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000091",
+      "references": [
+        "Section 4"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000095",
+      "references": [
+        "Section 7"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000099",
+      "references": [
+        "Section 8.2"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000111",
+      "references": [
+        "Section 8.2"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000114",
+      "references": [
+        "Section 365",
+        "Section 14.2"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000116",
+      "references": [
+        "Section 6"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000130",
+      "references": [
+        "Section 11.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000132",
+      "references": [
+        "Section 11"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000135",
+      "references": [
+        "SECTION 11"
+      ]
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000140",
+      "references": [
+        "Section 13",
+        "Section 11"
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000012",
+      "term": "Annual Period"
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000013",
+      "term": "Business Day"
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000016",
+      "term": "Licensor Products"
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000017",
+      "term": "Person"
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000018",
+      "term": "Shop-within-a-Shop"
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000019",
+      "term": "Trademark"
+    },
+    {
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000071",
+      "term": "Net Sales"
+    }
+  ],
+  "document_id": "DOC-1a0c0bd2d22d32e9da",
+  "document_metadata": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1056285/000095017024115935/kirk-ex10_5.htm"
+  },
+  "mapped_at_utc": "2026-11-14T10:18:54+00:00",
+  "occurrence_manifest_sha256": "ab3f6ea5f559fbabe6434a5b90147ea851f6359bfe8d7408f345273f8b578048",
+  "original_sha256": "1418ae89e77d68c9f4054b1952f74daa491f5de99a13400467085920fe2ae619",
+  "parser_type": "HTML_TEXT",
+  "passages": [
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 12,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000001",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 1,
+      "start_offset": 0,
+      "text": "Exhibit 10.5"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000002",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 2,
+      "start_offset": 13,
+      "text": "TRADEMARK LICENSE AGREEMENT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 325,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000003",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 3,
+      "start_offset": 41,
+      "text": "This Trademark License Agreement (this “Agreement”) is entered into as of October 21, 2024 (the “Effective Date”) by and between Beyond, Inc., a Delaware corporation (“Licensor”), and Kirkland’s Inc., a Tennessee corporation (“Licensee”) (each a “Party”, and together, the “Parties”)."
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 1029,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000004",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 4,
+      "start_offset": 326,
+      "text": "WHEREAS, (i) Licensor and Kirkland’s Stores, Inc., a Tennessee corporation and a subsidiary of Licensee (“Borrower”) have entered that certain Term Loan Credit Agreement (the “Beyond Credit Agreement”) pursuant to which, on the terms and subject to the conditions set forth therein, Beyond has made term loans to Borrower in the aggregate principal amount of $17,000,000, and (ii) Licensor and Licensee have entered into that certain Subscription Agreement (the “Subscription Agreement”) pursuant to which, on the terms and subject to the conditions set forth therein, Licensee has agreed to issue and Licensor has agreed to subscribe for and purchase up to 4,324,324 shares of common stock of Licensee;"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 1669,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000005",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 5,
+      "start_offset": 1030,
+      "text": "WHEREAS, in connection with and as a condition to the consummation of the transactions contemplated by the Beyond Credit Agreement and the Subscription Agreement (the “Financing Transactions”), concurrently herewith, the Parties have entered into that certain Collaboration Agreement for the purpose of engaging in various collaborative efforts and services regarding their respective business operations (“Collaboration Agreement”), including Licensee’s operation of retail concept stores under Licensor’s Trademarks identified on Schedule A (“Licensed Marks”), as may be modified by the Parties, upon the terms and conditions herein; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1826,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000006",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 6,
+      "start_offset": 1670,
+      "text": "WHEREAS, the Parties have agreed to enter into this Agreement concurrently with the closing of the transactions contemplated by the Beyond Credit Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 2088,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000007",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 7,
+      "start_offset": 1827,
+      "text": "NOW, THEREFORE, in consideration of the foregoing, the mutual conditions and agreements set forth in this Agreement, and for other good and valuable consideration, the receipt and sufficiency of which is hereby acknowledged, the Parties hereto agree as follows:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2091,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000008",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 8,
+      "start_offset": 2089,
+      "text": "1."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2103,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000009",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 9,
+      "start_offset": 2092,
+      "text": "DEFINITIONS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2174,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000010",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 10,
+      "start_offset": 2104,
+      "text": "As used herein, the following terms shall have the following meanings:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2311,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000011",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 11,
+      "start_offset": 2175,
+      "text": "“Affiliate” of any Person means any Person, directly or indirectly, Controlling, Controlled by or under common Control with such Person."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 2684,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000012",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 12,
+      "start_offset": 2312,
+      "text": "“Annual Period” means each consecutive twelve (12) month period during the term of this Agreement commencing the 1st day of Licensee’s fiscal calendar, as reported in Licensee’s audited financial statements, and ending on the Saturday closest to the 31st day of January, except that the first Annual Period shall commence on the Effective Date and end on January 31, 2026."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 2877,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000013",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 13,
+      "start_offset": 2685,
+      "text": "“Business Day” means any day other than a Saturday, a Sunday or any day on which the Federal Reserve Bank of New York is authorized or required by law or executive order to close or be closed."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 3054,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000014",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 14,
+      "start_offset": 2878,
+      "text": "“Control” (including its correlative meanings “under common Control with” and “Controlled by”) means, with respect to any Person, the possession, directly or indirectly, of the"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 3240,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000015",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 15,
+      "start_offset": 3055,
+      "text": "power to direct or cause the direction of the management or policies of such Person, whether through ownership of securities or partnership or other interests, by contract or otherwise."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3498,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000016",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 16,
+      "start_offset": 3241,
+      "text": "“Licensor Products” means those products that are sourced by or on behalf of Licensor for retail sale on Licensor’s Bed, Bath & Beyond e-commerce site, overstock.com and such other branded retail channels as further described in the Collaboration Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3693,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000017",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 17,
+      "start_offset": 3499,
+      "text": "“Person” means an individual, corporation, partnership, limited liability company, joint venture, trust or unincorporated organization or a government or agency or political subdivision thereof."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 4238,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000018",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 18,
+      "start_offset": 3694,
+      "text": "“Shop-within-a-Shop” means a space within a Licensee-branded brick-and-mortar retail store that is branded with the Licensed Marks and reflects branding elements associated with the Licensed Marks and in which Licensee promotes, features and sells solely Licensor Products. A “Shop-within-a-Shop” may take the form of a pop-up shop, semi-permanent shop-within-a-shop, designated merchandised or branded areas within stores, end-caps or other merchandising and promotional settings, in each case, as mutually agreed to in writing by the Parties."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 4412,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000019",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 19,
+      "start_offset": 4239,
+      "text": "“Trademark” means all trademarks, brand names, trade dress, logos and other identifiers of source, together with all registrations and applications for registration thereof."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 4415,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000020",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 20,
+      "start_offset": 4413,
+      "text": "2."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 4430,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000021",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 21,
+      "start_offset": 4416,
+      "text": "LICENSE GRANTS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 4434,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000022",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 22,
+      "start_offset": 4431,
+      "text": "2.1"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 5733,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000023",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 23,
+      "start_offset": 4435,
+      "text": "Neighborhood Format Brick-and-Mortar Stores. Subject to the terms and conditions of this Agreement, including payment of royalties pursuant to Section 6, Licensor hereby grants to Licensee, during the term of this Agreement, a non-exclusive (except as set forth in Section 2.2), non-transferable, non-sublicensable license to operate brick-and-mortar retail stores branded under the Licensed Marks, in each case, in an in-store format ranging from 7,000 to 15,000 sq. ft. per store location, (which shall, for avoidance of doubt, exclude Shop-within-a-Shops) (such format, a “Neighborhood Format”), pursuant to the Collaboration Agreement or otherwise approved in writing by Licensor from time to time (“Licensed Stores”), including the advertising, marketing and promotion of such Licensed Stores; provided that the aesthetics of the Licensed Stores, the assortment of products therein and the concentration of the vendors of such products shall be substantially consistent with the historical practice of Licensor and its Affiliates and its or their predecessors in connection with their operation of retail stores under the Licensed Marks, unless Licensee obtains Licensor’s prior written consent to sell other products, which may be given or withheld in Licensor’s sole and absolute discretion."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 5737,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000024",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 24,
+      "start_offset": 5734,
+      "text": "2.2"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6039,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000025",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 25,
+      "start_offset": 5738,
+      "text": "Exclusivity. During the term of this Agreement, directly or indirectly, Licensor shall not, and shall not grant a license or right to any Affiliate or third party to, operate any BED BATH & BEYOND or BABY & BEYOND branded brick-and-mortar retail stores in the Neighborhood Format in the United States."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6043,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000026",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 26,
+      "start_offset": 6040,
+      "text": "2.3"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 6503,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000027",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 27,
+      "start_offset": 6044,
+      "text": "Shop-within-a-Shops. Subject to the terms and conditions of this Agreement, including payment of royalties pursuant to Section 6, Licensor hereby grants to Licensee, during the term of this Agreement, a non-exclusive, non-transferable, non-sublicensable, license to use the BED BATH & BEYOND marks and associated branding elements owned by Licensor to create and operate a Shop-within-a-Shop at the locations and in the size and format mutually agreed upon by"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6505,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000028",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 28,
+      "start_offset": 6504,
+      "text": "2"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6744,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000029",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 29,
+      "start_offset": 6506,
+      "text": "the Parties in writing from time to time, and to advertise, market and promote such Shop-within-a-Shops; provided that, in each Shop-within-a-Shop, Licensee shall solely promote, feature and sell Licensor Products as mutually agreed upon."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6748,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000030",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 30,
+      "start_offset": 6745,
+      "text": "2.4"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 7071,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000031",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 31,
+      "start_offset": 6749,
+      "text": "Subsidiaries. The licenses and rights set forth above and other rights set forth herein shall extend to each Licensee Affiliate set forth on Schedule B, but only for so long as they remain Affiliates of Licensee. Licensee shall be responsible for each such Licensee Affiliate’s compliance with the terms of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7075,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000032",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 32,
+      "start_offset": 7072,
+      "text": "2.5"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 7434,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000033",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 33,
+      "start_offset": 7076,
+      "text": "New Trademarks. Schedule A may be updated by the Parties from time to time upon the Parties’ mutual written agreement to reflect (i) a Trademark that uses, incorporates or modifies a Licensed Mark, and (ii) a Trademark acquired by Licensor and under which Licensee has the right to sell Licensed Products pursuant to Section 8 of the Collaboration Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7437,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000034",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 34,
+      "start_offset": 7435,
+      "text": "3."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7468,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000035",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 35,
+      "start_offset": 7438,
+      "text": "Ownership and use restrictions"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7472,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000036",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 36,
+      "start_offset": 7469,
+      "text": "3.1"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8302,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000037",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 37,
+      "start_offset": 7473,
+      "text": "Ownership, Goodwill and Reservation of Rights. Any rights not expressly granted in this Agreement are expressly reserved for Licensor. Licensor reserves all rights to the Licensed Marks except as specifically granted herein to Licensee and Licensor may exercise such rights at any time. Any and all goodwill arising from Licensee’s and its sublicensees’ use of the Licensed Marks shall inure solely to the benefit of Licensor. Licensee agrees that nothing in this Agreement shall give Licensee any right, title or interest in the Licensed Marks other than the right to use the Licensed Marks in accordance with this Agreement. Licensee is only licensed to use the Licensed Marks, and not any variations, adaptations, translations, abbreviations, localizations or derivatives thereof without the prior written consent of Licensor."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8306,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000038",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 38,
+      "start_offset": 8303,
+      "text": "3.2"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8637,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000039",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 39,
+      "start_offset": 8307,
+      "text": "No Inconsistent Action. Licensee shall not take any action or fail to take any action that would reasonably be expected, in any material respect, to impair or reduce the value or strength of any Licensed Mark, the reputation of Licensor or any of its Affiliates, or the goodwill associated with or symbolized by any Licensed Mark."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8641,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000040",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 40,
+      "start_offset": 8638,
+      "text": "3.3"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10092,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000041",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 41,
+      "start_offset": 8642,
+      "text": "Restrictions. Licensee acknowledges the validity and Licensor’s sole and exclusive ownership of the Licensed Marks, and shall not, directly or indirectly, (a) assert any claim of ownership or right in the Licensed Marks, other than the rights expressly granted pursuant to the license hereunder, (b) interfere with, oppose, cancel or otherwise challenge Licensor’s or its Affiliates’ registrations or applications for registration of the Licensed Marks (including domain name registrations), (c) apply for, or participate with or cause any other entity to apply for, the registration of any Licensed Marks or any logo, symbol, trademark, service mark, company or corporate name, product name, domain name or commercial slogan that comprises or is confusingly similar to any of the Licensed Marks, or (d) challenge the ownership or use of the Licensed Marks by Licensor or its Affiliates or its or their licensees. For avoidance of doubt, except in connection with advertising and promotional campaigns using the Licensed Marks to promote the Licensor Products in the Neighborhood Format or Shop-within-a-Shops locations as approved by the Review Committee on a case-by-case basis, Licensee shall not have the right to use the Licensed Marks in any domain name or on or in connection with any online, mobile or other electronic stores or social media accounts. Any violation of the foregoing shall be deemed a material and uncurable default hereunder."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10094,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000042",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 42,
+      "start_offset": 10093,
+      "text": "3"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10098,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000043",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 43,
+      "start_offset": 10095,
+      "text": "3.4"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10804,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000044",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 44,
+      "start_offset": 10099,
+      "text": "Confusing Use. Licensee shall not use the Licensed Marks in any manner likely to cause confusion or doubt in the mind of the public as to the ownership and control thereof or in any manner that does not make clear that the Licensed Marks are owned and controlled exclusively by Licensor. In addition, except to the extent approved in writing by Licensor, Licensee shall not use or co-mingle with the Licensed Marks any other trademarks, characters or properties, whether owned by Licensee or another, so as to suggest that such other trademarks, etc. may have been created or may be owned, controlled, licensed or approved by Licensor or that they are in any way related to the Licensed Marks or Licensor."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10808,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000045",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 45,
+      "start_offset": 10805,
+      "text": "3.5"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11619,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000046",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 46,
+      "start_offset": 10809,
+      "text": "Customer Complaints. Licensee shall, in connection with its duty to use the Licensed Marks so as to promote the continuing goodwill thereof, give immediate attention and take necessary action to satisfy all legitimate customer complaints brought against Licensee in connection with the Licensed Stores or Shop-within-a-Shops or products or services provided therein. Licensee shall give Licensor notice within five (5) days of receipt of all complaints that might reasonably be expected to affect the good standing of the Licensed Marks or the reputation of Licensor and also of all complaints that might reasonably be expected to result in legal action between Licensor and any third party, and cooperate with Licensor upon request to achieve as good a reputation and press for the Licensed Marks as possible."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11622,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000047",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 47,
+      "start_offset": 11620,
+      "text": "4."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11665,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000048",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 48,
+      "start_offset": 11623,
+      "text": "Registration, infringement and enforcement"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11669,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000049",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 49,
+      "start_offset": 11666,
+      "text": "4.1"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12087,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000050",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 50,
+      "start_offset": 11670,
+      "text": "Registration. Licensor shall, in its reasonable discretion, prosecute and maintain the applications and registrations for the Licensed Marks during the term of this Agreement at Licensor’s sole cost and expense. Licensor may, in its discretion, seek to apply for the registration of New Trademarks in any jurisdiction. Licensee shall not seek to apply for the registration of the Licensed Marks or any New Trademarks."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12091,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000051",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 51,
+      "start_offset": 12088,
+      "text": "4.2"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12628,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000052",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 52,
+      "start_offset": 12092,
+      "text": "Infringement; Enforcement. Licensee shall promptly inform Licensor in writing of any infringement, dilution, or other violation of a Licensed Mark of which Licensee becomes aware and shall reasonably cooperate with Licensor, at Licensor’s reasonable expense, in the protection and defense of the Licensed Marks. Licensor shall, in its reasonable discretion, defend and enforce the Licensed Marks. For avoidance of doubt, Licensor shall have the sole and exclusive right, but not the obligation, to defend and enforce the Licensed Marks."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12631,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000053",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 53,
+      "start_offset": 12629,
+      "text": "5."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12647,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000054",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 54,
+      "start_offset": 12632,
+      "text": "Quality control"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12651,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000055",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 55,
+      "start_offset": 12648,
+      "text": "5.1"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 13597,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000056",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 56,
+      "start_offset": 12652,
+      "text": "Branding Guidelines. The Review Committee (as defined in the Collaboration Agreement) shall manage all matters that require the Parties’ cooperation or consultation with each other under this Agreement. Licensee shall use the Licensed Marks in accordance with (a) the specifications set forth on Schedule A and (b) in a manner that is consistent with the branding guidelines provided by Licensor to Licensee in writing from time to time (the “Branding Guidelines”). Licensor agrees to consider in good faith any revisions to the Branding Guidelines that are proposed by the Review Committee; however, Licensor shall have the right to accept or reject any such proposals in its sole discretion. Licensee shall obtain Licensor’s prior written approval or approval of the Review Committee for all advertising, marketing and promotional materials bearing the Licensed Marks, which approval shall not be unreasonably withheld, conditioned or delayed."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13599,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000057",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 57,
+      "start_offset": 13598,
+      "text": "4"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13603,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000058",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 58,
+      "start_offset": 13600,
+      "text": "5.2"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14451,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000059",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 59,
+      "start_offset": 13604,
+      "text": "Quality Standards. The quality of the goods and services sold, provided or otherwise commercialized by Licensee in the Licensed Stores and Shop-within-a-Shops will be of the same or higher quality as the goods and services sold, provided, or otherwise commercialized by Licensor and its Affiliates and its or their predecessors in connection with the Licensed Marks at its or their brick-and-mortar stores historically, and at least of a quality so as to maintain the value, reputation and goodwill of Licensor, its Affiliates and the Licensed Marks. Licensee agrees to undertake any actions that Licensor may reasonably request to assist Licensor in inspecting and monitoring the quality of the goods and services offered in the Licensed Stores and Shop-within-a-Shops and the use of the Licensed Marks in connection with such goods and services."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14455,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000060",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 60,
+      "start_offset": 14452,
+      "text": "5.3"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14916,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000061",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 61,
+      "start_offset": 14456,
+      "text": "Compliance with Law. Licensee shall only use the Licensed Marks in compliance with applicable laws, and shall comply with all applicable laws and obtain all appropriate governmental approvals pertaining to (a) the operation of Licensee’s business, (b) the sale, provision, or other commercialization of goods and services in the Licensed Stores and Shop-within-a-Shops, and (c) any other activities conducted by Licensee in association with the Licensed Marks."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14920,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000062",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 62,
+      "start_offset": 14917,
+      "text": "5.4"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 15419,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000063",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 63,
+      "start_offset": 14921,
+      "text": "Notices and Legends. In all uses of the Licensed Marks, Licensee shall include all notices and legends with respect to the Licensed Marks as reasonably requested by Licensor, and, to the extent practical, shall place the symbols “®”, “™” or “℠”, as applicable, or other designations legally required or useful for enforcement of trademark or service mark rights, next to the Licensed Marks consistent with the same manner in which Licensor and its Affiliates use such symbols or other designations."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 15422,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000064",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 64,
+      "start_offset": 15420,
+      "text": "6."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 15439,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000065",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 65,
+      "start_offset": 15423,
+      "text": "FEES AND PAYMENT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 15443,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000066",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 66,
+      "start_offset": 15440,
+      "text": "6.1"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_RATE",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 15927,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000067",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 67,
+      "start_offset": 15444,
+      "text": "Royalties. Licensee shall pay to Licensor a royalty of three percent (3%) on all Net Sales of products and services sold through the Licensed Stores and Shop-within-a-Shops (inclusive of buy-online-pay-in-store (BOPIS) amounts generated from Licensor e-commerce websites), which shall increase to five percent (5%) upon any expiration or termination of the Collaboration Agreement, less the amount of Guaranteed Minimum Royalty paid with respect to such period (the “Sales Royalty”)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 15931,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000068",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 68,
+      "start_offset": 15928,
+      "text": "6.2"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 16475,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000069",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 69,
+      "start_offset": 15932,
+      "text": "Guaranteed Minimum Royalty. Commencing upon the opening of the first licensed Neighborhood Format location, Licensee shall pay to Licensor a “Guaranteed Minimum Royalty” of Sales Royalties, in the aggregate, equal to (a) two-hundred thousand dollars ($200,000) over the first twenty-four (24) months of the term of this Agreement (payable in monthly installments) and (b) three-hundred thousand dollars ($300,000) per Annual Period (twenty-five thousand dollars ($25,000) payable per month) thereafter, pro-rated for any partial Annual Period."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 16479,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000070",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 70,
+      "start_offset": 16476,
+      "text": "6.3"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 17356,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000071",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 71,
+      "start_offset": 16480,
+      "text": "Net Sales. As used herein, “Net Sales” means mean the gross sales (the gross invoice amount billed customers) of products and services (including sales of warranty policies, insurance and other similar products and services) based on the invoiced price to such customers by or on behalf of Licensee, less only the following actual and allowable deductions: (a) returns (or destruction in place) that Licensee actually authorizes and, for returns, Licensee actually receives, (b) allowances (defined as credits to a customer after delivery, including credits for returns, promotions and markdowns), (c) trade discounts (defined as reductions in the list wholesale selling price that are customary in the trade) that Licensee actually grants in writing prior to delivery, and (d) sales tax (but only to the extent the same appear separately on Licensee’s invoice), provided that"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 17358,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000072",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 72,
+      "start_offset": 17357,
+      "text": "5"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_RATE",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 18324,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000073",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 73,
+      "start_offset": 17359,
+      "text": "“Net Sales” shall include any products shipped to a customer in exchange for returned products. No deduction shall be made for any other discounts, uncollected accounts, commissions, levies, duties, or for the cost of any expenses, direct or indirect, incurred in operating or selling products or services through the Licensed Stores and Shop-within-a-Shops. “Net Sales” also includes insurance proceeds received by Licensee in respect of products and services sold through the Licensed Stores and Shop-within-a-Shops, but only to the extent that such insurance proceeds paid with respect to any such products exceed Licensee’s cost incurred for such products and services. In all events, the total of any and all deductions taken by Licensee pursuant to this Section in calculating “Net Sales” shall not exceed the actual amount of all allowable deductions or six percent (6%) of the total amount of gross sales, whichever amount is less, during any Annual Period."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 18328,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000074",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 74,
+      "start_offset": 18325,
+      "text": "6.4"
+    },
+    {
+      "candidate_reasons": [
+        "INDIRECT_ECONOMICS",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 19393,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000075",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 75,
+      "start_offset": 18329,
+      "text": "Payment. The Guaranteed Minimum Royalty for each month during an Annual Period shall be paid within thirty (30) days after the end of such month during the term of this Agreement (or portion thereof in the event of prior termination for any reason). The Sales Royalty hereunder shall be accounted for and paid monthly within thirty (30) days after the close of each month during the term of this Agreement (or portion thereof in the event of prior termination for any reason). The Sales Royalty payable for each month shall be computed on the basis of Net Sales during such month, and shall be reduced by the amount of the Guaranteed Minimum Royalty paid for such month. All payments to Licensor under this Agreement shall be paid in U.S. Dollars, by wire transfer in accordance with the wire instructions provided by Licensor. Wire transfer fees as well as all other bank fees related to any payments required of Licensee under this Agreement shall be the sole expense of Licensee, so that Licensor shall receive the full amount of all payments without reduction."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 19397,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000076",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 76,
+      "start_offset": 19394,
+      "text": "6.5"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 21241,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000077",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 77,
+      "start_offset": 19398,
+      "text": "Taxes. All payments made by the Licensee under this Agreement shall be made free and clear of, and without deduction or withholding for or on account of, any present or future income, turnover, sales, value added stamp or other taxes, government withholding tax, levies, imposts, duties, charges, fees, deductions or withholdings (individually or collectively, “Taxes”), now or hereafter imposed, levied, collected, withheld or assessed by any tax or other governmental authority. In the event that any Taxes are now or hereafter required to be imposed, levied, collected, withheld, paid and/or assessed under applicable law from, or in respect of, any amount otherwise payable to the Licensor hereunder, then (x) the Licensee shall pay over to the relevant governmental authority the amount of such Taxes required to be paid by it under applicable law, (y) the Licensee shall deliver to the Licensor as soon as practicable after the Licensee’s payment of such Taxes a certified copy of a receipt issued by the relevant governmental authority evidencing such payment or such other evidence of such payment reasonably satisfactory to the Licensor, and (z) the amount so payable by the Licensee to the Licensor shall be increased and grossed-up to the extent necessary to yield to the Licensor the amount specified in the Agreement as being payable to the Licensor had such Taxes not been imposed, levied, collected, withheld, paid and/or assessed (including with respect to any increased and gross-up amounts). To the extent any such Taxes are paid or payable by the Licensor, a certificate delivered to the Licensee by the Licensor as to the amount of such Taxes shall be conclusive absent manifest error and the Licensee shall pay to the Licensor the required grossed-up amount within 10 days after the Licensor’s deliver of such certificate."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 21245,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000078",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 78,
+      "start_offset": 21242,
+      "text": "6.6"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 21431,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000079",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 79,
+      "start_offset": 21246,
+      "text": "Late Payments. Licensee shall pay interest on any amounts owed but not paid by the applicable due date at a rate equivalent to the applicable Prime Rate (as defined in the Collaboration"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 21433,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000080",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 80,
+      "start_offset": 21432,
+      "text": "6"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 21565,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000081",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 81,
+      "start_offset": 21434,
+      "text": "Agreement) per annum from the date such payment was due (but not more than the maximum rate of interest which legally can be paid)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 21569,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000082",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 82,
+      "start_offset": 21566,
+      "text": "6.7"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 21586,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000083",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 83,
+      "start_offset": 21570,
+      "text": "Sales Statement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 21590,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000084",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 84,
+      "start_offset": 21587,
+      "text": "(a)"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 22914,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000085",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 85,
+      "start_offset": 21591,
+      "text": "Licensee shall deliver to Licensor at the time each Sales Royalty payment is due, a statement signed by a duly authorized officer of Licensee and certified by him or her as accurate indicating per Licensed Store and Shop-within-a-Shop: (a) by product category, by style number, by customer and in the aggregate, the number and aggregate invoice price of all products and services sold through the Licensed Stores and Shop-within-a-Shops during the period covered by such Sales Royalty payment and the amount of discounts, allowances, returns and any other deductions from gross sales, (b) a separate list of all SKUs of Licensor Products actually sold during the reporting period, (c) the amount of any insurance proceeds received by Licensee in respect of products and services during said period, and setting forth a computation of the amount of Sales Royalty payable hereunder for said period (“Sales Statement”). The reporting period for each Sales Statement shall be the prior calendar month, and the format of the Sales Statement shall be mutually agreed upon by the Parties. Such statement shall be furnished to Licensor whether or not any products or services have been purchased during the reporting period for which such statement is due. A copy of the foregoing reports shall be sent to Licensor in Excel format."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22918,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000086",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 86,
+      "start_offset": 22915,
+      "text": "(b)"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 23404,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000087",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 87,
+      "start_offset": 22919,
+      "text": "In addition to the Sales Statement for the final calendar month of each Annual Period, Licensee shall deliver to Licensor, not later than sixty (60) days after the close of each Annual Period (or portion thereof in the event of prior termination for any reason), a statement signed and certified by its chief executive or financial officer relating to said entire Annual Period, setting forth the same information required to be submitted by Licensee in accordance with Section 6.7(a)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23407,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000088",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 88,
+      "start_offset": 23405,
+      "text": "7."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23434,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000089",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 89,
+      "start_offset": 23408,
+      "text": "BOOKS AND RECORDS; AUDITS."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23438,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000090",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 90,
+      "start_offset": 23435,
+      "text": "(a)"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 25072,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000091",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 91,
+      "start_offset": 23439,
+      "text": "Licensee shall prepare and maintain, in such manner as will allow its accountants to audit same in accordance with generally accepted accounting principles, separate, complete and accurate books of account and records (specifically including the originals or copies of documents supporting entries in the books of account) covering all transactions arising out of or relating to this Agreement. Licensor and its duly authorized representatives, may, during regular business hours at times agreed upon by the Parties and with at least thirty (30) days prior written notice, for the duration of this Agreement and for three (3) years thereafter, audit said books of account and records and examine all other documents and material in the possession or under the control of Licensee as necessary to verify Licensee’s compliance with its obligations under this Agreement; and Licensor shall have free and full access thereto for said purposes and for the purpose of making abstracts therefrom and copies thereof. All copies and information accessed, produced or obtained in connection with such audit is the Confidential Information of Licensee and shall be protected as such under Section 4 of the Collaboration Agreement. Any such audit commenced within such period may continue through completion in the ordinary course; provided, that such audit is conducted in a manner designed to minimize disruption to Licensee’s business. All such books of account, records and documents, including computer records, shall be kept available by Licensee for at least three (3) years (or such longer period as required by law) after the end of the"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25074,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000092",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 92,
+      "start_offset": 25073,
+      "text": "7"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25180,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000093",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 93,
+      "start_offset": 25075,
+      "text": "term of this Agreement and through the completion of any audit commenced prior to the end of such period."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25184,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000094",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 94,
+      "start_offset": 25181,
+      "text": "(b)"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_RATE",
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 25978,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000095",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 95,
+      "start_offset": 25185,
+      "text": "If any examination or audit discloses that the payments required to be made under this Agreement exceeded the payments actually made (each a “Shortfall”), Licensee shall pay the Shortfall together with interest on the Shortfall at a rate equivalent to the applicable Prime Rate (as defined in the Collaboration Agreement) per annum from the date such payment was due (but not more than the maximum rate of interest which legally can be paid). In addition, if any examination or audit discloses that the Shortfall exceeds four percent (4%) for any calendar month, Licensee shall also pay the cost of such examination or audit in addition to the Shortfall and interest. All payments due pursuant to this Section 7(b) shall be made within fifteen (15) days after Licensee receives notice thereof."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25981,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000096",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 96,
+      "start_offset": 25979,
+      "text": "8."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26002,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000097",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 97,
+      "start_offset": 25982,
+      "text": "TERM AND TERMINATION"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26006,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000098",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 98,
+      "start_offset": 26003,
+      "text": "8.1"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 26381,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000099",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 99,
+      "start_offset": 26007,
+      "text": "Term. The term of this Agreement will commence on the Effective Date and, subject to earlier termination under Section 8.2, will continue until the later of (a) the expiration or termination of the Collaboration Agreement, or (b) the expiration of the then-existing term or initial term (not to exceed five (5) years), as applicable, of the lease(s) for all Licensed Stores."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26385,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000100",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 100,
+      "start_offset": 26382,
+      "text": "8.2"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26519,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000101",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 101,
+      "start_offset": 26386,
+      "text": "Termination for Breach. Without limiting any of Licensor’s other remedies at law or in equity, Licensor may terminate this Agreement:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26523,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000102",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 102,
+      "start_offset": 26520,
+      "text": "(a)"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 27022,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000103",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 103,
+      "start_offset": 26524,
+      "text": "on seven (7) Business Days’ prior written notice (such notice effective upon expiration of the seven (7) Business Day notice period) if Licensee fails to (i) furnish the Sales Royalty when due and/or Sales Statements required hereunder, or (ii) pay any other undisputed amounts due or invoiced hereunder, such notice of termination shall become effective unless, within such seven (7) Business Day period, Licensee shall completely remedy the breach and furnish the required payments and/or report;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27026,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000104",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 104,
+      "start_offset": 27023,
+      "text": "(b)"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27303,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000105",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 105,
+      "start_offset": 27027,
+      "text": "on thirty (30) days’ prior written notice (such termination effective upon expiration of the thirty (30) day notice period) for any other material breach of this Agreement by Licensee, in the event that Licensee fails to cure such breach within such thirty (30) day period; or"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27307,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000106",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 106,
+      "start_offset": 27304,
+      "text": "(c)"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27889,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000107",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 107,
+      "start_offset": 27308,
+      "text": "if, in Licensor’s reasonable opinion, Licensee’s ability to perform under this Agreement is or will be impaired due to Licensee’s financial inability to comply with its anticipated obligations under this Agreement; a petition in bankruptcy is filed by or against Licensee; Licensee is adjudicated bankrupt or insolvent, or makes an assignment for the benefit of creditors or an arrangement pursuant to any bankruptcy law; Licensee discontinues its business; or a receiver is appointed for Licensee or Licensee’s business and such receiver is not discharged within thirty (30) days."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27893,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000108",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 108,
+      "start_offset": 27890,
+      "text": "8.3"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27905,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000109",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 109,
+      "start_offset": 27894,
+      "text": "Bankruptcy."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27909,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000110",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 110,
+      "start_offset": 27906,
+      "text": "(a)"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 28257,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000111",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 111,
+      "start_offset": 27910,
+      "text": "No assignee for the benefit of creditors, custodian, receiver, trustee in bankruptcy, sheriff or any other officer of the court or official charged with taking over custody of Licensee’s assets or business may continue this Agreement or exploit or in any way use the Licensed Marks if Licensor terminates this Agreement pursuant to Section 8.2(c)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 28259,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000112",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 112,
+      "start_offset": 28258,
+      "text": "8"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 28263,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000113",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 113,
+      "start_offset": 28260,
+      "text": "(b)"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 28908,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000114",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 114,
+      "start_offset": 28264,
+      "text": "In the event of a Licensee bankruptcy proceeding, the Parties acknowledge and agree that: (i) this Agreement is an executory contract within the meaning of Section 365 of Bankruptcy Code; and (ii) as set forth in Section 14.2 below, Licensor, in its interest to safeguard its valuable interests (including, without limitation, the Licensed Marks), has relied on the particular identity, skill and knowledge of the Licensee and, as a result, this Agreement: (A) is personal in nature to the Licensee; (B) is an agreement of the type described by Sections 365(c)(1) and 365(e)(2)(A) of the Bankruptcy Code; and (C) may not be assumed or assigned."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 28912,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000115",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 115,
+      "start_offset": 28909,
+      "text": "8.4"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 30213,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000116",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 116,
+      "start_offset": 28913,
+      "text": "Effect of Termination. Within ten (10) days after the expiration or any termination hereof, Licensee shall pay to Licensor any Guaranteed Minimum Royalty installments and Sales Royalty then owed to it pursuant to this Agreement. Upon expiration or termination of this Agreement, the licenses granted by this Agreement shall immediately and automatically terminate, and Licensee shall cease and desist from all use of the Licensed Marks. Notwithstanding the foregoing, if Licensee is not in breach of this Agreement as of the date of termination or expiration, upon request from Licensee, Licensor will grant Licensee an additional six (6) month period to transition off the use of the Licensed Marks (the “Transition Period”), provided that Licensor determines, in its reasonable discretion, that there is no material risk of Licensee failing to pay the Sales Royalty for the Transition Period. This Agreement shall remain in effect during any such Transition Period (including Licensee’s obligation to pay royalties pursuant to Section 6). The following provisions shall survive termination or expiration of this Agreement (or the Transition Period, if applicable): Sections 1, 3, 7 (for the time period set forth therein), 8.3, 8.4, 9, 10, 11, 12, 13 (for the time period set forth therein) and 14."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30216,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000117",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 117,
+      "start_offset": 30214,
+      "text": "9."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30247,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000118",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 118,
+      "start_offset": 30217,
+      "text": "representations and WARRANTIES"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30678,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000119",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 119,
+      "start_offset": 30248,
+      "text": "Each Party represents and warrants to the other Party that: (a) it has the full right, power, and authority to enter into this Agreement, to grant the rights and licenses granted hereunder, and to perform its obligations hereunder; and (b) when executed and delivered by such Party, this Agreement will constitute the legal, valid, and binding obligation of such Party, enforceable against such Party in accordance with its terms."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30682,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000120",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 120,
+      "start_offset": 30679,
+      "text": "10."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30707,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000121",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 121,
+      "start_offset": 30683,
+      "text": "DISCLAIMER OF WARRANTIES"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31235,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000122",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 122,
+      "start_offset": 30708,
+      "text": "LICENSEE ACKNOWLEDGES AND AGREES THAT THE LICENSED MARKS ARE LICENSED “AS IS”, WITHOUT WARRANTY OF ANY KIND, AND THAT LICENSOR DOES NOT MAKE, AND SPECIFICALLY DISCLAIMS, ANY REPRESENTATIONS OR WARRANTIES WITH RESPECT TO THE LICENSED MARKS, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE (INCLUDING ANY IMPLIED WARRANTY OF NONINFRINGEMENT, SUFFICIENCY, QUALITY, USEFULNESS, COMMERCIAL UTILITY, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE AND IMPLIED WARRANTIES ARISING FROM COURSE OF DEALING OR COURSE OF PERFORMANCE)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31239,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000123",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 123,
+      "start_offset": 31236,
+      "text": "11."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31255,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000124",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 124,
+      "start_offset": 31240,
+      "text": "indemnification"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31260,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000125",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 125,
+      "start_offset": 31256,
+      "text": "11.1"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31545,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000126",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 126,
+      "start_offset": 31261,
+      "text": "Indemnification by Licensor. Licensor shall indemnify, defend and hold harmless Licensee and its Affiliates and its and their respective officers, directors, equityholders, employees and agents (“Licensee Indemnitees”) from and against any and all damages, losses, liabilities, costs,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31547,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000127",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 127,
+      "start_offset": 31546,
+      "text": "9"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31949,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000128",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 128,
+      "start_offset": 31548,
+      "text": "expenses and other payments (“Losses”) resulting from a demand, claim, lawsuit, or action asserted by any third Person against any of the Licensee Indemnitees to the extent such Losses arise out of or are in connection with allegations that Licensee’s use of a Licensed Mark in compliance with this Agreement infringes, dilutes or otherwise violates the intellectual property rights of a third Person."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31954,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000129",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 129,
+      "start_offset": 31950,
+      "text": "11.2"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 32772,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000130",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 130,
+      "start_offset": 31955,
+      "text": "Indemnification by Licensee. Licensee shall indemnify, defend and hold harmless Licensor and its Affiliates and its and their respective officers, directors, equityholders, employees and agents (“Licensor Indemnitees”) from and against any and all Losses resulting from a demand, claim, lawsuit, or action asserted by any third Person against any of the Licensor Indemnitees to the extent such Losses arise out of or are in connection with (a) Licensee’s operation of the Licensed Stores or Shop-within-a-Shops, including the sale, distribution and other commercialization of products and services through the Licensed Stores or Shop-within-a-Shops, with the exception of claims for which Licensor is required to indemnify the Licensee Indemnitees pursuant to Section 11.1, or (b) Licensee’s breach of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32777,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000131",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 131,
+      "start_offset": 32773,
+      "text": "11.3"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 34645,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000132",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 132,
+      "start_offset": 32778,
+      "text": "Indemnity Procedures. If any claim or action is asserted against any Licensee Indemnitee or Licensor Indemnitee (each, an “Indemnified Party”) that would entitle such Indemnified Party to indemnification pursuant to this Section 11 (a “Proceeding”), the Indemnified Party will give prompt written notice thereof to the other party (the “Indemnifying Party”); provided, however, that the failure of any Indemnified Party to give timely notice hereunder will not affect its rights to indemnification hereunder, except to the extent that the Indemnifying Party demonstrates actual damage caused by such failure. The Indemnifying Party may elect to direct the defense or settlement of any such Proceeding by giving written notice to the Indemnified Party, which election will be effective immediately upon receipt by the Indemnified Party of such written notice of election. The Indemnifying Party will have the right to employ counsel reasonably acceptable to the Indemnified Party to defend any such Proceeding, or to compromise, settle or otherwise dispose of the same, if the Indemnifying Party deems it advisable to do so, all at the expense of the Indemnifying Party; provided that the Indemnifying Party will not settle, or consent to any entry of judgment in, any Proceeding without obtaining either: (a) an unconditional release of the Indemnified Party from all liability with respect to all claims underlying such Proceeding; or (b) the prior written consent of the Indemnified Party. An Indemnified Party will not settle, or consent to any entry of judgment, in any Proceeding without obtaining the prior written consent of the Indemnifying Party. Each Indemnifying Party and Indemnified Party will fully cooperate with each other in any such Proceeding and will make available to each other any books or records useful for the defense of any such Proceeding."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34649,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000133",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 133,
+      "start_offset": 34646,
+      "text": "12."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34673,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000134",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 134,
+      "start_offset": 34650,
+      "text": "LIMITATION OF LIABILITY"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 35263,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000135",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 135,
+      "start_offset": 34674,
+      "text": "WITH THE EXCEPTION OF LICENSOR’S INDEMNIFICATION OBLIGATIONS UNDER SECTION 11 AND LIABILITY ARISING FROM LICENSOR’S GROSS NEGLIGENCE OR WILLFUL MISCONDUCT, TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR SHALL NOT BE LIABLE UNDER THIS AGREEMENT TO LICENSEE OR ANY OTHER PERSON FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, RELIANCE OR PUNITIVE DAMAGES OR LOST OR IMPUTED PROFITS, OR COST OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, WHETHER LIABILITY IS ASSERTED IN CONTRACT, TORT (INCLUDING NEGLIGENCE AND STRICT PRODUCT LIABILITY) OR CONTRIBUTION, AND IRRESPECTIVE OF WHETHER"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 35266,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000136",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 136,
+      "start_offset": 35264,
+      "text": "10"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 35361,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000137",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 137,
+      "start_offset": 35267,
+      "text": "LICENSOR OR ANY RELATED ENTITY HAS BEEN ADVISED OF THE POSSIBILITY OF ANY SUCH LOSS OR DAMAGE."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 35365,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000138",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 138,
+      "start_offset": 35362,
+      "text": "13."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 35375,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000139",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 139,
+      "start_offset": 35366,
+      "text": "INSURANCE"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 37801,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000140",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 140,
+      "start_offset": 35376,
+      "text": "Simultaneously with the execution of this Agreement, Licensee shall promptly obtain and maintain in full force and effect at all times during the term of this Agreement and for at least three (3) years thereafter, at its own cost and expense, commercial general liability insurance on a per occurrence form, including broad form coverage for contractual liability, property damage, products liability and personal injury liability (including bodily injury and death), waiving subrogation, all which is satisfactory to Licensor, in the amount of $5,000,000 of primary and umbrella coverage from one or more insurance companies, each with a Best’s rating of “A” or better, and qualified to transact business in the territories where the Licensed Stores and Shop-within-a-Shops are located. Licensee also agrees to maintain in full force and effect at all times while this Agreement is in effect such Worker’s Compensation Insurance as is required by applicable law and Employer’s Liability Insurance with coverage as is customary for similarly situated companies. All insurance shall be primary and not contributory. All of said insurance shall: (a) provide for coverage resulting from claims reported after the policy period; (b) name Licensor as an additional insured; and (c) provide for at least thirty (30) days’ prior written notice to Licensor of any cancellation, modification, surrender, or any other action that would affect Licensor’s status or benefits thereunder. During the term of this Agreement, Licensee shall promptly furnish or cause to be furnished to Licensor evidence, in form and substance satisfactory to Licensor, of the maintenance and renewal of the insurance required herein, including copies of policies with applicable riders and endorsements, certificates of insurance, and continuing certificates of insurance. Contemporaneously with the execution and delivery of this Agreement, evidence of the full force and effect of the insurance required herein shall be delivered to Licensor. In all events, Licensor shall under no circumstances operate any Licensed Stores or Shop-within-a-Shops at any time or times when Licensee knows or should know that the insurance required herein has not been acquired, has been cancelled or for any other reason is not in full force and effect. Nothing contained in this Section 13 shall be deemed to limit in any way the indemnification provisions of Section 11."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 37805,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000141",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 141,
+      "start_offset": 37802,
+      "text": "14."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 37819,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000142",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 142,
+      "start_offset": 37806,
+      "text": "MISCELLANEOUS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 37824,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000143",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 143,
+      "start_offset": 37820,
+      "text": "14.1"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 38264,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000144",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 144,
+      "start_offset": 37825,
+      "text": "Independent Contractor. Neither Party is and shall not represent itself to be a subsidiary, affiliate, legal representative, agent, employee, or partner of the other Party or otherwise connected with the other Party, except Licensee as an independent distributor of the Licensor Products in Shop-within-a-Shops, and neither Party shall have the authority to assume, create or incur any obligation or liability on behalf of the other Party."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 38269,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000145",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 145,
+      "start_offset": 38265,
+      "text": "14.2"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 39033,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000146",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 146,
+      "start_offset": 38270,
+      "text": "Assignment. Nothing herein shall restrict Licensor from assigning or transferring any Licensed Marks to any Person; provided that any such transfer shall have no effect on the license granted to Licensee hereunder, and the Licensed Marks shall remain subject to this Agreement. This Agreement is personal to Licensee, and neither this Agreement nor any of the rights of Licensee hereunder shall be sold, transferred or assigned by Licensee by operation of law or otherwise, without the prior written consent of the Licensor. Any assignment, transfer, hypothecation, pledge or encumbrance of this Agreement by Licensee in violation of the foregoing shall be void from the beginning and constitute a material breach of this Agreement. Subject to the foregoing, this"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 39036,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000147",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 147,
+      "start_offset": 39034,
+      "text": "11"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 39222,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000148",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 148,
+      "start_offset": 39037,
+      "text": "Agreement shall be binding upon and shall inure to the benefit of the Parties and their respective successors (whether by contract, operation of law or otherwise) and permitted assigns."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 39227,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000149",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 149,
+      "start_offset": 39223,
+      "text": "14.3"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 39965,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000150",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 150,
+      "start_offset": 39228,
+      "text": "Notices. All notices, requests, consents, claims, demands, waivers, and other communications hereunder (each, a “Notice”) shall be in writing and addressed to the Parties at the addresses set forth below (or to such other address that may be designated by the receiving Party from time to time in accordance herewith). All Notices shall be delivered by personal delivery, nationally recognized overnight courier (with all fees pre-paid), or certified or registered mail (in each case, return receipt requested, postage pre-paid). Except as otherwise provided in this Agreement, a Notice is effective only: (a) upon receipt by the receiving Party; and (b) if the Party giving the Notice has complied with the requirements of this Section."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40017,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000151",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 151,
+      "start_offset": 39966,
+      "text": "Licensor shall send notices to Licensee as follows:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40034,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000152",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 152,
+      "start_offset": 40018,
+      "text": "Kirkland’s, Inc."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40052,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000153",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 153,
+      "start_offset": 40035,
+      "text": "5310 Maryland Way"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40079,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000154",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 154,
+      "start_offset": 40053,
+      "text": "Brentwood, Tennessee 37027"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40134,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000155",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 155,
+      "start_offset": 40080,
+      "text": "Attn: Amy Sullivan, President, Chief Executive Officer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40206,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000156",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 156,
+      "start_offset": 40135,
+      "text": "W. Michael Madden, Executive Vice President and Chief Financial Officer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40222,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000157",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 157,
+      "start_offset": 40207,
+      "text": "With a copy to:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40239,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000158",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 158,
+      "start_offset": 40223,
+      "text": "Kirkland’s, Inc."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40257,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000159",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 159,
+      "start_offset": 40240,
+      "text": "5310 Maryland Way"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40284,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000160",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 160,
+      "start_offset": 40258,
+      "text": "Brentwood, Tennessee 37027"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40319,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000161",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 161,
+      "start_offset": 40285,
+      "text": "Attn: Carter Todd, General Counsel"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40371,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000162",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 162,
+      "start_offset": 40320,
+      "text": "Licensee shall send notices to Licensor as follows:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40384,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000163",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 163,
+      "start_offset": 40372,
+      "text": "Beyond, Inc."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40404,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000164",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 164,
+      "start_offset": 40385,
+      "text": "799 W. Coliseum Way"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40422,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000165",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 165,
+      "start_offset": 40405,
+      "text": "Midvale, UT 84047"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40469,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000166",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 166,
+      "start_offset": 40423,
+      "text": "Attention: E. Glen Nickle, Chief Legal Officer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 40474,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000167",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 167,
+      "start_offset": 40470,
+      "text": "14.4"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 41374,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000168",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 168,
+      "start_offset": 40475,
+      "text": "Governing Law; Forum; Waiver of Jury Trial. This Agreement shall be governed by the laws of the State of Delaware, without giving effect to the conflict of law provisions of Delaware, and any action or proceeding arising out of, or related to, this Agreement, shall only be brought in an appropriate state or federal court in Delaware. The Parties expressly consent to venue in Delaware and to the personal jurisdiction of the Delaware courts. EACH PARTY HERETO, FOR ITSELF AND ITS AFFILIATES, HEREBY IRREVOCABLY AND UNCONDITIONALLY WAIVES TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW ALL RIGHT TO TRIAL BY JURY IN ANY ACTION, SUIT OR OTHER PROCEEDING (WHETHER BASED ON CONTRACT, TORT OR OTHERWISE) ARISING OUT OF OR RELATING TO THE ACTIONS OF THE PARTIES HERETO OR THEIR RESPECTIVE AFFILIATES PURSUANT TO THIS AGREEMENT OR IN THE NEGOTIATION, ADMINISTRATION, PERFORMANCE OR ENFORCEMENT HEREOF."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 41377,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000169",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 169,
+      "start_offset": 41375,
+      "text": "12"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 41382,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000170",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 170,
+      "start_offset": 41378,
+      "text": "14.5"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 41926,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000171",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 171,
+      "start_offset": 41383,
+      "text": "Waiver. Failure of either Party to enforce or exercise any of its rights with respect to any provisions hereof against the other Party shall not constitute a waiver thereof nor shall it in any way affect the validity of this Agreement or act as a bar to such Party’s subsequent enforcement or exercise of any right created hereby. The exercise or enforcement by either Party of any of its rights hereunder shall not preclude or prejudice such Party from thereafter exercising the same or any other right which it may have under this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 41931,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000172",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 172,
+      "start_offset": 41927,
+      "text": "14.6"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 42792,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000173",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 173,
+      "start_offset": 41932,
+      "text": "Headings; Construction. The headings of Sections in this Agreement are provided for convenience only and will not affect its construction or interpretation. All words used in this Agreement will be construed to be of such gender or number as the context requires. The word “including” shall be read as “including but not limited to” and otherwise shall be considered illustrative and non-limiting. All references to dollars or “$” in this Agreement will be to U.S. dollars. The language used in this Agreement will be construed, in all cases, according to its fair meaning, and not for or against either Party hereto. The Parties acknowledge that each Party has reviewed this Agreement and that rules of construction to the effect that any ambiguities are to be resolved against the drafting Party will not be available in the interpretation of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 42797,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000174",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 174,
+      "start_offset": 42793,
+      "text": "14.7"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43203,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000175",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 175,
+      "start_offset": 42798,
+      "text": "Successors and Assigns. This Agreement is entered into solely between, and may be enforced only by, the Parties and their permitted successors and assigns, and except as expressly set forth herein, this Agreement shall not be deemed to create any rights in third parties, including, without limitation, suppliers and customers of a Party, or to create any obligations of a Party to any such third parties."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43208,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000176",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 176,
+      "start_offset": 43204,
+      "text": "14.8"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43589,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000177",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 177,
+      "start_offset": 43209,
+      "text": "Severability. If any provision of this Agreement is determined by a court of competent jurisdiction to be invalid, inoperative, or unenforceable, the remainder of this Agreement shall not be affected by such determination, and the remainder of this Agreement shall be given effect as if the invalid, inoperative, or unenforceable provision had not been included in this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43594,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000178",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 178,
+      "start_offset": 43590,
+      "text": "14.9"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44180,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000179",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 179,
+      "start_offset": 43595,
+      "text": "Equitable Relief; Cumulative Remedies. Licensee acknowledges that a breach of this Agreement by Licensee may cause Licensor irreparable damages, for which an award of damages would not be adequate compensation. In the event of such breach or threatened breach, Licensor will be entitled to seek equitable relief against Licensee without the obligation to post a bond or other security. Except as expressly set forth in this Agreement, the right and remedies under this Agreement are cumulative and in addition to any other rights or remedies available at law or in equity or otherwise."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44186,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000180",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 180,
+      "start_offset": 44181,
+      "text": "14.10"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44582,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000181",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 181,
+      "start_offset": 44187,
+      "text": "Entire Agreement and Modification. Except as otherwise set forth herein, the Parties agree that this Agreement contains the entire agreement between the Parties and there are no other oral statements, representations, warranties or other agreements between the Parties. This Agreement can only be modified, amended or supplemented in writing signed by authorized representatives of both Parties."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44588,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000182",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 182,
+      "start_offset": 44583,
+      "text": "14.11"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45074,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000183",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 183,
+      "start_offset": 44589,
+      "text": "Counterparts; Integration; Effectiveness. This Agreement may be executed in counterparts (and by different Parties hereto in different counterparts), each of which shall constitute an original, but all of which when taken together shall constitute a single contract. This Agreement constitutes the entire contract between the Parties relating to the subject matter hereof and supersede any and all previous agreements and understandings, oral or written, relating to the subject matter"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45077,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000184",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 184,
+      "start_offset": 45075,
+      "text": "13"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45395,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000185",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 185,
+      "start_offset": 45078,
+      "text": "hereof. This Agreement shall become effective when it shall have been executed by each of Parties hereto. Delivery of an executed counterpart of a signature page of this Agreement by telecopy, pdf or other electronic transmission shall be as effective as delivery of a manually executed counterpart of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45420,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000186",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 186,
+      "start_offset": 45396,
+      "text": "[Signature Page Follows]"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45423,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000187",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 187,
+      "start_offset": 45421,
+      "text": "14"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45568,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000188",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 188,
+      "start_offset": 45424,
+      "text": "IN WITNESS WHEREOF, the parties have caused this Agreement to be duly executed by their respective authorized officers as of the Effective Date."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45578,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000189",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 189,
+      "start_offset": 45569,
+      "text": "LICENSOR:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45591,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000190",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 190,
+      "start_offset": 45579,
+      "text": "BEYOND, INC."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45616,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000191",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 191,
+      "start_offset": 45592,
+      "text": "By: | /s/ Marcus Lemonis"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45639,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000192",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 192,
+      "start_offset": 45617,
+      "text": "Name: | Marcus Lemonis"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45667,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000193",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 193,
+      "start_offset": 45640,
+      "text": "Title: | Executive Chairman"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45677,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000194",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 194,
+      "start_offset": 45668,
+      "text": "LICENSEE:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45694,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000195",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 195,
+      "start_offset": 45678,
+      "text": "KIRKLAND’S, INC."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45722,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000196",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 196,
+      "start_offset": 45695,
+      "text": "By: | /s/ W. Michael Madden"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45748,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000197",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 197,
+      "start_offset": 45723,
+      "text": "Name: | W. Michael Madden"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 45810,
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000198",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.5",
+      "sequence": 198,
+      "start_offset": 45749,
+      "text": "Title: | Executive Vice President and Chief Financial Officer"
+    }
+  ],
+  "quality_control_profile": "M7_ISSUED_OCCURRENCES",
+  "quality_flags": [
+    "ALL_PASSAGES_UNREVIEWED",
+    "CANDIDATE_COVERAGE_NOT_ESTABLISHED"
+  ],
+  "retrieved_at_utc": null,
+  "schema_version": "m1.0",
+  "screening_conclusion": "UNKNOWN_NEEDS_AI_SCREENING",
+  "screening_priority": "HIGH_REVIEW_PRIORITY",
+  "sections": [
+    {
+      "candidate_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000001",
+        "DOC-1a0c0bd2d22d32e9da:P000004",
+        "DOC-1a0c0bd2d22d32e9da:P000005",
+        "DOC-1a0c0bd2d22d32e9da:P000007",
+        "DOC-1a0c0bd2d22d32e9da:P000012",
+        "DOC-1a0c0bd2d22d32e9da:P000013",
+        "DOC-1a0c0bd2d22d32e9da:P000016",
+        "DOC-1a0c0bd2d22d32e9da:P000017",
+        "DOC-1a0c0bd2d22d32e9da:P000018",
+        "DOC-1a0c0bd2d22d32e9da:P000019",
+        "DOC-1a0c0bd2d22d32e9da:P000023",
+        "DOC-1a0c0bd2d22d32e9da:P000027",
+        "DOC-1a0c0bd2d22d32e9da:P000031",
+        "DOC-1a0c0bd2d22d32e9da:P000033",
+        "DOC-1a0c0bd2d22d32e9da:P000056",
+        "DOC-1a0c0bd2d22d32e9da:P000065",
+        "DOC-1a0c0bd2d22d32e9da:P000067",
+        "DOC-1a0c0bd2d22d32e9da:P000069",
+        "DOC-1a0c0bd2d22d32e9da:P000071",
+        "DOC-1a0c0bd2d22d32e9da:P000073",
+        "DOC-1a0c0bd2d22d32e9da:P000075",
+        "DOC-1a0c0bd2d22d32e9da:P000077",
+        "DOC-1a0c0bd2d22d32e9da:P000079",
+        "DOC-1a0c0bd2d22d32e9da:P000081",
+        "DOC-1a0c0bd2d22d32e9da:P000085",
+        "DOC-1a0c0bd2d22d32e9da:P000087",
+        "DOC-1a0c0bd2d22d32e9da:P000091",
+        "DOC-1a0c0bd2d22d32e9da:P000095",
+        "DOC-1a0c0bd2d22d32e9da:P000099",
+        "DOC-1a0c0bd2d22d32e9da:P000103",
+        "DOC-1a0c0bd2d22d32e9da:P000111",
+        "DOC-1a0c0bd2d22d32e9da:P000114",
+        "DOC-1a0c0bd2d22d32e9da:P000116",
+        "DOC-1a0c0bd2d22d32e9da:P000130",
+        "DOC-1a0c0bd2d22d32e9da:P000132",
+        "DOC-1a0c0bd2d22d32e9da:P000135",
+        "DOC-1a0c0bd2d22d32e9da:P000140"
+      ],
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000001",
+        "DOC-1a0c0bd2d22d32e9da:P000002",
+        "DOC-1a0c0bd2d22d32e9da:P000003",
+        "DOC-1a0c0bd2d22d32e9da:P000004",
+        "DOC-1a0c0bd2d22d32e9da:P000005",
+        "DOC-1a0c0bd2d22d32e9da:P000006",
+        "DOC-1a0c0bd2d22d32e9da:P000007",
+        "DOC-1a0c0bd2d22d32e9da:P000008",
+        "DOC-1a0c0bd2d22d32e9da:P000009",
+        "DOC-1a0c0bd2d22d32e9da:P000010",
+        "DOC-1a0c0bd2d22d32e9da:P000011",
+        "DOC-1a0c0bd2d22d32e9da:P000012",
+        "DOC-1a0c0bd2d22d32e9da:P000013",
+        "DOC-1a0c0bd2d22d32e9da:P000014",
+        "DOC-1a0c0bd2d22d32e9da:P000015",
+        "DOC-1a0c0bd2d22d32e9da:P000016",
+        "DOC-1a0c0bd2d22d32e9da:P000017",
+        "DOC-1a0c0bd2d22d32e9da:P000018",
+        "DOC-1a0c0bd2d22d32e9da:P000019",
+        "DOC-1a0c0bd2d22d32e9da:P000020",
+        "DOC-1a0c0bd2d22d32e9da:P000021",
+        "DOC-1a0c0bd2d22d32e9da:P000022",
+        "DOC-1a0c0bd2d22d32e9da:P000023",
+        "DOC-1a0c0bd2d22d32e9da:P000024",
+        "DOC-1a0c0bd2d22d32e9da:P000025",
+        "DOC-1a0c0bd2d22d32e9da:P000026",
+        "DOC-1a0c0bd2d22d32e9da:P000027",
+        "DOC-1a0c0bd2d22d32e9da:P000028",
+        "DOC-1a0c0bd2d22d32e9da:P000029",
+        "DOC-1a0c0bd2d22d32e9da:P000030",
+        "DOC-1a0c0bd2d22d32e9da:P000031",
+        "DOC-1a0c0bd2d22d32e9da:P000032",
+        "DOC-1a0c0bd2d22d32e9da:P000033",
+        "DOC-1a0c0bd2d22d32e9da:P000034",
+        "DOC-1a0c0bd2d22d32e9da:P000035",
+        "DOC-1a0c0bd2d22d32e9da:P000036",
+        "DOC-1a0c0bd2d22d32e9da:P000037",
+        "DOC-1a0c0bd2d22d32e9da:P000038",
+        "DOC-1a0c0bd2d22d32e9da:P000039",
+        "DOC-1a0c0bd2d22d32e9da:P000040",
+        "DOC-1a0c0bd2d22d32e9da:P000041",
+        "DOC-1a0c0bd2d22d32e9da:P000042",
+        "DOC-1a0c0bd2d22d32e9da:P000043",
+        "DOC-1a0c0bd2d22d32e9da:P000044",
+        "DOC-1a0c0bd2d22d32e9da:P000045",
+        "DOC-1a0c0bd2d22d32e9da:P000046",
+        "DOC-1a0c0bd2d22d32e9da:P000047",
+        "DOC-1a0c0bd2d22d32e9da:P000048",
+        "DOC-1a0c0bd2d22d32e9da:P000049",
+        "DOC-1a0c0bd2d22d32e9da:P000050",
+        "DOC-1a0c0bd2d22d32e9da:P000051",
+        "DOC-1a0c0bd2d22d32e9da:P000052",
+        "DOC-1a0c0bd2d22d32e9da:P000053",
+        "DOC-1a0c0bd2d22d32e9da:P000054",
+        "DOC-1a0c0bd2d22d32e9da:P000055",
+        "DOC-1a0c0bd2d22d32e9da:P000056",
+        "DOC-1a0c0bd2d22d32e9da:P000057",
+        "DOC-1a0c0bd2d22d32e9da:P000058",
+        "DOC-1a0c0bd2d22d32e9da:P000059",
+        "DOC-1a0c0bd2d22d32e9da:P000060",
+        "DOC-1a0c0bd2d22d32e9da:P000061",
+        "DOC-1a0c0bd2d22d32e9da:P000062",
+        "DOC-1a0c0bd2d22d32e9da:P000063",
+        "DOC-1a0c0bd2d22d32e9da:P000064",
+        "DOC-1a0c0bd2d22d32e9da:P000065",
+        "DOC-1a0c0bd2d22d32e9da:P000066",
+        "DOC-1a0c0bd2d22d32e9da:P000067",
+        "DOC-1a0c0bd2d22d32e9da:P000068",
+        "DOC-1a0c0bd2d22d32e9da:P000069",
+        "DOC-1a0c0bd2d22d32e9da:P000070",
+        "DOC-1a0c0bd2d22d32e9da:P000071",
+        "DOC-1a0c0bd2d22d32e9da:P000072",
+        "DOC-1a0c0bd2d22d32e9da:P000073",
+        "DOC-1a0c0bd2d22d32e9da:P000074",
+        "DOC-1a0c0bd2d22d32e9da:P000075",
+        "DOC-1a0c0bd2d22d32e9da:P000076",
+        "DOC-1a0c0bd2d22d32e9da:P000077",
+        "DOC-1a0c0bd2d22d32e9da:P000078",
+        "DOC-1a0c0bd2d22d32e9da:P000079",
+        "DOC-1a0c0bd2d22d32e9da:P000080",
+        "DOC-1a0c0bd2d22d32e9da:P000081",
+        "DOC-1a0c0bd2d22d32e9da:P000082",
+        "DOC-1a0c0bd2d22d32e9da:P000083",
+        "DOC-1a0c0bd2d22d32e9da:P000084",
+        "DOC-1a0c0bd2d22d32e9da:P000085",
+        "DOC-1a0c0bd2d22d32e9da:P000086",
+        "DOC-1a0c0bd2d22d32e9da:P000087",
+        "DOC-1a0c0bd2d22d32e9da:P000088",
+        "DOC-1a0c0bd2d22d32e9da:P000089",
+        "DOC-1a0c0bd2d22d32e9da:P000090",
+        "DOC-1a0c0bd2d22d32e9da:P000091",
+        "DOC-1a0c0bd2d22d32e9da:P000092",
+        "DOC-1a0c0bd2d22d32e9da:P000093",
+        "DOC-1a0c0bd2d22d32e9da:P000094",
+        "DOC-1a0c0bd2d22d32e9da:P000095",
+        "DOC-1a0c0bd2d22d32e9da:P000096",
+        "DOC-1a0c0bd2d22d32e9da:P000097",
+        "DOC-1a0c0bd2d22d32e9da:P000098",
+        "DOC-1a0c0bd2d22d32e9da:P000099",
+        "DOC-1a0c0bd2d22d32e9da:P000100",
+        "DOC-1a0c0bd2d22d32e9da:P000101",
+        "DOC-1a0c0bd2d22d32e9da:P000102",
+        "DOC-1a0c0bd2d22d32e9da:P000103",
+        "DOC-1a0c0bd2d22d32e9da:P000104",
+        "DOC-1a0c0bd2d22d32e9da:P000105",
+        "DOC-1a0c0bd2d22d32e9da:P000106",
+        "DOC-1a0c0bd2d22d32e9da:P000107",
+        "DOC-1a0c0bd2d22d32e9da:P000108",
+        "DOC-1a0c0bd2d22d32e9da:P000109",
+        "DOC-1a0c0bd2d22d32e9da:P000110",
+        "DOC-1a0c0bd2d22d32e9da:P000111",
+        "DOC-1a0c0bd2d22d32e9da:P000112",
+        "DOC-1a0c0bd2d22d32e9da:P000113",
+        "DOC-1a0c0bd2d22d32e9da:P000114",
+        "DOC-1a0c0bd2d22d32e9da:P000115",
+        "DOC-1a0c0bd2d22d32e9da:P000116",
+        "DOC-1a0c0bd2d22d32e9da:P000117",
+        "DOC-1a0c0bd2d22d32e9da:P000118",
+        "DOC-1a0c0bd2d22d32e9da:P000119",
+        "DOC-1a0c0bd2d22d32e9da:P000120",
+        "DOC-1a0c0bd2d22d32e9da:P000121",
+        "DOC-1a0c0bd2d22d32e9da:P000122",
+        "DOC-1a0c0bd2d22d32e9da:P000123",
+        "DOC-1a0c0bd2d22d32e9da:P000124",
+        "DOC-1a0c0bd2d22d32e9da:P000125",
+        "DOC-1a0c0bd2d22d32e9da:P000126",
+        "DOC-1a0c0bd2d22d32e9da:P000127",
+        "DOC-1a0c0bd2d22d32e9da:P000128",
+        "DOC-1a0c0bd2d22d32e9da:P000129",
+        "DOC-1a0c0bd2d22d32e9da:P000130",
+        "DOC-1a0c0bd2d22d32e9da:P000131",
+        "DOC-1a0c0bd2d22d32e9da:P000132",
+        "DOC-1a0c0bd2d22d32e9da:P000133",
+        "DOC-1a0c0bd2d22d32e9da:P000134",
+        "DOC-1a0c0bd2d22d32e9da:P000135",
+        "DOC-1a0c0bd2d22d32e9da:P000136",
+        "DOC-1a0c0bd2d22d32e9da:P000137",
+        "DOC-1a0c0bd2d22d32e9da:P000138",
+        "DOC-1a0c0bd2d22d32e9da:P000139",
+        "DOC-1a0c0bd2d22d32e9da:P000140",
+        "DOC-1a0c0bd2d22d32e9da:P000141",
+        "DOC-1a0c0bd2d22d32e9da:P000142",
+        "DOC-1a0c0bd2d22d32e9da:P000143",
+        "DOC-1a0c0bd2d22d32e9da:P000144",
+        "DOC-1a0c0bd2d22d32e9da:P000145",
+        "DOC-1a0c0bd2d22d32e9da:P000146",
+        "DOC-1a0c0bd2d22d32e9da:P000147",
+        "DOC-1a0c0bd2d22d32e9da:P000148",
+        "DOC-1a0c0bd2d22d32e9da:P000149",
+        "DOC-1a0c0bd2d22d32e9da:P000150",
+        "DOC-1a0c0bd2d22d32e9da:P000151",
+        "DOC-1a0c0bd2d22d32e9da:P000152",
+        "DOC-1a0c0bd2d22d32e9da:P000153",
+        "DOC-1a0c0bd2d22d32e9da:P000154",
+        "DOC-1a0c0bd2d22d32e9da:P000155",
+        "DOC-1a0c0bd2d22d32e9da:P000156",
+        "DOC-1a0c0bd2d22d32e9da:P000157",
+        "DOC-1a0c0bd2d22d32e9da:P000158",
+        "DOC-1a0c0bd2d22d32e9da:P000159",
+        "DOC-1a0c0bd2d22d32e9da:P000160",
+        "DOC-1a0c0bd2d22d32e9da:P000161",
+        "DOC-1a0c0bd2d22d32e9da:P000162",
+        "DOC-1a0c0bd2d22d32e9da:P000163",
+        "DOC-1a0c0bd2d22d32e9da:P000164",
+        "DOC-1a0c0bd2d22d32e9da:P000165",
+        "DOC-1a0c0bd2d22d32e9da:P000166",
+        "DOC-1a0c0bd2d22d32e9da:P000167",
+        "DOC-1a0c0bd2d22d32e9da:P000168",
+        "DOC-1a0c0bd2d22d32e9da:P000169",
+        "DOC-1a0c0bd2d22d32e9da:P000170",
+        "DOC-1a0c0bd2d22d32e9da:P000171",
+        "DOC-1a0c0bd2d22d32e9da:P000172",
+        "DOC-1a0c0bd2d22d32e9da:P000173",
+        "DOC-1a0c0bd2d22d32e9da:P000174",
+        "DOC-1a0c0bd2d22d32e9da:P000175",
+        "DOC-1a0c0bd2d22d32e9da:P000176",
+        "DOC-1a0c0bd2d22d32e9da:P000177",
+        "DOC-1a0c0bd2d22d32e9da:P000178",
+        "DOC-1a0c0bd2d22d32e9da:P000179",
+        "DOC-1a0c0bd2d22d32e9da:P000180",
+        "DOC-1a0c0bd2d22d32e9da:P000181",
+        "DOC-1a0c0bd2d22d32e9da:P000182",
+        "DOC-1a0c0bd2d22d32e9da:P000183",
+        "DOC-1a0c0bd2d22d32e9da:P000184",
+        "DOC-1a0c0bd2d22d32e9da:P000185",
+        "DOC-1a0c0bd2d22d32e9da:P000186",
+        "DOC-1a0c0bd2d22d32e9da:P000187",
+        "DOC-1a0c0bd2d22d32e9da:P000188",
+        "DOC-1a0c0bd2d22d32e9da:P000189",
+        "DOC-1a0c0bd2d22d32e9da:P000190",
+        "DOC-1a0c0bd2d22d32e9da:P000191",
+        "DOC-1a0c0bd2d22d32e9da:P000192",
+        "DOC-1a0c0bd2d22d32e9da:P000193",
+        "DOC-1a0c0bd2d22d32e9da:P000194",
+        "DOC-1a0c0bd2d22d32e9da:P000195",
+        "DOC-1a0c0bd2d22d32e9da:P000196",
+        "DOC-1a0c0bd2d22d32e9da:P000197",
+        "DOC-1a0c0bd2d22d32e9da:P000198"
+      ],
+      "section": "Exhibit 10.5"
+    }
+  ],
+  "source_segmentation": {
+    "fragment_limit_chars": 12000,
+    "preservation": "FRAGMENTS_CONCATENATE_EXACTLY_TO_EACH_ORIGINAL_NORMALIZED_LINE",
+    "schema": "m4-source-segmentation.1",
+    "split_original_paragraphs": []
+  },
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1056285/000095017024115935/kirk-ex10_5.htm",
+  "stage": "MAPPED_NOT_INTERPRETED",
+  "text_sha256": "4292bf2ae20f539cbe7d9f4e3155ac8e451d405f08e26ef8645817ef3725d28f",
+  "total_candidates": 37,
+  "total_passages": 198
+}

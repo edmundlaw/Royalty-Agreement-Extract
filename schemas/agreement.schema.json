@@ -1,0 +1,887 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/royalty-research/m2/agreement.schema.json",
+  "title": "Future royalty research agreement extraction record (M2 proposal)",
+  "description": "Design contract only, not an M1 extracted result. All material fields require field-level source evidence or unresolved status.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "agreement_id",
+    "agreement",
+    "documents",
+    "document_agreements",
+    "rights",
+    "amendments",
+    "royalty_terms",
+    "other_payments",
+    "evidence",
+    "field_evidence",
+    "field_status",
+    "open_issues",
+    "qc"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "m2-draft.1"
+    },
+    "agreement_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agreement": {
+      "$ref": "#/$defs/agreement"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/document"
+      }
+    },
+    "royalty_terms": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/royalty_term"
+      }
+    },
+    "other_payments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/payment"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "field_evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/field_evidence"
+      }
+    },
+    "field_status": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/field_status"
+      }
+    },
+    "open_issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/open_issue"
+      }
+    },
+    "qc": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/qc"
+      }
+    },
+    "document_agreements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/document_agreement"
+      }
+    },
+    "rights": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/right"
+      }
+    },
+    "amendments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/amendment"
+      }
+    }
+  },
+  "$defs": {
+    "nullable_string": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "disclosure": {
+      "enum": [
+        "DISCLOSED",
+        "REDACTED",
+        "NOT_FOUND_AFTER_REVIEW",
+        "NOT_APPLICABLE",
+        "AMBIGUOUS",
+        "NOT_VERIFIED"
+      ]
+    },
+    "agreement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "licensor",
+        "licensee",
+        "related_party_status",
+        "agreement_types",
+        "industry",
+        "licensed_ip",
+        "execution_date",
+        "effective_date",
+        "territory",
+        "exclusivity",
+        "contractual_status"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "licensor": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "licensee": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "licensor_parent": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "licensee_parent": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "related_party_status": {
+          "enum": [
+            "THIRD_PARTY",
+            "RELATED_PARTY",
+            "UNKNOWN"
+          ]
+        },
+        "agreement_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "industry": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "subindustry": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "licensed_ip": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "licensed_products": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "execution_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "effective_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "expiry_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "territory": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "field_of_use": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "exclusivity": {
+          "enum": [
+            "EXCLUSIVE",
+            "SOLE",
+            "NONEXCLUSIVE",
+            "MIXED",
+            "UNKNOWN"
+          ]
+        },
+        "sublicensing_permitted": {
+          "enum": [
+            "YES",
+            "NO",
+            "CONDITIONAL",
+            "UNKNOWN"
+          ]
+        },
+        "contractual_status": {
+          "enum": [
+            "EXECUTED",
+            "PROPOSED",
+            "CONDITIONAL",
+            "TERMINATED",
+            "EXPIRED",
+            "SUPERSEDED",
+            "UNKNOWN"
+          ]
+        },
+        "duration_text": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "renewal_rights": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "termination_rights": {
+          "$ref": "#/$defs/nullable_string"
+        }
+      }
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "document_id",
+        "source_url",
+        "cik",
+        "accession",
+        "filename",
+        "filing_date",
+        "original_sha256",
+        "normalized_text_sha256",
+        "source_relation"
+      ],
+      "properties": {
+        "document_id": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "cik": {
+          "type": "string"
+        },
+        "accession": {
+          "type": "string"
+        },
+        "filename": {
+          "type": "string"
+        },
+        "form": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "exhibit_type": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "filing_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "original_sha256": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "normalized_text_sha256": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "retrieved_at_utc": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "source_relation": {
+          "enum": [
+            "ORIGINAL",
+            "AMENDMENT",
+            "RESTATEMENT",
+            "NARRATIVE",
+            "OTHER"
+          ]
+        }
+      }
+    },
+    "royalty_term": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "royalty_term_id",
+        "term_family",
+        "rate_structure",
+        "rate_value",
+        "rate_unit",
+        "base",
+        "condition",
+        "disclosure_status",
+        "tiers",
+        "evidence_ids"
+      ],
+      "properties": {
+        "royalty_term_id": {
+          "type": "string"
+        },
+        "term_family": {
+          "enum": [
+            "PRODUCT_SALES",
+            "SUBLICENSING_RECEIPTS",
+            "PER_UNIT",
+            "USAGE",
+            "REVENUE_SHARE",
+            "OTHER"
+          ]
+        },
+        "rate_structure": {
+          "enum": [
+            "FLAT",
+            "TIERED",
+            "STEP_UP",
+            "STEP_DOWN",
+            "HYBRID",
+            "FORMULA",
+            "UNKNOWN"
+          ]
+        },
+        "rate_value": {
+          "$ref": "#/$defs/nullable_string",
+          "description": "Decimal string, not floating point; null if redacted/unknown"
+        },
+        "rate_unit": {
+          "enum": [
+            "PERCENT",
+            "CURRENCY_PER_UNIT",
+            "FORMULA",
+            "REDACTED",
+            "UNKNOWN"
+          ]
+        },
+        "original_wording": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "base": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "base_definition": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "condition": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "territory_scope": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "product_scope": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "rate_adjustments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effective_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "effective_to": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "disclosure_status": {
+          "$ref": "#/$defs/disclosure"
+        },
+        "tiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/tier"
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sequence",
+        "lower",
+        "upper",
+        "lower_inclusive",
+        "upper_inclusive",
+        "rate_value",
+        "rate_unit",
+        "tier_calculation",
+        "measurement_period",
+        "evidence_ids"
+      ],
+      "properties": {
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "lower": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "upper": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "lower_inclusive": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "upper_inclusive": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "rate_value": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "rate_unit": {
+          "type": "string"
+        },
+        "tier_calculation": {
+          "enum": [
+            "MARGINAL",
+            "ALL_UNITS",
+            "CUMULATIVE",
+            "UNKNOWN"
+          ]
+        },
+        "measurement_period": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "measurement_currency": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "payment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "payment_id",
+        "payment_type",
+        "amount",
+        "currency",
+        "trigger",
+        "disclosure_status",
+        "evidence_ids"
+      ],
+      "properties": {
+        "payment_id": {
+          "type": "string"
+        },
+        "payment_type": {
+          "enum": [
+            "UPFRONT",
+            "MILESTONE",
+            "MINIMUM_ROYALTY",
+            "GUARANTEE",
+            "ADVANCE",
+            "CAP",
+            "SERVICE",
+            "OTHER"
+          ]
+        },
+        "amount": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "currency": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "trigger": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "creditable_against_running_royalties": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "disclosure_status": {
+          "$ref": "#/$defs/disclosure"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "document_id",
+        "passage_id",
+        "quote_exact_normalized",
+        "verified_quote_exists",
+        "semantic_review_status"
+      ],
+      "properties": {
+        "evidence_id": {
+          "type": "string"
+        },
+        "document_id": {
+          "type": "string"
+        },
+        "passage_id": {
+          "type": "string"
+        },
+        "section": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "page": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "quote_exact_normalized": {
+          "type": "string"
+        },
+        "verified_quote_exists": {
+          "type": "boolean"
+        },
+        "semantic_review_status": {
+          "enum": [
+            "NOT_REVIEWED",
+            "SECOND_AI_AGREED",
+            "DISPUTED",
+            "HUMAN_REVIEWED"
+          ]
+        }
+      }
+    },
+    "field_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_type",
+        "entity_id",
+        "field_name",
+        "evidence_id",
+        "support_status"
+      ],
+      "properties": {
+        "entity_type": {
+          "type": "string"
+        },
+        "entity_id": {
+          "type": "string"
+        },
+        "field_name": {
+          "type": "string"
+        },
+        "evidence_id": {
+          "type": "string"
+        },
+        "support_status": {
+          "enum": [
+            "UNVERIFIED",
+            "QUOTE_MATCHED",
+            "SEMANTICALLY_REVIEWED",
+            "CONFLICT"
+          ]
+        }
+      }
+    },
+    "field_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_type",
+        "entity_id",
+        "field_name",
+        "disclosure_status"
+      ],
+      "properties": {
+        "entity_type": {
+          "type": "string"
+        },
+        "entity_id": {
+          "type": "string"
+        },
+        "field_name": {
+          "type": "string"
+        },
+        "disclosure_status": {
+          "$ref": "#/$defs/disclosure"
+        },
+        "reason": {
+          "$ref": "#/$defs/nullable_string"
+        }
+      }
+    },
+    "document_agreement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "document_id",
+        "agreement_id",
+        "relation_type"
+      ],
+      "properties": {
+        "document_id": {
+          "type": "string"
+        },
+        "agreement_id": {
+          "type": "string"
+        },
+        "relation_type": {
+          "enum": [
+            "ORIGINAL",
+            "AMENDMENT",
+            "RESTATEMENT",
+            "NARRATIVE",
+            "OTHER"
+          ]
+        },
+        "notes": {
+          "$ref": "#/$defs/nullable_string"
+        }
+      }
+    },
+    "right": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rights_id",
+        "right_type",
+        "scope",
+        "evidence_ids"
+      ],
+      "properties": {
+        "rights_id": {
+          "type": "string"
+        },
+        "right_type": {
+          "enum": [
+            "EXCLUSIVITY",
+            "TERRITORY",
+            "FIELD_OF_USE",
+            "SUBLICENSING",
+            "IMPROVEMENTS",
+            "TECHNICAL_ASSISTANCE",
+            "DURATION",
+            "TERMINATION",
+            "OTHER"
+          ]
+        },
+        "scope": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "effective_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "effective_to": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "conditions": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "amendment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amendment_id",
+        "document_id",
+        "change_description",
+        "affected_term_ids",
+        "evidence_ids",
+        "review_status"
+      ],
+      "properties": {
+        "amendment_id": {
+          "type": "string"
+        },
+        "document_id": {
+          "type": "string"
+        },
+        "amendment_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "affected_clauses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "affected_term_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "change_description": {
+          "type": "string"
+        },
+        "supersedes_prior": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "effective_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "review_status": {
+          "enum": [
+            "NOT_REVIEWED",
+            "REVIEWED",
+            "AMBIGUOUS",
+            "OPEN_ISSUE"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "open_issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "issue_id",
+        "scope_id",
+        "severity",
+        "issue_type",
+        "description",
+        "status"
+      ],
+      "properties": {
+        "issue_id": {
+          "type": "string"
+        },
+        "scope_id": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "CRITICAL",
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ]
+        },
+        "issue_type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "OPEN",
+            "INVESTIGATING",
+            "RESOLVED",
+            "WAIVED_WITH_RATIONALE"
+          ]
+        },
+        "resolution": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "source_document_id": {
+          "$ref": "#/$defs/nullable_string"
+        }
+      }
+    },
+    "qc": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "qc_id",
+        "scope_id",
+        "gate_name",
+        "status",
+        "check_version"
+      ],
+      "properties": {
+        "qc_id": {
+          "type": "string"
+        },
+        "scope_id": {
+          "type": "string"
+        },
+        "gate_name": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN",
+            "EXCEPTION"
+          ]
+        },
+        "check_version": {
+          "type": "string"
+        },
+        "details": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "first_reader_model": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "second_reader_model": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "human_reviewer": {
+          "$ref": "#/$defs/nullable_string"
+        },
+        "reviewed_at_utc": {
+          "$ref": "#/$defs/nullable_string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+ERROR FileExistsError: Output exists. Pass --force to overwrite or --skip-existing to skip: /tmp/tmp4lt1tvnc/map.json
+EOF marker not found
+ERROR ParseError: No readable text found
+ERROR ValueError: Cannot skip stale M2 artifact: source, extraction, or options differ
+ERROR ValueError: Cannot skip stale M2 artifact: source, extraction, or options differ
+ERROR FileExistsError: Export directory is not empty; specify --force or a new empty directory
+ERROR ValueError: Live SEC access requires --user-agent 'Your research project contact@yourdomain.com'
+ERROR ValueError: Search window 1826 days is invalid/too long; run bounded daily or monthly tasks
+----------------------------------------------------------------------
+Ran 116 tests in 21.637s
+
+OK
+{"status": "MAPPED_NOT_INTERPRETED", "passages": 12, "candidates": 8, "output": "/tmp/tmp4lt1tvnc/map.json"}
+SKIP_EXISTS /tmp/tmp4lt1tvnc/map.json
+{"status": "PASS", "errors": []}
+{"status": "PACKET_PREPARED", "output": "/tmp/tmp_l3nm4ez/p.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "PACKET_PREPARED", "output": "/tmp/tmp_l3nm4ez/r.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "PASS_DETERMINISTIC_ONLY", "output": "/tmp/tmpkmy87oxd/qc.json", "document_id": "DOC-dc937b59892604f5a8"}
+SKIP_VALIDATED /tmp/tmpkmy87oxd/qc.json
+{"status": "PACKET_PREPARED", "output": "/tmp/tmpxpwde0_1/packet.json", "document_id": "DOC-dc937b59892604f5a8"}
+SKIP_VALIDATED /tmp/tmpxpwde0_1/packet.json
+{"status": "FAIL", "output": "/tmp/tmpir140lg5/report.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "REGISTERED", "document_id": "DOC-dc937b59892604f5a8", "map_sha256": "b3671ddfce424e751787159123078d880e8e42717d51339085a3b563932395bb"}
+{"schema": "m3-attempt.1", "document_id": "DOC-dc937b59892604f5a8", "extraction_sha256": "769b7a4f2c55019a7fdbbe73d339c17c8a64750abe20abd9b13190d064a79fab", "map_sha256": "b3671ddfce424e751787159123078d880e8e42717d51339085a3b563932395bb", "deterministic_status": "PASS_DETERMINISTIC_ONLY", "blocking_issues": ["ISSUE-RED-1"], "created_at_utc": "2026-11-13T14:47:08+00:00"}
+{"schema": "m3-status.1", "documents": 1, "states": {"QC_PASSED_OPEN_HIGH_ISSUE": 1}, "jobs": [{"document_id": "DOC-dc937b59892604f5a8", "state": "QC_PASSED_OPEN_HIGH_ISSUE", "attempts": 1, "ai_reviews": 0, "selected_sha256": "769b7a4f2c55019a7fdbbe73d339c17c8a64750abe20abd9b13190d064a79fab"}]}
+{"status": "EXPORTED_HISTORICAL_STAGING_NOT_AUDIT_APPROVED", "output": "/tmp/tmpximcenjd/publish", "row_counts": {"Overview": 9, "Agreements": 1, "Documents": 1, "Royalty Terms": 3, "Tiers": 4, "Other Payments": 1, "Evidence": 9, "Conditions": 0, "Adjustments": 1, "Amendments": 0, "QC": 1, "Open Issues": 1, "Pending Jobs": 1, "Human Reviewed": 0, "Data Dictionary": 13}, "snapshot_sha256": "78c5aadaa8fc441c9e91c31d7db9638e0a448ab4d8b9030af497633e95f1c796"}
+{"status": "PREPARED_NO_AI_CALLED", "tasks": 1, "location": "/tmp/tmpiwbfrc6g/plan", "scope": "FULL_DOCUMENT_CHUNKED", "engine": "claude", "model": "mock-light"}
+{"status": "DRY_RUN_NO_AI_CALLED", "next_task": {"task_id": "CHUNK-0001", "state": "PENDING", "attempts": 0}, "engine": "claude", "model": "mock-light", "warning": "Dry-run cannot verify CLI auth or subscription billing"}
+{"schema": "m4-status.1", "document_id": "DOC-M4-FAKE", "engine": "claude", "model": "mock-light", "scope": "FULL_DOCUMENT_CHUNKED", "limit_stopped": false, "tasks": [{"task_id": "CHUNK-0001", "state": "PENDING", "attempts": 0}], "captured": 0, "total": 1}

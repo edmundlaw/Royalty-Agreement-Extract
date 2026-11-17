@@ -1,0 +1,14 @@
+{
+  "chunk_sha256": [
+    "c0b8d453666abd73048f203905259ea76b759791982d434f0df112e17155d630"
+  ],
+  "chunks": 1,
+  "deterministic_status": "PASS_DETERMINISTIC_ONLY",
+  "document_id": "DOC-4f4103eea6e81d114e",
+  "notice": "All chunks accounted for by ID only. Cross-chunk contractual meaning and actual reading are NOT independently established.",
+  "packet_sha256": "411514b0a77443afa7d09e17cd2cf2d3db855bb3285e7ef61a48961a897d8677",
+  "qc_errors": [],
+  "qc_warnings": [],
+  "schema": "m3-chunk-merge.1",
+  "source_sha256": "d04960374e2ba37d3ca841d92f6568030bac7098ece1d6570447920d181dc598"
+}

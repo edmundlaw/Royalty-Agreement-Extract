@@ -1,0 +1,300 @@
+{
+  "candidate_passages": [
+    "DOC-dc937b59892604f5a8:P000003",
+    "DOC-dc937b59892604f5a8:P000004",
+    "DOC-dc937b59892604f5a8:P000005",
+    "DOC-dc937b59892604f5a8:P000006",
+    "DOC-dc937b59892604f5a8:P000007",
+    "DOC-dc937b59892604f5a8:P000008",
+    "DOC-dc937b59892604f5a8:P000010",
+    "DOC-dc937b59892604f5a8:P000011"
+  ],
+  "candidate_reason_counts": {
+    "CROSS_REFERENCE": 3,
+    "DEFINED_TERM": 1,
+    "FINANCE_VOCAB": 5,
+    "MONEY": 3,
+    "PERCENT": 3,
+    "PER_UNIT": 1,
+    "REDACTION": 1
+  },
+  "cross_references": [
+    {
+      "passage_id": "DOC-dc937b59892604f5a8:P000005",
+      "references": [
+        "Schedule B"
+      ]
+    },
+    {
+      "passage_id": "DOC-dc937b59892604f5a8:P000007",
+      "references": [
+        "Section 7.2"
+      ]
+    },
+    {
+      "passage_id": "DOC-dc937b59892604f5a8:P000008",
+      "references": [
+        "Schedule B"
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "passage_id": "DOC-dc937b59892604f5a8:P000003",
+      "term": "Net Sales"
+    }
+  ],
+  "document_id": "DOC-dc937b59892604f5a8",
+  "document_metadata": {
+    "document_id": null,
+    "filename": "synthetic_licence.html",
+    "input_mode": "LOCAL",
+    "source_url": null
+  },
+  "mapped_at_utc": "2026-11-13T12:33:41+00:00",
+  "original_sha256": "c189c212aed0ff0f83d172259bba1905edcef10a8835a384ef7e43b7e74ed0ca",
+  "parser_type": "HTML_TEXT",
+  "passages": [
+    {
+      "candidate_reasons": [],
+      "end_offset": 56,
+      "passage_id": "DOC-dc937b59892604f5a8:P000001",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": null,
+      "sequence": 1,
+      "start_offset": 0,
+      "text": "SYNTHETIC LICENSE AGREEMENT — NOT AN ACTUAL SEC DOCUMENT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 135,
+      "passage_id": "DOC-dc937b59892604f5a8:P000002",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1.1",
+      "sequence": 2,
+      "start_offset": 57,
+      "text": "1.1 Grant. Licensor grants Licensee a licence to use the described technology."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 195,
+      "passage_id": "DOC-dc937b59892604f5a8:P000003",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1.1",
+      "sequence": 3,
+      "start_offset": 136,
+      "text": "2.1 \"Net Sales\" means invoice value less permitted returns."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "MONEY",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 315,
+      "passage_id": "DOC-dc937b59892604f5a8:P000004",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.1",
+      "sequence": 4,
+      "start_offset": 196,
+      "text": "3.1 Running Royalty. Licensee must pay 6% of Net Sales for the first $500,000 and 4% of Net Sales above that threshold."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "MONEY",
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 442,
+      "passage_id": "DOC-dc937b59892604f5a8:P000005",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3.2",
+      "sequence": 5,
+      "start_offset": 316,
+      "text": "3.2 Sublicense Fees. Licensee shall pay 25% of sublicense receipts up to $250,000 and 10% thereafter, according to Schedule B."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 513,
+      "passage_id": "DOC-dc937b59892604f5a8:P000006",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.1",
+      "sequence": 6,
+      "start_offset": 443,
+      "text": "4.1 Late Payment. Interest accrues at 1.5% monthly on overdue amounts."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 617,
+      "passage_id": "DOC-dc937b59892604f5a8:P000007",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.1",
+      "sequence": 7,
+      "start_offset": 514,
+      "text": "5.1 Adjustment. Earned compensation will be reduced according to Section 7.2 when patent claims expire."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 648,
+      "passage_id": "DOC-dc937b59892604f5a8:P000008",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Schedule B — Participation Fee",
+      "sequence": 8,
+      "start_offset": 618,
+      "text": "Schedule B — Participation Fee"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 672,
+      "passage_id": "DOC-dc937b59892604f5a8:P000009",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Schedule B — Participation Fee",
+      "sequence": 9,
+      "start_offset": 649,
+      "text": "Territory Participation"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY",
+        "PER_UNIT"
+      ],
+      "end_offset": 700,
+      "passage_id": "DOC-dc937b59892604f5a8:P000010",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Schedule B — Participation Fee",
+      "sequence": 10,
+      "start_offset": 673,
+      "text": "United States $2 per device"
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION"
+      ],
+      "end_offset": 797,
+      "passage_id": "DOC-dc937b59892604f5a8:P000011",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 11,
+      "start_offset": 701,
+      "text": "7.2 Reduction. In specified circumstances the rate will be [***] until revised terms are agreed."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 859,
+      "passage_id": "DOC-dc937b59892604f5a8:P000012",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8.1",
+      "sequence": 12,
+      "start_offset": 798,
+      "text": "8.1 Rights. Licensor retains a right to approve sub-licenses."
+    }
+  ],
+  "quality_flags": [
+    "ALL_PASSAGES_UNREVIEWED",
+    "CANDIDATE_COVERAGE_NOT_ESTABLISHED"
+  ],
+  "retrieved_at_utc": null,
+  "schema_version": "m1.0",
+  "screening_conclusion": "UNKNOWN_NEEDS_AI_OR_HUMAN_REVIEW",
+  "screening_priority": "HIGH_REVIEW_PRIORITY",
+  "sections": [
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000001"
+      ],
+      "section": "PREAMBLE_OR_UNNUMBERED"
+    },
+    {
+      "candidate_ids": [
+        "DOC-dc937b59892604f5a8:P000003"
+      ],
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000002",
+        "DOC-dc937b59892604f5a8:P000003"
+      ],
+      "section": "1.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-dc937b59892604f5a8:P000004"
+      ],
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000004"
+      ],
+      "section": "3.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-dc937b59892604f5a8:P000005"
+      ],
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000005"
+      ],
+      "section": "3.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-dc937b59892604f5a8:P000006"
+      ],
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000006"
+      ],
+      "section": "4.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-dc937b59892604f5a8:P000007"
+      ],
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000007"
+      ],
+      "section": "5.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-dc937b59892604f5a8:P000008",
+        "DOC-dc937b59892604f5a8:P000010"
+      ],
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000008",
+        "DOC-dc937b59892604f5a8:P000009",
+        "DOC-dc937b59892604f5a8:P000010"
+      ],
+      "section": "Schedule B — Participation Fee"
+    },
+    {
+      "candidate_ids": [
+        "DOC-dc937b59892604f5a8:P000011"
+      ],
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000011"
+      ],
+      "section": "7.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000012"
+      ],
+      "section": "8.1"
+    }
+  ],
+  "source_url": null,
+  "stage": "MAPPED_NOT_INTERPRETED",
+  "text_sha256": "808fc8f094d4f5bce7982c0822d10e52d4432eefea8129385e4d86ade25a7794",
+  "total_candidates": 8,
+  "total_passages": 12
+}

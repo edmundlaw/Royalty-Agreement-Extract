@@ -1,0 +1,17 @@
+{
+  "created_at_utc": "2026-11-17T14:43:43+00:00",
+  "document_id": "DOC-4f4103eea6e81d114e",
+  "first_reader": {
+    "engine": "codex",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low"
+  },
+  "human_approval": "NOT_USED",
+  "map_sha256": "3cd0a9ea573c5a7f8d916c37ca0dfec267c6cac6625ebea472e408ca43847fef",
+  "max_chars": 200000,
+  "packet_sha256": "411514b0a77443afa7d09e17cd2cf2d3db855bb3285e7ef61a48961a897d8677",
+  "reading_tasks_per_reader": 1,
+  "schema": "m13-run.1",
+  "source_characters": 11276,
+  "source_text_sha256": "d04960374e2ba37d3ca841d92f6568030bac7098ece1d6570447920d181dc598"
+}

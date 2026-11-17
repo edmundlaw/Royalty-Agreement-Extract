@@ -1,0 +1,38 @@
+test_deduplicate_across_queries_preserving_discovery_trail (test_m1.TestDiscovery.test_deduplicate_across_queries_preserving_discovery_trail) ... ok
+test_detect_incomplete_page (test_m1.TestDiscovery.test_detect_incomplete_page) ... ok
+test_filing_index_separates_exhibits_and_filing (test_m1.TestDiscovery.test_filing_index_separates_exhibits_and_filing) ... ok
+test_master_idx_and_form_filter (test_m1.TestDiscovery.test_master_idx_and_form_filter) ... ok
+test_parse_efts_page (test_m1.TestDiscovery.test_parse_efts_page) ... ok
+test_single_day_saturation_hard_fails (test_m1.TestDiscovery.test_single_day_saturation_hard_fails) ... ok
+test_split_saturated_window_and_exhaust (test_m1.TestDiscovery.test_split_saturated_window_and_exhaust) ... ok
+test_corrupted_map_hash_detected (test_m1.TestParsingAndMapping.test_corrupted_map_hash_detected) ... ok
+test_empty_document_is_error_not_no_royalty (test_m1.TestParsingAndMapping.test_empty_document_is_error_not_no_royalty) ... ok
+test_map_command_atomic_and_skip (test_m1.TestParsingAndMapping.test_map_command_atomic_and_skip) ... ERROR FileExistsError: Output exists. Pass --force to overwrite or --skip-existing to skip: /tmp/tmpqdr47f83/map.json
+ok
+test_multidocument_sgml_is_refused (test_m1.TestParsingAndMapping.test_multidocument_sgml_is_refused) ... ok
+test_pdf_unsupported_is_not_silent (test_m1.TestParsingAndMapping.test_pdf_unsupported_is_not_silent) ... EOF marker not found
+ok
+test_synthetic_complex_agreement (test_m1.TestParsingAndMapping.test_synthetic_complex_agreement) ... ok
+test_unflagged_passages_preserved_for_sampling (test_m1.TestParsingAndMapping.test_unflagged_passages_preserved_for_sampling) ... ok
+test_unreadable_source_creates_exception_record (test_m1.TestParsingAndMapping.test_unreadable_source_creates_exception_record) ... ERROR ParseError: No readable text found
+ok
+test_http_403_fails_without_evasion_or_retry (test_m1.TestSecUrlAndSecurity.test_http_403_fails_without_evasion_or_retry) ... ok
+test_sec_url_strict_allowlist (test_m1.TestSecUrlAndSecurity.test_sec_url_strict_allowlist) ... ok
+test_source_document_urls (test_m1.TestSecUrlAndSecurity.test_source_document_urls) ... ok
+test_user_agent_requires_real_contact (test_m1.TestSecUrlAndSecurity.test_user_agent_requires_real_contact) ... ok
+test_formal_schema_internal_refs_resolve (test_quality_edgecases.QualityEdgeCases.test_formal_schema_internal_refs_resolve) ... ok
+test_live_missing_contact_creates_failure_record (test_quality_edgecases.QualityEdgeCases.test_live_missing_contact_creates_failure_record) ... ERROR ValueError: Live SEC access requires --user-agent 'Your research project contact@yourdomain.com'
+ok
+test_parsed_source_keeps_multiple_numeric_forms (test_quality_edgecases.QualityEdgeCases.test_parsed_source_keeps_multiple_numeric_forms) ... ok
+test_refuse_redirect_to_third_party (test_quality_edgecases.QualityEdgeCases.test_refuse_redirect_to_third_party) ... ok
+test_refuse_unbounded_bulk_discovery (test_quality_edgecases.QualityEdgeCases.test_refuse_unbounded_bulk_discovery) ... ERROR ValueError: Search window 1826 days is invalid/too long; run bounded daily or monthly tasks
+ok
+test_unreadable_filing_inventory_fails_explicitly (test_quality_edgecases.QualityEdgeCases.test_unreadable_filing_inventory_fails_explicitly) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.124s
+
+OK
+{"status": "MAPPED_NOT_INTERPRETED", "passages": 12, "candidates": 8, "output": "/tmp/tmpqdr47f83/map.json"}
+SKIP_EXISTS /tmp/tmpqdr47f83/map.json
+{"status": "PASS", "errors": []}

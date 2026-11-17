@@ -1,0 +1,7 @@
+# M12: economic-obligation flag accounting
+
+The central defect in M10–M11 was mixing heuristic source detection and model explanations. M12 issues a source-specific, hashed signal manifest from original passage maps. Signals represent candidate economic obligations. The validator allows only a correctly cited and economically compatible structured term/tier/payment/adjustment or a limited source-checkable typed nonroyalty disposition. Free-text issues are commentary, never closures. Redacted monetary obligations require redacted records, not generic issues.
+
+Tables are reconstructed using headers, lead-ins and original passage IDs, including both pipe rows and adjacent separate-cell passages. Written and parenthetical numeric percentages are coalesced only when adjacent and equal. Distinct same-valued obligations cannot share one rate term in the same passage without an exception. Failed core signals produce `INCOMPLETE_CORE_ECONOMICS`; missing supporting consideration produces `INCOMPLETE_SUPPORTING_ECONOMICS`. The CLI can issue one bounded correction task, preserving the original extraction and source map.
+
+Detection is not exhaustive. A complete ledger proves only that **issued** flags were resolved. An independent full-document blind test remains necessary before treating any dataset as accurate or complete. M12 includes a count of unflagged financial-looking source passages to expose a part of this residual risk.

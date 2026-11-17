@@ -1,0 +1,944 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:royalty-research:m2:extraction:0.2",
+  "title": "M2 royalty extraction output (single M1 mapped document)",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "m2.0"
+    },
+    "document_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_text_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reader": {
+      "$ref": "#/$defs/reader"
+    },
+    "agreement": {
+      "$ref": "#/$defs/agreement"
+    },
+    "royalty_terms": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/royalty_term"
+      }
+    },
+    "other_payments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/payment"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "dispositions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/disposition"
+      }
+    },
+    "open_issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/issue"
+      }
+    },
+    "amendment_status": {
+      "enum": [
+        "NOT_CHECKED",
+        "NONE_IDENTIFIED_IN_DOCUMENT",
+        "REFERENCED_UNRESOLVED",
+        "REVIEWED_WITH_LINKED_DOCUMENTS"
+      ]
+    },
+    "occurrence_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "occurrence_dispositions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/m7_occurrence_disposition"
+      }
+    },
+    "m11_resolutions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "signal_id": {
+            "type": "string"
+          },
+          "resolution": {
+            "enum": [
+              "LINKED_RECORD",
+              "TYPED_EXPLANATION"
+            ]
+          },
+          "record_type": {
+            "type": "string"
+          },
+          "record_id": {
+            "type": "string"
+          },
+          "tier_sequence": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "target_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "signal_id",
+          "resolution"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "m11_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "m12_resolutions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "signal_id": {
+            "type": "string"
+          },
+          "resolution": {
+            "enum": [
+              "LINKED_RECORD",
+              "TYPED_EXPLANATION"
+            ]
+          },
+          "record_type": {
+            "type": "string"
+          },
+          "record_id": {
+            "type": "string"
+          },
+          "tier_sequence": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "target_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "signal_id",
+          "resolution"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "m12_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "schema_version",
+    "document_id",
+    "source_text_sha256",
+    "source_url",
+    "reader",
+    "agreement",
+    "royalty_terms",
+    "other_payments",
+    "evidence",
+    "dispositions",
+    "open_issues",
+    "amendment_status"
+  ],
+  "$defs": {
+    "reader": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "engine": {
+          "enum": [
+            "codex",
+            "claude",
+            "claude-code",
+            "manual",
+            "human",
+            "fixture"
+          ]
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "read_scope": {
+          "enum": [
+            "SELECTED_PASSAGES",
+            "FULL_DOCUMENT",
+            "HUMAN_MANUAL"
+          ]
+        },
+        "reviewed_passage_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "engine",
+        "model",
+        "run_id",
+        "read_scope",
+        "reviewed_passage_ids"
+      ]
+    },
+    "agreement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "licensor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "licensee": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "industry": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "licensed_ip": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "execution_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "effective_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "duration": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "territory": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "exclusivity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "contractual_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "field_evidence": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "licensed_ip_nature": {
+          "enum": [
+            "TRADEMARK_BRAND",
+            "PATENT",
+            "COPYRIGHT",
+            "SOFTWARE",
+            "KNOW_HOW",
+            "TRADE_SECRET",
+            "FRANCHISE",
+            "MIXED",
+            "OTHER",
+            "UNDETERMINED",
+            null
+          ]
+        },
+        "licensed_ip_nature_details": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sublicensing_rights": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "other_material_terms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "category": {
+                "enum": [
+                  "SCOPE",
+                  "EXCLUSIVITY",
+                  "SUBLICENSING",
+                  "TERMINATION",
+                  "RENEWAL",
+                  "ASSIGNMENT",
+                  "AUDIT_REPORTING",
+                  "OTHER"
+                ]
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "category",
+              "text",
+              "evidence_ids"
+            ]
+          }
+        },
+        "exclusivity_scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "title",
+        "licensor",
+        "licensee",
+        "industry",
+        "licensed_ip",
+        "execution_date",
+        "effective_date",
+        "duration",
+        "territory",
+        "exclusivity",
+        "contractual_status",
+        "field_evidence"
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "passage_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 8
+        },
+        "role": {
+          "enum": [
+            "RATE",
+            "BASE",
+            "THRESHOLD",
+            "CONDITION",
+            "DEFINITION",
+            "RIGHT",
+            "OTHER",
+            "REDACTION"
+          ]
+        }
+      },
+      "required": [
+        "evidence_id",
+        "passage_id",
+        "quote",
+        "role"
+      ]
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "text",
+        "evidence_ids"
+      ]
+    },
+    "adjustment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "description",
+        "evidence_ids"
+      ]
+    },
+    "rate_tier": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rate_value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rate_unit": {
+          "enum": [
+            "PERCENT",
+            "CURRENCY_PER_UNIT",
+            "FORMULA",
+            "REDACTED",
+            "UNKNOWN"
+          ]
+        },
+        "lower": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "upper": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "calculation": {
+          "enum": [
+            "MARGINAL",
+            "ALL_UNITS",
+            "CUMULATIVE",
+            "UNKNOWN"
+          ]
+        },
+        "measurement_period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "threshold_basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "threshold_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "sequence",
+        "rate_value",
+        "rate_unit",
+        "lower",
+        "upper",
+        "calculation",
+        "measurement_period",
+        "threshold_basis",
+        "threshold_evidence_ids",
+        "evidence_ids"
+      ]
+    },
+    "royalty_term": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "term_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "family": {
+          "enum": [
+            "PRODUCT_SALES",
+            "SUBLICENSING_RECEIPTS",
+            "PER_UNIT",
+            "USAGE",
+            "REVENUE_SHARE",
+            "OTHER"
+          ]
+        },
+        "structure": {
+          "enum": [
+            "FLAT",
+            "TIERED",
+            "STEP_UP",
+            "STEP_DOWN",
+            "HYBRID",
+            "FORMULA",
+            "UNKNOWN"
+          ]
+        },
+        "disclosure_status": {
+          "enum": [
+            "DISCLOSED",
+            "REDACTED",
+            "AMBIGUOUS",
+            "NOT_VERIFIED"
+          ]
+        },
+        "rate_value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rate_unit": {
+          "enum": [
+            "PERCENT",
+            "CURRENCY_PER_UNIT",
+            "FORMULA",
+            "REDACTED",
+            "UNKNOWN"
+          ]
+        },
+        "base": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "base_definition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "product_scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "territory_scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "effective_period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition"
+          }
+        },
+        "adjustments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/adjustment"
+          }
+        },
+        "tiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rate_tier"
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rate_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "base_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "term_id",
+        "family",
+        "structure",
+        "disclosure_status",
+        "rate_value",
+        "rate_unit",
+        "base",
+        "base_definition",
+        "product_scope",
+        "territory_scope",
+        "effective_period",
+        "conditions",
+        "adjustments",
+        "tiers",
+        "evidence_ids",
+        "rate_evidence_ids",
+        "base_evidence_ids"
+      ]
+    },
+    "payment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "payment_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "UPFRONT",
+            "MILESTONE",
+            "MINIMUM_ROYALTY",
+            "GUARANTEE",
+            "ADVANCE",
+            "CAP",
+            "SERVICE",
+            "INTEREST",
+            "OTHER"
+          ]
+        },
+        "amount_value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "condition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disclosure_status": {
+          "enum": [
+            "DISCLOSED",
+            "REDACTED",
+            "AMBIGUOUS",
+            "NOT_VERIFIED"
+          ]
+        }
+      },
+      "required": [
+        "payment_id",
+        "kind",
+        "amount_value",
+        "currency",
+        "basis",
+        "condition",
+        "evidence_ids"
+      ]
+    },
+    "disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "passage_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ROYALTY_TERM",
+              "OTHER_PAYMENT",
+              "DEFINITION",
+              "CROSS_REFERENCE",
+              "REDACTED",
+              "DUPLICATE",
+              "UNRELATED_PERCENT",
+              "BACKGROUND",
+              "UNCERTAIN"
+            ]
+          }
+        },
+        "term_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "payment_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 12
+        },
+        "percentage_dispositions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/percent_disposition"
+          }
+        }
+      },
+      "required": [
+        "passage_id",
+        "categories",
+        "term_ids",
+        "payment_ids",
+        "evidence_ids",
+        "rationale",
+        "percentage_dispositions"
+      ]
+    },
+    "issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "enum": [
+            "CRITICAL",
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ]
+        },
+        "kind": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "OPEN",
+            "INVESTIGATING",
+            "RESOLVED"
+          ]
+        },
+        "passage_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "issue_id",
+        "severity",
+        "kind",
+        "description",
+        "status",
+        "passage_ids"
+      ]
+    },
+    "percent_disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "literal",
+        "classification",
+        "term_id",
+        "rationale"
+      ],
+      "properties": {
+        "literal": {
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "ROYALTY_RATE",
+            "ADJUSTMENT",
+            "OTHER_PAYMENT",
+            "UNRELATED",
+            "THRESHOLD",
+            "UNKNOWN"
+          ]
+        },
+        "term_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 12
+        }
+      }
+    },
+    "m7_occurrence_disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "occurrence_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "enum": [
+            "ROYALTY_RATE",
+            "ADJUSTMENT",
+            "OTHER_PAYMENT",
+            "THRESHOLD",
+            "CONDITION",
+            "NON_ROYALTY",
+            "REDACTION",
+            "UNRESOLVED"
+          ]
+        },
+        "term_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "payment_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 12
+        }
+      },
+      "required": [
+        "occurrence_id",
+        "classification",
+        "rationale"
+      ]
+    }
+  }
+}

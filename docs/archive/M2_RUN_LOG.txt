@@ -1,0 +1,82 @@
+test_deduplicate_across_queries_preserving_discovery_trail (test_m1.TestDiscovery.test_deduplicate_across_queries_preserving_discovery_trail) ... ok
+test_detect_incomplete_page (test_m1.TestDiscovery.test_detect_incomplete_page) ... ok
+test_filing_index_separates_exhibits_and_filing (test_m1.TestDiscovery.test_filing_index_separates_exhibits_and_filing) ... ok
+test_master_idx_and_form_filter (test_m1.TestDiscovery.test_master_idx_and_form_filter) ... ok
+test_parse_efts_page (test_m1.TestDiscovery.test_parse_efts_page) ... ok
+test_single_day_saturation_hard_fails (test_m1.TestDiscovery.test_single_day_saturation_hard_fails) ... ok
+test_split_saturated_window_and_exhaust (test_m1.TestDiscovery.test_split_saturated_window_and_exhaust) ... ok
+test_corrupted_map_hash_detected (test_m1.TestParsingAndMapping.test_corrupted_map_hash_detected) ... ok
+test_empty_document_is_error_not_no_royalty (test_m1.TestParsingAndMapping.test_empty_document_is_error_not_no_royalty) ... ok
+test_map_command_atomic_and_skip (test_m1.TestParsingAndMapping.test_map_command_atomic_and_skip) ... ERROR FileExistsError: Output exists. Pass --force to overwrite or --skip-existing to skip: /tmp/tmpm7k6texo/map.json
+ok
+test_multidocument_sgml_is_refused (test_m1.TestParsingAndMapping.test_multidocument_sgml_is_refused) ... ok
+test_pdf_unsupported_is_not_silent (test_m1.TestParsingAndMapping.test_pdf_unsupported_is_not_silent) ... EOF marker not found
+ok
+test_synthetic_complex_agreement (test_m1.TestParsingAndMapping.test_synthetic_complex_agreement) ... ok
+test_unflagged_passages_preserved_for_sampling (test_m1.TestParsingAndMapping.test_unflagged_passages_preserved_for_sampling) ... ok
+test_unreadable_source_creates_exception_record (test_m1.TestParsingAndMapping.test_unreadable_source_creates_exception_record) ... ERROR ParseError: No readable text found
+ok
+test_http_403_fails_without_evasion_or_retry (test_m1.TestSecUrlAndSecurity.test_http_403_fails_without_evasion_or_retry) ... ok
+test_sec_url_strict_allowlist (test_m1.TestSecUrlAndSecurity.test_sec_url_strict_allowlist) ... ok
+test_source_document_urls (test_m1.TestSecUrlAndSecurity.test_source_document_urls) ... ok
+test_user_agent_requires_real_contact (test_m1.TestSecUrlAndSecurity.test_user_agent_requires_real_contact) ... ok
+test_packet_cli_and_rekey (test_m2.M2CLI.test_packet_cli_and_rekey) ... ok
+test_skip_existing_rejects_mutated_extraction (test_m2.M2CLI.test_skip_existing_rejects_mutated_extraction) ... ERROR ValueError: Cannot skip stale M2 artifact: source, extraction, or options differ
+ok
+test_skip_existing_rejects_stale_inputs (test_m2.M2CLI.test_skip_existing_rejects_stale_inputs) ... ERROR ValueError: Cannot skip stale M2 artifact: source, extraction, or options differ
+ok
+test_validate_cli_nonzero_and_atomic_fail_artifact (test_m2.M2CLI.test_validate_cli_nonzero_and_atomic_fail_artifact) ... ok
+test_matching_two_readers_does_not_grant_approval (test_m2.M2Comparison.test_matching_two_readers_does_not_grant_approval) ... ok
+test_new_reader_different_rate_is_flagged (test_m2.M2Comparison.test_new_reader_different_rate_is_flagged) ... ok
+test_same_result_not_proof_of_independent_validation (test_m2.M2Comparison.test_same_result_not_proof_of_independent_validation) ... ok
+test_blind_rekey_contains_no_first_reader_values (test_m2.M2Packets.test_blind_rekey_contains_no_first_reader_values) ... ok
+test_full_packet_has_all_passages_in_source_order (test_m2.M2Packets.test_full_packet_has_all_passages_in_source_order) ... ok
+test_oversized_passage_refuses_to_truncate (test_m2.M2Packets.test_oversized_passage_refuses_to_truncate) ... ok
+test_rekey_rejects_changed_source (test_m2.M2Packets.test_rekey_rejects_changed_source) ... ok
+test_selected_packet_marks_excluded_and_preserves_all_candidates (test_m2.M2Packets.test_selected_packet_marks_excluded_and_preserves_all_candidates) ... ok
+test_unflagged_sample_is_stable_and_section_diverse (test_m2.M2Packets.test_unflagged_sample_is_stable_and_section_diverse) ... ok
+test_agreement_field_missing_evidence_fails (test_m2.M2Validation.test_agreement_field_missing_evidence_fails) ... ok
+test_bad_rate_percentage_detected (test_m2.M2Validation.test_bad_rate_percentage_detected) ... ok
+test_bad_tier_percentage_detected (test_m2.M2Validation.test_bad_tier_percentage_detected) ... ok
+test_disguised_omitted_rate_in_disposition_fails (test_m2.M2Validation.test_disguised_omitted_rate_in_disposition_fails) ... ok
+test_document_sha_mismatch_fails (test_m2.M2Validation.test_document_sha_mismatch_fails) ... ok
+test_duplicate_disposition_fails (test_m2.M2Validation.test_duplicate_disposition_fails) ... ok
+test_evidence_id_not_defined (test_m2.M2Validation.test_evidence_id_not_defined) ... ok
+test_fabricated_tier_threshold_fails (test_m2.M2Validation.test_fabricated_tier_threshold_fails) ... ok
+test_missing_candidate_disposition_fails (test_m2.M2Validation.test_missing_candidate_disposition_fails) ... ok
+test_missing_reader_coverage_fails (test_m2.M2Validation.test_missing_reader_coverage_fails) ... ok
+test_missing_sub_tier_detected (test_m2.M2Validation.test_missing_sub_tier_detected) ... ok
+test_missing_threshold_evidence_detected (test_m2.M2Validation.test_missing_threshold_evidence_detected) ... ok
+test_omitted_percentage_in_same_passage_fails (test_m2.M2Validation.test_omitted_percentage_in_same_passage_fails) ... ok
+test_redaction_must_have_null_rate (test_m2.M2Validation.test_redaction_must_have_null_rate) ... ok
+test_selected_scope_is_not_full_document (test_m2.M2Validation.test_selected_scope_is_not_full_document) ... ok
+test_semantic_misclassification_cannot_be_proven_by_substring (test_m2.M2Validation.test_semantic_misclassification_cannot_be_proven_by_substring) ... ok
+test_tier_order_or_range_detected (test_m2.M2Validation.test_tier_order_or_range_detected) ... ok
+test_unexpected_fields_and_missing_fields_fail_closed (test_m2.M2Validation.test_unexpected_fields_and_missing_fields_fail_closed) ... ok
+test_unflagged_economic_evidence_produces_warning (test_m2.M2Validation.test_unflagged_economic_evidence_produces_warning) ... ok
+test_unsupported_quote_fails (test_m2.M2Validation.test_unsupported_quote_fails) ... ok
+test_valid_synthetic_fixture_passes_only_deterministic (test_m2.M2Validation.test_valid_synthetic_fixture_passes_only_deterministic) ... ok
+test_wrong_document_fails (test_m2.M2Validation.test_wrong_document_fails) ... ok
+test_formal_schema_internal_refs_resolve (test_quality_edgecases.QualityEdgeCases.test_formal_schema_internal_refs_resolve) ... ok
+test_live_missing_contact_creates_failure_record (test_quality_edgecases.QualityEdgeCases.test_live_missing_contact_creates_failure_record) ... ERROR ValueError: Live SEC access requires --user-agent 'Your research project contact@yourdomain.com'
+ok
+test_parsed_source_keeps_multiple_numeric_forms (test_quality_edgecases.QualityEdgeCases.test_parsed_source_keeps_multiple_numeric_forms) ... ok
+test_refuse_redirect_to_third_party (test_quality_edgecases.QualityEdgeCases.test_refuse_redirect_to_third_party) ... ok
+test_refuse_unbounded_bulk_discovery (test_quality_edgecases.QualityEdgeCases.test_refuse_unbounded_bulk_discovery) ... ERROR ValueError: Search window 1826 days is invalid/too long; run bounded daily or monthly tasks
+ok
+test_unreadable_filing_inventory_fails_explicitly (test_quality_edgecases.QualityEdgeCases.test_unreadable_filing_inventory_fails_explicitly) ... ok
+
+----------------------------------------------------------------------
+Ran 60 tests in 0.183s
+
+OK
+{"status": "MAPPED_NOT_INTERPRETED", "passages": 12, "candidates": 8, "output": "/tmp/tmpm7k6texo/map.json"}
+SKIP_EXISTS /tmp/tmpm7k6texo/map.json
+{"status": "PASS", "errors": []}
+{"status": "PACKET_PREPARED", "output": "/tmp/tmpjqjbs7rf/p.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "PACKET_PREPARED", "output": "/tmp/tmpjqjbs7rf/r.json", "document_id": "DOC-dc937b59892604f5a8"}
+{"status": "PASS_DETERMINISTIC_ONLY", "output": "/tmp/tmpa5bgxfr0/qc.json", "document_id": "DOC-dc937b59892604f5a8"}
+SKIP_VALIDATED /tmp/tmpa5bgxfr0/qc.json
+{"status": "PACKET_PREPARED", "output": "/tmp/tmp92i1cimv/packet.json", "document_id": "DOC-dc937b59892604f5a8"}
+SKIP_VALIDATED /tmp/tmp92i1cimv/packet.json
+{"status": "FAIL", "output": "/tmp/tmpduegyuew/report.json", "document_id": "DOC-dc937b59892604f5a8"}

@@ -1,0 +1,435 @@
+{
+  "agreement": {
+    "contractual_status": null,
+    "duration": null,
+    "effective_date": null,
+    "exclusivity": null,
+    "execution_date": null,
+    "field_evidence": {
+      "title": [
+        "EV01"
+      ]
+    },
+    "industry": null,
+    "licensed_ip": null,
+    "licensee": null,
+    "licensor": null,
+    "territory": null,
+    "title": "SYNTHETIC LICENSE AGREEMENT — NOT AN ACTUAL SEC DOCUMENT"
+  },
+  "amendment_status": "NOT_CHECKED",
+  "dispositions": [
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "EV03"
+      ],
+      "passage_id": "DOC-dc937b59892604f5a8:P000003",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Mapped passage inspected; classified based on whether an economic licensing obligation is established.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "EV04"
+      ],
+      "passage_id": "DOC-dc937b59892604f5a8:P000004",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "6%",
+          "rationale": "A contractual royalty percentage assigned to this rate rule",
+          "term_id": "RT-SALES"
+        },
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "4%",
+          "rationale": "A contractual royalty percentage assigned to this rate rule",
+          "term_id": "RT-SALES"
+        }
+      ],
+      "rationale": "Mapped passage inspected; classified based on whether an economic licensing obligation is established.",
+      "term_ids": [
+        "RT-SALES"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "EV05"
+      ],
+      "passage_id": "DOC-dc937b59892604f5a8:P000005",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "25%",
+          "rationale": "A contractual royalty percentage assigned to this rate rule",
+          "term_id": "RT-SUB"
+        },
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "10%",
+          "rationale": "A contractual royalty percentage assigned to this rate rule",
+          "term_id": "RT-SUB"
+        }
+      ],
+      "rationale": "Mapped passage inspected; classified based on whether an economic licensing obligation is established.",
+      "term_ids": [
+        "RT-SUB"
+      ]
+    },
+    {
+      "categories": [
+        "UNRELATED_PERCENT",
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "EV06"
+      ],
+      "passage_id": "DOC-dc937b59892604f5a8:P000006",
+      "payment_ids": [
+        "OP-INTEREST"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "1.5%",
+          "rationale": "A late-payment interest percentage, not a royalty",
+          "term_id": null
+        }
+      ],
+      "rationale": "Mapped passage inspected; classified based on whether an economic licensing obligation is established.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "EV07"
+      ],
+      "passage_id": "DOC-dc937b59892604f5a8:P000007",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Mapped passage inspected; classified based on whether an economic licensing obligation is established.",
+      "term_ids": [
+        "RT-SALES"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "EV08"
+      ],
+      "passage_id": "DOC-dc937b59892604f5a8:P000008",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Mapped passage inspected; classified based on whether an economic licensing obligation is established.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "EV10"
+      ],
+      "passage_id": "DOC-dc937b59892604f5a8:P000010",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Mapped passage inspected; classified based on whether an economic licensing obligation is established.",
+      "term_ids": [
+        "RT-UNIT"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "EV11"
+      ],
+      "passage_id": "DOC-dc937b59892604f5a8:P000011",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Mapped passage inspected; classified based on whether an economic licensing obligation is established.",
+      "term_ids": [
+        "RT-SALES"
+      ]
+    }
+  ],
+  "document_id": "DOC-dc937b59892604f5a8",
+  "evidence": [
+    {
+      "evidence_id": "EV01",
+      "passage_id": "DOC-dc937b59892604f5a8:P000001",
+      "quote": "SYNTHETIC LICENSE AGREEMENT — NOT AN ACTUAL SEC DOCUMENT",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "EV03",
+      "passage_id": "DOC-dc937b59892604f5a8:P000003",
+      "quote": "2.1 \"Net Sales\" means invoice value less permitted returns.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "EV04",
+      "passage_id": "DOC-dc937b59892604f5a8:P000004",
+      "quote": "3.1 Running Royalty. Licensee must pay 6% of Net Sales for the first $500,000 and 4% of Net Sales above that threshold.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "EV05",
+      "passage_id": "DOC-dc937b59892604f5a8:P000005",
+      "quote": "3.2 Sublicense Fees. Licensee shall pay 25% of sublicense receipts up to $250,000 and 10% thereafter, according to Schedule B.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "EV06",
+      "passage_id": "DOC-dc937b59892604f5a8:P000006",
+      "quote": "4.1 Late Payment. Interest accrues at 1.5% monthly on overdue amounts.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "EV07",
+      "passage_id": "DOC-dc937b59892604f5a8:P000007",
+      "quote": "5.1 Adjustment. Earned compensation will be reduced according to Section 7.2 when patent claims expire.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "EV08",
+      "passage_id": "DOC-dc937b59892604f5a8:P000008",
+      "quote": "Schedule B — Participation Fee",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "EV10",
+      "passage_id": "DOC-dc937b59892604f5a8:P000010",
+      "quote": "United States $2 per device",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "EV11",
+      "passage_id": "DOC-dc937b59892604f5a8:P000011",
+      "quote": "7.2 Reduction. In specified circumstances the rate will be [***] until revised terms are agreed.",
+      "role": "OTHER"
+    }
+  ],
+  "open_issues": [
+    {
+      "description": "Exact patent-expiry adjusted rate is redacted",
+      "issue_id": "ISSUE-RED-1",
+      "kind": "REDACTED_ADJUSTMENT",
+      "passage_ids": [
+        "DOC-dc937b59892604f5a8:P000011"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    }
+  ],
+  "other_payments": [
+    {
+      "amount_value": null,
+      "basis": "Overdue payment",
+      "condition": "If payment is late",
+      "currency": null,
+      "evidence_ids": [
+        "EV06"
+      ],
+      "kind": "INTEREST",
+      "payment_id": "OP-INTEREST"
+    }
+  ],
+  "reader": {
+    "engine": "fixture",
+    "model": "synthetic-human-authored-test",
+    "read_scope": "FULL_DOCUMENT",
+    "reviewed_passage_ids": [
+      "DOC-dc937b59892604f5a8:P000001",
+      "DOC-dc937b59892604f5a8:P000002",
+      "DOC-dc937b59892604f5a8:P000003",
+      "DOC-dc937b59892604f5a8:P000004",
+      "DOC-dc937b59892604f5a8:P000005",
+      "DOC-dc937b59892604f5a8:P000006",
+      "DOC-dc937b59892604f5a8:P000007",
+      "DOC-dc937b59892604f5a8:P000008",
+      "DOC-dc937b59892604f5a8:P000009",
+      "DOC-dc937b59892604f5a8:P000010",
+      "DOC-dc937b59892604f5a8:P000011",
+      "DOC-dc937b59892604f5a8:P000012"
+    ],
+    "run_id": "TEST-FIXTURE-001"
+  },
+  "royalty_terms": [
+    {
+      "adjustments": [
+        {
+          "description": "Patent-expiry reduction refers to Section 7.2; redacted amount unresolved",
+          "evidence_ids": [
+            "EV07",
+            "EV11"
+          ]
+        }
+      ],
+      "base": "Net Sales",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "EV03",
+        "EV04"
+      ],
+      "conditions": [],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": null,
+      "evidence_ids": [
+        "EV03",
+        "EV04",
+        "EV07",
+        "EV11"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": null,
+      "rate_evidence_ids": [
+        "EV04"
+      ],
+      "rate_unit": "PERCENT",
+      "rate_value": null,
+      "structure": "TIERED",
+      "term_id": "RT-SALES",
+      "territory_scope": null,
+      "tiers": [
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "EV04"
+          ],
+          "lower": "0",
+          "measurement_period": "AGREEMENT_YEAR",
+          "rate_unit": "PERCENT",
+          "rate_value": "6",
+          "sequence": 1,
+          "threshold_basis": "NET_SALES",
+          "threshold_evidence_ids": [
+            "EV04"
+          ],
+          "upper": "500000"
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "EV04"
+          ],
+          "lower": "500000",
+          "measurement_period": "AGREEMENT_YEAR",
+          "rate_unit": "PERCENT",
+          "rate_value": "4",
+          "sequence": 2,
+          "threshold_basis": "NET_SALES",
+          "threshold_evidence_ids": [
+            "EV04"
+          ],
+          "upper": null
+        }
+      ]
+    },
+    {
+      "adjustments": [],
+      "base": "sublicense receipts",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "EV05"
+      ],
+      "conditions": [],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": null,
+      "evidence_ids": [
+        "EV05"
+      ],
+      "family": "SUBLICENSING_RECEIPTS",
+      "product_scope": null,
+      "rate_evidence_ids": [
+        "EV05"
+      ],
+      "rate_unit": "PERCENT",
+      "rate_value": null,
+      "structure": "TIERED",
+      "term_id": "RT-SUB",
+      "territory_scope": null,
+      "tiers": [
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "EV05"
+          ],
+          "lower": "0",
+          "measurement_period": "AGREEMENT_YEAR",
+          "rate_unit": "PERCENT",
+          "rate_value": "25",
+          "sequence": 1,
+          "threshold_basis": "NET_SALES",
+          "threshold_evidence_ids": [
+            "EV05"
+          ],
+          "upper": "250000"
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "EV05"
+          ],
+          "lower": "250000",
+          "measurement_period": "AGREEMENT_YEAR",
+          "rate_unit": "PERCENT",
+          "rate_value": "10",
+          "sequence": 2,
+          "threshold_basis": "NET_SALES",
+          "threshold_evidence_ids": [
+            "EV05"
+          ],
+          "upper": null
+        }
+      ]
+    },
+    {
+      "adjustments": [],
+      "base": "per device",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "EV10"
+      ],
+      "conditions": [],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": null,
+      "evidence_ids": [
+        "EV10"
+      ],
+      "family": "PER_UNIT",
+      "product_scope": null,
+      "rate_evidence_ids": [
+        "EV10"
+      ],
+      "rate_unit": "CURRENCY_PER_UNIT",
+      "rate_value": "2",
+      "structure": "FLAT",
+      "term_id": "RT-UNIT",
+      "territory_scope": null,
+      "tiers": []
+    }
+  ],
+  "schema_version": "m2.0",
+  "source_text_sha256": "808fc8f094d4f5bce7982c0822d10e52d4432eefea8129385e4d86ade25a7794",
+  "source_url": null
+}

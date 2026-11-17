@@ -1,0 +1,16 @@
+{
+  "status": "PASS_MAPPING_ONLY",
+  "source": "examples/M13_Original_FunctionalBrands_16sheet.xlsx",
+  "research": "examples/M13_Research_FunctionalBrands_5sheet_v0.13.3.xlsx",
+  "checks": {
+    "royalty_observations": 6,
+    "other_payments": 13,
+    "source_evidence": 86,
+    "mechanics": {
+      "CONDITION": 10,
+      "ADJUSTMENT": 4
+    },
+    "qc_records": 33
+  },
+  "errors": []
+}

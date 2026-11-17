@@ -1,0 +1,25 @@
+{
+ "schema":"m5-anchor-manifest.1",
+ "records":[
+   {"label":"Market Finders / Daugherty — paraphrased web excerpts only","filename":"market_excerpt_paraphrase.html","source_url":"https://www.sec.gov/Archives/edgar/data/1520358/000149315213000675/ex10-2.htm","anchors":[
+     {"id":"market-four-rates","regex":"6%.*4%.*2%.*1%","candidate":true},
+     {"id":"market-minimum-guarantee","regex":"[Mm]inimum annual royalties","candidate":true},
+     {"id":"market-conditional-cap","regex":"capped at \\$200,000","candidate":true},
+     {"id":"market-interest-not-royalty","regex":"interest at \\.5%","candidate":true},
+     {"id":"market-unrelated-audit-percentage","regex":"5% affects reimbursement","candidate":true}
+   ]},
+   {"label":"UC / NeurogesX — paraphrased web excerpts only","filename":"neurogesx_excerpt_paraphrase.html","source_url":"https://www.sec.gov/Archives/edgar/data/1385830/000119312507022650/dex106.htm","anchors":[
+     {"id":"uc-sublicense-25","regex":"25%.*250,000","candidate":true},
+     {"id":"uc-sublicense-10","regex":"10%.*250,000","candidate":true},
+     {"id":"uc-sublicense-5","regex":"5%.*2,000,000","candidate":true},
+     {"id":"uc-royalty-rate","regex":"running royalty is 1%","candidate":true},
+     {"id":"uc-annual-cap","regex":"annual payment.*25%","candidate":true},
+     {"id":"uc-equity-not-royalty","regex":"1% of stock","candidate":true}
+   ]},
+   {"label":"Qualitative obligations","filename":"indirect_payment.html","source_url":"https://www.sec.gov/Archives/edgar/data/1520358/000149315213000675/ex10-2.htm","anchors":[
+     {"id":"annex-c","regex":"Annex C","candidate":true},
+     {"id":"attachment-d","regex":"Attachment D","candidate":true},
+     {"id":"addendum-a","regex":"Addendum A","candidate":true}
+   ]}
+ ]
+}

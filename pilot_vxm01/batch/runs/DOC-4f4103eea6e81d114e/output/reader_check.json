@@ -1,0 +1,10 @@
+{
+  "comparison": null,
+  "document_id": "DOC-4f4103eea6e81d114e",
+  "first_reader_source_check": "PASS_DETERMINISTIC_ONLY",
+  "meaning": "One AI reading only. Quotes and numbers were checked against the source; completeness was not checked by a second reading.",
+  "schema": "m13-reader-check.1",
+  "second_reader_source_check": null,
+  "second_reader_used": false,
+  "state": "SINGLE_READER_NOT_CHECKED"
+}

@@ -1,0 +1,1569 @@
+{
+  "agreement": {
+    "contractual_status": null,
+    "duration": "From the Effective Date until the later of expiration/termination of the Collaboration Agreement or expiration of the then-existing lease term (not to exceed five years) for all Licensed Stores",
+    "effective_date": "2024-10-21",
+    "exclusivity": "Licenses are non-exclusive and non-sublicensable; Licensor covenants not to operate or license BED BATH & BEYOND or BABY & BEYOND Neighborhood Format brick-and-mortar stores in the United States during the term",
+    "execution_date": null,
+    "field_evidence": {
+      "duration": [
+        "1-E26"
+      ],
+      "effective_date": [
+        "1-E24"
+      ],
+      "exclusivity": [
+        "1-E19",
+        "1-E20",
+        "1-E27"
+      ],
+      "industry": [
+        "1-E29"
+      ],
+      "licensed_ip": [
+        "1-E29"
+      ],
+      "licensee": [
+        "1-E24",
+        "2-E005"
+      ],
+      "licensor": [
+        "1-E24",
+        "2-E004"
+      ],
+      "title": [
+        "1-E25"
+      ]
+    },
+    "industry": "Retail",
+    "licensed_ip": "Licensed Marks (Trademarks identified on Schedule A, including the BED BATH & BEYOND marks); Schedule A not in this chunk",
+    "licensee": "Kirkland’s Inc., a Tennessee corporation",
+    "licensor": "Beyond, Inc., a Delaware corporation",
+    "territory": null,
+    "title": "TRADEMARK LICENSE AGREEMENT"
+  },
+  "amendment_status": "NOT_CHECKED",
+  "dispositions": [
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E38"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000001",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit number heading only; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E23"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000004",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Recital describing $17,000,000 term loans and a subscription for shares under separate financing agreements; not a royalty or license payment under this Agreement. Related financing economics are outside this document's licence terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E29"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000005",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Licensed Marks by reference to Schedule A and references the Collaboration Agreement; Schedule A and the Collaboration Agreement are not in this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E39"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000007",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Generic consideration recital; no stated rate or amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E28"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000012",
+      "payment_ids": [
+        "1-P02"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Defines Annual Period, which is the measurement period for the Net Sales deduction cap and the Guaranteed Minimum Royalty.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E34"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000013",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Business Day, used for the payment-default termination notice period; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E30"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000016",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Licensor Products sold in Shop-within-a-Shops; relevant to product scope and reporting but contains no rate.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E40"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000017",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Generic definition of Person; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E31"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000018",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Shop-within-a-Shop, which is within the product scope of the Sales Royalty base.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E41"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000019",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Generic definition of Trademark; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E19"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000023",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "License grant for Neighborhood Format stores subject to payment of royalties under Section 6; grant is non-sublicensable, so no sublicensing royalty arises.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E20"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000027",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Shop-within-a-Shop license grant subject to Section 6 royalties; non-sublicensable.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E35"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000031",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Extends rights to Licensee Affiliates listed on Schedule B; schedule not in this chunk. No separate economics stated.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E36"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000033",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Schedule A may be updated by mutual agreement; references Section 8 of the Collaboration Agreement, which is external to this document.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E37"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000056",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Branding guideline and Review Committee cross-references to Schedule A and Collaboration Agreement; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-E42"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000065",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Section heading for Fees and Payment; economics are in the following passages.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E01",
+        "1-E02",
+        "1-E03",
+        "1-E04"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000067",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "3%",
+          "rationale": "Base Sales Royalty rate on Net Sales.",
+          "term_id": "1-T01"
+        },
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "5%",
+          "rationale": "Step-up Sales Royalty rate after expiration or termination of the Collaboration Agreement.",
+          "term_id": "1-T01"
+        }
+      ],
+      "rationale": "Sales Royalty of 3% of Net Sales, stepping up to 5% on expiration or termination of the Collaboration Agreement, less Guaranteed Minimum Royalty paid.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E05",
+        "1-E06",
+        "1-E07"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000069",
+      "payment_ids": [
+        "1-P01",
+        "1-P02"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Guaranteed Minimum Royalty: $200,000 over first 24 months and $300,000 per Annual Period thereafter ($25,000 per month), pro-rated for partial periods; it is credited against the Sales Royalty.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E08",
+        "1-E09"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000071",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Net Sales, the royalty base, with enumerated deductions; text continues into the next passage.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E10",
+        "1-E11"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000073",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ADJUSTMENT",
+          "literal": "6%",
+          "rationale": "Cap on deductions from gross sales in computing the royalty base, not a royalty rate.",
+          "term_id": "1-T01"
+        }
+      ],
+      "rationale": "Completes Net Sales definition: no other deductions, includes excess insurance proceeds, and caps total deductions at the lesser of actual allowable deductions or 6% of gross sales per Annual Period.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-E12",
+        "1-E13",
+        "1-E14"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000075",
+      "payment_ids": [
+        "1-P01",
+        "1-P02"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Payment timing (30 days after month end) for Guaranteed Minimum Royalty and Sales Royalty; monthly Sales Royalty is reduced by GMR paid; payments in USD without reduction for bank fees.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E18"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000077",
+      "payment_ids": [
+        "1-P06"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Tax withholding gross-up obligation on Licensee; amount not quantified.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E15"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000079",
+      "payment_ids": [
+        "1-P03"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Late payment interest at Prime Rate; Prime Rate defined in the Collaboration Agreement (not available). Sentence continues in next passage.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E43"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000081",
+      "payment_ids": [
+        "1-P03"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Continuation of late-payment interest clause; capped at the maximum lawful rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-E32"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000085",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Sales Statement reporting requirements (monthly, per store, by product category); supports royalty computation but sets no rate.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E44"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000087",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Annual certified statement due 60 days after each Annual Period, cross-referencing Section 6.7(a); reporting only.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E45"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000091",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Audit and record-keeping rights (term plus three years); cross-references Collaboration Agreement confidentiality; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "UNRELATED_PERCENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E16",
+        "1-E17"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000095",
+      "payment_ids": [
+        "1-P04",
+        "1-P05"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "4%",
+          "rationale": "Audit tolerance threshold triggering cost-shifting, not a royalty rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Audit Shortfall must be paid with Prime Rate interest; Licensee bears audit costs if Shortfall exceeds 4% for any calendar month. Prime Rate defined in the Collaboration Agreement.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E26"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000099",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Term clause tied to the Collaboration Agreement and lease terms; relevant to duration and the timing of the 3% to 5% step-up.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-E33"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000103",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Termination right on seven Business Days' notice for failure to pay Sales Royalty or deliver Sales Statements; no new payment amount.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E46"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000111",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Bankruptcy restriction cross-referencing Section 8.2(c); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E47"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000114",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Bankruptcy executory-contract provision referencing Section 14.2 (not in this chunk); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E21",
+        "1-E22"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000116",
+      "payment_ids": [
+        "1-P01",
+        "1-P02"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Accrued Guaranteed Minimum Royalty installments and Sales Royalty are due within ten days after expiration/termination; royalties continue during an optional six-month Transition Period.",
+      "term_ids": [
+        "1-T01"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-E48"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000130",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Licensee indemnification; no stated rate or amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E001"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000132",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Indemnification procedures under Section 11; contains no royalty rate, base or payment obligation. Cross-reference only.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E002"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000135",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Limitation of liability carve-out referencing Section 11 indemnification; no royalty economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "2-E003"
+      ],
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000140",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "The $5,000,000 is a required insurance coverage amount, not a payment between the parties or a royalty; references Sections 11 and 13 only. Not recorded as an other_payment.",
+      "term_ids": []
+    }
+  ],
+  "document_id": "DOC-1a0c0bd2d22d32e9da",
+  "evidence": [
+    {
+      "evidence_id": "1-E01",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000067",
+      "quote": "a royalty of three percent (3%) on all Net Sales of products and services sold through the Licensed Stores and Shop-within-a-Shops",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E02",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000067",
+      "quote": "which shall increase to five percent (5%) upon any expiration or termination of the Collaboration Agreement",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E03",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000067",
+      "quote": "(inclusive of buy-online-pay-in-store (BOPIS) amounts generated from Licensor e-commerce websites)",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "1-E04",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000067",
+      "quote": "less the amount of Guaranteed Minimum Royalty paid with respect to such period",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E05",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000069",
+      "quote": "two-hundred thousand dollars ($200,000) over the first twenty-four (24) months of the term of this Agreement (payable in monthly installments)",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E06",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000069",
+      "quote": "three-hundred thousand dollars ($300,000) per Annual Period (twenty-five thousand dollars ($25,000) payable per month) thereafter, pro-rated for any partial Annual Period",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E07",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000069",
+      "quote": "Commencing upon the opening of the first licensed Neighborhood Format location",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E08",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000071",
+      "quote": "means mean the gross sales (the gross invoice amount billed customers) of products and services (including sales of warranty policies, insurance and other similar products and services)",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E09",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000071",
+      "quote": "less only the following actual and allowable deductions: (a) returns (or destruction in place) that Licensee actually authorizes",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E10",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000073",
+      "quote": "the total of any and all deductions taken by Licensee pursuant to this Section in calculating “Net Sales” shall not exceed the actual amount of all allowable deductions or six percent (6%) of the total amount of gross sales, whichever amount is less, during any Annual Period",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E11",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000073",
+      "quote": "“Net Sales” also includes insurance proceeds received by Licensee",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E12",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000075",
+      "quote": "The Sales Royalty hereunder shall be accounted for and paid monthly within thirty (30) days after the close of each month",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E13",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000075",
+      "quote": "shall be reduced by the amount of the Guaranteed Minimum Royalty paid for such month",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E14",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000075",
+      "quote": "The Guaranteed Minimum Royalty for each month during an Annual Period shall be paid within thirty (30) days after the end of such month",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E15",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000079",
+      "quote": "Licensee shall pay interest on any amounts owed but not paid by the applicable due date at a rate equivalent to the applicable Prime Rate (as defined in the Collaboration",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E16",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000095",
+      "quote": "if any examination or audit discloses that the Shortfall exceeds four percent (4%) for any calendar month, Licensee shall also pay the cost of such examination or audit",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E17",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000095",
+      "quote": "Licensee shall pay the Shortfall together with interest on the Shortfall at a rate equivalent to the applicable Prime Rate (as defined in the Collaboration Agreement) per annum",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-E18",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000077",
+      "quote": "the amount so payable by the Licensee to the Licensor shall be increased and grossed-up to the extent necessary",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E19",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000023",
+      "quote": "a non-exclusive (except as set forth in Section 2.2), non-transferable, non-sublicensable license",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-E20",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000027",
+      "quote": "a non-exclusive, non-transferable, non-sublicensable, license to use the BED BATH & BEYOND marks",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-E21",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000116",
+      "quote": "This Agreement shall remain in effect during any such Transition Period (including Licensee’s obligation to pay royalties pursuant to Section 6)",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E22",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000116",
+      "quote": "Licensee shall pay to Licensor any Guaranteed Minimum Royalty installments and Sales Royalty then owed to it pursuant to this Agreement",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E23",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000004",
+      "quote": "in the aggregate principal amount of $17,000,000",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E24",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000003",
+      "quote": "entered into as of October 21, 2024 (the “Effective Date”) by and between Beyond, Inc., a Delaware corporation (“Licensor”), and Kirkland’s Inc., a Tennessee corporation (“Licensee”)",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E25",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000002",
+      "quote": "TRADEMARK LICENSE AGREEMENT",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E26",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000099",
+      "quote": "will continue until the later of (a) the expiration or termination of the Collaboration Agreement, or (b) the expiration of the then-existing term or initial term (not to exceed five (5) years)",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E27",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000025",
+      "quote": "Licensor shall not, and shall not grant a license or right to any Affiliate or third party to, operate any BED BATH & BEYOND or BABY & BEYOND branded brick-and-mortar retail stores in the Neighborhood Format in the United States",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-E28",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000012",
+      "quote": "except that the first Annual Period shall commence on the Effective Date and end on January 31, 2026",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E29",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000005",
+      "quote": "Licensor’s Trademarks identified on Schedule A (“Licensed Marks”)",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E30",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000016",
+      "quote": "“Licensor Products” means those products that are sourced by or on behalf of Licensor for retail sale",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E31",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000018",
+      "quote": "in which Licensee promotes, features and sells solely Licensor Products",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E32",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000085",
+      "quote": "The reporting period for each Sales Statement shall be the prior calendar month",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E33",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000103",
+      "quote": "on seven (7) Business Days’ prior written notice",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E34",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000013",
+      "quote": "“Business Day” means any day other than a Saturday, a Sunday",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E35",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000031",
+      "quote": "shall extend to each Licensee Affiliate set forth on Schedule B",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E36",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000033",
+      "quote": "Schedule A may be updated by the Parties from time to time upon the Parties’ mutual written agreement",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E37",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000056",
+      "quote": "the specifications set forth on Schedule A",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E38",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000001",
+      "quote": "Exhibit 10.5",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E39",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000007",
+      "quote": "for other good and valuable consideration",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E40",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000017",
+      "quote": "“Person” means an individual, corporation, partnership",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E41",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000019",
+      "quote": "“Trademark” means all trademarks, brand names, trade dress, logos",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-E42",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000065",
+      "quote": "FEES AND PAYMENT",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E43",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000081",
+      "quote": "from the date such payment was due (but not more than the maximum rate of interest which legally can be paid)",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E44",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000087",
+      "quote": "not later than sixty (60) days after the close of each Annual Period",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E45",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000091",
+      "quote": "for the duration of this Agreement and for three (3) years thereafter",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E46",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000111",
+      "quote": "if Licensor terminates this Agreement pursuant to Section 8.2(c)",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-E47",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000114",
+      "quote": "this Agreement is an executory contract within the meaning of Section 365 of Bankruptcy Code",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-E48",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000130",
+      "quote": "Licensee shall indemnify, defend and hold harmless Licensor",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E001",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000132",
+      "quote": "Indemnity Procedures. If any claim or action is asserted against any Licensee Indemnitee",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E002",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000135",
+      "quote": "LICENSOR’S INDEMNIFICATION OBLIGATIONS UNDER SECTION 11",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E003",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000140",
+      "quote": "in the amount of $5,000,000 of primary and umbrella coverage",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E004",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000190",
+      "quote": "BEYOND, INC.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "2-E005",
+      "passage_id": "DOC-1a0c0bd2d22d32e9da:P000195",
+      "quote": "KIRKLAND’S, INC.",
+      "role": "OTHER"
+    }
+  ],
+  "occurrence_dispositions": [
+    {
+      "classification": "NON_ROYALTY",
+      "occurrence_id": "OCC-c8c3405d7d8a49e4f4",
+      "payment_id": null,
+      "rationale": "Aggregate principal of term loans under the Beyond Credit Agreement in the recitals; a financing amount, not a royalty or license payment.",
+      "term_id": null
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-1645a9b5a2d9926f70",
+      "payment_id": null,
+      "rationale": "Spelled 'three percent' is the initial Sales Royalty on Net Sales of Licensed Stores products; matches step 1 of term 1-T01.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-f99024041e67f1e553",
+      "payment_id": null,
+      "rationale": "Numeric '3%' restates the initial Sales Royalty on Net Sales; step 1 of term 1-T01.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-7e9720064e5951b497",
+      "payment_id": null,
+      "rationale": "Spelled 'five percent' is the Sales Royalty rate that increases upon expiration or termination of the Collaboration Agreement; step 2 of 1-T01.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "ROYALTY_RATE",
+      "occurrence_id": "OCC-9e99c58c5032aa0a61",
+      "payment_id": null,
+      "rationale": "Numeric '5%' restates the stepped-up Sales Royalty rate upon Collaboration Agreement expiration/termination; step 2 of 1-T01.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-f7faf27acf24aa42ca",
+      "payment_id": "1-P01",
+      "rationale": "Guaranteed Minimum Royalty of $200,000 over the first 24 months, payable monthly and creditable against Sales Royalties; matches payment 1-P01.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-481c5881ba4621d79e",
+      "payment_id": "1-P02",
+      "rationale": "Guaranteed Minimum Royalty of $300,000 per Annual Period after the initial 24 months, creditable against Sales Royalties; matches payment 1-P02.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "OTHER_PAYMENT",
+      "occurrence_id": "OCC-1e3d9827501f85a412",
+      "payment_id": "1-P02",
+      "rationale": "$25,000 is the monthly installment of the $300,000 per-Annual-Period Guaranteed Minimum Royalty, not a separate obligation.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-6fef0c2a1d53a87d90",
+      "payment_id": null,
+      "rationale": "Six percent cap on total Net Sales deductions relative to gross sales per Annual Period; limits the royalty base, not a running royalty rate.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "CONDITION",
+      "occurrence_id": "OCC-a5ec805af46c2b0998",
+      "payment_id": null,
+      "rationale": "Numeric '6%' is the cap on Net Sales deductions as a share of gross sales; a calculation condition, not a royalty rate.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "ADJUSTMENT",
+      "occurrence_id": "OCC-b5814eda407fbb5dbc",
+      "payment_id": null,
+      "rationale": "Monthly Sales Royalty on Net Sales is reduced by the Guaranteed Minimum Royalty paid for that month; a credit against the term 1-T01 royalty.",
+      "term_id": "1-T01"
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-9a0b082e1f5165c4c2",
+      "payment_id": "1-P05",
+      "rationale": "Spelled 'four percent' is the audit Shortfall threshold that triggers Licensee paying examination/audit costs; not a running royalty or interest rate.",
+      "term_id": null
+    },
+    {
+      "classification": "THRESHOLD",
+      "occurrence_id": "OCC-bf354378544877b039",
+      "payment_id": "1-P05",
+      "rationale": "Numeric '4%' is the audit Shortfall threshold for shifting audit costs to Licensee; separate from the interest obligation and sales royalty.",
+      "term_id": null
+    },
+    {
+      "classification": "NON_ROYALTY",
+      "occurrence_id": "OCC-986d167fef892f6e4e",
+      "payment_id": null,
+      "rationale": "Amount of required primary and umbrella insurance coverage; an insurance requirement, not a payment to Licensor.",
+      "term_id": null
+    }
+  ],
+  "occurrence_manifest_sha256": "ab3f6ea5f559fbabe6434a5b90147ea851f6359bfe8d7408f345273f8b578048",
+  "open_issues": [
+    {
+      "description": "Candidate passages P000132, P000135 and P000140 (Section 11/13 cross-references) appear in the packet candidate list but are not among this chunk's passages (chunk 1 of 2 ends at P000131). Any economics in the remaining text, including Section 13, Section 14.2 and Schedules A/B, require cross-chunk reconciliation against chunk 2.",
+      "issue_id": "1-I01",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000131"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Prime Rate, Review Committee, Collaboration Agreement terms and Section 8 of the Collaboration Agreement are defined externally and are not in this document, so the interest rate and the trigger for the 3% to 5% step-up cannot be fully evaluated.",
+      "issue_id": "1-I02",
+      "kind": "UNAVAILABLE_DEFINITION",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000079",
+        "DOC-1a0c0bd2d22d32e9da:P000095",
+        "DOC-1a0c0bd2d22d32e9da:P000067"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "The Guaranteed Minimum Royalty is described as a minimum 'of Sales Royalties' and also credited against the Sales Royalty ('less the amount of Guaranteed Minimum Royalty paid'). Whether the GMR is a floor or an additive credit, how the $200,000 over 24 months is allocated monthly, and how it interacts with the 5% step-up is not fully specified.",
+      "issue_id": "1-I03",
+      "kind": "INTERPRETATION",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000067",
+        "DOC-1a0c0bd2d22d32e9da:P000069",
+        "DOC-1a0c0bd2d22d32e9da:P000075"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Net Sales definition reads 'means mean' and its deduction list continues across a page break (P000071 to P000073); the text was read as supplied and may contain transcription irregularities.",
+      "issue_id": "1-I04",
+      "kind": "TEXT_ANOMALY",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000071",
+        "DOC-1a0c0bd2d22d32e9da:P000073"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Schedules A (Licensed Marks) and B (Licensee Affiliates) are referenced but not present in this chunk; the licensed-IP scope and affiliate coverage are unverified. No sublicensing royalty exists in the text read (licenses are non-sublicensable), but chunk 2 was not read.",
+      "issue_id": "1-I05",
+      "kind": "MISSING_SCHEDULE",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000005",
+        "DOC-1a0c0bd2d22d32e9da:P000031"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "The recital references a $17,000,000 term loan and a subscription for up to 4,324,324 shares under separate agreements; these were treated as background and not extracted as payments under this license.",
+      "issue_id": "1-I06",
+      "kind": "NON_ROYALTY_FINANCING",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000004"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "No amendments were identified in this chunk, but amendment history, current operative status and the 'as may be modified' reference to Schedule A were not checked; a historical SEC filing does not establish current status.",
+      "issue_id": "1-I07",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000005"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "This chunk (P000132-P000198) contains no royalty terms, rates, tiers, minimums or payment obligations. All royalty economics (Section 6, Section 8, Schedules A and B, Net Sales definition at P000071) are in chunk 1 and must be reconciled from that chunk's output; nothing here confirms or contradicts them.",
+      "issue_id": "2-I001",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000132",
+        "DOC-1a0c0bd2d22d32e9da:P000135",
+        "DOC-1a0c0bd2d22d32e9da:P000140"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Signature page refers to 'the Effective Date' but no date is stated in this chunk; execution and effective dates not determined here. Agreement title also not in this chunk.",
+      "issue_id": "2-I002",
+      "kind": "UNRESOLVED_DEFINITION",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000188"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Section 14.10 requires modifications in signed writing; no amendments are referenced in this chunk and amendment history was not checked.",
+      "issue_id": "2-I003",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000181"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensor' was worded differently by two reading tasks. Kept: 'Beyond, Inc., a Delaware corporation'. Task 2 gave: 'Beyond, Inc.'.",
+      "issue_id": "ISSUE-MERGE-41cfdf21fc6531e724",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensee' was worded differently by two reading tasks. Kept: 'Kirkland’s Inc., a Tennessee corporation'. Task 2 gave: 'Kirkland’s, Inc.'.",
+      "issue_id": "ISSUE-MERGE-3cf71726f062ef8b6b",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "A contractual cross-reference points to a section supplied in a different model task; source completeness does not prove joint interpretation.",
+      "issue_id": "ISSUE-M8-ed53f17baa50c20ddc",
+      "kind": "M8_ECONOMIC_REFERENCE_ACROSS_AI_TASKS",
+      "passage_ids": [
+        "DOC-1a0c0bd2d22d32e9da:P000001",
+        "DOC-1a0c0bd2d22d32e9da:P000002",
+        "DOC-1a0c0bd2d22d32e9da:P000003"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    }
+  ],
+  "other_payments": [
+    {
+      "amount_value": "200000",
+      "basis": "Guaranteed Minimum Royalty of Sales Royalties, aggregate over the first 24 months of the term, payable in monthly installments",
+      "condition": "Commencing upon the opening of the first licensed Neighborhood Format location",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E05",
+        "1-E07",
+        "1-E14"
+      ],
+      "kind": "MINIMUM_ROYALTY",
+      "payment_id": "1-P01"
+    },
+    {
+      "amount_value": "300000",
+      "basis": "Guaranteed Minimum Royalty per Annual Period thereafter ($25,000 per month), pro-rated for any partial Annual Period",
+      "condition": "After the first 24 months; commencing upon opening of first licensed Neighborhood Format location",
+      "currency": "USD",
+      "evidence_ids": [
+        "1-E06",
+        "1-E07",
+        "1-E14"
+      ],
+      "kind": "MINIMUM_ROYALTY",
+      "payment_id": "1-P02"
+    },
+    {
+      "amount_value": null,
+      "basis": "Interest at the applicable Prime Rate (defined in the Collaboration Agreement) per annum on late amounts, capped at legal maximum",
+      "condition": "Amounts owed but not paid by due date",
+      "currency": null,
+      "evidence_ids": [
+        "1-E15",
+        "1-E43"
+      ],
+      "kind": "INTEREST",
+      "payment_id": "1-P03"
+    },
+    {
+      "amount_value": null,
+      "basis": "Interest at the applicable Prime Rate per annum on audit Shortfall from original due date",
+      "condition": "Audit discloses payments owed exceeded payments made",
+      "currency": null,
+      "evidence_ids": [
+        "1-E17"
+      ],
+      "kind": "INTEREST",
+      "payment_id": "1-P04"
+    },
+    {
+      "amount_value": null,
+      "basis": "Licensee pays cost of examination/audit",
+      "condition": "Audit discloses Shortfall exceeding 4% for any calendar month",
+      "currency": null,
+      "evidence_ids": [
+        "1-E16"
+      ],
+      "kind": "OTHER",
+      "payment_id": "1-P05"
+    },
+    {
+      "amount_value": null,
+      "basis": "Tax gross-up so Licensor receives the full amount without withholding",
+      "condition": "Any Taxes required to be withheld or paid on amounts payable to Licensor",
+      "currency": null,
+      "evidence_ids": [
+        "1-E18"
+      ],
+      "kind": "OTHER",
+      "payment_id": "1-P06"
+    }
+  ],
+  "reader": {
+    "engine": "claude",
+    "model": "sonnet",
+    "read_scope": "FULL_DOCUMENT",
+    "reviewed_passage_ids": [
+      "DOC-1a0c0bd2d22d32e9da:P000001",
+      "DOC-1a0c0bd2d22d32e9da:P000002",
+      "DOC-1a0c0bd2d22d32e9da:P000003",
+      "DOC-1a0c0bd2d22d32e9da:P000004",
+      "DOC-1a0c0bd2d22d32e9da:P000005",
+      "DOC-1a0c0bd2d22d32e9da:P000006",
+      "DOC-1a0c0bd2d22d32e9da:P000007",
+      "DOC-1a0c0bd2d22d32e9da:P000008",
+      "DOC-1a0c0bd2d22d32e9da:P000009",
+      "DOC-1a0c0bd2d22d32e9da:P000010",
+      "DOC-1a0c0bd2d22d32e9da:P000011",
+      "DOC-1a0c0bd2d22d32e9da:P000012",
+      "DOC-1a0c0bd2d22d32e9da:P000013",
+      "DOC-1a0c0bd2d22d32e9da:P000014",
+      "DOC-1a0c0bd2d22d32e9da:P000015",
+      "DOC-1a0c0bd2d22d32e9da:P000016",
+      "DOC-1a0c0bd2d22d32e9da:P000017",
+      "DOC-1a0c0bd2d22d32e9da:P000018",
+      "DOC-1a0c0bd2d22d32e9da:P000019",
+      "DOC-1a0c0bd2d22d32e9da:P000020",
+      "DOC-1a0c0bd2d22d32e9da:P000021",
+      "DOC-1a0c0bd2d22d32e9da:P000022",
+      "DOC-1a0c0bd2d22d32e9da:P000023",
+      "DOC-1a0c0bd2d22d32e9da:P000024",
+      "DOC-1a0c0bd2d22d32e9da:P000025",
+      "DOC-1a0c0bd2d22d32e9da:P000026",
+      "DOC-1a0c0bd2d22d32e9da:P000027",
+      "DOC-1a0c0bd2d22d32e9da:P000028",
+      "DOC-1a0c0bd2d22d32e9da:P000029",
+      "DOC-1a0c0bd2d22d32e9da:P000030",
+      "DOC-1a0c0bd2d22d32e9da:P000031",
+      "DOC-1a0c0bd2d22d32e9da:P000032",
+      "DOC-1a0c0bd2d22d32e9da:P000033",
+      "DOC-1a0c0bd2d22d32e9da:P000034",
+      "DOC-1a0c0bd2d22d32e9da:P000035",
+      "DOC-1a0c0bd2d22d32e9da:P000036",
+      "DOC-1a0c0bd2d22d32e9da:P000037",
+      "DOC-1a0c0bd2d22d32e9da:P000038",
+      "DOC-1a0c0bd2d22d32e9da:P000039",
+      "DOC-1a0c0bd2d22d32e9da:P000040",
+      "DOC-1a0c0bd2d22d32e9da:P000041",
+      "DOC-1a0c0bd2d22d32e9da:P000042",
+      "DOC-1a0c0bd2d22d32e9da:P000043",
+      "DOC-1a0c0bd2d22d32e9da:P000044",
+      "DOC-1a0c0bd2d22d32e9da:P000045",
+      "DOC-1a0c0bd2d22d32e9da:P000046",
+      "DOC-1a0c0bd2d22d32e9da:P000047",
+      "DOC-1a0c0bd2d22d32e9da:P000048",
+      "DOC-1a0c0bd2d22d32e9da:P000049",
+      "DOC-1a0c0bd2d22d32e9da:P000050",
+      "DOC-1a0c0bd2d22d32e9da:P000051",
+      "DOC-1a0c0bd2d22d32e9da:P000052",
+      "DOC-1a0c0bd2d22d32e9da:P000053",
+      "DOC-1a0c0bd2d22d32e9da:P000054",
+      "DOC-1a0c0bd2d22d32e9da:P000055",
+      "DOC-1a0c0bd2d22d32e9da:P000056",
+      "DOC-1a0c0bd2d22d32e9da:P000057",
+      "DOC-1a0c0bd2d22d32e9da:P000058",
+      "DOC-1a0c0bd2d22d32e9da:P000059",
+      "DOC-1a0c0bd2d22d32e9da:P000060",
+      "DOC-1a0c0bd2d22d32e9da:P000061",
+      "DOC-1a0c0bd2d22d32e9da:P000062",
+      "DOC-1a0c0bd2d22d32e9da:P000063",
+      "DOC-1a0c0bd2d22d32e9da:P000064",
+      "DOC-1a0c0bd2d22d32e9da:P000065",
+      "DOC-1a0c0bd2d22d32e9da:P000066",
+      "DOC-1a0c0bd2d22d32e9da:P000067",
+      "DOC-1a0c0bd2d22d32e9da:P000068",
+      "DOC-1a0c0bd2d22d32e9da:P000069",
+      "DOC-1a0c0bd2d22d32e9da:P000070",
+      "DOC-1a0c0bd2d22d32e9da:P000071",
+      "DOC-1a0c0bd2d22d32e9da:P000072",
+      "DOC-1a0c0bd2d22d32e9da:P000073",
+      "DOC-1a0c0bd2d22d32e9da:P000074",
+      "DOC-1a0c0bd2d22d32e9da:P000075",
+      "DOC-1a0c0bd2d22d32e9da:P000076",
+      "DOC-1a0c0bd2d22d32e9da:P000077",
+      "DOC-1a0c0bd2d22d32e9da:P000078",
+      "DOC-1a0c0bd2d22d32e9da:P000079",
+      "DOC-1a0c0bd2d22d32e9da:P000080",
+      "DOC-1a0c0bd2d22d32e9da:P000081",
+      "DOC-1a0c0bd2d22d32e9da:P000082",
+      "DOC-1a0c0bd2d22d32e9da:P000083",
+      "DOC-1a0c0bd2d22d32e9da:P000084",
+      "DOC-1a0c0bd2d22d32e9da:P000085",
+      "DOC-1a0c0bd2d22d32e9da:P000086",
+      "DOC-1a0c0bd2d22d32e9da:P000087",
+      "DOC-1a0c0bd2d22d32e9da:P000088",
+      "DOC-1a0c0bd2d22d32e9da:P000089",
+      "DOC-1a0c0bd2d22d32e9da:P000090",
+      "DOC-1a0c0bd2d22d32e9da:P000091",
+      "DOC-1a0c0bd2d22d32e9da:P000092",
+      "DOC-1a0c0bd2d22d32e9da:P000093",
+      "DOC-1a0c0bd2d22d32e9da:P000094",
+      "DOC-1a0c0bd2d22d32e9da:P000095",
+      "DOC-1a0c0bd2d22d32e9da:P000096",
+      "DOC-1a0c0bd2d22d32e9da:P000097",
+      "DOC-1a0c0bd2d22d32e9da:P000098",
+      "DOC-1a0c0bd2d22d32e9da:P000099",
+      "DOC-1a0c0bd2d22d32e9da:P000100",
+      "DOC-1a0c0bd2d22d32e9da:P000101",
+      "DOC-1a0c0bd2d22d32e9da:P000102",
+      "DOC-1a0c0bd2d22d32e9da:P000103",
+      "DOC-1a0c0bd2d22d32e9da:P000104",
+      "DOC-1a0c0bd2d22d32e9da:P000105",
+      "DOC-1a0c0bd2d22d32e9da:P000106",
+      "DOC-1a0c0bd2d22d32e9da:P000107",
+      "DOC-1a0c0bd2d22d32e9da:P000108",
+      "DOC-1a0c0bd2d22d32e9da:P000109",
+      "DOC-1a0c0bd2d22d32e9da:P000110",
+      "DOC-1a0c0bd2d22d32e9da:P000111",
+      "DOC-1a0c0bd2d22d32e9da:P000112",
+      "DOC-1a0c0bd2d22d32e9da:P000113",
+      "DOC-1a0c0bd2d22d32e9da:P000114",
+      "DOC-1a0c0bd2d22d32e9da:P000115",
+      "DOC-1a0c0bd2d22d32e9da:P000116",
+      "DOC-1a0c0bd2d22d32e9da:P000117",
+      "DOC-1a0c0bd2d22d32e9da:P000118",
+      "DOC-1a0c0bd2d22d32e9da:P000119",
+      "DOC-1a0c0bd2d22d32e9da:P000120",
+      "DOC-1a0c0bd2d22d32e9da:P000121",
+      "DOC-1a0c0bd2d22d32e9da:P000122",
+      "DOC-1a0c0bd2d22d32e9da:P000123",
+      "DOC-1a0c0bd2d22d32e9da:P000124",
+      "DOC-1a0c0bd2d22d32e9da:P000125",
+      "DOC-1a0c0bd2d22d32e9da:P000126",
+      "DOC-1a0c0bd2d22d32e9da:P000127",
+      "DOC-1a0c0bd2d22d32e9da:P000128",
+      "DOC-1a0c0bd2d22d32e9da:P000129",
+      "DOC-1a0c0bd2d22d32e9da:P000130",
+      "DOC-1a0c0bd2d22d32e9da:P000131",
+      "DOC-1a0c0bd2d22d32e9da:P000132",
+      "DOC-1a0c0bd2d22d32e9da:P000133",
+      "DOC-1a0c0bd2d22d32e9da:P000134",
+      "DOC-1a0c0bd2d22d32e9da:P000135",
+      "DOC-1a0c0bd2d22d32e9da:P000136",
+      "DOC-1a0c0bd2d22d32e9da:P000137",
+      "DOC-1a0c0bd2d22d32e9da:P000138",
+      "DOC-1a0c0bd2d22d32e9da:P000139",
+      "DOC-1a0c0bd2d22d32e9da:P000140",
+      "DOC-1a0c0bd2d22d32e9da:P000141",
+      "DOC-1a0c0bd2d22d32e9da:P000142",
+      "DOC-1a0c0bd2d22d32e9da:P000143",
+      "DOC-1a0c0bd2d22d32e9da:P000144",
+      "DOC-1a0c0bd2d22d32e9da:P000145",
+      "DOC-1a0c0bd2d22d32e9da:P000146",
+      "DOC-1a0c0bd2d22d32e9da:P000147",
+      "DOC-1a0c0bd2d22d32e9da:P000148",
+      "DOC-1a0c0bd2d22d32e9da:P000149",
+      "DOC-1a0c0bd2d22d32e9da:P000150",
+      "DOC-1a0c0bd2d22d32e9da:P000151",
+      "DOC-1a0c0bd2d22d32e9da:P000152",
+      "DOC-1a0c0bd2d22d32e9da:P000153",
+      "DOC-1a0c0bd2d22d32e9da:P000154",
+      "DOC-1a0c0bd2d22d32e9da:P000155",
+      "DOC-1a0c0bd2d22d32e9da:P000156",
+      "DOC-1a0c0bd2d22d32e9da:P000157",
+      "DOC-1a0c0bd2d22d32e9da:P000158",
+      "DOC-1a0c0bd2d22d32e9da:P000159",
+      "DOC-1a0c0bd2d22d32e9da:P000160",
+      "DOC-1a0c0bd2d22d32e9da:P000161",
+      "DOC-1a0c0bd2d22d32e9da:P000162",
+      "DOC-1a0c0bd2d22d32e9da:P000163",
+      "DOC-1a0c0bd2d22d32e9da:P000164",
+      "DOC-1a0c0bd2d22d32e9da:P000165",
+      "DOC-1a0c0bd2d22d32e9da:P000166",
+      "DOC-1a0c0bd2d22d32e9da:P000167",
+      "DOC-1a0c0bd2d22d32e9da:P000168",
+      "DOC-1a0c0bd2d22d32e9da:P000169",
+      "DOC-1a0c0bd2d22d32e9da:P000170",
+      "DOC-1a0c0bd2d22d32e9da:P000171",
+      "DOC-1a0c0bd2d22d32e9da:P000172",
+      "DOC-1a0c0bd2d22d32e9da:P000173",
+      "DOC-1a0c0bd2d22d32e9da:P000174",
+      "DOC-1a0c0bd2d22d32e9da:P000175",
+      "DOC-1a0c0bd2d22d32e9da:P000176",
+      "DOC-1a0c0bd2d22d32e9da:P000177",
+      "DOC-1a0c0bd2d22d32e9da:P000178",
+      "DOC-1a0c0bd2d22d32e9da:P000179",
+      "DOC-1a0c0bd2d22d32e9da:P000180",
+      "DOC-1a0c0bd2d22d32e9da:P000181",
+      "DOC-1a0c0bd2d22d32e9da:P000182",
+      "DOC-1a0c0bd2d22d32e9da:P000183",
+      "DOC-1a0c0bd2d22d32e9da:P000184",
+      "DOC-1a0c0bd2d22d32e9da:P000185",
+      "DOC-1a0c0bd2d22d32e9da:P000186",
+      "DOC-1a0c0bd2d22d32e9da:P000187",
+      "DOC-1a0c0bd2d22d32e9da:P000188",
+      "DOC-1a0c0bd2d22d32e9da:P000189",
+      "DOC-1a0c0bd2d22d32e9da:P000190",
+      "DOC-1a0c0bd2d22d32e9da:P000191",
+      "DOC-1a0c0bd2d22d32e9da:P000192",
+      "DOC-1a0c0bd2d22d32e9da:P000193",
+      "DOC-1a0c0bd2d22d32e9da:P000194",
+      "DOC-1a0c0bd2d22d32e9da:P000195",
+      "DOC-1a0c0bd2d22d32e9da:P000196",
+      "DOC-1a0c0bd2d22d32e9da:P000197",
+      "DOC-1a0c0bd2d22d32e9da:P000198"
+    ],
+    "run_id": "MERGE-30671a5590d9adb20c"
+  },
+  "royalty_terms": [
+    {
+      "adjustments": [
+        {
+          "description": "Sales Royalty is reduced by the amount of Guaranteed Minimum Royalty paid for the relevant period/month",
+          "evidence_ids": [
+            "1-E04",
+            "1-E13"
+          ]
+        },
+        {
+          "description": "Cap on Net Sales deductions: lesser of actual allowable deductions or 6% of gross sales per Annual Period",
+          "evidence_ids": [
+            "1-E10"
+          ]
+        }
+      ],
+      "base": "Net Sales of products and services sold through the Licensed Stores and Shop-within-a-Shops (including BOPIS amounts generated from Licensor e-commerce websites)",
+      "base_definition": "Net Sales: gross invoiced sales of products and services (including warranty policies, insurance and similar), less only actual allowable deductions for returns, allowances, trade discounts and separately invoiced sales tax; includes insurance proceeds exceeding Licensee's cost; total deductions capped at the lesser of actual allowable deductions or 6% of gross sales per Annual Period.",
+      "base_evidence_ids": [
+        "1-E03",
+        "1-E08",
+        "1-E09",
+        "1-E10",
+        "1-E11"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "1-E02"
+          ],
+          "text": "Rate increases from 3% to 5% upon any expiration or termination of the Collaboration Agreement"
+        },
+        {
+          "evidence_ids": [
+            "1-E12"
+          ],
+          "text": "Sales Royalty is paid monthly within 30 days after month end, computed on Net Sales of the month"
+        }
+      ],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": "3% from the Effective Date; 5% upon any expiration or termination of the Collaboration Agreement",
+      "evidence_ids": [
+        "1-E01",
+        "1-E02",
+        "1-E03",
+        "1-E04",
+        "1-E08",
+        "1-E09",
+        "1-E10",
+        "1-E11",
+        "1-E12",
+        "1-E13",
+        "1-E21"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": "Products and services sold through Licensed Stores (Neighborhood Format) and Shop-within-a-Shops",
+      "rate_evidence_ids": [
+        "1-E01",
+        "1-E02"
+      ],
+      "rate_unit": "PERCENT",
+      "rate_value": "3",
+      "structure": "STEP_UP",
+      "term_id": "1-T01",
+      "territory_scope": null,
+      "tiers": [
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "1-E01"
+          ],
+          "lower": null,
+          "measurement_period": "monthly",
+          "rate_unit": "PERCENT",
+          "rate_value": "3",
+          "sequence": 1,
+          "threshold_basis": "While the Collaboration Agreement has not expired or terminated",
+          "threshold_evidence_ids": [
+            "1-E02"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "1-E02"
+          ],
+          "lower": null,
+          "measurement_period": "monthly",
+          "rate_unit": "PERCENT",
+          "rate_value": "5",
+          "sequence": 2,
+          "threshold_basis": "Upon any expiration or termination of the Collaboration Agreement",
+          "threshold_evidence_ids": [
+            "1-E02"
+          ],
+          "upper": null
+        }
+      ]
+    }
+  ],
+  "schema_version": "m2.0",
+  "source_text_sha256": "4292bf2ae20f539cbe7d9f4e3155ac8e451d405f08e26ef8645817ef3725d28f",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1056285/000095017024115935/kirk-ex10_5.htm"
+}
