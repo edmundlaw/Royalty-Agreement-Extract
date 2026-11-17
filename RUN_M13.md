@@ -1,16 +1,17 @@
-# M13 v0.13.6 — routine full-source run
+# M13 v0.13.7 — routine full-source run
 
 ## Routine use
 
 1. In Terminal type `royalty` (shell alias; takes you to `~/royalty-research`), then `cd m13`.
 2. Dry run (no AI calls, shows what would be called and prompt sizes): `./royalty.sh 2026-01-12 2026-01-14 5`
 3. Real run: the same command with `--go` at the end. The workbook is copied to `~/Downloads/Royalty_Research_<START>_<END>.xlsx`.
+4. An agreement left half read (call limit, a stop, or a failure)? Finish it without discovering or preparing again: `./royalty.sh --resume runs_YYYYMMDD_HHMMSS` (dry run: shows the remaining calls) then the same with `--go`. Resume makes only the calls still missing, finalizes agreements not yet finalized, and writes a new workbook beside the old one (`..._v<version>.xlsx`; an earlier workbook is never overwritten). The finalize step prints one line per agreement and lists any that are still unfinished; error details go to `batch/finalize_errors.log`.
 
 Run the script yourself in Terminal. Running the tool through a Codex or Claude chat agent wastes most of the allowance on the agent's own reading and retries.
 
 Which agreements are read (fixed Python rules, zero AI tokens; full list in `batch/candidate_register.json`):
 - Order: EX-10 exhibits first, then other contract exhibits, then prospectuses/press releases; more matched search terms first.
-- Licence check: "royalt" appears 3+ times and either the opening names a licence/royalty/franchise/collaboration/term sheet, or royalty wording is dense (1+ per 10,000 characters). Purchase, loan and security agreements that only mention royalties in boilerplate become `NOT_PREPARED_NOT_LICENCE_LIKE`.
+- Licence check: "royalt" appears 3+ times, and the document's title (first lines, not the recitals) decides. A title naming a licence/royalty/collaboration/franchise agreement passes. A title naming services, purchase, loan, credit, security, guarantee, employment, consulting, separation, settlement, assignment, merger, underwriting, indenture, lease, supply or joint venture (without a licence word) is rejected unless the text has 25+ licence-grant phrases ("grants ... a licence", "hereby licenses", "exclusive licence", "Licensed Product" ...) and dense royalty wording. Other titles need dense royalty wording (1+ per 10,000 characters) or a licence named in the opening, plus at least one licence-grant phrase. Rejected documents become `NOT_PREPARED_NOT_LICENCE_LIKE`; the register shows the detected title and grant count (`licence_gate`).
 - Size: licences over 120,000 characters become `NOT_PREPARED_TOO_LARGE` (each would need several reader calls). Add `--big` to read them.
 - The agreement limit counts agreements actually prepared; at most 10 downloads per agreement requested (`NOT_PREPARED_DOWNLOAD_LIMIT`).
 These rules trade completeness for allowance: a genuine licence with little royalty wording can be skipped. Nothing is deleted; skipped items stay listed.

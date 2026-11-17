@@ -1,3 +1,16 @@
+# v0.13.7 changes
+
+Fixes from the first live run (3 agreements, 12-14 Jan 2026).
+
+- `run` now keeps calling the pending tasks of the same agreement until it is fully read (then the next agreement), still bounded by `--max-calls`, prompt cap, token budget, retry and manual stops. v0.13.6 made one call per agreement and left multi-chunk agreements (Trevena, 2 chunks) half read. A dry run lists the next call of every agreement.
+- Chunk merge accepts every agreement field the schema allows: the field list is now derived from `m2_extraction.schema.json` (v0.13.6 had a hard-coded list without `related_party` and `licensed_ip_nature_basis`, so finalize failed with "Bad agreement evidence" for OSR/VXM01). Regression test finalizes from raw chunk results.
+- SEC filing metadata (filing date, accession, CIK, form, company) now travels into the source map for new runs, so `SEC filing date` is filled. For runs prepared earlier (immutable map without it) finalize looks the document up in the batch's `discovery.jsonl` / `candidate_register.json`.
+- `Royalty cap` shows only caps whose basis or condition text mentions royalties (N2OFF's US$1M cap on deferred service consideration was mislabelled); other caps remain in sheet 03.
+- `Usable for royalty benchmark`: new first reason "no IP licence grant found (e.g. services / profit share)" when Nature of IA is UNDETERMINED and no licence-grant wording is found in the source.
+- `licence_gate` strengthened (still zero AI tokens): document title detection plus licence-grant wording (`licence_grant.py`). Services, assignment, purchase, loan and similar titles are rejected unless 25+ grant phrases; documents without a licence title need at least one grant phrase. Calibrated on 35 known licences (all still pass) and the live-run negatives (N2OFF, Trevena assignment, Luminar, Pelthos, Liftoff, ... rejected). The register shows title, title kind, grant count and reason.
+- New `./royalty.sh --resume RUNS_FOLDER [--go]`. Finalize prints one clean line per agreement (details in `batch/finalize_errors.log`) instead of a traceback; new workbooks never overwrite an earlier file (`_v<version>` suffix); `run_info.json` records the date range.
+- `scripts/verify_release.py` and `RELEASE_SHA256.json` were not regenerated for 0.13.7.
+
 # v0.13.6 changes
 
 - New `royalty.sh START END [MAX] [--go]`: one-command discover, prepare, read, finalize, combine and copy to Downloads. Dry run by default; fixed queries, model and budgets.
