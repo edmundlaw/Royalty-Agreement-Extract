@@ -318,6 +318,13 @@
             null
           ]
         },
+        "licensed_ip_nature_basis": {
+          "enum": [
+            "STATED",
+            "INFERRED",
+            null
+          ]
+        },
         "licensed_ip_nature_details": {
           "type": [
             "string",
@@ -370,6 +377,14 @@
           "type": [
             "string",
             "null"
+          ]
+        },
+        "related_party": {
+          "enum": [
+            "YES",
+            "NO_STATED_ARMS_LENGTH",
+            "NOT_STATED",
+            null
           ]
         }
       },

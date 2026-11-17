@@ -324,11 +324,17 @@ def source_check(mapping: dict, extraction: dict) -> dict:
     # new extraction supplies a positive fact, require a real quoted source ID;
     # classification semantics are still an analyst/independent-reader judgement.
     header_refs = agreement.get('field_evidence') or {}
-    for key in ('licensed_ip_nature', 'licensed_ip_nature_details', 'sublicensing_rights', 'exclusivity_scope'):
+    inferred = agreement.get('licensed_ip_nature_basis') == 'INFERRED'
+    for key in ('licensed_ip_nature', 'licensed_ip_nature_details', 'sublicensing_rights', 'exclusivity_scope', 'related_party'):
         value = agreement.get(key)
-        if value is None or (key == 'licensed_ip_nature' and value == 'UNDETERMINED'):
+        if value is None or (key == 'licensed_ip_nature' and value == 'UNDETERMINED') or \
+                (key == 'related_party' and value == 'NOT_STATED'):
             continue
         refs = _ids(header_refs.get(key))
+        if key == 'licensed_ip_nature' and inferred and not refs:
+            # An INFERRED nature may cite the context it was inferred from
+            # (patent-term wording, the asset description) under a neighbouring field.
+            refs = [r for k in ('licensed_ip_nature_details', 'licensed_ip', 'duration') for r in _ids(header_refs.get(k))]
         known(refs, f'agreement.{key}')
         if not refs:
             err('M13_AGREEMENT_FIELD_WITHOUT_EVIDENCE',
@@ -909,7 +915,8 @@ def finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False) 
         write_csvs(rows, out / 'csv')
         if export_xlsx:
             from .m13_research_export import write_research_xlsx
-            write_research_xlsx(rows, out / 'Royalty_Research_M13.xlsx', {mapping['document_id']: first})
+            write_research_xlsx(rows, out / 'Royalty_Research_M13.xlsx', {mapping['document_id']: first},
+                                {mapping['document_id']: [x.get('text') or '' for x in mapping.get('passages', [])]})
             if legacy_xlsx:
                 write_xlsx(rows, out / 'Royalty_Research_M13_Detailed.xlsx')
         manifest = {'schema': 'm13-output-manifest.1', 'source_map_sha256': meta['map_sha256'], 'state': state,
@@ -942,9 +949,9 @@ def combine(runs_dir, destination, *, legacy_xlsx=False) -> dict:
     runs_dir = Path(runs_dir).expanduser(); destination = Path(destination).expanduser()
     if destination.exists(): raise FileExistsError('Combined workbook already exists; choose a new file name')
     if destination.suffix.lower() != '.xlsx': raise ValueError('The combined workbook must be an .xlsx file')
-    combined = None; states = Counter(); used = []; unfinished = []; first_readings = {}
+    combined = None; states = Counter(); used = []; unfinished = []; first_readings = {}; source_texts = {}
     for run in sorted(p for p in runs_dir.iterdir() if p.is_dir() and (p / 'm13_run.json').is_file()):
-        _load(run)                                             # refuses a run folder that was altered
+        _, _, run_map, _ = _load(run)                          # refuses a run folder that was altered
         out = next((run / n for n in ('output_checked', 'output') if (run / n / 'rows.json').is_file()), None)
         if out is None: unfinished.append(run.name); continue
         manifest = read_json(out / 'output_manifest.json')
@@ -958,6 +965,7 @@ def combine(runs_dir, destination, *, legacy_xlsx=False) -> dict:
         # Legacy combine allows multiple runs of the same SEC document; preserve
         # the first metadata record. Each detailed source row still remains.
         first_readings.setdefault(did, extraction)
+        source_texts.setdefault(did, [x.get('text') or '' for x in run_map.get('passages', [])])
         used.append(run.name)
         if combined is None:
             combined = {name: [list(table[0])] for name, table in rows.items()}
@@ -978,7 +986,7 @@ def combine(runs_dir, destination, *, legacy_xlsx=False) -> dict:
     from .m13_research_export import write_research_xlsx
     detailed = destination.with_name(destination.stem + '_Detailed.xlsx')
     if legacy_xlsx and detailed.exists(): raise FileExistsError('Detailed combined XLSX already exists')
-    write_research_xlsx(combined, destination, first_readings)
+    write_research_xlsx(combined, destination, first_readings, source_texts)
     if legacy_xlsx:
         write_xlsx(combined, detailed)
     return {'status': 'COMBINED', 'agreements': len(used), 'states': dict(states), 'not_finished': unfinished,

@@ -12,18 +12,19 @@ from pathlib import Path
 from collections import defaultdict
 
 NAMES = ('01 Royalty Database', '02 Tiers & Mechanics', '03 Other Payments',
-         '04 Source Evidence', '05 QC & Issues')
+         '04 Source Evidence', '05 QC & Issues', '06 Other Terms')
 
 HEADERS = {
     NAMES[0]: ['Observation ID','Nature of IA','Licensed intangible asset','Royalty rate (%)',
-        'Royalty rate as reported','Royalty family','Rate structure','Rate unit','Royalty base','Product / field of use',
-        'Licensor','Licensee','Industry','Territory','Exclusivity','Exclusivity scope','Sublicensing rights',
-        'Effective date','Agreement status','Royalty period','Minimum guarantee','Royalty cap',
+        'Usable for royalty benchmark','Benchmark note','Royalty rate as reported','Royalty family','Rate structure','Rate unit','Royalty base','Product / field of use',
+        'Licensor','Licensee','Related party','Industry','Territory','Exclusivity','Exclusivity scope','Sublicensing rights',
+        'Signing date','Effective date','SEC filing date','Agreement status','Royalty period','Minimum guarantee','Royalty cap',
         'Advance / prepayment','Upfront fee','Other material terms',
         'Payment source IDs','Rate evidence ID','Rate quotation','SEC source link','Disclosure','Reader comparison',
         'Document QC','Analyst action','Agreement ID','Document ID','IA evidence IDs',
         'Sublicensing evidence IDs','Exclusivity evidence IDs',
-        'Exclusivity scope evidence IDs','Other terms evidence IDs','IA classification detail'],
+        'Exclusivity scope evidence IDs','Other terms evidence IDs','IA classification detail',
+        'Agreement status (full text)','Exclusivity scope (full text)'],
     NAMES[1]: ['Record type','Observation ID','Term ID','Sequence','Rate (as reported)',
         'Rate numeric','Rate unit','Lower threshold','Upper threshold','Mechanics / condition',
         'Evidence IDs','SEC source link','Document ID','QC state','Notes'],
@@ -35,7 +36,70 @@ HEADERS = {
     NAMES[4]: ['Record type','Document ID','Priority / level','Value or issue ID','Description',
         'First reader / state','Second reader','Passage / issue ID','Section','Source quotation',
         'SEC source link','Analyst action'],
+    NAMES[5]: ['Agreement ID','Document ID','Licensor','Licensee','Category','Text','Evidence IDs',
+        'Quotation of first evidence','SEC source link'],
 }
+
+# --- Python-only helpers (no AI) -------------------------------------------
+SHORT_LIMIT = 150      # cap for long agreement-level text in sheet 01
+# Royalty families whose rate applies to money received from a sublicensee (a
+# pass-through / recovery share), not to product sales. The schema has no
+# separate 'recovery' family, so SUBLICENSING_RECEIPTS is the whole list.
+PASS_THROUGH_FAMILIES = {'SUBLICENSING_RECEIPTS'}
+# Term sheet / conditional agreements: simple wording match on contractual_status.
+_CONDITIONAL = re.compile(r'term sheet|letter of intent|heads of terms|memorandum of understanding|non-?binding|'
+                          r'conditional|conditions? precedent|subject to[^.;]{0,60}conditions?', re.I)
+_IA_KEYWORDS = (('PATENT', re.compile(r'\bpatents?\b', re.I)),
+                ('TRADEMARK_BRAND', re.compile(r'\btrade ?marks?\b|\bbrand marks?\b', re.I)),
+                ('COPYRIGHT', re.compile(r'\bcopyrights?\b', re.I)),
+                ('SOFTWARE', re.compile(r'\bsoftware\b|\bsource code\b', re.I)),
+                ('KNOW_HOW', re.compile(r'\bknow-?how\b|\btrade secrets?\b', re.I)))
+_RELATED = re.compile(r'related[- ]part(?:y|ies)|affiliated (?:entit(?:y|ies)|parties|companies)', re.I)
+
+
+def _short(text, limit=SHORT_LIMIT):
+    text='' if text is None else str(text)
+    return text if len(text)<=limit else text[:limit-1].rstrip()+'\u2026'
+
+
+def _ia_keyword_hint(texts):
+    """Labelled fallback only: keyword scan of cited evidence text. Returns (nature, detail) or None."""
+    found={}
+    for label,rx in _IA_KEYWORDS:
+        for t in texts:
+            m=rx.search(t or '')
+            if m:found.setdefault(label,m.group(0).lower());break
+    if not found:return None
+    nature=next(iter(found)) if len(found)==1 else 'MIXED'
+    return nature,'Keyword hint (Python, not the reader): matched '+', '.join(f"'{w}' -> {k}" for k,w in found.items())+' in cited evidence'
+
+
+def _related_hint(texts):
+    for t in texts:
+        for m in _RELATED.finditer(t or ''):
+            if re.search(r'\b(?:not|no|nor|neither)\b[^.]{0,25}$',t[max(0,m.start()-30):m.start()],re.I):continue
+            return m.group(0)
+    return None
+
+
+def benchmark_usable(term, related, status):
+    """Python rule, zero AI. Returns ('YES'|'NO', note). Any one reason makes it NO."""
+    reasons=[]
+    family=term.get('Family')
+    if family in PASS_THROUGH_FAMILIES:reasons.append('pass-through of sublicensee receipts, not a sales royalty')
+    rate=term.get('Rate_Numeric')
+    unit=str(term.get('Rate_Unit') or '').upper()
+    if rate in (None,'') or term.get('Disclosure_Status') in ('REDACTED','AMBIGUOUS','NOT_VERIFIED') or unit in ('UNKNOWN','REDACTED'):
+        reasons.append('rate not disclosed or unclear')
+    else:
+        try:
+            if float(rate)>=50:reasons.append(f'rate {rate:g}% is 50% or more')
+        except (TypeError,ValueError):reasons.append('rate not numeric')
+        if unit not in ('PERCENT','PCT'):reasons.append('rate is not a percentage')
+    if related.startswith('YES'):reasons.append('related-party agreement'+(' (keyword hint)' if 'hint' in related else ''))
+    if _CONDITIONAL.search(status or ''):reasons.append('term sheet or conditional agreement')
+    if reasons:return 'NO','; '.join(reasons)
+    return 'YES','No exclusion rule triggered; still confirm at point of use'
 
 
 def _records(rows, name):
@@ -114,13 +178,14 @@ def _payment_references(payments: list[dict]):
                     for p in payments if p.get('Payment_ID'))
 
 
-def research_rows(rows: dict, first_readings: dict | None = None) -> dict:
+def research_rows(rows: dict, first_readings: dict | None = None, source_texts: dict | None = None) -> dict:
     """Derive a presentational database. All primary evidence remains in rows.
 
     first_readings maps Document_ID to its *first reader* extraction. This does
     not resolve reader disagreements or infer novel rights on old recordings.
     """
     first_readings=first_readings or {}
+    source_texts=source_texts or {}
     docs={d['Document_ID']:d for d in _records(rows,'Documents')}
     terms=_records(rows,'Royalty Terms')
     payments=_records(rows,'Other Payments')
@@ -148,14 +213,34 @@ def research_rows(rows: dict, first_readings: dict | None = None) -> dict:
         did=t['Document_ID']; doc=docs.get(did,{})
         ex=first_readings.get(did) or {}; agreement=ex.get('agreement') or {}
         field_refs=agreement.get('field_evidence') or {}
+        field_ev=lambda *keys:[(evid_by_doc.get((did,i)) or {}).get('Exact_Quotation') or ''
+                               for k in keys for i in _ids(field_refs.get(k))]
         nature=agreement.get('licensed_ip_nature')
         nature='NOT_ASSESSED' if nature is None else nature
+        ia_detail=agreement.get('licensed_ip_nature_details')
+        if nature=='UNDETERMINED' or (nature=='NOT_ASSESSED' and agreement):
+            hint=_ia_keyword_hint(field_ev('licensed_ip','licensed_ip_nature','licensed_ip_nature_details','duration'))
+            if hint:  # never overrides a reader's own non-UNDETERMINED value
+                nature=f'{hint[0]} (keyword hint)'
+                ia_detail=(str(ia_detail)+' | ' if ia_detail else '')+hint[1]
+        elif nature not in ('NOT_ASSESSED','UNDETERMINED') and agreement.get('licensed_ip_nature_basis')=='INFERRED':
+            nature=f'{nature} (inferred)'
+        related=agreement.get('related_party')
+        if related is None:
+            related='NOT_ASSESSED'
+            if agreement:
+                word=_related_hint(field_ev('licensed_ip','contractual_status') + [e.get('Exact_Quotation') or '' for (d_,_i),e in evid_by_doc.items() if d_==did]
+                                   + list(source_texts.get(did) or []))
+                if word:related=f'YES (keyword hint: "{word}")'
+        usable,usable_note=benchmark_usable(t,related,doc.get('Contract_Status'))
         license_text=doc.get('Licensed_IP') or agreement.get('licensed_ip')
         rights=agreement.get('sublicensing_rights') or 'NOT_ASSESSED'
         material=agreement.get('other_material_terms') or []
-        extras=[str(item.get('category','OTHER')) + ': ' + str(item.get('text','')) for item in material]
-        extras += ['Condition: '+str(c.get('Condition_Text')) for c in conditions.get((did,t['Term_ID']), [])]
-        extras += ['Adjustment: '+str(a.get('Adjustment_Description')) for a in adjustments.get((did,t['Term_ID']), [])]
+        cats=sorted({str(m.get('category','OTHER')) for m in material})
+        n_cond=len(conditions.get((did,t['Term_ID']),[])); n_adj=len(adjustments.get((did,t['Term_ID']),[]))
+        summary=(', '.join(cats)+f' ({len(material)} term{"" if len(material)==1 else "s"}) \u2013 see sheet 06') if material else 'none recorded'
+        if n_cond or n_adj:summary+=f'; {n_cond} condition(s), {n_adj} adjustment(s) \u2013 see sheet 02'
+        summary=_short(summary,120)
         payments_present=payments_by_doc.get(did,[])
         min_hint=_payment_summary(payments_present,{'MINIMUM_ROYALTY','GUARANTEE'},minimum=True)
         cap_hint=_payment_summary(payments_present,{'CAP'})
@@ -168,19 +253,32 @@ def research_rows(rows: dict, first_readings: dict | None = None) -> dict:
         quote=(evid_by_doc.get((did,evid_id)) or {}).get('Exact_Quotation') or ''
         action='Review CORE differences' if doc.get('Extraction_Status')=='TWO_READERS_DIFFER' else 'Point-of-use source review'
         result[NAMES[0]].append([
-            t.get('Observation_ID'),nature,license_text,t.get('Rate_Numeric'),t.get('Rate_Value_Text'),t.get('Family'),t.get('Structure'),
+            t.get('Observation_ID'),nature,license_text,t.get('Rate_Numeric'),usable,usable_note,t.get('Rate_Value_Text'),t.get('Family'),t.get('Structure'),
             t.get('Rate_Unit'),t.get('Royalty_Base'),t.get('Product_Scope'),t.get('Licensor') or doc.get('Licensor'),
-            t.get('Licensee') or doc.get('Licensee'),doc.get('Industry'),t.get('Territory') or doc.get('Territory'),
+            t.get('Licensee') or doc.get('Licensee'),related,doc.get('Industry'),t.get('Territory') or doc.get('Territory'),
             doc.get('Exclusivity') if doc.get('Exclusivity') is not None else 'NOT_ASSESSED',
-            exclusivity_scope,rights,doc.get('Effective'),doc.get('Contract_Status'),t.get('Effective_Period'),min_hint,cap_hint,advance_hint,
-            upfront_hint,_join(extras),payment_ids,rate_ids,quote,
+            _short(exclusivity_scope),rights,doc.get('Executed') or agreement.get('execution_date'),doc.get('Effective'),
+            doc.get('Filing_Date'),_short(doc.get('Contract_Status')),t.get('Effective_Period'),min_hint,cap_hint,advance_hint,
+            upfront_hint,summary,payment_ids,rate_ids,quote,
             t.get('Source_URL'),t.get('Disclosure_Status'),doc.get('Second_AI_Review_Status'),
             t.get('QC_State'),action,t.get('Agreement_ID'),did,
             _join(field_refs.get('licensed_ip_nature')),_join(field_refs.get('sublicensing_rights')),
             _join(field_refs.get('exclusivity')),
             _join(field_refs.get('exclusivity_scope')),
             _join([x for m in material for x in (m.get('evidence_ids') or [])]),
-            agreement.get('licensed_ip_nature_details')])
+            ia_detail,doc.get('Contract_Status'),exclusivity_scope])
+
+    for did,ex in first_readings.items():
+        agreement=(ex or {}).get('agreement') or {}
+        doc=docs.get(did,{})
+        if not any(t['Document_ID']==did for t in terms):continue   # same agreements as sheet 01
+        first_term=next(t for t in terms if t['Document_ID']==did)
+        for m in agreement.get('other_material_terms') or []:
+            ids=[str(x) for x in (m.get('evidence_ids') or [])]
+            quote=(evid_by_doc.get((did,ids[0])) or {}).get('Exact_Quotation') if ids else ''
+            result[NAMES[5]].append([first_term.get('Agreement_ID'),did,agreement.get('licensor') or doc.get('Licensor'),
+                agreement.get('licensee') or doc.get('Licensee'),m.get('category','OTHER'),m.get('text'),
+                _join(ids),quote,doc.get('Source_URL') or first_term.get('Source_URL')])
 
     for row in _records(rows,'Tiers'):
         result[NAMES[1]].append(['TIER',row.get('Observation_ID'),row.get('Term_ID'),row.get('Sequence'),
@@ -239,7 +337,7 @@ def research_rows(rows: dict, first_readings: dict | None = None) -> dict:
     return {name:[[_safe(x) for x in row] for row in result[name]] for name in NAMES}
 
 
-def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | None = None):
+def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | None = None, source_texts: dict | None = None):
     """Optional dependency matches existing M13 writer; no network or model calls."""
     from .m3_export import official_sec_url
     from .m3_workbook import _clean
@@ -249,7 +347,7 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
         from openpyxl.utils import get_column_letter
     except ImportError as exc:
         raise RuntimeError('M13 research XLSX needs the existing optional openpyxl dependency') from exc
-    sheets=research_rows(legacy_rows,first_readings)
+    sheets=research_rows(legacy_rows,first_readings,source_texts)
     wb=Workbook();wb.remove(wb.active)
     orange='FD5108'; gray='DFE3E6'; light='F5F7F8'; black='000000'
     for idx,(name,matrix) in enumerate(sheets.items()):
@@ -259,7 +357,7 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
         n=len(matrix[0]); last_col=get_column_letter(n)
         title=['ROYALTY DATABASE  |  Valuation research','TIERS & ECONOMIC MECHANICS',
                'OTHER PAYMENTS & GUARANTEES','SOURCE EVIDENCE REGISTER',
-               'READER & SOURCE QC  |  ACTION REGISTER'][idx]
+               'READER & SOURCE QC  |  ACTION REGISTER','OTHER MATERIAL TERMS  |  One row per term'][idx]
         ws.cell(1,1,title).font=Font(name='Georgia',size=15,bold=True,color=black)
         ws.merge_cells(start_row=1,start_column=1,end_row=1,end_column=min(n,7))
         ws.row_dimensions[1].height=29
@@ -270,7 +368,8 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
                'Separate tiers, conditions and rate adjustments linked to original observations',
                'One record per extracted fee or guarantee; totals may duplicate component amounts',
                'Original quotations and passage identifiers; do not replace with paraphrases',
-               'Machine source checks and reader differences when a second reading was used'][idx]
+               'Machine source checks and reader differences when a second reading was used',
+               'Full text of each other material term recorded by the reader; sheet 01 shows only a short summary'][idx]
         ws.cell(3,1,intro).font=Font(name='Arial',size=10,color=black)
         ws.merge_cells(start_row=3,start_column=1,end_row=3,end_column=min(n,9))
         ws.cell(4,1,f'{len(matrix)-1} records | source-document-specific | no unverified assumptions auto-filled').font=Font(name='Arial',size=10,bold=True,color=black)
@@ -286,7 +385,7 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
             cell.alignment=Alignment(vertical='center',wrap_text=True)
             cell.border=Border(top=Side(style='medium',color=orange),bottom=Side(style='medium',color=orange))
             width=24
-            if any(tok in title.lower() for tok in ['quotation','quote','description','mechanics','material terms','rights','base','source','licensed intangible','product','payment','guarantee','cap','fee']):width=38
+            if any(tok in title.lower() for tok in ['quotation','quote','description','mechanics','material terms','text','note','rights','base','source','licensed intangible','product','payment','guarantee','cap','fee']):width=38
             elif any(tok in title.lower() for tok in ['id','document','licensee','licensor','territory','evidence']):width=26
             if title in ('Royalty rate (%)','Rate numeric','Amount numeric'):width=16
             ws.column_dimensions[get_column_letter(c)].width=min(width,45)

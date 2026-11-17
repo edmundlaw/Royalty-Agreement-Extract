@@ -303,7 +303,7 @@ class Pipeline(unittest.TestCase):
         self.assertNotIn('source_flags', rows)
         from openpyxl import load_workbook
         research = load_workbook(self.root / 'output' / 'Royalty_Research_M13.xlsx')
-        self.assertEqual(research.sheetnames, ['01 Royalty Database','02 Tiers & Mechanics', '03 Other Payments', '04 Source Evidence', '05 QC & Issues'])
+        self.assertEqual(research.sheetnames, ['01 Royalty Database','02 Tiers & Mechanics', '03 Other Payments', '04 Source Evidence', '05 QC & Issues', '06 Other Terms'])
         wb = load_workbook(self.root / 'output' / 'Royalty_Research_M13_Detailed.xlsx')
         self.assertEqual(wb.sheetnames[:3], ['Overview', 'Reader Check', 'Reader Differences'])
         self.assertEqual(wb['Royalty Terms'].cell(row=2, column=[c.value for c in wb['Royalty Terms'][1]].index('QC_State') + 1).value,
@@ -332,7 +332,7 @@ class Pipeline(unittest.TestCase):
         self.assertEqual(result['not_finished'], ['not_started'])
         from openpyxl import load_workbook
         research = load_workbook(out)
-        self.assertEqual(len(research.sheetnames), 5)
+        self.assertEqual(len(research.sheetnames), 6)
         wb = load_workbook(self.base / 'all_Detailed.xlsx')
         self.assertEqual(wb['Reader Check'].max_row, 3)
         rate = [c.value for c in wb['Tiers'][1]].index('Rate_Numeric') + 1

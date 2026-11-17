@@ -51,7 +51,7 @@ class ResearchRows(unittest.TestCase):
     def test_legacy_fields_not_invented_and_all_records_preserved(self):
         raw=fixture_rows(); v=research_rows(raw)
         self.assertEqual(list(v),list(NAMES))
-        self.assertEqual([len(v[n])-1 for n in NAMES],[1,3,1,2,3])
+        self.assertEqual([len(v[n])-1 for n in NAMES],[1,3,1,2,3,0])
         row=dict(zip(v[NAMES[0]][0],v[NAMES[0]][1]))
         self.assertEqual(row['Nature of IA'],'NOT_ASSESSED')
         self.assertEqual(row['Sublicensing rights'],'NOT_ASSESSED')
@@ -73,9 +73,43 @@ class ResearchRows(unittest.TestCase):
         row=dict(zip(v[NAMES[0]][0],v[NAMES[0]][1]))
         self.assertEqual(row['Nature of IA'],'PATENT')
         self.assertIn('Requires prior written consent',row['Sublicensing rights'])
-        self.assertIn('TERMINATION: Termination for cause',row['Other material terms'])
+        self.assertEqual(row['Other material terms'],'TERMINATION (1 term) \u2013 see sheet 06; 1 condition(s), 1 adjustment(s) \u2013 see sheet 02')
+        t6=v[NAMES[5]]
+        self.assertEqual(len(t6)-1,1)
+        self.assertEqual(dict(zip(t6[0],t6[1]))['Text'],'Termination for cause')
         self.assertEqual(row['IA evidence IDs'],'E1')
         self.assertEqual(row['Sublicensing evidence IDs'],'E2')
+
+    def _hint_row(self,agreement,texts,status=None,source=None):
+        raw=fixture_rows()
+        ev=raw['Evidence'];i=ev[0].index('Exact_Quotation')
+        for r in ev[1:]:r[i]=texts.pop(0) if texts else r[i]
+        if status:raw['Documents'][1][raw['Documents'][0].index('Contract_Status')]=status
+        v=research_rows(raw,{'DOC-DEMO':{'agreement':agreement}},source)
+        return dict(zip(v[NAMES[0]][0],v[NAMES[0]][1]))
+
+    def test_ia_nature_inferred_and_keyword_hint_never_override_reader(self):
+        r=self._hint_row({'licensed_ip_nature':'PATENT','licensed_ip_nature_basis':'INFERRED','field_evidence':{'licensed_ip_nature':['E1']}},[])
+        self.assertEqual(r['Nature of IA'],'PATENT (inferred)')
+        r=self._hint_row({'licensed_ip_nature':'UNDETERMINED','field_evidence':{'duration':['E1']}},['until expiry of the patents worldwide'])
+        self.assertEqual(r['Nature of IA'],'PATENT (keyword hint)')
+        self.assertIn("'patents'",r['IA classification detail'])
+        r=self._hint_row({'licensed_ip_nature':'TRADEMARK_BRAND','field_evidence':{'duration':['E1']}},['patent expiry'])
+        self.assertEqual(r['Nature of IA'],'TRADEMARK_BRAND')
+        r=self._hint_row({'licensed_ip_nature':'UNDETERMINED','field_evidence':{'duration':['E1','E2']}},['patent expiry','software and trade secrets'])
+        self.assertTrue(r['Nature of IA'].startswith('MIXED'))
+
+    def test_related_party_and_benchmark_rules(self):
+        r=self._hint_row({'related_party':'YES'},[])
+        self.assertEqual((r['Related party'],r['Usable for royalty benchmark']),('YES','NO'))
+        r=self._hint_row({'related_party':'NOT_STATED'},[])
+        self.assertEqual((r['Related party'],r['Usable for royalty benchmark']),('NOT_STATED','YES'))
+        r=self._hint_row({'licensor':'A'},[],source={'DOC-DEMO':['This is a related-party transaction.']})
+        self.assertTrue(r['Related party'].startswith('YES (keyword hint'))
+        r=self._hint_row({'licensor':'A'},[],source={'DOC-DEMO':['This is not a related-party transaction.']})
+        self.assertEqual(r['Related party'],'NOT_ASSESSED')
+        r=self._hint_row({'related_party':'NOT_STATED'},[],status='Signed binding term sheet')
+        self.assertEqual(r['Usable for royalty benchmark'],'NO');self.assertIn('term sheet',r['Benchmark note'])
 
     def test_payment_summary_keeps_four_distinct_categories_and_source_ids(self):
         raw=fixture_rows()

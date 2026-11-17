@@ -32,7 +32,7 @@ class LeanResearch(unittest.TestCase):
             out=Path(d)/'summary.xlsx';export_xlsx(template,source,out)
             from openpyxl import load_workbook
             w=load_workbook(out)
-            self.assertEqual(len(w.sheetnames),5)
+            self.assertEqual(len(w.sheetnames),6)
             self.assertEqual(w.worksheets[0]['D8'].value,5)
             headers=[c.value for c in w.worksheets[0][7]]
             self.assertIn('royalty of 5%',w.worksheets[0].cell(8,headers.index('Rate quotation')+1).value)

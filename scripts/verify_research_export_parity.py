@@ -20,9 +20,9 @@ def go(original,research):
     from openpyxl import load_workbook
     w=load_workbook(original,read_only=True,data_only=True)
     v=load_workbook(research,read_only=True,data_only=True)
-    names=['01 Royalty Database','02 Tiers & Mechanics','03 Other Payments','04 Source Evidence','05 QC & Issues']
+    names=['01 Royalty Database','02 Tiers & Mechanics','03 Other Payments','04 Source Evidence','05 QC & Issues','06 Other Terms']
     errs=[];checks={}
-    if v.sheetnames!=names:errs.append('Research workbook does not have exactly the approved five sheets')
+    if v.sheetnames!=names:errs.append('Research workbook does not have exactly the approved six sheets (01-05 map to the original rows; 06 Other Terms is new)')
     a=tab(w,'Royalty Terms');b=tab(v,names[0],7)
     key='Observation_ID'; old={r[key]:r for r in a};new={r['Observation ID']:r for r in b}
     if len(a)!=len(b) or set(old)!=set(new):errs.append('Missing, extra, or duplicate royalty observations')
@@ -62,6 +62,9 @@ def go(original,research):
         if sum(r['Record type']==typ for r in q)!=len(tab(w,src)):
             errs.append(f'QC {typ}: count mismatch')
     checks['qc_records']=len(q)
+    other=tab(v,names[5],7)   # new in 0.13.6: one row per other material term; no original-row equivalent
+    if any(not (r.get('Document ID') and r.get('Category') and r.get('Text')) for r in other):errs.append('06 Other Terms: row without document, category or text')
+    checks['other_terms']=len(other)
     return {'status':'PASS_MAPPING_ONLY' if not errs else 'FAIL','source':str(original),
             'research':str(research),'checks':checks,'errors':errs}
 
