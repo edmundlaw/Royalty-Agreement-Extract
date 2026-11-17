@@ -242,6 +242,24 @@ class LicenceGateV0137(unittest.TestCase):
         self.assertFalse(licence_gate(self.doc('Schedule A',base))['passed'])
         self.assertTrue(licence_gate(self.doc('Schedule A',base+'The Licensor grants the Licensee a license.'))['passed'])
 
+    def test_short_licence_with_stated_rate_and_grant_passes(self):
+        body='Licensor grants Licensee an exclusive license under the Licensed Patents to make and sell Products. Licensee shall pay a royalty of 5% of Net Sales.'
+        for title in ('Schedule A','PATENT LICENSE'):
+            g=licence_gate(self.doc(title,body))
+            self.assertTrue(g['passed'],(title,g));self.assertEqual(g['royalty_mentions'],1)
+        self.assertTrue(licence_gate(self.doc('Schedule A',body.replace('5% of Net Sales','five (5%) percent of gross revenue').replace('five (5%) percent','5 percent')))['passed'])
+
+    def test_short_document_without_grant_or_with_non_licence_title_still_fails(self):
+        g=licence_gate(self.doc('SERVICES AGREEMENT','The Contractor performs services. The Company shall pay a royalty of 5% of Net Sales.'))
+        self.assertFalse(g['passed'])
+        g=licence_gate(self.doc('Schedule A','The Contractor performs the work described in the statement of work attached hereto. The Company shall pay a fee of 5% of Net Sales as full compensation for the work.'))
+        self.assertFalse(g['passed']);self.assertIn('no licence-grant wording',g['reason'])
+        # a grant without any stated rate and with fewer than 3 royalty mentions still fails
+        self.assertFalse(licence_gate(self.doc('Schedule A','Licensor grants Licensee a license. A royalty is payable as agreed.'))['passed'])
+        # a non-licence title is rejected even with a rate and a grant phrase
+        g=licence_gate(self.doc('PURCHASE AGREEMENT','Seller grants Buyer a license. Buyer pays a royalty of 5% of Net Sales.'))
+        self.assertFalse(g['passed']);self.assertIn('non-licence title',g['reason'])
+
     def test_grant_wording_families(self):
         for t in ('Company grants to Partner a non-exclusive licence','Licensor hereby licenses the Marks','an exclusive, worldwide license',
                   'under the Licensed Technology','a royalty-bearing license'):

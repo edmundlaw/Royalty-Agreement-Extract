@@ -40,10 +40,18 @@ MIN_GRANT_HITS=1          # path without a licence-type title: at least one lice
 NON_LICENCE_TITLE_GRANT_HITS=25   # a services/purchase/loan/... title needs this many grant phrases to pass
 
 
+# A short licence can state its rate and grant without repeating the word "royalty" three times.
+STATED_RATE=re.compile(r'\d+(?:\.\d+)?\s*(?:%|percent|per\s?cent)\)?\s*(?:of|on)\s+(?:the\s+)?(?:(?:aggregate|annual|total)\s+)?'
+                       r'(?:net|gross)\s+(?:sales|revenues?|receipts)',re.I)
+
+
 def licence_gate(mapping):
     """Zero-token check that a document looks like a royalty-bearing licence before any AI reads it.
 
-    1. At least 3 mentions of "royalt".
+    1. At least 3 mentions of "royalt", OR (short licences, v0.13.8) a stated rate such as "5% of Net Sales"
+       / "5 percent of gross revenue" together with at least one licence-grant phrase and a title that is
+       not a services/purchase/loan/... title. A services agreement with "5% of Net Sales" but no grant
+       wording still fails.
     2. The document title (first short non-legend lines in the opening ~1,500 characters) decides:
        - names a licence / royalty / collaboration / franchise  -> passes.
        - names services, purchase, loan, credit, security, guarantee, employment, consulting,
@@ -63,7 +71,12 @@ def licence_gate(mapping):
     opening=bool(LICENCE_TITLE.search(text[:1000]))
     density=hits/max(len(text)/10000,1)
     title=document_title(passages);kind=title_kind(title);grants=grant_hits(text)
-    if hits<MIN_ROYALTY_MENTIONS:passed=False;reason='fewer than 3 royalty mentions'
+    if hits<MIN_ROYALTY_MENTIONS:
+        rate_stated=bool(STATED_RATE.search(text))
+        passed=rate_stated and grants>=MIN_GRANT_HITS and kind!='NON_LICENCE'
+        reason=('short licence: stated rate and a licence grant' if passed else
+                'fewer than 3 royalty mentions' + ('' if not rate_stated else
+                ('; stated rate but a non-licence title' if kind=='NON_LICENCE' else '; stated rate but no licence-grant wording')))
     elif kind=='LICENCE':passed=True;reason='title names a licence/royalty/collaboration/franchise agreement'
     elif kind=='NON_LICENCE':
         passed=grants>=NON_LICENCE_TITLE_GRANT_HITS and density>=1.0
