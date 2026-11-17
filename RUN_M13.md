@@ -1,4 +1,12 @@
-# M13 v0.13.5 — routine full-source run
+# M13 v0.13.6 — routine full-source run
+
+## Routine use
+
+1. In Terminal type `royalty` (shell alias; takes you to `~/royalty-research`), then `cd m13`.
+2. Dry run (no AI calls, shows what would be called and prompt sizes): `./royalty.sh 2026-01-12 2026-01-14 5`
+3. Real run: the same command with `--go` at the end. The workbook is copied to `~/Downloads/Royalty_Research_<START>_<END>.xlsx`.
+
+Run the script yourself in Terminal. Running the tool through a Codex or Claude chat agent wastes most of the allowance on the agent's own reading and retries.
 
 **Production path:** `scripts/m13_prod.py` prepares a complete source packet for every selected agreement. The `lean_research.py` excerpt path is preliminary triage only. AI output is never certified as contract-complete by Python.
 
