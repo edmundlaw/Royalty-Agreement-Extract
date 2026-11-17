@@ -8,6 +8,13 @@
 
 Run the script yourself in Terminal. Running the tool through a Codex or Claude chat agent wastes most of the allowance on the agent's own reading and retries.
 
+Which agreements are read (fixed Python rules, zero AI tokens; full list in `batch/candidate_register.json`):
+- Order: EX-10 exhibits first, then other contract exhibits, then prospectuses/press releases; more matched search terms first.
+- Licence check: "royalt" appears 3+ times and either the opening names a licence/royalty/franchise/collaboration/term sheet, or royalty wording is dense (1+ per 10,000 characters). Purchase, loan and security agreements that only mention royalties in boilerplate become `NOT_PREPARED_NOT_LICENCE_LIKE`.
+- Size: licences over 120,000 characters become `NOT_PREPARED_TOO_LARGE` (each would need several reader calls). Add `--big` to read them.
+- The agreement limit counts agreements actually prepared; at most 10 downloads per agreement requested (`NOT_PREPARED_DOWNLOAD_LIMIT`).
+These rules trade completeness for allowance: a genuine licence with little royalty wording can be skipped. Nothing is deleted; skipped items stay listed.
+
 **Production path:** `scripts/m13_prod.py` prepares a complete source packet for every selected agreement. The `lean_research.py` excerpt path is preliminary triage only. AI output is never certified as contract-complete by Python.
 
 ## Install and prerequisites

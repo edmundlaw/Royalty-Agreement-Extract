@@ -6,6 +6,7 @@
 - IA nature: FIRST_READER rule 10 now requires the best-supported category plus optional `licensed_ip_nature_basis` (STATED / INFERRED). Source check accepts INFERRED when it cites evidence. Export shows `PATENT (inferred)`. Labelled Python fallback `(keyword hint)` for old/UNDETERMINED readings; never overrides a reader's own value.
 - Sheet 01 `Other material terms` is a short summary; new sheet `06 Other Terms` has one row per term. `Agreement status` and `Exclusivity scope` capped at 150 characters with full text in end columns. Parity script updated for six sheets.
 - New columns `Signing date` (execution date) and `SEC filing date` (filing metadata). `Effective date` kept.
+- Candidate selection (found in a live dry run: the old rule read candidates in hash order, let a low-signal Citigroup pricing supplement use up the limit, and would have sent a 287k-character asset purchase agreement to the reader): candidates are ordered EX-10 first; a zero-token licence check (`licence_gate`) rejects documents that mention royalties only in boilerplate; licences over 120,000 characters are deferred unless `--big`; the limit counts prepared agreements, with a cap of 10 downloads per agreement. Dry run on 12-14 Jan 2026 (3 agreements) found the VXM01 term sheet automatically and rejected 12 purchase/loan/security agreements.
 - `scripts/verify_release.py` and `RELEASE_SHA256.json` were not regenerated for 0.13.6.
 
 # v0.13.5 changes

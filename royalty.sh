@@ -2,6 +2,7 @@
 # One-command royalty research run.
 #   ./royalty.sh START END [MAX_AGREEMENTS]        dry run: discover, prepare, show what would be called
 #   ./royalty.sh START END [MAX_AGREEMENTS] --go   also call the AI, finalize, combine, copy to ~/Downloads
+#   --big   also read licences over 120,000 characters (several calls each; off by default)
 # Dates are YYYY-MM-DD. MAX_AGREEMENTS defaults to 5. Candidate choice is the fixed rule in
 # `m13_prod.py batch`; nobody (human or AI) picks agreements.
 # Hidden option: --candidates FILE  skips the SEC discover step and uses an existing discovery JSONL.
@@ -18,10 +19,11 @@ UA_FILE="$HOME/.config/royalty-research/sec_user_agent"
 [ -n "$UA" ] || { [ -f "$UA_FILE" ] && UA="$(head -n1 "$UA_FILE")"; } || true
 [ -n "$UA" ] || { echo "Missing SEC contact: put 'Name contact@email' in $UA_FILE (or set ROYALTY_SEC_UA)." >&2; exit 2; }
 
-GO=0; CANDS=""; ARGS=()
+GO=0; BIG=0; CANDS=""; ARGS=()
 while [ $# -gt 0 ]; do
   case "$1" in
     --go) GO=1 ;;
+    --big) BIG=1 ;;
     --candidates) shift; CANDS="${1:?--candidates needs a file}" ;;
     -h|--help) sed -n 2,8p "$0"; exit 0 ;;
     *) ARGS+=("$1") ;;
@@ -55,7 +57,18 @@ fi
 step "2/4 Prepare up to $MAX agreements (fixed rule, no manual picking)"
 "$PY" scripts/m13_prod.py batch --candidates "$BATCH/discovery.jsonl" --root "$BATCH/batch" \
   --user-agent "$UA" --mode single --engine codex --model gpt-6-sol --effort low \
-  --max-agreements "$MAX" || fail "batch prepare"
+  --max-agreements "$MAX" $( [ "$BIG" = 1 ] && echo --max-source-chars 2000000 ) || fail "batch prepare"
+
+echo; echo "Candidate summary (full list: $BATCH/batch/candidate_register.json):"
+"$PY" -I -c '
+import json,sys,collections
+L=json.load(open(sys.argv[1]))
+for k,v in collections.Counter(x["status"] for x in L).most_common(): print(f"  {v:5d}  {k}")
+for x in L:
+    if x["status"] in ("FULL_SOURCE_PREPARED","NOT_PREPARED_TOO_LARGE"):
+        g=x.get("licence_gate") or {}
+        print("  "+x["status"][:22].ljust(22), str(x.get("file_type") or "")[:9].ljust(9), str(x.get("company") or "")[:40].ljust(40), g.get("source_chars"), "chars")
+' "$BATCH/batch/candidate_register.json" || true
 
 step "3/4 Reader calls (max $((2*MAX)) calls)"
 RUNARGS=(run --runs "$BATCH/batch/runs" --max-calls $((2*MAX)) --max-prompt-chars 300000 --max-reported-tokens 200000)

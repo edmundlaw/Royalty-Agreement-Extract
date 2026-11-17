@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 from royalty_research.storage import read_json, sha256, json_bytes
-from royalty_research.m13_production import prepare_one,run_boundary,batch
+from royalty_research.m13_production import prepare_one,run_boundary,batch,candidate_rank,licence_gate
 from royalty_research.m4_operator import import_manual_result, load_plan, _command, _usage
 from royalty_research.m13_two_reader import finalize, source_check, _in_quotes
 from royalty_research.lean import validate as lean_validate
@@ -107,12 +107,43 @@ class FullSourceProduction(unittest.TestCase):
             candidates=root/'candidates.jsonl'
             candidates.write_text('\n'.join(json.dumps({'source_url':x}) for x in (u,u,u.replace('a.txt','b.txt'))))
             with patch('royalty_research.m13_production.SECClient') as client:
-                client.return_value.fetch.return_value=b'Licensee shall pay 5% royalty on Net Sales.'
+                client.return_value.fetch.return_value=b'LICENSE AGREEMENT. Licensee shall pay a royalty of 5% of Net Sales. Royalties are due quarterly. Royalty reports follow.'
                 result=batch(candidates,root/'batch',user_agent='Research name email@example.com',mode='manual',
                     engine='codex',model='chosen-ai',max_agreements=1)
                 self.assertEqual(client.return_value.fetch.call_count,1)
             index=read_json(root/'batch/candidate_register.json')
             self.assertEqual(result['candidates'],2)
             self.assertEqual(index[1]['status'],'NOT_PREPARED_AGREEMENT_LIMIT')
+
+    def test_candidate_order_puts_licence_exhibits_first(self):
+        base='https://www.sec.gov/Archives/edgar/data/1/123/'
+        rows=[{'source_url':base+'pricing.htm','file_type':'424B2','candidate_route':'NARRATIVE_OR_OTHER','matched_queries':['royalties','license agreement']},
+              {'source_url':base+'ex4.htm','file_type':'EX-4.1','candidate_route':'CONTRACT_EXHIBIT','matched_queries':['royalties']},
+              {'source_url':base+'ex10.htm','file_type':'EX-10.1','candidate_route':'CONTRACT_EXHIBIT','matched_queries':['royalties']}]
+        self.assertEqual([r['file_type'] for r in sorted(rows,key=candidate_rank)],['EX-10.1','EX-4.1','424B2'])
+
+    def test_low_signal_download_does_not_use_up_agreement_limit(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);base='https://www.sec.gov/Archives/edgar/data/1/123/'
+            candidates=root/'candidates.jsonl'
+            candidates.write_text('\n'.join(json.dumps({'source_url':base+n,'file_type':'EX-10.1','candidate_route':'CONTRACT_EXHIBIT'})
+                                            for n in ('a.txt','b.txt','c.txt')))
+            pages={base+'a.txt':b'Pricing supplement for notes. Interest is payable quarterly.',
+                   base+'b.txt':b'LICENSE AGREEMENT. Licensee shall pay a royalty of 5% of Net Sales. Royalties are due quarterly. Royalty reports follow.',
+                   base+'c.txt':b'LICENSE AGREEMENT. Licensee shall pay a royalty of 3% of Net Sales. Royalties are due quarterly. Royalty reports follow.'}
+            with patch('royalty_research.m13_production.SECClient') as client:
+                client.return_value.fetch.side_effect=lambda url:pages[url]
+                result=batch(candidates,root/'batch',user_agent='Research name email@example.com',mode='manual',
+                    engine='codex',model='chosen-ai',max_agreements=1)
+            index=read_json(root/'batch/candidate_register.json')
+            self.assertEqual([i['status'] for i in index],
+                             ['LOW_SIGNAL_REVIEW_REQUIRED','FULL_SOURCE_PREPARED','NOT_PREPARED_AGREEMENT_LIMIT'])
+            self.assertEqual(result['prepared'],1)
+
+    def test_licence_gate_rejects_purchase_agreement_boilerplate(self):
+        page=lambda t:{'passages':[{'text':t}]}
+        boiler=page('ASSET PURCHASE AGREEMENT. '+'Buyer acquires the assets. '*3000+'no royalties are payable; no royalty.')
+        self.assertFalse(licence_gate(boiler)['passed'])
+        self.assertTrue(licence_gate(page('EXCLUSIVE LICENSE AGREEMENT. Royalty 5%. Royalties quarterly. Royalty report.'))['passed'])
 
 if __name__=='__main__':unittest.main()

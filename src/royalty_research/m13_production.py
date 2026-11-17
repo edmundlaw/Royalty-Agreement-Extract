@@ -2,6 +2,7 @@
 from __future__ import annotations
 import argparse
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlparse
 from . import m13_two_reader as m13
@@ -26,8 +27,44 @@ def prepare_one(mapping, run, *, mode, engine, model, check_engine=None, check_m
                        check_reasoning_effort=check_effort)
 
 
+DOWNLOADS_PER_AGREEMENT=10
+# About 3 reader calls / ~100k reported tokens. Larger licences are listed, not read, unless raised.
+DEFAULT_MAX_SOURCE_CHARS=120000
+LICENCE_TITLE=re.compile(r'licen[cs]|royalt|franchis|collaboration|term sheet',re.I)
+
+
+def licence_gate(mapping):
+    """Zero-token check that a document looks like a royalty-bearing licence before any AI reads it.
+
+    Passes when "royalt" appears at least 3 times AND either the opening 1,000 characters name a
+    licence/royalty/franchise/collaboration/term-sheet document, or royalty wording is dense
+    (at least 1 mention per 10,000 characters). Purchase, credit and merger agreements that only
+    mention royalties in boilerplate fail and stay in the register as NOT_PREPARED_NOT_LICENCE_LIKE.
+    """
+    text=' '.join(p.get('text','') for p in mapping.get('passages',[]))
+    hits=len(re.findall(r'royalt',text,re.I))
+    title=bool(LICENCE_TITLE.search(text[:1000]))
+    density=hits/max(len(text)/10000,1)
+    return {'royalty_mentions':hits,'licence_title':title,'source_chars':len(text),
+            'passed':hits>=3 and (title or density>=1.0)}
+
+
+def candidate_rank(r):
+    """Fixed, documented order: licence-type contract exhibits first, prospectuses/press releases last.
+
+    1. EX-10 material contracts  2. other contract exhibits (EX-2, EX-4 ...)  3. everything else.
+    Within a group: more matched search queries first, then filing date, then URL (stable).
+    Nothing is excluded; the order only decides what is read first under the limit.
+    """
+    ft=str(r.get('file_type') or '').upper()
+    route=r.get('candidate_route')
+    group=0 if ft.startswith('EX-10') else 1 if route=='CONTRACT_EXHIBIT' else 2
+    return (group,-len(r.get('matched_queries') or []),str(r.get('filing_date') or ''),str(r.get('source_url') or ''))
+
+
 def batch(candidates, root, *, user_agent, mode, engine, model, check_engine=None,check_model=None,
-          effort=None,check_effort=None,max_agreements=10,max_chars=64000):
+          effort=None,check_effort=None,max_agreements=10,max_chars=64000,
+          max_source_chars=None):
     """Fetch each unique SEC URL at most once; preserve every candidate in index."""
     if root.exists():raise FileExistsError('New batch directory required')
     if not 1<=max_agreements<=10000:raise ValueError('Invalid agreement limit')
@@ -37,17 +74,24 @@ def batch(candidates, root, *, user_agent, mode, engine, model, check_engine=Non
         url=r.get('source_url')
         if url not in seen:seen.add(url);unique.append(r)
     if not unique:raise ValueError('No candidate URLs')
+    unique=sorted(unique,key=candidate_rank)
+    # The limit counts agreements actually prepared; low-signal downloads do not use it up.
+    # A separate download cap keeps one batch bounded and polite to SEC.
+    max_downloads=max_agreements*DOWNLOADS_PER_AGREEMENT
     client=SECClient(user_agent)
     root.mkdir(parents=True)
     (root/'maps').mkdir();(root/'runs').mkdir()
     index=[];prepared=0;processed=0
     for n,r in enumerate(unique,1):
-        url=r.get('source_url');item={'index':n,'source_url':url,'document_id':r.get('document_id')}
+        url=r.get('source_url');item={'index':n,'source_url':url,'document_id':r.get('document_id'),
+                                      'file_type':r.get('file_type'),'company':r.get('company')}
         parsed=urlparse(url or '')
         if parsed.scheme!='https' or parsed.hostname not in {'sec.gov','www.sec.gov'} or not parsed.path.startswith('/Archives/edgar/data/'):
             item['status']='INVALID_SOURCE_URL';index.append(item);continue
-        if processed>=max_agreements:
+        if prepared>=max_agreements:
             item['status']='NOT_PREPARED_AGREEMENT_LIMIT';index.append(item);continue
+        if processed>=max_downloads:
+            item['status']='NOT_PREPARED_DOWNLOAD_LIMIT';index.append(item);continue
         try:
             processed+=1
             raw=client.fetch(url)
@@ -60,8 +104,13 @@ def batch(candidates, root, *, user_agent, mode, engine, model, check_engine=Non
             # The low-signal source is retained in the register and map. It is not
             # declared irrelevant or silently excluded from later full reading.
             atomic_json(root/'maps'/(did+'.json'),mapping)
+            gate=licence_gate(mapping);item['licence_gate']=gate
             if triage['priority'].startswith('LOW_SIGNAL'):
                 item['status']='LOW_SIGNAL_REVIEW_REQUIRED'
+            elif not gate['passed']:
+                item['status']='NOT_PREPARED_NOT_LICENCE_LIKE'
+            elif max_source_chars and gate['source_chars']>max_source_chars:
+                item['status']='NOT_PREPARED_TOO_LARGE'
             else:
                 prepare_one(mapping,root/'runs'/did,mode=mode,engine=engine,model=model,
                             check_engine=check_engine,check_model=check_model,effort=effort,
@@ -131,6 +180,8 @@ def main(argv=None):
     p=sub.add_parser('prepare');p.add_argument('--map',type=Path,required=True);p.add_argument('--run',type=Path,required=True)
     p=sub.add_parser('batch');p.add_argument('--candidates',type=Path,required=True);p.add_argument('--root',type=Path,required=True)
     p.add_argument('--user-agent',required=True);p.add_argument('--max-agreements',type=int,default=10)
+    p.add_argument('--max-source-chars',type=int,default=DEFAULT_MAX_SOURCE_CHARS,
+                   help='Licence-like documents longer than this are deferred (NOT_PREPARED_TOO_LARGE), not read')
     for name in ('prepare','batch'):
         p=sub.choices[name];p.add_argument('--mode',choices=['manual','single','two'],default='manual')
         p.add_argument('--engine',choices=['claude','codex'],default='codex');p.add_argument('--model',required=True)
@@ -152,7 +203,8 @@ def main(argv=None):
         check_engine=a.check_engine,check_model=a.check_model,effort=a.effort,check_effort=a.check_effort,max_chars=a.max_chars)
     elif a.command=='batch':result=batch(a.candidates,a.root,user_agent=a.user_agent,mode=a.mode,
         engine=a.engine,model=a.model,check_engine=a.check_engine,check_model=a.check_model,
-        effort=a.effort,check_effort=a.check_effort,max_agreements=a.max_agreements,max_chars=a.max_chars)
+        effort=a.effort,check_effort=a.check_effort,max_agreements=a.max_agreements,max_chars=a.max_chars,
+        max_source_chars=a.max_source_chars)
     elif a.command=='run':result=run_boundary(a.runs,max_calls=a.max_calls,max_prompt_chars=a.max_prompt_chars,
         max_reported_tokens=a.max_reported_tokens,max_retries=a.max_retries,
         execute=a.execute,confirm_subscription=a.confirm_subscription,
