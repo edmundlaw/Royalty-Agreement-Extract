@@ -359,5 +359,13 @@ class ResumeScript(unittest.TestCase):
             self.assertIn('DRY_RUN_NO_AI_CALLED',r.stdout);self.assertIn('discover and prepare skipped',r.stdout)
             self.assertNotIn('Discover SEC',r.stdout);self.assertIn('Dry run finished',r.stdout)
 
+    def test_workbook_version_suffix_is_the_package_version(self):
+        # v0.13.8 live run named a workbook _v0.8.1: royalty.sh imported the package with `python -I`,
+        # which ignores PYTHONPATH and found an old editable install of another checkout.
+        import royalty_research
+        r=self.sh('--version');self.assertEqual(r.returncode,0,r.stderr)
+        self.assertEqual(r.stdout.strip(),royalty_research.__version__)
+        self.assertNotRegex((ROOT/'royalty.sh').read_text(),r'-I -c .import royalty_research')
+
 
 if __name__=='__main__':unittest.main()

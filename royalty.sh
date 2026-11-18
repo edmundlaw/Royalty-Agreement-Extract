@@ -14,6 +14,11 @@ ROOT="$PWD"
 PY="${ROYALTY_PYTHON:-$ROOT/../.venv/bin/python}"
 [ -x "$PY" ] || PY="$(command -v python3)"
 export PYTHONPATH="$ROOT/src"
+# Single version source: src/royalty_research/__init__.py. Read as text, never imported: "python -I" ignores
+# PYTHONPATH and picked up an old editable install (0.8.1) of another checkout for the workbook name.
+VER="$(sed -n 's/^__version__ *= *"\(.*\)".*/\1/p' "$ROOT/src/royalty_research/__init__.py" | head -n1)"
+[ -n "$VER" ] || { echo "Cannot read the package version" >&2; exit 2; }
+[ "${1:-}" = "--version" ] && { echo "$VER"; exit 0; }
 # SEC requires a contact in the User-Agent. Kept out of the repo: set ROYALTY_SEC_UA or put
 # "Name contact@email" on the first line of ~/.config/royalty-research/sec_user_agent.
 UA="${ROYALTY_SEC_UA:-}"
@@ -121,7 +126,6 @@ fi
 
 step "4/4 Finalize, combine, copy"
 [ "$START" != unknown ] || fail "date range unknown (no run_info.json or earlier workbook in $BATCH)"
-VER="$("$PY" -I -c 'import royalty_research as r;print(r.__version__)')"
 FINLOG="$BATCH/batch/finalize_errors.log"
 UNFINISHED=0
 for run in "$BATCH"/batch/runs/*/; do
