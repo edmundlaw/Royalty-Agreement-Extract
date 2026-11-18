@@ -4,6 +4,7 @@
 #   ./royalty.sh START END [MAX_AGREEMENTS] --go   also call the AI, finalize, combine, copy to ~/Downloads
 #   ./royalty.sh --resume RUNS_FOLDER [--go]       skip discover/prepare; finish the remaining reader calls of an earlier
 #                                                  run folder (dry run shows them; --go makes them), then finalize/combine/copy
+#   --max-retries N   on resume, allow up to N previously authorized retries per task (0-10; default 0)
 #   --big   also read licences over 120,000 characters (several calls each; off by default)
 # Dates are YYYY-MM-DD. MAX_AGREEMENTS defaults to 5. Candidate choice is the fixed rule in
 # `m13_prod.py batch`; nobody (human or AI) picks agreements.
@@ -26,12 +27,13 @@ UA_FILE="$HOME/.config/royalty-research/sec_user_agent"
 [ -n "$UA" ] || { [ -f "$UA_FILE" ] && UA="$(head -n1 "$UA_FILE")"; } || true
 [ -n "$UA" ] || { echo "Missing SEC contact: put 'Name contact@email' in $UA_FILE (or set ROYALTY_SEC_UA)." >&2; exit 2; }
 
-GO=0; BIG=0; CANDS=""; RESUME=""; ARGS=()
+GO=0; BIG=0; CANDS=""; RESUME=""; MAX_RETRIES=""; ARGS=()
 while [ $# -gt 0 ]; do
   case "$1" in
     --go) GO=1 ;;
     --big) BIG=1 ;;
     --candidates) shift; CANDS="${1:?--candidates needs a file}" ;;
+    --max-retries) shift; MAX_RETRIES="${1:?--max-retries needs a number from 0 to 10}" ;;
     --resume) shift; RESUME="${1:?--resume needs a runs_... folder}" ;;
     -h|--help) sed -n 2,10p "$0"; exit 0 ;;
     *) ARGS+=("$1") ;;
@@ -39,7 +41,10 @@ while [ $# -gt 0 ]; do
   shift
 done
 if [ -n "$RESUME" ]; then
-  [ "${#ARGS[@]}" -eq 0 ] || { echo "--resume takes only the folder (and optional --go)" >&2; exit 2; }
+  [ "${#ARGS[@]}" -eq 0 ] || { echo "--resume takes only the folder (and optional --go and --max-retries)" >&2; exit 2; }
+  if [ -n "$MAX_RETRIES" ]; then
+    [[ "$MAX_RETRIES" =~ ^([0-9]|10)$ ]] || { echo "--max-retries must be a number from 0 to 10" >&2; exit 2; }
+  fi
   [ -d "$RESUME/batch/runs" ] || { echo "Not a runs folder (no batch/runs inside): $RESUME" >&2; exit 2; }
   BATCH="$(cd "$RESUME" && pwd)"
   # Dates for the output file name: run_info.json (new runs) or the name of an earlier workbook.
@@ -53,6 +58,7 @@ if [ -n "$RESUME" ]; then
   NRUNS=$(find "$BATCH/batch/runs" -maxdepth 2 -name m13_run.json | wc -l | tr -d ' ')
   MAX=$(( NRUNS > 0 ? NRUNS : 1 ))
 else
+[ -z "$MAX_RETRIES" ] || { echo "--max-retries requires --resume" >&2; exit 2; }
 [ "${#ARGS[@]}" -ge 2 ] && [ "${#ARGS[@]}" -le 3 ] || { echo "Usage: ./royalty.sh START END [MAX_AGREEMENTS] [--go]   or   ./royalty.sh --resume RUNS_FOLDER [--go]" >&2; exit 2; }
 START="${ARGS[0]}"; END="${ARGS[1]}"; MAX="${ARGS[2]:-5}"
 re='^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
@@ -113,8 +119,15 @@ print(t)' "$BATCH/batch/runs")
   TOKENS=$((TOKENS + USED))
 fi
 RUNARGS=(run --runs "$BATCH/batch/runs" --max-calls $((2*MAX)) --max-prompt-chars 300000 --max-reported-tokens "$TOKENS")
+[ -n "$MAX_RETRIES" ] && RUNARGS+=(--max-retries "$MAX_RETRIES")
 [ "$GO" = 1 ] && RUNARGS+=(--execute --confirm-subscription --confirm-credit-controls)
-"$PY" scripts/m13_prod.py "${RUNARGS[@]}" || fail "run"
+if "$PY" scripts/m13_prod.py "${RUNARGS[@]}"; then
+  :
+else
+  rc=$?
+  [ "$rc" -ne 130 ] || exit 130
+  fail "run"
+fi
 
 echo; echo "Prompt sizes (characters):"
 find "$BATCH/batch/runs" -path '*prompts/*.txt' -exec wc -c {} + 2>/dev/null | sed 's|'"$BATCH"'/||' || true
@@ -152,4 +165,9 @@ OUT="$BATCH/$BASE$SUFFIX.xlsx"
 "$PY" scripts/m13_prod.py combine --runs "$BATCH/batch/runs" --out "$OUT" >/dev/null || fail "combine"
 mkdir -p "$HOME/Downloads"
 cp "$OUT" "$HOME/Downloads/$BASE$SUFFIX.xlsx" || fail "copy to Downloads"
-echo; echo "Done: $HOME/Downloads/$BASE$SUFFIX.xlsx"
+echo
+if [ "$UNFINISHED" -gt 0 ]; then
+  echo "Partial workbook: $HOME/Downloads/$BASE$SUFFIX.xlsx"
+else
+  echo "Done: $HOME/Downloads/$BASE$SUFFIX.xlsx"
+fi

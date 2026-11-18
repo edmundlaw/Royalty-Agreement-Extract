@@ -1,5 +1,7 @@
 """Offline full-source production regression and controller tests."""
 import json
+import io
+from contextlib import redirect_stderr
 import copy
 import tempfile
 import unittest
@@ -17,6 +19,14 @@ ROOT=Path(__file__).resolve().parents[1]
 SAVED=ROOT/'tests/fixtures/m12_saved'
 
 class FullSourceProduction(unittest.TestCase):
+    def test_cli_interrupt_exits_cleanly(self):
+        from royalty_research.m13_production import main
+        stderr=io.StringIO()
+        with patch('royalty_research.m13_production._main', side_effect=KeyboardInterrupt), redirect_stderr(stderr):
+            self.assertEqual(main([]),130)
+        self.assertIn('manual release',stderr.getvalue())
+        self.assertNotIn('Traceback',stderr.getvalue())
+
     def test_historical_evidence_all_available_in_full_packet(self):
         for name in ('MarketFinders','NeurogesX','Qualigen','Kirklands'):
             m=read_json(SAVED/(name+'_map.json'))
@@ -157,7 +167,7 @@ class RunBoundaryContinuesAgreement(unittest.TestCase):
         runs=Path(d)/'runs';state={}
         for name,n in sizes.items():
             root=runs/name;(root/'reader_a'/'prompts').mkdir(parents=True);(root/'m13_run.json').write_text('{}')
-            (root/'reader_a'/'plan.json').write_text(json.dumps({'engine':'codex'}))
+            (root/'reader_a'/'plan.json').write_text(json.dumps({'engine':'codex','model':'mock-a'}))
             for i in range(1,n+1):(root/'reader_a'/'prompts'/f'CHUNK-{i:04d}.txt').write_text('prompt')
             state[name]={'captured':0,'total':n}
         return runs,state
@@ -200,6 +210,40 @@ class RunBoundaryContinuesAgreement(unittest.TestCase):
             for x in ps:x.start();self.addCleanup(x.stop)
             out=run_boundary(runs,max_calls=6,max_prompt_chars=300000)
             self.assertEqual(out['calls_attempted'],0);self.assertEqual([o['run'] for o in out['outcomes']],['A','B'])
+
+    def test_live_progress_identifies_document_model_and_elapsed_time(self):
+        with tempfile.TemporaryDirectory() as d:
+            runs,state=self._runs(d,{'A':1})
+            _,ps=self._patches(state)
+            for x in ps:x.start();self.addCleanup(x.stop)
+            stderr=io.StringIO()
+            with redirect_stderr(stderr), patch('royalty_research.m13_production.time.monotonic', side_effect=[10,12.5]):
+                run_boundary(runs,max_calls=1,max_prompt_chars=300000,execute=True)
+            self.assertIn('document A, reader_a, CHUNK-0001, model mock-a started',stderr.getvalue())
+            self.assertIn('ALL_READINGS_CAPTURED (2.5s)',stderr.getvalue())
+
+    def test_token_budget_message_before_and_after_call(self):
+        with tempfile.TemporaryDirectory() as d:
+            runs,state=self._runs(d,{'A':1})
+            receipt=runs/'A'/'reader_a'/'results'/'CHUNK-0001.receipt.json'
+            receipt.parent.mkdir()
+            receipt.write_text(json.dumps({'usage':{'input_tokens':7,'output_tokens':3}}))
+            stderr=io.StringIO()
+            with redirect_stderr(stderr):
+                out=run_boundary(runs,max_calls=1,max_prompt_chars=300000,max_reported_tokens=10,execute=True)
+            self.assertIn('10 reported / 10 limit',stderr.getvalue())
+            self.assertEqual(out['outcomes'][0]['status'],'STOPPED_TOKEN_BUDGET')
+            receipt.unlink()
+            _,ps=self._patches(state)
+            for x in ps:x.start();self.addCleanup(x.stop)
+            def capture(*args,**kwargs):
+                receipt.write_text(json.dumps({'usage':{'input_tokens':7,'output_tokens':4}}))
+                return {'status':'ALL_READINGS_CAPTURED'}
+            stderr=io.StringIO()
+            with patch('royalty_research.m13_production.m13.next_call',side_effect=capture), redirect_stderr(stderr):
+                out=run_boundary(runs,max_calls=1,max_prompt_chars=300000,max_reported_tokens=10,execute=True)
+            self.assertIn('11 reported / 10 limit',stderr.getvalue())
+            self.assertEqual(out['outcomes'][-1]['status'],'STOPPED_TOKEN_BUDGET')
 
     def test_prompt_budget_still_stops(self):
         with tempfile.TemporaryDirectory() as d:
@@ -373,6 +417,41 @@ class ResumeScript(unittest.TestCase):
             self.assertEqual(r.returncode,0,r.stderr+r.stdout)
             self.assertIn('DRY_RUN_NO_AI_CALLED',r.stdout);self.assertIn('discover and prepare skipped',r.stdout)
             self.assertNotIn('Discover SEC',r.stdout);self.assertIn('Dry run finished',r.stdout)
+
+    def test_resume_retry_budget_requires_manual_release(self):
+        from royalty_research.m4_operator import authorize_retry
+        m=read_json(ROOT/'output/synthetic_clause_map.json')
+        with tempfile.TemporaryDirectory() as d:
+            run=Path(d)/'batch'/'runs'/'one'
+            prepare_one(m,run,mode='single',engine='codex',model='mock-a',effort='low')
+            reader=run/'reader_a'
+            attempt=reader/'attempts'/'CHUNK-0001'/'2026-11-13T12-12-12+00-00-uuid'
+            attempt.mkdir(parents=True)
+            (attempt/'started.json').write_text('{"status":"STARTED"}')
+            r=self.sh('--resume',d,'--max-retries','1')
+            self.assertEqual(r.returncode,0,r.stderr+r.stdout)
+            self.assertIn('STOPPED_TASK_REQUIRES_MANUAL_ACTION',r.stdout)
+            authorize_retry(reader,'CHUNK-0001','Recovered from interrupted model run')
+            r=self.sh('--resume',d)
+            self.assertIn('STOPPED_RETRY_BUDGET',r.stdout)
+            r=self.sh('--resume',d,'--max-retries','1')
+            self.assertEqual(r.returncode,0,r.stderr+r.stdout)
+            self.assertIn('DRY_RUN_NO_AI_CALLED',r.stdout)
+            self.assertEqual(list(attempt.parent.iterdir()),[attempt])
+            for value in ('11','-1','abc'):
+                self.assertEqual(self.sh('--resume',d,'--max-retries',value).returncode,2)
+
+    def test_resume_preserves_reader_interrupt_exit(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)
+            (root/'batch'/'runs').mkdir(parents=True)
+            fake=root/'python'
+            fake.write_text('#!/bin/sh\ncase "$1" in scripts/m13_prod.py) exit 130;; esac\nexec /usr/bin/python3 "$@"\n')
+            fake.chmod(0o755)
+            env=dict(os.environ,ROYALTY_PYTHON=str(fake),ROYALTY_SEC_UA='Test test@example.com')
+            r=subprocess.run(['bash',str(ROOT/'royalty.sh'),'--resume',d],capture_output=True,text=True,env=env,timeout=30,cwd=ROOT)
+            self.assertEqual(r.returncode,130,r.stderr+r.stdout)
+            self.assertNotIn('STOPPED: run failed',r.stderr)
 
     def test_workbook_version_suffix_is_the_package_version(self):
         # v0.13.8 live run named a workbook _v0.8.1: royalty.sh imported the package with `python -I`,

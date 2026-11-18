@@ -3,6 +3,8 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
+import time
 from pathlib import Path
 from urllib.parse import urlparse
 from . import m13_two_reader as m13
@@ -189,6 +191,7 @@ def run_boundary(runs, *, max_calls, max_prompt_chars, max_reported_tokens=None,
     if max_reported_tokens is not None and unknown:
         return {'calls_attempted':0,'outcomes':[{'status':'STOPPED_USAGE_UNAVAILABLE'}]}
     if max_reported_tokens is not None and reported>=max_reported_tokens:
+        if execute:print(f'Token budget reached: {reported} reported / {max_reported_tokens} limit', file=sys.stderr, flush=True)
         return {'calls_attempted':0,'outcomes':[{'status':'STOPPED_TOKEN_BUDGET'}]}
     stop=False
     for root in sorted(p for p in Path(runs).iterdir() if p.is_dir() and (p/'m13_run.json').exists()):
@@ -212,10 +215,18 @@ def run_boundary(runs, *, max_calls, max_prompt_chars, max_reported_tokens=None,
             prompt=folder/'prompts'/(task['task_id']+'.txt')
             if len(prompt.read_text())>max_prompt_chars:
                 outcomes.append({'run':root.name,'status':'STOPPED_PROMPT_BUDGET','task':task['task_id']});stop=True;break
-            if read_json(folder/'plan.json')['engine']=='manual':
+            plan=read_json(folder/'plan.json')
+            if plan['engine']=='manual':
                 outcomes.append({'run':root.name,'status':'MANUAL_RESULT_REQUIRED','task':task['task_id']});stop=True;break
+            if execute:
+                print(f"Reader call {len(outcomes)+1}: document {st.get('document_id', root.name)}, "
+                      f"{next_reader}, {task['task_id']}, model {plan.get('model', 'unknown')} started", file=sys.stderr, flush=True)
+                started=time.monotonic()
             result=m13.next_call(root,execute=execute,confirm_subscription=confirm_subscription,
                                  confirm_credit_controls=confirm_credit_controls,timeout=timeout)
+            if execute:
+                print(f"Reader call {len(outcomes)+1}: {result.get('status', 'finished')} "
+                      f"({time.monotonic()-started:.1f}s)", file=sys.stderr, flush=True)
             outcomes.append({'run':root.name,'result':result})
             if not execute:break          # dry run: show the next call of each agreement, then go on to the next agreement
             if result.get('status') not in {'CAPTURED_MORE_PENDING','ALL_READINGS_CAPTURED'}:stop=True;break
@@ -226,11 +237,12 @@ def run_boundary(runs, *, max_calls, max_prompt_chars, max_reported_tokens=None,
                     outcomes.append({'run':root.name,'status':'STOPPED_USAGE_UNAVAILABLE'});stop=True;break
                 reported+=sum(v for k,v in u.items() if k in {'input_tokens','output_tokens'} and isinstance(v,int))
                 if reported>=max_reported_tokens:
+                    print(f'Token budget reached: {reported} reported / {max_reported_tokens} limit', file=sys.stderr, flush=True)
                     outcomes.append({'run':root.name,'status':'STOPPED_TOKEN_BUDGET'});stop=True;break
     return {'calls_attempted':sum('result' in o and execute for o in outcomes),'outcomes':outcomes}
 
 
-def main(argv=None):
+def _main(argv=None):
     ap=argparse.ArgumentParser(description='Full-source M13 production controller')
     sub=ap.add_subparsers(dest='command',required=True)
     p=sub.add_parser('prepare');p.add_argument('--map',type=Path,required=True);p.add_argument('--run',type=Path,required=True)
@@ -270,4 +282,12 @@ def main(argv=None):
     else:result=m13.combine(a.runs,a.out)
     print(json.dumps(result,ensure_ascii=False,separators=(',',':')))
     return 0
+def main(argv=None):
+    try:
+        return _main(argv)
+    except KeyboardInterrupt:
+        print('Interrupted. An in-progress reader attempt may require manual release before retry.', file=sys.stderr, flush=True)
+        return 130
+
+
 if __name__=='__main__':raise SystemExit(main())
