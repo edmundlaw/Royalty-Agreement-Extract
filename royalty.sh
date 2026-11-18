@@ -82,7 +82,7 @@ fi
 
 step "2/4 Prepare up to $MAX agreements (fixed rule, no manual picking)"
 "$PY" scripts/m13_prod.py batch --candidates "$BATCH/discovery.jsonl" --root "$BATCH/batch" \
-  --user-agent "$UA" --mode single --engine codex --model gpt-6-sol --effort low \
+  --user-agent "$UA" --mode single --engine codex --model gpt-6.2-sol --effort low \
   --max-agreements "$MAX" $( [ "$BIG" = 1 ] && echo --max-source-chars 2000000 ) || fail "batch prepare"
 
 echo; echo "Candidate summary (full list: $BATCH/batch/candidate_register.json):"

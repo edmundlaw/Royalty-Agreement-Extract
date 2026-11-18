@@ -46,6 +46,8 @@ PYTHONPATH=src python3 scripts/m13_prod.py batch --candidates /path/to/discover.
 
 Use `--mode two --check-engine claude --check-model MODEL --check-effort medium` for independent full-source readers. `--mode manual` prepares prompts with no automatic AI call. `--max-chars` changes chunk size, not coverage; all source passages remain in the immutable packet.
 
+`royalty.sh` uses Codex model `gpt-6.2-sol` for new runs. The production CLI requires an explicit `--model`; existing runs retain the model recorded when they were prepared.
+
 ## Read and finish
 
 **Manual:** give each `runs/<id>/reader_a/prompts/CHUNK-*.txt` to the chosen AI in a fresh context. Save the returned JSON and import each chunk:
