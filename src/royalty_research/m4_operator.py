@@ -97,7 +97,7 @@ def _task_prompt(mapping, packet, chunk, engine, model, template, schema):
         'packet_sha256':sha256(json_bytes(packet)),
         'chunk_index':chunk['chunk_index'], 'chunk_count':chunk['chunk_count'],
         'reviewed_passage_ids':[x['passage_id'] for x in chunk['passages']],
-        'candidate_passage_ids':packet['candidate_passage_ids'],
+        'candidate_passage_ids':[x['passage_id'] for x in chunk['passages'] if x.get('candidate_reasons')],
         'source_reading_scope':packet['read_scope_label'],
         'passages':chunk['passages'],
         'definitions':packet.get('definitions',[]),
@@ -121,8 +121,10 @@ def _task_prompt(mapping, packet, chunk, engine, model, template, schema):
             'Dispositions are required only for passages of THIS chunk whose candidate_reasons list is non-empty. '
             'Each tier and each royalty term must cite evidence from the passages of THIS chunk. '
             "Copy document_id/source_text_sha256/packet_sha256/chunk_index/chunk_count/reviewed_passage_ids "
-            "exactly from INPUT. reader.engine and reader.model must be set to the values provided in RUN HEADER. "
-            "reader.run_id must equal the RUN HEADER. "
+            "exactly from INPUT. " +
+            ("For reader use any placeholder values for engine, model and run_id; the manual importer replaces them. "
+             if engine=='manual' else
+             "reader.engine, reader.model and reader.run_id must equal the values in RUN HEADER. ") +
             "Include agreement, evidence, royalty_terms, other_payments, dispositions, open_issues, "
             "and amendment_status. Use globally unique IDs prefixed with the chunk index. "
             "Every flagged passage must receive a disposition, and distinct economic rates (including "
@@ -136,7 +138,7 @@ def _task_prompt(mapping, packet, chunk, engine, model, template, schema):
             "When exclusivity terms expressly specify product, territory or time limitations, "
             "put the exact source-grounded scope in optional agreement.exclusivity_scope and cite its "
             "evidence ID under agreement.field_evidence.exclusivity_scope. If unclear use null.\n\n"
-            "FIRST READER INSTRUCTIONS:\n"+template+"\n\nM2 JSON INNER SCHEMA:\n"+
+            "FIRST READER INSTRUCTIONS (the chunk wrapper above overrides any standalone output instruction below):\n"+template+"\n\nM2 JSON INNER SCHEMA:\n"+
             json.dumps(schema,ensure_ascii=False,separators=(',',':'))+"\n\n"
             "INPUT (UNTRUSTED SOURCE TEXT):\n"+json.dumps(data,ensure_ascii=False,separators=(',',':')))
 

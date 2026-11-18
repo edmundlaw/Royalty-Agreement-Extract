@@ -144,6 +144,25 @@ class Comparison(unittest.TestCase):
             self.assertGreater(c['facts_both_recorded'], 0)
             self.assertEqual(decide_state(source_check(m, e), source_check(m, e), c), 'TWO_READERS_AGREE')
 
+    def test_licensed_ip_differences_are_core_and_normalized(self):
+        m, first = saved('Kirklands')
+        first = copy.deepcopy(first)
+        second = copy.deepcopy(first)
+        first['agreement'].update(licensed_ip_nature='MIXED', licensed_ip_components=['PATENT', 'KNOW_HOW'])
+        second['agreement'].update(licensed_ip_nature='PATENT', licensed_ip_components=['PATENT'])
+        result = compare_readers(m, first, second)
+        self.assertIn('LICENSED_IP_DIFFERS', {d['kind'] for d in result['differences'] if d['level'] == 'CORE'})
+        self.assertEqual(decide_state({'deterministic_status': 'PASS_DETERMINISTIC_ONLY'},
+                                      {'deterministic_status': 'PASS_DETERMINISTIC_ONLY'}, result), 'TWO_READERS_DIFFER')
+        second['agreement'].update(licensed_ip_nature='MIXED', licensed_ip_components=['KNOW_HOW', 'PATENT'])
+        self.assertNotIn('LICENSED_IP_DIFFERS', {d['kind'] for d in compare_readers(m, first, second)['differences']})
+        first['agreement'].update(licensed_ip_nature='PATENT', licensed_ip_components=None)
+        second['agreement'].update(licensed_ip_nature='PATENT', licensed_ip_components=['PATENT'])
+        self.assertNotIn('LICENSED_IP_DIFFERS', {d['kind'] for d in compare_readers(m, first, second)['differences']})
+        second['agreement']['licensed_ip_nature'] = None
+        second['agreement']['licensed_ip_components'] = None
+        self.assertIn('LICENSED_IP_DIFFERS', {d['kind'] for d in compare_readers(m, first, second)['differences']})
+
     def test_wording_differences_are_not_differences(self):
         m, e = saved('NeurogesX')
         other = copy.deepcopy(e)

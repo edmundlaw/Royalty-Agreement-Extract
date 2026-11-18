@@ -326,9 +326,22 @@ def _fold_unrated(terms: list, notes: list) -> list:
         if u not in out: continue
         base = _words(u.get('base'))
         if not base: continue
-        cands = [t for t in out if t is not u and _quoted(t) and t.get('family') == u.get('family')
-                 and _words(t.get('base')) == base and _scope_compatible(t, u) and _territory_compatible(t, u)]
-        if not cands: continue
+        possible = [t for t in out if t is not u and _quoted(t) and t.get('family') == u.get('family')
+                    and _words(t.get('base')) == base and _scope_compatible(t, u)]
+        cands = [t for t in possible if _territory_compatible(t, u)]
+        # A differing territory may be a true geographic restriction or a reader's description
+        # of the royalty's country-by-country mechanics. Do not guess or silently ignore it.
+        territory_conflict = len(cands) != len(possible)
+        if not possible: continue
+        if territory_conflict:
+            names = ', '.join(c['term_id'] for c in possible)
+            notes.append({'rule': 'UNRESOLVED', 'kept': u['term_id'], 'removed': [],
+                          'candidates': [c['term_id'] for c in possible],
+                          'message': f"UNRESOLVED CROSS-CHUNK DUPLICATE: term {u['term_id']} has no rate quoted and could be the same "
+                                     f"royalty as {names}, but territory wording differs. The terms were NOT merged; "
+                                     f"read the source and decide by hand.",
+                          'evidence': _union(_all_evidence(u), *[_all_evidence(c) for c in possible])})
+            continue
         if len(cands) > 1:
             best_rank = max(_fold_rank(c, u) for c in cands)
             best = [c for c in cands if _fold_rank(c, u) == best_rank]

@@ -1,3 +1,7 @@
+# v0.13.13 changes
+
+Sheet 01 now shows the disclosed portion of a redacted tier schedule and uses the cited row terms for royalty-free improvements licences. Territory mismatches on possible duplicates trigger review. The reader can record design rights, and differences in readers’ IA classifications trigger a core review issue. Manual chunk prompts identify their own candidates and output format. See the [seven-agreement audit](docs/V01312_LIVE_AUDIT.md) for the source comparisons and verification limits.
+
 # v0.13.12 changes
 
 Fixes from an external test round of v0.13.11 (Laser Lock-Copag and Voit-Sport Supply read live, plus the v0.13.10 patent licence). Each claim was reproduced on v0.13.11 code before it was fixed: items 1-4 by an offline finalize of a small hand-made reading (`tests/fixtures/v01312`, verbatim snippets of the public agreements) and by inspecting the supplied workbooks; item 5 from the supplied workbook (row height 33, vertical centre). No AI reader was run.

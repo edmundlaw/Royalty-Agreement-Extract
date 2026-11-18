@@ -103,6 +103,15 @@ class MixedComponents(unittest.TestCase):
         self.assertEqual((ROOT/'schemas'/'m2_extraction.schema.json').read_text(),
                          (ROOT/'src'/'royalty_research'/'schemas'/'m2_extraction.schema.json').read_text())
 
+    def test_design_right_schema_and_export(self):
+        ex=read_json(ROOT/'examples'/'synthetic_m2_extraction.json')
+        ex['agreement'].update(licensed_ip_nature='DESIGN_RIGHT', licensed_ip_components=['DESIGN_RIGHT'])
+        self.assertEqual([p for p in validate_shape(ex) if 'licensed_ip' in str(p)], [])
+        r=self._nature({'licensed_ip_nature':'MIXED', 'licensed_ip_components':['PATENT','DESIGN_RIGHT']})
+        self.assertEqual(r['Nature of IA'], 'MIXED: patent, design right')
+        r=self._nature({'licensed_ip_nature':'UNDETERMINED','field_evidence':{'duration':['E1']}}, ['registered design rights'])
+        self.assertEqual(r['Nature of IA'], 'DESIGN_RIGHT (keyword hint)')
+
     def test_merge_accepts_and_unions_components(self):
         base=test_m3.ChunkMergeTests('test_chunk_merge_recovers_complete_output');base.setUp()
         self.assertIn('licensed_ip_components',agreement_scalar_fields())

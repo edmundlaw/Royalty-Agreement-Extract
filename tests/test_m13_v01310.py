@@ -1,6 +1,7 @@
 """v0.13.10: deterministic consolidation of one reading's royalty terms (fold, threshold variants, reductions)."""
 from __future__ import annotations
 import copy
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -57,6 +58,56 @@ class Fold(unittest.TestCase):
         issue = out['open_issues'][0]
         self.assertEqual((issue['kind'], issue['status'], issue['severity']), ('CONSOLIDATED', 'RESOLVED', 'LOW'))
         self.assertIn('CONSOLIDATED: 1-t1 folded into c2-t1 (same family and base, no rate quoted)', issue['description'])
+
+    def test_territory_mismatch_warns_without_losing_distinct_rights(self):
+        u = unrated('C1-R1', base='Annual Net Sales', product_scope='Licensed Products',
+                    territory_scope='Worldwide')
+        q = term('C2-R1', base='Annual Net Sales', product_scope='Licensed Products',
+                 territory_scope='Product-by-product and country-by-country', rate_value=None,
+                 rate_unit='REDACTED', disclosure_status='REDACTED',
+                 tiers=[{'rate_value': None, 'rate_unit': 'REDACTED', 'evidence_ids': ['e-C2-R1'],
+                         'threshold_evidence_ids': []}])
+        out, notes = consolidate(reading(u, q))
+        self.assertEqual(ids(out), ['C1-R1', 'C2-R1'])
+        self.assertEqual(out['royalty_terms'][1]['tiers'], q['tiers'])
+        self.assertEqual(notes[0]['rule'], 'UNRESOLVED')
+        issue = out['open_issues'][0]
+        self.assertEqual((issue['kind'], issue['status'], issue['severity']), ('UNRESOLVED_DUPLICATE', 'OPEN', 'HIGH'))
+        self.assertIn('territory wording differs', issue['description'])
+        self.assertEqual(issue['passage_ids'], ['P1'])
+
+    def test_conflicting_territory_blocks_fold_even_with_an_exact_candidate(self):
+        u = unrated('u', territory_scope='Worldwide')
+        exact = term('exact', territory_scope='Worldwide')
+        other = term('other', territory_scope='US', rate_value='7')
+        out, notes = consolidate(reading(u, exact, other))
+        self.assertEqual(ids(out), ['u', 'exact', 'other'])
+        self.assertEqual(notes[0]['rule'], 'UNRESOLVED')
+        self.assertEqual(set(notes[0]['candidates']), {'exact', 'other'})
+
+    def test_unresolved_territory_issue_reaches_workbook(self):
+        from openpyxl import load_workbook
+        from royalty_research.m13_research_export import NAMES, write_research_xlsx
+        from test_m13_research_export import fixture_rows
+        raw = fixture_rows()
+        for table, field in [('Documents', 'Extraction_Status'), ('Royalty Terms', 'QC_State')]:
+            raw[table][1][raw[table][0].index(field)] = 'SINGLE_READER_NOT_CHECKED'
+        h = raw['Open Issues'][0]
+        raw['Open Issues'].append([{'Document_ID': 'DOC-DEMO', 'Issue_ID': 'U1', 'Severity': 'HIGH',
+                                    'Status': 'OPEN', 'Kind': 'UNRESOLVED_DUPLICATE',
+                                    'Description': 'UNRESOLVED CROSS-CHUNK DUPLICATE: term R1 has no rate quoted and could be the same royalty as R2, but territory wording differs.'}.get(k) for k in h])
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / 'research.xlsx'
+            write_research_xlsx(raw, path)
+            wb = load_workbook(path, data_only=True)
+            main = wb[NAMES[0]]
+            headings = {c.value: c.column for c in main[7]}
+            self.assertEqual(main.cell(8, headings['Usable for royalty benchmark']).value, 'NO')
+            self.assertIn('unresolved cross-chunk duplicate', main.cell(8, headings['Benchmark note']).value)
+            self.assertEqual(main.cell(8, headings['Document QC']).value, 'SINGLE_READER_NOT_CHECKED')
+            issues = list(wb[NAMES[4]].iter_rows(values_only=True))
+            self.assertTrue(any(r[0] == 'OPEN_ISSUE' and r[2] == 'HIGH' and r[5] == 'UNRESOLVED_DUPLICATE'
+                                and r[6] == 'OPEN' for r in issues))
 
     def test_sublicense_wording_matches(self):
         a = unrated('1-t2', family='SUBLICENSING_RECEIPTS', base='All revenue received by Licensee from sublicensees of the Patent Rights')

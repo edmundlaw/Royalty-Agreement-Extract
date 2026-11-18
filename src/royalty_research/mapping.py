@@ -4,8 +4,6 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-from typing import Iterable
-
 from .__init__ import SCHEMA_VERSION
 from .storage import sha256, stable_id, utc_now
 
@@ -14,6 +12,7 @@ PERCENT = re.compile(r"(?<![\w\d])(?:\d+(?:\.\d+)?|\.\d+)\s*(?:%|percent\b|per\s
 MONEY = re.compile(r"(?<!\w)(?:US\s*\$|USD\s*|\$|€|£|¥|EUR\s*|GBP\s*|JPY\s*|HKD\s*|CAD\s*|AUD\s*)\s*\d[\d,]*(?:\.\d+)?", re.I)
 FRACTION = re.compile(r"\b(?:one[- ]half|one[- ]quarter|one[- ]third|two[- ]thirds|three[- ]quarters|half\s+of\s+one\s+percent)\b", re.I)
 REDACTION = re.compile(r"\b(?:redacted|confidential\s+treatment|omitted\s+and\s+filed|not\s+disclosed)\b|\[\s*\*{1,}\s*\]|\[\s*REDACTED\s*\]|(?<!\w)\*{4,}(?!\w)|\[\s*(?:\.{3,}|…+)\s*\]|[■█]{2,}", re.I)
+_FUTURE_CONFIDENTIALITY = re.compile(r'obtain\s+confidential\s+treatment\s+of\s+such\s+information', re.I)
 PER_UNIT = re.compile(r"\b(?:per\s+(?:unit|device|product|copy|user|piece|transaction|download|sale)|cents?\s+for\s+each|a\s+unit\s+fee|in[- ]kind\s+(?:payments?|consideration))\b", re.I)
 SPELLED_RATE = re.compile(r"\b(?:(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|twenty[- ]five|thirty|forty|fifty|half|quarter|one[- ]twentieth|one[- ]hundredth)\s+(?:percent|per\s+cent)|\d+(?:\.\d+)?\s+(?:basis\s+points?|bps)\b|(?:share\s+equally|equal\s+shares?|split\s+equally|divided\s+equally))", re.I)
 INDIRECT_ECONOMICS = re.compile(r"\b(?:most[- ]favou?r(?:ed)?|shall\s+be\s+(?:halved|reduced)|cost\s+plus|cost[- ]plus|markup|mark[- ]up|consideration\s+(?:as\s+)?(?:provided|specified|set\s+forth)\s+in|payment\s+(?:shall\s+be\s+)?(?:as\s+)?(?:provided|specified|set\s+forth)\s+in|side\s+letter|continuing\s+fees?|technical\s+service\s+charge|amount\s+in\s+words|each\s+party\s+shall\s+receive)\b",re.I)
@@ -99,15 +98,18 @@ def map_contract(paragraphs: list[str], document: dict, *, raw_hash: str | None 
     for i, value in enumerate(paragraphs, 1):
         passage_id = f"{doc_id}:P{i:06d}"
         match = SECTION.match(value)
-        if match and (len(value) <= 300 or "royalt" in value.lower()):
+        toc_entry = bool(re.search(r'\|\s*\d+\s*$', value))
+        if match and not toc_entry and (len(value) <= 300 or "royalt" in value.lower()):
             current_section = match.group(1)
-        elif HEADING.match(value):
+        elif not toc_entry and HEADING.match(value):
             current_section = value[:120]
         reasons = []
         for name, pattern in (("PERCENT", PERCENT), ("MONEY", MONEY), ("SPELLED_FRACTION", FRACTION),
                               ("SPELLED_RATE", SPELLED_RATE), ("INDIRECT_ECONOMICS", INDIRECT_ECONOMICS),
                               ("REDACTION", REDACTION), ("PER_UNIT", PER_UNIT), ("FINANCE_VOCAB", FINANCE)):
-            if pattern.search(value):
+            # Ordinary prospective confidentiality obligations are not evidence that this filing is redacted.
+            scan_value = _FUTURE_CONFIDENTIALITY.sub('', value) if name == 'REDACTION' else value
+            if pattern.search(scan_value):
                 reasons.append(name)
         if i in split_passages:
             reasons.append('SOURCE_SPLIT_ADJACENCY_REVIEW')

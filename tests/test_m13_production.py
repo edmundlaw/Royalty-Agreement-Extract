@@ -54,6 +54,9 @@ class FullSourceProduction(unittest.TestCase):
             self.assertEqual(import_manual_result(run/'reader_a','CHUNK-0001',response)['model_calls'],0)
             self.assertEqual(finalize(run)['state'],'SINGLE_READER_NOT_CHECKED')
             self.assertTrue((run/'output/Royalty_Research_M13.xlsx').exists())
+            consolidation = read_json(run/'output/consolidation.json')
+            self.assertEqual(consolidation['terms_before'], consolidation['terms_after'])
+            self.assertEqual(consolidation['notes'], [])
 
     def test_effort_command_and_budget(self):
         self.assertIn('model_reasoning_effort="low"',_command('codex','mock-a','out','low'))
@@ -291,8 +294,9 @@ class LicenceGateV0137(unittest.TestCase):
 
 class FinalizeFromRawChunks(unittest.TestCase):
     """Finalize from raw chunk results (the v0.13.6 test re-used an already merged extraction and missed the crash)."""
-    def _run(self,d,discovery=None,agreement_extra=None):
+    def _run(self,d,discovery=None,agreement_extra=None,map_metadata=None):
         m=read_json(ROOT/'output/synthetic_clause_map.json')
+        if map_metadata is not None:m['document_metadata']=map_metadata
         batch_root=Path(d)/'runs_x'
         run=batch_root/'batch'/'runs'/'one'
         prepare_one(m,run,mode='manual',engine='codex',model='chosen-ai',max_chars=64000)
@@ -339,6 +343,17 @@ class FinalizeFromRawChunks(unittest.TestCase):
             finalize(run)
             rows=read_json(run/'output/rows.json')['Documents']
             self.assertIn(rows[1][rows[0].index('Filing_Date')],(None,''))
+
+    def test_empty_map_filing_date_uses_discovery_and_keeps_known_metadata(self):
+        for empty in (None, '', '   '):
+            with self.subTest(empty=empty), tempfile.TemporaryDirectory() as d:
+                run,m=self._run(d,discovery={'filing_date':'2026-01-14','company':'Fallback Co'},
+                                map_metadata={'filing_date':empty,'company':'Known Co'})
+                finalize(run)
+                rows=read_json(run/'output/rows.json')['Documents']
+                self.assertEqual(rows[1][rows[0].index('Filing_Date')],'2026-01-14')
+                from royalty_research.m3_workspace import read_map
+                self.assertEqual(read_map(run/'workspace',m['document_id'])['document_metadata']['company'],'Known Co')
 
 
 class ResumeScript(unittest.TestCase):

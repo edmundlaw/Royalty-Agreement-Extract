@@ -6,7 +6,7 @@ from pathlib import Path
 
 from royalty_research.m13_two_reader import source_check
 from royalty_research.storage import read_json
-from royalty_research.m13_research_export import NAMES, research_rows, write_research_xlsx, benchmark_usable
+from royalty_research.m13_research_export import NAMES, research_rows, write_research_xlsx, benchmark_usable, _tier_summary
 from royalty_research.m3_export import HEADERS
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -48,6 +48,70 @@ def fixture_rows():
 
 
 class ResearchRows(unittest.TestCase):
+    def test_revenue_share_rules_preserve_real_and_undisclosed_rates(self):
+        term={'Family':'REVENUE_SHARE','Rate_Numeric':5,'Rate_Unit':'PERCENT','Disclosure_Status':'DISCLOSED'}
+        self.assertEqual(benchmark_usable(term,'NOT_STATED',None)[0],'YES')
+        term.update(Rate_Numeric=None,Rate_Unit='FORMULA',Royalty_Base='Residual litigation recoveries')
+        note=benchmark_usable(term,'NOT_STATED',None,rate_quotes=['The remaining balance shall be divided equally between LICENSEE and MICHIGAN.'])[1]
+        self.assertIn('litigation recovery split',note); self.assertNotIn('not disclosed',note)
+        term['Disclosure_Status']='REDACTED'
+        self.assertIn('rate not disclosed',benchmark_usable(term,'NOT_STATED',None,rate_quotes=['divided equally'])[1])
+        term['Disclosure_Status']='DISCLOSED';term['Royalty_Base']='product revenue'
+        self.assertIn('rate not disclosed',benchmark_usable(term,'NOT_STATED',None,rate_quotes=['divided equally'])[1])
+
+    def test_partial_tier_and_mixed_units_are_not_misrepresented(self):
+        tiers=[{'Rate_Numeric':20,'Rate_Unit':'PERCENT'},{'Rate_Numeric':2,'Rate_Unit':'CURRENCY_PER_UNIT'}]
+        self.assertEqual(_tier_summary(tiers),'20%; 2 currency per unit')
+        term={'Family':'PRODUCT_SALES','Rate_Numeric':None,'Rate_Unit':'REDACTED','Disclosure_Status':'REDACTED'}
+        note=benchmark_usable(term,'NOT_STATED',None,tier_summary='20%')[1]
+        self.assertIn('partly redacted',note);self.assertIn('20%',note);self.assertNotIn('rate not disclosed',note)
+
+    def test_conditional_royalty_free_text_does_not_erase_current_rate(self):
+        raw=fixture_rows();term=raw['Royalty Terms'][1];h=raw['Royalty Terms'][0]
+        term[h.index('Rate_Value_Text')]='5% until royalty-free'
+        ev=raw['Evidence'][1];ev[raw['Evidence'][0].index('Exact_Quotation')]='5% until royalty-free'
+        out=research_rows(raw);row=dict(zip(out[NAMES[0]][0],out[NAMES[0]][1]))
+        self.assertNotIn('royalty-free licence',row['Benchmark note'])
+        self.assertNotIn('NOT_APPLICABLE',row['Minimum guarantee'])
+
+    def test_row_specific_royalty_free_terms_override_inherited_minimum(self):
+        raw=fixture_rows()
+        term=raw['Royalty Terms'][1]; th=raw['Royalty Terms'][0]
+        for k,v in {'Rate_Value_Text':'royalty-free','Rate_Numeric':None,'Rate_Unit':'FORMULA'}.items():term[th.index(k)]=v
+        ev=raw['Evidence'][1]; ev[raw['Evidence'][0].index('Exact_Quotation')]='a non-exclusive and royalty-free license for such improvements'
+        headers=raw['Other Payments'][0]
+        raw['Other Payments'].append([{'Payment_ID':'P2','Document_ID':'DOC-DEMO','Kind':'MINIMUM_ROYALTY','Amount_Text':'10000','Basis':'minimum royalty paid in advance'}.get(k) for k in headers])
+        out=research_rows(raw); row=dict(zip(out[NAMES[0]][0],out[NAMES[0]][1]))
+        self.assertTrue(row['Exclusivity'].startswith('Non-exclusive'))
+        self.assertIn('royalty-free',row['Exclusivity scope'])
+        self.assertEqual(row['Exclusivity evidence IDs'],'E1')
+        self.assertEqual(row['Exclusivity scope evidence IDs'],'E1')
+        self.assertTrue(row['Minimum guarantee'].startswith('NOT_APPLICABLE'))
+        self.assertTrue(row['Advance / prepayment'].startswith('NOT_APPLICABLE'))
+        # A rate label without supporting evidence does not alter the inherited fields.
+        ev[raw['Evidence'][0].index('Exact_Quotation')]='payment provisions elsewhere'
+        out=research_rows(raw); row=dict(zip(out[NAMES[0]][0],out[NAMES[0]][1]))
+        self.assertIn('10,000',row['Minimum guarantee'])
+
+    def test_annual_minimum_frequency_is_shown_with_product_scope(self):
+        raw=fixture_rows(); headers=raw['Other Payments'][0]
+        raw['Other Payments'].append([{'Payment_ID':'P2','Document_ID':'DOC-DEMO','Kind':'MINIMUM_ROYALTY','Amount_Text':'25000','Currency':'USD','Basis':'Annual minimum royalty fee for each licensed Product'}.get(k) for k in headers])
+        out=research_rows(raw); row=dict(zip(out[NAMES[0]][0],out[NAMES[0]][1]))
+        self.assertEqual(row['Minimum guarantee'],'USD 25,000 per licensed Product (annual) [P2]')
+
+    def test_missing_effective_date_last_signature_is_flagged_not_inferred(self):
+        raw=fixture_rows(); doc=raw['Documents'][1]; dh=raw['Documents'][0]
+        doc[dh.index('Effective')]=None; doc[dh.index('Executed')]='2005-06-08'
+        ev=raw['Evidence'][1]; ev[raw['Evidence'][0].index('Exact_Quotation')]='"Effective Date" shall mean the date of the last signature to this agreement.'
+        out=research_rows(raw); row=dict(zip(out[NAMES[0]][0],out[NAMES[0]][1]))
+        self.assertIsNone(row['Effective date'])
+        issues=out[NAMES[4]]
+        found=[dict(zip(issues[0],r)) for r in issues[1:] if 'EFFECTIVE_DATE_SIGNATURE_REVIEW' in r]
+        self.assertEqual(len(found),1)
+        self.assertIn('E1',str(found[0])); self.assertIn('2005-06-08',str(found[0]))
+        doc[dh.index('Effective')]='2005-06-08'
+        self.assertFalse(any('EFFECTIVE_DATE_SIGNATURE_REVIEW' in r for r in research_rows(raw)[NAMES[4]][1:]))
+
     def test_legacy_fields_not_invented_and_all_records_preserved(self):
         raw=fixture_rows(); v=research_rows(raw)
         self.assertEqual(list(v),list(NAMES))

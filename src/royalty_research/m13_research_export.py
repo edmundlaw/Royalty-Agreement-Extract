@@ -1,4 +1,4 @@
-"""M13 research-facing five-sheet Excel from the *same* immutable M13 row sets.
+"""M13 research-facing seven-sheet Excel from the *same* immutable M13 row sets.
 
 No extra AI invocation and no new assessment of a contract. Legacy columns
 and records remain in rows.json/CSV; the optional detailed XLSX is untouched.
@@ -60,12 +60,13 @@ _IA_KEYWORDS = (('PATENT','patent',re.compile(r'\bpatents?\b',re.I)),
                  re.compile(r'\btechnical (?:information|data)\b|\b(?:licensed|proprietary|unpatented|patented) technolog(?:y|ies)\b|\btechnology licen[cs]es?\b',re.I)),
                 ('SOFTWARE','software/source code',re.compile(r'\bsoftware\b|\bsource code\b',re.I)),
                 ('COPYRIGHT','copyright',re.compile(r'\bcopyrights?\b',re.I)),
+                ('DESIGN_RIGHT','design right',re.compile(r'\bdesign rights?\b',re.I)),
                 ('TRADEMARK_BRAND','trademark/brand/trade name/logo',
                  re.compile(r'\btrade ?marks?\b|\bbrand marks?\b|\btrade names?\b|\blogos?\b|\bservice marks?\b',re.I)),
                 ('FRANCHISE','franchise',re.compile(r'\bfranchis(?:e|es|ed|ing)\b',re.I)))
 # Short label per enum value for a reader's own components list.
 _IA_LABELS = {'PATENT':'patent','KNOW_HOW':'know-how','TECHNOLOGY':'technology','SOFTWARE':'software','COPYRIGHT':'copyright',
-              'TRADEMARK_BRAND':'trademark/brand','TRADE_SECRET':'trade secret','FRANCHISE':'franchise'}
+              'TRADEMARK_BRAND':'trademark/brand','TRADE_SECRET':'trade secret','FRANCHISE':'franchise','DESIGN_RIGHT':'design right'}
 _RELATED = re.compile(r'related[- ]part(?:y|ies)|affiliated (?:entit(?:y|ies)|parties|companies)', re.I)
 
 
@@ -221,8 +222,12 @@ def _record_error_codes(term_id, source_errors):
     return out
 
 
+def _royalty_free_value(value):
+    return bool(re.fullmatch(r'\s*royalty[ -]free(?:\s+licen[cs]e)?\s*[.]?\s*',str(value or ''),re.I))
+
+
 def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc_state=None, record_errors=None,
-                     tier_summary=None, unresolved=False, period_limited=None):
+                     tier_summary=None, unresolved=False, period_limited=None, rate_quotes=()):
     """Python rule, zero AI. Returns ('YES'|'NO', note). Any one reason makes it NO.
 
     nature is the reader's own licensed_ip_nature; grant_found is True/False when the source text was
@@ -251,10 +256,20 @@ def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc
     if family in PASS_THROUGH_FAMILIES:reasons.append('pass-through of sublicensee receipts, not a sales royalty')
     rate=term.get('Rate_Numeric')
     unit=str(term.get('Rate_Unit') or '').upper()
-    if unresolved:
+    litigation_split=(family=='REVENUE_SHARE' and rate in (None,'') and unit=='FORMULA'
+                      and term.get('Disclosure_Status') not in ('REDACTED','AMBIGUOUS','NOT_VERIFIED')
+                      and bool(re.search(r'\b(?:litigation|lawsuit|infringement action)\b',str(term.get('Royalty_Base') or ''),re.I))
+                      and any(re.search(r'\b(?:divided|split|shared)\s+equally\b|\b(?:equal|50[ /-]50)\s+(?:share|split)',str(q or ''),re.I) for q in rate_quotes))
+    if rate in (None,'') and _royalty_free_value(term.get('Rate_Value_Text')):
+        reasons.append('royalty-free licence, not a royalty benchmark')
+    elif unresolved:
         reasons.append('unresolved cross-chunk duplicate \u2013 see sheet 05')
+    elif rate in (None,'') and tier_summary and term.get('Disclosure_Status')=='REDACTED':
+        reasons.append(f'partly redacted; disclosed tier {tier_summary} - assess at point of use')
     elif rate in (None,'') and tier_summary and term.get('Disclosure_Status') not in ('REDACTED','AMBIGUOUS','NOT_VERIFIED'):
         reasons.append('tiered rate \u2013 assess at point of use')
+    elif litigation_split:
+        reasons.append('litigation recovery split, not a royalty rate')
     elif rate in (None,'') or term.get('Disclosure_Status') in ('REDACTED','AMBIGUOUS','NOT_VERIFIED') or unit in ('UNKNOWN','REDACTED'):
         reasons.append('rate not disclosed or unclear')
     else:
@@ -356,7 +371,8 @@ def display_quote(quote, passage_id, texts, cap=DISPLAY_QUOTE_CAP):
     if qs<0 or qs+len(q)>own+len(parts[n-lo]):return quote   # not inside the cited passage: leave it alone
     qe=qs+len(q)
     # A page number or an ALL-CAPS heading on its own line is a wall: the sentence never reaches across it.
-    is_wall=lambda i:i!=n-lo and (bool(_WALL.fullmatch(parts[i])) or (len(parts[i])<40 and not re.search(r'[a-z]',parts[i])))   # page number / ALL-CAPS heading
+    is_wall=lambda i:i!=n-lo and (bool(_WALL.fullmatch(parts[i])) or (len(parts[i])<40 and not re.search(r'[a-z]',parts[i]))
+                                  or bool(re.match(r'^\d{1,3}\.(?:\d+\.)*(?:\s|$)',parts[i])))
     wall_start={starts[i+1] for i in range(len(parts)-1) if is_wall(i)}
     wall_end={starts[i] for i in range(len(parts)) if is_wall(i)}
     left=qs
@@ -399,15 +415,33 @@ def display_quote(quote, passage_id, texts, cap=DISPLAY_QUOTE_CAP):
 
 def _tier_summary(tiers):
     """'4%-7%' (min-max of the disclosed tier rates) for sheet 01; None when no tier carries a numeric rate."""
-    vals=[];unit=None
+    vals=[];units=set()
     for z in tiers:
-        try:vals.append(float(z.get('Rate_Numeric')))
+        try:value=float(z.get('Rate_Numeric'))
         except (TypeError,ValueError):continue
-        unit=unit or str(z.get('Rate_Unit') or '').upper()
+        unit=str(z.get('Rate_Unit') or '').upper()
+        unit='PERCENT' if unit in ('PERCENT','PCT') else unit
+        vals.append((value,unit));units.add(unit)
     if not vals:return None
-    lo,hi=min(vals),max(vals)
+    if len(units)>1:
+        return '; '.join(f'{v:g}'+('%' if u=='PERCENT' else (' '+u.lower().replace('_',' ') if u else ' (unit unspecified)')) for v,u in vals)
+    unit=next(iter(units)); lo,hi=min(v for v,_ in vals),max(v for v,_ in vals)
     suffix='%' if unit in ('PERCENT','PCT') else (' '+unit.lower().replace('_',' ') if unit else '')
     return f'{lo:g}{suffix}' if lo==hi else f'{lo:g}{suffix}\u2013{hi:g}{suffix}'
+
+
+def _reported_rate(term, tiers):
+    """Preserve a partially disclosed tier without suggesting it is the whole rate."""
+    reported=term.get('Rate_Value_Text')
+    if reported not in (None,''):return reported
+    status=term.get('Disclosure_Status')
+    if status=='REDACTED':
+        disclosed=_tier_summary([t for t in tiers if str(t.get('Rate_Unit') or '').upper() not in ('REDACTED','UNKNOWN','')])
+        if disclosed:return f'PARTLY REDACTED – disclosed tier {disclosed}, see sheet 02'
+        return 'REDACTED – see sheet 02' if tiers else 'REDACTED'
+    if status in ('AMBIGUOUS','NOT_VERIFIED'):return reported
+    summary=_tier_summary(tiers)
+    return f"{str(term.get('Structure') or 'TIERED').upper()} {summary} – see sheet 02" if summary else reported
 
 
 _CURRENCY_NUMBER=re.compile(r'(US\s*\$|C\$|A\$|\$|USD|EUR|CAD|AUD|GBP|JPY|CHF|\u20ac|\u00a3|\u00a5)\s*(\d[\d,]*(?:\.\d+)?)',re.I)
@@ -573,6 +607,12 @@ def _minimum_qualifier(p):
     return ''
 
 
+def _minimum_frequency(p):
+    # Only use an explicit frequency modifying the minimum itself, not unrelated dates in conditions.
+    m=re.search(r'\b(annual|quarterly|monthly)\s+minimum\s+royalt(?:y|ies)\b',str(p.get('Basis') or ''),re.I)
+    return m.group(1).lower() if m else ''
+
+
 def _payment_summary(payments: list[dict], kinds: set[str], *, minimum=False, royalty_only=False):
     """Faithful non-additive list of classified agreement-level payment records.
 
@@ -592,6 +632,8 @@ def _payment_summary(payments: list[dict], kinds: set[str], *, minimum=False, ro
         if minimum:
             qualifier=_minimum_qualifier(p)   # v0.13.12: "USD 25,000 per licensed Product [1-PAY02]"
             if qualifier:amount+=' '+qualifier
+            frequency=_minimum_frequency(p)
+            if frequency:amount+=' ('+frequency+')'
         matches.append(f"{amount} [{p.get('Payment_ID') or 'UNKNOWN_ID'}]")
     return '; '.join(matches) if matches else 'NOT_ASSESSED'
 
@@ -656,6 +698,18 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
     payments=_records(rows,'Other Payments')
     evid=_records(rows,'Evidence')
     evid_by_doc={(e['Document_ID'],e['Evidence_ID']):e for e in evid}
+    # A signature-date definition and a recorded execution date are a review lead, not proof that
+    # no competing definition, condition, or later signature exists elsewhere in the source.
+    for did,doc in docs.items():
+        if doc.get('Effective') or not doc.get('Executed'):continue
+        matches=[e for e in evid if e.get('Document_ID')==did and re.search(
+            r'\beffective date\b.{0,60}\b(?:date of the )?last signature\b',
+            str(e.get('Exact_Quotation') or ''),re.I|re.S)]
+        if matches:
+            refs=', '.join(str(e.get('Evidence_ID')) for e in matches if e.get('Evidence_ID'))
+            python_issues.append((did,'PY-EFFECTIVE-DATE','MEDIUM','EFFECTIVE_DATE_SIGNATURE_REVIEW',
+                f'Effective date is blank; evidence {refs} refers to the last signature and the recorded signing date is {doc["Executed"]}. '
+                'Review the full agreement and all signatures for competing definitions or conditions before filling the effective date.'))
     links=defaultdict(list)
     for table, key, id_field in (('Royalty Terms','Rate_Evidence_IDs','Term_ID'),
                                  ('Royalty Terms','Evidence_IDs','Term_ID'),
@@ -747,13 +801,13 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
                 word=_related_hint(field_ev('licensed_ip','contractual_status') + [e.get('Exact_Quotation') or '' for (d_,_i),e in evid_by_doc.items() if d_==did]
                                    + list(source_texts.get(did) or []))
                 if word:related=f'YES (keyword hint: "{word}")'
-        tier_text=_tier_summary(tiers_by_term.get((did,t.get('Term_ID')),[])) if t.get('Disclosure_Status') not in ('REDACTED','AMBIGUOUS','NOT_VERIFIED') else None
+        tier_text=_tier_summary(tiers_by_term.get((did,t.get('Term_ID')),[])) if t.get('Disclosure_Status') not in ('AMBIGUOUS','NOT_VERIFIED') else None
         grant_text=' '.join(list(source_texts.get(did) or [])+[e.get('Exact_Quotation') or '' for (d_,_i),e in evid_by_doc.items() if d_==did])
         usable,usable_note=benchmark_usable(t,related,doc.get('Contract_Status'),nature=agreement.get('licensed_ip_nature'),
                                             grant_found=(grant_hits(grant_text)>0 if grant_text.strip() else None),
                                             qc_state=t.get('QC_State') or doc.get('Extraction_Status'),
                                             record_errors=_record_error_codes(t.get('Term_ID'),(source_errors or {}).get(did)),
-                                            tier_summary=tier_text,unresolved=(did,t.get('Term_ID')) in unresolved_terms,
+                                            tier_summary=tier_text,unresolved=(did,t.get('Term_ID')) in unresolved_terms,rate_quotes=quotes_of_term(t),
                                             period_limited=((pl_wording[(did,t.get('Term_ID'))],
                                                              obs_of[pl_link[(did,t.get('Term_ID'))][1]] if pl_link[(did,t.get('Term_ID'))][0]=='base' else None)
                                                             if pl_wording.get((did,t.get('Term_ID'))) else None))
@@ -788,27 +842,38 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
         if upfront_hint=='NOT_ASSESSED' and n_pay:upfront_hint=checked('an upfront or signing fee')
         payment_ids=_payment_references(payments_present)
         exclusivity_scope=agreement.get('exclusivity_scope') or 'NOT_ASSESSED'
+        exclusivity=doc.get('Exclusivity') if doc.get('Exclusivity') is not None else 'NOT_ASSESSED'
+        row_quotes=[q for q in quotes_of_term(t) if q]
+        free_row=(t.get('Rate_Numeric') in (None,'') and _royalty_free_value(t.get('Rate_Value_Text'))
+                  and any(re.search(r'\broyalty[ -]free\b',q,re.I) for q in row_quotes))
+        exclusivity_refs=_join(field_refs.get('exclusivity'))
+        scope_refs=_join(field_refs.get('exclusivity_scope'))
+        if free_row:
+            # Agreement-level minimum and advance are not terms of this explicitly free licence.
+            min_hint=advance_hint='NOT_APPLICABLE (royalty-free licence; see rate evidence)'
+            if any(re.search(r'\bnon[ -]exclusive\b',q,re.I) for q in row_quotes):
+                exclusivity='Non-exclusive (see rate evidence)'
+                exclusivity_scope='Non-exclusive for this royalty-free licence (see rate evidence)'
+                refs=[i for i in _ids(t.get('Rate_Evidence_IDs'))
+                      if re.search(r'\bnon[ -]exclusive\b',str((evid_by_doc.get((did,i)) or {}).get('Exact_Quotation') or ''),re.I)]
+                exclusivity_refs=scope_refs=_join(refs)
         rate_ids=_join(t.get('Rate_Evidence_IDs'))
         quote=shown_quote(_best_evidence(_ids(t.get('Rate_Evidence_IDs')),did,evid_by_doc,t.get('Rate_Value_Text')))
-        rate_reported=t.get('Rate_Value_Text')
-        if rate_reported in (None,'') and tier_text:
-            # Tiered / hybrid / formula term with disclosed tiers: the numeric cell stays blank (never one collapsed
-            # number, sorting unaffected); the reported-rate cell says what the tiers span.
-            rate_reported=f"{str(t.get('Structure') or 'TIERED').upper()} {tier_text} \u2013 see sheet 02"
+        rate_reported=_reported_rate(t,tiers_by_term.get((did,t.get('Term_ID')),[]))
         action='Review CORE differences' if doc.get('Extraction_Status')=='TWO_READERS_DIFFER' else 'Point-of-use source review'
         result[NAMES[0]].append([
             t.get('Observation_ID'),nature,license_text,_percent_cell(t),per_unit_rate(t,quotes_of_term(t)),usable,usable_note,pl_cell,link_cell,rate_reported,t.get('Family'),t.get('Structure'),
             t.get('Rate_Unit'),t.get('Royalty_Base'),t.get('Product_Scope'),t.get('Licensor') or doc.get('Licensor'),
             t.get('Licensee') or doc.get('Licensee'),related,doc.get('Industry'),t.get('Territory') or doc.get('Territory'),
-            doc.get('Exclusivity') if doc.get('Exclusivity') is not None else 'NOT_ASSESSED',
+            exclusivity,
             _short(exclusivity_scope),rights,doc.get('Executed') or agreement.get('execution_date'),doc.get('Effective'),
             doc.get('Filing_Date'),_short(doc.get('Contract_Status')),t.get('Effective_Period'),min_hint,cap_hint,advance_hint,
             upfront_hint,summary,payment_ids,rate_ids,quote,
             t.get('Source_URL'),t.get('Disclosure_Status'),doc.get('Second_AI_Review_Status'),
             t.get('QC_State'),action,t.get('Agreement_ID'),did,
             _join(list(dict.fromkeys(_ids(field_refs.get('licensed_ip_nature'))+_ids(field_refs.get('licensed_ip_components'))))),_join(field_refs.get('sublicensing_rights')),
-            _join(field_refs.get('exclusivity')),
-            _join(field_refs.get('exclusivity_scope')),
+            exclusivity_refs,
+            scope_refs,
             _join([x for m in material for x in (m.get('evidence_ids') or [])]),
             ia_detail,doc.get('Contract_Status'),exclusivity_scope])
 

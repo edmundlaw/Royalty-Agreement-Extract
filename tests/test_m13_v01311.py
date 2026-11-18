@@ -127,9 +127,11 @@ class A3TieredLabel(unittest.TestCase):
         self.assertIn('tiered rate', d['Benchmark note']); self.assertNotIn('not disclosed', d['Benchmark note'])
         self.assertEqual(d['Usable for royalty benchmark'], 'NO')
 
-    def test_redacted_tiered_term_stays_not_disclosed(self):
+    def test_redacted_tiered_term_shows_disclosed_tiers_but_is_not_usable(self):
         d = row(research_rows(self.tiered_rows('REDACTED'))[NAMES[0]], None, **{'Observation ID': 'DOC-DEMO:R1'})
-        self.assertIn('not disclosed', d['Benchmark note']); self.assertFalse(d['Royalty rate as reported'])
+        self.assertIn('partly redacted; disclosed tier 4%–7%', d['Benchmark note'])
+        self.assertEqual(d['Royalty rate as reported'], 'PARTLY REDACTED – disclosed tier 4%–7%, see sheet 02')
+        self.assertIsNone(d['Royalty rate (%)'])
 
     def test_plain_missing_rate_unchanged(self):
         note = benchmark_usable({'Rate_Numeric': None, 'Rate_Unit': 'PERCENT', 'Disclosure_Status': 'DISCLOSED', 'Family': 'PRODUCT_SALES'}, 'NO', '')[1]

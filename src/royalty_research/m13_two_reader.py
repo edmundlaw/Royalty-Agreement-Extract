@@ -641,9 +641,25 @@ def compare_readers(mapping: dict, first: dict, second: dict) -> dict:
         else:
             agreed += 1
     for item in free_b: unmatched('second', item, fa, fb)
-    # Parties.
+    # Compare the licensed rights themselves, not component order or a redundant singleton list.
+    def ia_classification(agreement):
+        nature = agreement.get('licensed_ip_nature')
+        raw = agreement.get('licensed_ip_components')
+        components = frozenset(raw) if isinstance(raw, list) else frozenset()
+        if nature and nature not in {'MIXED', 'OTHER', 'UNDETERMINED'} and not components:
+            components = frozenset((nature,))
+        return nature, components
+
     ha = first.get('agreement') if isinstance(first.get('agreement'), dict) else {}
     hb = second.get('agreement') if isinstance(second.get('agreement'), dict) else {}
+    ia_a, ia_b = ia_classification(ha), ia_classification(hb)
+    if ia_a != ia_b:
+        def ia_display(value):
+            nature, components = value
+            return (nature or 'not recorded') + (': ' + ', '.join(sorted(components)) if components else '')
+        add('CORE', 'LICENSED_IP_DIFFERS', None, None, ia_display(ia_a), ia_display(ia_b),
+            'The readers disagree on the nature or components of the licensed intellectual assets; review the original grant and definitions.')
+    # Parties.
     if (ha.get('licensor') and hb.get('licensor') and ha.get('licensee') and hb.get('licensee')
             and not _same_party(ha['licensor'], hb['licensor']) and _same_party(ha['licensor'], hb['licensee'])
             and _same_party(ha['licensee'], hb['licensor'])):
@@ -957,10 +973,13 @@ def _finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False)
     workspace = root / ('workspace' if target.name == 'output' else 'workspace_checked')
     export_map = mapping
     meta_have = mapping.get('document_metadata') or {}
-    if not meta_have.get('filing_date'):                 # runs prepared before v0.13.7 carry no SEC filing metadata
-        extra = _batch_metadata(root, mapping['document_id'])
-        if extra:
-            export_map = dict(mapping); export_map['document_metadata'] = {**extra, **meta_have}
+    extra = _batch_metadata(root, mapping['document_id'])
+    if extra:
+        merged_meta = dict(meta_have)
+        for key, value in extra.items():
+            if merged_meta.get(key) is None or str(merged_meta[key]).strip() == '':
+                merged_meta[key] = value
+        export_map = dict(mapping); export_map['document_metadata'] = merged_meta
     init(workspace); register_map(workspace, export_map)
     register_extraction(workspace, mapping['document_id'], first, select=True)
     rows = decorate_rows(build_rows(workspace), document_id=mapping['document_id'], state=state, first_check=first_check,
@@ -977,9 +996,9 @@ def _finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False)
         atomic_json(out / 'source_check.json', first_check)
         if consolidation:
             atomic_json(out / 'first_reader_extraction_before_consolidation.json', raw_first)
-            atomic_json(out / 'consolidation.json', {'schema': 'm13-consolidation.1', 'document_id': mapping['document_id'],
-                                                     'terms_before': len(raw_first.get('royalty_terms') or []),
-                                                     'terms_after': len(first.get('royalty_terms') or []), 'notes': consolidation})
+        atomic_json(out / 'consolidation.json', {'schema': 'm13-consolidation.1', 'document_id': mapping['document_id'],
+                                                 'terms_before': len(raw_first.get('royalty_terms') or []),
+                                                 'terms_after': len(first.get('royalty_terms') or []), 'notes': consolidation})
         if use_b:
             atomic_json(out / 'second_reader_extraction.json', second)
             atomic_json(out / 'second_reader_source_check.json', second_check)

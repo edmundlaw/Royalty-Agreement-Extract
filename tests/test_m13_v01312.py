@@ -310,7 +310,7 @@ class Item4Advance(unittest.TestCase):
         r = by(sheets('voit')[0], 0, 'Observation ID', 'DOC-voit:C1-R1')
         self.assertIn('USD 130,000 [C1-P1]', r['Advance / prepayment'])
         self.assertIn('prepaid by January 30 each Contract Year', r['Advance / prepayment'])
-        self.assertEqual(r['Minimum guarantee'], 'USD 130,000 [C1-P1]')   # "per completed five-year period" is in the Condition (about increases): not a qualifier
+        self.assertEqual(r['Minimum guarantee'], 'USD 130,000 (annual) [C1-P1]')   # "per completed five-year period" is in the Condition (about increases): not a qualifier
         self.assertTrue(r['Upfront fee'].startswith('NOT_ASSESSED (checked 3 payment records: none is an upfront or signing fee'))
 
     def test_laser_minimum_has_no_advance_wording_so_the_field_is_not_filled(self):
@@ -447,7 +447,7 @@ class Item7MinimumQualifier(unittest.TestCase):
     def test_third_agreement_wording(self):
         self.assertEqual(self._min(Basis='Annual minimum royalty per licensed Product',
                                    Condition='Commences six months after signing; no further minimum payment required if royalties paid equal or exceed required minimum'),
-                         'USD 25,000 per licensed Product [1-PAY02]')
+                         'USD 25,000 per licensed Product (annual) [1-PAY02]')
 
     def test_variants(self):
         self.assertEqual(self._min(Basis='Minimum royalty for each Licensed Product in each country'), 'USD 25,000 per Licensed Product [1-PAY02]')
@@ -455,7 +455,7 @@ class Item7MinimumQualifier(unittest.TestCase):
         self.assertEqual(self._min(Basis='Minimum royalty for every patent family if the licence is exclusive'), 'USD 25,000 per patent family [1-PAY02]')
 
     def test_no_qualifier_wording_means_no_change(self):
-        self.assertEqual(self._min(Basis='Annual minimum royalty'), 'USD 25,000 [1-PAY02]')
+        self.assertEqual(self._min(Basis='Annual minimum royalty'), 'USD 25,000 (annual) [1-PAY02]')
         self.assertEqual(self._min(Basis='Minimum royalty each year'), 'USD 25,000 [1-PAY02]')
         self.assertEqual(self._min(), 'USD 25,000 [1-PAY02]')
 
@@ -465,7 +465,7 @@ class Item7MinimumQualifier(unittest.TestCase):
 
     def test_voit_and_laser_minimums_unchanged(self):
         self.assertEqual(table(sheets('laser')[0], 0)[0]['Minimum guarantee'], '$ 10,000 [C1-P01]')
-        self.assertEqual(by(sheets('voit')[0], 0, 'Observation ID', 'DOC-voit:C1-R1')['Minimum guarantee'], 'USD 130,000 [C1-P1]')
+        self.assertEqual(by(sheets('voit')[0], 0, 'Observation ID', 'DOC-voit:C1-R1')['Minimum guarantee'], 'USD 130,000 (annual) [C1-P1]')
 
 
 if __name__ == '__main__':
