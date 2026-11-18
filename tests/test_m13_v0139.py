@@ -143,6 +143,7 @@ class OtherTermTiers(unittest.TestCase):
                ('OTHER','Payments in US dollars converted at the exchange rate on the payment date',SUPPLEMENTARY),
                ('AUDIT_REPORTING','Licensee provides quarterly reports of net sales',SUPPLEMENTARY),
                ('TERMINATION','Either party may terminate on the other party\'s insolvency or bankruptcy',SUPPLEMENTARY),
+               ('TERMINATION','Either party may terminate for uncured material breach, bankruptcy or dissolution',KEY),
                ('ASSIGNMENT','Neither party may assign without consent',SUPPLEMENTARY),
                ('OTHER','Warranties limited to fees paid; indemnity capped',SUPPLEMENTARY),
                ('OTHER','Licensee shall not use the Licensor\'s name in publicity without consent',ADMIN),

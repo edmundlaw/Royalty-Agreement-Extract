@@ -168,8 +168,10 @@ def classify_other_term(category, text):
     if _STRONG_ADMIN.search(body):return ADMIN,'ADMIN'
     if cat=='OTHER' and _WEAK_ADMIN.search(body) and not _TERM_TALK.search(body):return ADMIN,'ADMIN'
     if cat in _KEY_CATEGORIES:
-        # A termination clause that is only about insolvency stays supplementary.
-        if re.search(r'insolven|bankrupt',body,re.I):return SUPPLEMENTARY,cat
+        # A termination clause that is only about insolvency stays supplementary; one that also gives a right
+        # to terminate for breach, convenience or similar is an early-termination right (KEY).
+        if re.search(r'insolven|bankrupt',body,re.I) and not re.search(r'breach|convenience|without cause|for cause|change (?:of|in) control',body,re.I):
+            return SUPPLEMENTARY,cat
         return KEY,_KEY_CATEGORIES[cat]
     return SUPPLEMENTARY,cat
 
