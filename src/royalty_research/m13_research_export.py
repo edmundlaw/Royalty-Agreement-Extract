@@ -312,7 +312,7 @@ def _best_evidence(ids, did, evid_by_doc, amount_text=None, figures=None):
 # text of the cited passage and of the passages next to it (a wrapped clause continues in the next passage). The
 # stored evidence and the source check are never touched. The result is the source text itself with whitespace
 # normalised, at most DISPLAY_QUOTE_CAP characters, cut at clause boundaries with an ellipsis when the sentence is longer.
-DISPLAY_QUOTE_CAP=300
+DISPLAY_QUOTE_CAP=500
 _PASSAGE_SEP='\x1f'
 _SENTENCE_END=re.compile(r'[.;?!]')
 _NOT_AN_END=re.compile(r'(?:\b(?:Inc|Ltd|Corp|Co|No|Nos|Sec|Art|St|Mr|Mrs|Ms|Dr|vs|etc|Jr|Sr|Bros|LLC|LP|U\.S|e\.g|i\.e)|\b[A-Z]|\bSection\s+\d+|\bArticle\s+\d+|\([a-z0-9]{1,4}\))$')
@@ -380,6 +380,7 @@ def display_quote(quote, passage_id, texts, cap=DISPLAY_QUOTE_CAP):
     budget=cap-len(q)
     if budget<=0:return quote
     lead=ctx[left:qs].replace(_PASSAGE_SEP,' '); tail=ctx[qe:right].replace(_PASSAGE_SEP,' ')
+    # trim the side that is further from the quote first, keeping the quote roughly centred
     left_allow=max(budget//2,budget-len(tail))
     lead_out=lead
     if len(lead)>left_allow:
@@ -466,19 +467,28 @@ def period_limited_wording(*texts):
 
 
 def link_period_limited(items):
-    """items: list of dicts {key, doc, family, base, scope, wording}. Returns {key: ('base', base_key) | ('none', [candidate keys])}
-    for every item whose wording is set: linked to its base row only when exactly one plausible base term exists
-    (same document and family, not itself period-limited; narrowed by royalty base and product scope when several)."""
+    """items: dicts {key, doc, family, base, scope, wording, weak}. wording = sell-off wording in the term's OWN fields or rate
+    quotation (STRONG); weak = such wording only in its conditions (WEAK: a base royalty clause often mentions the sell-off
+    in passing). Returns {key: (state, target)} for items that carry either signal:
+      ('base', base_key)    flagged period-limited, linked to its one plausible base term
+      ('tied', [keys])      flagged, but several candidate bases stay tied: not linked
+      ('nobase', None)      wording found but no base candidate: NOT a restatement, kept as an ordinary row
+    A STRONG item may be restated against any term that has no strong wording; a WEAK-only item is flagged only when a term with
+    no sell-off wording at all exists to link to. Candidates share document and family and are narrowed by royalty base and
+    product scope when there are several."""
     from .m13_consolidate import _words
     out={}
     for it in items:
-        if not it['wording']:continue
-        cands=[o for o in items if o['doc']==it['doc'] and not o['wording'] and o['family']==it['family']]
+        if not (it['wording'] or it['weak']):continue
+        same=[o for o in items if o['doc']==it['doc'] and o['family']==it['family'] and o is not it]
+        cands=[o for o in same if not o['wording']] if it['wording'] else [o for o in same if not o['wording'] and not o['weak']]
         if len(cands)>1:
             narrowed=[o for o in cands if _words(o['base'])==_words(it['base'])
                       and (lambda x,y:not x or not y or x<=y or y<=x)(_words(o['scope']),_words(it['scope']))]
             cands=narrowed or cands
-        out[it['key']]=('base',cands[0]['key']) if len(cands)==1 else ('none',[c['key'] for c in cands])
+        if len(cands)==1:out[it['key']]=('base',cands[0]['key'])
+        elif cands:out[it['key']]=('tied',[c['key'] for c in cands])
+        elif it['wording'] or not same:out[it['key']]=('nobase',None)   # a weak-only term beside a strong one is simply the base
     return out
 
 
@@ -682,21 +692,25 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
     pl_items=[{'key':(t['Document_ID'],t.get('Term_ID')),'doc':t['Document_ID'],'family':t.get('Family'),'base':t.get('Royalty_Base'),
                'scope':t.get('Product_Scope'),
                'wording':period_limited_wording(t.get('Effective_Period'),t.get('Product_Scope'),t.get('Territory'),t.get('Royalty_Base'),
-                                                t.get('Base_Definition'),*quotes_of_term(t),
-                                                *[c.get('Condition_Text') for c in conditions.get((t['Document_ID'],t.get('Term_ID')),[])])}
+                                                t.get('Base_Definition'),*quotes_of_term(t)),
+               'weak':period_limited_wording(*[c.get('Condition_Text') for c in conditions.get((t['Document_ID'],t.get('Term_ID')),[])])}
               for t in terms]
     obs_of={(t['Document_ID'],t.get('Term_ID')):t.get('Observation_ID') or _observation_reference(t.get('Term_ID'),t['Document_ID']) for t in terms}
-    pl_link=link_period_limited(pl_items); pl_wording={i['key']:i['wording'] for i in pl_items}
+    pl_link=link_period_limited(pl_items)
+    pl_wording={i['key']:(i['wording'] or i['weak']) for i in pl_items if pl_link.get(i['key'],('nobase',))[0] in ('base','tied')}
     restated_by=defaultdict(list)
     for key,(state,target) in pl_link.items():
+        word=next((i['wording'] or i['weak'] for i in pl_items if i['key']==key))
         if state=='base':restated_by[target].append(obs_of[key])
+        elif state=='tied':
+            python_issues.append((key[0],f'PY-PL-{key[1]}','MEDIUM','PERIOD_LIMITED_LINK_UNRESOLVED',
+                f'{obs_of[key]} is worded as a {word} (period-limited) royalty. More than one possible base row '
+                f'({", ".join(obs_of[c] for c in target)}), so it is NOT linked; check which row it restates. '
+                'Python rule: it is marked not usable as a benchmark until a person has looked.'))
         else:
-            cand=', '.join(obs_of[c] for c in target)
-            python_issues.append((key[0],f'PY-PL-{key[1]}',
-                f'{obs_of[key]} is worded as a {pl_wording[key]} (period-limited) royalty. '
-                +(f'More than one possible base row ({cand}), so it is NOT linked; check which row it restates.' if target
-                  else 'No base row of the same royalty family was found, so it is NOT linked.')
-                +' Python rule: it is marked not usable as a benchmark until a person has looked.'))
+            python_issues.append((key[0],f'PY-PLN-{key[1]}','LOW','PERIOD_LIMITED_WORDING_NO_BASE',
+                f'{obs_of[key]}: {word} wording found but no other royalty row of the same family; kept as a base row '
+                '(not excluded) - check at point of use.'))
 
     for t in terms:
         did=t['Document_ID']; doc=docs.get(did,{})
@@ -855,8 +869,8 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
         result[NAMES[4]].append(['OPEN_ISSUE',r.get('Document_ID'),r.get('Severity'),r.get('Issue_ID'),
             r.get('Description'),r.get('Kind'),r.get('Status'),r.get('Source_Passage_IDs'),
             None,None,r.get('Source_URL'),'Review open issue'])
-    for did_,issue_id,text in python_issues:     # raised by the export rules above (not read from the reading)
-        result[NAMES[4]].append(['OPEN_ISSUE',did_,'MEDIUM',issue_id,text,'PERIOD_LIMITED_LINK_UNRESOLVED','OPEN',None,
+    for did_,issue_id,severity,kind,text in python_issues:     # raised by the export rules above (not read from the reading)
+        result[NAMES[4]].append(['OPEN_ISSUE',did_,severity,issue_id,text,kind,'OPEN',None,
                                  None,None,(docs.get(did_) or {}).get('Source_URL'),'Review open issue'])
     for r in _records(rows,'QC'):
         result[NAMES[4]].append(['DETERMINISTIC_QC',r.get('Document_ID'),r.get('State'),r.get('Errors'),

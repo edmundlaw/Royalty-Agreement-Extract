@@ -92,20 +92,20 @@ class Item1SellOff(unittest.TestCase):
             self.assertIsNone(period_limited_wording(text), text)
 
     def _items(self, *specs):
-        return [{'key': ('D', k), 'doc': 'D', 'family': fam, 'base': base, 'scope': scope, 'wording': w}
-                for k, fam, base, scope, w in specs]
+        return [{'key': ('D', k), 'doc': 'D', 'family': fam, 'base': base, 'scope': scope, 'wording': w, 'weak': weak}
+                for k, fam, base, scope, w, *rest in specs for weak in [rest[0] if rest else None]]
 
     def test_link_only_when_exactly_one_base(self):
         got = link_period_limited(self._items(('A', 'PRODUCT_SALES', 'Net Sales', None, None), ('B', 'PRODUCT_SALES', 'Net Sales', None, 'sell-off')))
         self.assertEqual(got[('D', 'B')], ('base', ('D', 'A')))
         # a different family is not a base
         got = link_period_limited(self._items(('A', 'PER_UNIT', 'units', None, None), ('B', 'PRODUCT_SALES', 'Net Sales', None, 'sell-off')))
-        self.assertEqual(got[('D', 'B')], ('none', []))
+        self.assertEqual(got[('D', 'B')], ('nobase', None))
 
     def test_two_possible_bases_are_not_linked_unless_scope_or_base_separates_them(self):
         two = self._items(('A', 'PRODUCT_SALES', 'Net Sales', 'Product X', None), ('C', 'PRODUCT_SALES', 'Net Sales', 'Product Y', None),
                           ('B', 'PRODUCT_SALES', 'Net Sales', None, 'sell-off'))
-        self.assertEqual(link_period_limited(two)[('D', 'B')][0], 'none')
+        self.assertEqual(link_period_limited(two)[('D', 'B')][0], 'tied')
         narrowed = self._items(('A', 'PRODUCT_SALES', 'Net Sales', 'Product X', None), ('C', 'PRODUCT_SALES', 'Gross Revenue', 'Product X', None),
                                ('B', 'PRODUCT_SALES', 'Net Sales', 'Product X', 'sell-off'))
         self.assertEqual(link_period_limited(narrowed)[('D', 'B')], ('base', ('D', 'A')))
@@ -123,6 +123,47 @@ class Item1SellOff(unittest.TestCase):
         issues = [r for r in table(v, 4) if r['Record type'] == 'OPEN_ISSUE' and r['First reader / state'] == 'PERIOD_LIMITED_LINK_UNRESOLVED']
         self.assertEqual(len(issues), 1)
         self.assertIn('DOC-voit:C1-R1', issues[0]['Description']); self.assertIn('DOC-voit:C1-R9', issues[0]['Description'])
+
+    # --- v0.13.12 follow-up: weak (condition-only) wording must never exclude the only royalty ---
+    def _term_rows(self, *conds, scope_sell_off=False):
+        raw = fixture_rows(); h = raw['Royalty Terms'][0]
+        if scope_sell_off: raw['Royalty Terms'][1][h.index('Effective_Period')] = 'Sell-Off Period'
+        ch = raw['Conditions'][0]
+        raw['Conditions'] = [ch] + [[{'Document_ID': 'DOC-DEMO', 'Term_ID': 'R1', 'Condition_Text': c, 'Evidence_IDs': 'E1'}.get(k) for k in ch] for c in conds]
+        return raw
+
+    SELL_COND = 'Licensee may sell off its inventory of Licensed Products for six months after termination, subject to payment of royalties under Section 4.'
+
+    def test_sole_term_with_sell_off_condition_stays_usable_with_a_low_issue(self):
+        v = research_rows(self._term_rows(self.SELL_COND))
+        r = table(v, 0)[0]
+        self.assertEqual((r['Period-limited'], r['Linked to row']), ('', ''))
+        self.assertNotIn('period-limited', r['Benchmark note'])
+        issues = [x for x in table(v, 4) if x['First reader / state'] == 'PERIOD_LIMITED_WORDING_NO_BASE']
+        self.assertEqual(len(issues), 1); self.assertEqual(issues[0]['Priority / level'], 'LOW'); self.assertEqual(issues[0]['Passage / issue ID'], None)
+        self.assertIn('kept as a base row', issues[0]['Description'])
+
+    def test_strong_term_with_no_base_candidate_is_not_a_restatement(self):
+        v = research_rows(self._term_rows(scope_sell_off=True))
+        r = table(v, 0)[0]
+        self.assertEqual(r['Period-limited'], ''); self.assertNotIn('period-limited', r['Benchmark note'])
+        self.assertEqual(len([x for x in table(v, 4) if x['First reader / state'] == 'PERIOD_LIMITED_WORDING_NO_BASE']), 1)
+        self.assertFalse([x for x in table(v, 4) if x['First reader / state'] == 'PERIOD_LIMITED_LINK_UNRESOLVED'])
+
+    def test_base_with_sell_off_condition_plus_a_real_sell_off_term_gives_one_link(self):
+        raw = self._term_rows(self.SELL_COND); h = raw['Royalty Terms'][0]
+        t2 = list(raw['Royalty Terms'][1]); t2[h.index('Term_ID')] = 'R2'; t2[h.index('Observation_ID')] = 'DOC-DEMO:R2'
+        t2[h.index('Effective_Period')] = 'Sell-Off Period (24 months following termination)'; raw['Royalty Terms'].append(t2)
+        v = research_rows(raw)
+        base, sell = by(v, 0, 'Observation ID', 'DOC-DEMO:R1'), by(v, 0, 'Observation ID', 'DOC-DEMO:R2')
+        self.assertEqual(sell['Linked to row'], 'DOC-DEMO:R1'); self.assertEqual(sell['Usable for royalty benchmark'], 'NO')
+        self.assertEqual(base['Period-limited'], ''); self.assertIn('DOC-DEMO:R2', base['Linked to row'])
+        self.assertNotIn('period-limited (', base['Benchmark note'])
+        self.assertFalse([x for x in table(v, 4) if x['Record type'] == 'OPEN_ISSUE' and str(x['First reader / state']).startswith('PERIOD_LIMITED')])
+
+    def test_two_condition_only_terms_are_both_left_alone(self):
+        got = link_period_limited(self._items(('A', 'PRODUCT_SALES', 'Net Sales', None, None, 'sell-off'), ('B', 'PRODUCT_SALES', 'Net Sales', None, None, 'sell-off')))
+        self.assertEqual({k: v[0] for k, v in got.items()}, {})   # each is the other's only candidate-less peer: nothing flagged, nothing excluded
 
     def test_benchmark_usable_reason_text(self):
         t = {'Rate_Numeric': 4, 'Rate_Unit': 'PERCENT', 'Disclosure_Status': 'DISCLOSED'}
@@ -148,9 +189,14 @@ class Item2DisplayQuote(unittest.TestCase):
         self.assertTrue(q.startswith('(b) Within thirty (30) days') or q.startswith('… '), q)
         self.assertIn('four percent (4%) of all Net Sales during that Contract Year', q)
         self.assertTrue(q.rstrip().endswith('above.') or q.rstrip().endswith('…'), q)
-        self.assertLessEqual(len(q), 310)
+        self.assertLessEqual(len(q), 500)
         source = ' '.join(self.texts['DOC-voit'])
         self.assertIn(q.strip('… ').replace(' …', ''), source)             # exact text (ellipses aside)
+
+    def test_laser_rate_display_keeps_the_base_of_the_per_unit_rate(self):
+        v = sheets('laser')[0]; q = table(v, 0)[0]['Rate quotation']
+        self.assertIn('two hundred thousand (200,000)', q); self.assertIn('FIVE CENTS', q)
+        self.assertIn('($0.05) for each excess Exclusive Product.', q)
 
     def test_stored_evidence_is_unchanged(self):
         stored = {e['Evidence ID']: e['Exact quotation'] for e in table(self.v, 3)}
@@ -202,8 +248,11 @@ class Item2DisplayQuote(unittest.TestCase):
                 'shall pay a royalty of 4% of Net Sales, together with a report, which the Licensor may audit, and also all taxes, '
                 'fees, and charges that the law may require, plus interest as set out below, all in the manner described in this Agreement.')
         quote = 'shall pay a royalty of 4% of Net Sales'
+        long = long + ' ' + long.replace('shall pay a royalty of 4%', 'shall also pay 5%') + ' ' + long.replace('Within', 'Later')
         out = display_quote(quote, 'D:P000001', [long])
-        self.assertLessEqual(len(out), 310)
+        self.assertGreater(len(long), 500)
+        self.assertLessEqual(len(out), 500)
+        self.assertIn(out.strip('\u2026 ').replace(' \u2026', ''), long)                        # verbatim apart from the ellipses
         self.assertIn(quote, out); self.assertTrue(out.startswith('…') or out.startswith('Within'))
         self.assertTrue(out.endswith('…') or out.endswith('.'))
 

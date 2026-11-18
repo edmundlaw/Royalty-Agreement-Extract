@@ -107,8 +107,8 @@ def go(original,research):
     q=tab(v,names[4],7)
     for typ,src in [('READER_CHECK','Reader Check'),('READER_DIFFERENCE','Reader Differences'),
                     ('OPEN_ISSUE','Open Issues'),('DETERMINISTIC_QC','QC'),('AMENDMENT','Amendments'),('PROCESSING','Pending Jobs')]:
-        # v0.13.12: OPEN_ISSUE rows of kind PERIOD_LIMITED_LINK_UNRESOLVED are raised by the export rules, not read from rows.json
-        n_new=sum(r['Record type']==typ and not (typ=='OPEN_ISSUE' and r.get('First reader / state')=='PERIOD_LIMITED_LINK_UNRESOLVED') for r in q)
+        # v0.13.12: OPEN_ISSUE rows of kind PERIOD_LIMITED_LINK_UNRESOLVED / PERIOD_LIMITED_WORDING_NO_BASE are raised by the export rules, not read from rows.json
+        n_new=sum(r['Record type']==typ and not (typ=='OPEN_ISSUE' and r.get('First reader / state') in ('PERIOD_LIMITED_LINK_UNRESOLVED','PERIOD_LIMITED_WORDING_NO_BASE')) for r in q)
         if n_new!=len(tab(w,src)):
             errs.append(f'QC {typ}: count mismatch')
     checks['qc_records']=len(q)
