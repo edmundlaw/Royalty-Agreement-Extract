@@ -1,0 +1,433 @@
+{
+ "schema_version": "m1.0",
+ "stage": "MAPPED_NOT_INTERPRETED",
+ "document_id": "DOC-laserlock",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/1104038/000095011604001037/ex10-6.txt",
+ "original_sha256": null,
+ "text_sha256": "d7fc9bcd95e924b23a20af2f918c9133ea4d93378b3da00154bf8efc87929dd1",
+ "mapped_at_utc": "2026-11-18T14:02:43+00:00",
+ "retrieved_at_utc": null,
+ "parser_type": "UNKNOWN",
+ "source_segmentation": {
+  "schema": "m4-source-segmentation.1",
+  "fragment_limit_chars": 12000,
+  "split_original_paragraphs": [],
+  "preservation": "FRAGMENTS_CONCATENATE_EXACTLY_TO_EACH_ORIGINAL_NORMALIZED_LINE"
+ },
+ "total_passages": 28,
+ "candidate_passages": [
+  "DOC-laserlock:P000009",
+  "DOC-laserlock:P000012",
+  "DOC-laserlock:P000013",
+  "DOC-laserlock:P000014",
+  "DOC-laserlock:P000015",
+  "DOC-laserlock:P000016",
+  "DOC-laserlock:P000018",
+  "DOC-laserlock:P000020",
+  "DOC-laserlock:P000021",
+  "DOC-laserlock:P000023",
+  "DOC-laserlock:P000025"
+ ],
+ "total_candidates": 11,
+ "candidate_reason_counts": {
+  "FINANCE_VOCAB": 9,
+  "DEFINED_TERM": 2,
+  "MONEY": 2
+ },
+ "screening_priority": "HIGH_REVIEW_PRIORITY",
+ "sections": [
+  {
+   "section": "PREAMBLE_OR_UNNUMBERED",
+   "passage_ids": [
+    "DOC-laserlock:P000001",
+    "DOC-laserlock:P000002",
+    "DOC-laserlock:P000003",
+    "DOC-laserlock:P000004",
+    "DOC-laserlock:P000005",
+    "DOC-laserlock:P000006",
+    "DOC-laserlock:P000007",
+    "DOC-laserlock:P000008",
+    "DOC-laserlock:P000009",
+    "DOC-laserlock:P000010",
+    "DOC-laserlock:P000011",
+    "DOC-laserlock:P000012",
+    "DOC-laserlock:P000013",
+    "DOC-laserlock:P000014",
+    "DOC-laserlock:P000015"
+   ],
+   "candidate_ids": [
+    "DOC-laserlock:P000009",
+    "DOC-laserlock:P000012",
+    "DOC-laserlock:P000013",
+    "DOC-laserlock:P000014",
+    "DOC-laserlock:P000015"
+   ]
+  },
+  {
+   "section": "4.01",
+   "passage_ids": [
+    "DOC-laserlock:P000016",
+    "DOC-laserlock:P000017",
+    "DOC-laserlock:P000018",
+    "DOC-laserlock:P000019"
+   ],
+   "candidate_ids": [
+    "DOC-laserlock:P000016",
+    "DOC-laserlock:P000018"
+   ]
+  },
+  {
+   "section": "4.02",
+   "passage_ids": [
+    "DOC-laserlock:P000020",
+    "DOC-laserlock:P000021",
+    "DOC-laserlock:P000022",
+    "DOC-laserlock:P000023",
+    "DOC-laserlock:P000024"
+   ],
+   "candidate_ids": [
+    "DOC-laserlock:P000020",
+    "DOC-laserlock:P000021",
+    "DOC-laserlock:P000023"
+   ]
+  },
+  {
+   "section": "4.03",
+   "passage_ids": [
+    "DOC-laserlock:P000025",
+    "DOC-laserlock:P000026",
+    "DOC-laserlock:P000027",
+    "DOC-laserlock:P000028"
+   ],
+   "candidate_ids": [
+    "DOC-laserlock:P000025"
+   ]
+  }
+ ],
+ "definitions": [
+  {
+   "passage_id": "DOC-laserlock:P000009",
+   "term": "ADDITIONAL ROYALTY"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000014",
+   "term": "MINIMUM ANNUAL ROYALTY"
+  }
+ ],
+ "cross_references": [],
+ "passages": [
+  {
+   "passage_id": "DOC-laserlock:P000001",
+   "sequence": 1,
+   "section_guess": null,
+   "start_offset": 0,
+   "end_offset": 64,
+   "text": "BY AND BETWEEN: LASER LOCK TECHNOLOGIES INC., a corporation duly",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000002",
+   "sequence": 2,
+   "section_guess": null,
+   "start_offset": 65,
+   "end_offset": 126,
+   "text": "organized and existing under the laws of Nevada, with offices",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000003",
+   "sequence": 3,
+   "section_guess": null,
+   "start_offset": 127,
+   "end_offset": 188,
+   "text": "at 837, Lindy Lane, Bala Cynwyd, Pennsylvania, 19004, and its",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000004",
+   "sequence": 4,
+   "section_guess": null,
+   "start_offset": 189,
+   "end_offset": 218,
+   "text": "Affiliates as herein defined.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000005",
+   "sequence": 5,
+   "section_guess": null,
+   "start_offset": 219,
+   "end_offset": 256,
+   "text": "Hereinafter referred to as \"LICENSOR\"",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000006",
+   "sequence": 6,
+   "section_guess": null,
+   "start_offset": 257,
+   "end_offset": 322,
+   "text": "AND: COPAG U.S.A. INC., a corporation duly organized and existing",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000007",
+   "sequence": 7,
+   "section_guess": null,
+   "start_offset": 323,
+   "end_offset": 383,
+   "text": "under the laws of Nevada, with offices at 8275 South Eastern",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000008",
+   "sequence": 8,
+   "section_guess": null,
+   "start_offset": 384,
+   "end_offset": 424,
+   "text": "Avenue, #200-47, Las Vegas, Nevada 89123",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000009",
+   "sequence": 9,
+   "section_guess": null,
+   "start_offset": 425,
+   "end_offset": 496,
+   "text": "1.01 \"ADDITIONAL ROYALTY\" shall mean an amount equal to the sum arrived",
+   "candidate_reasons": [
+    "FINANCE_VOCAB",
+    "DEFINED_TERM"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000010",
+   "sequence": 10,
+   "section_guess": null,
+   "start_offset": 497,
+   "end_offset": 563,
+   "text": "at by multiplying the number of units of the Exclusive Products in",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000011",
+   "sequence": 11,
+   "section_guess": null,
+   "start_offset": 564,
+   "end_offset": 629,
+   "text": "excess of two hundred thousand (200,000) sold or manufactured for",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000012",
+   "sequence": 12,
+   "section_guess": null,
+   "start_offset": 630,
+   "end_offset": 690,
+   "text": "or by the LICENSEE during each Royalty Period, by FIVE CENTS",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000013",
+   "sequence": 13,
+   "section_guess": null,
+   "start_offset": 691,
+   "end_offset": 733,
+   "text": "($0.05) for each excess Exclusive Product.",
+   "candidate_reasons": [
+    "MONEY"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000014",
+   "sequence": 14,
+   "section_guess": null,
+   "start_offset": 734,
+   "end_offset": 806,
+   "text": "1.08 \"MINIMUM ANNUAL ROYALTY\" shall mean the sum of TEN THOUSAND DOLLARS",
+   "candidate_reasons": [
+    "FINANCE_VOCAB",
+    "DEFINED_TERM"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000015",
+   "sequence": 15,
+   "section_guess": null,
+   "start_offset": 807,
+   "end_offset": 820,
+   "text": "($10,000.00).",
+   "candidate_reasons": [
+    "MONEY"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000016",
+   "sequence": 16,
+   "section_guess": "4.01",
+   "start_offset": 821,
+   "end_offset": 887,
+   "text": "4.01 In consideration of the rights granted to LICENSEE under this",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000017",
+   "sequence": 17,
+   "section_guess": "4.01",
+   "start_offset": 888,
+   "end_offset": 950,
+   "text": "Agreement for the LL Technology, LICENSEE agrees to pay to the",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000018",
+   "sequence": 18,
+   "section_guess": "4.01",
+   "start_offset": 951,
+   "end_offset": 1012,
+   "text": "LICENSOR royalties in accordance with the clauses hereinafter",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000019",
+   "sequence": 19,
+   "section_guess": "4.01",
+   "start_offset": 1013,
+   "end_offset": 1023,
+   "text": "following.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000020",
+   "sequence": 20,
+   "section_guess": "4.02",
+   "start_offset": 1024,
+   "end_offset": 1095,
+   "text": "4.02 For each Royalty Period commencing on the Effective Date, LICENSEE",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000021",
+   "sequence": 21,
+   "section_guess": "4.02",
+   "start_offset": 1096,
+   "end_offset": 1162,
+   "text": "shall pay to LICENSOR the Minimum Annual Royalty and, if justified",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000022",
+   "sequence": 22,
+   "section_guess": "4.02",
+   "start_offset": 1163,
+   "end_offset": 1220,
+   "text": "by the number of units of the Exclusive Product sold, the",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000023",
+   "sequence": 23,
+   "section_guess": "4.02",
+   "start_offset": 1221,
+   "end_offset": 1283,
+   "text": "Additional Royalty, both shall be paid at the times and in the",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000024",
+   "sequence": 24,
+   "section_guess": "4.02",
+   "start_offset": 1284,
+   "end_offset": 1331,
+   "text": "manner set out in clauses 4.03 and 5.02 hereof.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000025",
+   "sequence": 25,
+   "section_guess": "4.03",
+   "start_offset": 1332,
+   "end_offset": 1396,
+   "text": "4.03 The Minimum Annual Royalty fee shall be paid by LICENSEE to",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000026",
+   "sequence": 26,
+   "section_guess": "4.03",
+   "start_offset": 1397,
+   "end_offset": 1462,
+   "text": "LICENSOR on the Effective Date, and each anniversary date thereof",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000027",
+   "sequence": 27,
+   "section_guess": "4.03",
+   "start_offset": 1463,
+   "end_offset": 1528,
+   "text": "during the Term, failing the timely receipt of such amount by the",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-laserlock:P000028",
+   "sequence": 28,
+   "section_guess": "4.03",
+   "start_offset": 1529,
+   "end_offset": 1570,
+   "text": "LICENSOR, this Agreement shall terminate.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  }
+ ],
+ "quality_flags": [
+  "ALL_PASSAGES_UNREVIEWED",
+  "CANDIDATE_COVERAGE_NOT_ESTABLISHED"
+ ],
+ "screening_conclusion": "UNKNOWN_NEEDS_AI_SCREENING",
+ "document_metadata": {
+  "document_id": "DOC-laserlock",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1104038/000095011604001037/ex10-6.txt"
+ }
+}

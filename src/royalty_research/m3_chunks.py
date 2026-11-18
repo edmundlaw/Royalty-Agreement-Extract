@@ -101,7 +101,7 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
             raise ValueError(f"Cross-chunk duplicate or missing {key}. Do not silently merge economic terms")
     base_fields=agreement_scalar_fields()
     agreement={key:None for key in base_fields}; agreement["field_evidence"]={}; agreement["other_material_terms"]=[]
-    header_conflicts=[]
+    header_conflicts=[]; kept_from={}
     for part in ordered:
         part_agreement=part.get("agreement") or {}
         for k in base_fields:
@@ -117,9 +117,9 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
                 # which v0.8.0 treated as fatal and so stranded every captured task of a
                 # multi-task agreement. Keep the first task's value and record the difference
                 # as a visible open issue instead of refusing to merge.
-                header_conflicts.append((k,agreement[k],value,part.get("chunk_index")))
+                header_conflicts.append((k,agreement[k],value,part.get("chunk_index"),kept_from.get(k)))
                 continue
-            agreement[k]=value
+            agreement[k]=value; kept_from.setdefault(k,part.get("chunk_index"))
         for material in (part_agreement.get("other_material_terms") or []):
             if material not in agreement["other_material_terms"]: agreement["other_material_terms"].append(material)
         for k,refs in (part_agreement.get("field_evidence") or {}).items():
@@ -147,12 +147,12 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
                   "reviewed_passage_ids":flat},
         "agreement":agreement, "amendment_status":amendment_status, **chunks_merged,
     }
-    for field,kept,other,idx in header_conflicts:
+    for field,kept,other,idx,kept_idx in header_conflicts:
         output["open_issues"]=list(output.get("open_issues",[]))+[{
             "issue_id":stable_id("ISSUE-MERGE","AGREEMENT_HEADER",field,str(idx)),
             "severity":"MEDIUM","status":"OPEN","kind":"AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
             "description":(f"Agreement field '{field}' was worded differently by two reading tasks. "
-                           f"Kept: {kept!r}. Task {idx} gave: {other!r}."),
+                           f"Kept (task {kept_idx}, the first to give a value): {kept!r}. Task {idx} gave: {other!r}."),
             "passage_ids":[]}]
     qc=validate_extraction(mapping,output)
     report={"schema":"m3-chunk-merge.1", "document_id":mapping["document_id"],

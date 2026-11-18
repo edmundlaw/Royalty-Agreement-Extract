@@ -1,0 +1,1371 @@
+{
+ "schema_version": "m1.0",
+ "stage": "MAPPED_NOT_INTERPRETED",
+ "document_id": "DOC-voit",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/828747/000114420410025013/v183643_ex10-3.htm",
+ "original_sha256": null,
+ "text_sha256": "c1768245be972e83fab8a5b200b154323ffeb13456ea8327f340ac6196da2ab4",
+ "mapped_at_utc": "2026-11-18T14:02:43+00:00",
+ "retrieved_at_utc": null,
+ "parser_type": "UNKNOWN",
+ "source_segmentation": {
+  "schema": "m4-source-segmentation.1",
+  "fragment_limit_chars": 12000,
+  "split_original_paragraphs": [],
+  "preservation": "FRAGMENTS_CONCATENATE_EXACTLY_TO_EACH_ORIGINAL_NORMALIZED_LINE"
+ },
+ "total_passages": 99,
+ "candidate_passages": [
+  "DOC-voit:P000007",
+  "DOC-voit:P000008",
+  "DOC-voit:P000009",
+  "DOC-voit:P000011",
+  "DOC-voit:P000020",
+  "DOC-voit:P000021",
+  "DOC-voit:P000022",
+  "DOC-voit:P000023",
+  "DOC-voit:P000025",
+  "DOC-voit:P000035",
+  "DOC-voit:P000036",
+  "DOC-voit:P000037",
+  "DOC-voit:P000038",
+  "DOC-voit:P000039",
+  "DOC-voit:P000040",
+  "DOC-voit:P000041",
+  "DOC-voit:P000043",
+  "DOC-voit:P000044",
+  "DOC-voit:P000046",
+  "DOC-voit:P000051",
+  "DOC-voit:P000054",
+  "DOC-voit:P000056",
+  "DOC-voit:P000058",
+  "DOC-voit:P000059",
+  "DOC-voit:P000060",
+  "DOC-voit:P000063",
+  "DOC-voit:P000076",
+  "DOC-voit:P000078",
+  "DOC-voit:P000080",
+  "DOC-voit:P000084",
+  "DOC-voit:P000085",
+  "DOC-voit:P000090",
+  "DOC-voit:P000091",
+  "DOC-voit:P000092",
+  "DOC-voit:P000094",
+  "DOC-voit:P000096",
+  "DOC-voit:P000097",
+  "DOC-voit:P000099"
+ ],
+ "total_candidates": 38,
+ "candidate_reason_counts": {
+  "CROSS_REFERENCE": 8,
+  "FINANCE_VOCAB": 30,
+  "DEFINED_TERM": 2,
+  "MONEY": 1,
+  "PERCENT": 5,
+  "SPELLED_RATE": 3,
+  "INDIRECT_ECONOMICS": 1
+ },
+ "screening_priority": "HIGH_REVIEW_PRIORITY",
+ "sections": [
+  {
+   "section": "PREAMBLE_OR_UNNUMBERED",
+   "passage_ids": [
+    "DOC-voit:P000001",
+    "DOC-voit:P000002",
+    "DOC-voit:P000003",
+    "DOC-voit:P000004",
+    "DOC-voit:P000005",
+    "DOC-voit:P000006",
+    "DOC-voit:P000007",
+    "DOC-voit:P000008",
+    "DOC-voit:P000009",
+    "DOC-voit:P000010",
+    "DOC-voit:P000011",
+    "DOC-voit:P000012",
+    "DOC-voit:P000013",
+    "DOC-voit:P000014",
+    "DOC-voit:P000015",
+    "DOC-voit:P000016",
+    "DOC-voit:P000017",
+    "DOC-voit:P000018",
+    "DOC-voit:P000019",
+    "DOC-voit:P000020",
+    "DOC-voit:P000021",
+    "DOC-voit:P000022",
+    "DOC-voit:P000023",
+    "DOC-voit:P000024",
+    "DOC-voit:P000025",
+    "DOC-voit:P000026",
+    "DOC-voit:P000027",
+    "DOC-voit:P000028",
+    "DOC-voit:P000029",
+    "DOC-voit:P000030",
+    "DOC-voit:P000031",
+    "DOC-voit:P000032",
+    "DOC-voit:P000033",
+    "DOC-voit:P000034",
+    "DOC-voit:P000035",
+    "DOC-voit:P000036",
+    "DOC-voit:P000037"
+   ],
+   "candidate_ids": [
+    "DOC-voit:P000007",
+    "DOC-voit:P000008",
+    "DOC-voit:P000009",
+    "DOC-voit:P000011",
+    "DOC-voit:P000020",
+    "DOC-voit:P000021",
+    "DOC-voit:P000022",
+    "DOC-voit:P000023",
+    "DOC-voit:P000025",
+    "DOC-voit:P000035",
+    "DOC-voit:P000036",
+    "DOC-voit:P000037"
+   ]
+  },
+  {
+   "section": "14",
+   "passage_ids": [
+    "DOC-voit:P000038",
+    "DOC-voit:P000039",
+    "DOC-voit:P000040",
+    "DOC-voit:P000041",
+    "DOC-voit:P000042",
+    "DOC-voit:P000043",
+    "DOC-voit:P000044",
+    "DOC-voit:P000045",
+    "DOC-voit:P000046",
+    "DOC-voit:P000047",
+    "DOC-voit:P000048",
+    "DOC-voit:P000049",
+    "DOC-voit:P000050",
+    "DOC-voit:P000051",
+    "DOC-voit:P000052",
+    "DOC-voit:P000053",
+    "DOC-voit:P000054",
+    "DOC-voit:P000055",
+    "DOC-voit:P000056",
+    "DOC-voit:P000057",
+    "DOC-voit:P000058",
+    "DOC-voit:P000059",
+    "DOC-voit:P000060",
+    "DOC-voit:P000061",
+    "DOC-voit:P000062",
+    "DOC-voit:P000063",
+    "DOC-voit:P000064",
+    "DOC-voit:P000065",
+    "DOC-voit:P000066",
+    "DOC-voit:P000067",
+    "DOC-voit:P000068",
+    "DOC-voit:P000069",
+    "DOC-voit:P000070",
+    "DOC-voit:P000071",
+    "DOC-voit:P000072",
+    "DOC-voit:P000073",
+    "DOC-voit:P000074",
+    "DOC-voit:P000075",
+    "DOC-voit:P000076",
+    "DOC-voit:P000077",
+    "DOC-voit:P000078",
+    "DOC-voit:P000079",
+    "DOC-voit:P000080",
+    "DOC-voit:P000081",
+    "DOC-voit:P000082",
+    "DOC-voit:P000083",
+    "DOC-voit:P000084",
+    "DOC-voit:P000085",
+    "DOC-voit:P000086",
+    "DOC-voit:P000087",
+    "DOC-voit:P000088",
+    "DOC-voit:P000089",
+    "DOC-voit:P000090",
+    "DOC-voit:P000091",
+    "DOC-voit:P000092",
+    "DOC-voit:P000093",
+    "DOC-voit:P000094",
+    "DOC-voit:P000095",
+    "DOC-voit:P000096",
+    "DOC-voit:P000097",
+    "DOC-voit:P000098",
+    "DOC-voit:P000099"
+   ],
+   "candidate_ids": [
+    "DOC-voit:P000038",
+    "DOC-voit:P000039",
+    "DOC-voit:P000040",
+    "DOC-voit:P000041",
+    "DOC-voit:P000043",
+    "DOC-voit:P000044",
+    "DOC-voit:P000046",
+    "DOC-voit:P000051",
+    "DOC-voit:P000054",
+    "DOC-voit:P000056",
+    "DOC-voit:P000058",
+    "DOC-voit:P000059",
+    "DOC-voit:P000060",
+    "DOC-voit:P000063",
+    "DOC-voit:P000076",
+    "DOC-voit:P000078",
+    "DOC-voit:P000080",
+    "DOC-voit:P000084",
+    "DOC-voit:P000085",
+    "DOC-voit:P000090",
+    "DOC-voit:P000091",
+    "DOC-voit:P000092",
+    "DOC-voit:P000094",
+    "DOC-voit:P000096",
+    "DOC-voit:P000097",
+    "DOC-voit:P000099"
+   ]
+  }
+ ],
+ "definitions": [
+  {
+   "passage_id": "DOC-voit:P000008",
+   "term": "Minimum Royalty"
+  },
+  {
+   "passage_id": "DOC-voit:P000011",
+   "term": "Net Sales"
+  }
+ ],
+ "cross_references": [
+  {
+   "passage_id": "DOC-voit:P000007",
+   "references": [
+    "Section 1"
+   ]
+  },
+  {
+   "passage_id": "DOC-voit:P000022",
+   "references": [
+    "Section 4"
+   ]
+  },
+  {
+   "passage_id": "DOC-voit:P000036",
+   "references": [
+    "Section 4"
+   ]
+  },
+  {
+   "passage_id": "DOC-voit:P000038",
+   "references": [
+    "Section 14"
+   ]
+  },
+  {
+   "passage_id": "DOC-voit:P000044",
+   "references": [
+    "Section 4"
+   ]
+  },
+  {
+   "passage_id": "DOC-voit:P000063",
+   "references": [
+    "Section 13"
+   ]
+  },
+  {
+   "passage_id": "DOC-voit:P000084",
+   "references": [
+    "Section 13"
+   ]
+  },
+  {
+   "passage_id": "DOC-voit:P000091",
+   "references": [
+    "Section 4"
+   ]
+  }
+ ],
+ "passages": [
+  {
+   "passage_id": "DOC-voit:P000001",
+   "sequence": 1,
+   "section_guess": null,
+   "start_offset": 0,
+   "end_offset": 76,
+   "text": "This License Agreement is made and entered into as of the 1st day of January",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000002",
+   "sequence": 2,
+   "section_guess": null,
+   "start_offset": 77,
+   "end_offset": 157,
+   "text": "2010 (the “Effective Date”) by and between Voit Corporation, a Texas corporation",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000003",
+   "sequence": 3,
+   "section_guess": null,
+   "start_offset": 158,
+   "end_offset": 228,
+   "text": "with offices at 4414 Centerview Drive, Suite 204, San Antonio TX 78228",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000004",
+   "sequence": 4,
+   "section_guess": null,
+   "start_offset": 229,
+   "end_offset": 307,
+   "text": "(“Licensor”), and Sport Supply Group Inc., a Delaware corporation with offices",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000005",
+   "sequence": 5,
+   "section_guess": null,
+   "start_offset": 308,
+   "end_offset": 388,
+   "text": "at 1901 Diplomat Drive, Farmers Branch, TX 75234 (“Licensee”). Capitalized terms",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000006",
+   "sequence": 6,
+   "section_guess": null,
+   "start_offset": 389,
+   "end_offset": 466,
+   "text": "used in this Agreement and not otherwise defined in the context in which they",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000007",
+   "sequence": 7,
+   "section_guess": null,
+   "start_offset": 467,
+   "end_offset": 537,
+   "text": "are used shall have the meanings ascribed to them in Section 1 herein.",
+   "candidate_reasons": [
+    "CROSS_REFERENCE"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000008",
+   "sequence": 8,
+   "section_guess": null,
+   "start_offset": 538,
+   "end_offset": 613,
+   "text": "(h) “Minimum Royalty” shall mean, for each Contract Year during the Initial",
+   "candidate_reasons": [
+    "FINANCE_VOCAB",
+    "DEFINED_TERM"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000009",
+   "sequence": 9,
+   "section_guess": null,
+   "start_offset": 614,
+   "end_offset": 687,
+   "text": "Term, an amount equal to $130,000. Thereafter, the Minimum Royalty may be",
+   "candidate_reasons": [
+    "MONEY",
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000010",
+   "sequence": 10,
+   "section_guess": null,
+   "start_offset": 688,
+   "end_offset": 738,
+   "text": "increased pursuant to the terms of this Agreement.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000011",
+   "sequence": 11,
+   "section_guess": null,
+   "start_offset": 739,
+   "end_offset": 819,
+   "text": "(i) “Net Sales” shall mean the total dollar amount of gross sales by Licensee of",
+   "candidate_reasons": [
+    "FINANCE_VOCAB",
+    "DEFINED_TERM"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000012",
+   "sequence": 12,
+   "section_guess": null,
+   "start_offset": 820,
+   "end_offset": 897,
+   "text": "all Licensee Products at the invoiced selling price less customary discounts,",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000013",
+   "sequence": 13,
+   "section_guess": null,
+   "start_offset": 898,
+   "end_offset": 978,
+   "text": "returns actually made or allowed. No deductions shall be made for costs incurred",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000014",
+   "sequence": 14,
+   "section_guess": null,
+   "start_offset": 979,
+   "end_offset": 1057,
+   "text": "in manufacturing, selling, distributing, or advertising the Licensee Products,",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000015",
+   "sequence": 15,
+   "section_guess": null,
+   "start_offset": 1058,
+   "end_offset": 1138,
+   "text": "or for the uncollectible accounts, taxes, cash discounts, or similar allowances.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000016",
+   "sequence": 16,
+   "section_guess": null,
+   "start_offset": 1139,
+   "end_offset": 1218,
+   "text": "In the case of sales to or use of the Licensee Products by a company associated",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000017",
+   "sequence": 17,
+   "section_guess": null,
+   "start_offset": 1219,
+   "end_offset": 1298,
+   "text": "with Licensee or any other sales to related companies, the sales price shall be",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000018",
+   "sequence": 18,
+   "section_guess": null,
+   "start_offset": 1299,
+   "end_offset": 1377,
+   "text": "the price regularly charged to the Licensee's independent bona fide customers.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000019",
+   "sequence": 19,
+   "section_guess": null,
+   "start_offset": 1378,
+   "end_offset": 1458,
+   "text": "(a) As compensation for the rights and license granted hereunder, Licensee shall",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000020",
+   "sequence": 20,
+   "section_guess": null,
+   "start_offset": 1459,
+   "end_offset": 1533,
+   "text": "pay to Licensor (i) the Minimum Royalty to be paid in advance on or before",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000021",
+   "sequence": 21,
+   "section_guess": null,
+   "start_offset": 1534,
+   "end_offset": 1610,
+   "text": "January 30th of each Contract Year and (ii) any additional Royalties owed to",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000022",
+   "sequence": 22,
+   "section_guess": null,
+   "start_offset": 1611,
+   "end_offset": 1685,
+   "text": "Licensor pursuant to Section 4(b) below. Licensor may increase the Minimum",
+   "candidate_reasons": [
+    "CROSS_REFERENCE"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000023",
+   "sequence": 23,
+   "section_guess": null,
+   "start_offset": 1686,
+   "end_offset": 1760,
+   "text": "Royalty once per completion of each Five Year Period provided (A) Licensor",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000024",
+   "sequence": 24,
+   "section_guess": null,
+   "start_offset": 1761,
+   "end_offset": 1841,
+   "text": "provides Licensee written notice of such increase at least 180 days prior to the",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000025",
+   "sequence": 25,
+   "section_guess": null,
+   "start_offset": 1842,
+   "end_offset": 1920,
+   "text": "last day of the concluding Five Year Period and (B) the Minimum Royalty is not",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000026",
+   "sequence": 26,
+   "section_guess": null,
+   "start_offset": 1921,
+   "end_offset": 1999,
+   "text": "increased by more than (x) fifteen (15) percent or (y) the cumulative increase",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000027",
+   "sequence": 27,
+   "section_guess": null,
+   "start_offset": 2000,
+   "end_offset": 2079,
+   "text": "in the rate of inflation for such Five Year Period, whichever is less. In order",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000028",
+   "sequence": 28,
+   "section_guess": null,
+   "start_offset": 2080,
+   "end_offset": 2160,
+   "text": "to determine the increase in inflation during such Five Year Period, the parties",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000029",
+   "sequence": 29,
+   "section_guess": null,
+   "start_offset": 2161,
+   "end_offset": 2239,
+   "text": "agree to use the Bureau of Labor Statistics Consumer Price Index for all Urban",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000030",
+   "sequence": 30,
+   "section_guess": null,
+   "start_offset": 2240,
+   "end_offset": 2313,
+   "text": "Consumers (CPI-U), U.S. City Average, all items, base period (1982-1984),",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000031",
+   "sequence": 31,
+   "section_guess": null,
+   "start_offset": 2314,
+   "end_offset": 2392,
+   "text": "reference period-December. The reference period for the first Five Year Period",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000032",
+   "sequence": 32,
+   "section_guess": null,
+   "start_offset": 2393,
+   "end_offset": 2457,
+   "text": "will compare the December 2014 index to the December 2009 index.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000033",
+   "sequence": 33,
+   "section_guess": null,
+   "start_offset": 2458,
+   "end_offset": 2537,
+   "text": "(b) Within thirty (30) days after the end of each Contract Year, Licensee shall",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000034",
+   "sequence": 34,
+   "section_guess": null,
+   "start_offset": 2538,
+   "end_offset": 2617,
+   "text": "pay Licensor an amount equal to the difference, if positive, of subtracting (i)",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000035",
+   "sequence": 35,
+   "section_guess": null,
+   "start_offset": 2618,
+   "end_offset": 2696,
+   "text": "four percent (4%) of all Net Sales during that Contract Year (“Royalty”) minus",
+   "candidate_reasons": [
+    "PERCENT",
+    "SPELLED_RATE",
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000036",
+   "sequence": 36,
+   "section_guess": null,
+   "start_offset": 2697,
+   "end_offset": 2775,
+   "text": "(ii) the Minimum Royalty paid by Licensee pursuant to Section 4(a) above. Such",
+   "candidate_reasons": [
+    "FINANCE_VOCAB",
+    "CROSS_REFERENCE"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000037",
+   "sequence": 37,
+   "section_guess": null,
+   "start_offset": 2776,
+   "end_offset": 2852,
+   "text": "payments shall be made in accordance with the Method of Payment specified in",
+   "candidate_reasons": [
+    "INDIRECT_ECONOMICS",
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000038",
+   "sequence": 38,
+   "section_guess": "14",
+   "start_offset": 2853,
+   "end_offset": 2871,
+   "text": "Section 14 hereto.",
+   "candidate_reasons": [
+    "CROSS_REFERENCE"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000039",
+   "sequence": 39,
+   "section_guess": "14",
+   "start_offset": 2872,
+   "end_offset": 2949,
+   "text": "(d) Licensee agrees to pay interest at the lesser of (i) twelve (12%) percent",
+   "candidate_reasons": [
+    "PERCENT"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000040",
+   "sequence": 40,
+   "section_guess": "14",
+   "start_offset": 2950,
+   "end_offset": 3025,
+   "text": "per annum or (ii) the maximum rate permitted by law on Royalties or Minimum",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000041",
+   "sequence": 41,
+   "section_guess": "14",
+   "start_offset": 3026,
+   "end_offset": 3096,
+   "text": "Royalties due and not paid by Licensee for more than 30 days following",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000042",
+   "sequence": 42,
+   "section_guess": "14",
+   "start_offset": 3097,
+   "end_offset": 3167,
+   "text": "Licensee’s receipt of written notice of such nonpayment from Licensor.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000043",
+   "sequence": 43,
+   "section_guess": "14",
+   "start_offset": 3168,
+   "end_offset": 3240,
+   "text": "(b) Licensee shall furnish to Licensor with each payment of Royalties as",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000044",
+   "sequence": 44,
+   "section_guess": "14",
+   "start_offset": 3241,
+   "end_offset": 3316,
+   "text": "provided in Section 4 hereof, a Royalty Report as described in Section 4(c)",
+   "candidate_reasons": [
+    "FINANCE_VOCAB",
+    "CROSS_REFERENCE"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000045",
+   "sequence": 45,
+   "section_guess": "14",
+   "start_offset": 3317,
+   "end_offset": 3387,
+   "text": "hereof, or in another mutually agreeable format that may be reasonably",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000046",
+   "sequence": 46,
+   "section_guess": "14",
+   "start_offset": 3388,
+   "end_offset": 3462,
+   "text": "established by Licensor from time to time. The information on this Royalty",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000047",
+   "sequence": 47,
+   "section_guess": "14",
+   "start_offset": 3463,
+   "end_offset": 3539,
+   "text": "Report shall be held and treated by the Licensor and its representatives and",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000048",
+   "sequence": 48,
+   "section_guess": "14",
+   "start_offset": 3540,
+   "end_offset": 3615,
+   "text": "affiliates in confidence and will not, without the prior written consent of",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000049",
+   "sequence": 49,
+   "section_guess": "14",
+   "start_offset": 3616,
+   "end_offset": 3688,
+   "text": "Licensee, be disclosed or used by the Licensor or its representatives or",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000050",
+   "sequence": 50,
+   "section_guess": "14",
+   "start_offset": 3689,
+   "end_offset": 3765,
+   "text": "affiliates other than in connection with this Agreement. Notwithstanding the",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000051",
+   "sequence": 51,
+   "section_guess": "14",
+   "start_offset": 3766,
+   "end_offset": 3846,
+   "text": "foregoing, the information in the Royalty Report will not be deemed confidential",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000052",
+   "sequence": 52,
+   "section_guess": "14",
+   "start_offset": 3847,
+   "end_offset": 3924,
+   "text": "if such information becomes generally available to the public other than as a",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000053",
+   "sequence": 53,
+   "section_guess": "14",
+   "start_offset": 3925,
+   "end_offset": 3996,
+   "text": "result of a disclosure by the Licensor or any of its representatives or",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000054",
+   "sequence": 54,
+   "section_guess": "14",
+   "start_offset": 3997,
+   "end_offset": 4075,
+   "text": "affiliates. Such Royalty Report shall be submitted whether or not they reflect",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000055",
+   "sequence": 55,
+   "section_guess": "14",
+   "start_offset": 4076,
+   "end_offset": 4153,
+   "text": "any sales. Failure to submit timely reports and/or any payments will incur an",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000056",
+   "sequence": 56,
+   "section_guess": "14",
+   "start_offset": 4154,
+   "end_offset": 4225,
+   "text": "additional charge of one (1%) per month on any balance unpaid as of the",
+   "candidate_reasons": [
+    "PERCENT"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000057",
+   "sequence": 57,
+   "section_guess": "14",
+   "start_offset": 4226,
+   "end_offset": 4303,
+   "text": "thirtieth day following Licensee’s receipt of written notice from Licensor of",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000058",
+   "sequence": 58,
+   "section_guess": "14",
+   "start_offset": 4304,
+   "end_offset": 4384,
+   "text": "such failure to timely pay. The receipt or acceptance by Licensor of any Royalty",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000059",
+   "sequence": 59,
+   "section_guess": "14",
+   "start_offset": 4385,
+   "end_offset": 4460,
+   "text": "Reports pursuant to this license or of any Royalties paid hereunder (or the",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000060",
+   "sequence": 60,
+   "section_guess": "14",
+   "start_offset": 4461,
+   "end_offset": 4537,
+   "text": "cashing of any Royalty checks paid hereunder) shall not preclude Licensor or",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000061",
+   "sequence": 61,
+   "section_guess": "14",
+   "start_offset": 4538,
+   "end_offset": 4600,
+   "text": "Licensee from questioning the correctness thereof at any time.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000062",
+   "sequence": 62,
+   "section_guess": "14",
+   "start_offset": 4601,
+   "end_offset": 4671,
+   "text": "(ii) For twenty-four (24) months (the “Sell-Off Period”) following the",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000063",
+   "sequence": 63,
+   "section_guess": "14",
+   "start_offset": 4672,
+   "end_offset": 4750,
+   "text": "termination of this Agreement in accordance with the provisions of Section 13,",
+   "candidate_reasons": [
+    "CROSS_REFERENCE"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000064",
+   "sequence": 64,
+   "section_guess": "14",
+   "start_offset": 4751,
+   "end_offset": 4825,
+   "text": "Licensee shall be permitted to advertise, sell or otherwise distribute (a)",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000065",
+   "sequence": 65,
+   "section_guess": "14",
+   "start_offset": 4826,
+   "end_offset": 4899,
+   "text": "Licensee’s inventory of all Voit-branded products and unfinished Licensee",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000066",
+   "sequence": 66,
+   "section_guess": "14",
+   "start_offset": 4900,
+   "end_offset": 4980,
+   "text": "Products meant to be Voit-branded products when finished, including the right to",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000067",
+   "sequence": 67,
+   "section_guess": "14",
+   "start_offset": 4981,
+   "end_offset": 5061,
+   "text": "finish any work-in-process and use supplies of raw materials on hand or ordered,",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000068",
+   "sequence": 68,
+   "section_guess": "14",
+   "start_offset": 5062,
+   "end_offset": 5142,
+   "text": "(b) all Voit-branded products ordered from a supplier prior to termination under",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000069",
+   "sequence": 69,
+   "section_guess": "14",
+   "start_offset": 5143,
+   "end_offset": 5222,
+   "text": "purchase orders which cannot be cancelled without penalty to or a claim against",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000070",
+   "sequence": 70,
+   "section_guess": "14",
+   "start_offset": 5223,
+   "end_offset": 5300,
+   "text": "Licensee and (c) all Voit-branded products ordered prior to termination under",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000071",
+   "sequence": 71,
+   "section_guess": "14",
+   "start_offset": 5301,
+   "end_offset": 5377,
+   "text": "binding sales orders outstanding at the time of such termination which sales",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000072",
+   "sequence": 72,
+   "section_guess": "14",
+   "start_offset": 5378,
+   "end_offset": 5452,
+   "text": "orders cannot be cancelled without penalty to or a claim against Licensee.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000073",
+   "sequence": 73,
+   "section_guess": "14",
+   "start_offset": 5453,
+   "end_offset": 5533,
+   "text": "Licensee will send to Licensor a summary of all of the inventory of Voit-branded",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000074",
+   "sequence": 74,
+   "section_guess": "14",
+   "start_offset": 5534,
+   "end_offset": 5603,
+   "text": "products described in subsections (a), (b) and (c) of this paragraph.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000075",
+   "sequence": 75,
+   "section_guess": "14",
+   "start_offset": 5604,
+   "end_offset": 5678,
+   "text": "(g) At the conclusion of the Sell-Off Period, Licensee’s obligation to pay",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000076",
+   "sequence": 76,
+   "section_guess": "14",
+   "start_offset": 5679,
+   "end_offset": 5755,
+   "text": "Licensor any future royalty, including the Minimum Royalty, shall terminate,",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000077",
+   "sequence": 77,
+   "section_guess": "14",
+   "start_offset": 5756,
+   "end_offset": 5834,
+   "text": "provided, however, this provision will not affect Licensee’s obligation to pay",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000078",
+   "sequence": 78,
+   "section_guess": "14",
+   "start_offset": 5835,
+   "end_offset": 5914,
+   "text": "Licensor any royalty due and owing as of the end of the Sell-Off Period. If the",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000079",
+   "sequence": 79,
+   "section_guess": "14",
+   "start_offset": 5915,
+   "end_offset": 5990,
+   "text": "Sell-Off Period ends at any time other than the end of a Contract Year, the",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000080",
+   "sequence": 80,
+   "section_guess": "14",
+   "start_offset": 5991,
+   "end_offset": 6068,
+   "text": "Minimum Royalty for that Contract Year will be pro-rated based on a fraction,",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000081",
+   "sequence": 81,
+   "section_guess": "14",
+   "start_offset": 6069,
+   "end_offset": 6141,
+   "text": "the numerator of which is the number of months of the Contract Year that",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000082",
+   "sequence": 82,
+   "section_guess": "14",
+   "start_offset": 6142,
+   "end_offset": 6219,
+   "text": "occurred prior to the end of the Sell-Off Period and the denominator of which",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000083",
+   "sequence": 83,
+   "section_guess": "14",
+   "start_offset": 6220,
+   "end_offset": 6231,
+   "text": "will be 12.",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000084",
+   "sequence": 84,
+   "section_guess": "14",
+   "start_offset": 6232,
+   "end_offset": 6311,
+   "text": "(h) Any termination under this Section 13 shall not affect any rights that have",
+   "candidate_reasons": [
+    "CROSS_REFERENCE"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000085",
+   "sequence": 85,
+   "section_guess": "14",
+   "start_offset": 6312,
+   "end_offset": 6389,
+   "text": "accrued prior to termination (including, without limitation, royalties due to",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000086",
+   "sequence": 86,
+   "section_guess": "14",
+   "start_offset": 6390,
+   "end_offset": 6462,
+   "text": "Licensor) and shall be without prejudice to any other legal or equitable",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000087",
+   "sequence": 87,
+   "section_guess": "14",
+   "start_offset": 6463,
+   "end_offset": 6536,
+   "text": "remedies to which the terminating party may be entitled by reason of such",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000088",
+   "sequence": 88,
+   "section_guess": "14",
+   "start_offset": 6537,
+   "end_offset": 6611,
+   "text": "rights. Notwithstanding anything to the contrary contained herein, if this",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000089",
+   "sequence": 89,
+   "section_guess": "14",
+   "start_offset": 6612,
+   "end_offset": 6687,
+   "text": "Agreement is terminated during a Contract Year in which Licensee has paid a",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000090",
+   "sequence": 90,
+   "section_guess": "14",
+   "start_offset": 6688,
+   "end_offset": 6767,
+   "text": "Minimum Royalty (i.e., after January 30), then Licensee shall be subject to the",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000091",
+   "sequence": 91,
+   "section_guess": "14",
+   "start_offset": 6768,
+   "end_offset": 6847,
+   "text": "terms of Section 4(b) for the remainder of such Contract Year and shall only be",
+   "candidate_reasons": [
+    "CROSS_REFERENCE"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000092",
+   "sequence": 92,
+   "section_guess": "14",
+   "start_offset": 6848,
+   "end_offset": 6925,
+   "text": "liable to pay royalties at a rate equal to four percent (4%) of all Net Sales",
+   "candidate_reasons": [
+    "PERCENT",
+    "SPELLED_RATE",
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000093",
+   "sequence": 93,
+   "section_guess": "14",
+   "start_offset": 6926,
+   "end_offset": 7004,
+   "text": "during the subsequent Contract Years in the Sell-Off Period with no obligation",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000094",
+   "sequence": 94,
+   "section_guess": "14",
+   "start_offset": 7005,
+   "end_offset": 7081,
+   "text": "to pay a Minimum Royalty. Notwithstanding anything to the contrary contained",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000095",
+   "sequence": 95,
+   "section_guess": "14",
+   "start_offset": 7082,
+   "end_offset": 7162,
+   "text": "herein, if this Agreement is terminated during a Contract Year in which Licensee",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000096",
+   "sequence": 96,
+   "section_guess": "14",
+   "start_offset": 7163,
+   "end_offset": 7240,
+   "text": "has not paid a Minimum Royalty (i.e., before January 30), then Licensee shall",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000097",
+   "sequence": 97,
+   "section_guess": "14",
+   "start_offset": 7241,
+   "end_offset": 7320,
+   "text": "only be liable to pay royalties at a rate equal to four percent (4%) of all Net",
+   "candidate_reasons": [
+    "PERCENT",
+    "SPELLED_RATE",
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000098",
+   "sequence": 98,
+   "section_guess": "14",
+   "start_offset": 7321,
+   "end_offset": 7396,
+   "text": "Sales during the entire Sell-Off Period with no obligation to pay a Minimum",
+   "candidate_reasons": [],
+   "review_disposition": "UNREVIEWED"
+  },
+  {
+   "passage_id": "DOC-voit:P000099",
+   "sequence": 99,
+   "section_guess": "14",
+   "start_offset": 7397,
+   "end_offset": 7405,
+   "text": "Royalty.",
+   "candidate_reasons": [
+    "FINANCE_VOCAB"
+   ],
+   "review_disposition": "UNREVIEWED"
+  }
+ ],
+ "quality_flags": [
+  "ALL_PASSAGES_UNREVIEWED",
+  "CANDIDATE_COVERAGE_NOT_ESTABLISHED"
+ ],
+ "screening_conclusion": "UNKNOWN_NEEDS_AI_SCREENING",
+ "document_metadata": {
+  "document_id": "DOC-voit",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/828747/000114420410025013/v183643_ex10-3.htm"
+ }
+}

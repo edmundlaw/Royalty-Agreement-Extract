@@ -16,8 +16,8 @@ NAMES = ('01 Royalty Database', '02 Tiers & Mechanics', '03 Other Payments',
          '04 Source Evidence', '05 QC & Issues', '06 Other Terms')
 
 HEADERS = {
-    NAMES[0]: ['Observation ID','Nature of IA','Licensed intangible asset','Royalty rate (%)',
-        'Usable for royalty benchmark','Benchmark note','Royalty rate as reported','Royalty family','Rate structure','Rate unit','Royalty base','Product / field of use',
+    NAMES[0]: ['Observation ID','Nature of IA','Licensed intangible asset','Royalty rate (%)','Per-unit / currency rate',
+        'Usable for royalty benchmark','Benchmark note','Period-limited','Linked to row','Royalty rate as reported','Royalty family','Rate structure','Rate unit','Royalty base','Product / field of use',
         'Licensor','Licensee','Related party','Industry','Territory','Exclusivity','Exclusivity scope','Sublicensing rights',
         'Signing date','Effective date','SEC filing date','Agreement status','Royalty period','Minimum guarantee','Royalty cap',
         'Advance / prepayment','Upfront fee','Other material terms',
@@ -27,7 +27,7 @@ HEADERS = {
         'Exclusivity scope evidence IDs','Other terms evidence IDs','IA classification detail',
         'Agreement status (full text)','Exclusivity scope (full text)'],
     NAMES[1]: ['Record type','Observation ID','Term ID','Sequence','Rate (as reported)',
-        'Rate numeric','Rate unit','Lower threshold','Upper threshold','Mechanics / condition',
+        'Rate numeric','Rate unit','Per-unit / currency rate','Lower threshold','Upper threshold','Mechanics / condition',
         'Evidence IDs','SEC source link','Document ID','QC state','Notes'],
     NAMES[2]: ['Payment ID','Payment type','Amount (as reported)','Amount numeric','Currency / unit',
         'Economic basis','Trigger / period','Evidence IDs','First source quotation',
@@ -222,7 +222,7 @@ def _record_error_codes(term_id, source_errors):
 
 
 def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc_state=None, record_errors=None,
-                     tier_summary=None, unresolved=False):
+                     tier_summary=None, unresolved=False, period_limited=None):
     """Python rule, zero AI. Returns ('YES'|'NO', note). Any one reason makes it NO.
 
     nature is the reader's own licensed_ip_nature; grant_found is True/False when the source text was
@@ -235,8 +235,14 @@ def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc
     not attach to one real term (sheet 05 has the HIGH open issue). TWO_READERS_AGREE_ON_NUMBERS
     stays allowed (same numbers in the same clauses) with a note to read the STRUCTURE differences.
     SINGLE_READER_NOT_CHECKED is the normal mode and stays allowed.
+    period_limited (v0.13.12) is (wording, base_observation_id_or_None) when the term's own wording says it applies only
+    to a sell-off / post-termination disposal period: it is a restatement for that period, never a benchmark of its own.
     """
     reasons=[]
+    if period_limited:
+        kind,base=period_limited
+        reasons.append(f'period-limited ({kind}) restatement of {base} \u2013 use base row' if base
+                       else f'period-limited ({kind}) royalty; base row not identified \u2013 see sheet 05')
     if qc_state in NEEDS_REVIEW_STATES:reasons.append(f'needs review: {qc_state}')
     if record_errors:reasons.append('needs review: source-check error on this row ('+', '.join(sorted(set(record_errors)))+')')
     if nature=='UNDETERMINED' and grant_found is False:
@@ -270,9 +276,20 @@ def _amount_value(text):
     except Exception:return None
 
 
-def _best_evidence(ids, did, evid_by_doc, amount_text=None):
+def _figures_in(*texts):
+    """Percent and money figures written in reader text (e.g. "1% per month"); used to pick the quotation that shows them."""
+    from .m13_two_reader import numbers_in_text
+    out=[]
+    for text in texts:
+        for t in numbers_in_text(str(text or '')):
+            if t['unit'] in ('PCT','USD') and t['value'] not in out:out.append(t['value'])
+    return out
+
+
+def _best_evidence(ids, did, evid_by_doc, amount_text=None, figures=None):
     """Evidence to display for a figure: a quotation that contains the reported amount (digits compared after
-    normalising "$20,000" / "20000" / "9%" / "nine percent"), else RATE-role evidence, else the first one."""
+    normalising "$20,000" / "20000" / "9%" / "nine percent"), else (v0.13.12) one that contains a figure the record
+    itself states (figures: e.g. the "1%" of an interest charge that has no amount), else RATE-role evidence, else the first."""
     from .m13_two_reader import numbers_in_text
     items=[evid_by_doc.get((did,i)) for i in ids]
     items=[e for e in items if e]
@@ -281,9 +298,102 @@ def _best_evidence(ids, did, evid_by_doc, amount_text=None):
     if want is not None:
         for e in items:
             if any(t['value']==want for t in numbers_in_text(e.get('Exact_Quotation') or '')):return e
+    elif figures:
+        for e in items:
+            if any(t['value'] in figures for t in numbers_in_text(e.get('Exact_Quotation') or '')):return e
     for e in items:
         if e.get('Role')=='RATE':return e
     return items[0]
+
+
+# --- Display quotation: a wrapped source line completed to its sentence (v0.13.12) ----------------
+# The reader's evidence quote is often one wrapped source line ("percent (4%) of all Net Sales during that Contract
+# Year (" Royalty ") minus (ii)"). For DISPLAY ONLY the chosen quote is extended to the enclosing sentence, using the
+# text of the cited passage and of the passages next to it (a wrapped clause continues in the next passage). The
+# stored evidence and the source check are never touched. The result is the source text itself with whitespace
+# normalised, at most DISPLAY_QUOTE_CAP characters, cut at clause boundaries with an ellipsis when the sentence is longer.
+DISPLAY_QUOTE_CAP=300
+_PASSAGE_SEP='\x1f'
+_SENTENCE_END=re.compile(r'[.;?!]')
+_NOT_AN_END=re.compile(r'(?:\b(?:Inc|Ltd|Corp|Co|No|Nos|Sec|Art|St|Mr|Mrs|Ms|Dr|vs|etc|Jr|Sr|Bros|LLC|LP|U\.S|e\.g|i\.e)|\b[A-Z]|\bSection\s+\d+|\bArticle\s+\d+|\([a-z0-9]{1,4}\))$')
+_WALL=re.compile(r'\W*(?:page\s+)?[\dIVXLCivxlc]{1,6}\W*')   # a page number / roman numeral on its own line
+
+
+def _squash(text):
+    return re.sub(r'\s+',' ',str(text or '')).strip()
+
+
+def _boundary_after(ctx, i):
+    """True when ctx[i] ends a sentence: . ; ? ! (or the end of a passage that ends in ':') and is not an abbreviation."""
+    c=ctx[i]
+    nxt=ctx[i+1:i+3]
+    if c==':':return nxt[:1]==_PASSAGE_SEP
+    if not _SENTENCE_END.match(c):return False
+    k=i+1
+    while k<len(ctx) and ctx[k] in '\u201d")\'':k+=1
+    if k<len(ctx) and ctx[k] not in (' ',_PASSAGE_SEP):return False
+    if c=='.' and _NOT_AN_END.search(ctx[max(0,i-14):i]):return False
+    return True
+
+
+def display_quote(quote, passage_id, texts, cap=DISPLAY_QUOTE_CAP):
+    """The quote completed to its enclosing sentence (see above), or the quote itself when it cannot be located.
+
+    texts is the ordered list of passage texts of the document (index = passage number - 1); passage_id ends in P<number>.
+    """
+    q=_squash(quote)
+    m=re.search(r'P0*(\d+)$',str(passage_id or ''))
+    if not q or not m or not texts:return quote
+    n=int(m.group(1))-1
+    if not 0<=n<len(texts):return quote
+    lo,hi=max(0,n-4),min(len(texts),n+5)
+    parts=[_squash(texts[k]) for k in range(lo,hi)]
+    starts=[];ctx=''
+    for part in parts:
+        starts.append(len(ctx)); ctx+=part+_PASSAGE_SEP
+    own=starts[n-lo]
+    qs=ctx.replace(_PASSAGE_SEP,' ').find(q,own)
+    if qs<0 or qs+len(q)>own+len(parts[n-lo]):return quote   # not inside the cited passage: leave it alone
+    qe=qs+len(q)
+    # A page number or an ALL-CAPS heading on its own line is a wall: the sentence never reaches across it.
+    is_wall=lambda i:i!=n-lo and (bool(_WALL.fullmatch(parts[i])) or (len(parts[i])<40 and not re.search(r'[a-z]',parts[i])))   # page number / ALL-CAPS heading
+    wall_start={starts[i+1] for i in range(len(parts)-1) if is_wall(i)}
+    wall_end={starts[i] for i in range(len(parts)) if is_wall(i)}
+    left=qs
+    while left>0 and left not in wall_start:
+        k=left-1
+        if ctx[k] in (' ',_PASSAGE_SEP):
+            j=k
+            while j>=0 and ctx[j] in (' ',_PASSAGE_SEP):j-=1
+            if j<0 or _boundary_after(ctx,j):break
+        left=k
+    right=qe
+    if not _boundary_after(ctx,qe-1):
+        k=qe
+        while k<len(ctx) and k not in wall_end:
+            if _boundary_after(ctx,k):k+=1;break
+            k+=1
+        right=k
+    sentence=_squash(ctx[left:right].replace(_PASSAGE_SEP,' '))
+    if sentence==q:return quote
+    if len(sentence)<=cap:return sentence
+    budget=cap-len(q)
+    if budget<=0:return quote
+    lead=ctx[left:qs].replace(_PASSAGE_SEP,' '); tail=ctx[qe:right].replace(_PASSAGE_SEP,' ')
+    left_allow=max(budget//2,budget-len(tail))
+    lead_out=lead
+    if len(lead)>left_allow:
+        lead_out=''
+        for mm in re.finditer(r'[,;:]\s+',lead):
+            if len(lead)-mm.end()<=left_allow:lead_out=lead[mm.end():];break
+    room=budget-len(lead_out)
+    tail_out=tail
+    if len(tail)>room:
+        tail_out=''
+        for mm in re.finditer(r'[,;]\s+',tail):
+            if mm.start()+1<=room:tail_out=tail[:mm.start()+1]
+    out=_squash(('\u2026 ' if lead_out!=lead else '')+lead_out+q+tail_out+(' \u2026' if tail_out!=tail else ''))
+    return quote if out==q else out
 
 
 def _tier_summary(tiers):
@@ -297,6 +407,79 @@ def _tier_summary(tiers):
     lo,hi=min(vals),max(vals)
     suffix='%' if unit in ('PERCENT','PCT') else (' '+unit.lower().replace('_',' ') if unit else '')
     return f'{lo:g}{suffix}' if lo==hi else f'{lo:g}{suffix}\u2013{hi:g}{suffix}'
+
+
+_CURRENCY_NUMBER=re.compile(r'(US\s*\$|C\$|A\$|\$|USD|EUR|CAD|AUD|GBP|JPY|CHF|\u20ac|\u00a3|\u00a5)\s*(\d[\d,]*(?:\.\d+)?)',re.I)
+_CURRENCY_CODE={'$':'USD','US$':'USD','USD':'USD','C$':'CAD','CAD':'CAD','A$':'AUD','AUD':'AUD','EUR':'EUR','\u20ac':'EUR',
+                'GBP':'GBP','\u00a3':'GBP','JPY':'JPY','\u00a5':'JPY','CHF':'CHF'}
+
+
+def _currency_of(value_text, quotes):
+    """Currency code written next to the figure ("$0.05", "USD 0.05") in the reported value, else in the quoted text.
+    A bare "$" is read as USD. None when no currency is written next to that figure."""
+    want=_amount_value(value_text)
+    for text in [value_text]+list(quotes):
+        for m in _CURRENCY_NUMBER.finditer(str(text or '')):
+            if want is None or _amount_value(m.group(2))==want:
+                return _CURRENCY_CODE.get(re.sub(r'\s+','',m.group(1)).upper())
+    return None
+
+
+def per_unit_rate(record, quotes=()):
+    """Sheet text for a rate that is NOT a percentage: "0.05 USD per unit" (CURRENCY_PER_UNIT) or "<n> (unit X)".
+
+    None for percent units and for records with no numeric rate. The percent column never holds these (v0.13.12)."""
+    unit=str(record.get('Rate_Unit') or '').upper()
+    if unit in PERCENT_UNITS:return None
+    num=record.get('Rate_Numeric')
+    if num in (None,''):return None
+    try:shown=f'{float(num):g}'
+    except (TypeError,ValueError):shown=str(num)
+    if unit=='CURRENCY_PER_UNIT':
+        cur=_currency_of(record.get('Rate_Value_Text'),quotes)
+        return f'{shown} {cur} per unit' if cur else f'{shown} per unit (currency not stated)'
+    return f'{shown} (rate unit {unit or "not stated"})'
+
+
+def _percent_cell(record):
+    """Numeric rate for the percent column: only PERCENT / PCT units (v0.13.12)."""
+    return record.get('Rate_Numeric') if str(record.get('Rate_Unit') or '').upper() in PERCENT_UNITS else None
+
+
+# --- Period-limited (sell-off) restatements (v0.13.12) ---------------------------------------------
+# A royalty term whose OWN wording (period, scope, territory, base, its rate quotation or its conditions) says it applies
+# only to a sell-off / post-termination inventory-disposal period is a restatement for that period, not a second benchmark.
+# Wording that is NOT enough: "royalties continue after expiry of the patent", "during the Term", "sales after expiration".
+_SELL_OFF=re.compile(r'\bsell[- ]?off\b',re.I)
+_DISPOSAL=re.compile(r'\b(?:dispos\w+|sell(?:ing)?|sold|sales?|liquidat\w+)\b[^.;]{0,60}\b(?:inventor(?:y|ies)|(?:remaining|existing|unsold|on[- ]hand) stock|goods on hand)\b'
+                     r'|\b(?:inventor(?:y|ies)|(?:remaining|existing|unsold|on[- ]hand) stock|goods on hand)\b[^.;]{0,60}\b(?:dispos\w+|sell(?:ing)?|sold|sales?|liquidat\w+)',re.I)
+_AFTER_END=re.compile(r'\b(?:after|following|upon|post)[- ]?(?:the )?(?:termination|expir\w+)\b',re.I)
+
+
+def period_limited_wording(*texts):
+    """'sell-off' or 'post-termination inventory disposal' when one of the texts says so; else None."""
+    for text in texts:
+        text=str(text or '')
+        if _SELL_OFF.search(text):return 'sell-off'
+        if _DISPOSAL.search(text) and _AFTER_END.search(text):return 'post-termination inventory disposal'
+    return None
+
+
+def link_period_limited(items):
+    """items: list of dicts {key, doc, family, base, scope, wording}. Returns {key: ('base', base_key) | ('none', [candidate keys])}
+    for every item whose wording is set: linked to its base row only when exactly one plausible base term exists
+    (same document and family, not itself period-limited; narrowed by royalty base and product scope when several)."""
+    from .m13_consolidate import _words
+    out={}
+    for it in items:
+        if not it['wording']:continue
+        cands=[o for o in items if o['doc']==it['doc'] and not o['wording'] and o['family']==it['family']]
+        if len(cands)>1:
+            narrowed=[o for o in cands if _words(o['base'])==_words(it['base'])
+                      and (lambda x,y:not x or not y or x<=y or y<=x)(_words(o['scope']),_words(it['scope']))]
+            cands=narrowed or cands
+        out[it['key']]=('base',cands[0]['key']) if len(cands)==1 else ('none',[c['key'] for c in cands])
+    return out
 
 
 def _records(rows, name):
@@ -337,6 +520,49 @@ def _observation_reference(term_id, document_id):
 _ROYALTY_WORD=re.compile(r'royalt',re.I)
 
 
+_MINIMUM_LABEL=re.compile(r'\s*(?:a\s+|an\s+|the\s+)?(?:minimum\s+(?:annual\s+)?royalt(?:y|ies)|royalt(?:y|ies)\s+minimum|guaranteed\s+minimum\s+royalt(?:y|ies))\b',re.I)
+
+
+def _is_minimum_royalty(p):
+    """MINIMUM_ROYALTY, or a GUARANTEE that is explicitly labelled as a minimum royalty (e.g. not a share-price guarantee).
+
+    v0.13.11 (B4): the label may open the Basis OR the Condition field."""
+    kind=p.get('Kind')
+    if kind=='MINIMUM_ROYALTY':return True
+    return kind=='GUARANTEE' and any(_MINIMUM_LABEL.match(str(p.get(k) or '')) for k in ('Basis','Condition'))
+
+
+def _amount_label(p):
+    raw=p.get('Amount_Text')
+    if raw is None or str(raw).strip()=='':
+        amount='AMOUNT_AMBIGUOUS' if p.get('Disclosure_Status')=='AMBIGUOUS' else 'AMOUNT_NOT_DISCLOSED'
+    else:
+        amount=str(raw).strip()
+        if re.fullmatch(r'\d+',amount):amount=f'{int(amount):,}'
+    currency=p.get('Currency')
+    if currency and currency not in amount:amount=f'{currency} {amount}'
+    elif not currency and re.search(r'\bshares?\b',str(p.get('Basis') or ''),re.I):amount+=' shares'
+    return amount
+
+
+# What a minimum is "per" (v0.13.12): "per licensed Product", "for each Contract Year" -> "per ...". Only the payment
+# record's own Basis wording is used, cut at the first filler word; nothing is inferred.
+_QUALIFIER=re.compile(r'\b(per|for each|for every)\s+((?:[A-Za-z][\w-]*)(?:\s+[A-Za-z][\w-]*){0,3})',re.I)
+_QUALIFIER_STOP={'and','or','if','that','which','in','on','during','until','from','unless','but','where','when','provided','commencing',
+                 'beginning','payable','shall','to','of','after','before','with','as','is','are','be','by','at','the','a','an'}
+
+
+def _minimum_qualifier(p):
+    # Basis only: a "per ..." in the Condition usually belongs to something else ("may be increased once per five-year period").
+    for m in _QUALIFIER.finditer(str(p.get('Basis') or '')):
+        words=[]
+        for w in m.group(2).split():
+            if w.lower() in _QUALIFIER_STOP:break
+            words.append(w)
+        if words:return 'per '+' '.join(words)
+    return ''
+
+
 def _payment_summary(payments: list[dict], kinds: set[str], *, minimum=False, royalty_only=False):
     """Faithful non-additive list of classified agreement-level payment records.
 
@@ -349,25 +575,48 @@ def _payment_summary(payments: list[dict], kinds: set[str], *, minimum=False, ro
         if kind not in kinds:continue
         if royalty_only and not _ROYALTY_WORD.search(' '.join(str(p.get(k) or '') for k in ('Basis','Condition'))):
             continue   # e.g. a cap on deferred service consideration: stays in sheet 03 only
-        if minimum and kind=='GUARANTEE':
-            # 'GUARANTEE' may be e.g. share-price or performance guarantees.
-            # Only explicitly royalty/minimum-labelled guarantees go here.
-            # v0.13.11 (B4): the label may open the Basis OR the Condition field (it used to be tested only at the
-            # start of "Basis Condition" joined together).
-            label=re.compile(r'\s*(?:a\s+|an\s+|the\s+)?(?:minimum\s+(?:annual\s+)?royalt(?:y|ies)|royalt(?:y|ies)\s+minimum|guaranteed\s+minimum\s+royalt(?:y|ies))\b',re.I)
-            if not any(label.match(str(p.get(k) or '')) for k in ('Basis','Condition')):
-                continue
-        raw=p.get('Amount_Text')
-        if raw is None or str(raw).strip()=='':
-            amount='AMOUNT_AMBIGUOUS' if p.get('Disclosure_Status')=='AMBIGUOUS' else 'AMOUNT_NOT_DISCLOSED'
-        else:
-            amount=str(raw).strip()
-            if re.fullmatch(r'\d+',amount):amount=f'{int(amount):,}'
-        currency=p.get('Currency')
-        if currency and currency not in amount:amount=f'{currency} {amount}'
-        elif not currency and re.search(r'\bshares?\b',str(p.get('Basis') or ''),re.I):amount+=' shares'
+        if minimum and kind=='GUARANTEE' and not _is_minimum_royalty(p):
+            # 'GUARANTEE' may be e.g. share-price or performance guarantees: only royalty-minimum-labelled ones go here.
+            continue
+        amount=_amount_label(p)
+        if minimum:
+            qualifier=_minimum_qualifier(p)   # v0.13.12: "USD 25,000 per licensed Product [1-PAY02]"
+            if qualifier:amount+=' '+qualifier
         matches.append(f"{amount} [{p.get('Payment_ID') or 'UNKNOWN_ID'}]")
     return '; '.join(matches) if matches else 'NOT_ASSESSED'
+
+
+# Explicit advance wording only (v0.13.12). "on the Effective Date" is NOT enough (that is a due date, not a statement
+# that the payment is made in advance); a notice given "in advance" is not a payment made in advance.
+_ADVANCE_WORDING=re.compile(r'\bin advance\b|\badvance(?:d)? (?:payment|royalt\w+|minimum)\b|\bpre-?paid\b|\bprepay\w*|'
+                            r'\b(?:payable|paid|due) (?:up)?on (?:the )?(?:signing|execution)\b|\bupon (?:signing|execution) of this agreement\b',re.I)
+_NOT_PAYMENT_ADVANCE=re.compile(r'\bnotice\b|\bnotif\w+|\bregistered mail\b|\bwritten\b',re.I)
+
+
+def _advance_wording(texts):
+    """The first clause that says a payment is made in advance, shortened; None when no text says so."""
+    for text in texts:
+        for clause in re.split(r'(?<=[.;])\s+',str(text or '')):
+            m=_ADVANCE_WORDING.search(clause)
+            if m and not _NOT_PAYMENT_ADVANCE.search(clause):
+                a,b=max(0,m.start()-30),min(len(clause),m.end()+40)
+                snippet=clause[a:b]
+                if a>0:snippet=re.sub(r'^\S*\s+','',snippet)       # no half word at either edge
+                if b<len(clause):snippet=re.sub(r'\s+\S*$','',snippet)
+                return snippet.strip()
+    return None
+
+
+def _advance_from_minimum(payments, quotes_of):
+    """Minimum-royalty records whose own Basis / Condition / evidence quotation says the minimum is paid in advance.
+
+    Returns 'USD 130,000 [C1-P1] (record says: "prepaid by January 30 each Contract Year")' items, or []."""
+    out=[]
+    for p in payments:
+        if not _is_minimum_royalty(p):continue
+        hit=_advance_wording([p.get('Basis'),p.get('Condition')]+list(quotes_of(p)))
+        if hit:out.append(f"{_amount_label(p)} [{p.get('Payment_ID') or 'UNKNOWN_ID'}] (minimum royalty record says: \"{hit.rstrip('.;,')}\")")
+    return out
 
 
 def _payment_references(payments: list[dict]):
@@ -391,6 +640,7 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
     """
     first_readings=first_readings or {}
     source_texts=source_texts or {}
+    python_issues=[]    # open issues raised by the export rules themselves (sheet 05)
     docs={d['Document_ID']:d for d in _records(rows,'Documents')}
     terms=_records(rows,'Royalty Terms')
     payments=_records(rows,'Other Payments')
@@ -420,6 +670,33 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
     for c in _records(rows,'Conditions'):conditions[(c['Document_ID'],c['Term_ID'])].append(c)
     adjustments=defaultdict(list)
     for a in _records(rows,'Adjustments'):adjustments[(a['Document_ID'],a['Term_ID'])].append(a)
+
+    def shown_quote(e):
+        """Display text of an evidence row: its quote completed to the enclosing sentence (stored evidence is unchanged)."""
+        if not e:return ''
+        quote=e.get('Exact_Quotation') or ''
+        return display_quote(quote,e.get('Passage_ID'),source_texts.get(e.get('Document_ID')) or [])
+
+    # Period-limited (sell-off) restatements: decided once per document from each term's own wording.
+    quotes_of_term=lambda t:[(evid_by_doc.get((t['Document_ID'],i)) or {}).get('Exact_Quotation') for i in _ids(t.get('Rate_Evidence_IDs'))]
+    pl_items=[{'key':(t['Document_ID'],t.get('Term_ID')),'doc':t['Document_ID'],'family':t.get('Family'),'base':t.get('Royalty_Base'),
+               'scope':t.get('Product_Scope'),
+               'wording':period_limited_wording(t.get('Effective_Period'),t.get('Product_Scope'),t.get('Territory'),t.get('Royalty_Base'),
+                                                t.get('Base_Definition'),*quotes_of_term(t),
+                                                *[c.get('Condition_Text') for c in conditions.get((t['Document_ID'],t.get('Term_ID')),[])])}
+              for t in terms]
+    obs_of={(t['Document_ID'],t.get('Term_ID')):t.get('Observation_ID') or _observation_reference(t.get('Term_ID'),t['Document_ID']) for t in terms}
+    pl_link=link_period_limited(pl_items); pl_wording={i['key']:i['wording'] for i in pl_items}
+    restated_by=defaultdict(list)
+    for key,(state,target) in pl_link.items():
+        if state=='base':restated_by[target].append(obs_of[key])
+        else:
+            cand=', '.join(obs_of[c] for c in target)
+            python_issues.append((key[0],f'PY-PL-{key[1]}',
+                f'{obs_of[key]} is worded as a {pl_wording[key]} (period-limited) royalty. '
+                +(f'More than one possible base row ({cand}), so it is NOT linked; check which row it restates.' if target
+                  else 'No base row of the same royalty family was found, so it is NOT linked.')
+                +' Python rule: it is marked not usable as a benchmark until a person has looked.'))
 
     for t in terms:
         did=t['Document_ID']; doc=docs.get(did,{})
@@ -462,7 +739,17 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
                                             grant_found=(grant_hits(grant_text)>0 if grant_text.strip() else None),
                                             qc_state=t.get('QC_State') or doc.get('Extraction_Status'),
                                             record_errors=_record_error_codes(t.get('Term_ID'),(source_errors or {}).get(did)),
-                                            tier_summary=tier_text,unresolved=(did,t.get('Term_ID')) in unresolved_terms)
+                                            tier_summary=tier_text,unresolved=(did,t.get('Term_ID')) in unresolved_terms,
+                                            period_limited=((pl_wording[(did,t.get('Term_ID'))],
+                                                             obs_of[pl_link[(did,t.get('Term_ID'))][1]] if pl_link[(did,t.get('Term_ID'))][0]=='base' else None)
+                                                            if pl_wording.get((did,t.get('Term_ID'))) else None))
+        key=(did,t.get('Term_ID'))
+        if pl_wording.get(key):
+            pl_cell=f'YES ({pl_wording[key]})'
+            link_cell=obs_of[pl_link[key][1]] if pl_link[key][0]=='base' else 'not linked \u2013 see sheet 05'
+        elif restated_by.get(key):
+            pl_cell=''; link_cell='has period-limited restatement: '+', '.join(restated_by[key])
+        else:pl_cell=link_cell=''
         license_text=doc.get('Licensed_IP') or agreement.get('licensed_ip')
         rights=agreement.get('sublicensing_rights') or 'NOT_ASSESSED'
         material=agreement.get('other_material_terms') or []
@@ -474,11 +761,21 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
         min_hint=_payment_summary(payments_present,{'MINIMUM_ROYALTY','GUARANTEE'},minimum=True)
         cap_hint=_payment_summary(payments_present,{'CAP'},royalty_only=True)
         advance_hint=_payment_summary(payments_present,{'ADVANCE'})
+        # v0.13.12: a minimum whose own record says it is paid in advance fills the advance field (with its payment ID);
+        # a plain "on the Effective Date" does not. A signing fee is never reinterpreted: UPFRONT stays UPFRONT.
+        pay_quotes=lambda p:[(evid_by_doc.get((did,i)) or {}).get('Exact_Quotation') for i in _ids(p.get('Evidence_IDs'))]
+        from_minimum=_advance_from_minimum(payments_present,pay_quotes)
+        if from_minimum:
+            advance_hint='; '.join(([] if advance_hint=='NOT_ASSESSED' else [advance_hint])+from_minimum)
         upfront_hint=_payment_summary(payments_present,{'UPFRONT'})
+        n_pay=len(payments_present)
+        checked=lambda what:f'NOT_ASSESSED (checked {n_pay} payment record{"" if n_pay==1 else "s"}: none is {what}; absence is not proven by one reading)'
+        if advance_hint=='NOT_ASSESSED' and n_pay:advance_hint=checked('an advance or prepayment')
+        if upfront_hint=='NOT_ASSESSED' and n_pay:upfront_hint=checked('an upfront or signing fee')
         payment_ids=_payment_references(payments_present)
         exclusivity_scope=agreement.get('exclusivity_scope') or 'NOT_ASSESSED'
         rate_ids=_join(t.get('Rate_Evidence_IDs'))
-        quote=(_best_evidence(_ids(t.get('Rate_Evidence_IDs')),did,evid_by_doc,t.get('Rate_Value_Text')) or {}).get('Exact_Quotation') or ''
+        quote=shown_quote(_best_evidence(_ids(t.get('Rate_Evidence_IDs')),did,evid_by_doc,t.get('Rate_Value_Text')))
         rate_reported=t.get('Rate_Value_Text')
         if rate_reported in (None,'') and tier_text:
             # Tiered / hybrid / formula term with disclosed tiers: the numeric cell stays blank (never one collapsed
@@ -486,7 +783,7 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
             rate_reported=f"{str(t.get('Structure') or 'TIERED').upper()} {tier_text} \u2013 see sheet 02"
         action='Review CORE differences' if doc.get('Extraction_Status')=='TWO_READERS_DIFFER' else 'Point-of-use source review'
         result[NAMES[0]].append([
-            t.get('Observation_ID'),nature,license_text,t.get('Rate_Numeric'),usable,usable_note,rate_reported,t.get('Family'),t.get('Structure'),
+            t.get('Observation_ID'),nature,license_text,_percent_cell(t),per_unit_rate(t,quotes_of_term(t)),usable,usable_note,pl_cell,link_cell,rate_reported,t.get('Family'),t.get('Structure'),
             t.get('Rate_Unit'),t.get('Royalty_Base'),t.get('Product_Scope'),t.get('Licensor') or doc.get('Licensor'),
             t.get('Licensee') or doc.get('Licensee'),related,doc.get('Industry'),t.get('Territory') or doc.get('Territory'),
             doc.get('Exclusivity') if doc.get('Exclusivity') is not None else 'NOT_ASSESSED',
@@ -519,7 +816,7 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
 
     for row in _records(rows,'Tiers'):
         result[NAMES[1]].append(['TIER',row.get('Observation_ID'),row.get('Term_ID'),row.get('Sequence'),
-             row.get('Rate_Value_Text'),row.get('Rate_Numeric'),row.get('Rate_Unit'),
+             row.get('Rate_Value_Text'),_percent_cell(row),row.get('Rate_Unit'),per_unit_rate(row),
              row.get('Lower_Threshold_Text'),row.get('Upper_Threshold_Text'),
              'Calculation: '+_join(row.get('Calculation'))+'; Period: '+_join(row.get('Measurement_Period'))+
              '; Threshold basis: '+_join(row.get('Threshold_Basis')),
@@ -528,13 +825,14 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
     for table,record_type,body in (('Conditions','CONDITION','Condition_Text'),('Adjustments','ADJUSTMENT','Adjustment_Description')):
         for row in _records(rows,table):
             result[NAMES[1]].append([record_type,_observation_reference(row['Term_ID'],row['Document_ID']),
-                row.get('Term_ID'),None,None,None,None,None,None,row.get(body),row.get('Evidence_IDs'),
+                row.get('Term_ID'),None,None,None,None,None,None,None,row.get(body),row.get('Evidence_IDs'),
                 row.get('Source_URL'),row.get('Document_ID'),(docs.get(row['Document_ID']) or {}).get('Extraction_Status'),
                 'As extracted; no inferred economics'])
 
     for p in payments:
         doc=docs.get(p['Document_ID'],{})
-        q=(_best_evidence(_ids(p.get('Evidence_IDs')),p['Document_ID'],evid_by_doc,p.get('Amount_Text')) or {}).get('Exact_Quotation')
+        q=shown_quote(_best_evidence(_ids(p.get('Evidence_IDs')),p['Document_ID'],evid_by_doc,p.get('Amount_Text'),
+                                     figures=_figures_in(p.get('Basis'),p.get('Condition')) if p.get('Amount_Text') in (None,'') else None)) or None
         result[NAMES[2]].append([p.get('Payment_ID'),p.get('Kind'),p.get('Amount_Text'),
             p.get('Amount_Numeric'),p.get('Currency'),p.get('Basis'),p.get('Condition'),
             p.get('Evidence_IDs'),q,p.get('Source_URL'),p.get('QC_State'),p.get('Licensor') or doc.get('Licensor'),
@@ -557,6 +855,9 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
         result[NAMES[4]].append(['OPEN_ISSUE',r.get('Document_ID'),r.get('Severity'),r.get('Issue_ID'),
             r.get('Description'),r.get('Kind'),r.get('Status'),r.get('Source_Passage_IDs'),
             None,None,r.get('Source_URL'),'Review open issue'])
+    for did_,issue_id,text in python_issues:     # raised by the export rules above (not read from the reading)
+        result[NAMES[4]].append(['OPEN_ISSUE',did_,'MEDIUM',issue_id,text,'PERIOD_LIMITED_LINK_UNRESOLVED','OPEN',None,
+                                 None,None,(docs.get(did_) or {}).get('Source_URL'),'Review open issue'])
     for r in _records(rows,'QC'):
         result[NAMES[4]].append(['DETERMINISTIC_QC',r.get('Document_ID'),r.get('State'),r.get('Errors'),
             'Warnings: '+_join(r.get('Warnings'))+'; read scope: '+_join(r.get('Read_Scope')),
@@ -575,6 +876,26 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
 
 SUMMARY_NAME = '00 Run Summary'
 SUMMARY_HEADERS = ['Document ID','Company / licensor \u2013 licensee','SEC source link','Status','QC state','Royalty rows','Note']
+
+
+ROW_HEIGHT_MAX=150     # points (about 11 lines of Arial 10)
+_LINE_POINTS=12.75     # one wrapped line of Arial 10
+_CHARS_PER_WIDTH=1.1   # Arial 10 characters that fit in one Excel column-width unit (conservative: leaves room for word wrap)
+_NO_HEIGHT_HEADER=re.compile(r'\bIDs?\b|\bSHA\b|\blink\b',re.I)   # ID lists / URLs would make every row tall
+
+
+def estimate_row_height(values, widths, minimum=30, maximum=ROW_HEIGHT_MAX, skip=()):
+    """Row height in points for wrapped text: the tallest cell decides (lines = text length / column width, per paragraph).
+
+    values and widths are parallel lists (column widths in Excel units); columns whose index is in skip (ID lists, URLs)
+    are ignored. Clamped to minimum..maximum; text longer than the maximum is still wrapped, and the full text stays in the cell."""
+    lines=1
+    for i,(value,width) in enumerate(zip(values,widths)):
+        if i in skip or value is None or isinstance(value,(int,float)):continue
+        per_line=max(1,int(width*_CHARS_PER_WIDTH))
+        n=sum(max(1,-(-len(part)//per_line)) for part in str(value).split('\n'))
+        lines=max(lines,n)
+    return float(min(maximum,max(minimum,lines*_LINE_POINTS+6)))
 
 
 def _write_run_summary(wb, summary):
@@ -610,13 +931,14 @@ def _write_run_summary(wb, summary):
         ws.column_dimensions[get_column_letter(c)].width=[26,44,38,40,30,14,50][c-1]
     ws.row_dimensions[7].height=37
     rows=summary.get('rows') or []
+    summary_widths=[26,44,38,40,30,14,50]
     for ridx,row in enumerate(rows,8):
-        ws.row_dimensions[ridx].height=33
+        ws.row_dimensions[ridx].height=estimate_row_height(row,summary_widths,minimum=33,skip={2})
         for c,val in enumerate(row,1):
             cell=ws.cell(ridx,c,_clean(val))
             if isinstance(cell.value,str):cell.data_type='s'
             cell.font=Font(name='Arial',size=10,bold=(c==4 and not str(val).startswith('EXPORTED')),color=black)
-            cell.alignment=Alignment(vertical='center',wrap_text=True)
+            cell.alignment=Alignment(vertical='top',wrap_text=True)
             if ridx%2==1:cell.fill=PatternFill('solid',fgColor=light)
             if isinstance(cell.value,str) and 'sec.gov/' in cell.value and official_sec_url(cell.value):cell.hyperlink=cell.value
     end=7+len(rows)
@@ -674,7 +996,7 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
         ws.merge_cells(start_row=3,start_column=1,end_row=3,end_column=min(n,9))
         ws.cell(4,1,f'{len(matrix)-1} records | source-document-specific | no unverified assumptions auto-filled').font=Font(name='Arial',size=10,bold=True,color=black)
         ws.merge_cells(start_row=4,start_column=1,end_row=4,end_column=min(n,9))
-        ws.cell(5,1,('Missing fee categories = NOT_ASSESSED (not zero); agreement-level fees repeat on rate rows, NEVER SUM. Rates are real percentages (30% is stored as 0.30). '
+        ws.cell(5,1,('Missing fee categories = NOT_ASSESSED (not zero); agreement-level fees repeat on rate rows, NEVER SUM. Rates are real percentages (30% is stored as 0.30); per-unit / currency rates are in their own column. '
                      'Reader agreement is not proof of recall.' if idx==0 else
                      'Full unmodified M13 technical evidence remains in rows.json and optional Detailed XLSX.')).font=Font(name='Arial',size=10,color=black)
         ws.merge_cells(start_row=5,start_column=1,end_row=5,end_column=min(n,9))
@@ -688,18 +1010,22 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
             if any(tok in title.lower() for tok in ['quotation','quote','description','mechanics','material terms','text','note','rights','base','source','licensed intangible','product','payment','guarantee','cap','fee']):width=38
             elif any(tok in title.lower() for tok in ['id','document','licensee','licensor','territory','evidence']):width=26
             if title in ('Royalty rate (%)','Rate numeric','Amount numeric'):width=16
+            if title=='Per-unit / currency rate':width=22
             ws.column_dimensions[get_column_letter(c)].width=min(width,45)
+        col_widths=[ws.column_dimensions[get_column_letter(c)].width for c in range(1,n+1)]
+        no_height={c for c,h in enumerate(matrix[0]) if _NO_HEIGHT_HEADER.search(str(h))}
         ws.row_dimensions[7].height=37
         rate_cols={c for c,h in enumerate(matrix[0],1) if h in RATE_COLUMNS}
         unit_col=matrix[0].index('Rate unit') if 'Rate unit' in matrix[0] else 0
         for ridx,row in enumerate(matrix[1:],8):
-            ws.row_dimensions[ridx].height=33 if idx in (0,4) else 30
+            # v0.13.12: wrapped text and a height estimated from the text (was a fixed 33 / 30 points that cut long cells)
+            ws.row_dimensions[ridx].height=estimate_row_height(row,col_widths,minimum=33 if idx in (0,4) else 30,skip=no_height)
             admin_row=idx==5 and row[5]==ADMIN
             for c,val in enumerate(row,1):
                 cell=ws.cell(ridx,c,_clean(val))
                 if isinstance(cell.value,str):cell.data_type='s'
                 cell.font=Font(name='Arial',size=10,color=(grey if admin_row else black))
-                cell.alignment=Alignment(vertical='center',wrap_text=True)
+                cell.alignment=Alignment(vertical='top',wrap_text=True)    # top: a clipped cell shows its beginning, not its middle
                 if c in rate_cols and isinstance(cell.value,(int,float)) and not isinstance(cell.value,bool) \
                         and str(row[unit_col] or '').upper() in PERCENT_UNITS:
                     # Excel cell holds the real fraction (5 percent-points -> 0.05, shown 5.00%).

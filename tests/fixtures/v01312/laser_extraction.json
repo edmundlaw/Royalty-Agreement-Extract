@@ -1,0 +1,604 @@
+{
+ "schema_version": "m2.0",
+ "document_id": "DOC-laserlock",
+ "source_text_sha256": "d7fc9bcd95e924b23a20af2f918c9133ea4d93378b3da00154bf8efc87929dd1",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/1104038/000095011604001037/ex10-6.txt",
+ "reader": {
+  "engine": "fixture",
+  "model": "hand-made-from-verbatim-snippets",
+  "run_id": "FIXTURE-v01312",
+  "read_scope": "FULL_DOCUMENT",
+  "reviewed_passage_ids": [
+   "DOC-laserlock:P000001",
+   "DOC-laserlock:P000002",
+   "DOC-laserlock:P000003",
+   "DOC-laserlock:P000004",
+   "DOC-laserlock:P000005",
+   "DOC-laserlock:P000006",
+   "DOC-laserlock:P000007",
+   "DOC-laserlock:P000008",
+   "DOC-laserlock:P000009",
+   "DOC-laserlock:P000010",
+   "DOC-laserlock:P000011",
+   "DOC-laserlock:P000012",
+   "DOC-laserlock:P000013",
+   "DOC-laserlock:P000014",
+   "DOC-laserlock:P000015",
+   "DOC-laserlock:P000016",
+   "DOC-laserlock:P000017",
+   "DOC-laserlock:P000018",
+   "DOC-laserlock:P000019",
+   "DOC-laserlock:P000020",
+   "DOC-laserlock:P000021",
+   "DOC-laserlock:P000022",
+   "DOC-laserlock:P000023",
+   "DOC-laserlock:P000024",
+   "DOC-laserlock:P000025",
+   "DOC-laserlock:P000026",
+   "DOC-laserlock:P000027",
+   "DOC-laserlock:P000028"
+  ]
+ },
+ "agreement": {
+  "title": null,
+  "industry": null,
+  "licensed_ip": null,
+  "duration": null,
+  "territory": null,
+  "exclusivity": null,
+  "contractual_status": null,
+  "licensor": "Laser Lock Technologies Inc. and its Affiliates",
+  "licensee": "Copag U.S.A. Inc.",
+  "execution_date": null,
+  "effective_date": null,
+  "field_evidence": {
+   "licensor": [
+    "C1-E001",
+    "C1-E002",
+    "C1-E003",
+    "C1-E004",
+    "C1-E005"
+   ],
+   "licensee": [
+    "C1-E006",
+    "C1-E007",
+    "C1-E008"
+   ]
+  },
+  "other_material_terms": []
+ },
+ "amendment_status": "NOT_CHECKED",
+ "evidence": [
+  {
+   "evidence_id": "C1-E001",
+   "passage_id": "DOC-laserlock:P000001",
+   "quote": "BY AND BETWEEN: LASER LOCK TECHNOLOGIES INC., a corporation duly",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E002",
+   "passage_id": "DOC-laserlock:P000002",
+   "quote": "organized and existing under the laws of Nevada, with offices",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E003",
+   "passage_id": "DOC-laserlock:P000003",
+   "quote": "at 837, Lindy Lane, Bala Cynwyd, Pennsylvania, 19004, and its",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E004",
+   "passage_id": "DOC-laserlock:P000004",
+   "quote": "Affiliates as herein defined.",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E005",
+   "passage_id": "DOC-laserlock:P000005",
+   "quote": "Hereinafter referred to as \"LICENSOR\"",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E006",
+   "passage_id": "DOC-laserlock:P000006",
+   "quote": "AND: COPAG U.S.A. INC., a corporation duly organized and existing",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E007",
+   "passage_id": "DOC-laserlock:P000007",
+   "quote": "under the laws of Nevada, with offices at 8275 South Eastern",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E008",
+   "passage_id": "DOC-laserlock:P000008",
+   "quote": "Avenue, #200-47, Las Vegas, Nevada 89123",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E009",
+   "passage_id": "DOC-laserlock:P000012",
+   "quote": "or by the LICENSEE during each Royalty Period, by FIVE CENTS",
+   "role": "RATE"
+  },
+  {
+   "evidence_id": "C1-E010",
+   "passage_id": "DOC-laserlock:P000013",
+   "quote": "($0.05) for each excess Exclusive Product.",
+   "role": "RATE"
+  },
+  {
+   "evidence_id": "C1-E011",
+   "passage_id": "DOC-laserlock:P000010",
+   "quote": "at by multiplying the number of units of the Exclusive Products in",
+   "role": "CONDITION"
+  },
+  {
+   "evidence_id": "C1-E012",
+   "passage_id": "DOC-laserlock:P000011",
+   "quote": "excess of two hundred thousand (200,000) sold or manufactured for",
+   "role": "CONDITION"
+  },
+  {
+   "evidence_id": "C1-E013",
+   "passage_id": "DOC-laserlock:P000009",
+   "quote": "1.01 \"ADDITIONAL ROYALTY\" shall mean an amount equal to the sum arrived",
+   "role": "BASE"
+  },
+  {
+   "evidence_id": "C1-E014",
+   "passage_id": "DOC-laserlock:P000010",
+   "quote": "at by multiplying the number of units of the Exclusive Products in",
+   "role": "BASE"
+  },
+  {
+   "evidence_id": "C1-E015",
+   "passage_id": "DOC-laserlock:P000014",
+   "quote": "1.08 \"MINIMUM ANNUAL ROYALTY\" shall mean the sum of TEN THOUSAND DOLLARS",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E016",
+   "passage_id": "DOC-laserlock:P000015",
+   "quote": "($10,000.00).",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E017",
+   "passage_id": "DOC-laserlock:P000025",
+   "quote": "4.03 The Minimum Annual Royalty fee shall be paid by LICENSEE to",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E018",
+   "passage_id": "DOC-laserlock:P000026",
+   "quote": "LICENSOR on the Effective Date, and each anniversary date thereof",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E019",
+   "passage_id": "DOC-laserlock:P000027",
+   "quote": "during the Term, failing the timely receipt of such amount by the",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E020",
+   "passage_id": "DOC-laserlock:P000028",
+   "quote": "LICENSOR, this Agreement shall terminate.",
+   "role": "OTHER"
+  }
+ ],
+ "royalty_terms": [
+  {
+   "term_id": "C1-T01",
+   "family": "PER_UNIT",
+   "structure": "HYBRID",
+   "disclosure_status": "DISCLOSED",
+   "rate_value": "0.05",
+   "rate_unit": "CURRENCY_PER_UNIT",
+   "base": "number of units of the Exclusive Products",
+   "base_definition": null,
+   "product_scope": "Decks of plastic playing cards containing 54 cards",
+   "territory_scope": null,
+   "effective_period": "Each 12-month period from November 1, 2003 during agreement",
+   "conditions": [
+    {
+     "text": "Applies only to units in excess of 200,000 sold or manufactured in a Royalty Period.",
+     "evidence_ids": [
+      "C1-E011",
+      "C1-E012"
+     ]
+    }
+   ],
+   "adjustments": [],
+   "tiers": [],
+   "evidence_ids": [
+    "C1-E009",
+    "C1-E010",
+    "C1-E013",
+    "C1-E014",
+    "C1-E011",
+    "C1-E012"
+   ],
+   "rate_evidence_ids": [
+    "C1-E009",
+    "C1-E010"
+   ],
+   "base_evidence_ids": [
+    "C1-E013",
+    "C1-E014"
+   ]
+  }
+ ],
+ "other_payments": [
+  {
+   "payment_id": "C1-P01",
+   "kind": "MINIMUM_ROYALTY",
+   "amount_value": "10000",
+   "currency": "$",
+   "disclosure_status": "DISCLOSED",
+   "basis": "Fixed annual royalty, payable in addition to excess-unit Additional Royalty",
+   "condition": "On Effective Date and each anniversary during Term; agreement terminates for untimely receipt.",
+   "evidence_ids": [
+    "C1-E015",
+    "C1-E016",
+    "C1-E017",
+    "C1-E018",
+    "C1-E019",
+    "C1-E020"
+   ]
+  }
+ ],
+ "dispositions": [
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E001"
+   ],
+   "passage_id": "DOC-laserlock:P000001",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E002"
+   ],
+   "passage_id": "DOC-laserlock:P000002",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E003"
+   ],
+   "passage_id": "DOC-laserlock:P000003",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E004"
+   ],
+   "passage_id": "DOC-laserlock:P000004",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E005"
+   ],
+   "passage_id": "DOC-laserlock:P000005",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E006"
+   ],
+   "passage_id": "DOC-laserlock:P000006",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E007"
+   ],
+   "passage_id": "DOC-laserlock:P000007",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E008"
+   ],
+   "passage_id": "DOC-laserlock:P000008",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E013"
+   ],
+   "passage_id": "DOC-laserlock:P000009",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E011",
+    "C1-E014"
+   ],
+   "passage_id": "DOC-laserlock:P000010",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E012"
+   ],
+   "passage_id": "DOC-laserlock:P000011",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E009"
+   ],
+   "passage_id": "DOC-laserlock:P000012",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E010"
+   ],
+   "passage_id": "DOC-laserlock:P000013",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E015"
+   ],
+   "passage_id": "DOC-laserlock:P000014",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E016"
+   ],
+   "passage_id": "DOC-laserlock:P000015",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-laserlock:P000016",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-laserlock:P000017",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-laserlock:P000018",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-laserlock:P000019",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-laserlock:P000020",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-laserlock:P000021",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-laserlock:P000022",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-laserlock:P000023",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-laserlock:P000024",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E017"
+   ],
+   "passage_id": "DOC-laserlock:P000025",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E018"
+   ],
+   "passage_id": "DOC-laserlock:P000026",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E019"
+   ],
+   "passage_id": "DOC-laserlock:P000027",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E020"
+   ],
+   "passage_id": "DOC-laserlock:P000028",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  }
+ ],
+ "open_issues": []
+}

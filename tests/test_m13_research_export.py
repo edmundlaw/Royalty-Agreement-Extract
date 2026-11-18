@@ -205,7 +205,8 @@ class ResearchRows(unittest.TestCase):
         self.assertEqual(row['Exclusivity'],'Non-exclusive')
         self.assertEqual(row['Exclusivity scope'],'NOT_ASSESSED')
         self.assertEqual(row['Royalty cap'],'NOT_ASSESSED')
-        self.assertEqual(row['Advance / prepayment'],'NOT_ASSESSED')
+        # v0.13.12: with payment records present the cell says what was checked, but still starts with NOT_ASSESSED
+        self.assertTrue(row['Advance / prepayment'].startswith('NOT_ASSESSED (checked 1 payment record: none is an advance'))
         self.assertEqual(row['Minimum guarantee'],'NOT_ASSESSED')
         v=research_rows(raw,{'DOC-DEMO':{'agreement':{
             'exclusivity_scope':'Product X in the United States, through 2030',

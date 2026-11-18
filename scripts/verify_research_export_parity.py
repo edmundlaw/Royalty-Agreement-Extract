@@ -17,10 +17,22 @@ def tab(workbook,name,header=1):
     return [dict(zip(cols,r)) for r in ws.iter_rows(min_row=header+1,values_only=True) if any(x is not None for x in r)]
 
 def expected_cell(value,unit):
-    """Rows.json keeps percent-points; the workbook cell holds the fraction (5 -> 0.05) for percent units (v0.13.9)."""
-    if isinstance(value,(int,float)) and not isinstance(value,bool) and str(unit or '').upper() in ('PERCENT','PCT'):
+    """Rows.json keeps percent-points; the workbook cell holds the fraction (5 -> 0.05) for percent units (v0.13.9).
+    Since v0.13.12 the percent column holds ONLY percent units: any other unit gives an empty cell here and its number is
+    in the 'Per-unit / currency rate' column (see expected_per_unit)."""
+    if str(unit or '').upper() not in ('PERCENT','PCT'):return None
+    if isinstance(value,(int,float)) and not isinstance(value,bool):
         return round(float(value)/100.0,10)
     return value
+
+def expected_per_unit(value,unit):
+    """True when a numeric rate with a non-percent unit must show in the per-unit / currency column (text starting with the number)."""
+    return isinstance(value,(int,float)) and not isinstance(value,bool) and str(unit or '').upper() not in ('PERCENT','PCT')
+
+def per_unit_ok(cell,value):
+    """The per-unit cell is text that starts with the same number as rows.json (e.g. '0.05 USD per unit')."""
+    try:return isinstance(cell,str) and abs(float(cell.split()[0])-float(value))<1e-9
+    except (ValueError,IndexError):return False
 
 def same_number(a,b):
     if isinstance(a,(int,float)) and isinstance(b,(int,float)):return abs(float(a)-float(b))<1e-9
@@ -55,6 +67,9 @@ def go(original,research):
                           ('Source_URL','SEC source link'),('QC_State','Document QC')]:
             if akey=='Rate_Numeric':
                 if not same_number(expected_cell(old[id][akey],old[id].get('Rate_Unit')),new[id][bkey]):errs.append(f'{id}: {akey} differs')
+                if expected_per_unit(old[id][akey],old[id].get('Rate_Unit')):
+                    if not per_unit_ok(new[id].get('Per-unit / currency rate'),old[id][akey]):errs.append(f'{id}: per-unit / currency rate missing or differs')
+                elif new[id].get('Per-unit / currency rate') not in (None,''):errs.append(f'{id}: per-unit / currency rate on a percent row')
             elif old[id][akey]!=new[id][bkey]:errs.append(f'{id}: {akey} differs')
     checks['royalty_observations']=len(b)
     a=tab(w,'Other Payments');b=tab(v,names[2],7)
@@ -86,11 +101,15 @@ def go(original,research):
             k=(r['Observation ID'],r['Term ID'],r['Sequence']);src=old_tiers.get(k)
             if src is None or not same_number(expected_cell(src.get('Rate_Numeric'),src.get('Rate_Unit')),r['Rate numeric']):
                 errs.append(f'Tier {k}: rate numeric differs')
+            elif expected_per_unit(src.get('Rate_Numeric'),src.get('Rate_Unit')) and not per_unit_ok(r.get('Per-unit / currency rate'),src.get('Rate_Numeric')):
+                errs.append(f'Tier {k}: per-unit / currency rate missing or differs')
     checks['mechanics']=dict(new_types)
     q=tab(v,names[4],7)
     for typ,src in [('READER_CHECK','Reader Check'),('READER_DIFFERENCE','Reader Differences'),
                     ('OPEN_ISSUE','Open Issues'),('DETERMINISTIC_QC','QC'),('AMENDMENT','Amendments'),('PROCESSING','Pending Jobs')]:
-        if sum(r['Record type']==typ for r in q)!=len(tab(w,src)):
+        # v0.13.12: OPEN_ISSUE rows of kind PERIOD_LIMITED_LINK_UNRESOLVED are raised by the export rules, not read from rows.json
+        n_new=sum(r['Record type']==typ and not (typ=='OPEN_ISSUE' and r.get('First reader / state')=='PERIOD_LIMITED_LINK_UNRESOLVED') for r in q)
+        if n_new!=len(tab(w,src)):
             errs.append(f'QC {typ}: count mismatch')
     checks['qc_records']=len(q)
     other=tab(v,names[5],7)   # new in 0.13.6: one row per other material term; no original-row equivalent

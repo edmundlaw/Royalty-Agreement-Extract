@@ -1,0 +1,1572 @@
+{
+ "schema_version": "m2.0",
+ "document_id": "DOC-voit",
+ "source_text_sha256": "c1768245be972e83fab8a5b200b154323ffeb13456ea8327f340ac6196da2ab4",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/828747/000114420410025013/v183643_ex10-3.htm",
+ "reader": {
+  "engine": "fixture",
+  "model": "hand-made-from-verbatim-snippets",
+  "run_id": "FIXTURE-v01312",
+  "read_scope": "FULL_DOCUMENT",
+  "reviewed_passage_ids": [
+   "DOC-voit:P000001",
+   "DOC-voit:P000002",
+   "DOC-voit:P000003",
+   "DOC-voit:P000004",
+   "DOC-voit:P000005",
+   "DOC-voit:P000006",
+   "DOC-voit:P000007",
+   "DOC-voit:P000008",
+   "DOC-voit:P000009",
+   "DOC-voit:P000010",
+   "DOC-voit:P000011",
+   "DOC-voit:P000012",
+   "DOC-voit:P000013",
+   "DOC-voit:P000014",
+   "DOC-voit:P000015",
+   "DOC-voit:P000016",
+   "DOC-voit:P000017",
+   "DOC-voit:P000018",
+   "DOC-voit:P000019",
+   "DOC-voit:P000020",
+   "DOC-voit:P000021",
+   "DOC-voit:P000022",
+   "DOC-voit:P000023",
+   "DOC-voit:P000024",
+   "DOC-voit:P000025",
+   "DOC-voit:P000026",
+   "DOC-voit:P000027",
+   "DOC-voit:P000028",
+   "DOC-voit:P000029",
+   "DOC-voit:P000030",
+   "DOC-voit:P000031",
+   "DOC-voit:P000032",
+   "DOC-voit:P000033",
+   "DOC-voit:P000034",
+   "DOC-voit:P000035",
+   "DOC-voit:P000036",
+   "DOC-voit:P000037",
+   "DOC-voit:P000038",
+   "DOC-voit:P000039",
+   "DOC-voit:P000040",
+   "DOC-voit:P000041",
+   "DOC-voit:P000042",
+   "DOC-voit:P000043",
+   "DOC-voit:P000044",
+   "DOC-voit:P000045",
+   "DOC-voit:P000046",
+   "DOC-voit:P000047",
+   "DOC-voit:P000048",
+   "DOC-voit:P000049",
+   "DOC-voit:P000050",
+   "DOC-voit:P000051",
+   "DOC-voit:P000052",
+   "DOC-voit:P000053",
+   "DOC-voit:P000054",
+   "DOC-voit:P000055",
+   "DOC-voit:P000056",
+   "DOC-voit:P000057",
+   "DOC-voit:P000058",
+   "DOC-voit:P000059",
+   "DOC-voit:P000060",
+   "DOC-voit:P000061",
+   "DOC-voit:P000062",
+   "DOC-voit:P000063",
+   "DOC-voit:P000064",
+   "DOC-voit:P000065",
+   "DOC-voit:P000066",
+   "DOC-voit:P000067",
+   "DOC-voit:P000068",
+   "DOC-voit:P000069",
+   "DOC-voit:P000070",
+   "DOC-voit:P000071",
+   "DOC-voit:P000072",
+   "DOC-voit:P000073",
+   "DOC-voit:P000074",
+   "DOC-voit:P000075",
+   "DOC-voit:P000076",
+   "DOC-voit:P000077",
+   "DOC-voit:P000078",
+   "DOC-voit:P000079",
+   "DOC-voit:P000080",
+   "DOC-voit:P000081",
+   "DOC-voit:P000082",
+   "DOC-voit:P000083",
+   "DOC-voit:P000084",
+   "DOC-voit:P000085",
+   "DOC-voit:P000086",
+   "DOC-voit:P000087",
+   "DOC-voit:P000088",
+   "DOC-voit:P000089",
+   "DOC-voit:P000090",
+   "DOC-voit:P000091",
+   "DOC-voit:P000092",
+   "DOC-voit:P000093",
+   "DOC-voit:P000094",
+   "DOC-voit:P000095",
+   "DOC-voit:P000096",
+   "DOC-voit:P000097",
+   "DOC-voit:P000098",
+   "DOC-voit:P000099"
+  ]
+ },
+ "agreement": {
+  "title": null,
+  "industry": null,
+  "licensed_ip": null,
+  "duration": null,
+  "territory": null,
+  "exclusivity": null,
+  "contractual_status": null,
+  "licensor": "Voit Corporation",
+  "licensee": "Sport Supply Group Inc.",
+  "execution_date": "2010-01-01",
+  "effective_date": "2010-01-01",
+  "field_evidence": {
+   "licensor": [
+    "C1-E001",
+    "C1-E002",
+    "C1-E003",
+    "C1-E004"
+   ],
+   "licensee": [
+    "C1-E001",
+    "C1-E002",
+    "C1-E003",
+    "C1-E004",
+    "C1-E005"
+   ]
+  },
+  "other_material_terms": [
+   {
+    "category": "TERMINATION",
+    "text": "24-month Sell-Off Period after termination (section 13); 4% of Net Sales, no Minimum Royalty.",
+    "evidence_ids": [
+     "C4-E025",
+     "C4-E026"
+    ]
+   }
+  ]
+ },
+ "amendment_status": "NOT_CHECKED",
+ "evidence": [
+  {
+   "evidence_id": "C1-E001",
+   "passage_id": "DOC-voit:P000001",
+   "quote": "This License Agreement is made and entered into as of the 1st day of January",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E002",
+   "passage_id": "DOC-voit:P000002",
+   "quote": "2010 (the “Effective Date”) by and between Voit Corporation, a Texas corporation",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E003",
+   "passage_id": "DOC-voit:P000003",
+   "quote": "with offices at 4414 Centerview Drive, Suite 204, San Antonio TX 78228",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E004",
+   "passage_id": "DOC-voit:P000004",
+   "quote": "(“Licensor”), and Sport Supply Group Inc., a Delaware corporation with offices",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E005",
+   "passage_id": "DOC-voit:P000005",
+   "quote": "at 1901 Diplomat Drive, Farmers Branch, TX 75234 (“Licensee”). Capitalized terms",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E006",
+   "passage_id": "DOC-voit:P000008",
+   "quote": "(h) “Minimum Royalty” shall mean, for each Contract Year during the Initial",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E007",
+   "passage_id": "DOC-voit:P000009",
+   "quote": "Term, an amount equal to $130,000. Thereafter, the Minimum Royalty may be",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E008",
+   "passage_id": "DOC-voit:P000010",
+   "quote": "increased pursuant to the terms of this Agreement.",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E009",
+   "passage_id": "DOC-voit:P000035",
+   "quote": "four percent (4%) of all Net Sales during that Contract Year (“Royalty”) minus",
+   "role": "RATE"
+  },
+  {
+   "evidence_id": "C1-E010",
+   "passage_id": "DOC-voit:P000033",
+   "quote": "(b) Within thirty (30) days after the end of each Contract Year, Licensee shall",
+   "role": "CONDITION"
+  },
+  {
+   "evidence_id": "C1-E011",
+   "passage_id": "DOC-voit:P000011",
+   "quote": "(i) “Net Sales” shall mean the total dollar amount of gross sales by Licensee of",
+   "role": "BASE"
+  },
+  {
+   "evidence_id": "C1-E012",
+   "passage_id": "DOC-voit:P000039",
+   "quote": "(d) Licensee agrees to pay interest at the lesser of (i) twelve (12%) percent",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E013",
+   "passage_id": "DOC-voit:P000040",
+   "quote": "per annum or (ii) the maximum rate permitted by law on Royalties or Minimum",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E014",
+   "passage_id": "DOC-voit:P000054",
+   "quote": "affiliates. Such Royalty Report shall be submitted whether or not they reflect",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E015",
+   "passage_id": "DOC-voit:P000055",
+   "quote": "any sales. Failure to submit timely reports and/or any payments will incur an",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C1-E016",
+   "passage_id": "DOC-voit:P000056",
+   "quote": "additional charge of one (1%) per month on any balance unpaid as of the",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C4-E017",
+   "passage_id": "DOC-voit:P000092",
+   "quote": "liable to pay royalties at a rate equal to four percent (4%) of all Net Sales",
+   "role": "RATE"
+  },
+  {
+   "evidence_id": "C4-E018",
+   "passage_id": "DOC-voit:P000097",
+   "quote": "only be liable to pay royalties at a rate equal to four percent (4%) of all Net",
+   "role": "RATE"
+  },
+  {
+   "evidence_id": "C4-E019",
+   "passage_id": "DOC-voit:P000092",
+   "quote": "liable to pay royalties at a rate equal to four percent (4%) of all Net Sales",
+   "role": "BASE"
+  },
+  {
+   "evidence_id": "C4-E020",
+   "passage_id": "DOC-voit:P000097",
+   "quote": "only be liable to pay royalties at a rate equal to four percent (4%) of all Net",
+   "role": "BASE"
+  },
+  {
+   "evidence_id": "C4-E021",
+   "passage_id": "DOC-voit:P000089",
+   "quote": "Agreement is terminated during a Contract Year in which Licensee has paid a",
+   "role": "CONDITION"
+  },
+  {
+   "evidence_id": "C4-E022",
+   "passage_id": "DOC-voit:P000093",
+   "quote": "during the subsequent Contract Years in the Sell-Off Period with no obligation",
+   "role": "CONDITION"
+  },
+  {
+   "evidence_id": "C4-E023",
+   "passage_id": "DOC-voit:P000095",
+   "quote": "herein, if this Agreement is terminated during a Contract Year in which Licensee",
+   "role": "CONDITION"
+  },
+  {
+   "evidence_id": "C4-E024",
+   "passage_id": "DOC-voit:P000098",
+   "quote": "Sales during the entire Sell-Off Period with no obligation to pay a Minimum",
+   "role": "CONDITION"
+  },
+  {
+   "evidence_id": "C4-E025",
+   "passage_id": "DOC-voit:P000062",
+   "quote": "(ii) For twenty-four (24) months (the “Sell-Off Period”) following the",
+   "role": "OTHER"
+  },
+  {
+   "evidence_id": "C4-E026",
+   "passage_id": "DOC-voit:P000063",
+   "quote": "termination of this Agreement in accordance with the provisions of Section 13,",
+   "role": "OTHER"
+  }
+ ],
+ "royalty_terms": [
+  {
+   "term_id": "C1-R1",
+   "family": "PRODUCT_SALES",
+   "structure": "FLAT",
+   "disclosure_status": "DISCLOSED",
+   "rate_value": "4",
+   "rate_unit": "PERCENT",
+   "base": "Net Sales",
+   "base_definition": null,
+   "product_scope": "All Licensee Products",
+   "territory_scope": null,
+   "effective_period": "Each Contract Year",
+   "conditions": [
+    {
+     "text": "§4(b): positive difference payable within 30 days after end of each Contract Year.",
+     "evidence_ids": [
+      "C1-E010"
+     ]
+    }
+   ],
+   "adjustments": [],
+   "tiers": [],
+   "evidence_ids": [
+    "C1-E009",
+    "C1-E011",
+    "C1-E010"
+   ],
+   "rate_evidence_ids": [
+    "C1-E009"
+   ],
+   "base_evidence_ids": [
+    "C1-E011"
+   ]
+  },
+  {
+   "term_id": "C4-R1",
+   "family": "PRODUCT_SALES",
+   "structure": "FLAT",
+   "disclosure_status": "DISCLOSED",
+   "rate_value": "4",
+   "rate_unit": "PERCENT",
+   "base": "Net Sales",
+   "base_definition": null,
+   "product_scope": "All Licensee Products",
+   "territory_scope": null,
+   "effective_period": "Sell-Off Period (24 months following termination)",
+   "conditions": [
+    {
+     "text": "§13(h): if the minimum was already paid in the termination year, 4% of Net Sales without a minimum in subsequent sell-off years.",
+     "evidence_ids": [
+      "C4-E021"
+     ]
+    }
+   ],
+   "adjustments": [],
+   "tiers": [],
+   "evidence_ids": [
+    "C4-E017",
+    "C4-E018",
+    "C4-E019",
+    "C4-E020",
+    "C4-E021",
+    "C4-E022",
+    "C4-E023",
+    "C4-E024"
+   ],
+   "rate_evidence_ids": [
+    "C4-E017",
+    "C4-E018"
+   ],
+   "base_evidence_ids": [
+    "C4-E019",
+    "C4-E020"
+   ]
+  }
+ ],
+ "other_payments": [
+  {
+   "payment_id": "C1-P1",
+   "kind": "MINIMUM_ROYALTY",
+   "amount_value": "130000",
+   "currency": "USD",
+   "disclosure_status": "DISCLOSED",
+   "basis": "§1(h), §4(a): annual Minimum Royalty; prepaid by January 30 each Contract Year, credited against 4% earned royalty.",
+   "condition": "During initial 5-year term; may increase once per completed five-year period.",
+   "evidence_ids": [
+    "C1-E006",
+    "C1-E007",
+    "C1-E008"
+   ]
+  },
+  {
+   "payment_id": "C1-P2",
+   "kind": "INTEREST",
+   "amount_value": null,
+   "currency": null,
+   "disclosure_status": "DISCLOSED",
+   "basis": "§4(d): annual interest at lesser of 12% or legal maximum.",
+   "condition": "On unpaid royalty more than 30 days after written notice.",
+   "evidence_ids": [
+    "C1-E012",
+    "C1-E013"
+   ]
+  },
+  {
+   "payment_id": "C3-P1",
+   "kind": "INTEREST",
+   "amount_value": null,
+   "currency": null,
+   "disclosure_status": "DISCLOSED",
+   "basis": "§11(b): additional charge of 1% per month on unpaid balance.",
+   "condition": "Late reports and/or payments; balance unpaid as of day 30 following written notice of failure to timely pay.",
+   "evidence_ids": [
+    "C1-E014",
+    "C1-E015",
+    "C1-E016"
+   ]
+  }
+ ],
+ "dispositions": [
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E001"
+   ],
+   "passage_id": "DOC-voit:P000001",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E002"
+   ],
+   "passage_id": "DOC-voit:P000002",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E003"
+   ],
+   "passage_id": "DOC-voit:P000003",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E004"
+   ],
+   "passage_id": "DOC-voit:P000004",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E005"
+   ],
+   "passage_id": "DOC-voit:P000005",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000006",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000007",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E006"
+   ],
+   "passage_id": "DOC-voit:P000008",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E007"
+   ],
+   "passage_id": "DOC-voit:P000009",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E008"
+   ],
+   "passage_id": "DOC-voit:P000010",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E011"
+   ],
+   "passage_id": "DOC-voit:P000011",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000012",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000013",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000014",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000015",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000016",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000017",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000018",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000019",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000020",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000021",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000022",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000023",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000024",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000025",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000026",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000027",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000028",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000029",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000030",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000031",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000032",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E010"
+   ],
+   "passage_id": "DOC-voit:P000033",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000034",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E009"
+   ],
+   "passage_id": "DOC-voit:P000035",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000036",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000037",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000038",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E012"
+   ],
+   "passage_id": "DOC-voit:P000039",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E013"
+   ],
+   "passage_id": "DOC-voit:P000040",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000041",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000042",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000043",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000044",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000045",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000046",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000047",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000048",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000049",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000050",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000051",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000052",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000053",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E014"
+   ],
+   "passage_id": "DOC-voit:P000054",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E015"
+   ],
+   "passage_id": "DOC-voit:P000055",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C1-E016"
+   ],
+   "passage_id": "DOC-voit:P000056",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000057",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000058",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000059",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000060",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000061",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C4-E025"
+   ],
+   "passage_id": "DOC-voit:P000062",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C4-E026"
+   ],
+   "passage_id": "DOC-voit:P000063",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000064",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000065",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000066",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000067",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000068",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000069",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000070",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000071",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000072",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000073",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000074",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000075",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000076",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000077",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000078",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000079",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000080",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000081",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000082",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000083",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000084",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000085",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000086",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000087",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000088",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C4-E021"
+   ],
+   "passage_id": "DOC-voit:P000089",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000090",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000091",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C4-E017",
+    "C4-E019"
+   ],
+   "passage_id": "DOC-voit:P000092",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C4-E022"
+   ],
+   "passage_id": "DOC-voit:P000093",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000094",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C4-E023"
+   ],
+   "passage_id": "DOC-voit:P000095",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000096",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C4-E018",
+    "C4-E020"
+   ],
+   "passage_id": "DOC-voit:P000097",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "OTHER_PAYMENT"
+   ],
+   "evidence_ids": [
+    "C4-E024"
+   ],
+   "passage_id": "DOC-voit:P000098",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  },
+  {
+   "categories": [
+    "BACKGROUND"
+   ],
+   "evidence_ids": [],
+   "passage_id": "DOC-voit:P000099",
+   "payment_ids": [],
+   "percentage_dispositions": [],
+   "rationale": "Fixture passage; no economic term in this line.",
+   "term_ids": []
+  }
+ ],
+ "open_issues": []
+}

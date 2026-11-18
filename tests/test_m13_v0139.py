@@ -50,7 +50,9 @@ class RateCells(unittest.TestCase):
             h=raw['Royalty Terms'][0];r=raw['Royalty Terms'][1]
             r[h.index('Rate_Unit')]='CURRENCY_PER_UNIT';r[h.index('Rate_Numeric')]=2.5
         w,_=self._cells(m)
-        c=w[NAMES[0]]['D8'];self.assertEqual(c.value,2.5);self.assertNotEqual(c.number_format,'0.00%')
+        # v0.13.12: a per-unit amount is no longer written to the percent column; it has its own column (E)
+        c=w[NAMES[0]]['D8'];self.assertIsNone(c.value)
+        c=w[NAMES[0]]['E8'];self.assertEqual(c.value,'2.5 per unit (currency not stated)');self.assertNotEqual(c.number_format,'0.00%')
 
     def test_benchmark_rule_still_uses_percent_points(self):
         def m(raw):
