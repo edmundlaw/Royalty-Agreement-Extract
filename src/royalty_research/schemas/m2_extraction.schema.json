@@ -310,6 +310,7 @@
             "COPYRIGHT",
             "SOFTWARE",
             "KNOW_HOW",
+            "TECHNOLOGY",
             "TRADE_SECRET",
             "FRANCHISE",
             "MIXED",
@@ -324,6 +325,24 @@
             "INFERRED",
             null
           ]
+        },
+        "licensed_ip_components": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "TRADEMARK_BRAND",
+              "PATENT",
+              "COPYRIGHT",
+              "SOFTWARE",
+              "KNOW_HOW",
+              "TECHNOLOGY",
+              "TRADE_SECRET",
+              "FRANCHISE"
+            ]
+          }
         },
         "licensed_ip_nature_details": {
           "type": [

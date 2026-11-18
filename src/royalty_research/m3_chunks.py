@@ -107,6 +107,10 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
         for k in base_fields:
             value=part_agreement.get(k)
             if value is None:continue
+            if isinstance(value,list):
+                # List-valued agreement fields (licensed_ip_components) are the union over the reading tasks.
+                agreement[k]=(agreement[k] or [])+[x for x in value if x not in (agreement[k] or [])]
+                continue
             if agreement[k] is not None and agreement[k]!=value:
                 # RF-07 (v0.8.1-review): two reading tasks describe the same party or date in
                 # different words (live NeurogesX run: "NeuroGesX, Inc." vs "NeurogesX, Inc."),

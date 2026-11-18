@@ -326,9 +326,9 @@ def source_check(mapping: dict, extraction: dict) -> dict:
     # classification semantics are still an analyst/independent-reader judgement.
     header_refs = agreement.get('field_evidence') or {}
     inferred = agreement.get('licensed_ip_nature_basis') == 'INFERRED'
-    for key in ('licensed_ip_nature', 'licensed_ip_nature_details', 'sublicensing_rights', 'exclusivity_scope', 'related_party'):
+    for key in ('licensed_ip_nature', 'licensed_ip_components', 'licensed_ip_nature_details', 'sublicensing_rights', 'exclusivity_scope', 'related_party'):
         value = agreement.get(key)
-        if value is None or (key == 'licensed_ip_nature' and value == 'UNDETERMINED') or \
+        if value is None or (key == 'licensed_ip_components' and not value) or (key == 'licensed_ip_nature' and value == 'UNDETERMINED') or \
                 (key == 'related_party' and value == 'NOT_STATED'):
             continue
         refs = _ids(header_refs.get(key))
@@ -336,10 +336,15 @@ def source_check(mapping: dict, extraction: dict) -> dict:
             # An INFERRED nature may cite the context it was inferred from
             # (patent-term wording, the asset description) under a neighbouring field.
             refs = [r for k in ('licensed_ip_nature_details', 'licensed_ip', 'duration') for r in _ids(header_refs.get(k))]
+        if key == 'licensed_ip_components' and not refs:
+            # Same leniency as the nature: the components may be cited under licensed_ip_nature,
+            # or (when INFERRED) under the context they were inferred from.
+            refs = [r for k in (('licensed_ip_nature', 'licensed_ip_nature_details', 'licensed_ip', 'duration') if inferred
+                                else ('licensed_ip_nature',)) for r in _ids(header_refs.get(k))]
         if key == 'licensed_ip_nature_details' and not refs:
             # The details only explain the nature; FIRST_READER rule 10 has the reader cite the evidence
             # under field_evidence.licensed_ip_nature (live OSR/VXM01 run, v0.13.7).
-            refs = [r for k in ('licensed_ip_nature', 'licensed_ip', 'duration') for r in _ids(header_refs.get(k))]
+            refs = [r for k in ('licensed_ip_nature', 'licensed_ip_components', 'licensed_ip', 'duration') for r in _ids(header_refs.get(k))]
         known(refs, f'agreement.{key}')
         if not refs:
             err('M13_AGREEMENT_FIELD_WITHOUT_EVIDENCE',
