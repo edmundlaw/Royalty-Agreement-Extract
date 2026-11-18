@@ -164,7 +164,7 @@ def classify_other_term(category, text):
     cat=str(category or 'OTHER').upper(); body=str(text or '')
     for label,rx in _KEY_RULES:
         if label in _CATEGORY_SENSITIVE and cat in ('AUDIT_REPORTING','ASSIGNMENT'):continue   # e.g. 'net sales' inside an audit clause
-        if rx.search(body):return KEY,label
+        if rx.search(body):return KEY,_KEY_CATEGORIES.get(cat,label)   # the reader's own key category names it
     if _STRONG_ADMIN.search(body):return ADMIN,'ADMIN'
     if cat=='OTHER' and _WEAK_ADMIN.search(body) and not _TERM_TALK.search(body):return ADMIN,'ADMIN'
     if cat in _KEY_CATEGORIES:

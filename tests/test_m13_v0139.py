@@ -190,4 +190,14 @@ class OtherTermTiers(unittest.TestCase):
             self.assertEqual(ws['G10'].font.color.rgb[-6:],'808080');self.assertNotEqual(ws['G8'].font.color.rgb[-6:],'808080')
 
 
+
+class KeyCategoryLabelTests(unittest.TestCase):
+    def test_reader_key_category_names_the_term(self):
+        from royalty_research.m13_research_export import classify_other_term,key_terms_summary
+        text='Earned royalty payments and reports continue after termination for Licensed Products made before termination.'
+        self.assertEqual(classify_other_term('TERMINATION',text),('KEY','TERM/TERMINATION'))
+        self.assertIn('TERM/TERMINATION',key_terms_summary([{'category':'SCOPE','text':'Field of Use: All Fields.'},
+                                                         {'category':'TERMINATION','text':text}]))
+
+
 if __name__=='__main__':unittest.main()
