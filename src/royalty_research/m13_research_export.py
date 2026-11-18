@@ -221,14 +221,18 @@ def _record_error_codes(term_id, source_errors):
     return out
 
 
-def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc_state=None, record_errors=None):
+def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc_state=None, record_errors=None,
+                     tier_summary=None, unresolved=False):
     """Python rule, zero AI. Returns ('YES'|'NO', note). Any one reason makes it NO.
 
     nature is the reader's own licensed_ip_nature; grant_found is True/False when the source text was
     scanned for licence-grant wording, None when no text is available (then that reason is skipped).
     qc_state is the document's QC state: SOURCE_CHECK_FAILED, SECOND_READER_FAILED_SOURCE_CHECK and
     TWO_READERS_DIFFER force NO ("needs review: <state>" is the first reason). record_errors lists the
-    source-check error codes tied to this very row; any of them forces NO. TWO_READERS_AGREE_ON_NUMBERS
+    source-check error codes tied to this very row; any of them forces NO. tier_summary (e.g. '4%-7%') is given when
+    the term has disclosed tiers: the blank scalar rate is then not "undisclosed" but "tiered, assess at point of use"
+    (still NO: a tiered rate is not one number). unresolved marks an unrated cross-chunk duplicate that Python could
+    not attach to one real term (sheet 05 has the HIGH open issue). TWO_READERS_AGREE_ON_NUMBERS
     stays allowed (same numbers in the same clauses) with a note to read the STRUCTURE differences.
     SINGLE_READER_NOT_CHECKED is the normal mode and stays allowed.
     """
@@ -241,7 +245,11 @@ def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc
     if family in PASS_THROUGH_FAMILIES:reasons.append('pass-through of sublicensee receipts, not a sales royalty')
     rate=term.get('Rate_Numeric')
     unit=str(term.get('Rate_Unit') or '').upper()
-    if rate in (None,'') or term.get('Disclosure_Status') in ('REDACTED','AMBIGUOUS','NOT_VERIFIED') or unit in ('UNKNOWN','REDACTED'):
+    if unresolved:
+        reasons.append('unresolved cross-chunk duplicate \u2013 see sheet 05')
+    elif rate in (None,'') and tier_summary and term.get('Disclosure_Status') not in ('REDACTED','AMBIGUOUS','NOT_VERIFIED'):
+        reasons.append('tiered rate \u2013 assess at point of use')
+    elif rate in (None,'') or term.get('Disclosure_Status') in ('REDACTED','AMBIGUOUS','NOT_VERIFIED') or unit in ('UNKNOWN','REDACTED'):
         reasons.append('rate not disclosed or unclear')
     else:
         try:
@@ -254,6 +262,41 @@ def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc
     note='No exclusion rule triggered; still confirm at point of use'
     if qc_state=='TWO_READERS_AGREE_ON_NUMBERS':note+='; both readers agree on the numbers, check sheet 05 STRUCTURE differences'
     return 'YES',note
+
+
+def _amount_value(text):
+    from .m13_two_reader import reader_value
+    try:return reader_value(text)
+    except Exception:return None
+
+
+def _best_evidence(ids, did, evid_by_doc, amount_text=None):
+    """Evidence to display for a figure: a quotation that contains the reported amount (digits compared after
+    normalising "$20,000" / "20000" / "9%" / "nine percent"), else RATE-role evidence, else the first one."""
+    from .m13_two_reader import numbers_in_text
+    items=[evid_by_doc.get((did,i)) for i in ids]
+    items=[e for e in items if e]
+    if not items:return None
+    want=_amount_value(amount_text) if amount_text not in (None,'') else None
+    if want is not None:
+        for e in items:
+            if any(t['value']==want for t in numbers_in_text(e.get('Exact_Quotation') or '')):return e
+    for e in items:
+        if e.get('Role')=='RATE':return e
+    return items[0]
+
+
+def _tier_summary(tiers):
+    """'4%-7%' (min-max of the disclosed tier rates) for sheet 01; None when no tier carries a numeric rate."""
+    vals=[];unit=None
+    for z in tiers:
+        try:vals.append(float(z.get('Rate_Numeric')))
+        except (TypeError,ValueError):continue
+        unit=unit or str(z.get('Rate_Unit') or '').upper()
+    if not vals:return None
+    lo,hi=min(vals),max(vals)
+    suffix='%' if unit in ('PERCENT','PCT') else (' '+unit.lower().replace('_',' ') if unit else '')
+    return f'{lo:g}{suffix}' if lo==hi else f'{lo:g}{suffix}\u2013{hi:g}{suffix}'
 
 
 def _records(rows, name):
@@ -309,8 +352,10 @@ def _payment_summary(payments: list[dict], kinds: set[str], *, minimum=False, ro
         if minimum and kind=='GUARANTEE':
             # 'GUARANTEE' may be e.g. share-price or performance guarantees.
             # Only explicitly royalty/minimum-labelled guarantees go here.
-            description=' '.join(str(p.get(k) or '') for k in ('Basis','Condition'))
-            if not re.match(r'\s*(?:a\s+|an\s+|the\s+)?(?:minimum\s+(?:annual\s+)?royalt(?:y|ies)|royalt(?:y|ies)\s+minimum|guaranteed\s+minimum\s+royalt(?:y|ies))\b',description,re.I):
+            # v0.13.11 (B4): the label may open the Basis OR the Condition field (it used to be tested only at the
+            # start of "Basis Condition" joined together).
+            label=re.compile(r'\s*(?:a\s+|an\s+|the\s+)?(?:minimum\s+(?:annual\s+)?royalt(?:y|ies)|royalt(?:y|ies)\s+minimum|guaranteed\s+minimum\s+royalt(?:y|ies))\b',re.I)
+            if not any(label.match(str(p.get(k) or '')) for k in ('Basis','Condition')):
                 continue
         raw=p.get('Amount_Text')
         if raw is None or str(raw).strip()=='':
@@ -361,6 +406,13 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
                 if evidence_id:
                     ref=f'{table}:{item[id_field]}'
                     if ref not in links[(item['Document_ID'],evidence_id)]:links[(item['Document_ID'],evidence_id)].append(ref)
+    tiers_by_term=defaultdict(list)
+    for z in _records(rows,'Tiers'):tiers_by_term[(z['Document_ID'],z['Term_ID'])].append(z)
+    unresolved_terms=set()
+    for issue in _records(rows,'Open Issues'):
+        if issue.get('Kind')=='UNRESOLVED_DUPLICATE':
+            m_=re.search(r'\bterm (\S+?) has no rate',str(issue.get('Description') or ''))
+            if m_:unresolved_terms.add((issue.get('Document_ID'),m_.group(1)))
     result={n:[HEADERS[n][:]] for n in NAMES}
     payments_by_doc=defaultdict(list)
     for p in payments:payments_by_doc[p['Document_ID']].append(p)
@@ -404,11 +456,13 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
                 word=_related_hint(field_ev('licensed_ip','contractual_status') + [e.get('Exact_Quotation') or '' for (d_,_i),e in evid_by_doc.items() if d_==did]
                                    + list(source_texts.get(did) or []))
                 if word:related=f'YES (keyword hint: "{word}")'
+        tier_text=_tier_summary(tiers_by_term.get((did,t.get('Term_ID')),[])) if t.get('Disclosure_Status') not in ('REDACTED','AMBIGUOUS','NOT_VERIFIED') else None
         grant_text=' '.join(list(source_texts.get(did) or [])+[e.get('Exact_Quotation') or '' for (d_,_i),e in evid_by_doc.items() if d_==did])
         usable,usable_note=benchmark_usable(t,related,doc.get('Contract_Status'),nature=agreement.get('licensed_ip_nature'),
                                             grant_found=(grant_hits(grant_text)>0 if grant_text.strip() else None),
                                             qc_state=t.get('QC_State') or doc.get('Extraction_Status'),
-                                            record_errors=_record_error_codes(t.get('Term_ID'),(source_errors or {}).get(did)))
+                                            record_errors=_record_error_codes(t.get('Term_ID'),(source_errors or {}).get(did)),
+                                            tier_summary=tier_text,unresolved=(did,t.get('Term_ID')) in unresolved_terms)
         license_text=doc.get('Licensed_IP') or agreement.get('licensed_ip')
         rights=agreement.get('sublicensing_rights') or 'NOT_ASSESSED'
         material=agreement.get('other_material_terms') or []
@@ -424,11 +478,15 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
         payment_ids=_payment_references(payments_present)
         exclusivity_scope=agreement.get('exclusivity_scope') or 'NOT_ASSESSED'
         rate_ids=_join(t.get('Rate_Evidence_IDs'))
-        evid_id=next(iter(_ids(t.get('Rate_Evidence_IDs'))),'')
-        quote=(evid_by_doc.get((did,evid_id)) or {}).get('Exact_Quotation') or ''
+        quote=(_best_evidence(_ids(t.get('Rate_Evidence_IDs')),did,evid_by_doc,t.get('Rate_Value_Text')) or {}).get('Exact_Quotation') or ''
+        rate_reported=t.get('Rate_Value_Text')
+        if rate_reported in (None,'') and tier_text:
+            # Tiered / hybrid / formula term with disclosed tiers: the numeric cell stays blank (never one collapsed
+            # number, sorting unaffected); the reported-rate cell says what the tiers span.
+            rate_reported=f"{str(t.get('Structure') or 'TIERED').upper()} {tier_text} \u2013 see sheet 02"
         action='Review CORE differences' if doc.get('Extraction_Status')=='TWO_READERS_DIFFER' else 'Point-of-use source review'
         result[NAMES[0]].append([
-            t.get('Observation_ID'),nature,license_text,t.get('Rate_Numeric'),usable,usable_note,t.get('Rate_Value_Text'),t.get('Family'),t.get('Structure'),
+            t.get('Observation_ID'),nature,license_text,t.get('Rate_Numeric'),usable,usable_note,rate_reported,t.get('Family'),t.get('Structure'),
             t.get('Rate_Unit'),t.get('Royalty_Base'),t.get('Product_Scope'),t.get('Licensor') or doc.get('Licensor'),
             t.get('Licensee') or doc.get('Licensee'),related,doc.get('Industry'),t.get('Territory') or doc.get('Territory'),
             doc.get('Exclusivity') if doc.get('Exclusivity') is not None else 'NOT_ASSESSED',
@@ -476,8 +534,7 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
 
     for p in payments:
         doc=docs.get(p['Document_ID'],{})
-        evidence_id=next(iter(_ids(p.get('Evidence_IDs'))),'')
-        q=(evid_by_doc.get((p['Document_ID'],evidence_id)) or {}).get('Exact_Quotation')
+        q=(_best_evidence(_ids(p.get('Evidence_IDs')),p['Document_ID'],evid_by_doc,p.get('Amount_Text')) or {}).get('Exact_Quotation')
         result[NAMES[2]].append([p.get('Payment_ID'),p.get('Kind'),p.get('Amount_Text'),
             p.get('Amount_Numeric'),p.get('Currency'),p.get('Basis'),p.get('Condition'),
             p.get('Evidence_IDs'),q,p.get('Source_URL'),p.get('QC_State'),p.get('Licensor') or doc.get('Licensor'),

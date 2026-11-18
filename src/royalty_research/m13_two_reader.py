@@ -229,8 +229,7 @@ def source_check(mapping: dict, extraction: dict) -> dict:
         if pid not in passages:
             err('M13_EVIDENCE_PASSAGE_UNKNOWN', 'Evidence cites a passage that is not in the source', eid); continue
         text = passages[pid]['text']
-        if (not isinstance(quote, str) or not quote.strip()
-                or (len(quote.strip()) < 8 and quote.strip() != text.strip())):
+        if not isinstance(quote, str) or not quote.strip():
             err('M13_QUOTE_NOT_IN_SOURCE', 'Quotation is not an exact part of the cited passage', eid)
         elif quote not in text:
             # Live case (KemPharm, Codex, 2026-11-15): "the table setting forth" quoted from "The table setting
@@ -239,6 +238,11 @@ def source_check(mapping: dict, extraction: dict) -> dict:
                 warn('M13_QUOTE_DIFFERS_IN_CASE_OR_SPACING', 'Quotation matches the passage except for letter case, spacing or quote marks', eid)
             else:
                 err('M13_QUOTE_NOT_IN_SOURCE', 'Quotation is not an exact part of the cited passage', eid)
+        if isinstance(quote, str) and quote.strip() and len(quote.strip()) < 8 and quote.strip() != text.strip() and quote in text:
+            # v0.13.11: a short exact quote ("4%") is allowed (it is still checked as an exact part of the passage);
+            # it is only weak evidence, so the record gets a warning instead of the whole document failing.
+            warn('M13_QUOTE_VERY_SHORT', f'Quotation is only {len(quote.strip())} characters; prefer the shortest clause-level span '
+                 'that shows the figure and its basis', eid)
     done('QUOTES_ARE_IN_SOURCE', {'M13_EVIDENCE_INVALID', 'M13_EVIDENCE_DUPLICATE', 'M13_EVIDENCE_PASSAGE_UNKNOWN',
                                  'M13_QUOTE_NOT_IN_SOURCE'})
 

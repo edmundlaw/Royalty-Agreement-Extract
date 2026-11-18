@@ -1,4 +1,4 @@
-# Royalty Research M13 v0.13.10
+# Royalty Research M13 v0.13.11
 
 Start with [RUN_M13.md](RUN_M13.md). Production uses complete source packets by default. The separate `lean_research.py` excerpt path is preliminary triage only.
 

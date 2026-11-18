@@ -1,4 +1,4 @@
-# M13 v0.13.10 — routine full-source run
+# M13 v0.13.11 — routine full-source run
 
 ## Routine use
 
@@ -17,6 +17,8 @@ Which agreements are read (fixed Python rules, zero AI tokens; full list in `bat
 These rules trade completeness for allowance: a genuine licence with little royalty wording can be skipped. Nothing is deleted; skipped items stay listed.
 
 **Production path:** `scripts/m13_prod.py` prepares a complete source packet for every selected agreement. The `lean_research.py` excerpt path is preliminary triage only. AI output is never certified as contract-complete by Python.
+
+**v0.13.11 fixes:** a short exact quote such as `4%` no longer fails the whole document (it gets a `M13_QUOTE_VERY_SHORT` warning; prefer the shortest clause-level span, a few words). A cross-chunk unrated royalty is folded into the matching product scope ("All other X" never matches a named X); when it still cannot be placed it stays as a row, benchmark NO `unresolved cross-chunk duplicate - see sheet 05`, with a HIGH open issue. Tiered / hybrid terms with disclosed tiers show `TIERED 4%-7% - see sheet 02` in `Royalty rate as reported` (numeric cell stays blank) and the note `tiered rate - assess at point of use`. Merged tiers now carry numeric bounds, calculation method and period where the cited quote states them. Sheet 01 / 03 quotations prefer the quote that contains the figure.
 
 **v0.13.10 consolidation:** Python folds a royalty seen without its rate in one chunk into the same royalty quoted in another, merges threshold variants into one term with tiers, and turns anti-stacking / offset / floor terms into adjustments of the royalty they reduce; every merge is listed in sheet 05 as `CONSOLIDATED: ...` and the unconsolidated reading is kept in the output folder.
 

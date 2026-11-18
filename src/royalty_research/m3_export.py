@@ -38,13 +38,20 @@ HEADERS={
 }
 
 
-def _number(value):
+_PERCENT_TAIL=re.compile(r"\s*(?:%|per\s*cent|percent)\s*$",re.I)
+
+
+def _number(value,percent=False):
     """Add optional Excel-sortable value while preserving exact textual amount.
 
     Excel numeric precision is limited; return blank if more than 15 significant
     digits are present. Redactions and formulas remain absent, never zero.
     """
     from .m2_validation import _plain_number   # RF-08: "$500,000" / "50,000.00" are numbers
+    if percent and isinstance(value,str):
+        # v0.13.11 (C1): a rate written "5%", "5.5 %" or "5 percent" is the number 5 (percent-points; the unit field
+        # still says PERCENT). Only for rate fields: an amount or threshold with a % sign is not stripped.
+        value=_PERCENT_TAIL.sub("",value)
     value=_plain_number(value)
     if not isinstance(value,str) or not re.fullmatch(r"(?:0|[1-9]\d*)(?:\.\d+)?",value):
         return None
@@ -192,14 +199,14 @@ def build_rows(root, linkage=None):
         for t in ext.get("royalty_terms",[]):
             obs=f"{did}:{t['term_id']}"
             rows["Royalty Terms"].append(_row("Royalty Terms",obs,did,gid,t["term_id"],t["family"],t["structure"],
-                t.get("rate_value"),_number(t.get("rate_value")),t.get("rate_unit"),t.get("base"),t.get("base_definition"),
+                t.get("rate_value"),_number(t.get("rate_value"),True),t.get("rate_unit"),t.get("base"),t.get("base_definition"),
                 t.get("product_scope"),t.get("territory_scope"),t.get("effective_period"),
                 t.get("disclosure_status"),len(t.get("tiers",[])),len(t.get("conditions",[])),
                 len(t.get("adjustments",[])),t.get("evidence_ids"),t.get("rate_evidence_ids"),
                 t.get("base_evidence_ids"),url,doc["state"],"HISTORICAL_NOT_CURRENT") )
             for tier in t.get("tiers",[]):
                 rows["Tiers"].append(_row("Tiers",obs,did,gid,t["term_id"],tier.get("sequence"),
-                    tier.get("rate_value"),_number(tier.get("rate_value")),tier.get("rate_unit"),tier.get("lower"),_number(tier.get("lower")),tier.get("upper"),_number(tier.get("upper")),
+                    tier.get("rate_value"),_number(tier.get("rate_value"),True),tier.get("rate_unit"),tier.get("lower"),_number(tier.get("lower")),tier.get("upper"),_number(tier.get("upper")),
                     tier.get("calculation"),tier.get("measurement_period"),tier.get("threshold_basis"),
                     tier.get("evidence_ids"),url,doc["state"]))
             for seq,cond in enumerate(t.get("conditions",[]),1):
