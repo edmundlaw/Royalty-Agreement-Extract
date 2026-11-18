@@ -253,5 +253,18 @@ class ChunkMergeTests(unittest.TestCase):
             self.assertIn('AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS',kinds)
         else:
             self.assertEqual(merged['agreement']['title'],'Contradictory title')
+    def test_redundant_material_term_evidence_is_accepted(self):
+        outputs=copy.deepcopy(self.outputs)
+        first=outputs[0]
+        eid=first['evidence'][0]['evidence_id']
+        first['agreement']['other_material_terms']=[
+            {'category':'SCOPE','text':'Scope stated in source','evidence_ids':[eid]}]
+        first['agreement'].setdefault('field_evidence',{})['other_material_terms']=[eid]
+        merged,_=merge_chunks(self.map,self.packet,outputs)
+        self.assertNotIn('other_material_terms',merged['agreement']['field_evidence'])
+        self.assertEqual(merged['agreement']['other_material_terms'][0]['evidence_ids'],[eid])
+        first['agreement']['field_evidence']['other_material_terms']=['unknown-evidence']
+        with self.assertRaisesRegex(ValueError,'Bad agreement evidence'):
+            merge_chunks(self.map,self.packet,outputs)
 
 if __name__=='__main__': unittest.main()

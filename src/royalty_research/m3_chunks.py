@@ -123,6 +123,13 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
         for material in (part_agreement.get("other_material_terms") or []):
             if material not in agreement["other_material_terms"]: agreement["other_material_terms"].append(material)
         for k,refs in (part_agreement.get("field_evidence") or {}).items():
+            if k == "other_material_terms" and isinstance(refs,list):
+                # Material terms carry their own evidence_ids. Some readers also
+                # repeat those IDs here; accept only an exact redundant list.
+                material_refs={eid for item in (part_agreement.get("other_material_terms") or [])
+                               for eid in item.get("evidence_ids",[])}
+                if all(isinstance(eid,str) for eid in refs) and set(refs)==material_refs:
+                    continue
             if k not in base_fields or not isinstance(refs,list):raise ValueError("Bad agreement evidence")
             agreement["field_evidence"].setdefault(k,[])
             for r in refs:
