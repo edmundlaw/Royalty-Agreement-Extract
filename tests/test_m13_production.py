@@ -441,6 +441,27 @@ class ResumeScript(unittest.TestCase):
             for value in ('11','-1','abc'):
                 self.assertEqual(self.sh('--resume',d,'--max-retries',value).returncode,2)
 
+    def test_live_resume_skips_combine_when_no_agreement_finished(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)
+            runs=root/'batch'/'runs'
+            for name in ('one','two'):
+                run=runs/name
+                run.mkdir(parents=True)
+                (run/'m13_run.json').write_text('{}')
+            (root/'run_info.json').write_text('{"start":"2026-01-01","end":"2026-01-31"}')
+            fake=root/'python'
+            fake.write_text("#!/bin/sh\nif [ \"$1\" = scripts/m13_prod.py ]; then\n  case \"$2\" in run) exit 0;; finalize) echo 'reader incomplete' >&2; exit 1;; combine) touch \"$TEST_COMBINED\"; exit 1;; esac\nfi\nexec /usr/bin/python3 \"$@\"\n")
+            fake.chmod(0o755)
+            env=dict(os.environ,ROYALTY_PYTHON=str(fake),ROYALTY_SEC_UA='Test test@example.com',TEST_COMBINED=str(root/'combined'),HOME=str(root))
+            r=subprocess.run(['bash',str(ROOT/'royalty.sh'),'--resume',d,'--go'],capture_output=True,text=True,env=env,timeout=30,cwd=ROOT)
+            self.assertEqual(r.returncode,1,r.stderr+r.stdout)
+            self.assertIn('2 agreement(s) unfinished',r.stdout)
+            self.assertIn('No workbook created: no agreements finished',r.stdout)
+            self.assertIn('./royalty.sh --resume',r.stdout)
+            self.assertFalse((root/'combined').exists())
+            self.assertNotIn('No finished M13 run found',r.stderr)
+
     def test_resume_preserves_reader_interrupt_exit(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d)

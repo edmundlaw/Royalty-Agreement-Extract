@@ -141,20 +141,26 @@ step "4/4 Finalize, combine, copy"
 [ "$START" != unknown ] || fail "date range unknown (no run_info.json or earlier workbook in $BATCH)"
 FINLOG="$BATCH/batch/finalize_errors.log"
 UNFINISHED=0
+READY=0
 for run in "$BATCH"/batch/runs/*/; do
   [ -f "$run/m13_run.json" ] || continue
   name="$(basename "$run")"
   if [ -f "$run/output/rows.json" ] || [ -f "$run/output_checked/rows.json" ]; then
-    echo "  $name: already finalized"; continue
+    echo "  $name: already finalized"; READY=$((READY+1)); continue
   fi
   if "$PY" scripts/m13_prod.py finalize --run "$run" >/dev/null 2>>"$FINLOG"; then
     echo "  $name: finalized"
+    READY=$((READY+1))
   else
     UNFINISHED=$((UNFINISHED+1))
     echo "  $name: NOT FINALIZED, left out of the workbook ($(tail -n 1 "$FINLOG" 2>/dev/null | cut -c1-200)). Details: $FINLOG"
   fi
 done
-[ "$UNFINISHED" -gt 0 ] && echo "  $UNFINISHED agreement(s) unfinished; finish them with: ./royalty.sh --resume $BATCH --go"
+[ "$UNFINISHED" -gt 0 ] && echo "  $UNFINISHED agreement(s) unfinished; resume with: ./royalty.sh --resume $BATCH --go (add --max-retries N if retries are authorized)"
+if [ "$READY" -eq 0 ]; then
+  echo "No workbook created: no agreements finished. Check the messages above and the candidate summary before resuming or starting a new batch."
+  exit 1
+fi
 BASE="Royalty_Research_${START}_${END}"
 SUFFIX=""
 if [ -e "$BATCH/$BASE.xlsx" ] || [ -e "$HOME/Downloads/$BASE.xlsx" ]; then   # never overwrite an earlier workbook

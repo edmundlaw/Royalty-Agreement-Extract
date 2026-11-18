@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import shlex
 import sys
 import time
 from pathlib import Path
@@ -209,8 +210,28 @@ def run_boundary(runs, *, max_calls, max_prompt_chars, max_reported_tokens=None,
             task=next((t for t in rs['tasks'] if t['state']!='CAPTURED_NOT_QC_APPROVED'),None)
             if task is None:break
             if task['state']!='PENDING':
+                print(f"Stopped: document {st.get('document_id', root.name)}, {next_reader}, "
+                      f"task {task['task_id']} is {task['state']}.", file=sys.stderr, flush=True)
+                if task['state'] in {'INTERRUPTED_REQUIRES_MANUAL_RELEASE','FAILED_REQUIRES_MANUAL_RETRY'}:
+                    print('Check that no reader holds the plan lock and inspect saved output first; '
+                          'recover an existing result with m4-recover-result if its receipt is missing. '
+                          'If recovery is not possible, use the royalty_research CLI subcommand '
+                          f"m4-authorize-retry --plan {shlex.quote(str(folder))} "
+                          f"--task-id {shlex.quote(task['task_id'])} and supply a --reason.",
+                          file=sys.stderr, flush=True)
+                else:
+                    print(f'Inspect the reader status and saved output in {folder} before proceeding.',
+                          file=sys.stderr, flush=True)
+                if rs.get('limit_stopped'):
+                    print('A subscription limit stop is active; check the account reset before m4-clear-limit.',
+                          file=sys.stderr, flush=True)
                 outcomes.append({'run':root.name,'status':'STOPPED_TASK_REQUIRES_MANUAL_ACTION','task':task['task_id']});stop=True;break
             if task['attempts']>=max_retries+1:
+                print(f"Stopped: document {st.get('document_id', root.name)}, {next_reader}, "
+                      f"task {task['task_id']} is {task['state']}; its authorized retry exceeds "
+                      f"--max-retries {max_retries}. Check for an active reader lock and recoverable "
+                      'saved output before proceeding. If neither applies, raise the retry budget to '
+                      f"--max-retries {task['attempts']}.", file=sys.stderr, flush=True)
                 outcomes.append({'run':root.name,'status':'STOPPED_RETRY_BUDGET','task':task['task_id']});stop=True;break
             prompt=folder/'prompts'/(task['task_id']+'.txt')
             if len(prompt.read_text())>max_prompt_chars:
