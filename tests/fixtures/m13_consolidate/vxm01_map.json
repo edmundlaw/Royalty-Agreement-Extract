@@ -1,0 +1,2201 @@
+{
+  "candidate_passages": [
+    "DOC-4f4103eea6e81d114e:P000001",
+    "DOC-4f4103eea6e81d114e:P000014",
+    "DOC-4f4103eea6e81d114e:P000015",
+    "DOC-4f4103eea6e81d114e:P000016",
+    "DOC-4f4103eea6e81d114e:P000019",
+    "DOC-4f4103eea6e81d114e:P000026",
+    "DOC-4f4103eea6e81d114e:P000027",
+    "DOC-4f4103eea6e81d114e:P000028",
+    "DOC-4f4103eea6e81d114e:P000029",
+    "DOC-4f4103eea6e81d114e:P000030",
+    "DOC-4f4103eea6e81d114e:P000031",
+    "DOC-4f4103eea6e81d114e:P000033",
+    "DOC-4f4103eea6e81d114e:P000034",
+    "DOC-4f4103eea6e81d114e:P000036",
+    "DOC-4f4103eea6e81d114e:P000039",
+    "DOC-4f4103eea6e81d114e:P000040",
+    "DOC-4f4103eea6e81d114e:P000043",
+    "DOC-4f4103eea6e81d114e:P000044",
+    "DOC-4f4103eea6e81d114e:P000045",
+    "DOC-4f4103eea6e81d114e:P000046",
+    "DOC-4f4103eea6e81d114e:P000048",
+    "DOC-4f4103eea6e81d114e:P000049",
+    "DOC-4f4103eea6e81d114e:P000054",
+    "DOC-4f4103eea6e81d114e:P000055",
+    "DOC-4f4103eea6e81d114e:P000056",
+    "DOC-4f4103eea6e81d114e:P000057",
+    "DOC-4f4103eea6e81d114e:P000058",
+    "DOC-4f4103eea6e81d114e:P000059",
+    "DOC-4f4103eea6e81d114e:P000060",
+    "DOC-4f4103eea6e81d114e:P000061",
+    "DOC-4f4103eea6e81d114e:P000062",
+    "DOC-4f4103eea6e81d114e:P000063",
+    "DOC-4f4103eea6e81d114e:P000064",
+    "DOC-4f4103eea6e81d114e:P000065",
+    "DOC-4f4103eea6e81d114e:P000066",
+    "DOC-4f4103eea6e81d114e:P000067",
+    "DOC-4f4103eea6e81d114e:P000069",
+    "DOC-4f4103eea6e81d114e:P000072",
+    "DOC-4f4103eea6e81d114e:P000097",
+    "DOC-4f4103eea6e81d114e:P000106",
+    "DOC-4f4103eea6e81d114e:P000115",
+    "DOC-4f4103eea6e81d114e:P000122",
+    "DOC-4f4103eea6e81d114e:P000123",
+    "DOC-4f4103eea6e81d114e:P000135"
+  ],
+  "candidate_reason_counts": {
+    "CROSS_REFERENCE": 4,
+    "DEFINED_TERM": 2,
+    "FINANCE_VOCAB": 37,
+    "MONEY": 6,
+    "PERCENT": 3,
+    "SPELLED_RATE": 1
+  },
+  "cross_references": [
+    {
+      "passage_id": "DOC-4f4103eea6e81d114e:P000001",
+      "references": [
+        "Exhibit 10.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-4f4103eea6e81d114e:P000049",
+      "references": [
+        "Section 4.2"
+      ]
+    },
+    {
+      "passage_id": "DOC-4f4103eea6e81d114e:P000059",
+      "references": [
+        "Section 5.2"
+      ]
+    },
+    {
+      "passage_id": "DOC-4f4103eea6e81d114e:P000072",
+      "references": [
+        "Section 5"
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "passage_id": "DOC-4f4103eea6e81d114e:P000048",
+      "term": "Negative Milestone Delta"
+    },
+    {
+      "passage_id": "DOC-4f4103eea6e81d114e:P000055",
+      "term": "Minimum Preferred Return"
+    }
+  ],
+  "document_id": "DOC-4f4103eea6e81d114e",
+  "document_metadata": {
+    "document_id": "DOC-4f4103eea6e81d114e",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1840425/000121390026004199/ea027273801ex10-1_osrhold.htm"
+  },
+  "mapped_at_utc": "2026-11-17T16:56:12+00:00",
+  "original_sha256": "f76607ab70ebbf344a79265efbba9077b5f101e600ad31b808d4aa09ea800ad9",
+  "parser_type": "HTML_TEXT",
+  "passages": [
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 12,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000001",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 1,
+      "start_offset": 0,
+      "text": "Exhibit 10.1"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000002",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 2,
+      "start_offset": 13,
+      "text": "BINDING TERM SHEET"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 66,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000003",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 3,
+      "start_offset": 32,
+      "text": "Global License Agreement for VXM01"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 128,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000004",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 4,
+      "start_offset": 67,
+      "text": "Between BCM Europe AG (“Licensee”) and Vaximm AG (“Licensor”)"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 151,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000005",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 5,
+      "start_offset": 129,
+      "text": "Date: 13 January, 2026"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 266,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000006",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.1",
+      "sequence": 6,
+      "start_offset": 152,
+      "text": "This Binding Term Sheet supersedes and replaces in its entirety the non-binding term sheet dated 21 November 2025."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 277,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000007",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 7,
+      "start_offset": 267,
+      "text": "1. Parties"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 287,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000008",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 8,
+      "start_offset": 278,
+      "text": "Licensor:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 452,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000009",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 9,
+      "start_offset": 288,
+      "text": "Vaximm AG, a Swiss biotechnology company and a wholly-owned subsidiary of OSR Holdings, Inc. (NASDAQ: OSRH) developing the VXM01 oral cancer immunotherapy platform."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 462,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000010",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 10,
+      "start_offset": 453,
+      "text": "Licensee:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 784,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000011",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 11,
+      "start_offset": 463,
+      "text": "BCM Europe AG (“BCME”), a Swiss-based investment entity and the largest shareholder of OSR Holdings, Inc. (“OSRH”) acting as development-stage biotech financier operating through a dedicated investment vehicle to be established and managed by BCME, tentatively named BCM Decentralized Science Investors I, LP (the “Fund”)"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 808,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000012",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 12,
+      "start_offset": 785,
+      "text": "2. Transaction Overview"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 995,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000013",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 13,
+      "start_offset": 809,
+      "text": "Licensor shall grant Licensee an exclusive, worldwide license to develop, manufacture, commercialize, out-license, or otherwise exploit the VXM01 immunotherapy platform, in exchange for:"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 1028,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000014",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 14,
+      "start_offset": 996,
+      "text": "● | Upfront payment: $30,000,000"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 1117,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000015",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 15,
+      "start_offset": 1029,
+      "text": "● | Clinical, regulatory, and commercial milestones: Up to $815,000,000 in the aggregate"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 1242,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000016",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 16,
+      "start_offset": 1118,
+      "text": "● | Pass-through of downstream royalties from any Ultimate Licensee, subject to the delta-recovery mechanism described below"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1315,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000017",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 17,
+      "start_offset": 1243,
+      "text": "BCME’s business model is that of a financial and licensing intermediary:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1480,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000018",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 18,
+      "start_offset": 1316,
+      "text": "● | BCME (through the Fund) will develop VXM01 to the extent necessary to negotiate and conclude an Ultimate License Agreement with a global pharmaceutical company."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 1686,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000019",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 19,
+      "start_offset": 1481,
+      "text": "● | BCME does not assume a standalone commercial royalty obligation to Vaximm. Instead, BCME will pass through royalties from the Ultimate Licensee, subject to the delta-recovery mechanism described below."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1706,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000020",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 20,
+      "start_offset": 1687,
+      "text": "3. Grant of License"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1728,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000021",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 21,
+      "start_offset": 1707,
+      "text": "Licensor grants BCME:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1805,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000022",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 22,
+      "start_offset": 1729,
+      "text": "● | Exclusive, worldwide, sublicensable rights to VXM01 for all indications;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1900,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000023",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 23,
+      "start_offset": 1806,
+      "text": "● | Rights to develop, register, manufacture, commercialize, co-promote, or out-license VXM01;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1966,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000024",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 24,
+      "start_offset": 1901,
+      "text": "● | Rights to engage any Ultimate Licensee of Licensee’s choosing"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2082,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000025",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 25,
+      "start_offset": 1967,
+      "text": "All existing and future Vaximm intellectual property relating to VXM01 is included within the scope of the license."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 2109,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000026",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 26,
+      "start_offset": 2083,
+      "text": "4. Financial Consideration"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 2139,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000027",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.1",
+      "sequence": 27,
+      "start_offset": 2110,
+      "text": "4.1 Upfront Payment to Vaximm"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 2164,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000028",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.1",
+      "sequence": 28,
+      "start_offset": 2140,
+      "text": "BCME shall pay Licensor:"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 2263,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000029",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.1",
+      "sequence": 29,
+      "start_offset": 2165,
+      "text": "● | $30,000,000, payable upon execution of the definitive Global License Agreement, structured as:"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 2292,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000030",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.1",
+      "sequence": 30,
+      "start_offset": 2264,
+      "text": "o | $15,000,000 in cash, and"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 2359,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000031",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.1",
+      "sequence": 31,
+      "start_offset": 2293,
+      "text": "o | $15,000,000 in digital assets, mutually agreed by the Parties."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2408,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000032",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 32,
+      "start_offset": 2360,
+      "text": "4.2 Clinical, Regulatory & Commercial Milestones"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 2448,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000033",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 33,
+      "start_offset": 2409,
+      "text": "Licensee shall pay up to an additional:"
+    },
+    {
+      "candidate_reasons": [
+        "MONEY"
+      ],
+      "end_offset": 2465,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000034",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 34,
+      "start_offset": 2449,
+      "text": "● | $815,000,000"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2585,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000035",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 35,
+      "start_offset": 2466,
+      "text": "payable upon achievement of clinical, regulatory, and commercial milestones to be detailed in the Definitive Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 2614,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000036",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 36,
+      "start_offset": 2586,
+      "text": "Milestone Design Principles:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2790,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000037",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 37,
+      "start_offset": 2615,
+      "text": "● | Milestones shall be primarily weighted toward clinical and regulatory achievements, including advancement through Phase 2 and Phase 3 development and regulatory approvals."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2919,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000038",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 38,
+      "start_offset": 2791,
+      "text": "● | Purely operational milestones (e.g. patient recruitment thresholds or trial initiation alone) shall be minimized and capped."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 3078,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000039",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4.2",
+      "sequence": 39,
+      "start_offset": 2920,
+      "text": "● | The milestone schedule shall be consistent with industry-standard oncology licensing transactions, adjusted to reflect the Phase-2b-ready status of VXM01."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 3134,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000040",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 40,
+      "start_offset": 3079,
+      "text": "5. Ultimate Licensee Out-License & Royalty Pass-Through"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 3231,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000041",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 41,
+      "start_offset": 3135,
+      "text": "Licensee shall actively pursue an Ultimate Licensee (a global pharmaceutical partner) for VXM01."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 3333,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000042",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 42,
+      "start_offset": 3232,
+      "text": "All downstream economics received by Licensee from the Ultimate Licensee shall be treated as follows:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 3372,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000043",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.1",
+      "sequence": 43,
+      "start_offset": 3334,
+      "text": "5.1 Milestone Retention and Accounting"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 3561,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000044",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.1",
+      "sequence": 44,
+      "start_offset": 3373,
+      "text": "Milestone payments received by Licensee from the Ultimate Licensee belong to Licensee; however, such payments shall be used solely for purposes of calculating the Negative Milestone Delta."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 3636,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000045",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.1",
+      "sequence": 45,
+      "start_offset": 3562,
+      "text": "However, they are used in the calculation of the Negative Milestone Delta."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 3705,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000046",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 46,
+      "start_offset": 3637,
+      "text": "5.2 Negative Milestone Delta and Preferred Return Recovery Mechanism"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 3746,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000047",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 47,
+      "start_offset": 3706,
+      "text": "For purposes of this Binding Term Sheet:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3780,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000048",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 48,
+      "start_offset": 3747,
+      "text": "“Negative Milestone Delta” means:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 3880,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000049",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 49,
+      "start_offset": 3781,
+      "text": "(i) the aggregate milestone payments actually paid by Licensee to Licensor pursuant to Section 4.2,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 3882,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000050",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 50,
+      "start_offset": 3881,
+      "text": "2"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 3887,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000051",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 51,
+      "start_offset": 3883,
+      "text": "plus"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 3986,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000052",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 52,
+      "start_offset": 3888,
+      "text": "(ii) the Minimum Preferred Return (as defined below) accrued for the Limited Partners of the Fund,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 3992,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000053",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 53,
+      "start_offset": 3987,
+      "text": "minus"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 4089,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000054",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 54,
+      "start_offset": 3993,
+      "text": "(iii) the aggregate milestone payments actually received by Licensee from the Ultimate Licensee."
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_RATE",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 4485,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000055",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 55,
+      "start_offset": 4090,
+      "text": "“Minimum Preferred Return” means a preferred return accruing for the benefit of the Limited Partners of the Fund on capital deployed in connection with VXM01, calculated in accordance with the definitive Global License Agreement and related fund documentation, at a rate not to exceed fifteen percent (15.0%) per annum, compounded annually or otherwise as agreed in the definitive documentation."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 4539,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000056",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 56,
+      "start_offset": 4486,
+      "text": "If the Negative Milestone Delta is greater than zero:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 4629,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000057",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 57,
+      "start_offset": 4540,
+      "text": "● | Licensee shall be entitled to full priority recovery of the Negative Milestone Delta;"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 4767,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000058",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 58,
+      "start_offset": 4630,
+      "text": "● | such recovery shall be made using one hundred percent (100%) of all royalty payments received by Licensee from the Ultimate Licensee;"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 4868,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000059",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 59,
+      "start_offset": 4768,
+      "text": "● | until the Negative Milestone Delta has been fully recovered in accordance with this Section 5.2."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5130,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000060",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.2",
+      "sequence": 60,
+      "start_offset": 4869,
+      "text": "The Parties acknowledge that this recovery mechanism is intended to ensure that the Fund is able to recover both (i) milestone payments advanced to Licensor and (ii) a minimum preferred return for its Limited Partners, prior to any ongoing royalty pass-through."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5178,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000061",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.3",
+      "sequence": 61,
+      "start_offset": 5131,
+      "text": "5.3 Royalty Pass-Through (After Delta Recovery)"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5271,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000062",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.3",
+      "sequence": 62,
+      "start_offset": 5179,
+      "text": "Upon full recovery of the Negative Milestone Delta (including the Minimum Preferred Return):"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5423,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000063",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.3",
+      "sequence": 63,
+      "start_offset": 5272,
+      "text": "● | Licensee shall pass through one hundred percent (100%) of all subsequent royalty payments received from the Ultimate Licensee directly to Licensor,"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5652,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000064",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.3",
+      "sequence": 64,
+      "start_offset": 5424,
+      "text": "● | less only actual, documented third-party administrative costs (including legal, regulatory, accounting, and audit expenses), itemized annually and incurred in connection with administration of the license and royalty stream."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5784,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000065",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5.3",
+      "sequence": 65,
+      "start_offset": 5653,
+      "text": "Following such recovery, Licensee shall retain no ongoing royalty spread or economic participation in royalties derived from VXM01."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5840,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000066",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 66,
+      "start_offset": 5785,
+      "text": "6. Blockchain-Based Royalty Participation (Conditional)"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 5968,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000067",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 67,
+      "start_offset": 5841,
+      "text": "The Blockchain (“TAC”)-based royalty model applies only if Vaximm elects to draw development capital from the BCM Royalty Fund."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 5996,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000068",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.1",
+      "sequence": 68,
+      "start_offset": 5969,
+      "text": "6.1 If Vaximm Draws Capital"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 6170,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000069",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.1",
+      "sequence": 69,
+      "start_offset": 5997,
+      "text": "Licensor shall contribute a negotiated percentage of its future commercial royalty revenue from VXM01 into a TAC Royalty Distribution Wallet for distribution to TAC holders."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6206,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000070",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 70,
+      "start_offset": 6171,
+      "text": "6.2 If Vaximm Does Not Draw Capital"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6250,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000071",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 71,
+      "start_offset": 6207,
+      "text": "● | No TAC contribution obligation applies,"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 6325,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000072",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 72,
+      "start_offset": 6251,
+      "text": "● | Royalties flow solely through the pass-through mechanism in Section 5."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6327,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000073",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6.2",
+      "sequence": 73,
+      "start_offset": 6326,
+      "text": "3"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6387,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000074",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 74,
+      "start_offset": 6328,
+      "text": "7. Development, Regulatory, and Commercial Responsibilities"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6417,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000075",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.1",
+      "sequence": 75,
+      "start_offset": 6388,
+      "text": "7.1 Licensee Responsibilities"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6433,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000076",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.1",
+      "sequence": 76,
+      "start_offset": 6418,
+      "text": "Licensee shall:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6532,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000077",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.1",
+      "sequence": 77,
+      "start_offset": 6434,
+      "text": "● | fund necessary clinical development activities (directly or through BCME-appointed operators);"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6582,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000078",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.1",
+      "sequence": 78,
+      "start_offset": 6533,
+      "text": "● | manage activities required for out-licensing;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6623,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000079",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.1",
+      "sequence": 79,
+      "start_offset": 6583,
+      "text": "● | prepare global partnering materials;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6669,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000080",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.1",
+      "sequence": 80,
+      "start_offset": 6624,
+      "text": "● | negotiate the Ultimate License Agreement;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6716,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000081",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.1",
+      "sequence": 81,
+      "start_offset": 6670,
+      "text": "● | maintain KYC/AML-compliant fund operations"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6851,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000082",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.1",
+      "sequence": 82,
+      "start_offset": 6717,
+      "text": "Licensee does not assume independent regulatory or commercial obligations beyond facilitating the out-license, unless mutually agreed."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6881,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000083",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 83,
+      "start_offset": 6852,
+      "text": "7.2 Licensor Responsibilities"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6897,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000084",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 84,
+      "start_offset": 6882,
+      "text": "Licensor shall:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6981,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000085",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 85,
+      "start_offset": 6898,
+      "text": "● | cooperate on scientific diligence, data access, regulatory files, CMC packages;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7049,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000086",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 86,
+      "start_offset": 6982,
+      "text": "● | provide reasonable assistance for Licensee’s global partnering;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7085,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000087",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7.2",
+      "sequence": 87,
+      "start_offset": 7050,
+      "text": "● | maintain IP filings as required"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7110,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000088",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 88,
+      "start_offset": 7086,
+      "text": "8. Intellectual Property"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7180,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000089",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 89,
+      "start_offset": 7111,
+      "text": "Licensor retains ownership of all underlying intellectual properties."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7199,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000090",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 90,
+      "start_offset": 7181,
+      "text": "Licensee receives:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7273,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000091",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 91,
+      "start_offset": 7200,
+      "text": "● | an exclusive license to all current and future IPs relating to VXM01,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7354,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000092",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 92,
+      "start_offset": 7274,
+      "text": "● | rights to prosecute, maintain, expand, or enforce IPs at Licensee’s expense."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7376,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000093",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9",
+      "sequence": 93,
+      "start_offset": 7355,
+      "text": "9. Term & Termination"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7385,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000094",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.1",
+      "sequence": 94,
+      "start_offset": 7377,
+      "text": "9.1 Term"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7422,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000095",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.1",
+      "sequence": 95,
+      "start_offset": 7386,
+      "text": "Term continues until the earlier of:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7462,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000096",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.1",
+      "sequence": 96,
+      "start_offset": 7423,
+      "text": "● | expiration of patents worldwide, or"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 7531,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000097",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.1",
+      "sequence": 97,
+      "start_offset": 7463,
+      "text": "● | the final commercial royalty payment from the Ultimate Licensee."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7533,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000098",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.1",
+      "sequence": 98,
+      "start_offset": 7532,
+      "text": "4"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7549,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000099",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 99,
+      "start_offset": 7534,
+      "text": "9.2 Termination"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7581,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000100",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 100,
+      "start_offset": 7550,
+      "text": "Either party may terminate for:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7620,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000101",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 101,
+      "start_offset": 7582,
+      "text": "● | uncured material breach (60 days),"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7648,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000102",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 102,
+      "start_offset": 7621,
+      "text": "● | bankruptcy/dissolution,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7676,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000103",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 103,
+      "start_offset": 7649,
+      "text": "● | regulatory prohibition."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7694,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000104",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 104,
+      "start_offset": 7677,
+      "text": "Upon termination:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7737,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000105",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 105,
+      "start_offset": 7695,
+      "text": "● | all license rights revert to Licensor;"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 7785,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000106",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 106,
+      "start_offset": 7738,
+      "text": "● | royalties already distributed remain final,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7847,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000107",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9.2",
+      "sequence": 107,
+      "start_offset": 7786,
+      "text": "● | Licensee’s delta recovery ceases unless otherwise agreed."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7880,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000108",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 108,
+      "start_offset": 7848,
+      "text": "10. Representations & Warranties"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7937,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000109",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 109,
+      "start_offset": 7881,
+      "text": "Both parties provide standard representations regarding:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7962,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000110",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 110,
+      "start_offset": 7938,
+      "text": "● | corporate authority,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8002,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000111",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 111,
+      "start_offset": 7963,
+      "text": "● | absence of conflicting obligations,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8042,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000112",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 112,
+      "start_offset": 8003,
+      "text": "● | ownership of intellectual property,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8086,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000113",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 113,
+      "start_offset": 8043,
+      "text": "● | compliance with applicable regulations."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8102,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000114",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "11",
+      "sequence": 114,
+      "start_offset": 8087,
+      "text": "11. Exclusivity"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 8291,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000115",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "11",
+      "sequence": 115,
+      "start_offset": 8103,
+      "text": "Upon execution of this Binding Term Sheet, Licensor grants Licensee a 120-day exclusivity period to finalize the Definitive Agreement, perform diligence, and structure milestone schedules."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8309,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000116",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 116,
+      "start_offset": 8292,
+      "text": "12. Governing Law"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8418,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000117",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 117,
+      "start_offset": 8310,
+      "text": "● | This Term Sheet and Definitive Agreement shall be governed by the laws of Switzerland (Canton of Basel)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8518,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000118",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 118,
+      "start_offset": 8419,
+      "text": "● | TAC-related mechanisms shall be subject to arbitration under the Swiss Arbitration Centre rules"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8536,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000119",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 119,
+      "start_offset": 8519,
+      "text": "13. Binding Terms"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8659,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000120",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 120,
+      "start_offset": 8537,
+      "text": "Except for provisions expressly stated to be non-binding, this Term Sheet is binding upon the Parties, including Sections:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8680,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000121",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 121,
+      "start_offset": 8660,
+      "text": "● | Grant of License"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 8708,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000122",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 122,
+      "start_offset": 8681,
+      "text": "● | Financial Consideration"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 8744,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000123",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 123,
+      "start_offset": 8709,
+      "text": "● | Milestone and Royalty Mechanics"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8760,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000124",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 124,
+      "start_offset": 8745,
+      "text": "● | Exclusivity"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8780,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000125",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 125,
+      "start_offset": 8761,
+      "text": "● | Confidentiality"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8798,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000126",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 126,
+      "start_offset": 8781,
+      "text": "● | Governing Law"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8831,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000127",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 127,
+      "start_offset": 8799,
+      "text": "● | Independent Fairness Opinion"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9018,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000128",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 128,
+      "start_offset": 8832,
+      "text": "Execution of the Definitive Agreement remains subject to customary conditions, including completion of Licensor’s board review and receipt of an independent third-party fairness opinion."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9020,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000129",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 129,
+      "start_offset": 9019,
+      "text": "5"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9053,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000130",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 130,
+      "start_offset": 9021,
+      "text": "14. Independent Fairness Opinion"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9087,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000131",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.1",
+      "sequence": 131,
+      "start_offset": 9054,
+      "text": "14.1 Fairness Opinion Requirement"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9245,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000132",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.1",
+      "sequence": 132,
+      "start_offset": 9088,
+      "text": "The Parties acknowledge that this transaction constitutes a related-party transaction, as Licensor, OSR Holdings, Inc., and Licensee are affiliated entities."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9614,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000133",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.1",
+      "sequence": 133,
+      "start_offset": 9246,
+      "text": "As a condition to the binding effectiveness of this Term Sheet, the Parties shall jointly engage, or Licensor shall engage with the consent of Licensee, an independent third-party valuation firm with recognized expertise in life-science and biopharmaceutical licensing transactions (the “Valuation Firm”) to provide a written fairness opinion (the “Fairness Opinion”)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9645,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000134",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.2",
+      "sequence": 134,
+      "start_offset": 9615,
+      "text": "14.2 Scope of Fairness Opinion"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 9942,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000135",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.2",
+      "sequence": 135,
+      "start_offset": 9646,
+      "text": "The Fairness Opinion shall address whether, as of the date thereof and based upon and subject to the assumptions, limitations, and qualifications set forth therein, the financial terms and overall consideration contemplated by this Binding Term Sheet are fair, from a financial point of view, to:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9965,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000136",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.2",
+      "sequence": 136,
+      "start_offset": 9943,
+      "text": "● | (i) Vaximm AG, and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10014,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000137",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.2",
+      "sequence": 137,
+      "start_offset": 9966,
+      "text": "● | (ii) the stockholders of OSR Holdings, Inc.,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10161,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000138",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.2",
+      "sequence": 138,
+      "start_offset": 10015,
+      "text": "in each case, taking into account the fair market value of VXM01 and customary industry benchmarks for comparable oncology licensing transactions."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10185,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000139",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.3",
+      "sequence": 139,
+      "start_offset": 10162,
+      "text": "14.3 Timing and Process"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10395,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000140",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.3",
+      "sequence": 140,
+      "start_offset": 10186,
+      "text": "The Valuation Firm shall be engaged promptly following execution of this Binding Term Sheet, and the Parties shall cooperate in good faith to provide all information reasonably requested by the Valuation Firm."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10427,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000141",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.4",
+      "sequence": 141,
+      "start_offset": 10396,
+      "text": "14.4 Effect of Fairness Opinion"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10680,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000142",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.4",
+      "sequence": 142,
+      "start_offset": 10428,
+      "text": "● | If the Fairness Opinion concludes that the terms of this Binding Term Sheet are fair and reasonable from a financial point of view, this Term Sheet shall remain binding in accordance with its terms, subject to execution of the Definitive Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11034,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000143",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.4",
+      "sequence": 143,
+      "start_offset": 10681,
+      "text": "● | If the Fairness Opinion concludes that the terms are not fair from a financial point of view, either Party may terminate this Term Sheet without liability (other than with respect to provisions expressly stated to survive termination), unless the Parties mutually agree to amend the economic terms to address the conclusions of the Fairness Opinion."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11045,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000144",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.5",
+      "sequence": 144,
+      "start_offset": 11035,
+      "text": "14.5 Costs"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11179,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000145",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14.5",
+      "sequence": 145,
+      "start_offset": 11046,
+      "text": "The costs and expenses of the Valuation Firm shall be borne equally by Licensor and Licensee, unless otherwise agreed by the Parties."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11194,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000146",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 146,
+      "start_offset": 11180,
+      "text": "15. Signatures"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11212,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000147",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 147,
+      "start_offset": 11195,
+      "text": "For BCM Europe AG"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11227,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000148",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 148,
+      "start_offset": 11213,
+      "text": "/s/ Ralf Kubli"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11246,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000149",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 149,
+      "start_offset": 11228,
+      "text": "Name: | Ralf Kubli"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11279,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000150",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 150,
+      "start_offset": 11247,
+      "text": "Title: | Chief Operating Officer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11304,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000151",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 151,
+      "start_offset": 11280,
+      "text": "Date: | 13 January, 2026"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11318,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000152",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 152,
+      "start_offset": 11305,
+      "text": "For Vaximm AG"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11341,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000153",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 153,
+      "start_offset": 11319,
+      "text": "/s/ Andreas Niethammer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11372,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000154",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 154,
+      "start_offset": 11342,
+      "text": "Name: | Dr. Andreas Niethammer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11405,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000155",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 155,
+      "start_offset": 11373,
+      "text": "Title: | Chief Executive Officer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11430,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000156",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 156,
+      "start_offset": 11406,
+      "text": "Date: | 13 January, 2026"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11432,
+      "passage_id": "DOC-4f4103eea6e81d114e:P000157",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "15",
+      "sequence": 157,
+      "start_offset": 11431,
+      "text": "6"
+    }
+  ],
+  "quality_control_profile": "M13_TWO_READER",
+  "quality_flags": [
+    "ALL_PASSAGES_UNREVIEWED",
+    "CANDIDATE_COVERAGE_NOT_ESTABLISHED"
+  ],
+  "retrieved_at_utc": "2026-11-17T16:56:12+00:00",
+  "schema_version": "m1.0",
+  "screening_conclusion": "UNKNOWN_NEEDS_AI_SCREENING",
+  "screening_priority": "HIGH_REVIEW_PRIORITY",
+  "sections": [
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000001"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000001",
+        "DOC-4f4103eea6e81d114e:P000002",
+        "DOC-4f4103eea6e81d114e:P000003",
+        "DOC-4f4103eea6e81d114e:P000004",
+        "DOC-4f4103eea6e81d114e:P000005",
+        "DOC-4f4103eea6e81d114e:P000006"
+      ],
+      "section": "Exhibit 10.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000007",
+        "DOC-4f4103eea6e81d114e:P000008",
+        "DOC-4f4103eea6e81d114e:P000009",
+        "DOC-4f4103eea6e81d114e:P000010",
+        "DOC-4f4103eea6e81d114e:P000011"
+      ],
+      "section": "1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000014",
+        "DOC-4f4103eea6e81d114e:P000015",
+        "DOC-4f4103eea6e81d114e:P000016",
+        "DOC-4f4103eea6e81d114e:P000019"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000012",
+        "DOC-4f4103eea6e81d114e:P000013",
+        "DOC-4f4103eea6e81d114e:P000014",
+        "DOC-4f4103eea6e81d114e:P000015",
+        "DOC-4f4103eea6e81d114e:P000016",
+        "DOC-4f4103eea6e81d114e:P000017",
+        "DOC-4f4103eea6e81d114e:P000018",
+        "DOC-4f4103eea6e81d114e:P000019"
+      ],
+      "section": "2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000020",
+        "DOC-4f4103eea6e81d114e:P000021",
+        "DOC-4f4103eea6e81d114e:P000022",
+        "DOC-4f4103eea6e81d114e:P000023",
+        "DOC-4f4103eea6e81d114e:P000024",
+        "DOC-4f4103eea6e81d114e:P000025"
+      ],
+      "section": "3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000026"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000026"
+      ],
+      "section": "4"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000027",
+        "DOC-4f4103eea6e81d114e:P000028",
+        "DOC-4f4103eea6e81d114e:P000029",
+        "DOC-4f4103eea6e81d114e:P000030",
+        "DOC-4f4103eea6e81d114e:P000031"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000027",
+        "DOC-4f4103eea6e81d114e:P000028",
+        "DOC-4f4103eea6e81d114e:P000029",
+        "DOC-4f4103eea6e81d114e:P000030",
+        "DOC-4f4103eea6e81d114e:P000031"
+      ],
+      "section": "4.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000033",
+        "DOC-4f4103eea6e81d114e:P000034",
+        "DOC-4f4103eea6e81d114e:P000036",
+        "DOC-4f4103eea6e81d114e:P000039"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000032",
+        "DOC-4f4103eea6e81d114e:P000033",
+        "DOC-4f4103eea6e81d114e:P000034",
+        "DOC-4f4103eea6e81d114e:P000035",
+        "DOC-4f4103eea6e81d114e:P000036",
+        "DOC-4f4103eea6e81d114e:P000037",
+        "DOC-4f4103eea6e81d114e:P000038",
+        "DOC-4f4103eea6e81d114e:P000039"
+      ],
+      "section": "4.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000040"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000040",
+        "DOC-4f4103eea6e81d114e:P000041",
+        "DOC-4f4103eea6e81d114e:P000042"
+      ],
+      "section": "5"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000043",
+        "DOC-4f4103eea6e81d114e:P000044",
+        "DOC-4f4103eea6e81d114e:P000045"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000043",
+        "DOC-4f4103eea6e81d114e:P000044",
+        "DOC-4f4103eea6e81d114e:P000045"
+      ],
+      "section": "5.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000046",
+        "DOC-4f4103eea6e81d114e:P000048",
+        "DOC-4f4103eea6e81d114e:P000049",
+        "DOC-4f4103eea6e81d114e:P000054",
+        "DOC-4f4103eea6e81d114e:P000055",
+        "DOC-4f4103eea6e81d114e:P000056",
+        "DOC-4f4103eea6e81d114e:P000057",
+        "DOC-4f4103eea6e81d114e:P000058",
+        "DOC-4f4103eea6e81d114e:P000059",
+        "DOC-4f4103eea6e81d114e:P000060"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000046",
+        "DOC-4f4103eea6e81d114e:P000047",
+        "DOC-4f4103eea6e81d114e:P000048",
+        "DOC-4f4103eea6e81d114e:P000049",
+        "DOC-4f4103eea6e81d114e:P000050",
+        "DOC-4f4103eea6e81d114e:P000051",
+        "DOC-4f4103eea6e81d114e:P000052",
+        "DOC-4f4103eea6e81d114e:P000053",
+        "DOC-4f4103eea6e81d114e:P000054",
+        "DOC-4f4103eea6e81d114e:P000055",
+        "DOC-4f4103eea6e81d114e:P000056",
+        "DOC-4f4103eea6e81d114e:P000057",
+        "DOC-4f4103eea6e81d114e:P000058",
+        "DOC-4f4103eea6e81d114e:P000059",
+        "DOC-4f4103eea6e81d114e:P000060"
+      ],
+      "section": "5.2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000061",
+        "DOC-4f4103eea6e81d114e:P000062",
+        "DOC-4f4103eea6e81d114e:P000063",
+        "DOC-4f4103eea6e81d114e:P000064",
+        "DOC-4f4103eea6e81d114e:P000065"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000061",
+        "DOC-4f4103eea6e81d114e:P000062",
+        "DOC-4f4103eea6e81d114e:P000063",
+        "DOC-4f4103eea6e81d114e:P000064",
+        "DOC-4f4103eea6e81d114e:P000065"
+      ],
+      "section": "5.3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000066",
+        "DOC-4f4103eea6e81d114e:P000067"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000066",
+        "DOC-4f4103eea6e81d114e:P000067"
+      ],
+      "section": "6"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000069"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000068",
+        "DOC-4f4103eea6e81d114e:P000069"
+      ],
+      "section": "6.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000072"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000070",
+        "DOC-4f4103eea6e81d114e:P000071",
+        "DOC-4f4103eea6e81d114e:P000072",
+        "DOC-4f4103eea6e81d114e:P000073"
+      ],
+      "section": "6.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000074"
+      ],
+      "section": "7"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000075",
+        "DOC-4f4103eea6e81d114e:P000076",
+        "DOC-4f4103eea6e81d114e:P000077",
+        "DOC-4f4103eea6e81d114e:P000078",
+        "DOC-4f4103eea6e81d114e:P000079",
+        "DOC-4f4103eea6e81d114e:P000080",
+        "DOC-4f4103eea6e81d114e:P000081",
+        "DOC-4f4103eea6e81d114e:P000082"
+      ],
+      "section": "7.1"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000083",
+        "DOC-4f4103eea6e81d114e:P000084",
+        "DOC-4f4103eea6e81d114e:P000085",
+        "DOC-4f4103eea6e81d114e:P000086",
+        "DOC-4f4103eea6e81d114e:P000087"
+      ],
+      "section": "7.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000088",
+        "DOC-4f4103eea6e81d114e:P000089",
+        "DOC-4f4103eea6e81d114e:P000090",
+        "DOC-4f4103eea6e81d114e:P000091",
+        "DOC-4f4103eea6e81d114e:P000092"
+      ],
+      "section": "8"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000093"
+      ],
+      "section": "9"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000097"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000094",
+        "DOC-4f4103eea6e81d114e:P000095",
+        "DOC-4f4103eea6e81d114e:P000096",
+        "DOC-4f4103eea6e81d114e:P000097",
+        "DOC-4f4103eea6e81d114e:P000098"
+      ],
+      "section": "9.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000106"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000099",
+        "DOC-4f4103eea6e81d114e:P000100",
+        "DOC-4f4103eea6e81d114e:P000101",
+        "DOC-4f4103eea6e81d114e:P000102",
+        "DOC-4f4103eea6e81d114e:P000103",
+        "DOC-4f4103eea6e81d114e:P000104",
+        "DOC-4f4103eea6e81d114e:P000105",
+        "DOC-4f4103eea6e81d114e:P000106",
+        "DOC-4f4103eea6e81d114e:P000107"
+      ],
+      "section": "9.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000108",
+        "DOC-4f4103eea6e81d114e:P000109",
+        "DOC-4f4103eea6e81d114e:P000110",
+        "DOC-4f4103eea6e81d114e:P000111",
+        "DOC-4f4103eea6e81d114e:P000112",
+        "DOC-4f4103eea6e81d114e:P000113"
+      ],
+      "section": "10"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000115"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000114",
+        "DOC-4f4103eea6e81d114e:P000115"
+      ],
+      "section": "11"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000116",
+        "DOC-4f4103eea6e81d114e:P000117",
+        "DOC-4f4103eea6e81d114e:P000118"
+      ],
+      "section": "12"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000122",
+        "DOC-4f4103eea6e81d114e:P000123"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000119",
+        "DOC-4f4103eea6e81d114e:P000120",
+        "DOC-4f4103eea6e81d114e:P000121",
+        "DOC-4f4103eea6e81d114e:P000122",
+        "DOC-4f4103eea6e81d114e:P000123",
+        "DOC-4f4103eea6e81d114e:P000124",
+        "DOC-4f4103eea6e81d114e:P000125",
+        "DOC-4f4103eea6e81d114e:P000126",
+        "DOC-4f4103eea6e81d114e:P000127",
+        "DOC-4f4103eea6e81d114e:P000128",
+        "DOC-4f4103eea6e81d114e:P000129"
+      ],
+      "section": "13"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000130"
+      ],
+      "section": "14"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000131",
+        "DOC-4f4103eea6e81d114e:P000132",
+        "DOC-4f4103eea6e81d114e:P000133"
+      ],
+      "section": "14.1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-4f4103eea6e81d114e:P000135"
+      ],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000134",
+        "DOC-4f4103eea6e81d114e:P000135",
+        "DOC-4f4103eea6e81d114e:P000136",
+        "DOC-4f4103eea6e81d114e:P000137",
+        "DOC-4f4103eea6e81d114e:P000138"
+      ],
+      "section": "14.2"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000139",
+        "DOC-4f4103eea6e81d114e:P000140"
+      ],
+      "section": "14.3"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000141",
+        "DOC-4f4103eea6e81d114e:P000142",
+        "DOC-4f4103eea6e81d114e:P000143"
+      ],
+      "section": "14.4"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000144",
+        "DOC-4f4103eea6e81d114e:P000145"
+      ],
+      "section": "14.5"
+    },
+    {
+      "candidate_ids": [],
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000146",
+        "DOC-4f4103eea6e81d114e:P000147",
+        "DOC-4f4103eea6e81d114e:P000148",
+        "DOC-4f4103eea6e81d114e:P000149",
+        "DOC-4f4103eea6e81d114e:P000150",
+        "DOC-4f4103eea6e81d114e:P000151",
+        "DOC-4f4103eea6e81d114e:P000152",
+        "DOC-4f4103eea6e81d114e:P000153",
+        "DOC-4f4103eea6e81d114e:P000154",
+        "DOC-4f4103eea6e81d114e:P000155",
+        "DOC-4f4103eea6e81d114e:P000156",
+        "DOC-4f4103eea6e81d114e:P000157"
+      ],
+      "section": "15"
+    }
+  ],
+  "source_segmentation": {
+    "fragment_limit_chars": 12000,
+    "preservation": "FRAGMENTS_CONCATENATE_EXACTLY_TO_EACH_ORIGINAL_NORMALIZED_LINE",
+    "schema": "m4-source-segmentation.1",
+    "split_original_paragraphs": []
+  },
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1840425/000121390026004199/ea027273801ex10-1_osrhold.htm",
+  "stage": "MAPPED_NOT_INTERPRETED",
+  "text_sha256": "d04960374e2ba37d3ca841d92f6568030bac7098ece1d6570447920d181dc598",
+  "total_candidates": 44,
+  "total_passages": 157
+}

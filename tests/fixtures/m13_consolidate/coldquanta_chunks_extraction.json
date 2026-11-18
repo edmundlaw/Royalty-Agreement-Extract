@@ -1,0 +1,2350 @@
+{
+  "agreement": {
+    "contractual_status": null,
+    "duration": "Until expiration of the last to expire patent within Patent Rights",
+    "effective_date": "February 2, 2012",
+    "exclusivity": "Non-exclusive Know-How license; Patent Rights license is non-exclusive except as to the University's interests, for which it is exclusive",
+    "exclusivity_scope": "With respect to the University's interests in the Patent Rights, the license shall be exclusive; the Know-How grant and the broader Patent Rights grant are described as non-exclusive, within the Territory and Fields of Use.",
+    "execution_date": "February 2, 2012",
+    "field_evidence": {
+      "duration": [
+        "1-e5"
+      ],
+      "effective_date": [
+        "1-e2"
+      ],
+      "exclusivity": [
+        "1-e6",
+        "1-e7",
+        "c2-e1"
+      ],
+      "exclusivity_scope": [
+        "1-e7"
+      ],
+      "execution_date": [
+        "1-e2"
+      ],
+      "licensed_ip": [
+        "1-e3",
+        "1-e4",
+        "c2-e3"
+      ],
+      "licensed_ip_nature": [
+        "1-e3",
+        "1-e4",
+        "c2-e3"
+      ],
+      "licensee": [
+        "1-e2",
+        "c2-e2"
+      ],
+      "licensor": [
+        "1-e2",
+        "c2-e2"
+      ],
+      "sublicensing_rights": [
+        "1-e8",
+        "c2-e25"
+      ],
+      "territory": [
+        "c2-e4"
+      ],
+      "title": [
+        "1-e1",
+        "c2-e1"
+      ]
+    },
+    "industry": null,
+    "licensed_ip": "Patent Rights and Know-How",
+    "licensed_ip_nature": "MIXED",
+    "licensed_ip_nature_basis": "STATED",
+    "licensed_ip_nature_details": "The grant expressly covers Patent Rights and Know-How.",
+    "licensee": "ColdQuanta, Inc.",
+    "licensor": "the Regents of the University of Colorado",
+    "other_material_terms": [
+      {
+        "category": "SCOPE",
+        "evidence_ids": [
+          "1-e9",
+          "1-e10"
+        ],
+        "text": "Field of Use and Territory are defined by Exhibit A, which is outside this chunk."
+      },
+      {
+        "category": "SUBLICENSING",
+        "evidence_ids": [
+          "1-e11"
+        ],
+        "text": "Sublicenses must provide cash consideration unless University consents in writing in advance."
+      },
+      {
+        "category": "AUDIT_REPORTING",
+        "evidence_ids": [
+          "1-e12"
+        ],
+        "text": "Net Sales royalty reports and payment are due for each calendar quarter."
+      }
+    ],
+    "related_party": "NOT_STATED",
+    "sublicensing_rights": "Permitted with prior written University approval, not to be unreasonably withheld or delayed, subject to Section 4 limitations.",
+    "territory": "Worldwide",
+    "title": "NON-EXCLUSIVE LICENSE AGREEMENT"
+  },
+  "amendment_status": "NOT_CHECKED",
+  "dispositions": [
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000001",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit number identifies the filing exhibit, without an economic term.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000012",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "General consideration recital provides no distinct payment obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000013",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Definitions heading contains no standalone economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "UNRELATED_PERCENT"
+      ],
+      "evidence_ids": [
+        "1-e23"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000015",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "fifty percent (50%)",
+          "rationale": "Voting ownership threshold for affiliate control.",
+          "term_id": null
+        },
+        {
+          "classification": "UNRELATED",
+          "literal": "fifty percent (50%)",
+          "rationale": "Net asset or profit threshold for affiliate control.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Both 50% figures define affiliate control and are not royalty rates.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-e9"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000017",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Field of Use is defined through Exhibit A outside this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000018",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Improvement definition identifies covered inventions without stating a payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000019",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Know-How definition identifies licensed information without a rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000020",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Licensed Processes within the product sales royalty scope.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000021",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Introduces the Licensed Products definition continued in following passages.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-e14",
+        "1-e15"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000024",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Net Sales, the sales royalty base and its deductions.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000025",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Introduces Patent Rights, relevant to licensed product and sublicense scope.",
+      "term_ids": [
+        "1-t1",
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000026",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Patent schedule reference points to Exhibit B outside this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000027",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Further defines Patent Rights by reference to Exhibit B.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000028",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Further defines Patent Rights by reference to Exhibit B.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-e10"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000032",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Territory definition points to Exhibit A outside this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000033",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Grant heading contains no independent economic obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-e3",
+        "1-e6"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000035",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Describes Know-How license and royalty-bearing status without stating its rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-e4",
+        "1-e7"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000036",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Describes Patent Rights scope and limited exclusivity, without a royalty rate.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000037",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Know-How delivery clause references Section 3 but states no payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000039",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Improvements section heading has no standalone economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-e24"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000040",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "University Improvements enter the agreement for no additional consideration.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000045",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Sublicensing section heading contains no rate or payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-e8"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000046",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Establishes sublicensing permission subject to approval and Section 2 rights.",
+      "term_ids": [
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-e11"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000050",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Cash consideration restriction affects sublicenses but states no royalty rate.",
+      "term_ids": [
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000051",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Requires delivery of sublicense copies within thirty days.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-e18"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000052",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Creates sublicense revenue royalty whose rate is in Exhibit C outside this chunk.",
+      "term_ids": [
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000053",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Retained rights heading contains no payment term.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000061",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Fees and royalties heading contains no amount or rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000062",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Consideration preamble introduces following clauses without a separate fee.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-e19"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000063",
+      "payment_ids": [
+        "1-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Specifies a distinct upfront fee with amount in Exhibit C outside this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-e13"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000064",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Requires royalties under Exhibit C, with rates unavailable in this chunk.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e16"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000065",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Limits multiple royalty charges on products or processes covered by multiple patents.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e17"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000066",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Sets arm's-length valuation for specified Net Sales transactions.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000067",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Payment due date heading contains no independent obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "1-e21"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000069",
+      "payment_ids": [
+        "1-p3"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Redacted monthly default interest rate is separate from royalties.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000070",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Reports and audits heading contains no economic rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e12"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000072",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Specifies quarterly reporting and simultaneous Net Sales royalty payment.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000073",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "References the report form in Exhibit D outside this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000075",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Recordkeeping requirement supports royalty accounting but states no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000079",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Annual audit access provision states no distinct royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000080",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Limits disclosure by auditor without stating economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "1-e22"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000081",
+      "payment_ids": [
+        "1-p4"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Redacted audit shortfall threshold triggers reimbursement and underpayment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000082",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Confidential information heading contains no payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000086",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Due diligence heading contains no payment or royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000088",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Patent administration heading contains no amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-e20"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000089",
+      "payment_ids": [
+        "1-p2"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Patent cost reimbursement has redacted historical amount and installment shares.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000092",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Patent enforcement heading contains no payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000094",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Warranties and insurance heading contains no payment rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000104",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Indemnity scope mentions sublicense and sales without a royalty obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000107",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Duration and termination heading contains no separate economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000112",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Final report requirement references Section 7 without a new payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000114",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Post-termination inventory sales remain subject to existing Section 6 payments.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000117",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Nonpayment termination trigger creates no separate payment amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000124",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "General provisions heading contains no economic term.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000126",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Assignment right references Section 14.1(c) and contains no payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000166",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit A heading directs the reader to scope and territory provisions.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "c2-e3"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000171",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit B identifies patent rights, with no payment rate in this heading.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000215",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit C heading introduces consideration provisions.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000216",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Consideration heading contains no standalone obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000217",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Introductory sentence refers to Section 6 and introduces the exhibit's consideration.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "c2-e5",
+        "c2-e6"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000219",
+      "payment_ids": [
+        "c2-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Contingent fee in lieu of a license issue fee has a redacted amount or formula.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c2-e7"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000220",
+      "payment_ids": [
+        "c2-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Specifies the form and valuation of the contingent fee after a Liquidation Event.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c2-e8"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000222",
+      "payment_ids": [
+        "c2-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Defines a Liquidation Event that can trigger the contingent fee.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c2-e9"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000223",
+      "payment_ids": [
+        "c2-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Defines Trailing Consideration for timing of the contingent fee.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c2-e10"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000224",
+      "payment_ids": [
+        "c2-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Introduces Aggregate Consideration, which informs contingent fee valuation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c2-e11"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000225",
+      "payment_ids": [
+        "c2-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Defines Aggregate Consideration for an Asset Sale.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c2-e12"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000226",
+      "payment_ids": [
+        "c2-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Defines Aggregate Consideration for a Merger or Stock Sale.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c2-e13"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000233",
+      "payment_ids": [
+        "c2-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Defines the Initial Public Offering that can trigger the contingent fee.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c2-e14"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000234",
+      "payment_ids": [
+        "c2-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Defines Pre-Money Valuation, potentially relevant to the redacted contingent fee.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c2-e15"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000235",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Heading introduces earned royalties without stating a rate.",
+      "term_ids": [
+        "c2-t1",
+        "c2-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "c2-e19"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000236",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "States the redacted Net Sales rate and introduces special Government Sales rates.",
+      "term_ids": [
+        "c2-t1",
+        "c2-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "c2-e20",
+        "c2-e21"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000237",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "First Government Sales tier has a redacted rate and redacted threshold.",
+      "term_ids": [
+        "c2-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "c2-e23",
+        "c2-e24"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000238",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Second Government Sales tier has a distinct redacted rate and redacted threshold.",
+      "term_ids": [
+        "c2-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "c2-e22"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000239",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Specifies fourth quarter reconciliation, reporting and payment of Government Sales royalties.",
+      "term_ids": [
+        "c2-t2"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [
+        "c2-e29"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000240",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Good-faith negotiation of a possible buyout does not set a buyout amount or alter the stated royalty rates.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000242",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Heading introduces sublicensing royalties without stating a rate.",
+      "term_ids": [
+        "c2-t3"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "c2-e25"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000243",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines the sublicense royalty base and covered receipts.",
+      "term_ids": [
+        "c2-t3"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "c2-e26"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000244",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "First-year sublicense agreement tier has its own redacted rate.",
+      "term_ids": [
+        "c2-t3"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "c2-e27"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000245",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Second-year sublicense agreement tier has its own redacted rate.",
+      "term_ids": [
+        "c2-t3"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "c2-e28"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000246",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Third-year and later sublicense agreement tier has its own redacted rate.",
+      "term_ids": [
+        "c2-t3"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000248",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit D heading identifies the royalty report form.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000249",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Royalty report form heading contains no economic obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c2-e30"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000259",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Blank reporting columns contain no populated rate or payment amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c2-e31"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000264",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Blank sublicense income reporting field contains no additional obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c2-e32"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000266",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Expressly non-binding payment forecast creates no payment obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "c2-e32"
+      ],
+      "passage_id": "DOC-c24d351ab4b04c1915:P000267",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Heading refers to the non-binding payment forecast, with no amount.",
+      "term_ids": []
+    }
+  ],
+  "document_id": "DOC-c24d351ab4b04c1915",
+  "evidence": [
+    {
+      "evidence_id": "1-e1",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000003",
+      "quote": "NON-EXCLUSIVE LICENSE AGREEMENT",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e2",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000004",
+      "quote": "made and entered into this 2 of February, 2012, (the “Effective Date”) by and between the Regents of the University of Colorado, a body corporate, having its principal office at 1800 Grant Street, 8th Floor, Denver, CO 80203 (hereinafter “University”) and ColdQuanta, Inc.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e3",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000035",
+      "quote": "a non-exclusive, royalty-bearing license to use the Know-How in the Territory and within the Fields of Use",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-e4",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000036",
+      "quote": "a non-exclusive, royalty-bearing license to the Patent Rights in the Territory to make, use, sell, lease, offer to sell, and import any Licensed Products in the Fields of Use and to practice any Licensed Processes In the Fields of Use",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-e5",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000108",
+      "quote": "This Agreement shall become effective as of the Effective Date and shall expire on the expiration date of the last to expire patents within Patent Rights.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e6",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000035",
+      "quote": "a non-exclusive, royalty-bearing license to use the Know-How in the Territory and within the Fields of Use",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-e7",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000036",
+      "quote": "provided, however, that with respect to the University’s interests in the Patent Rights, the license shall be exclusive.",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-e8",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000046",
+      "quote": "Upon prior written approval by University, such approval not to be unreasonably withheld or delayed. Licensee may sublicense to one or more third parties, the rights granted in Section 2 subject to the following limitations:",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-e9",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000017",
+      "quote": "“Field of Use” shall mean the fields of use identified in Exhibit A.",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e10",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000032",
+      "quote": "“Territory” shall mean the geographical area identified in Exhibit A.",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e11",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000050",
+      "quote": "Any sublicenses granted by Licensee shall provide only for cash consideration from sublicensees unless University has expressly consented otherwise in writing in advance.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e12",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000072",
+      "quote": "written reports for each calendar quarter of the Net Sales of Licensed Products and/or Licensed Processes subject to royalty hereunder made during the prior three (3) month period and shall simultaneously pay to University the royalties due on such Net Sales",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e13",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000064",
+      "quote": "Licensee agrees to pay University royalties as set forth in Exhibit C;",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e14",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000024",
+      "quote": "“Net Sales” shall mean the total gross receipts for sales of Licensed Products or practice of Licensed Processes by or on behalf or Licensee and its Affiliates, and from leasing, renting, or otherwise making Licensed Products available to others without sale or other dispositions, whether invoiced or not, less returns and allowances, packing costs, insurance costs, freight out, taxes or excise duties imposed on the transaction (if separately invoiced and paid), and wholesaler and cash discounts in amounts customary in the trade to the extent actually granted.",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e15",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000024",
+      "quote": "Net Sales shall also include the fair market value of any non-cash consideration received by Licensee and its Affiliates, for the sale, lease, or transfer of Licensed Products or Licensed Processes.",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e16",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000065",
+      "quote": "No multiple royalties shall be payable because any Licensed Products or Licensed Processes are covered by more than one of the Patent Rights.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e17",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000066",
+      "quote": "the value of the Net Sales attributed under this Section to such a transaction shall be that which would have been received in an arm’s-length transaction",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e18",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000052",
+      "quote": "Licensee shall pay to University royalties on all revenue received by Licensee from sublicensees of the Patent Rights as provided in the attached Exhibit C.",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "1-e19",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000063",
+      "quote": "Licensee agrees to pay a noncreditable, nonrefundable, up-front license fee as set forth in Exhibit C within thirty (30) days from the Effective Date of this Agreement;",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e20",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000089",
+      "quote": "Such fees and costs shall be paid to University within thirty (30) days after receipt of invoicing. Patent Costs incurred prior to Effective Date shall be invoiced as follows: [***] of such fees may be invoiced August 1, 2011 and the remaining [***] may be invoiced on the first anniversary of the Effective Date. The Patent Costs incurred as of May 11, 2011 are approximately [***].",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "1-e21",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000069",
+      "quote": "Payments past due shall bear interest at the rate of [***] per month compounded, or the maximum interest rate allowed by applicable law, whichever is less.",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "1-e22",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000081",
+      "quote": "If an inspection shows an underreporting or underpayment in excess of [***] for any twelve (12) month period, then Licensee shall reimburse University for the cost of the inspection and pay the amount of the underpayment including any interest as required by this Agreement.",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "1-e23",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000015",
+      "quote": "beneficial ownership of at least fifty percent (50%) of the voting securities of a business organization with voting securities, or (b) a fifty percent (50%) or greater interest in the net assets or profits",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e24",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000040",
+      "quote": "each such Improvement will be considered part of this Agreement for no additional consideration.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c2-e1",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000150",
+      "quote": "ColdQuanta Non-Exclusive License Agreement",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c2-e2",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000164",
+      "quote": "Office of Technology Transfer University of Colorado, 588 SYS Suite 100, 4740 Walnut Street Boulder, CO 80309 | Cold Quanta, Inc. 1600 Range Street, Suite 103 Boulder, CO 80301",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c2-e3",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000172",
+      "quote": "PATENT RIGHTS",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c2-e4",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000169",
+      "quote": "Territory: Worldwide",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "c2-e5",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000219",
+      "quote": "in lieu of a license issue fee, Licensee will pay University a fee equal to [***]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "c2-e6",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000219",
+      "quote": "Such fee shall be paid after only the first to occur of either a Liquidation Event or Initial Public Offering. The respective fees, when and if payable, shall be paid upon closing of the event; except for Trailing Consideration which shall be payable within thirty (30) days after the actual receipt of such Trailing Consideration by the Licensee or its security holders.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c2-e7",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000220",
+      "quote": "For a Liquidation Event, the fees shall be payable in the form of the proceeds payable to either Licensee or its security holders, whether in cash, securities or other property",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c2-e8",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000222",
+      "quote": "“Liquidation Event” means a (i) a merger, share exchange or other reorganization (“Merger”), (ii) the sale by one or more stockholders of a majority of the voting power of the Licensee (“Stock Sale”) or (iii) a sale of all or substantially all of the assets of the Licensee",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c2-e9",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000223",
+      "quote": "“Trailing Consideration” means any payments due for any deferred or contingent consideration payable to Licensee or its security holders",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c2-e10",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000224",
+      "quote": "“Aggregate Consideration” means the amount equal to:",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c2-e11",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000225",
+      "quote": "in the case of an Asset Sale, the sum of (a) all cash, and the fair market value of all securities or other property transferred to the Licensee at the time of the transaction",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c2-e12",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000226",
+      "quote": "in the case of a Merger or Stock Sale, the sum of (a) all cash, and the fair market value of all securities and other property transferred to the stockholders of the Licensee",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c2-e13",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000233",
+      "quote": "“Initial Public Offering” means the effectiveness of a registration statement for the first sale of Licensee’s common stock",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c2-e14",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000234",
+      "quote": "“Pre-Money Valuation” means the amount equal to the product of (i) the price per share of common stock sold in the Initial Public Offering and (ii) the total number of outstanding shares of common stock of Licensee immediately prior to the closing of the Initial Public Offering",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "c2-e15",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000235",
+      "quote": "C.2. Earned royalty:",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c2-e19",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000236",
+      "quote": "Licensee agrees to pay an earned royalty of [***] of Net Sales. For Net Sales made directly to the United States Government (“Government Safes”), Licensee will pay:",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "c2-e20",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000237",
+      "quote": "an earned royalty of [***] of Government Sales",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "c2-e21",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000237",
+      "quote": "when Licensee’s annual Government Sales are less than [***] of Licensee’s total Net Sales",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "c2-e22",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000239",
+      "quote": "annual Government Sales are reconciled, reported and paid in the fourth quarter royalty payment",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "c2-e23",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000238",
+      "quote": "an earned royalty of [***] of Government Sales",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "c2-e24",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000238",
+      "quote": "when Licensee’s annual Government Sales are equal to or greater than [***] of Licensee’s total Net Sales",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "c2-e25",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000243",
+      "quote": "Licensee agrees to pay the following percentages of consideration in any form (“Sublicense Revenue”) received by Licensee or Affiliates in connection with a grant of a sublicense to any third party (a “Sublicensee”). Sublicense Revenue shall include without limitation, upfront fees, maintenance fees, milestone payments, royalties on Sublicensee net sales, the unearned portion of any minimum royalties. equity, and research and development funding in excess of the costs of performing such research and development.",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "c2-e26",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000244",
+      "quote": "[***] of all Sublicense Revenue received under sublicense agreements executed during the first year after the Effective Date.",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "c2-e27",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000245",
+      "quote": "[***] of all Sublicense Revenue received under sublicense agreements executed during the second year after the Effective Date.",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "c2-e28",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000246",
+      "quote": "[***] of all Sublicense Revenue received under sublicense agreements executed during the third year after the Effective Date and each year thereafter until this Agreement is terminated or expires.",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "c2-e29",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000240",
+      "quote": "University agrees to negotiate in good faith a royalty buyout option (i.e.. royalty monetization) with Licensee",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c2-e30",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000259",
+      "quote": "Category | Gross Sales | * Less: Allowances | Net Sales | Royalty Rate | Period Royalty Amount",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c2-e31",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000264",
+      "quote": "Sublicense Income this quarter: $ ________",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c2-e32",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000266",
+      "quote": "The following payment forecast is non-binding and for University internal planning purposes only:",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "c2-e33",
+      "passage_id": "DOC-c24d351ab4b04c1915:P000163",
+      "quote": "Date: | 23 Jan 2021 | Date: | 2/2/2012",
+      "role": "OTHER"
+    }
+  ],
+  "open_issues": [
+    {
+      "description": "Exhibit C, assigned to another chunk, supplies the upfront fee and royalty economics. Reconcile all sales and sublicensing rates, tiers, reductions, minimums and other payments across chunks before treating this extraction as complete.",
+      "issue_id": "1-i1",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000052",
+        "DOC-c24d351ab4b04c1915:P000063",
+        "DOC-c24d351ab4b04c1915:P000064"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Exhibits A and B are outside this chunk; reconcile Field of Use, Territory and listed patents with their passages.",
+      "issue_id": "1-i2",
+      "kind": "CROSS_CHUNK_SCOPE",
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000017",
+        "DOC-c24d351ab4b04c1915:P000026",
+        "DOC-c24d351ab4b04c1915:P000032"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Later amendments and current operative status have not been checked.",
+      "issue_id": "1-i3",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Section 10.1 states that part of pre-effective-date patent costs may be invoiced August 1, 2011, before the stated February 2, 2012 Effective Date; this chronology needs review.",
+      "issue_id": "1-i4",
+      "kind": "DATE_AMBIGUITY",
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000004",
+        "DOC-c24d351ab4b04c1915:P000089"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Reconcile Exhibit C economics, including the contingent fee, earned royalties and sublicensing tiers, with Section 6 and definitions supplied in chunk 1. This chunk alone cannot establish the complete economics.",
+      "issue_id": "c2-i1",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000217",
+        "DOC-c24d351ab4b04c1915:P000219",
+        "DOC-c24d351ab4b04c1915:P000236",
+        "DOC-c24d351ab4b04c1915:P000243"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "The contingent fee amount or formula, Net Sales rate, both Government Sales rates and thresholds, and all three sublicense rates are redacted.",
+      "issue_id": "c2-i2",
+      "kind": "REDACTED_ECONOMICS",
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000219",
+        "DOC-c24d351ab4b04c1915:P000236",
+        "DOC-c24d351ab4b04c1915:P000237",
+        "DOC-c24d351ab4b04c1915:P000238",
+        "DOC-c24d351ab4b04c1915:P000244",
+        "DOC-c24d351ab4b04c1915:P000245",
+        "DOC-c24d351ab4b04c1915:P000246"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "The signature line shows University date 23 Jan 2021 and Licensee date 2/2/2012; execution and Effective Date require reconciliation with other agreement text.",
+      "issue_id": "c2-i3",
+      "kind": "SIGNATURE_DATE_CONFLICT",
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000163"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Current operative status and any later amendments have not been checked.",
+      "issue_id": "c2-i4",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000149"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Reconcile Net Sales, Licensed Products, Licensed Process, Patent Rights and any Know-How definitions from chunk 1 before finalizing royalty bases and licensed IP nature.",
+      "issue_id": "c2-i5",
+      "kind": "CROSS_CHUNK_DEFINITIONS",
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000172",
+        "DOC-c24d351ab4b04c1915:P000236",
+        "DOC-c24d351ab4b04c1915:P000243"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "The assignment clause requires only good-faith negotiation of a requested royalty buyout; no price or completed buyout is stated here.",
+      "issue_id": "c2-i6",
+      "kind": "BUYOUT_UNDETERMINED",
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000240"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'title' was worded differently by two reading tasks. Kept: 'NON-EXCLUSIVE LICENSE AGREEMENT'. Task 2 gave: 'ColdQuanta Non-Exclusive License Agreement'.",
+      "issue_id": "ISSUE-MERGE-66d146c81c1df052c0",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensor' was worded differently by two reading tasks. Kept: 'the Regents of the University of Colorado'. Task 2 gave: 'University of Colorado'.",
+      "issue_id": "ISSUE-MERGE-41cfdf21fc6531e724",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensee' was worded differently by two reading tasks. Kept: 'ColdQuanta, Inc.'. Task 2 gave: 'Cold Quanta, Inc.'.",
+      "issue_id": "ISSUE-MERGE-3cf71726f062ef8b6b",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensed_ip' was worded differently by two reading tasks. Kept: 'Patent Rights and Know-How'. Task 2 gave: 'Patent Rights'.",
+      "issue_id": "ISSUE-MERGE-847bbcff94ac5865e8",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'exclusivity' was worded differently by two reading tasks. Kept: \"Non-exclusive Know-How license; Patent Rights license is non-exclusive except as to the University's interests, for which it is exclusive\". Task 2 gave: 'Non-Exclusive'.",
+      "issue_id": "ISSUE-MERGE-6fac409dda60c22ca6",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensed_ip_nature' was worded differently by two reading tasks. Kept: 'MIXED'. Task 2 gave: 'PATENT'.",
+      "issue_id": "ISSUE-MERGE-ae7c9d4f1c5941d8f7",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensed_ip_nature_details' was worded differently by two reading tasks. Kept: 'The grant expressly covers Patent Rights and Know-How.'. Task 2 gave: 'Exhibit B expressly identifies Patent Rights; other licensed subject matter may be defined in the other chunk.'.",
+      "issue_id": "ISSUE-MERGE-795b10e39c2a0e4039",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'sublicensing_rights' was worded differently by two reading tasks. Kept: 'Permitted with prior written University approval, not to be unreasonably withheld or delayed, subject to Section 4 limitations.'. Task 2 gave: 'Licensee may grant sublicenses to third parties, subject to the sublicense revenue royalty provisions.'.",
+      "issue_id": "ISSUE-MERGE-a7fea13af581a694f5",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    }
+  ],
+  "other_payments": [
+    {
+      "amount_value": null,
+      "basis": "Noncreditable, nonrefundable up-front license fee; amount specified in Exhibit C outside this chunk.",
+      "condition": "Due within thirty days from the Effective Date.",
+      "currency": null,
+      "disclosure_status": "NOT_VERIFIED",
+      "evidence_ids": [
+        "1-e19"
+      ],
+      "kind": "UPFRONT",
+      "payment_id": "1-p1"
+    },
+    {
+      "amount_value": null,
+      "basis": "Reimbursement of patent preparation, filing, prosecution and maintenance costs, including attorney fees; historical amount and installment shares are redacted.",
+      "condition": "Payable within thirty days of invoice.",
+      "currency": null,
+      "disclosure_status": "REDACTED",
+      "evidence_ids": [
+        "1-e20"
+      ],
+      "kind": "OTHER",
+      "payment_id": "1-p2"
+    },
+    {
+      "amount_value": null,
+      "basis": "Past-due payments bear compounded monthly interest at a redacted rate or the legal maximum, whichever is less.",
+      "condition": "Payment is past due.",
+      "currency": null,
+      "disclosure_status": "REDACTED",
+      "evidence_ids": [
+        "1-e21"
+      ],
+      "kind": "INTEREST",
+      "payment_id": "1-p3"
+    },
+    {
+      "amount_value": null,
+      "basis": "Reimbursement of inspection costs and underpayment, including interest, if the redacted audit threshold is exceeded.",
+      "condition": "Inspection shows underreporting or underpayment above the redacted threshold for a twelve-month period.",
+      "currency": null,
+      "disclosure_status": "REDACTED",
+      "evidence_ids": [
+        "1-e22"
+      ],
+      "kind": "OTHER",
+      "payment_id": "1-p4"
+    },
+    {
+      "amount_value": null,
+      "basis": "Fee in lieu of a license issue fee",
+      "condition": "Payable after only the first of a Liquidation Event or Initial Public Offering; payable at closing, except Trailing Consideration payable within thirty days after receipt.",
+      "currency": null,
+      "disclosure_status": "REDACTED",
+      "evidence_ids": [
+        "c2-e5",
+        "c2-e6"
+      ],
+      "kind": "OTHER",
+      "payment_id": "c2-p1"
+    }
+  ],
+  "reader": {
+    "engine": "codex",
+    "model": "gpt-6-sol",
+    "read_scope": "FULL_DOCUMENT",
+    "reviewed_passage_ids": [
+      "DOC-c24d351ab4b04c1915:P000001",
+      "DOC-c24d351ab4b04c1915:P000002",
+      "DOC-c24d351ab4b04c1915:P000003",
+      "DOC-c24d351ab4b04c1915:P000004",
+      "DOC-c24d351ab4b04c1915:P000005",
+      "DOC-c24d351ab4b04c1915:P000006",
+      "DOC-c24d351ab4b04c1915:P000007",
+      "DOC-c24d351ab4b04c1915:P000008",
+      "DOC-c24d351ab4b04c1915:P000009",
+      "DOC-c24d351ab4b04c1915:P000010",
+      "DOC-c24d351ab4b04c1915:P000011",
+      "DOC-c24d351ab4b04c1915:P000012",
+      "DOC-c24d351ab4b04c1915:P000013",
+      "DOC-c24d351ab4b04c1915:P000014",
+      "DOC-c24d351ab4b04c1915:P000015",
+      "DOC-c24d351ab4b04c1915:P000016",
+      "DOC-c24d351ab4b04c1915:P000017",
+      "DOC-c24d351ab4b04c1915:P000018",
+      "DOC-c24d351ab4b04c1915:P000019",
+      "DOC-c24d351ab4b04c1915:P000020",
+      "DOC-c24d351ab4b04c1915:P000021",
+      "DOC-c24d351ab4b04c1915:P000022",
+      "DOC-c24d351ab4b04c1915:P000023",
+      "DOC-c24d351ab4b04c1915:P000024",
+      "DOC-c24d351ab4b04c1915:P000025",
+      "DOC-c24d351ab4b04c1915:P000026",
+      "DOC-c24d351ab4b04c1915:P000027",
+      "DOC-c24d351ab4b04c1915:P000028",
+      "DOC-c24d351ab4b04c1915:P000029",
+      "DOC-c24d351ab4b04c1915:P000030",
+      "DOC-c24d351ab4b04c1915:P000031",
+      "DOC-c24d351ab4b04c1915:P000032",
+      "DOC-c24d351ab4b04c1915:P000033",
+      "DOC-c24d351ab4b04c1915:P000034",
+      "DOC-c24d351ab4b04c1915:P000035",
+      "DOC-c24d351ab4b04c1915:P000036",
+      "DOC-c24d351ab4b04c1915:P000037",
+      "DOC-c24d351ab4b04c1915:P000038",
+      "DOC-c24d351ab4b04c1915:P000039",
+      "DOC-c24d351ab4b04c1915:P000040",
+      "DOC-c24d351ab4b04c1915:P000041",
+      "DOC-c24d351ab4b04c1915:P000042",
+      "DOC-c24d351ab4b04c1915:P000043",
+      "DOC-c24d351ab4b04c1915:P000044",
+      "DOC-c24d351ab4b04c1915:P000045",
+      "DOC-c24d351ab4b04c1915:P000046",
+      "DOC-c24d351ab4b04c1915:P000047",
+      "DOC-c24d351ab4b04c1915:P000048",
+      "DOC-c24d351ab4b04c1915:P000049",
+      "DOC-c24d351ab4b04c1915:P000050",
+      "DOC-c24d351ab4b04c1915:P000051",
+      "DOC-c24d351ab4b04c1915:P000052",
+      "DOC-c24d351ab4b04c1915:P000053",
+      "DOC-c24d351ab4b04c1915:P000054",
+      "DOC-c24d351ab4b04c1915:P000055",
+      "DOC-c24d351ab4b04c1915:P000056",
+      "DOC-c24d351ab4b04c1915:P000057",
+      "DOC-c24d351ab4b04c1915:P000058",
+      "DOC-c24d351ab4b04c1915:P000059",
+      "DOC-c24d351ab4b04c1915:P000060",
+      "DOC-c24d351ab4b04c1915:P000061",
+      "DOC-c24d351ab4b04c1915:P000062",
+      "DOC-c24d351ab4b04c1915:P000063",
+      "DOC-c24d351ab4b04c1915:P000064",
+      "DOC-c24d351ab4b04c1915:P000065",
+      "DOC-c24d351ab4b04c1915:P000066",
+      "DOC-c24d351ab4b04c1915:P000067",
+      "DOC-c24d351ab4b04c1915:P000068",
+      "DOC-c24d351ab4b04c1915:P000069",
+      "DOC-c24d351ab4b04c1915:P000070",
+      "DOC-c24d351ab4b04c1915:P000071",
+      "DOC-c24d351ab4b04c1915:P000072",
+      "DOC-c24d351ab4b04c1915:P000073",
+      "DOC-c24d351ab4b04c1915:P000074",
+      "DOC-c24d351ab4b04c1915:P000075",
+      "DOC-c24d351ab4b04c1915:P000076",
+      "DOC-c24d351ab4b04c1915:P000077",
+      "DOC-c24d351ab4b04c1915:P000078",
+      "DOC-c24d351ab4b04c1915:P000079",
+      "DOC-c24d351ab4b04c1915:P000080",
+      "DOC-c24d351ab4b04c1915:P000081",
+      "DOC-c24d351ab4b04c1915:P000082",
+      "DOC-c24d351ab4b04c1915:P000083",
+      "DOC-c24d351ab4b04c1915:P000084",
+      "DOC-c24d351ab4b04c1915:P000085",
+      "DOC-c24d351ab4b04c1915:P000086",
+      "DOC-c24d351ab4b04c1915:P000087",
+      "DOC-c24d351ab4b04c1915:P000088",
+      "DOC-c24d351ab4b04c1915:P000089",
+      "DOC-c24d351ab4b04c1915:P000090",
+      "DOC-c24d351ab4b04c1915:P000091",
+      "DOC-c24d351ab4b04c1915:P000092",
+      "DOC-c24d351ab4b04c1915:P000093",
+      "DOC-c24d351ab4b04c1915:P000094",
+      "DOC-c24d351ab4b04c1915:P000095",
+      "DOC-c24d351ab4b04c1915:P000096",
+      "DOC-c24d351ab4b04c1915:P000097",
+      "DOC-c24d351ab4b04c1915:P000098",
+      "DOC-c24d351ab4b04c1915:P000099",
+      "DOC-c24d351ab4b04c1915:P000100",
+      "DOC-c24d351ab4b04c1915:P000101",
+      "DOC-c24d351ab4b04c1915:P000102",
+      "DOC-c24d351ab4b04c1915:P000103",
+      "DOC-c24d351ab4b04c1915:P000104",
+      "DOC-c24d351ab4b04c1915:P000105",
+      "DOC-c24d351ab4b04c1915:P000106",
+      "DOC-c24d351ab4b04c1915:P000107",
+      "DOC-c24d351ab4b04c1915:P000108",
+      "DOC-c24d351ab4b04c1915:P000109",
+      "DOC-c24d351ab4b04c1915:P000110",
+      "DOC-c24d351ab4b04c1915:P000111",
+      "DOC-c24d351ab4b04c1915:P000112",
+      "DOC-c24d351ab4b04c1915:P000113",
+      "DOC-c24d351ab4b04c1915:P000114",
+      "DOC-c24d351ab4b04c1915:P000115",
+      "DOC-c24d351ab4b04c1915:P000116",
+      "DOC-c24d351ab4b04c1915:P000117",
+      "DOC-c24d351ab4b04c1915:P000118",
+      "DOC-c24d351ab4b04c1915:P000119",
+      "DOC-c24d351ab4b04c1915:P000120",
+      "DOC-c24d351ab4b04c1915:P000121",
+      "DOC-c24d351ab4b04c1915:P000122",
+      "DOC-c24d351ab4b04c1915:P000123",
+      "DOC-c24d351ab4b04c1915:P000124",
+      "DOC-c24d351ab4b04c1915:P000125",
+      "DOC-c24d351ab4b04c1915:P000126",
+      "DOC-c24d351ab4b04c1915:P000127",
+      "DOC-c24d351ab4b04c1915:P000128",
+      "DOC-c24d351ab4b04c1915:P000129",
+      "DOC-c24d351ab4b04c1915:P000130",
+      "DOC-c24d351ab4b04c1915:P000131",
+      "DOC-c24d351ab4b04c1915:P000132",
+      "DOC-c24d351ab4b04c1915:P000133",
+      "DOC-c24d351ab4b04c1915:P000134",
+      "DOC-c24d351ab4b04c1915:P000135",
+      "DOC-c24d351ab4b04c1915:P000136",
+      "DOC-c24d351ab4b04c1915:P000137",
+      "DOC-c24d351ab4b04c1915:P000138",
+      "DOC-c24d351ab4b04c1915:P000139",
+      "DOC-c24d351ab4b04c1915:P000140",
+      "DOC-c24d351ab4b04c1915:P000141",
+      "DOC-c24d351ab4b04c1915:P000142",
+      "DOC-c24d351ab4b04c1915:P000143",
+      "DOC-c24d351ab4b04c1915:P000144",
+      "DOC-c24d351ab4b04c1915:P000145",
+      "DOC-c24d351ab4b04c1915:P000146",
+      "DOC-c24d351ab4b04c1915:P000147",
+      "DOC-c24d351ab4b04c1915:P000148",
+      "DOC-c24d351ab4b04c1915:P000149",
+      "DOC-c24d351ab4b04c1915:P000150",
+      "DOC-c24d351ab4b04c1915:P000151",
+      "DOC-c24d351ab4b04c1915:P000152",
+      "DOC-c24d351ab4b04c1915:P000153",
+      "DOC-c24d351ab4b04c1915:P000154",
+      "DOC-c24d351ab4b04c1915:P000155",
+      "DOC-c24d351ab4b04c1915:P000156",
+      "DOC-c24d351ab4b04c1915:P000157",
+      "DOC-c24d351ab4b04c1915:P000158",
+      "DOC-c24d351ab4b04c1915:P000159",
+      "DOC-c24d351ab4b04c1915:P000160",
+      "DOC-c24d351ab4b04c1915:P000161",
+      "DOC-c24d351ab4b04c1915:P000162",
+      "DOC-c24d351ab4b04c1915:P000163",
+      "DOC-c24d351ab4b04c1915:P000164",
+      "DOC-c24d351ab4b04c1915:P000165",
+      "DOC-c24d351ab4b04c1915:P000166",
+      "DOC-c24d351ab4b04c1915:P000167",
+      "DOC-c24d351ab4b04c1915:P000168",
+      "DOC-c24d351ab4b04c1915:P000169",
+      "DOC-c24d351ab4b04c1915:P000170",
+      "DOC-c24d351ab4b04c1915:P000171",
+      "DOC-c24d351ab4b04c1915:P000172",
+      "DOC-c24d351ab4b04c1915:P000173",
+      "DOC-c24d351ab4b04c1915:P000174",
+      "DOC-c24d351ab4b04c1915:P000175",
+      "DOC-c24d351ab4b04c1915:P000176",
+      "DOC-c24d351ab4b04c1915:P000177",
+      "DOC-c24d351ab4b04c1915:P000178",
+      "DOC-c24d351ab4b04c1915:P000179",
+      "DOC-c24d351ab4b04c1915:P000180",
+      "DOC-c24d351ab4b04c1915:P000181",
+      "DOC-c24d351ab4b04c1915:P000182",
+      "DOC-c24d351ab4b04c1915:P000183",
+      "DOC-c24d351ab4b04c1915:P000184",
+      "DOC-c24d351ab4b04c1915:P000185",
+      "DOC-c24d351ab4b04c1915:P000186",
+      "DOC-c24d351ab4b04c1915:P000187",
+      "DOC-c24d351ab4b04c1915:P000188",
+      "DOC-c24d351ab4b04c1915:P000189",
+      "DOC-c24d351ab4b04c1915:P000190",
+      "DOC-c24d351ab4b04c1915:P000191",
+      "DOC-c24d351ab4b04c1915:P000192",
+      "DOC-c24d351ab4b04c1915:P000193",
+      "DOC-c24d351ab4b04c1915:P000194",
+      "DOC-c24d351ab4b04c1915:P000195",
+      "DOC-c24d351ab4b04c1915:P000196",
+      "DOC-c24d351ab4b04c1915:P000197",
+      "DOC-c24d351ab4b04c1915:P000198",
+      "DOC-c24d351ab4b04c1915:P000199",
+      "DOC-c24d351ab4b04c1915:P000200",
+      "DOC-c24d351ab4b04c1915:P000201",
+      "DOC-c24d351ab4b04c1915:P000202",
+      "DOC-c24d351ab4b04c1915:P000203",
+      "DOC-c24d351ab4b04c1915:P000204",
+      "DOC-c24d351ab4b04c1915:P000205",
+      "DOC-c24d351ab4b04c1915:P000206",
+      "DOC-c24d351ab4b04c1915:P000207",
+      "DOC-c24d351ab4b04c1915:P000208",
+      "DOC-c24d351ab4b04c1915:P000209",
+      "DOC-c24d351ab4b04c1915:P000210",
+      "DOC-c24d351ab4b04c1915:P000211",
+      "DOC-c24d351ab4b04c1915:P000212",
+      "DOC-c24d351ab4b04c1915:P000213",
+      "DOC-c24d351ab4b04c1915:P000214",
+      "DOC-c24d351ab4b04c1915:P000215",
+      "DOC-c24d351ab4b04c1915:P000216",
+      "DOC-c24d351ab4b04c1915:P000217",
+      "DOC-c24d351ab4b04c1915:P000218",
+      "DOC-c24d351ab4b04c1915:P000219",
+      "DOC-c24d351ab4b04c1915:P000220",
+      "DOC-c24d351ab4b04c1915:P000221",
+      "DOC-c24d351ab4b04c1915:P000222",
+      "DOC-c24d351ab4b04c1915:P000223",
+      "DOC-c24d351ab4b04c1915:P000224",
+      "DOC-c24d351ab4b04c1915:P000225",
+      "DOC-c24d351ab4b04c1915:P000226",
+      "DOC-c24d351ab4b04c1915:P000227",
+      "DOC-c24d351ab4b04c1915:P000228",
+      "DOC-c24d351ab4b04c1915:P000229",
+      "DOC-c24d351ab4b04c1915:P000230",
+      "DOC-c24d351ab4b04c1915:P000231",
+      "DOC-c24d351ab4b04c1915:P000232",
+      "DOC-c24d351ab4b04c1915:P000233",
+      "DOC-c24d351ab4b04c1915:P000234",
+      "DOC-c24d351ab4b04c1915:P000235",
+      "DOC-c24d351ab4b04c1915:P000236",
+      "DOC-c24d351ab4b04c1915:P000237",
+      "DOC-c24d351ab4b04c1915:P000238",
+      "DOC-c24d351ab4b04c1915:P000239",
+      "DOC-c24d351ab4b04c1915:P000240",
+      "DOC-c24d351ab4b04c1915:P000241",
+      "DOC-c24d351ab4b04c1915:P000242",
+      "DOC-c24d351ab4b04c1915:P000243",
+      "DOC-c24d351ab4b04c1915:P000244",
+      "DOC-c24d351ab4b04c1915:P000245",
+      "DOC-c24d351ab4b04c1915:P000246",
+      "DOC-c24d351ab4b04c1915:P000247",
+      "DOC-c24d351ab4b04c1915:P000248",
+      "DOC-c24d351ab4b04c1915:P000249",
+      "DOC-c24d351ab4b04c1915:P000250",
+      "DOC-c24d351ab4b04c1915:P000251",
+      "DOC-c24d351ab4b04c1915:P000252",
+      "DOC-c24d351ab4b04c1915:P000253",
+      "DOC-c24d351ab4b04c1915:P000254",
+      "DOC-c24d351ab4b04c1915:P000255",
+      "DOC-c24d351ab4b04c1915:P000256",
+      "DOC-c24d351ab4b04c1915:P000257",
+      "DOC-c24d351ab4b04c1915:P000258",
+      "DOC-c24d351ab4b04c1915:P000259",
+      "DOC-c24d351ab4b04c1915:P000260",
+      "DOC-c24d351ab4b04c1915:P000261",
+      "DOC-c24d351ab4b04c1915:P000262",
+      "DOC-c24d351ab4b04c1915:P000263",
+      "DOC-c24d351ab4b04c1915:P000264",
+      "DOC-c24d351ab4b04c1915:P000265",
+      "DOC-c24d351ab4b04c1915:P000266",
+      "DOC-c24d351ab4b04c1915:P000267",
+      "DOC-c24d351ab4b04c1915:P000268",
+      "DOC-c24d351ab4b04c1915:P000269"
+    ],
+    "run_id": "MERGE-c2af284e8140227ee1"
+  },
+  "royalty_terms": [
+    {
+      "adjustments": [
+        {
+          "description": "No multiple royalties because a product or process is covered by more than one Patent Right.",
+          "evidence_ids": [
+            "1-e16"
+          ]
+        },
+        {
+          "description": "Sales to sublicensees and non-arm's-length transactions use an arm's-length Net Sales value.",
+          "evidence_ids": [
+            "1-e17"
+          ]
+        }
+      ],
+      "base": "Net Sales of Licensed Products and Licensed Processes",
+      "base_definition": "Gross receipts subject to the deductions and non-cash consideration rule in Section 1.7.",
+      "base_evidence_ids": [
+        "1-e14",
+        "1-e15"
+      ],
+      "conditions": [],
+      "disclosure_status": "NOT_VERIFIED",
+      "effective_period": null,
+      "evidence_ids": [
+        "1-e13",
+        "1-e14",
+        "1-e15",
+        "1-e16",
+        "1-e17"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": "Licensed Products and Licensed Processes",
+      "rate_evidence_ids": [],
+      "rate_unit": "UNKNOWN",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "1-t1",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "All revenue received by Licensee from sublicensees of the Patent Rights",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "1-e18"
+      ],
+      "conditions": [],
+      "disclosure_status": "NOT_VERIFIED",
+      "effective_period": null,
+      "evidence_ids": [
+        "1-e18"
+      ],
+      "family": "SUBLICENSING_RECEIPTS",
+      "product_scope": "Patent Rights sublicenses",
+      "rate_evidence_ids": [],
+      "rate_unit": "UNKNOWN",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "1-t2",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Net Sales",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "c2-e19"
+      ],
+      "conditions": [],
+      "disclosure_status": "REDACTED",
+      "effective_period": null,
+      "evidence_ids": [
+        "c2-e19"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": null,
+      "rate_evidence_ids": [
+        "c2-e19"
+      ],
+      "rate_unit": "REDACTED",
+      "rate_value": null,
+      "structure": "FLAT",
+      "term_id": "c2-t1",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Government Sales",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "c2-e20",
+        "c2-e23"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "c2-e19"
+          ],
+          "text": "Net Sales made directly to the United States Government"
+        },
+        {
+          "evidence_ids": [
+            "c2-e22"
+          ],
+          "text": "Annual Government Sales are reconciled, reported and paid in the fourth quarter royalty payment"
+        }
+      ],
+      "disclosure_status": "REDACTED",
+      "effective_period": "Annual Government Sales; reconciled, reported and paid in the fourth quarter royalty payment",
+      "evidence_ids": [
+        "c2-e19",
+        "c2-e20",
+        "c2-e21",
+        "c2-e22",
+        "c2-e23",
+        "c2-e24"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": null,
+      "rate_evidence_ids": [
+        "c2-e20",
+        "c2-e23"
+      ],
+      "rate_unit": "REDACTED",
+      "rate_value": null,
+      "structure": "TIERED",
+      "term_id": "c2-t2",
+      "territory_scope": null,
+      "tiers": [
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "c2-e20",
+            "c2-e21"
+          ],
+          "lower": null,
+          "measurement_period": "annual",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 1,
+          "threshold_basis": "Government Sales as a share of Licensee's total Net Sales, below a redacted threshold",
+          "threshold_evidence_ids": [
+            "c2-e21"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "c2-e23",
+            "c2-e24"
+          ],
+          "lower": null,
+          "measurement_period": "annual",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 2,
+          "threshold_basis": "Government Sales as a share of Licensee's total Net Sales, equal to or above a redacted threshold",
+          "threshold_evidence_ids": [
+            "c2-e24"
+          ],
+          "upper": null
+        }
+      ]
+    },
+    {
+      "adjustments": [],
+      "base": "Sublicense Revenue received by Licensee or Affiliates",
+      "base_definition": "Consideration in any form received in connection with a third-party sublicense; includes upfront fees, maintenance fees, milestone payments, royalties on Sublicensee net sales, the unearned portion of minimum royalties, equity, and research and development funding exceeding its costs.",
+      "base_evidence_ids": [
+        "c2-e25"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "c2-e25"
+          ],
+          "text": "Consideration must be received by Licensee or Affiliates in connection with a grant of a sublicense to a third party."
+        }
+      ],
+      "disclosure_status": "REDACTED",
+      "effective_period": "Through termination or expiration, with tiers determined by the year in which the sublicense agreement was executed after the Effective Date",
+      "evidence_ids": [
+        "c2-e25",
+        "c2-e26",
+        "c2-e27",
+        "c2-e28"
+      ],
+      "family": "SUBLICENSING_RECEIPTS",
+      "product_scope": "Licensed Products or Licensed Process",
+      "rate_evidence_ids": [
+        "c2-e26",
+        "c2-e27",
+        "c2-e28"
+      ],
+      "rate_unit": "REDACTED",
+      "rate_value": null,
+      "structure": "TIERED",
+      "term_id": "c2-t3",
+      "territory_scope": null,
+      "tiers": [
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "c2-e26"
+          ],
+          "lower": null,
+          "measurement_period": "first year after Effective Date",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 1,
+          "threshold_basis": "Sublicense agreement execution during first year after Effective Date",
+          "threshold_evidence_ids": [
+            "c2-e26"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "c2-e27"
+          ],
+          "lower": null,
+          "measurement_period": "second year after Effective Date",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 2,
+          "threshold_basis": "Sublicense agreement execution during second year after Effective Date",
+          "threshold_evidence_ids": [
+            "c2-e27"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "c2-e28"
+          ],
+          "lower": null,
+          "measurement_period": "third year and each year thereafter until termination or expiration",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 3,
+          "threshold_basis": "Sublicense agreement execution during third year or later after Effective Date",
+          "threshold_evidence_ids": [
+            "c2-e28"
+          ],
+          "upper": null
+        }
+      ]
+    }
+  ],
+  "schema_version": "m2.0",
+  "source_text_sha256": "9354e293976bbb797a7f831a177264dd31bc6b59aa941774a07b19a4b16e8860",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2007825/000119312526002732/d22517dex1018.htm"
+}

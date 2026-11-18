@@ -1,0 +1,1349 @@
+{
+  "agreement": {
+    "contractual_status": "Binding term sheet, subject to a fairness opinion condition and execution of a definitive agreement",
+    "duration": "Until the earlier of expiration of patents worldwide or final commercial royalty payment from the Ultimate Licensee",
+    "effective_date": null,
+    "exclusivity": "Exclusive license; separate 120-day exclusivity period to finalize the Definitive Agreement",
+    "exclusivity_scope": "Exclusive, worldwide, sublicensable rights to VXM01 for all indications; a separate 120-day exclusivity period begins upon execution of the Binding Term Sheet to finalize the Definitive Agreement, perform diligence, and structure milestone schedules.",
+    "execution_date": "2026-01-13",
+    "field_evidence": {
+      "contractual_status": [
+        "1-e11",
+        "1-e12"
+      ],
+      "duration": [
+        "1-e8",
+        "1-e9"
+      ],
+      "exclusivity": [
+        "1-e6",
+        "1-e10"
+      ],
+      "exclusivity_scope": [
+        "1-e6",
+        "1-e10"
+      ],
+      "execution_date": [
+        "1-e5"
+      ],
+      "industry": [
+        "1-e4"
+      ],
+      "licensed_ip": [
+        "1-e7"
+      ],
+      "licensed_ip_nature": [
+        "1-e8"
+      ],
+      "licensee": [
+        "1-e3"
+      ],
+      "licensor": [
+        "1-e3"
+      ],
+      "related_party": [
+        "1-e13"
+      ],
+      "sublicensing_rights": [
+        "1-e6"
+      ],
+      "territory": [
+        "1-e6"
+      ],
+      "title": [
+        "1-e1",
+        "1-e2"
+      ]
+    },
+    "industry": "Biotechnology; oncology immunotherapy",
+    "licensed_ip": "All existing and future Vaximm intellectual property relating to VXM01",
+    "licensed_ip_nature": "PATENT",
+    "licensed_ip_nature_basis": "INFERRED",
+    "licensed_ip_nature_details": "The term runs to worldwide patent expiration; the licensed property itself is described more broadly as intellectual property relating to VXM01.",
+    "licensee": "BCM Europe AG",
+    "licensor": "Vaximm AG",
+    "other_material_terms": [
+      {
+        "category": "TERMINATION",
+        "evidence_ids": [
+          "1-e14"
+        ],
+        "text": "Either party may terminate for uncured material breach, bankruptcy or dissolution, or regulatory prohibition; license rights revert to Licensor."
+      },
+      {
+        "category": "OTHER",
+        "evidence_ids": [
+          "1-e12"
+        ],
+        "text": "Binding effectiveness is conditioned on an independent third-party fairness opinion."
+      }
+    ],
+    "related_party": "YES",
+    "sublicensing_rights": "Expressly sublicensable; Licensee may out-license VXM01 to an Ultimate Licensee of its choosing.",
+    "territory": "Worldwide",
+    "title": "Binding Term Sheet — Global License Agreement for VXM01"
+  },
+  "amendment_status": "REFERENCED_UNRESOLVED",
+  "dispositions": [
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000001",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit label contains no economic obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "DUPLICATE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000014",
+      "payment_ids": [
+        "1-p1",
+        "1-p2"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Summary of the upfront payment detailed in Section 4.1; components are recorded once.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "DUPLICATE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000015",
+      "payment_ids": [
+        "1-p3"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Summary of the aggregate milestone maximum detailed in Section 4.2.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000016",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Summarizes the downstream royalty pass-through and points to its later mechanics.",
+      "term_ids": [
+        "1-t1",
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e34"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000019",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Clarifies that BCME has no standalone commercial royalty and passes through received royalties.",
+      "term_ids": [
+        "1-t1",
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000026",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Financial consideration section heading only.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000027",
+      "payment_ids": [
+        "1-p1",
+        "1-p2"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Heading identifies the upfront payment addressed by the following passages.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000028",
+      "payment_ids": [
+        "1-p1",
+        "1-p2"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Introduces BCME's payment obligation to Licensor.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-e16"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000029",
+      "payment_ids": [
+        "1-p1",
+        "1-p2"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "States aggregate upfront amount and definitive-agreement execution trigger; the two components are recorded separately.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-e17"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000030",
+      "payment_ids": [
+        "1-p1"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Specifies the cash component of the upfront payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-e18"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000031",
+      "payment_ids": [
+        "1-p2"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Specifies the digital-asset component of the upfront payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000033",
+      "payment_ids": [
+        "1-p3"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Introduces the additional milestone obligation.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "1-e19"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000034",
+      "payment_ids": [
+        "1-p3"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "States the aggregate maximum milestone amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000036",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Heading introduces milestone design principles without a separate amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000039",
+      "payment_ids": [
+        "1-p3"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Describes principles for a milestone schedule still to be detailed.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000040",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Heading introduces Ultimate Licensee royalty pass-through mechanics.",
+      "term_ids": [
+        "1-t1",
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000043",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Heading introduces milestone retention and accounting used in delta recovery.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-e33"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000044",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Ultimate Licensee milestones are retained by Licensee and used in the delta calculation.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "DUPLICATE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000045",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Repeats the delta-calculation treatment of Ultimate Licensee milestones.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000046",
+      "payment_ids": [
+        "1-p4"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Heading introduces Negative Milestone Delta and preferred-return recovery.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000048",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Names the Negative Milestone Delta defined by the following components.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-e31"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000049",
+      "payment_ids": [
+        "1-p3"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Milestones paid to Licensor under Section 4.2 are added to the delta.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-e32"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000054",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Milestones received from the Ultimate Licensee are subtracted from the delta.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "UNRELATED_PERCENT",
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "1-e29"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000055",
+      "payment_ids": [
+        "1-p4"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "OTHER_PAYMENT",
+          "literal": "fifteen percent (15.0%)",
+          "rationale": "Annual preferred return for Fund limited partners, not a royalty rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "The 15.0% annual ceiling applies to the Fund's preferred return, which feeds the delta; it is not a sales or sublicense royalty rate.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e21"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000056",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Positive delta triggers priority recovery from received royalties.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000057",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Gives Licensee priority recovery of the full Negative Milestone Delta.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e23"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000058",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "one hundred percent (100%)",
+          "rationale": "Specifies the share of received royalties applied to priority delta recovery.",
+          "term_id": "1-t1"
+        }
+      ],
+      "rationale": "All received Ultimate Licensee royalties fund delta recovery until recovered.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "1-e22"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000059",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Sets the endpoint for priority recovery and cites Section 5.2.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000060",
+      "payment_ids": [
+        "1-p4"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Explains that delta recovery includes advanced milestone payments and the Fund preferred return.",
+      "term_ids": [
+        "1-t1"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000061",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Heading introduces post-recovery royalty pass-through.",
+      "term_ids": [
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e24"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000062",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Full delta recovery triggers the subsequent pass-through.",
+      "term_ids": [
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e25"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000063",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "one hundred percent (100%)",
+          "rationale": "Specifies the share of subsequent Ultimate Licensee royalties passed to Licensor.",
+          "term_id": "1-t2"
+        }
+      ],
+      "rationale": "Specifies the full pass-through share of subsequent received royalties.",
+      "term_ids": [
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e26"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000064",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Permits a documented administrative-cost deduction from post-recovery pass-through.",
+      "term_ids": [
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000065",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Confirms Licensee retains no ongoing royalty spread after recovery.",
+      "term_ids": [
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000066",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Heading introduces the conditional TAC royalty participation.",
+      "term_ids": [
+        "1-t3"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e27"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000067",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Development-capital draw is the condition for TAC royalty participation.",
+      "term_ids": [
+        "1-t3"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [
+        "1-e28"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000069",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Requires a negotiated percentage of VXM01 commercial royalty revenue for TAC holders; no numerical percentage is supplied.",
+      "term_ids": [
+        "1-t3"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000072",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Without a capital draw, TAC contribution does not apply and Section 5 governs royalties.",
+      "term_ids": [
+        "1-t1",
+        "1-t2",
+        "1-t3"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "1-e9"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000097",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Final Ultimate Licensee royalty payment is an alternative term endpoint.",
+      "term_ids": [
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000106",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "States the finality of royalty distributions made before termination.",
+      "term_ids": [
+        "1-t1",
+        "1-t2"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "1-e10"
+      ],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000115",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "This 120-day period concerns exclusivity to finalize the Definitive Agreement, not a payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000122",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Names financial consideration among binding provisions without a separate amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000123",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Names milestone and royalty mechanics among binding provisions without a separate rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-4f4103eea6e81d114e:P000135",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Describes the scope of the fairness opinion, without a separate payment or rate.",
+      "term_ids": []
+    }
+  ],
+  "document_id": "DOC-4f4103eea6e81d114e",
+  "evidence": [
+    {
+      "evidence_id": "1-e1",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000002",
+      "quote": "BINDING TERM SHEET",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e2",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000003",
+      "quote": "Global License Agreement for VXM01",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e3",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000004",
+      "quote": "Between BCM Europe AG (“Licensee”) and Vaximm AG (“Licensor”)",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e4",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000009",
+      "quote": "a Swiss biotechnology company and a wholly-owned subsidiary of OSR Holdings, Inc. (NASDAQ: OSRH) developing the VXM01 oral cancer immunotherapy platform",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e5",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000005",
+      "quote": "Date: 13 January, 2026",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e6",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000022",
+      "quote": "Exclusive, worldwide, sublicensable rights to VXM01 for all indications",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-e7",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000025",
+      "quote": "All existing and future Vaximm intellectual property relating to VXM01 is included within the scope of the license.",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-e8",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000096",
+      "quote": "expiration of patents worldwide",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e9",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000097",
+      "quote": "the final commercial royalty payment from the Ultimate Licensee",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e10",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000115",
+      "quote": "Upon execution of this Binding Term Sheet, Licensor grants Licensee a 120-day exclusivity period to finalize the Definitive Agreement, perform diligence, and structure milestone schedules.",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "1-e11",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000120",
+      "quote": "Except for provisions expressly stated to be non-binding, this Term Sheet is binding upon the Parties",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e12",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000133",
+      "quote": "As a condition to the binding effectiveness of this Term Sheet, the Parties shall jointly engage, or Licensor shall engage with the consent of Licensee, an independent third-party valuation firm with recognized expertise in life-science and biopharmaceutical licensing transactions (the “Valuation Firm”) to provide a written fairness opinion (the “Fairness Opinion”).",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e13",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000132",
+      "quote": "this transaction constitutes a related-party transaction, as Licensor, OSR Holdings, Inc., and Licensee are affiliated entities",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e14",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000101",
+      "quote": "uncured material breach (60 days)",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e16",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000029",
+      "quote": "$30,000,000, payable upon execution of the definitive Global License Agreement, structured as:",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e17",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000030",
+      "quote": "$15,000,000 in cash",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e18",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000031",
+      "quote": "$15,000,000 in digital assets, mutually agreed by the Parties.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e19",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000034",
+      "quote": "$815,000,000",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e20",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000035",
+      "quote": "payable upon achievement of clinical, regulatory, and commercial milestones to be detailed in the Definitive Agreement.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e21",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000056",
+      "quote": "If the Negative Milestone Delta is greater than zero:",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e22",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000059",
+      "quote": "until the Negative Milestone Delta has been fully recovered in accordance with this Section 5.2.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e23",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000058",
+      "quote": "one hundred percent (100%) of all royalty payments received by Licensee from the Ultimate Licensee",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-e24",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000062",
+      "quote": "Upon full recovery of the Negative Milestone Delta (including the Minimum Preferred Return):",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e25",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000063",
+      "quote": "Licensee shall pass through one hundred percent (100%) of all subsequent royalty payments received from the Ultimate Licensee directly to Licensor",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-e26",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000064",
+      "quote": "less only actual, documented third-party administrative costs (including legal, regulatory, accounting, and audit expenses), itemized annually and incurred in connection with administration of the license and royalty stream.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e27",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000067",
+      "quote": "The Blockchain (“TAC”)-based royalty model applies only if Vaximm elects to draw development capital from the BCM Royalty Fund.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e28",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000069",
+      "quote": "Licensor shall contribute a negotiated percentage of its future commercial royalty revenue from VXM01 into a TAC Royalty Distribution Wallet for distribution to TAC holders.",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "1-e29",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000055",
+      "quote": "“Minimum Preferred Return” means a preferred return accruing for the benefit of the Limited Partners of the Fund on capital deployed in connection with VXM01, calculated in accordance with the definitive Global License Agreement and related fund documentation, at a rate not to exceed fifteen percent (15.0%) per annum, compounded annually or otherwise as agreed in the definitive documentation.",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e30",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000052",
+      "quote": "the Minimum Preferred Return (as defined below) accrued for the Limited Partners of the Fund",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e31",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000049",
+      "quote": "the aggregate milestone payments actually paid by Licensee to Licensor pursuant to Section 4.2",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e32",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000054",
+      "quote": "the aggregate milestone payments actually received by Licensee from the Ultimate Licensee",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e33",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000044",
+      "quote": "Milestone payments received by Licensee from the Ultimate Licensee belong to Licensee; however, such payments shall be used solely for purposes of calculating the Negative Milestone Delta.",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "1-e34",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000019",
+      "quote": "BCME does not assume a standalone commercial royalty obligation to Vaximm. Instead, BCME will pass through royalties from the Ultimate Licensee, subject to the delta-recovery mechanism described below.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "1-e35",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000071",
+      "quote": "No TAC contribution obligation applies",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "1-e36",
+      "passage_id": "DOC-4f4103eea6e81d114e:P000107",
+      "quote": "Licensee’s delta recovery ceases unless otherwise agreed.",
+      "role": "CONDITION"
+    }
+  ],
+  "open_issues": [
+    {
+      "description": "The definitive Global License Agreement, detailed milestone schedule, TAC negotiated percentage, preferred-return calculation, and fund documentation are not supplied; their final terms cannot be verified.",
+      "issue_id": "1-i1",
+      "kind": "DEFINITIVE_AGREEMENT_UNAVAILABLE",
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000029",
+        "DOC-4f4103eea6e81d114e:P000035",
+        "DOC-4f4103eea6e81d114e:P000055",
+        "DOC-4f4103eea6e81d114e:P000069"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "The packet does not establish whether the fairness opinion condition was fulfilled, whether a definitive agreement was executed, or whether the economics became operative.",
+      "issue_id": "1-i2",
+      "kind": "CONTRACTUAL_EFFECTIVENESS",
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000128",
+        "DOC-4f4103eea6e81d114e:P000133",
+        "DOC-4f4103eea6e81d114e:P000142"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "The Negative Milestone Delta formula and preferred-return timing require reconciliation with definitive documentation, particularly whether the delta is recalculated as later milestone receipts and returns accrue.",
+      "issue_id": "1-i3",
+      "kind": "DELTA_INTERPRETATION",
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000049",
+        "DOC-4f4103eea6e81d114e:P000052",
+        "DOC-4f4103eea6e81d114e:P000054",
+        "DOC-4f4103eea6e81d114e:P000055"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Later amendments, termination, and the current operative status have not been checked.",
+      "issue_id": "1-i4",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000006",
+        "DOC-4f4103eea6e81d114e:P000143"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Royalty and payment economics require cross-chunk reconciliation if additional chunks of this source or linked definitive agreements are supplied; this packet identifies itself as one of one chunks.",
+      "issue_id": "1-i5",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-4f4103eea6e81d114e:P000058",
+        "DOC-4f4103eea6e81d114e:P000063",
+        "DOC-4f4103eea6e81d114e:P000069"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    }
+  ],
+  "other_payments": [
+    {
+      "amount_value": "15000000",
+      "basis": "Cash component of the $30,000,000 upfront payment",
+      "condition": "Payable upon execution of the definitive Global License Agreement",
+      "currency": "USD",
+      "disclosure_status": "DISCLOSED",
+      "evidence_ids": [
+        "1-e16",
+        "1-e17"
+      ],
+      "kind": "UPFRONT",
+      "payment_id": "1-p1"
+    },
+    {
+      "amount_value": "15000000",
+      "basis": "Digital-asset component of the $30,000,000 upfront payment; assets mutually agreed by the parties",
+      "condition": "Payable upon execution of the definitive Global License Agreement",
+      "currency": "USD",
+      "disclosure_status": "DISCLOSED",
+      "evidence_ids": [
+        "1-e16",
+        "1-e18"
+      ],
+      "kind": "UPFRONT",
+      "payment_id": "1-p2"
+    },
+    {
+      "amount_value": "815000000",
+      "basis": "Aggregate maximum of additional clinical, regulatory, and commercial milestones",
+      "condition": "Payable upon achievement of milestones to be detailed in the Definitive Agreement",
+      "currency": "USD",
+      "disclosure_status": "DISCLOSED",
+      "evidence_ids": [
+        "1-e19",
+        "1-e20"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "1-p3"
+    },
+    {
+      "amount_value": null,
+      "basis": "Minimum Preferred Return accruing for the Fund's Limited Partners on capital deployed in connection with VXM01, at a rate not to exceed 15.0% per annum",
+      "condition": "Calculation and compounding subject to definitive Global License Agreement and fund documentation; included in Negative Milestone Delta recovery",
+      "currency": null,
+      "disclosure_status": "AMBIGUOUS",
+      "evidence_ids": [
+        "1-e29",
+        "1-e30"
+      ],
+      "kind": "OTHER",
+      "payment_id": "1-p4"
+    }
+  ],
+  "reader": {
+    "engine": "codex",
+    "model": "gpt-6-sol",
+    "read_scope": "FULL_DOCUMENT",
+    "reviewed_passage_ids": [
+      "DOC-4f4103eea6e81d114e:P000001",
+      "DOC-4f4103eea6e81d114e:P000002",
+      "DOC-4f4103eea6e81d114e:P000003",
+      "DOC-4f4103eea6e81d114e:P000004",
+      "DOC-4f4103eea6e81d114e:P000005",
+      "DOC-4f4103eea6e81d114e:P000006",
+      "DOC-4f4103eea6e81d114e:P000007",
+      "DOC-4f4103eea6e81d114e:P000008",
+      "DOC-4f4103eea6e81d114e:P000009",
+      "DOC-4f4103eea6e81d114e:P000010",
+      "DOC-4f4103eea6e81d114e:P000011",
+      "DOC-4f4103eea6e81d114e:P000012",
+      "DOC-4f4103eea6e81d114e:P000013",
+      "DOC-4f4103eea6e81d114e:P000014",
+      "DOC-4f4103eea6e81d114e:P000015",
+      "DOC-4f4103eea6e81d114e:P000016",
+      "DOC-4f4103eea6e81d114e:P000017",
+      "DOC-4f4103eea6e81d114e:P000018",
+      "DOC-4f4103eea6e81d114e:P000019",
+      "DOC-4f4103eea6e81d114e:P000020",
+      "DOC-4f4103eea6e81d114e:P000021",
+      "DOC-4f4103eea6e81d114e:P000022",
+      "DOC-4f4103eea6e81d114e:P000023",
+      "DOC-4f4103eea6e81d114e:P000024",
+      "DOC-4f4103eea6e81d114e:P000025",
+      "DOC-4f4103eea6e81d114e:P000026",
+      "DOC-4f4103eea6e81d114e:P000027",
+      "DOC-4f4103eea6e81d114e:P000028",
+      "DOC-4f4103eea6e81d114e:P000029",
+      "DOC-4f4103eea6e81d114e:P000030",
+      "DOC-4f4103eea6e81d114e:P000031",
+      "DOC-4f4103eea6e81d114e:P000032",
+      "DOC-4f4103eea6e81d114e:P000033",
+      "DOC-4f4103eea6e81d114e:P000034",
+      "DOC-4f4103eea6e81d114e:P000035",
+      "DOC-4f4103eea6e81d114e:P000036",
+      "DOC-4f4103eea6e81d114e:P000037",
+      "DOC-4f4103eea6e81d114e:P000038",
+      "DOC-4f4103eea6e81d114e:P000039",
+      "DOC-4f4103eea6e81d114e:P000040",
+      "DOC-4f4103eea6e81d114e:P000041",
+      "DOC-4f4103eea6e81d114e:P000042",
+      "DOC-4f4103eea6e81d114e:P000043",
+      "DOC-4f4103eea6e81d114e:P000044",
+      "DOC-4f4103eea6e81d114e:P000045",
+      "DOC-4f4103eea6e81d114e:P000046",
+      "DOC-4f4103eea6e81d114e:P000047",
+      "DOC-4f4103eea6e81d114e:P000048",
+      "DOC-4f4103eea6e81d114e:P000049",
+      "DOC-4f4103eea6e81d114e:P000050",
+      "DOC-4f4103eea6e81d114e:P000051",
+      "DOC-4f4103eea6e81d114e:P000052",
+      "DOC-4f4103eea6e81d114e:P000053",
+      "DOC-4f4103eea6e81d114e:P000054",
+      "DOC-4f4103eea6e81d114e:P000055",
+      "DOC-4f4103eea6e81d114e:P000056",
+      "DOC-4f4103eea6e81d114e:P000057",
+      "DOC-4f4103eea6e81d114e:P000058",
+      "DOC-4f4103eea6e81d114e:P000059",
+      "DOC-4f4103eea6e81d114e:P000060",
+      "DOC-4f4103eea6e81d114e:P000061",
+      "DOC-4f4103eea6e81d114e:P000062",
+      "DOC-4f4103eea6e81d114e:P000063",
+      "DOC-4f4103eea6e81d114e:P000064",
+      "DOC-4f4103eea6e81d114e:P000065",
+      "DOC-4f4103eea6e81d114e:P000066",
+      "DOC-4f4103eea6e81d114e:P000067",
+      "DOC-4f4103eea6e81d114e:P000068",
+      "DOC-4f4103eea6e81d114e:P000069",
+      "DOC-4f4103eea6e81d114e:P000070",
+      "DOC-4f4103eea6e81d114e:P000071",
+      "DOC-4f4103eea6e81d114e:P000072",
+      "DOC-4f4103eea6e81d114e:P000073",
+      "DOC-4f4103eea6e81d114e:P000074",
+      "DOC-4f4103eea6e81d114e:P000075",
+      "DOC-4f4103eea6e81d114e:P000076",
+      "DOC-4f4103eea6e81d114e:P000077",
+      "DOC-4f4103eea6e81d114e:P000078",
+      "DOC-4f4103eea6e81d114e:P000079",
+      "DOC-4f4103eea6e81d114e:P000080",
+      "DOC-4f4103eea6e81d114e:P000081",
+      "DOC-4f4103eea6e81d114e:P000082",
+      "DOC-4f4103eea6e81d114e:P000083",
+      "DOC-4f4103eea6e81d114e:P000084",
+      "DOC-4f4103eea6e81d114e:P000085",
+      "DOC-4f4103eea6e81d114e:P000086",
+      "DOC-4f4103eea6e81d114e:P000087",
+      "DOC-4f4103eea6e81d114e:P000088",
+      "DOC-4f4103eea6e81d114e:P000089",
+      "DOC-4f4103eea6e81d114e:P000090",
+      "DOC-4f4103eea6e81d114e:P000091",
+      "DOC-4f4103eea6e81d114e:P000092",
+      "DOC-4f4103eea6e81d114e:P000093",
+      "DOC-4f4103eea6e81d114e:P000094",
+      "DOC-4f4103eea6e81d114e:P000095",
+      "DOC-4f4103eea6e81d114e:P000096",
+      "DOC-4f4103eea6e81d114e:P000097",
+      "DOC-4f4103eea6e81d114e:P000098",
+      "DOC-4f4103eea6e81d114e:P000099",
+      "DOC-4f4103eea6e81d114e:P000100",
+      "DOC-4f4103eea6e81d114e:P000101",
+      "DOC-4f4103eea6e81d114e:P000102",
+      "DOC-4f4103eea6e81d114e:P000103",
+      "DOC-4f4103eea6e81d114e:P000104",
+      "DOC-4f4103eea6e81d114e:P000105",
+      "DOC-4f4103eea6e81d114e:P000106",
+      "DOC-4f4103eea6e81d114e:P000107",
+      "DOC-4f4103eea6e81d114e:P000108",
+      "DOC-4f4103eea6e81d114e:P000109",
+      "DOC-4f4103eea6e81d114e:P000110",
+      "DOC-4f4103eea6e81d114e:P000111",
+      "DOC-4f4103eea6e81d114e:P000112",
+      "DOC-4f4103eea6e81d114e:P000113",
+      "DOC-4f4103eea6e81d114e:P000114",
+      "DOC-4f4103eea6e81d114e:P000115",
+      "DOC-4f4103eea6e81d114e:P000116",
+      "DOC-4f4103eea6e81d114e:P000117",
+      "DOC-4f4103eea6e81d114e:P000118",
+      "DOC-4f4103eea6e81d114e:P000119",
+      "DOC-4f4103eea6e81d114e:P000120",
+      "DOC-4f4103eea6e81d114e:P000121",
+      "DOC-4f4103eea6e81d114e:P000122",
+      "DOC-4f4103eea6e81d114e:P000123",
+      "DOC-4f4103eea6e81d114e:P000124",
+      "DOC-4f4103eea6e81d114e:P000125",
+      "DOC-4f4103eea6e81d114e:P000126",
+      "DOC-4f4103eea6e81d114e:P000127",
+      "DOC-4f4103eea6e81d114e:P000128",
+      "DOC-4f4103eea6e81d114e:P000129",
+      "DOC-4f4103eea6e81d114e:P000130",
+      "DOC-4f4103eea6e81d114e:P000131",
+      "DOC-4f4103eea6e81d114e:P000132",
+      "DOC-4f4103eea6e81d114e:P000133",
+      "DOC-4f4103eea6e81d114e:P000134",
+      "DOC-4f4103eea6e81d114e:P000135",
+      "DOC-4f4103eea6e81d114e:P000136",
+      "DOC-4f4103eea6e81d114e:P000137",
+      "DOC-4f4103eea6e81d114e:P000138",
+      "DOC-4f4103eea6e81d114e:P000139",
+      "DOC-4f4103eea6e81d114e:P000140",
+      "DOC-4f4103eea6e81d114e:P000141",
+      "DOC-4f4103eea6e81d114e:P000142",
+      "DOC-4f4103eea6e81d114e:P000143",
+      "DOC-4f4103eea6e81d114e:P000144",
+      "DOC-4f4103eea6e81d114e:P000145",
+      "DOC-4f4103eea6e81d114e:P000146",
+      "DOC-4f4103eea6e81d114e:P000147",
+      "DOC-4f4103eea6e81d114e:P000148",
+      "DOC-4f4103eea6e81d114e:P000149",
+      "DOC-4f4103eea6e81d114e:P000150",
+      "DOC-4f4103eea6e81d114e:P000151",
+      "DOC-4f4103eea6e81d114e:P000152",
+      "DOC-4f4103eea6e81d114e:P000153",
+      "DOC-4f4103eea6e81d114e:P000154",
+      "DOC-4f4103eea6e81d114e:P000155",
+      "DOC-4f4103eea6e81d114e:P000156",
+      "DOC-4f4103eea6e81d114e:P000157"
+    ],
+    "run_id": "MERGE-3e6e060de68bec8439"
+  },
+  "royalty_terms": [
+    {
+      "adjustments": [],
+      "base": "All royalty payments received by Licensee from the Ultimate Licensee",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "1-e23"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "1-e21"
+          ],
+          "text": "Negative Milestone Delta is greater than zero."
+        },
+        {
+          "evidence_ids": [
+            "1-e22"
+          ],
+          "text": "Priority recovery continues until the Negative Milestone Delta is fully recovered."
+        }
+      ],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": "While a positive Negative Milestone Delta remains unrecovered",
+      "evidence_ids": [
+        "1-e21",
+        "1-e23",
+        "1-e22"
+      ],
+      "family": "SUBLICENSING_RECEIPTS",
+      "product_scope": "VXM01",
+      "rate_evidence_ids": [
+        "1-e23"
+      ],
+      "rate_unit": "PERCENT",
+      "rate_value": "100",
+      "structure": "FLAT",
+      "term_id": "1-t1",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [
+        {
+          "description": "Deduct only actual, documented third-party administrative costs, itemized annually and incurred in administering the license and royalty stream.",
+          "evidence_ids": [
+            "1-e26"
+          ]
+        }
+      ],
+      "base": "Subsequent royalty payments received by Licensee from the Ultimate Licensee",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "1-e25"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "1-e24"
+          ],
+          "text": "Full recovery of the Negative Milestone Delta, including the Minimum Preferred Return."
+        }
+      ],
+      "disclosure_status": "DISCLOSED",
+      "effective_period": "After full recovery of the Negative Milestone Delta, including the Minimum Preferred Return",
+      "evidence_ids": [
+        "1-e24",
+        "1-e25",
+        "1-e26"
+      ],
+      "family": "SUBLICENSING_RECEIPTS",
+      "product_scope": "VXM01",
+      "rate_evidence_ids": [
+        "1-e25"
+      ],
+      "rate_unit": "PERCENT",
+      "rate_value": "100",
+      "structure": "FLAT",
+      "term_id": "1-t2",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Licensor's future commercial royalty revenue from VXM01",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "1-e28"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "1-e27"
+          ],
+          "text": "Applies only if Vaximm elects to draw development capital from the BCM Royalty Fund."
+        }
+      ],
+      "disclosure_status": "AMBIGUOUS",
+      "effective_period": null,
+      "evidence_ids": [
+        "1-e27",
+        "1-e28"
+      ],
+      "family": "REVENUE_SHARE",
+      "product_scope": "VXM01",
+      "rate_evidence_ids": [
+        "1-e28"
+      ],
+      "rate_unit": "UNKNOWN",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "1-t3",
+      "territory_scope": null,
+      "tiers": []
+    }
+  ],
+  "schema_version": "m2.0",
+  "source_text_sha256": "d04960374e2ba37d3ca841d92f6568030bac7098ece1d6570447920d181dc598",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1840425/000121390026004199/ea027273801ex10-1_osrhold.htm"
+}

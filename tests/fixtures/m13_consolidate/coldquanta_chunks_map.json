@@ -1,0 +1,3792 @@
+{
+  "candidate_passages": [
+    "DOC-c24d351ab4b04c1915:P000001",
+    "DOC-c24d351ab4b04c1915:P000012",
+    "DOC-c24d351ab4b04c1915:P000013",
+    "DOC-c24d351ab4b04c1915:P000015",
+    "DOC-c24d351ab4b04c1915:P000017",
+    "DOC-c24d351ab4b04c1915:P000018",
+    "DOC-c24d351ab4b04c1915:P000019",
+    "DOC-c24d351ab4b04c1915:P000020",
+    "DOC-c24d351ab4b04c1915:P000021",
+    "DOC-c24d351ab4b04c1915:P000024",
+    "DOC-c24d351ab4b04c1915:P000025",
+    "DOC-c24d351ab4b04c1915:P000026",
+    "DOC-c24d351ab4b04c1915:P000027",
+    "DOC-c24d351ab4b04c1915:P000028",
+    "DOC-c24d351ab4b04c1915:P000032",
+    "DOC-c24d351ab4b04c1915:P000033",
+    "DOC-c24d351ab4b04c1915:P000035",
+    "DOC-c24d351ab4b04c1915:P000036",
+    "DOC-c24d351ab4b04c1915:P000037",
+    "DOC-c24d351ab4b04c1915:P000039",
+    "DOC-c24d351ab4b04c1915:P000040",
+    "DOC-c24d351ab4b04c1915:P000045",
+    "DOC-c24d351ab4b04c1915:P000046",
+    "DOC-c24d351ab4b04c1915:P000050",
+    "DOC-c24d351ab4b04c1915:P000051",
+    "DOC-c24d351ab4b04c1915:P000052",
+    "DOC-c24d351ab4b04c1915:P000053",
+    "DOC-c24d351ab4b04c1915:P000061",
+    "DOC-c24d351ab4b04c1915:P000062",
+    "DOC-c24d351ab4b04c1915:P000063",
+    "DOC-c24d351ab4b04c1915:P000064",
+    "DOC-c24d351ab4b04c1915:P000065",
+    "DOC-c24d351ab4b04c1915:P000066",
+    "DOC-c24d351ab4b04c1915:P000067",
+    "DOC-c24d351ab4b04c1915:P000069",
+    "DOC-c24d351ab4b04c1915:P000070",
+    "DOC-c24d351ab4b04c1915:P000072",
+    "DOC-c24d351ab4b04c1915:P000073",
+    "DOC-c24d351ab4b04c1915:P000075",
+    "DOC-c24d351ab4b04c1915:P000079",
+    "DOC-c24d351ab4b04c1915:P000080",
+    "DOC-c24d351ab4b04c1915:P000081",
+    "DOC-c24d351ab4b04c1915:P000082",
+    "DOC-c24d351ab4b04c1915:P000086",
+    "DOC-c24d351ab4b04c1915:P000088",
+    "DOC-c24d351ab4b04c1915:P000089",
+    "DOC-c24d351ab4b04c1915:P000092",
+    "DOC-c24d351ab4b04c1915:P000094",
+    "DOC-c24d351ab4b04c1915:P000104",
+    "DOC-c24d351ab4b04c1915:P000107",
+    "DOC-c24d351ab4b04c1915:P000112",
+    "DOC-c24d351ab4b04c1915:P000114",
+    "DOC-c24d351ab4b04c1915:P000117",
+    "DOC-c24d351ab4b04c1915:P000124",
+    "DOC-c24d351ab4b04c1915:P000126",
+    "DOC-c24d351ab4b04c1915:P000166",
+    "DOC-c24d351ab4b04c1915:P000171",
+    "DOC-c24d351ab4b04c1915:P000215",
+    "DOC-c24d351ab4b04c1915:P000216",
+    "DOC-c24d351ab4b04c1915:P000217",
+    "DOC-c24d351ab4b04c1915:P000219",
+    "DOC-c24d351ab4b04c1915:P000220",
+    "DOC-c24d351ab4b04c1915:P000222",
+    "DOC-c24d351ab4b04c1915:P000223",
+    "DOC-c24d351ab4b04c1915:P000224",
+    "DOC-c24d351ab4b04c1915:P000225",
+    "DOC-c24d351ab4b04c1915:P000226",
+    "DOC-c24d351ab4b04c1915:P000233",
+    "DOC-c24d351ab4b04c1915:P000234",
+    "DOC-c24d351ab4b04c1915:P000235",
+    "DOC-c24d351ab4b04c1915:P000236",
+    "DOC-c24d351ab4b04c1915:P000237",
+    "DOC-c24d351ab4b04c1915:P000238",
+    "DOC-c24d351ab4b04c1915:P000239",
+    "DOC-c24d351ab4b04c1915:P000240",
+    "DOC-c24d351ab4b04c1915:P000242",
+    "DOC-c24d351ab4b04c1915:P000243",
+    "DOC-c24d351ab4b04c1915:P000244",
+    "DOC-c24d351ab4b04c1915:P000245",
+    "DOC-c24d351ab4b04c1915:P000246",
+    "DOC-c24d351ab4b04c1915:P000248",
+    "DOC-c24d351ab4b04c1915:P000249",
+    "DOC-c24d351ab4b04c1915:P000259",
+    "DOC-c24d351ab4b04c1915:P000264",
+    "DOC-c24d351ab4b04c1915:P000266",
+    "DOC-c24d351ab4b04c1915:P000267"
+  ],
+  "candidate_reason_counts": {
+    "CROSS_REFERENCE": 36,
+    "DEFINED_TERM": 14,
+    "FINANCE_VOCAB": 49,
+    "PERCENT": 1,
+    "REDACTION": 10,
+    "SPELLED_RATE": 1
+  },
+  "cross_references": [
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000001",
+      "references": [
+        "Exhibit 10.18"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000013",
+      "references": [
+        "SECTION 1"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000017",
+      "references": [
+        "Exhibit A"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000026",
+      "references": [
+        "Exhibit B"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000027",
+      "references": [
+        "Exhibit B"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000028",
+      "references": [
+        "Exhibit B"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000032",
+      "references": [
+        "Exhibit A"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000033",
+      "references": [
+        "SECTION 2"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000037",
+      "references": [
+        "Section 3"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000039",
+      "references": [
+        "SECTION 3"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000045",
+      "references": [
+        "SECTION 4"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000046",
+      "references": [
+        "Section 2"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000052",
+      "references": [
+        "Exhibit C"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000053",
+      "references": [
+        "SECTION 5"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000061",
+      "references": [
+        "SECTION 6"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000063",
+      "references": [
+        "Exhibit C"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000064",
+      "references": [
+        "Exhibit C"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000070",
+      "references": [
+        "SECTION 7"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000073",
+      "references": [
+        "Exhibit D"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000082",
+      "references": [
+        "SECTION 8"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000086",
+      "references": [
+        "SECTION 9"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000088",
+      "references": [
+        "SECTION 10"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000089",
+      "references": [
+        "Section 2.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000092",
+      "references": [
+        "SECTION 11"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000094",
+      "references": [
+        "SECTION 12"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000107",
+      "references": [
+        "SECTION 13"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000112",
+      "references": [
+        "Section 7"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000114",
+      "references": [
+        "Section 6",
+        "Section 7"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000124",
+      "references": [
+        "SECTION 14"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000126",
+      "references": [
+        "Section 14.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000166",
+      "references": [
+        "EXHIBIT A"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000171",
+      "references": [
+        "EXHIBIT B"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000215",
+      "references": [
+        "EXHIBIT C"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000217",
+      "references": [
+        "Section 6"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000240",
+      "references": [
+        "Section 14.1"
+      ]
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000248",
+      "references": [
+        "EXHIBIT D"
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000015",
+      "term": "Affiliate(s)"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000015",
+      "term": "control"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000017",
+      "term": "Field of Use"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000018",
+      "term": "Improvement"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000019",
+      "term": "Know-How"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000020",
+      "term": "Licensed Process(es)"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000021",
+      "term": "Licensed Product(s)"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000024",
+      "term": "Net Sales"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000025",
+      "term": "Patent Rights"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000032",
+      "term": "Territory"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000222",
+      "term": "Liquidation Event"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000223",
+      "term": "Trailing Consideration"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000224",
+      "term": "Aggregate Consideration"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000233",
+      "term": "Initial Public Offering"
+    },
+    {
+      "passage_id": "DOC-c24d351ab4b04c1915:P000234",
+      "term": "Pre-Money Valuation"
+    }
+  ],
+  "document_id": "DOC-c24d351ab4b04c1915",
+  "document_metadata": {
+    "accession": "0001193125-26-002732",
+    "cik": "2007825",
+    "company": "Churchill Capital Corp X/Cayman  (CCCX, CCCXU, CCCXW)  (CIK 0002007825)",
+    "document_id": "DOC-c24d351ab4b04c1915",
+    "file_type": "EX-10.18",
+    "filing_date": "2026-01-05",
+    "form": "S-4",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2007825/000119312526002732/d22517dex1018.htm"
+  },
+  "mapped_at_utc": "2026-11-18T00:59:39+00:00",
+  "original_sha256": "30ff2ccf4fffa9e2627917cd4a5d53127db4f90e91fa8feeee7ba651ef466339",
+  "parser_type": "HTML_TEXT",
+  "passages": [
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 13,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000001",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 1,
+      "start_offset": 0,
+      "text": "Exhibit 10.18"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 237,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000002",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 2,
+      "start_offset": 14,
+      "text": "Certain identified information has been excluded from this exhibit both because it (i) is not material and (ii) is the type that the issuer treats as private or confidential. Brackets with triple asterisks denote omissions."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 269,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000003",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 3,
+      "start_offset": 238,
+      "text": "NON-EXCLUSIVE LICENSE AGREEMENT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 729,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000004",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 4,
+      "start_offset": 270,
+      "text": "This Non-Exclusive License Agreement (the “Agreement”) is made and entered into this 2 of February, 2012, (the “Effective Date”) by and between the Regents of the University of Colorado, a body corporate, having its principal office at 1800 Grant Street, 8th Floor, Denver, CO 80203 (hereinafter “University”) and ColdQuanta, Inc., a Colorado corporation having its principal office at 1600 Range Street, Suite 103, Boulder, CO 80301 (hereinafter “Licensee”)."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1046,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000005",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 5,
+      "start_offset": 730,
+      "text": "WHEREAS, University previously was the co-owner with Sarnoff Corporation of certain Patent Rights (as later defined herein), and Sarnoff Corporation’s ownership interest in such Patent Rights were assigned to SRI International, Inc (“SRI”) in connection with SRI’s acquisition of Sarnoff Corporation (“Sarnoff”); and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1152,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000006",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 6,
+      "start_offset": 1047,
+      "text": "WHEREAS, SRI is the sole owner of certain Patent Rights that were previously solely owned by Sarnoff; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1449,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000007",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 7,
+      "start_offset": 1153,
+      "text": "WHEREAS, University and Sarnoff entered into an inter-institutional agreement (the “IIA”) pursuant to which the University obtained the right to grant to Licensee the license rights granted herein for the Patent Rights co-owned by University and SRI and the Patent Rights solely owned by SRI; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1557,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000008",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 8,
+      "start_offset": 1450,
+      "text": "WHEREAS, Sarnoff assigned its rights in the IIA to SRI in connection with SRI’s acquisition of Sarnoff; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1644,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000009",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 9,
+      "start_offset": 1558,
+      "text": "WHEREAS, in accordance with the IIA, SRI has reviewed and approved this Agreement; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1764,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000010",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 10,
+      "start_offset": 1645,
+      "text": "WHEREAS, Licensee is interested in licensing and further developing the Patent Rights for commercial applications, and;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 1914,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000011",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 11,
+      "start_offset": 1765,
+      "text": "WHEREAS, University desires to have the Patent Rights developed and commercialized to benefit the public and is willing to grant a license hereunder,"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 2043,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000012",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "Exhibit 10.18",
+      "sequence": 12,
+      "start_offset": 1915,
+      "text": "NOW, THEREFORE, in consideration of the promises and the mutual covenants contained herein, the parties hereto agree as follows:"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 2066,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000013",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 13,
+      "start_offset": 2044,
+      "text": "SECTION 1. DEFINITIONS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2169,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000014",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 14,
+      "start_offset": 2067,
+      "text": "For the purposes of this Agreement, the following words and phrases shall have the following meanings:"
+    },
+    {
+      "candidate_reasons": [
+        "PERCENT",
+        "SPELLED_RATE",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 2807,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000015",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 15,
+      "start_offset": 2170,
+      "text": "1.1 | “Affiliate(s)” shall mean every corporation or entity, which, directly or indirectly, or through one or more intermediaries, controls, is controlled by, or is under common control with Licensee, as well as every officer, director, agent and representative of any such corporation or entity. For the purposes of this definition, the term “control” means (a) beneficial ownership of at least fifty percent (50%) of the voting securities of a business organization with voting securities, or (b) a fifty percent (50%) or greater interest in the net assets or profits of a partnership or business organization without voting securities"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 2885,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000016",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 16,
+      "start_offset": 2808,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 1 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 2960,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000017",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 17,
+      "start_offset": 2886,
+      "text": "1.2 | “Field of Use” shall mean the fields of use identified in Exhibit A."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3351,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000018",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 18,
+      "start_offset": 2961,
+      "text": "1.3 | “Improvement” shall mean any invention, the practice of which would also require the practice of an invention claimed in or covered by the Patent Rights and which is a modification of the inventions claimed in or covered by the Patent Rights, made by Dana Anderson in his capacity as an employee of the University, or University researchers working in the laboratory of Dana Anderson."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3616,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000019",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 19,
+      "start_offset": 3352,
+      "text": "1.4 | “Know-How” shall mean, and be limited to, University’s proprietary information which has been created, developed, and fixed in any tangible medium of expression and which is directly related to the use of, or desirable for the practice of, the Patent Rights."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3916,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000020",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 20,
+      "start_offset": 3617,
+      "text": "1.5 | “Licensed Process(es)” shall mean any process, art, or method which is covered in whole or in part by an issued, unexpired claim or a pending claim contained in the Patent Rights such that, but for this license, the use of the process would infringe on one or more claims of the Patent Rights."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 3960,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000021",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 21,
+      "start_offset": 3917,
+      "text": "1.6 | “Licensed Product(s)” shall mean any:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 4188,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000022",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 22,
+      "start_offset": 3961,
+      "text": "a. | product or part thereof that is covered in whole or in part by an issued, unexpired claim or a pending claim contained in the Patent Rights in the country in which any such product or part thereof is made, used or sold; or"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 4550,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000023",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 23,
+      "start_offset": 4189,
+      "text": "b. | product, apparatus, or part thereof that is manufactured or discovered by using a process or is employed to practice a process which is covered in whole or in part by an issued, unexpired claim or a pending claim contained in the Patent Rights in the country in which any Licensed Processes is used or in which such product or part thereof is used or sold."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 5399,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000024",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 24,
+      "start_offset": 4551,
+      "text": "1.7 | “Net Sales” shall mean the total gross receipts for sales of Licensed Products or practice of Licensed Processes by or on behalf or Licensee and its Affiliates, and from leasing, renting, or otherwise making Licensed Products available to others without sale or other dispositions, whether invoiced or not, less returns and allowances, packing costs, insurance costs, freight out, taxes or excise duties imposed on the transaction (if separately invoiced and paid), and wholesaler and cash discounts in amounts customary in the trade to the extent actually granted. No deductions shall be made for commissions, or for the costs of collections. Net Sales shall also include the fair market value of any non-cash consideration received by Licensee and its Affiliates, for the sale, lease, or transfer of Licensed Products or Licensed Processes."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 5487,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000025",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 25,
+      "start_offset": 5400,
+      "text": "1.8 | “Patent Rights” shall mean all of the following University intellectual property:"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 5617,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000026",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 26,
+      "start_offset": 5488,
+      "text": "a. | the United States and foreign patents and/or patent applications and/or provisional patent applications listed in Exhibit B;"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 5767,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000027",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 27,
+      "start_offset": 5618,
+      "text": "b. | United States and foreign patents issued from the applications listed in Exhibit B and from divisionals and continuations of these applications;"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 5982,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000028",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 28,
+      "start_offset": 5768,
+      "text": "c. | claims of U.S. and foreign continuation-in-part applications, and of the resulting patents, which are directed to subject matter specifically described in the U.S. and foreign applications listed in Exhibit B;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6060,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000029",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 29,
+      "start_offset": 5983,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 2 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6288,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000030",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 30,
+      "start_offset": 6061,
+      "text": "d. | claims of all foreign patent applications, and of the resulting patents, which are directed to subject matter specifically described in the United Slates patents and/or patent applications described in this Subsection: and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6361,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000031",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 31,
+      "start_offset": 6289,
+      "text": "e. | any reissues of United States patents described in this Subsection."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 6437,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000032",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "1",
+      "sequence": 32,
+      "start_offset": 6362,
+      "text": "1.9 | “Territory” shall mean the geographical area identified in Exhibit A."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 6465,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000033",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 33,
+      "start_offset": 6438,
+      "text": "SECTION 2. GRANT OF LICENSE"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 6690,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000034",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 34,
+      "start_offset": 6466,
+      "text": "2.1 | University hereby grants and Licensee accepts, during the term and subject to the terms and conditions of this Agreement, and further subject to University’s right to do so without incurring liability to third parties,"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 6807,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000035",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 35,
+      "start_offset": 6691,
+      "text": "a. | a non-exclusive, royalty-bearing license to use the Know-How in the Territory and within the Fields of Use; and"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 7169,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000036",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 36,
+      "start_offset": 6808,
+      "text": "b. | a non-exclusive, royalty-bearing license to the Patent Rights in the Territory to make, use, sell, lease, offer to sell, and import any Licensed Products in the Fields of Use and to practice any Licensed Processes In the Fields of Use, provided, however, that with respect to the University’s interests in the Patent Rights, the license shall be exclusive."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 7422,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000037",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 37,
+      "start_offset": 7170,
+      "text": "2.2 | All Know-How due under this Agreement shall be delivered to Licensee prior to or on the Effective Date in written, oral or other form of communication. No additional Know-How shall be due after the Effective Date, except as provided in Section 3."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 7688,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000038",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "2",
+      "sequence": 38,
+      "start_offset": 7423,
+      "text": "2.3 | This Agreement confers no license or rights by implication, estoppel, or otherwise under any patent applications or patents of University or SRI other than the Patent Rights, regardless of whether such patents are dominant or subordinate to the Patent Rights."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 7737,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000039",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 39,
+      "start_offset": 7689,
+      "text": "SECTION 3. IMPROVEMENTS & INDEPENDENT INVENTIONS"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 8069,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000040",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 40,
+      "start_offset": 7738,
+      "text": "3.1 | University Improvements: In the event that University develops any Improvements to the inventions claimed in the Patent Rights or to any other preexisting patent application or patent that is dominated by the Patent Rights, then each such Improvement will be considered part of this Agreement for no additional consideration."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 8110,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000041",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 41,
+      "start_offset": 8070,
+      "text": "3.2 | University Independent Inventions:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9161,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000042",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 42,
+      "start_offset": 8111,
+      "text": "a. | Provided that Dana Anderson is at the time obligated to assign intellectual property to University and is voluntarily involved as an employee, board member, or consultant to Licensee, in the event that Dana Anderson, or anybody working in a laboratory under the supervision or direction of Dana Anderson, makes any invention in the field of ultra-cold matter and related devices and applications, the practice of which would not require the practice of an invention claimed in or covered by the Licensed Patent Rights (“Independent Invention”), then provided such Independent Invention is not subject to any prior contractual or legal obligations precluding the University from licensing the independent Invention to Licensee, the University hereby grants to Licensee an exclusive option (“Option”) to obtain the exclusive (or non-exclusive, if Licensee so desires), worldwide, commercial rights to each Independent Invention on terms and conditions to be negotiated in good faith by the parties following the exercise by Licensee of the Option."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9239,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000043",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 43,
+      "start_offset": 9162,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 3 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 9991,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000044",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "3",
+      "sequence": 44,
+      "start_offset": 9240,
+      "text": "b. | University shall disclose each Independent Invention to Licensee in reasonable written detail after the University’s Technology Transfer Office receives notification from the inventor(s) that such Independent Invention has been made, and Licensee shall have ninety (90) days (the “Option Period’) following receipt of such invention disclosure to exercise the Option with respect to such Independent Invention by delivering to University written notice indicating that Licensee desires to exercise the Option. Upon such notice, the parties shall negotiate in good faith for a period of up to ninety (90) days commercially reasonable terms and conditions for a license under the intellectual property rights relating to such Independent Invention."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 10015,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000045",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 45,
+      "start_offset": 9992,
+      "text": "SECTION 4. SUBLICENSING"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 10246,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000046",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 46,
+      "start_offset": 10016,
+      "text": "4.1 | Upon prior written approval by University, such approval not to be unreasonably withheld or delayed. Licensee may sublicense to one or more third parties, the rights granted in Section 2 subject to the following limitations:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10413,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000047",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 47,
+      "start_offset": 10247,
+      "text": "a. | Licensee agrees that any sublicenses granted by it shall impose restrictions and conditions upon sublicensees equivalent in scope to those imposed upon Licensee;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10625,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000048",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 48,
+      "start_offset": 10414,
+      "text": "b. | Licensee agrees that, in the event University terminates this Agreement pursuant to Subsection 13.2(b), any sublicenses granted, in University’s sole discretion, shall be directly enforceable by University;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 10806,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000049",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 49,
+      "start_offset": 10626,
+      "text": "c. | Licensee agrees that any sublicenses granted shall adequately protect University’s and SRI’s security and property interest in University’s Know-How and the Patent Rights; and"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 10982,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000050",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 50,
+      "start_offset": 10807,
+      "text": "d. | Any sublicenses granted by Licensee shall provide only for cash consideration from sublicensees unless University has expressly consented otherwise in writing in advance."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 11151,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000051",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 51,
+      "start_offset": 10983,
+      "text": "4.2 | Licensee agrees to forward to University a copy of each fully executed sublicense agreement postmarked within thirty (30) days of the execution of such agreement."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 11314,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000052",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "4",
+      "sequence": 52,
+      "start_offset": 11152,
+      "text": "4.3 | Licensee shall pay to University royalties on all revenue received by Licensee from sublicensees of the Patent Rights as provided in the attached Exhibit C."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 11341,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000053",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 53,
+      "start_offset": 11315,
+      "text": "SECTION 5. RETAINED RIGHTS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11366,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000054",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 54,
+      "start_offset": 11342,
+      "text": "5.1 | Government Rights:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11559,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000055",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 55,
+      "start_offset": 11367,
+      "text": "a. | Licensee understands that this Agreement is subject to all of the terms and conditions of Title 35 U.S.C. §§ 200-204, et seq., (“Bayh-Dole Act”) and 37 C.F.R. 401, as such may be amended."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11699,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000056",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 56,
+      "start_offset": 11560,
+      "text": "b. | Further, Licensee agrees to take all reasonable action necessary to enable University and/or SRI to satisfy its obligations hereunder."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 11732,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000057",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 57,
+      "start_offset": 11700,
+      "text": "5.2 | University and SRI Rights:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12295,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000058",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 58,
+      "start_offset": 11733,
+      "text": "a. | University shall have the right to practice the Patent Rights and Know-How for its own research and education, including sponsored research. Such right shall be transferable to other nonprofit or educational institutions if, and only if, the Inventor named above moves his principal place of research to such other institution or if required to effectuate a collaboration between Dana Anderson and researchers at another institution, SRI shall have the right to use the Patent Rights for any purpose, including commercial, educational and research purposes."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12373,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000059",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 59,
+      "start_offset": 12296,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 4 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 12641,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000060",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "5",
+      "sequence": 60,
+      "start_offset": 12374,
+      "text": "b. | University shall have the right to publish any Information included in the Patent Rights and the Know-How provided that University takes reasonable steps to avoid the loss of any patent rights as a result of University exercising its rights under this Paragraph."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 12669,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000061",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 61,
+      "start_offset": 12642,
+      "text": "SECTION 6. FEES & ROYALTIES"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 12796,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000062",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 62,
+      "start_offset": 12670,
+      "text": "6.1 | As consideration for the disclosure of University’s Know-How as well as the licenses and rights under the Patent Rights,"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 12970,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000063",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 63,
+      "start_offset": 12797,
+      "text": "a. | Licensee agrees to pay a noncreditable, nonrefundable, up-front license fee as set forth in Exhibit C within thirty (30) days from the Effective Date of this Agreement;"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 13046,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000064",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 64,
+      "start_offset": 12971,
+      "text": "b. | Licensee agrees to pay University royalties as set forth in Exhibit C;"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 13194,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000065",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 65,
+      "start_offset": 13047,
+      "text": "6.2 | No multiple royalties shall be payable because any Licensed Products or Licensed Processes are covered by more than one of the Patent Rights."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 13514,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000066",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 66,
+      "start_offset": 13195,
+      "text": "6.3 | On sales of Licensed Products by Licensee to sublicensees or on sales made in other than arm’s-length transactions, the value of the Net Sales attributed under this Section to such a transaction shall be that which would have been received in an arm’s-length transaction, based on a like transaction at that time."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 13538,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000067",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 67,
+      "start_offset": 13515,
+      "text": "6.4 | Payment Due Date:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13692,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000068",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 68,
+      "start_offset": 13539,
+      "text": "a. | Unless otherwise provided herein, all payments required under this Agreement shall be due within thirty (30) days of written notice from University."
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION"
+      ],
+      "end_offset": 13853,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000069",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "6",
+      "sequence": 69,
+      "start_offset": 13693,
+      "text": "b. | Payments past due shall bear interest at the rate of [***] per month compounded, or the maximum interest rate allowed by applicable law, whichever is less."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 13893,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000070",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 70,
+      "start_offset": 13854,
+      "text": "SECTION 7. REPORTS. RECORDS, AND AUDITS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 13908,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000071",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 71,
+      "start_offset": 13894,
+      "text": "7.1 | Reports:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 14275,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000072",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 72,
+      "start_offset": 13909,
+      "text": "a. | Licensee shall, without request by University, render to University written reports for each calendar quarter of the Net Sales of Licensed Products and/or Licensed Processes subject to royalty hereunder made during the prior three (3) month period and shall simultaneously pay to University the royalties due on such Net Sales, if any, in United States Dollars."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 14348,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000073",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 73,
+      "start_offset": 14276,
+      "text": "b. | The written report shall be in the form of the report of Exhibit D."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14363,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000074",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 74,
+      "start_offset": 14349,
+      "text": "7.2 | Records:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 14635,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000075",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 75,
+      "start_offset": 14364,
+      "text": "a. | Licensee shall keep accurate records and shall compel its affiliates and sublicensees to keep accurate records, in sufficient detail to reflect its operations under this Agreement and to enable the royalties accrued and payable under this Agreement to be determined."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14891,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000076",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 76,
+      "start_offset": 14636,
+      "text": "b. | Such records shall be retained for at least three (3) years after the close of the period to which they pertain, or for such longer time as may be required to finally resolve any question or discrepancy raised by University during such 3-year period."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14969,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000077",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 77,
+      "start_offset": 14892,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 5 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 14983,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000078",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 78,
+      "start_offset": 14970,
+      "text": "7.3 | Audits:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 15324,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000079",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 79,
+      "start_offset": 14984,
+      "text": "a. | Upon the request of University, with reasonable notice, but not more frequently than once a year, Licensee shall permit an independent public accountant selected and paid by University to have access during regular business hours to such records as may be necessary to verify the accuracy of royalty payments made or payable hereunder."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 15512,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000080",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 80,
+      "start_offset": 15325,
+      "text": "b. | Said accountant shall disclose information acquired to University only to the extent that it should properly have been contained in the royalty reports required under this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 15792,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000081",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "7",
+      "sequence": 81,
+      "start_offset": 15513,
+      "text": "c. | If an inspection shows an underreporting or underpayment in excess of [***] for any twelve (12) month period, then Licensee shall reimburse University for the cost of the inspection and pay the amount of the underpayment including any interest as required by this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 15828,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000082",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 82,
+      "start_offset": 15793,
+      "text": "SECTION 8. CONFIDENTIAL INFORMATION"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 16117,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000083",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 83,
+      "start_offset": 15829,
+      "text": "8.1 | Both University and Licensee (hereinafter, “Party” or “Parties”) shall vigilantly protect the confidential information related to the Patent Rights and Know-How from disclosure to third parties; and no such disclosure shall be made without the disclosing Party’s written permission."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 16506,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000084",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 84,
+      "start_offset": 16118,
+      "text": "8.2 | All written documents containing confidential information and other material in tangible form received by either Party under this Agreement shall remain the property of the disclosing Party, and such documents and materials, together with copies of excerpts thereof, shall promptly be returned to disclosing Party upon request, except one copy may be retained for archival purposes."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 16759,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000085",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "8",
+      "sequence": 85,
+      "start_offset": 16507,
+      "text": "8.3 | Licensee acknowledges that University is subject to the Colorado Open Records Act (C.R.S. § 24-72-201, et seq.). All plans and reports marked “Confidential” shall be treated by University as confidential to the extent permitted under § 24-72-204."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 16805,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000086",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9",
+      "sequence": 86,
+      "start_offset": 16760,
+      "text": "SECTION 9. LICENSEE DUE DILIGENCE OBLIGATIONS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 17226,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000087",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "9",
+      "sequence": 87,
+      "start_offset": 16806,
+      "text": "9.1 | Licensee shall use commercially reasonable efforts to bang Licensed Products and Licensed Processes to market through a thorough, vigorous and diligent program for exploitation of the Patent Rights, to develop manufacturing capabilities, to continue active, diligent marketing efforts, and to satisfy the needs of such market with the Licensed Products and Licensed Processes throughout the life of this Agreement."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 17260,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000088",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 88,
+      "start_offset": 17227,
+      "text": "SECTION 10. PATENT ADMINISTRATION"
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION",
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 18160,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000089",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 89,
+      "start_offset": 17261,
+      "text": "10.1 | In consideration of the exclusive license granted under Section 2.1(b), Licensee shall reimburse University the fees and costs, including attorney fees, incurred by it to date in connection with the preparation, filing, and prosecution of all patent applications and maintenance of patents corresponding to the Patent Rights, including, but not limited to, interferences and reexaminations (collectively “Patent Costs”), and (b) all Patent Costs incurred by University on or after the date of this Agreement. Such fees and costs shall be paid to University within thirty (30) days after receipt of invoicing. Patent Costs incurred prior to Effective Date shall be invoiced as follows: [***] of such fees may be invoiced August 1, 2011 and the remaining [***] may be invoiced on the first anniversary of the Effective Date. The Patent Costs incurred as of May 11, 2011 are approximately [***]."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 18591,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000090",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 90,
+      "start_offset": 18161,
+      "text": "10.2 | University Rights: University and SRI shall control the preparation, filing, prosecution, and maintenance of any and all patent applications or patents included in the Patent Rights on or after the Effective Date and shall furnish copies of relevant patent-related documents to Licensee. Licensee shall have fifteen (15) business days to review and comment on patent-related documents prior to the filing of said documents."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 18669,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000091",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "10",
+      "sequence": 91,
+      "start_offset": 18592,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 6 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 18700,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000092",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "11",
+      "sequence": 92,
+      "start_offset": 18670,
+      "text": "SECTION 11. PATENT ENFORCEMENT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 19364,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000093",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "11",
+      "sequence": 93,
+      "start_offset": 18701,
+      "text": "11.1 | University and Licensee agree to inform the other Party promptly in writing of any suspected infringement of the Patent Rights by a third party, and University also shall so notify SRI. In accordance with the IIA, University and SRI shall confer with the intent of reaching mutual agreement on whether and in what manner to enforce the rights of the parties thereto, whether by appropriate legal proceedings or otherwise. University shall keep Licensee fully apprised of such discussions, and shall to the extent possible include Licensee’s counsel in such discussions and to align University’s positions with the recommendations and interests of Licensee."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 19420,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000094",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 94,
+      "start_offset": 19365,
+      "text": "SECTION 12. WARRANTIES, INDEMNIFICATIONS, AND INSURANCE"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 19451,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000095",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 95,
+      "start_offset": 19421,
+      "text": "12.1 | Negation of Warranties:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 20050,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000096",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 96,
+      "start_offset": 19452,
+      "text": "a. | UNIVERSITY AND SRI MAKE NO REPRESENTATIONS, EXTENDS NO WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, AND ASSUMES NO RESPONSIBILITIES WHATSOEVER WITH RESPECT TO USE, SALE, OR OTHER DISPOSITION BY LICENSEE. SUBLICENSEE(S), OR THEIR VENDEES OR OTHER TRANSFEREES OF LICENSED PRODUCTS OR LICENSED PROCESSES INCORPORATING OR MADE BY USE OF THE PATENT RIGHTS. THERE ARE NO EXPRESS OR IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, OR THAT THE USE OR SALE OF SUCH PRODUCTS OR PROCESSES WILL NOT INFRINGE ANY PATENT, COPYRIGHT, TRADEMARK, SERVICE MARK, OR OTHER RIGHTS."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 20163,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000097",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 97,
+      "start_offset": 20051,
+      "text": "b. | Notwithstanding anything in this Agreement to the contrary, nothing in this Agreement shall be construed as"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 20297,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000098",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 98,
+      "start_offset": 20164,
+      "text": "i. | A warranty or representation by University or SRI as to rights in Know-How or the validity or scope of any of the Patent Rights;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 20540,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000099",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 99,
+      "start_offset": 20298,
+      "text": "ii. | A warranty or representation that the Patent Rights or anything made, used, sold or otherwise disposed of under the license granted under this Agreement will or will riot infringe patents, copyrights or other rights of third parties; or"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 20784,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000100",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 100,
+      "start_offset": 20541,
+      "text": "iii. | An obligation to furnish any know-how or technology not agreed to in this Agreement, to bring or prosecute actions or suits against third parties for infringement, or to provide any services other than those specified in this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 21283,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000101",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 101,
+      "start_offset": 20785,
+      "text": "12.2 | Indemnification: Licensee shall indemnify, defend, and hold University, SRI, its regents, directors, employees, students, officers, agents, affiliates, and representatives harmless from and against all liability, demands, damages, losses, and expenses (including attorney fees), for death, personal injury, illness, property damage, noncompliance with applicable laws and any other claim, proceeding, demand, expense and liability of any kind whatsoever in connection with of arising out of:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 21429,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000102",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 102,
+      "start_offset": 21284,
+      "text": "a. | the use by or on behalf of Licensee, its sublicensees, Affiliates, directors, officers, employees, or third parties of any Patent Rights; or"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 21507,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000103",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 103,
+      "start_offset": 21430,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 7 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 21797,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000104",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 104,
+      "start_offset": 21508,
+      "text": "b. | the design, manufacture, production, distribution, advertisement, consumption, sale, lease, sublicense or use of any Licensed Product(s), Licensed Process(es) or materials by Licensee, or other products or processes developed in connection with or arising out of the Patent Rights; or"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 21860,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000105",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 105,
+      "start_offset": 21798,
+      "text": "c. | any right or obligation of Licensee under this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22112,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000106",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "12",
+      "sequence": 106,
+      "start_offset": 21861,
+      "text": "12.3 | Insurance: Licensee shall obtain general liability insurance, including product liability insurance to the extent available on commercially reasonable terms, on such terms and in such amounts as are reasonable and customary within its industry."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 22162,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000107",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 107,
+      "start_offset": 22113,
+      "text": "SECTION 13. DURATION, TERMINATION, AND CONVERSION"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22324,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000108",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 108,
+      "start_offset": 22163,
+      "text": "13.1 | This Agreement shall become effective as of the Effective Date and shall expire on the expiration date of the last to expire patents within Patent Rights."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22357,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000109",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 109,
+      "start_offset": 22325,
+      "text": "13.2 | Termination of Agreement:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22473,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000110",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 110,
+      "start_offset": 22358,
+      "text": "a. | Licensee may terminate this Agreement at any time on sixty (60) days written notice to University, if Licensee"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22578,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000111",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 111,
+      "start_offset": 22474,
+      "text": "i. | pays all amounts due as well as all non-cancelable costs to University through the termination date"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 22643,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000112",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 112,
+      "start_offset": 22579,
+      "text": "ii. | submits a final report of the type described in Section 7;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 22754,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000113",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 113,
+      "start_offset": 22644,
+      "text": "iii. | returns any confidential materials provided to Licensee by University in connection with this Agreement"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 23106,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000114",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 114,
+      "start_offset": 22755,
+      "text": "iv. | suspends its use and sales of the Licensed Product(s) and Licensed Process(es); provided however, that subject to making the payments required by Section 6 and the reports required by Section 7, Licensee may, for a period of ninety (90) days after the effective date of such termination, sell all Licensed Products which may be in inventory; and"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23285,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000115",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 115,
+      "start_offset": 23107,
+      "text": "v. | provides University the right to access any regulatory information filed with any U.S. or foreign government agency with respect to Licensed Products and Licensed Processes."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23349,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000116",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 116,
+      "start_offset": 23286,
+      "text": "b. | University may terminate this Agreement in the event that:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 23511,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000117",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 117,
+      "start_offset": 23350,
+      "text": "i. | Licensee fails to pay University any amounts when due to University hereunder and Licensee fails to make such payment within thirty (30) days written notice"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23660,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000118",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 118,
+      "start_offset": 23512,
+      "text": "ii. | Licensee becomes insolvent, files a petition in bankruptcy, or has such a petition filed against it that remains undismissed after 90 days; or"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 23984,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000119",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 119,
+      "start_offset": 23661,
+      "text": "iii. | Licensee is in breach or default of this Agreement other than those occurrences listed in this Subsection and Licensee fails to cure the breach or default within thirty (90) days of written notice of the breach or default. Events constituting a breach or default shall include, but are not limited to, the following:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 24115,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000120",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 120,
+      "start_offset": 23985,
+      "text": "1. | operation, manufacture, use of or sale of the Licensed Products or Licensed Processes outside the Fields of Use or Territory;"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 24193,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000121",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 121,
+      "start_offset": 24116,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 8 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 24262,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000122",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 122,
+      "start_offset": 24194,
+      "text": "2. | failure to keep adequate records or permit inspection or audit."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 24531,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000123",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "13",
+      "sequence": 123,
+      "start_offset": 24263,
+      "text": "iv. | The exclusive license granted by this Agreement shall immediately revert to University upon Licensee’s dissolution, liquidation, insolvency, or bankruptcy. The exclusive license shall NOT pass to a trustee in bankruptcy or be held as an asset of said bankruptcy."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 24551,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000124",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 124,
+      "start_offset": 24532,
+      "text": "SECTION 14. GENERAL"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 24696,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000125",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 125,
+      "start_offset": 24552,
+      "text": "14.1 | Assignment: This Agreement shall be binding upon and inure to the benefit of the respective successors and assigns of the Parties hereto."
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 25067,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000126",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 126,
+      "start_offset": 24697,
+      "text": "a. | Assignment by Licensee. Subject to Section 14.1 (c), Licensee may assign this Agreement as part of a sale, regardless of whether such a sale occurs through an asset sale, stock sale, merger or other combination, or any other transfer of (i) Licensee’s entire business; or (ii) that part of Licensee’s business that exercises all rights granted under this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25179,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000127",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 127,
+      "start_offset": 25068,
+      "text": "b. | Any Other Assignment by Licensee. Any other attempt to assign this Agreement by Licensee is null and void."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25504,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000128",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 128,
+      "start_offset": 25180,
+      "text": "c. | Conditions of Assignment. Prior to any assignment, the following conditions must be met: (i) Licensee must give University ten (10) days prior written notice of the assignment, including the new assignee’s contact information; and (ii) the new assignee must agree in writing to University to be bound by this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25713,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000129",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 129,
+      "start_offset": 25505,
+      "text": "d. | Bankruptcy. In the event of a bankruptcy, assignment is permitted only to a party that can provide adequate assurance of future performance, including diligent development and sales, of Licensed Patents."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25971,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000130",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 130,
+      "start_offset": 25714,
+      "text": "14.2 | Notice: Notice hereunder shall be deemed sufficient if given by registered mail, postage prepaid, and addressed to the Party to receive such notice at the address given below, or such other address as may hereafter be designated by notice in writing."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 25995,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000131",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 131,
+      "start_offset": 25972,
+      "text": "University: | Licensee:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26031,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000132",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 132,
+      "start_offset": 25996,
+      "text": "License Administrator | Rainer Kunz"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26080,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000133",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 133,
+      "start_offset": 26032,
+      "text": "Office of Technology Transfer | ColdQuanta, Inc."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26143,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000134",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 134,
+      "start_offset": 26081,
+      "text": "University of Colorado, 588 SYS | 1600 Range Street, Suite 103"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26193,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000135",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 135,
+      "start_offset": 26144,
+      "text": "Suite 100, 4740 Walnut Street | Boulder, CO 80301"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 26226,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000136",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 136,
+      "start_offset": 26194,
+      "text": "Boulder, CO 80309 | 303-440-1284"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27016,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000137",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 137,
+      "start_offset": 26227,
+      "text": "14.3 | Use of Names and Marks: Licensee agrees not to identify University or SRI in any promotional advertising, press releases, sales literature or other promotional materials to be disseminated to the public or any portion thereof without University’s or SRI’s (as applicable) prior written consent in each case, except that Licensee may state that it has a license for the Patent Rights from University, and that Licensee and University work together in a variety of fields. Licensee further agrees not to use the name of University. SRI, or any University or SRI faculty member, inventor, employee or student or any trademark, service mark, trade name, copyright or symbol of University or SRI, without the prior written consent of the entity or person whose name is sought to be used."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27094,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000138",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 138,
+      "start_offset": 27017,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 9 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27130,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000139",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 139,
+      "start_offset": 27095,
+      "text": "14.4 | Marking: Licensee agrees to:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27313,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000140",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 140,
+      "start_offset": 27131,
+      "text": "a. | Cause Licensed Products or the product of Licensed Processes sold under this license to be marked with the notice of the patent numbers or patent pending, as may be appropriate."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 27716,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000141",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 141,
+      "start_offset": 27314,
+      "text": "b. | Comply with all laws and regulations of the United States and any other country as appropriate concerning or controlling the import or export of the Licensed Products, data, software, laboratory prototypes or other commodities. University makes no representation that a license or consent for export will not be required by applicable governmental agencies, or if required, that it will be issued."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 28651,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000142",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 142,
+      "start_offset": 27717,
+      "text": "c. | Comply with all applicable statutes, regulations, and guidelines, including applicable governmental regulations, policies and guidelines in its use of any University-supplied materials. Licensee agrees not to use the materials for research involving human subjects or clinical trials in the United States without complying with 21 C.F.R. Part 50 and 45 C.F.R. Part 46 (as those regulations may be amended from time to time). Licensee agrees not to use the materials for research involving human subjects or clinical trials outside of the United States without notifying University in writing, of such research or trials and complying with the applicable regulations of the appropriate national control authorities. Written notification to University of research involving human subjects or clinical trials outside of the United States shall be given no later than sixty (60) days prior to commencement of such research or trials."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 28794,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000143",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 143,
+      "start_offset": 28652,
+      "text": "14.5 | Manufacturing: Licensee shall, to the extent commercially feasible, cause an Licensed Products to be manufactured in the United States."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 29089,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000144",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 144,
+      "start_offset": 28795,
+      "text": "14.6 | Compliance with the Law: Licensee shall comply with all commercially material local, state, federal, and international laws and regulations relating to its obligations under this Agreement regarding the development, manufacture, use, and sale of Licensed Products and Licensed Processes."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 29215,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000145",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 145,
+      "start_offset": 29090,
+      "text": "14.7 | Choice of Law: This Agreement shall be governed by and construed in accordance with the laws of the State of Colorado."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 29458,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000146",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 146,
+      "start_offset": 29216,
+      "text": "14.8 | Dispute Resolution: In the event of any dispute arising out of or relating to this Agreement, the affected Party shall promptly notify the other Party (‘Notice Dates”), and the Parties shall attempt in good faith to resolve the matter."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 29678,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000147",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 147,
+      "start_offset": 29459,
+      "text": "a. | Any disputes not so resolved shall be referred to senior executives, who shall meet at a mutually acceptable time and location within thirty (30) days of the Notice Date and shall attempt to negotiate a settlement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 30333,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000148",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 148,
+      "start_offset": 29679,
+      "text": "b. | If the senior executives fail to meet within thirty (30) days of the Notice Date, or if the matter remains unresolved for a period of sixty (60) days after the Notice Date, the Parties hereby irrevocably submit to the jurisdiction of a court of competent jurisdiction in the State of Colorado, and, by execution and delivery of this Agreement, each (i) accepts, generally and unconditionally, the jurisdiction of such court and any related appellate court, and (ii) irrevocably waives any objection it may now or hereafter have as to the venue of any such suit, action or proceeding brought in such court or that such court is an inconvenient forum."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31063,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000149",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 149,
+      "start_offset": 30334,
+      "text": "14.9 | Merger and Modification of Agreement: The terms and provisions contained in this Agreement constitute the entire Agreement between the Parties and shall supersede all previous communications, representations, agreements or understandings, either oral or written, between the Parties hereto with respect to the subject matter hereof, and no agreement or understanding varying or extending this Agreement will be binding upon either Party hereto, unless in writing which specifically refers to this Agreement, signed by duly authorized officers or representatives of the respective Parties, and the provisions of this Agreement not specifically amended thereby shall remain in full force and effect according to their terms."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31142,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000150",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 150,
+      "start_offset": 31064,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 10 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31496,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000151",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 151,
+      "start_offset": 31143,
+      "text": "14.10 | Severability: The provisions and clauses of this Agreement are severable, and in the event that any provision or clause is determined to be invalid or unenforceable under any controlling body of the law, such invalidity or unenforceability will not in any way affect the validity or enforceability of the remaining provisions and clauses hereof."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 31651,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000152",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 152,
+      "start_offset": 31497,
+      "text": "14.11 | Scope: This Agreement does not establish a joint venture, agency or partnership between the Parties, nor create an employer—employee relationship."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32151,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000153",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 153,
+      "start_offset": 31652,
+      "text": "14.12 | Preservation of Immunity: The Parties agree that nothing in this Agreement is intended or shall be construed as a waiver, either express or implied, of any of the immunities, rights, benefits, defenses or protections provided to University under governmental or sovereign immunity laws from time to time applicable to University, including, without limitation, the Colorado Governmental Immunity Act (C.R.S. § 24-10-101, et seq.) and the Eleventh Amendment to the United States Constitution."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32269,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000154",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 154,
+      "start_offset": 32152,
+      "text": "14.13 | Headings: Headings are included herein for convenience only and shall not be used to construe this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32529,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000155",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 155,
+      "start_offset": 32270,
+      "text": "14.14 | The provisions of Sections 6 and 10, and Subsections 7.1, 7.2, 12.1, 12.2, 14.3. 14.7–14.10, and 14.12, and any other provision of this Agreement that by its nature is intended to survive, shall survive any termination or expiration of this Agreement."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32552,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000156",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 156,
+      "start_offset": 32530,
+      "text": "Signature Page Follows"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32631,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000157",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 157,
+      "start_offset": 32553,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 11 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32771,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000158",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 158,
+      "start_offset": 32632,
+      "text": "IN WITNESS WHEREOF the parties hereto have caused this Agreement, to be executed in duplicate by their respective duly authorized officers."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32795,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000159",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 159,
+      "start_offset": 32772,
+      "text": "University: | Licensee:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32841,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000160",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 160,
+      "start_offset": 32796,
+      "text": "By: | /s/ David Allen | By: | /s/ Rainer Kunz"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32870,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000161",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 161,
+      "start_offset": 32842,
+      "text": "David N. Allen | Rainer Kunz"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 32969,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000162",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 162,
+      "start_offset": 32871,
+      "text": "Title: | Associate VP, Technology Transfer Office | Title: | President and Chief Executive Officer"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33008,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000163",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 163,
+      "start_offset": 32970,
+      "text": "Date: | 23 Jan 2021 | Date: | 2/2/2012"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33185,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000164",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 164,
+      "start_offset": 33009,
+      "text": "Office of Technology Transfer University of Colorado, 588 SYS Suite 100, 4740 Walnut Street Boulder, CO 80309 | Cold Quanta, Inc. 1600 Range Street, Suite 103 Boulder, CO 80301"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33264,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000165",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "14",
+      "sequence": 165,
+      "start_offset": 33186,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 12 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 33274,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000166",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT A",
+      "sequence": 166,
+      "start_offset": 33265,
+      "text": "EXHIBIT A"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33301,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000167",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT A",
+      "sequence": 167,
+      "start_offset": 33275,
+      "text": "FIELD OF USE and TERRITORY"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33326,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000168",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT A",
+      "sequence": 168,
+      "start_offset": 33302,
+      "text": "Field of Use: All fields"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33347,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000169",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT A",
+      "sequence": 169,
+      "start_offset": 33327,
+      "text": "Territory: Worldwide"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33426,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000170",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT A",
+      "sequence": 170,
+      "start_offset": 33348,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 13 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 33436,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000171",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 171,
+      "start_offset": 33427,
+      "text": "EXHIBIT B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33450,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000172",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 172,
+      "start_offset": 33437,
+      "text": "PATENT RIGHTS"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33487,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000173",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 173,
+      "start_offset": 33451,
+      "text": "B.1. Co-owned by University and SRI:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33541,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000174",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 174,
+      "start_offset": 33488,
+      "text": "Internal ID | Country | Serial No | File Date | Title"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33616,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000175",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 175,
+      "start_offset": 33542,
+      "text": "CU1831B-PCT1 | PCT | PCT/ US2008/064149 | 05/19/2008 | Channel Cell System"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33692,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000176",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 176,
+      "start_offset": 33617,
+      "text": "CU1831B-US1 | United States | 12/600,825 | 04/20/2010 | Channel Cell System"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33704,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000177",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 177,
+      "start_offset": 33693,
+      "text": "CU1832B-US1"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33711,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000178",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 178,
+      "start_offset": 33705,
+      "text": "United"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33718,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000179",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 179,
+      "start_offset": 33712,
+      "text": "States"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33729,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000180",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 180,
+      "start_offset": 33719,
+      "text": "12/121,068"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33741,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000181",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 181,
+      "start_offset": 33730,
+      "text": "(patent no."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33752,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000182",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 182,
+      "start_offset": 33742,
+      "text": "7,955,551)"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33762,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000183",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 183,
+      "start_offset": 33753,
+      "text": "5/15/2008"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33770,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000184",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 184,
+      "start_offset": 33763,
+      "text": "(issued"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33780,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000185",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 185,
+      "start_offset": 33771,
+      "text": "6/7/2011)"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33789,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000186",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 186,
+      "start_offset": 33781,
+      "text": "Alkaline"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33795,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000187",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 187,
+      "start_offset": 33790,
+      "text": "Metal"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33806,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000188",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 188,
+      "start_offset": 33796,
+      "text": "Dispensers"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33819,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000189",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 189,
+      "start_offset": 33807,
+      "text": "and Uses for"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33824,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000190",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 190,
+      "start_offset": 33820,
+      "text": "Same"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33837,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000191",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 191,
+      "start_offset": 33825,
+      "text": "CU1833B-PPA1"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33844,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000192",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 192,
+      "start_offset": 33838,
+      "text": "United"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33851,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000193",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 193,
+      "start_offset": 33845,
+      "text": "States"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33862,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000194",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 194,
+      "start_offset": 33852,
+      "text": "60/941,861"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33873,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000195",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 195,
+      "start_offset": 33863,
+      "text": "06/04/2007"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33883,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000196",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 196,
+      "start_offset": 33874,
+      "text": "Portable,"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33893,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000197",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 197,
+      "start_offset": 33884,
+      "text": "Miniature"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33906,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000198",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 198,
+      "start_offset": 33894,
+      "text": "Multichamber"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33917,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000199",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 199,
+      "start_offset": 33907,
+      "text": "Ultracold-"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33924,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000200",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 200,
+      "start_offset": 33918,
+      "text": "Matter"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33931,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000201",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 201,
+      "start_offset": 33925,
+      "text": "Vacuum"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 33938,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000202",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 202,
+      "start_offset": 33932,
+      "text": "System"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34019,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000203",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 203,
+      "start_offset": 33939,
+      "text": "CU1833B-PCT1 | PCT | PCT/ US2008/064150 | 05/19/2008 | Ultracold- Matter Systems"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34101,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000204",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 204,
+      "start_offset": 34020,
+      "text": "CU1833B-US1 | United States | 12/600,821 | 04/20/2010 | Ultracold- Matter Systems"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34194,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000205",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 205,
+      "start_offset": 34102,
+      "text": "CU2729B-PPA1 | United States | 61/030,335 | 02/21/2008 | Minaturized Intergrated Atom System"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34312,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000206",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 206,
+      "start_offset": 34195,
+      "text": "CU2729B-US1 | United States | 12/390.669 (patent no. 8,080,778) | 2/23/2009 (issued 12/20/2011) | Channel Cell System"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34337,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000207",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 207,
+      "start_offset": 34313,
+      "text": "B.2. Soley owned by SRI:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34355,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000208",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 208,
+      "start_offset": 34338,
+      "text": "US patent 7470971"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34403,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000209",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 209,
+      "start_offset": 34356,
+      "text": "Title: Anodically bonded ultra-high-vacuum cell"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34439,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000210",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 210,
+      "start_offset": 34404,
+      "text": "Inventors: Sterling Eduardo McBride"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34457,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000211",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 211,
+      "start_offset": 34440,
+      "text": "US patent 7807509"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34505,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000212",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 212,
+      "start_offset": 34458,
+      "text": "Title: Anodically bonded ultra-high-vacuum cell"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34541,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000213",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 213,
+      "start_offset": 34506,
+      "text": "Inventors: Sterling Eduardo McBride"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34620,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000214",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT B",
+      "sequence": 214,
+      "start_offset": 34542,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 14 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 34630,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000215",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 215,
+      "start_offset": 34621,
+      "text": "EXHIBIT C"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 34644,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000216",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 216,
+      "start_offset": 34631,
+      "text": "CONSIDERATION"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 34736,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000217",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 217,
+      "start_offset": 34645,
+      "text": "In accordance with Section 6, Licensee shall pay the following consideration to University:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 34795,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000218",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 218,
+      "start_offset": 34737,
+      "text": "C.1 Contractual obligation in lieu of a license issue fee:"
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 35276,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000219",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 219,
+      "start_offset": 34796,
+      "text": "After the Effective Date, in lieu of a license issue fee, Licensee will pay University a fee equal to [***]. Such fee shall be paid after only the first to occur of either a Liquidation Event or Initial Public Offering. The respective fees, when and if payable, shall be paid upon closing of the event; except for Trailing Consideration which shall be payable within thirty (30) days after the actual receipt of such Trailing Consideration by the Licensee or its security holders."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 35982,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000220",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 220,
+      "start_offset": 35277,
+      "text": "For a Liquidation Event, the fees shall be payable in the form of the proceeds payable to either Licensee or its security holders, whether in cash, securities or other property, and in the same proportion such form of consideration is payable to the Licensee or its security holders. Notwithstanding the foregoing, in the event the form of consideration includes securities for which there is not an active public market, in lieu of paying that portion of the fee with such securities, the Licensee will make a cash payment to University equal to the fair market value of such securities. The valuation of such securities shall be determined in accordance with the definition of “Aggregate Consideration.”"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 36060,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000221",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 221,
+      "start_offset": 35983,
+      "text": "For an Initial Public Offering, the fee shall be payable in the form of cash."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 37016,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000222",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 222,
+      "start_offset": 36061,
+      "text": "“Liquidation Event” means a (i) a merger, share exchange or other reorganization (“Merger”), (ii) the sale by one or more stockholders of a majority of the voting power of the Licensee (“Stock Sale”) or (iii) a sale of all or substantially all of the assets of the Licensee (or that portion of its assets related to the subject matter of this Agreement) (“Asset Sale”) in which for (i), (ii), and (iii) above, the stockholders of the Licensee prior to such transaction do not own a majority of the voting power of the acquiring, surviving or successor entity, as the case may be. Notwithstanding the foregoing, a Liquidation Event shall not include a bona fide financing transaction in which voting control of the Licensee transfers to one or more persons or entities who acquire shares of Licensee capital stock from Licensee in exchange for either an investment in Licensee or the cancellation of indebtedness owed by Licensee, or a combination thereof."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 37257,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000223",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 223,
+      "start_offset": 37017,
+      "text": "“Trailing Consideration” means any payments due for any deferred or contingent consideration payable to Licensee or its security holders including, without limitation, any post-closing milestone payment, escrow or holdback of consideration."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "DEFINED_TERM"
+      ],
+      "end_offset": 37310,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000224",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 224,
+      "start_offset": 37258,
+      "text": "“Aggregate Consideration” means the amount equal to:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 37852,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000225",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 225,
+      "start_offset": 37311,
+      "text": "(i) | in the case of an Asset Sale, the sum of (a) all cash, and the fair market value of all securities or other property transferred to the Licensee at the time of the transaction, less all current and long-term liabilities (but not contingent liabilities) of the Licensee that are not discharged or assumed by the buyer (or its affiliates) in connection with the Asset Sale. and (b) all cash, and the fair market value of all securities and other property for Trailing Consideration payable to the Licensee, when and if, actually paid; or"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 38453,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000226",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 226,
+      "start_offset": 37853,
+      "text": "(ii) | in the case of a Merger or Stock Sale, the sum of (a) all cash, and the fair market value of all securities and other property transferred to the stockholders of the Licensee (and any option holders or warrant holders) in return for their stock (or options or warrants) in the Licensee at the time of the transaction, and (b) all cash, and the fair market value of all securities and other property transferred to the stockholders of the Licensee (and any option holders or warrant holders) for Trailing Consideration payable to the holders of Licensee’s securities, when and if actually paid."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 38532,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000227",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 227,
+      "start_offset": 38454,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 15 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 38872,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000228",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 228,
+      "start_offset": 38533,
+      "text": "The valuation of any securities or other property shall be determined by reference to the operative transaction agreement for a respective Merger, Stock Sale or Asset Sale, provided that, if no such valuation is readily determinable from such operative transaction agreement, then for securities for which there is an active public market:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 39134,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000229",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 229,
+      "start_offset": 38873,
+      "text": "(a) | if traded on a securities exchange or the NASDAQ Stock Market, the value shall be deemed to be the average of the closing prices of the securities on such exchange or market over the 30-period ending three days prior to the closing of such transaction; or"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 39330,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000230",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 230,
+      "start_offset": 39135,
+      "text": "(b) | if actively traded over-the-counter, the value shall be deemed to be the average of the closing bid prices over the 30-day period ending three days prior to the closing of such transaction."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 39630,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000231",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 231,
+      "start_offset": 39331,
+      "text": "The method of valuation of securities subject to investment letters or other similar restrictions on free marketability shall take into account an appropriate discount from the market value as determined pursuant to clause (a) or (b) above so as to reflect the approximate fair market value thereof."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 39975,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000232",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 232,
+      "start_offset": 39631,
+      "text": "For securities for which there is no active public market, the value shall be the fair market value thereof as either (i) determined in good faith by the Board of Directors of Licensee, (ii) approved by University, such approval not to be unreasonably withheld, or (iii) determined by a third party appraiser appointed and paid for by Licensee."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 40206,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000233",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 233,
+      "start_offset": 39976,
+      "text": "“Initial Public Offering” means the effectiveness of a registration statement for the first sale of Licensee’s common stock in a firm commitment underwritten public offering registered under the Securities Act of 1933, as amended."
+    },
+    {
+      "candidate_reasons": [
+        "DEFINED_TERM"
+      ],
+      "end_offset": 40781,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000234",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 234,
+      "start_offset": 40207,
+      "text": "“Pre-Money Valuation” means the amount equal to the product of (i) the price per share of common stock sold in the Initial Public Offering and (ii) the total number of outstanding shares of common stock of Licensee immediately prior to the closing of the Initial Public Offering, determined on a fully diluted, as converted into common stock basis, giving effect to any stock split, stock dividend, stock combination, recapitalization or similar action impacting Licensee’s capitalization that occurs, or is deemed to occur, upon consummation of the Initial Public Offering."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 40802,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000235",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 235,
+      "start_offset": 40782,
+      "text": "C.2. Earned royalty:"
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 40967,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000236",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 236,
+      "start_offset": 40803,
+      "text": "Licensee agrees to pay an earned royalty of [***] of Net Sales. For Net Sales made directly to the United States Government (“Government Safes”), Licensee will pay:"
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 41113,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000237",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 237,
+      "start_offset": 40968,
+      "text": "• | an earned royalty of [***] of Government Sales when Licensee’s annual Government Sales are less than [***] of Licensee’s total Net Sales; and"
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 41270,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000238",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 238,
+      "start_offset": 41114,
+      "text": "• | an earned royalty of [***] of Government Sales when Licensee’s annual Government Sales are equal to or greater than [***] of Licensee’s total Net Sales."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 41393,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000239",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 239,
+      "start_offset": 41271,
+      "text": "Licensee shall ensure the annual Government Sales are reconciled, reported and paid in the fourth quarter royalty payment."
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB",
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 41668,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000240",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 240,
+      "start_offset": 41394,
+      "text": "In the event of an assignment as defined in Section 14.1(a), University agrees to negotiate in good faith a royalty buyout option (i.e.. royalty monetization) with Licensee (including the assignee of this Agreement). if such a buyout is desired by Licensee or such assignee."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 41747,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000241",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 241,
+      "start_offset": 41669,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 16 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 41776,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000242",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 242,
+      "start_offset": 41748,
+      "text": "C.3. Sublicensing Royalties:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 42535,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000243",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 243,
+      "start_offset": 41777,
+      "text": "Licensee agrees to pay the following percentages of consideration in any form (“Sublicense Revenue”) received by Licensee or Affiliates in connection with a grant of a sublicense to any third party (a “Sublicensee”). Sublicense Revenue shall include without limitation, upfront fees, maintenance fees, milestone payments, royalties on Sublicensee net sales, the unearned portion of any minimum royalties. equity, and research and development funding in excess of the costs of performing such research and development. A Sublicensee shall mean any third party sublicensed by Licensee to make, have made, use, have used, sell, have sold, import, have imported, exported. or have exported Licensed Products or to practice or have practiced any Licensed Process."
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 42661,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000244",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 244,
+      "start_offset": 42536,
+      "text": "[***] of all Sublicense Revenue received under sublicense agreements executed during the first year after the Effective Date."
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 42788,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000245",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 245,
+      "start_offset": 42662,
+      "text": "[***] of all Sublicense Revenue received under sublicense agreements executed during the second year after the Effective Date."
+    },
+    {
+      "candidate_reasons": [
+        "REDACTION",
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 42985,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000246",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 246,
+      "start_offset": 42789,
+      "text": "[***] of all Sublicense Revenue received under sublicense agreements executed during the third year after the Effective Date and each year thereafter until this Agreement is terminated or expires."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43064,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000247",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT C",
+      "sequence": 247,
+      "start_offset": 42986,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 17 of 18 | CU Case Number CU1833B"
+    },
+    {
+      "candidate_reasons": [
+        "CROSS_REFERENCE"
+      ],
+      "end_offset": 43074,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000248",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 248,
+      "start_offset": 43065,
+      "text": "EXHIBIT D"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 43097,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000249",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 249,
+      "start_offset": 43075,
+      "text": "FORM OF ROYALTY REPORT"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43122,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000250",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 250,
+      "start_offset": 43098,
+      "text": "Licensee: | CU Case No.:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43145,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000251",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 251,
+      "start_offset": 43123,
+      "text": "Inventor: | Patent No."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43195,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000252",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 252,
+      "start_offset": 43146,
+      "text": "Period Covered: From:   /  / | Through:     /   /"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43216,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000253",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 253,
+      "start_offset": 43196,
+      "text": "Prepared By: | Date:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43237,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000254",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 254,
+      "start_offset": 43217,
+      "text": "Approved By: | Date:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43317,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000255",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 255,
+      "start_offset": 43238,
+      "text": "If license covers several major product lines, please prepare a separate report"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43386,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000256",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 256,
+      "start_offset": 43318,
+      "text": "for each line. Then combine all product lines into a summary report."
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43562,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000257",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 257,
+      "start_offset": 43387,
+      "text": "Report Type: | ____ Single Product Line Report: ____ Multiproduct Summary Report. Page 1 of ______Pages ____ Product Line Detail. Line:_______________ Trademark:______________"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43574,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000258",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 258,
+      "start_offset": 43563,
+      "text": "Pages:_____"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 43669,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000259",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 259,
+      "start_offset": 43575,
+      "text": "Category | Gross Sales | * Less: Allowances | Net Sales | Royalty Rate | Period Royalty Amount"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43691,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000260",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 260,
+      "start_offset": 43670,
+      "text": "This Year | Last Year"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43703,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000261",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 261,
+      "start_offset": 43692,
+      "text": "Governments"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43709,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000262",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 262,
+      "start_offset": 43704,
+      "text": "Other"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43716,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000263",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 263,
+      "start_offset": 43710,
+      "text": "TOTAL:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 43923,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000264",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 264,
+      "start_offset": 43717,
+      "text": "Sublicense Income this quarter: $ ________ (attach page showing names, addresses, and telephone numbers; amount and type of fees received; territory; field of use; description of any non-cash consideration)"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 43949,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000265",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 265,
+      "start_offset": 43924,
+      "text": "Total Payments: $________"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 44047,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000266",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 266,
+      "start_offset": 43950,
+      "text": "The following payment forecast is non-binding and for University internal planning purposes only:"
+    },
+    {
+      "candidate_reasons": [
+        "FINANCE_VOCAB"
+      ],
+      "end_offset": 44086,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000267",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 267,
+      "start_offset": 44048,
+      "text": "Payment Forecast Under This Agreement:"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44145,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000268",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 268,
+      "start_offset": 44087,
+      "text": "Next Quarter:________ Q2:________ Q3: ________ Q4:________"
+    },
+    {
+      "candidate_reasons": [],
+      "end_offset": 44224,
+      "passage_id": "DOC-c24d351ab4b04c1915:P000269",
+      "review_disposition": "UNREVIEWED",
+      "section_guess": "EXHIBIT D",
+      "sequence": 269,
+      "start_offset": 44146,
+      "text": "ColdQuanta Non-Exclusive License Agreement | 18 of 18 | CU Case Number CU1833B"
+    }
+  ],
+  "quality_control_profile": "M13_TWO_READER",
+  "quality_flags": [
+    "ALL_PASSAGES_UNREVIEWED",
+    "CANDIDATE_COVERAGE_NOT_ESTABLISHED"
+  ],
+  "retrieved_at_utc": "2026-11-18T00:59:39+00:00",
+  "schema_version": "m1.0",
+  "screening_conclusion": "UNKNOWN_NEEDS_AI_SCREENING",
+  "screening_priority": "HIGH_REVIEW_PRIORITY",
+  "sections": [
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000001",
+        "DOC-c24d351ab4b04c1915:P000012"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000001",
+        "DOC-c24d351ab4b04c1915:P000002",
+        "DOC-c24d351ab4b04c1915:P000003",
+        "DOC-c24d351ab4b04c1915:P000004",
+        "DOC-c24d351ab4b04c1915:P000005",
+        "DOC-c24d351ab4b04c1915:P000006",
+        "DOC-c24d351ab4b04c1915:P000007",
+        "DOC-c24d351ab4b04c1915:P000008",
+        "DOC-c24d351ab4b04c1915:P000009",
+        "DOC-c24d351ab4b04c1915:P000010",
+        "DOC-c24d351ab4b04c1915:P000011",
+        "DOC-c24d351ab4b04c1915:P000012"
+      ],
+      "section": "Exhibit 10.18"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000013",
+        "DOC-c24d351ab4b04c1915:P000015",
+        "DOC-c24d351ab4b04c1915:P000017",
+        "DOC-c24d351ab4b04c1915:P000018",
+        "DOC-c24d351ab4b04c1915:P000019",
+        "DOC-c24d351ab4b04c1915:P000020",
+        "DOC-c24d351ab4b04c1915:P000021",
+        "DOC-c24d351ab4b04c1915:P000024",
+        "DOC-c24d351ab4b04c1915:P000025",
+        "DOC-c24d351ab4b04c1915:P000026",
+        "DOC-c24d351ab4b04c1915:P000027",
+        "DOC-c24d351ab4b04c1915:P000028",
+        "DOC-c24d351ab4b04c1915:P000032"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000013",
+        "DOC-c24d351ab4b04c1915:P000014",
+        "DOC-c24d351ab4b04c1915:P000015",
+        "DOC-c24d351ab4b04c1915:P000016",
+        "DOC-c24d351ab4b04c1915:P000017",
+        "DOC-c24d351ab4b04c1915:P000018",
+        "DOC-c24d351ab4b04c1915:P000019",
+        "DOC-c24d351ab4b04c1915:P000020",
+        "DOC-c24d351ab4b04c1915:P000021",
+        "DOC-c24d351ab4b04c1915:P000022",
+        "DOC-c24d351ab4b04c1915:P000023",
+        "DOC-c24d351ab4b04c1915:P000024",
+        "DOC-c24d351ab4b04c1915:P000025",
+        "DOC-c24d351ab4b04c1915:P000026",
+        "DOC-c24d351ab4b04c1915:P000027",
+        "DOC-c24d351ab4b04c1915:P000028",
+        "DOC-c24d351ab4b04c1915:P000029",
+        "DOC-c24d351ab4b04c1915:P000030",
+        "DOC-c24d351ab4b04c1915:P000031",
+        "DOC-c24d351ab4b04c1915:P000032"
+      ],
+      "section": "1"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000033",
+        "DOC-c24d351ab4b04c1915:P000035",
+        "DOC-c24d351ab4b04c1915:P000036",
+        "DOC-c24d351ab4b04c1915:P000037"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000033",
+        "DOC-c24d351ab4b04c1915:P000034",
+        "DOC-c24d351ab4b04c1915:P000035",
+        "DOC-c24d351ab4b04c1915:P000036",
+        "DOC-c24d351ab4b04c1915:P000037",
+        "DOC-c24d351ab4b04c1915:P000038"
+      ],
+      "section": "2"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000039",
+        "DOC-c24d351ab4b04c1915:P000040"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000039",
+        "DOC-c24d351ab4b04c1915:P000040",
+        "DOC-c24d351ab4b04c1915:P000041",
+        "DOC-c24d351ab4b04c1915:P000042",
+        "DOC-c24d351ab4b04c1915:P000043",
+        "DOC-c24d351ab4b04c1915:P000044"
+      ],
+      "section": "3"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000045",
+        "DOC-c24d351ab4b04c1915:P000046",
+        "DOC-c24d351ab4b04c1915:P000050",
+        "DOC-c24d351ab4b04c1915:P000051",
+        "DOC-c24d351ab4b04c1915:P000052"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000045",
+        "DOC-c24d351ab4b04c1915:P000046",
+        "DOC-c24d351ab4b04c1915:P000047",
+        "DOC-c24d351ab4b04c1915:P000048",
+        "DOC-c24d351ab4b04c1915:P000049",
+        "DOC-c24d351ab4b04c1915:P000050",
+        "DOC-c24d351ab4b04c1915:P000051",
+        "DOC-c24d351ab4b04c1915:P000052"
+      ],
+      "section": "4"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000053"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000053",
+        "DOC-c24d351ab4b04c1915:P000054",
+        "DOC-c24d351ab4b04c1915:P000055",
+        "DOC-c24d351ab4b04c1915:P000056",
+        "DOC-c24d351ab4b04c1915:P000057",
+        "DOC-c24d351ab4b04c1915:P000058",
+        "DOC-c24d351ab4b04c1915:P000059",
+        "DOC-c24d351ab4b04c1915:P000060"
+      ],
+      "section": "5"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000061",
+        "DOC-c24d351ab4b04c1915:P000062",
+        "DOC-c24d351ab4b04c1915:P000063",
+        "DOC-c24d351ab4b04c1915:P000064",
+        "DOC-c24d351ab4b04c1915:P000065",
+        "DOC-c24d351ab4b04c1915:P000066",
+        "DOC-c24d351ab4b04c1915:P000067",
+        "DOC-c24d351ab4b04c1915:P000069"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000061",
+        "DOC-c24d351ab4b04c1915:P000062",
+        "DOC-c24d351ab4b04c1915:P000063",
+        "DOC-c24d351ab4b04c1915:P000064",
+        "DOC-c24d351ab4b04c1915:P000065",
+        "DOC-c24d351ab4b04c1915:P000066",
+        "DOC-c24d351ab4b04c1915:P000067",
+        "DOC-c24d351ab4b04c1915:P000068",
+        "DOC-c24d351ab4b04c1915:P000069"
+      ],
+      "section": "6"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000070",
+        "DOC-c24d351ab4b04c1915:P000072",
+        "DOC-c24d351ab4b04c1915:P000073",
+        "DOC-c24d351ab4b04c1915:P000075",
+        "DOC-c24d351ab4b04c1915:P000079",
+        "DOC-c24d351ab4b04c1915:P000080",
+        "DOC-c24d351ab4b04c1915:P000081"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000070",
+        "DOC-c24d351ab4b04c1915:P000071",
+        "DOC-c24d351ab4b04c1915:P000072",
+        "DOC-c24d351ab4b04c1915:P000073",
+        "DOC-c24d351ab4b04c1915:P000074",
+        "DOC-c24d351ab4b04c1915:P000075",
+        "DOC-c24d351ab4b04c1915:P000076",
+        "DOC-c24d351ab4b04c1915:P000077",
+        "DOC-c24d351ab4b04c1915:P000078",
+        "DOC-c24d351ab4b04c1915:P000079",
+        "DOC-c24d351ab4b04c1915:P000080",
+        "DOC-c24d351ab4b04c1915:P000081"
+      ],
+      "section": "7"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000082"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000082",
+        "DOC-c24d351ab4b04c1915:P000083",
+        "DOC-c24d351ab4b04c1915:P000084",
+        "DOC-c24d351ab4b04c1915:P000085"
+      ],
+      "section": "8"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000086"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000086",
+        "DOC-c24d351ab4b04c1915:P000087"
+      ],
+      "section": "9"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000088",
+        "DOC-c24d351ab4b04c1915:P000089"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000088",
+        "DOC-c24d351ab4b04c1915:P000089",
+        "DOC-c24d351ab4b04c1915:P000090",
+        "DOC-c24d351ab4b04c1915:P000091"
+      ],
+      "section": "10"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000092"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000092",
+        "DOC-c24d351ab4b04c1915:P000093"
+      ],
+      "section": "11"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000094",
+        "DOC-c24d351ab4b04c1915:P000104"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000094",
+        "DOC-c24d351ab4b04c1915:P000095",
+        "DOC-c24d351ab4b04c1915:P000096",
+        "DOC-c24d351ab4b04c1915:P000097",
+        "DOC-c24d351ab4b04c1915:P000098",
+        "DOC-c24d351ab4b04c1915:P000099",
+        "DOC-c24d351ab4b04c1915:P000100",
+        "DOC-c24d351ab4b04c1915:P000101",
+        "DOC-c24d351ab4b04c1915:P000102",
+        "DOC-c24d351ab4b04c1915:P000103",
+        "DOC-c24d351ab4b04c1915:P000104",
+        "DOC-c24d351ab4b04c1915:P000105",
+        "DOC-c24d351ab4b04c1915:P000106"
+      ],
+      "section": "12"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000107",
+        "DOC-c24d351ab4b04c1915:P000112",
+        "DOC-c24d351ab4b04c1915:P000114",
+        "DOC-c24d351ab4b04c1915:P000117"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000107",
+        "DOC-c24d351ab4b04c1915:P000108",
+        "DOC-c24d351ab4b04c1915:P000109",
+        "DOC-c24d351ab4b04c1915:P000110",
+        "DOC-c24d351ab4b04c1915:P000111",
+        "DOC-c24d351ab4b04c1915:P000112",
+        "DOC-c24d351ab4b04c1915:P000113",
+        "DOC-c24d351ab4b04c1915:P000114",
+        "DOC-c24d351ab4b04c1915:P000115",
+        "DOC-c24d351ab4b04c1915:P000116",
+        "DOC-c24d351ab4b04c1915:P000117",
+        "DOC-c24d351ab4b04c1915:P000118",
+        "DOC-c24d351ab4b04c1915:P000119",
+        "DOC-c24d351ab4b04c1915:P000120",
+        "DOC-c24d351ab4b04c1915:P000121",
+        "DOC-c24d351ab4b04c1915:P000122",
+        "DOC-c24d351ab4b04c1915:P000123"
+      ],
+      "section": "13"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000124",
+        "DOC-c24d351ab4b04c1915:P000126"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000124",
+        "DOC-c24d351ab4b04c1915:P000125",
+        "DOC-c24d351ab4b04c1915:P000126",
+        "DOC-c24d351ab4b04c1915:P000127",
+        "DOC-c24d351ab4b04c1915:P000128",
+        "DOC-c24d351ab4b04c1915:P000129",
+        "DOC-c24d351ab4b04c1915:P000130",
+        "DOC-c24d351ab4b04c1915:P000131",
+        "DOC-c24d351ab4b04c1915:P000132",
+        "DOC-c24d351ab4b04c1915:P000133",
+        "DOC-c24d351ab4b04c1915:P000134",
+        "DOC-c24d351ab4b04c1915:P000135",
+        "DOC-c24d351ab4b04c1915:P000136",
+        "DOC-c24d351ab4b04c1915:P000137",
+        "DOC-c24d351ab4b04c1915:P000138",
+        "DOC-c24d351ab4b04c1915:P000139",
+        "DOC-c24d351ab4b04c1915:P000140",
+        "DOC-c24d351ab4b04c1915:P000141",
+        "DOC-c24d351ab4b04c1915:P000142",
+        "DOC-c24d351ab4b04c1915:P000143",
+        "DOC-c24d351ab4b04c1915:P000144",
+        "DOC-c24d351ab4b04c1915:P000145",
+        "DOC-c24d351ab4b04c1915:P000146",
+        "DOC-c24d351ab4b04c1915:P000147",
+        "DOC-c24d351ab4b04c1915:P000148",
+        "DOC-c24d351ab4b04c1915:P000149",
+        "DOC-c24d351ab4b04c1915:P000150",
+        "DOC-c24d351ab4b04c1915:P000151",
+        "DOC-c24d351ab4b04c1915:P000152",
+        "DOC-c24d351ab4b04c1915:P000153",
+        "DOC-c24d351ab4b04c1915:P000154",
+        "DOC-c24d351ab4b04c1915:P000155",
+        "DOC-c24d351ab4b04c1915:P000156",
+        "DOC-c24d351ab4b04c1915:P000157",
+        "DOC-c24d351ab4b04c1915:P000158",
+        "DOC-c24d351ab4b04c1915:P000159",
+        "DOC-c24d351ab4b04c1915:P000160",
+        "DOC-c24d351ab4b04c1915:P000161",
+        "DOC-c24d351ab4b04c1915:P000162",
+        "DOC-c24d351ab4b04c1915:P000163",
+        "DOC-c24d351ab4b04c1915:P000164",
+        "DOC-c24d351ab4b04c1915:P000165"
+      ],
+      "section": "14"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000166"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000166",
+        "DOC-c24d351ab4b04c1915:P000167",
+        "DOC-c24d351ab4b04c1915:P000168",
+        "DOC-c24d351ab4b04c1915:P000169",
+        "DOC-c24d351ab4b04c1915:P000170"
+      ],
+      "section": "EXHIBIT A"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000171"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000171",
+        "DOC-c24d351ab4b04c1915:P000172",
+        "DOC-c24d351ab4b04c1915:P000173",
+        "DOC-c24d351ab4b04c1915:P000174",
+        "DOC-c24d351ab4b04c1915:P000175",
+        "DOC-c24d351ab4b04c1915:P000176",
+        "DOC-c24d351ab4b04c1915:P000177",
+        "DOC-c24d351ab4b04c1915:P000178",
+        "DOC-c24d351ab4b04c1915:P000179",
+        "DOC-c24d351ab4b04c1915:P000180",
+        "DOC-c24d351ab4b04c1915:P000181",
+        "DOC-c24d351ab4b04c1915:P000182",
+        "DOC-c24d351ab4b04c1915:P000183",
+        "DOC-c24d351ab4b04c1915:P000184",
+        "DOC-c24d351ab4b04c1915:P000185",
+        "DOC-c24d351ab4b04c1915:P000186",
+        "DOC-c24d351ab4b04c1915:P000187",
+        "DOC-c24d351ab4b04c1915:P000188",
+        "DOC-c24d351ab4b04c1915:P000189",
+        "DOC-c24d351ab4b04c1915:P000190",
+        "DOC-c24d351ab4b04c1915:P000191",
+        "DOC-c24d351ab4b04c1915:P000192",
+        "DOC-c24d351ab4b04c1915:P000193",
+        "DOC-c24d351ab4b04c1915:P000194",
+        "DOC-c24d351ab4b04c1915:P000195",
+        "DOC-c24d351ab4b04c1915:P000196",
+        "DOC-c24d351ab4b04c1915:P000197",
+        "DOC-c24d351ab4b04c1915:P000198",
+        "DOC-c24d351ab4b04c1915:P000199",
+        "DOC-c24d351ab4b04c1915:P000200",
+        "DOC-c24d351ab4b04c1915:P000201",
+        "DOC-c24d351ab4b04c1915:P000202",
+        "DOC-c24d351ab4b04c1915:P000203",
+        "DOC-c24d351ab4b04c1915:P000204",
+        "DOC-c24d351ab4b04c1915:P000205",
+        "DOC-c24d351ab4b04c1915:P000206",
+        "DOC-c24d351ab4b04c1915:P000207",
+        "DOC-c24d351ab4b04c1915:P000208",
+        "DOC-c24d351ab4b04c1915:P000209",
+        "DOC-c24d351ab4b04c1915:P000210",
+        "DOC-c24d351ab4b04c1915:P000211",
+        "DOC-c24d351ab4b04c1915:P000212",
+        "DOC-c24d351ab4b04c1915:P000213",
+        "DOC-c24d351ab4b04c1915:P000214"
+      ],
+      "section": "EXHIBIT B"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000215",
+        "DOC-c24d351ab4b04c1915:P000216",
+        "DOC-c24d351ab4b04c1915:P000217",
+        "DOC-c24d351ab4b04c1915:P000219",
+        "DOC-c24d351ab4b04c1915:P000220",
+        "DOC-c24d351ab4b04c1915:P000222",
+        "DOC-c24d351ab4b04c1915:P000223",
+        "DOC-c24d351ab4b04c1915:P000224",
+        "DOC-c24d351ab4b04c1915:P000225",
+        "DOC-c24d351ab4b04c1915:P000226",
+        "DOC-c24d351ab4b04c1915:P000233",
+        "DOC-c24d351ab4b04c1915:P000234",
+        "DOC-c24d351ab4b04c1915:P000235",
+        "DOC-c24d351ab4b04c1915:P000236",
+        "DOC-c24d351ab4b04c1915:P000237",
+        "DOC-c24d351ab4b04c1915:P000238",
+        "DOC-c24d351ab4b04c1915:P000239",
+        "DOC-c24d351ab4b04c1915:P000240",
+        "DOC-c24d351ab4b04c1915:P000242",
+        "DOC-c24d351ab4b04c1915:P000243",
+        "DOC-c24d351ab4b04c1915:P000244",
+        "DOC-c24d351ab4b04c1915:P000245",
+        "DOC-c24d351ab4b04c1915:P000246"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000215",
+        "DOC-c24d351ab4b04c1915:P000216",
+        "DOC-c24d351ab4b04c1915:P000217",
+        "DOC-c24d351ab4b04c1915:P000218",
+        "DOC-c24d351ab4b04c1915:P000219",
+        "DOC-c24d351ab4b04c1915:P000220",
+        "DOC-c24d351ab4b04c1915:P000221",
+        "DOC-c24d351ab4b04c1915:P000222",
+        "DOC-c24d351ab4b04c1915:P000223",
+        "DOC-c24d351ab4b04c1915:P000224",
+        "DOC-c24d351ab4b04c1915:P000225",
+        "DOC-c24d351ab4b04c1915:P000226",
+        "DOC-c24d351ab4b04c1915:P000227",
+        "DOC-c24d351ab4b04c1915:P000228",
+        "DOC-c24d351ab4b04c1915:P000229",
+        "DOC-c24d351ab4b04c1915:P000230",
+        "DOC-c24d351ab4b04c1915:P000231",
+        "DOC-c24d351ab4b04c1915:P000232",
+        "DOC-c24d351ab4b04c1915:P000233",
+        "DOC-c24d351ab4b04c1915:P000234",
+        "DOC-c24d351ab4b04c1915:P000235",
+        "DOC-c24d351ab4b04c1915:P000236",
+        "DOC-c24d351ab4b04c1915:P000237",
+        "DOC-c24d351ab4b04c1915:P000238",
+        "DOC-c24d351ab4b04c1915:P000239",
+        "DOC-c24d351ab4b04c1915:P000240",
+        "DOC-c24d351ab4b04c1915:P000241",
+        "DOC-c24d351ab4b04c1915:P000242",
+        "DOC-c24d351ab4b04c1915:P000243",
+        "DOC-c24d351ab4b04c1915:P000244",
+        "DOC-c24d351ab4b04c1915:P000245",
+        "DOC-c24d351ab4b04c1915:P000246",
+        "DOC-c24d351ab4b04c1915:P000247"
+      ],
+      "section": "EXHIBIT C"
+    },
+    {
+      "candidate_ids": [
+        "DOC-c24d351ab4b04c1915:P000248",
+        "DOC-c24d351ab4b04c1915:P000249",
+        "DOC-c24d351ab4b04c1915:P000259",
+        "DOC-c24d351ab4b04c1915:P000264",
+        "DOC-c24d351ab4b04c1915:P000266",
+        "DOC-c24d351ab4b04c1915:P000267"
+      ],
+      "passage_ids": [
+        "DOC-c24d351ab4b04c1915:P000248",
+        "DOC-c24d351ab4b04c1915:P000249",
+        "DOC-c24d351ab4b04c1915:P000250",
+        "DOC-c24d351ab4b04c1915:P000251",
+        "DOC-c24d351ab4b04c1915:P000252",
+        "DOC-c24d351ab4b04c1915:P000253",
+        "DOC-c24d351ab4b04c1915:P000254",
+        "DOC-c24d351ab4b04c1915:P000255",
+        "DOC-c24d351ab4b04c1915:P000256",
+        "DOC-c24d351ab4b04c1915:P000257",
+        "DOC-c24d351ab4b04c1915:P000258",
+        "DOC-c24d351ab4b04c1915:P000259",
+        "DOC-c24d351ab4b04c1915:P000260",
+        "DOC-c24d351ab4b04c1915:P000261",
+        "DOC-c24d351ab4b04c1915:P000262",
+        "DOC-c24d351ab4b04c1915:P000263",
+        "DOC-c24d351ab4b04c1915:P000264",
+        "DOC-c24d351ab4b04c1915:P000265",
+        "DOC-c24d351ab4b04c1915:P000266",
+        "DOC-c24d351ab4b04c1915:P000267",
+        "DOC-c24d351ab4b04c1915:P000268",
+        "DOC-c24d351ab4b04c1915:P000269"
+      ],
+      "section": "EXHIBIT D"
+    }
+  ],
+  "source_segmentation": {
+    "fragment_limit_chars": 12000,
+    "preservation": "FRAGMENTS_CONCATENATE_EXACTLY_TO_EACH_ORIGINAL_NORMALIZED_LINE",
+    "schema": "m4-source-segmentation.1",
+    "split_original_paragraphs": []
+  },
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2007825/000119312526002732/d22517dex1018.htm",
+  "stage": "MAPPED_NOT_INTERPRETED",
+  "text_sha256": "9354e293976bbb797a7f831a177264dd31bc6b59aa941774a07b19a4b16e8860",
+  "total_candidates": 86,
+  "total_passages": 269
+}

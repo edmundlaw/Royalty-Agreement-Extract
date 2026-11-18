@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "royalty-research"
-version = "0.13.9"
+version = "0.13.10"
 description = "Local SEC discovery, contract mapping and omission-resistant AI extraction verification"
 requires-python = ">=3.10"
 dependencies = []

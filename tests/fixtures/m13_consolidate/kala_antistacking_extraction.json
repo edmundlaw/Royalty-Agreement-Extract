@@ -1,0 +1,5503 @@
+{
+  "agreement": {
+    "contractual_status": "Executed agreement with Amendment No. 1 appended in this chunk; current operative status not established",
+    "duration": "Exclusive license runs from the Effective Date until the last to expire of a Valid Claim in the Licensed Patents; overall agreement term not in this chunk",
+    "effective_date": "2019-10-11",
+    "exclusivity": "Exclusive, including the right to sublicense, in all fields (Licensed Field of Use)",
+    "execution_date": "Oct 11, 2019 (signature dates)",
+    "field_evidence": {
+      "duration": [
+        "C1-E007"
+      ],
+      "effective_date": [
+        "C1-E004",
+        "C3-E19",
+        "C3-E13"
+      ],
+      "exclusivity": [
+        "C1-E006",
+        "C1-E009"
+      ],
+      "execution_date": [
+        "C3-E12"
+      ],
+      "industry": [
+        "C1-E005"
+      ],
+      "licensed_ip": [
+        "C1-E012",
+        "C1-E020",
+        "C3-E20"
+      ],
+      "licensee": [
+        "C1-E003",
+        "C2-E01",
+        "C3-E17"
+      ],
+      "licensor": [
+        "C1-E002",
+        "C2-E01",
+        "C3-E18"
+      ],
+      "territory": [
+        "C1-E008"
+      ],
+      "title": [
+        "C1-E001"
+      ]
+    },
+    "industry": "Biotechnology (regenerative therapy; eye wound healing invention)",
+    "licensed_ip": "Stanford, UIC and VA patent applications (details redacted) for the invention entitled 'Methods to promote eye wound healing'",
+    "licensee": "Combangio, Inc.",
+    "licensor": "The Board of Trustees of the Leland Stanford Junior University (Stanford)",
+    "territory": "Worldwide (Licensed Territory)",
+    "title": "EXCLUSIVE LICENSE AGREEMENT"
+  },
+  "amendment_status": "REFERENCED_UNRESOLVED",
+  "dispositions": [
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E010"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000002",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exhibit label only; flagged as a cross-reference but contains no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E011",
+        "C1-E012"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000009",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Background identifying the invention; inventor names and docket redacted; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "UNRELATED_PERCENT"
+      ],
+      "evidence_ids": [
+        "C1-E013"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000018",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "50%",
+          "rationale": "Equity ownership threshold defining control for Affiliate; not a payment rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Affiliate definition; the 50% is an ownership/control test, not a royalty.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E014"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000019",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Change of Control definition lead-in; related fee is in Section 16 outside this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "UNRELATED_PERCENT"
+      ],
+      "evidence_ids": [
+        "C1-E015"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000024",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "50%",
+          "rationale": "Ownership threshold triggering Change of Control, not a payment rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Change of Control prong based on more than 50% voting power or equity value; not a royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E016"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000026",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Commercially Reasonable Efforts diligence standard; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E009"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000027",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Definition of Exclusive; supports exclusivity field only.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E017"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000028",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Fully Diluted Basis definition used for Stanford equity purchase right; no royalty content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E018"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000032",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Indemnitees definition; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E019"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000033",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Licensed Field of Use is all fields; scope definition.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E020"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000034",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Licensed Patents definition introducing redacted patent table.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E021"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000039",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted patent schedule row; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E022"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000040",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted patent schedule row; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E023"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000041",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted patent schedule row; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E024"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000042",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted patent schedule row; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E025"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000043",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted patent schedule row; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E026"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000044",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted patent schedule row; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E027"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000045",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted patent schedule row; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E028"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000046",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted patent schedule row; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E029"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000047",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted patent schedule row; no economic terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E030"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000050",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Licensed Product definition (product infringing a Valid Claim); determines royalty-bearing scope.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E008"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000051",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Licensed Territory is worldwide.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C1-E031"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000052",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Net Sales definition is the royalty base for product sales; exclusion list continues in non-candidate P53-P57 (taxes, freight, installation, returns, discounts) which are not separately quoted.",
+      "term_ids": [
+        "C1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C1-E032"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000058",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Start of Combination Product adjustment, continuing in P62 after a page break.",
+      "term_ids": [
+        "C1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C1-E033",
+        "C1-E034",
+        "C1-E035"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000062",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ADJUSTMENT",
+          "literal": "[**]%",
+          "rationale": "Redacted maximum percentage by which the royalty rate may be reduced for Combination Products.",
+          "term_id": "C1-T002"
+        }
+      ],
+      "rationale": "Combination Product fraction (A-B)/A, redacted cap on royalty-rate reduction, and Affiliate/Sublicensee resale rule; refers to Article 7 amounts.",
+      "term_ids": [
+        "C1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C1-E036"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000063",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines the base for the sublicensing-receipts share; exclusions listed in P64-P69.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C1-E037"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000064",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Excludes sublicensee product royalties from Nonroyalty Sublicensing Consideration; they are treated as Combangio sales under the product-sales base.",
+      "term_ids": [
+        "C1-T001",
+        "C1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C1-E038"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000066",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exclusion of post-Sublicense fully burdened R&D funding from the sublicensing base.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C1-E039"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000069",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exclusion for sale of the business conditioned on receipt of Change of Control Fee in Section 16, which is outside this chunk.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E040"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000070",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Patent Matters definition; used for patent cost reimbursement exclusion; no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E041"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000071",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Sublicense definition starting here and continuing in P75; defines scope of sublicensing share.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E042"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000075",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Completes Sublicense definition, excluding manufacturing/have-made arrangements from Sublicense.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E043"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000076",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Sublicensee definition; scoping for royalty base and sublicensing share.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C1-E044"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000077",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Valid Claim definition with redacted period after which pending claims cease to count, affecting royalty-bearing scope.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E006"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000079",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Grant clause establishing the exclusive worldwide license; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E007"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000080",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exclusivity period through last-to-expire Valid Claim; cross-reference to Section 4 sublicensing.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C1-E045"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000087",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Cross-reference to Section 14 enforcement; no economics in this passage.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E046"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000089",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Section heading for sublicensing; no terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C1-E047"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000090",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Permits apportionment of sublicensing payments between Combangio and Stanford patents; refers to Section 4.6, Section 8.1 and Appendix A outside this chunk.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E048"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000091",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Required sublicensing negotiation obligation with redacted period; no payment amounts.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E049"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000092",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Lead-in to sublicense requirements; no economics itself.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E050"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000094",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Sublicense requirement prohibiting escrow of royalties; a payment-mechanics condition, no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C1-E051",
+        "C1-E052"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000099",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Surviving sublicensee must pay amounts due including applicable Earned Royalties; rate itself not stated here; references Section 4.4 and 15.3(c).",
+      "term_ids": [
+        "C1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E053"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000100",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Lead-in to mandatory sublicense litigation clauses.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C1-E054",
+        "C1-E055"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000102",
+      "payment_ids": [
+        "C1-PAY003"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Required sublicense clause with redacted payment adjustment and redacted multiple of original sublicense payment upon an unsuccessful patent challenge.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E056"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000103",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "No-recoupment clause for royalties paid; no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E057"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000105",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "No-escrow clause; payment mechanics only.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E058"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000106",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Notice period before sublicensee invalidity action redacted; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E059"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000107",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Reporting obligation for sublicenses and sublicensee royalty reports; redacted timing; no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C1-E060",
+        "C1-E061"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000111",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Operative clause for Stanford share of Nonroyalty Sublicensing Consideration with rate depending on execution timing.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C1-E062"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000112",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "[**]%",
+          "rationale": "Redacted tier 1 percentage of Nonroyalty Sublicensing Consideration.",
+          "term_id": "C1-T001"
+        }
+      ],
+      "rationale": "Tier 1 sublicensing share with redacted percentage and timing.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C1-E063"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000113",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "[**]%",
+          "rationale": "Redacted tier 2 percentage of Nonroyalty Sublicensing Consideration.",
+          "term_id": "C1-T001"
+        }
+      ],
+      "rationale": "Tier 2 sublicensing share with redacted percentage and timing.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C1-E064"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000114",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "[**]%",
+          "rationale": "Redacted tier 3 percentage of Nonroyalty Sublicensing Consideration.",
+          "term_id": "C1-T001"
+        }
+      ],
+      "rationale": "Tier 3 sublicensing share with redacted percentage and timing.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C1-E065",
+        "C1-E066",
+        "C1-E067"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000115",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ADJUSTMENT",
+          "literal": "[**]%",
+          "rationale": "Redacted example percentage of total consideration on which Stanford would share after pro rata reduction.",
+          "term_id": "C1-T001"
+        }
+      ],
+      "rationale": "Pro rata reduction of sublicensing share for bundled third-party/own IP; redacted example percentage; disputes go to arbitration under Section 17.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "CROSS_REFERENCE",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [
+        "C1-E068"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000116",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Section 4.7 defines (in redacted form) when a timing event is completed for purposes of Section 4.6 tiers; the tier trigger cannot be verified.",
+      "term_ids": [
+        "C1-T001"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C1-E069"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000117",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Royalty-free or noncash sublicense permitted if Combangio pays all royalties due on the sublicensee's Net Sales; affects sublicensing consideration and product royalty base.",
+      "term_ids": [
+        "C1-T001",
+        "C1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C1-E070"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000118",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Item (A) of the royalty-free sublicense list begun in P117.",
+      "term_ids": [
+        "C1-T001",
+        "C1-T002"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E071"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000126",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "US Government royalty-free, paid-up right; not a payment to Stanford.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E072"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000129",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestones in Appendix A; no payment stated here; Appendix A content is outside this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E073"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000130",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Annual progress report obligation with redacted details; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C1-E074"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000131",
+      "payment_ids": [
+        "C1-PAY002"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Redacted dollar payment for failure to give clinical trial notice.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E075"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000132",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Section heading for royalties; no terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "C1-E076"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000133",
+      "payment_ids": [
+        "C1-PAY001"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Disclosed $15,000 noncreditable, nonrefundable license issue fee due on signing.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C1-E077"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000135",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Stanford equity Purchase Right in Qualifying Offerings; an equity right, not a royalty or payment to Stanford; flagged in open issues.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E078"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000139",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Adjustment Event definition for the equity Purchase Right; not a royalty adjustment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E079"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000140",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Board of Directors definition; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [
+        "C1-E080"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000141",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Qualifying Offering definition for the equity Purchase Right.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000142",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Lead-in defining Share for the Purchase Right; substantive content in P143-P144.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "UNRELATED_PERCENT"
+      ],
+      "evidence_ids": [
+        "C1-E081"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000143",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "[**]%",
+          "rationale": "Redacted equity purchase share in financing rounds; not a royalty or sublicense rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Redacted percentage of Qualifying Offering Stanford may purchase; equity participation right, not a royalty.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "DEFINITION",
+        "UNRELATED_PERCENT"
+      ],
+      "evidence_ids": [
+        "C1-E083",
+        "C1-E084"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000145",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "[**]%",
+          "rationale": "Redacted equity-sale threshold defining a Threshold Qualifying Offering, not a royalty.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Threshold Qualifying Offering defined by redacted dollar size or redacted percent of equity sold; relates to equity Purchase Right only.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C1-E085"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000148",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Termination Event for the Purchase Right via Rights Agreement; refers to Section 7.3 outside this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C1-E086"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000153",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Purchase Right termination condition with redacted time period; equity mechanics, no royalty.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E50"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000156",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Exclusions from Stanford's equity Purchase Right; not a royalty or cash payment term.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E49"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000166",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Notice Period for equity Purchase Right redacted; non-royalty equity mechanics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E51"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000168",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Notice copy recipient redacted; cross-references Sections 7.2/7.3; no royalty economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "C2-E01"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000169",
+      "payment_ids": [
+        "C2-P01",
+        "C2-P02",
+        "C2-P03"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Introduces annual minimum license maintenance fee schedule.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E02"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000170",
+      "payment_ids": [
+        "C2-P01"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Maintenance fee period (a); years and amount redacted.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E03"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000171",
+      "payment_ids": [
+        "C2-P02"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Maintenance fee period (b); year and amount redacted.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E04"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000172",
+      "payment_ids": [
+        "C2-P03"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Maintenance fee period (c) until first commercial sale; amount redacted.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E05"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000173",
+      "payment_ids": [
+        "C2-P01",
+        "C2-P02",
+        "C2-P03"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Maintenance payments nonrefundable but creditable per Section 7.8.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "C2-E06"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000174",
+      "payment_ids": [
+        "C2-P04",
+        "C2-P05",
+        "C2-P06",
+        "C2-P07"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Introduces one-time milestone payments per first Licensed Product.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E07"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000178",
+      "payment_ids": [
+        "C2-P04"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Milestone (A) fully redacted.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E08"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000179",
+      "payment_ids": [
+        "C2-P05"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Milestone (B) fully redacted.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E09"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000180",
+      "payment_ids": [
+        "C2-P06"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Milestone (C) fully redacted.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E10"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000181",
+      "payment_ids": [
+        "C2-P07"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Net Sales milestone (D) with redacted threshold and payment.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E11",
+        "C2-E12"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000182",
+      "payment_ids": [
+        "C2-P04",
+        "C2-P05",
+        "C2-P06",
+        "C2-P07",
+        "C2-P08"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Milestones payable once; aggregate cap $2,175,000 on Section 7.5 obligations.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C2-E13"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000183",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "(Y%)",
+          "rationale": "Placeholder for the royalty percentage in the tier table; actual values redacted.",
+          "term_id": "C2-T01"
+        }
+      ],
+      "rationale": "Earned Royalty on Net Sales with (Y%) placeholder; rates in table below.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C2-E14"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000185",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "(Y%)",
+          "rationale": "Column header placeholder for tier royalty percentage.",
+          "term_id": "C2-T01"
+        }
+      ],
+      "rationale": "Header of tier table: annual Net Sales band vs royalty percentage.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E15"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000186",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "([**]%)",
+          "rationale": "Redacted tier 1 royalty percentage.",
+          "term_id": "C2-T01"
+        }
+      ],
+      "rationale": "Tier 1 rate and ceiling redacted.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E16"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000187",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "([**]%)",
+          "rationale": "Redacted tier 2 royalty percentage.",
+          "term_id": "C2-T01"
+        }
+      ],
+      "rationale": "Tier 2 rate and band redacted.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E17"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000188",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "([**]%)",
+          "rationale": "Redacted tier 3 royalty percentage.",
+          "term_id": "C2-T01"
+        }
+      ],
+      "rationale": "Tier 3 rate and band redacted.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E18"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000189",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "([**]%)",
+          "rationale": "Redacted tier 4 royalty percentage.",
+          "term_id": "C2-T01"
+        }
+      ],
+      "rationale": "Tier 4 rate and band redacted.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E19"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000190",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "([**]%)",
+          "rationale": "Redacted tier 5 royalty percentage.",
+          "term_id": "C2-T01"
+        }
+      ],
+      "rationale": "Tier 5 rate and band redacted.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E20"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000191",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ROYALTY_RATE",
+          "literal": "([**]%)",
+          "rationale": "Redacted tier 6 royalty percentage.",
+          "term_id": "C2-T01"
+        }
+      ],
+      "rationale": "Tier 6 (top) rate and floor redacted.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E21"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000193",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Confirms tiers apply to portion of Net Sales in each tier (marginal); worked example amount redacted/truncated.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C2-E22",
+        "C2-E23"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000194",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Royalty term duration and country/product scope conditioned on Valid Claims.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C2-E24",
+        "C2-E25"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000195",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Single royalty per unit and exclusions for research, clinical and sample use.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E26"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000196",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ADJUSTMENT",
+          "literal": "[**] percent ([**]%)",
+          "rationale": "Redacted aggregate third-party royalty stacking threshold.",
+          "term_id": "C2-T02"
+        }
+      ],
+      "rationale": "Stacking trigger: aggregate royalty cap percentage redacted; sentence continues in next passage.",
+      "term_ids": [
+        "C2-T02"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E27",
+        "C2-E28",
+        "C2-E29"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000200",
+      "payment_ids": [],
+      "percentage_dispositions": [
+        {
+          "classification": "ADJUSTMENT",
+          "literal": "[**] percent ([**]%)",
+          "rationale": "Redacted aggregate cap on royalties payable to all Royalty Recipients.",
+          "term_id": "C2-T02"
+        },
+        {
+          "classification": "ADJUSTMENT",
+          "literal": "[**]%",
+          "rationale": "Redacted limit on how much Stanford Earned Royalty may be reduced.",
+          "term_id": "C2-T03"
+        }
+      ],
+      "rationale": "Proportional reduction mechanism, aggregate cap and maximum reduction percentage, all redacted.",
+      "term_ids": [
+        "C2-T02",
+        "C2-T03"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "REDACTED",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E30",
+        "C2-E31"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000201",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Patent-challenge royalty adjustments, multipliers redacted, referencing Section 7.6 rates.",
+      "term_ids": [
+        "C2-T04",
+        "C2-T05"
+      ]
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "C2-E32"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000202",
+      "payment_ids": [
+        "C2-P01",
+        "C2-P02",
+        "C2-P03"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Maintenance fee creditable against same-year Earned Royalties.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "CROSS_REFERENCE",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [
+        "C2-E33"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000204",
+      "payment_ids": [
+        "C2-P01"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Creditability example (A) mostly redacted; cannot verify mechanics.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "CROSS_REFERENCE",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [
+        "C2-E69"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000205",
+      "payment_ids": [
+        "C2-P01"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Creditability example (B) mostly redacted; cannot verify mechanics.",
+      "term_ids": [
+        "C2-T01"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM"
+      ],
+      "evidence_ids": [
+        "C2-E34"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000206",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Post-termination royalty on inventory made or imported pre-termination; rate not stated here.",
+      "term_ids": [
+        "C2-T06"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E52"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000207",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Payment mechanics: no escrow; no rate content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E35"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000208",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Currency conversion mechanics via WSJ rate; no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E36"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000209",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Combangio bears non-U.S. taxes on royalty payments and cannot deduct them; relevant to net economics but no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E37"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000210",
+      "payment_ids": [
+        "C2-P09"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Late-payment interest: Prime plus redacted margin; interest is not a royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E62"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000211",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Section heading for reports, payments and accounting.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND",
+        "REDACTED",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E38",
+        "C2-E39"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000215",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Reporting cadence (annual to quarterly above redacted royalty threshold) and references to Sections 7.6/4.6 and Nonroyalty Sublicensing Consideration; no rate stated here.",
+      "term_ids": [
+        "C2-T01",
+        "C2-T08"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E53"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000216",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "No refund of royalties after a successful challenge; condition, not a rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E54"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000217",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Termination report timing redacted; royalties continue until inventory sold.",
+      "term_ids": [
+        "C2-T06"
+      ]
+    },
+    {
+      "categories": [
+        "BACKGROUND",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E61"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000218",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Record retention period redacted; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "UNRELATED_PERCENT",
+        "REDACTED",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E40"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000220",
+      "payment_ids": [
+        "C2-P12"
+      ],
+      "percentage_dispositions": [
+        {
+          "classification": "UNRELATED",
+          "literal": "[**]%",
+          "rationale": "Audit underreporting tolerance triggering cost shifting; not a royalty rate.",
+          "term_id": null
+        }
+      ],
+      "rationale": "Audit cost-shifting trigger at redacted underreporting percentage; audit tolerance, not royalty.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E41"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000221",
+      "payment_ids": [
+        "C2-P13"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Self-audit obligation at Combangio's cost above redacted sales threshold.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E42"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000244",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Insurance coverage limits (redacted dollar amounts); not payments to Stanford.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E63"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000246",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Export-control definitions of licensed commodities and technical data; unrelated to royalties.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E55"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000257",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Patent prosecution responsibility; redacted notice period; no royalty economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "OTHER_PAYMENT"
+      ],
+      "evidence_ids": [
+        "C2-E56"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000258",
+      "payment_ids": [
+        "C2-P11"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Reimbursement of Stanford's costs; continues into next passage with Appendix C reference.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E64"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000262",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Prosecution mechanics referencing Section 14.1(A) and Appendix C; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E57"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000263",
+      "payment_ids": [
+        "C2-P10",
+        "C2-P11"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Patent cost reimbursement obligation with redacted payment period.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "REDACTED"
+      ],
+      "evidence_ids": [
+        "C2-E43"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000264",
+      "payment_ids": [
+        "C2-P10"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Pre-Effective Date patenting expense reimbursement; amount redacted.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E65"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000266",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Infringement procedure rights; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E58"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000267",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Combangio bears litigation costs for its suits; cost allocation, not royalty rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E66"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000280",
+      "payment_ids": [
+        "C2-P14"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Stanford suit: Stanford bears costs and retains recovery; redacted notice periods.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E45"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000285",
+      "payment_ids": [
+        "C2-P14"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Litigation recovery for past sales treated as Net Sales; Earned Royalties at Section 7.6 rates.",
+      "term_ids": [
+        "C2-T07"
+      ]
+    },
+    {
+      "categories": [
+        "ROYALTY_TERM",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C2-E46"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000286",
+      "payment_ids": [
+        "C2-P14"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Recovery for future sales treated as sublicense payment shared per Article 4 (outside this chunk).",
+      "term_ids": [
+        "C2-T08"
+      ]
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E48"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000288",
+      "payment_ids": [
+        "C2-P14"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Stanford keeps excess recovery in Stanford-initiated suits.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E67"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000291",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "No implied obligation to sue; non-economic.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E60"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000296",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Termination trigger for delinquent report or payment; no rate.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E59"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000298",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Termination trigger referencing Appendix A milestones (outside this chunk).",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C2-E68"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000301",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "60-day cure period for Section 15.2 termination; no payment terms.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "CROSS_REFERENCE",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [
+        "C3-E04",
+        "C3-E05"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000305",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Termination cure-period tolling for good-faith payment disputes; mentions Nonroyalty Sublicensing Consideration but states no rate; post-determination cure period is redacted; cross-refers to Article 17.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C3-E06"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000307",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival clause preserving accrued payment obligations; generic and sets no rate or amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C3-E15"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000309",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Survival of articles and of compliant Sublicenses; no economic rate stated here.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "OTHER_PAYMENT",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [
+        "C3-E01",
+        "C3-E02"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000311",
+      "payment_ids": [
+        "C3-PAY01"
+      ],
+      "percentage_dispositions": [],
+      "rationale": "Fixed $100,000 Change of Control/Assignment Fee; not a royalty rate; cross-refers to Section 16.2.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000313",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Assignment notice period is redacted ([**]); procedural, not economic.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C3-E16"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000316",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Release of liability upon permitted assignment; no payment terms. Internal reference to Section 15.3(C) looks inconsistent with 16.2 and is flagged.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000321",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Non-assignability clause referencing Sections 16.2 and 16.4; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C3-E14"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000323",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Arbitration of payment disputes with cure tolling under Section 15.2; no rates.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000324",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Arbitrator selection period redacted; procedural only.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000334",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted notice contact detail; not economic.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000336",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted accounting/invoice email contact; not economic.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000341",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted technical contact email; not economic.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000344",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted copy-to contact; not economic.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000350",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted Stanford notice contact; not economic.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000362",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted progress-report contact; not economic.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "CROSS_REFERENCE"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000363",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Notice-copy requirement for Sections 7.2/7.3 (Stanford Purchase Rights) with redacted recipient; the underlying purchase-right economics are outside this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000370",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Confidentiality clause (continuation) referencing Article 3; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000405",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Appendix A heading (Milestones); no terms itself.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [
+        "C3-E07"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000407",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone requiring a redacted amount of operating capital by a redacted date; a diligence obligation, not a payment to Stanford; amount and date redacted.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000408",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone (management team listing) with redacted date; non-monetary.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000409",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone 4 fully redacted; content and any economic consequence unknown.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000410",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone 5 fully redacted; content unknown.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000411",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone 6 fully redacted; content unknown.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000412",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone 7 fully redacted; content unknown.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000413",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone 8 fully redacted; content unknown.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000414",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone 9 fully redacted; content unknown.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "UNCERTAIN"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000415",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone 10 fully redacted; content unknown.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C3-E08"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000416",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Diligence milestone due-date extension for delays; redacted delay causes; no payment amount.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000418",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines BLA for diligence milestones; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000419",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines FDA; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000420",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines IND; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000421",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines NDA; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000425",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Phase I Clinical Study (milestone terminology); no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000426",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Phase II Clinical Study; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "DEFINITION"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000427",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Defines Phase III Clinical Study; no economics.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000431",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Appendix B heading (Sample Reporting Form); no form content captured in this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000435",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Appendix C heading (Client and Billing Agreement); no substantive content captured in this chunk.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C3-E09",
+        "C3-E20"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000448",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Amendment No. 1 background: removal of patent rights from the Licensed Patents list; docket numbers redacted; no economic change stated.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "CROSS_REFERENCE",
+        "BACKGROUND"
+      ],
+      "evidence_ids": [
+        "C3-E11"
+      ],
+      "passage_id": "DOC-584674b55488131646:P000450",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Amendment replaces the Licensed Patents table in Paragraph 2.8; scope change only, no stated rate change.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000453",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted Licensed Patents table row; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000454",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted Licensed Patents table row; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000455",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted Licensed Patents table row; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000456",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted Licensed Patents table row; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000457",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted Licensed Patents table row; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000458",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted Licensed Patents table row; no economic content.",
+      "term_ids": []
+    },
+    {
+      "categories": [
+        "REDACTED"
+      ],
+      "evidence_ids": [],
+      "passage_id": "DOC-584674b55488131646:P000459",
+      "payment_ids": [],
+      "percentage_dispositions": [],
+      "rationale": "Redacted Licensed Patents table row; no economic content.",
+      "term_ids": []
+    }
+  ],
+  "document_id": "DOC-584674b55488131646",
+  "evidence": [
+    {
+      "evidence_id": "C1-E001",
+      "passage_id": "DOC-584674b55488131646:P000006",
+      "quote": "EXCLUSIVE LICENSE AGREEMENT",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E002",
+      "passage_id": "DOC-584674b55488131646:P000007",
+      "quote": "THE BOARD OF TRUSTEES OF THE LELAND STANFORD JUNIOR UNIVERSITY",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E003",
+      "passage_id": "DOC-584674b55488131646:P000007",
+      "quote": "Combangio, Inc., a corporation",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E004",
+      "passage_id": "DOC-584674b55488131646:P000007",
+      "quote": "is effective on the 11th day of October, 2019",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E005",
+      "passage_id": "DOC-584674b55488131646:P000015",
+      "quote": "Combangio is a biotechnology company with a program in regenerative therapy",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E006",
+      "passage_id": "DOC-584674b55488131646:P000079",
+      "quote": "Stanford grants Combangio an Exclusive license under the Licensed Patents in the Licensed Field of Use",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "C1-E007",
+      "passage_id": "DOC-584674b55488131646:P000080",
+      "quote": "beginning on the Effective Date and continuing until the last to expire of a Valid Claim in the Licensed Patents",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E008",
+      "passage_id": "DOC-584674b55488131646:P000051",
+      "quote": "means worldwide.",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E009",
+      "passage_id": "DOC-584674b55488131646:P000027",
+      "quote": "Stanford will not grant further licenses under the Licensed Patents in the Licensed Field of Use in the Licensed Territory",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E010",
+      "passage_id": "DOC-584674b55488131646:P000002",
+      "quote": "Exhibit 10.18",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E011",
+      "passage_id": "DOC-584674b55488131646:P000009",
+      "quote": "invented in the laboratory of [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E012",
+      "passage_id": "DOC-584674b55488131646:P000009",
+      "quote": "Methods to promote eye wound healing",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E013",
+      "passage_id": "DOC-584674b55488131646:P000018",
+      "quote": "at least fifty percent (50%) of the equity securities or other ownership interests",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E014",
+      "passage_id": "DOC-584674b55488131646:P000019",
+      "quote": "as applied only to the entirety of that part of Combangio",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E015",
+      "passage_id": "DOC-584674b55488131646:P000024",
+      "quote": "representing more than 50% of either the aggregate ordinary voting power",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E016",
+      "passage_id": "DOC-584674b55488131646:P000026",
+      "quote": "will use the level of effort that would be undertaken by a similarly situated company in the same industry",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E017",
+      "passage_id": "DOC-584674b55488131646:P000028",
+      "quote": "means the total number of shares of Combangio",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E018",
+      "passage_id": "DOC-584674b55488131646:P000032",
+      "quote": "the VA, Stanford, Stanford Health Care and Lucile Packard Children",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E019",
+      "passage_id": "DOC-584674b55488131646:P000033",
+      "quote": "means all fields.",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E020",
+      "passage_id": "DOC-584674b55488131646:P000034",
+      "quote": "means Stanford, UIC and the VA patent applications as listed below:",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E021",
+      "passage_id": "DOC-584674b55488131646:P000039",
+      "quote": "[**] | [**] | [**] | [**] | [**] | [**] | [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E022",
+      "passage_id": "DOC-584674b55488131646:P000040",
+      "quote": "[**] | [**] | [**] | [**] | [**] | [**] | [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E023",
+      "passage_id": "DOC-584674b55488131646:P000041",
+      "quote": "[**] | [**] | [**] | [**] | [**] | [**] | [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E024",
+      "passage_id": "DOC-584674b55488131646:P000042",
+      "quote": "[**] | [**] | [**] | [**] | [**] | [**] | [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E025",
+      "passage_id": "DOC-584674b55488131646:P000043",
+      "quote": "[**] | [**] | [**] | [**] | [**] | [**] | [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E026",
+      "passage_id": "DOC-584674b55488131646:P000044",
+      "quote": "[**] | [**] | [**] | [**] | [**] | [**] | [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E027",
+      "passage_id": "DOC-584674b55488131646:P000045",
+      "quote": "[**] | [**] | [**] | [**] | [**] | [**] | [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E028",
+      "passage_id": "DOC-584674b55488131646:P000046",
+      "quote": "[**] | [**] | [**] | [**] | [**] | [**] | [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E029",
+      "passage_id": "DOC-584674b55488131646:P000047",
+      "quote": "[**] | [**] | [**] | [**] | [**] | [**] | [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E030",
+      "passage_id": "DOC-584674b55488131646:P000050",
+      "quote": "infringes, induces infringement, or contributes to infringement of a Valid Claim of a Licensed Patent",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E031",
+      "passage_id": "DOC-584674b55488131646:P000052",
+      "quote": "means all gross revenue received by Combangio, its Affiliates or any tier of its Sublicensees, from the sale, or other commercial transfer or disposition of Licensed Products to a third party customer",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "C1-E032",
+      "passage_id": "DOC-584674b55488131646:P000058",
+      "quote": "sold in combination with another product, component or service for which no royalty would be due hereunder if",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E033",
+      "passage_id": "DOC-584674b55488131646:P000062",
+      "quote": "by the fraction (A-B)/A",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E034",
+      "passage_id": "DOC-584674b55488131646:P000062",
+      "quote": "In no event will the applicable royalty rate be reduced by more than [**] percent ([**]%)",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E035",
+      "passage_id": "DOC-584674b55488131646:P000062",
+      "quote": "Net Sales shall not include sales by Combangio to its Affiliates or Sublicensees",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "C1-E036",
+      "passage_id": "DOC-584674b55488131646:P000063",
+      "quote": "any consideration received by Combangio from any tier of its Sublicensees hereunder but excluding any consideration for",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "C1-E037",
+      "passage_id": "DOC-584674b55488131646:P000064",
+      "quote": "royalties on product sales by any tier of its Sublicensees will be treated as if Combangio made the sale of such product",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E038",
+      "passage_id": "DOC-584674b55488131646:P000066",
+      "quote": "research and development expenses calculated on a fully burdened basis",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E039",
+      "passage_id": "DOC-584674b55488131646:P000069",
+      "quote": "provided that Stanford has received the Change of Control Fee as defined under Section 16 of the agreement",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E040",
+      "passage_id": "DOC-584674b55488131646:P000070",
+      "quote": "means preparing, filing, and prosecuting broad and extensive patent claims",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E041",
+      "passage_id": "DOC-584674b55488131646:P000071",
+      "quote": "means any agreement between Combangio and a third party that contains a grant to Stanford",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E042",
+      "passage_id": "DOC-584674b55488131646:P000075",
+      "quote": "an agreement to make, have made, use or sell Licensed Products on behalf of Combangio is not considered a Sublicense",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E043",
+      "passage_id": "DOC-584674b55488131646:P000076",
+      "quote": "means a non-Affiliate third party to whom Combangio or any tier of its Sublicensees has granted a Sublicense",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E044",
+      "passage_id": "DOC-584674b55488131646:P000077",
+      "quote": "if the claim of a pending application has not issued within [**] after the priority date of such application",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E045",
+      "passage_id": "DOC-584674b55488131646:P000087",
+      "quote": "except as described in Section 14",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E046",
+      "passage_id": "DOC-584674b55488131646:P000089",
+      "quote": "SUBLICENSING",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E047",
+      "passage_id": "DOC-584674b55488131646:P000090",
+      "quote": "Combangio may apportion without discrimination between Combangio patents and Stanford patents a commercially reasonable percentage of sublicensing payments made to Stanford pursuant to Section 4.6",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E048",
+      "passage_id": "DOC-584674b55488131646:P000091",
+      "quote": "use Commercially Reasonable Efforts to negotiate in good faith a Sublicense within [**] with any such company",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E049",
+      "passage_id": "DOC-584674b55488131646:P000092",
+      "quote": "Sublicense Requirements. Any Sublicense:",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E050",
+      "passage_id": "DOC-584674b55488131646:P000094",
+      "quote": "will prohibit Sublicensee from paying royalties to an escrow or other similar account",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E051",
+      "passage_id": "DOC-584674b55488131646:P000099",
+      "quote": "require that Sublicensee pay the amounts that would be due under this Agreement for the Sublicensee",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E052",
+      "passage_id": "DOC-584674b55488131646:P000099",
+      "quote": "including applicable Earned Royalties, to Stanford or its designee",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E053",
+      "passage_id": "DOC-584674b55488131646:P000100",
+      "quote": "Any Sublicense must include the following clauses:",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E054",
+      "passage_id": "DOC-584674b55488131646:P000102",
+      "quote": "Sublicensee will [**] the payment paid to Combangio during the pendency of such action",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E055",
+      "passage_id": "DOC-584674b55488131646:P000102",
+      "quote": "Sublicensee will pay [**] times the payment paid under the original Sublicense",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E056",
+      "passage_id": "DOC-584674b55488131646:P000103",
+      "quote": "Sublicensee will have no right to recoup any royalties paid before or during the period challenge",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E057",
+      "passage_id": "DOC-584674b55488131646:P000105",
+      "quote": "Sublicensee shall not pay royalties into any escrow or other similar account",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E058",
+      "passage_id": "DOC-584674b55488131646:P000106",
+      "quote": "Sublicensee will provide written notice to Stanford at least [**] prior to bringing an action seeking to invalidate a Licensed Patent",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E059",
+      "passage_id": "DOC-584674b55488131646:P000107",
+      "quote": "Combangio will submit to Stanford copies of each Sublicense within [**] of signing",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E060",
+      "passage_id": "DOC-584674b55488131646:P000111",
+      "quote": "Combangio will pay to Stanford a portion of all Nonroyalty Sublicensing Consideration for the Sublicense of Licensed Patents",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "C1-E061",
+      "passage_id": "DOC-584674b55488131646:P000111",
+      "quote": "at a rate determined based on the timing of execution of the sublicense agreement",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "C1-E062",
+      "passage_id": "DOC-584674b55488131646:P000112",
+      "quote": "Sublicense executed prior to [**]% of Nonroyalty Sublicensing Consideration;",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E063",
+      "passage_id": "DOC-584674b55488131646:P000113",
+      "quote": "Sublicense executed after [**]% of Nonroyalty Sublicensing Consideration; and",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E064",
+      "passage_id": "DOC-584674b55488131646:P000114",
+      "quote": "Sublicense executed after [**]% of Nonroyalty Sublicensing Consideration.",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E065",
+      "passage_id": "DOC-584674b55488131646:P000115",
+      "quote": "A pro rata reduction of the percentage of Nonroyalty Sublicensing Consideration will be payable to Stanford under this Agreement",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E066",
+      "passage_id": "DOC-584674b55488131646:P000115",
+      "quote": "the Nonroyalty Sublicensing Consideration upon which Stanford would receive a sublicense fee would be [**]% of the total Nonroyalty Sublicensing Consideration",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E067",
+      "passage_id": "DOC-584674b55488131646:P000115",
+      "quote": "Such intellectual property must have Valid Claims that read on the Licensed Product",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E068",
+      "passage_id": "DOC-584674b55488131646:P000116",
+      "quote": "a [**] shall be deemed to be completed on the date that the [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E069",
+      "passage_id": "DOC-584674b55488131646:P000117",
+      "quote": "If Combangio pays all royalties due Stanford from a Sublicensee",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E070",
+      "passage_id": "DOC-584674b55488131646:P000118",
+      "quote": "Sublicense or",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E071",
+      "passage_id": "DOC-584674b55488131646:P000126",
+      "quote": "royalty-free, paid-up right to practice or have practiced the Licensed Patent throughout the world",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "C1-E072",
+      "passage_id": "DOC-584674b55488131646:P000129",
+      "quote": "Combangio will use Commercially Reasonable Efforts to pursue the milestones shown in Appendix A",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E073",
+      "passage_id": "DOC-584674b55488131646:P000130",
+      "quote": "By [**] of each year and during the term of the Agreement",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E074",
+      "passage_id": "DOC-584674b55488131646:P000131",
+      "quote": "it will pay $[**] to Stanford within [**] of being invoiced",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E075",
+      "passage_id": "DOC-584674b55488131646:P000132",
+      "quote": "ROYALTIES",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E076",
+      "passage_id": "DOC-584674b55488131646:P000133",
+      "quote": "noncreditable, nonrefundable license issue fee of $15,000 upon signing this Agreement",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C1-E077",
+      "passage_id": "DOC-584674b55488131646:P000135",
+      "quote": "to purchase for cash up to its Share of the securities issued in any Qualifying Offering",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "C1-E078",
+      "passage_id": "DOC-584674b55488131646:P000139",
+      "quote": "means the final closing of the first Threshold Qualifying Offering occurring after the date of this Agreement",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E079",
+      "passage_id": "DOC-584674b55488131646:P000140",
+      "quote": "if Combangio is organized as a corporation, its board of directors",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E080",
+      "passage_id": "DOC-584674b55488131646:P000141",
+      "quote": "means a private offering of Combangio",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E081",
+      "passage_id": "DOC-584674b55488131646:P000143",
+      "quote": "[**]% with respect to any Qualifying Offering having a closing on or before the date of an Adjustment Event",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E082",
+      "passage_id": "DOC-584674b55488131646:P000144",
+      "quote": "the percentage necessary for Stanford to maintain its pro rata ownership interest in Combangio on a Fully-Diluted Basis",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C1-E083",
+      "passage_id": "DOC-584674b55488131646:P000145",
+      "quote": "is at least $[**] in size",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E084",
+      "passage_id": "DOC-584674b55488131646:P000145",
+      "quote": "at least [**]% of the equity securities outstanding after such round on a Fully-Diluted Basis",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C1-E085",
+      "passage_id": "DOC-584674b55488131646:P000148",
+      "quote": "of an investor rights agreement or similar agreement",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C1-E086",
+      "passage_id": "DOC-584674b55488131646:P000153",
+      "quote": "which has its final closing within [**] of the date such notice is received by Stanford",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E01",
+      "passage_id": "DOC-584674b55488131646:P000169",
+      "quote": "Combangio will pay Stanford annual minimum license maintenance fees as follows",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E02",
+      "passage_id": "DOC-584674b55488131646:P000170",
+      "quote": "[**] through [**] anniversary of Effective Date - $[**] per year;",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E03",
+      "passage_id": "DOC-584674b55488131646:P000171",
+      "quote": "[**] Anniversary of Effective Date - $[**] per year; and",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E04",
+      "passage_id": "DOC-584674b55488131646:P000172",
+      "quote": "[**] anniversary of the Effective Date and thereafter until Combangio makes its first commercial sale —$[**] per year.",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E05",
+      "passage_id": "DOC-584674b55488131646:P000173",
+      "quote": "Yearly maintenance payments are nonrefundable but they are creditable each year as described in Section 7.8.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E06",
+      "passage_id": "DOC-584674b55488131646:P000174",
+      "quote": "Combangio will pay Stanford the following one-time milestone payments with respect to the first Licensed Product to achieve each such milestone.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E07",
+      "passage_id": "DOC-584674b55488131646:P000178",
+      "quote": "(A) | [**];",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E08",
+      "passage_id": "DOC-584674b55488131646:P000179",
+      "quote": "(B) | [**];",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E09",
+      "passage_id": "DOC-584674b55488131646:P000180",
+      "quote": "(C) | [**]; and",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E10",
+      "passage_id": "DOC-584674b55488131646:P000181",
+      "quote": "Upon first achieving cumulative Net Sales of $[**] in a calendar year: $[**].",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "C2-E11",
+      "passage_id": "DOC-584674b55488131646:P000182",
+      "quote": "each of the foregoing milestone payments shall be payable only once, irrespective of the number of Licensed Products Combangio may ultimately develop",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E12",
+      "passage_id": "DOC-584674b55488131646:P000182",
+      "quote": "Combangio’s total obligation to Stanford under this Section 7.5 shall in no event exceed two million one hundred and seventy-five thousand Dollars ($2,175,000)",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "C2-E13",
+      "passage_id": "DOC-584674b55488131646:P000183",
+      "quote": "Combangio will pay Stanford earned royalties (Y%) on Net Sales as follows",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "C2-E14",
+      "passage_id": "DOC-584674b55488131646:P000185",
+      "quote": "Amount of Annual Net Sales | Royalty Percentage (Y%) of Net Sales",
+      "role": "BASE"
+    },
+    {
+      "evidence_id": "C2-E15",
+      "passage_id": "DOC-584674b55488131646:P000186",
+      "quote": "< $USD [**] | [**] percent ([**]%)",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E16",
+      "passage_id": "DOC-584674b55488131646:P000187",
+      "quote": "> $USD [**] < $USD [**] | [**] percent ([**]%)",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E17",
+      "passage_id": "DOC-584674b55488131646:P000188",
+      "quote": "> $USD [**] < $USD [**] | [**] percent ([**]%)",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E18",
+      "passage_id": "DOC-584674b55488131646:P000189",
+      "quote": "$USD [**] < $USD [**] | [**] percent ([**]%)",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E19",
+      "passage_id": "DOC-584674b55488131646:P000190",
+      "quote": "$USD [**] < $USD [**] | [**] percent ([**]%)",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E20",
+      "passage_id": "DOC-584674b55488131646:P000191",
+      "quote": "$USD [**] | [**] percent ([**]%)",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E21",
+      "passage_id": "DOC-584674b55488131646:P000193",
+      "quote": "Earned Royalties will be paid on a tiered structure based on the portion of Net Sales of Licensed Products in each such tier",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E22",
+      "passage_id": "DOC-584674b55488131646:P000194",
+      "quote": "Earned Royalties will be payable on a country-by-country basis and Licensed Product-by-Licensed Product basis on Net Sales of Licensed Products in each such country",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E23",
+      "passage_id": "DOC-584674b55488131646:P000194",
+      "quote": "no Earned Royalty will be payable with respect to the sale of such Licensed Product in such country",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E24",
+      "passage_id": "DOC-584674b55488131646:P000195",
+      "quote": "In no event shall more than one Earned Royalty be due hereunder with respect to any Licensed Product unit",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E25",
+      "passage_id": "DOC-584674b55488131646:P000195",
+      "quote": "nor shall an Earned Royalty be payable hereunder with respect to sales of Licensed Product for use in research and/or development, in clinical trials or as samples",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E26",
+      "passage_id": "DOC-584674b55488131646:P000196",
+      "quote": "exceed [**] percent ([**]%) of Net Sales in aggregate",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "C2-E27",
+      "passage_id": "DOC-584674b55488131646:P000200",
+      "quote": "shall be reduced on a proportional basis according to each Royalty Recipient’s share of the total percentage royalty payable on such Net Sales of such Licensed Product",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E28",
+      "passage_id": "DOC-584674b55488131646:P000200",
+      "quote": "so that the aggregate royalties payable to all Royalty Recipients does not exceed [**] percent ([**]%) of Net Sales of such Licensed Product",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E29",
+      "passage_id": "DOC-584674b55488131646:P000200",
+      "quote": "But in no event shall the applicable Stanford Earned Royalty above be reduced by more than [**]%.",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E30",
+      "passage_id": "DOC-584674b55488131646:P000201",
+      "quote": "Combangio will pay Earned Royalties to Stanford at [**] the rates specified under Section 7.6 during the pendency of such action",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E31",
+      "passage_id": "DOC-584674b55488131646:P000201",
+      "quote": "Combangio will [**] the rates specified under Section 7.6",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E32",
+      "passage_id": "DOC-584674b55488131646:P000202",
+      "quote": "The license maintenance fee for a year may be offset against Earned Royalty payments due on Net Sales occurring in that year.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E33",
+      "passage_id": "DOC-584674b55488131646:P000204",
+      "quote": "if Combangio pays Stanford a $[**] maintenance payment for year Y",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E34",
+      "passage_id": "DOC-584674b55488131646:P000206",
+      "quote": "Combangio will pay Stanford an Earned Royalty for its exercise of rights based on the Net Sales of those Licensed Products quantities",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "C2-E35",
+      "passage_id": "DOC-584674b55488131646:P000208",
+      "quote": "Combangio will calculate the Earned Royalty on sales in currencies other than U.S. Dollars using the appropriate foreign exchange rate",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E36",
+      "passage_id": "DOC-584674b55488131646:P000209",
+      "quote": "Combangio will pay all non-U.S. taxes related to Earned Royalty payments",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E37",
+      "passage_id": "DOC-584674b55488131646:P000210",
+      "quote": "Any payments not made when due will bear interest at the lower of (a) the Prime Rate published in the Wall Street Journal plus [**] or (b) the maximum rate permitted by law.",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E38",
+      "passage_id": "DOC-584674b55488131646:P000215",
+      "quote": "changes to a per-quarter basis when annual Earned Royalty payments to Stanford exceed $[**]",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "C2-E39",
+      "passage_id": "DOC-584674b55488131646:P000215",
+      "quote": "first receipt of any Nonroyalty Sublicensing Consideration by Combangio",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E40",
+      "passage_id": "DOC-584674b55488131646:P000220",
+      "quote": "if the audit reveals an underreporting of earned royalties due Stanford of [**]% or more for the period being audited, Combangio will pay the audit costs",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "C2-E41",
+      "passage_id": "DOC-584674b55488131646:P000221",
+      "quote": "Combangio will conduct an independent audit of sales and royalties at least every [**] if annual sales of Licensed Product are over $[**]",
+      "role": "THRESHOLD"
+    },
+    {
+      "evidence_id": "C2-E42",
+      "passage_id": "DOC-584674b55488131646:P000244",
+      "quote": "The insurance will provide minimum limits of liability of $[**] per occurrence",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E43",
+      "passage_id": "DOC-584674b55488131646:P000264",
+      "quote": "$[**] to offset Licensed Patent’s patenting expenses",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E44",
+      "passage_id": "DOC-584674b55488131646:P000265",
+      "quote": "for all Licensed Patent’s patenting expenses",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E45",
+      "passage_id": "DOC-584674b55488131646:P000285",
+      "quote": "any payment for past sales will be deemed Net Sales, and Combangio will pay Stanford Earned Royalties at the rates specified in Section 7.6",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "C2-E46",
+      "passage_id": "DOC-584674b55488131646:P000286",
+      "quote": "any payment for future sales will be deemed a payment under a Sublicense, and Earned Royalties will be shared as specified in Article 4",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "C2-E47",
+      "passage_id": "DOC-584674b55488131646:P000281",
+      "quote": "any recovery in excess of litigation costs will be shared between Combangio and Stanford as follows",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E48",
+      "passage_id": "DOC-584674b55488131646:P000288",
+      "quote": "any recovery in excess of litigation costs will belong to Stanford",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "C2-E49",
+      "passage_id": "DOC-584674b55488131646:P000166",
+      "quote": "Stanford may elect to exercise its Purchase Right, in whole or in part, by notice given to Combangio within [**] after receipt",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E50",
+      "passage_id": "DOC-584674b55488131646:P000156",
+      "quote": "The Purchase Right shall not apply to the issuance of securities",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "C2-E51",
+      "passage_id": "DOC-584674b55488131646:P000168",
+      "quote": "any notice given under this Agreement that refers or relates to any of Section 7.2 above or this Section 7.3 shall be copied concurrently to [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E52",
+      "passage_id": "DOC-584674b55488131646:P000207",
+      "quote": "Combangio shall not pay royalties into any escrow or other similar account.",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E53",
+      "passage_id": "DOC-584674b55488131646:P000216",
+      "quote": "Combangio will have no right to recoup any royalties paid before or during the period challenge",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E54",
+      "passage_id": "DOC-584674b55488131646:P000217",
+      "quote": "Combangio will continue to submit earned royalty payments and reports to Stanford after the license terminates",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E55",
+      "passage_id": "DOC-584674b55488131646:P000257",
+      "quote": "Stanford may, upon [**], terminate this Section 14.1 (A)",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E56",
+      "passage_id": "DOC-584674b55488131646:P000258",
+      "quote": "Combangio will reimburse Stanford for Stanford’s reasonable costs",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E57",
+      "passage_id": "DOC-584674b55488131646:P000263",
+      "quote": "Within [**] after receiving a statement from Stanford, Combangio will reimburse Stanford",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E58",
+      "passage_id": "DOC-584674b55488131646:P000267",
+      "quote": "Combangio will bear the entire cost of the litigation",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E59",
+      "passage_id": "DOC-584674b55488131646:P000298",
+      "quote": "misses a milestone described in Appendix A",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E60",
+      "passage_id": "DOC-584674b55488131646:P000296",
+      "quote": "is delinquent on any report or payment",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E61",
+      "passage_id": "DOC-584674b55488131646:P000218",
+      "quote": "Combangio will maintain records showing manufacture, importation, sale, and use of a Licensed Product for [**] from the date of sale",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C2-E62",
+      "passage_id": "DOC-584674b55488131646:P000211",
+      "quote": "ROYALTY REPORTS, PAYMENTS, AND ACCOUNTING",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E63",
+      "passage_id": "DOC-584674b55488131646:P000246",
+      "quote": "means any article, material or supply but does not include information",
+      "role": "DEFINITION"
+    },
+    {
+      "evidence_id": "C2-E64",
+      "passage_id": "DOC-584674b55488131646:P000262",
+      "quote": "If Stanford has terminated Section 14.1(A)",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E65",
+      "passage_id": "DOC-584674b55488131646:P000266",
+      "quote": "Combangio may have the right to institute a suit against or defend any declaratory judgment action",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "C2-E66",
+      "passage_id": "DOC-584674b55488131646:P000280",
+      "quote": "Stanford will bear the entire cost of the litigation and will retain the entire amount of any recovery or settlement",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "C2-E67",
+      "passage_id": "DOC-584674b55488131646:P000291",
+      "quote": "neither party has any obligation to bring or prosecute actions or suits against any third party for patent infringement",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C2-E68",
+      "passage_id": "DOC-584674b55488131646:P000301",
+      "quote": "Termination under this Section 15.2 will take effect 60 days after written notice by Stanford",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C2-E69",
+      "passage_id": "DOC-584674b55488131646:P000205",
+      "quote": "if Combangio pays Stanford a $[**] maintenance payment for year Y",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C3-E01",
+      "passage_id": "DOC-584674b55488131646:P000311",
+      "quote": "Combangio will pay Stanford a $100,000 (“Change of Control/Assignment Fee”) per Section 16.2",
+      "role": "RATE"
+    },
+    {
+      "evidence_id": "C3-E02",
+      "passage_id": "DOC-584674b55488131646:P000311",
+      "quote": "If there is a Change of Control or if this Agreement is assigned to a third party that was not an Affiliate prior to the Change of Control",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C3-E03",
+      "passage_id": "DOC-584674b55488131646:P000315",
+      "quote": "Stanford must have received the full Change of Control/Assignment Fee (except in the case of an assignment to an Affiliate).",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C3-E04",
+      "passage_id": "DOC-584674b55488131646:P000305",
+      "quote": "within [**] after such determination",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C3-E05",
+      "passage_id": "DOC-584674b55488131646:P000305",
+      "quote": "the amount of Nonroyalty Sublicensing Consideration to pay in a particular case",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C3-E06",
+      "passage_id": "DOC-584674b55488131646:P000307",
+      "quote": "Combangio’s obligation to make all payments, accrued or accruable, including but not limited to fees, royalties and patent costs;",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C3-E07",
+      "passage_id": "DOC-584674b55488131646:P000407",
+      "quote": "$[**] of available non-contingent, operating capital",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C3-E08",
+      "passage_id": "DOC-584674b55488131646:P000416",
+      "quote": "so long as Licensee, its Affiliate or its Sublicensee is diligently pursuing such Diligence Milestone",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C3-E09",
+      "passage_id": "DOC-584674b55488131646:P000448",
+      "quote": "Stanford Docket [**]",
+      "role": "REDACTION"
+    },
+    {
+      "evidence_id": "C3-E10",
+      "passage_id": "DOC-584674b55488131646:P000465",
+      "quote": "all other terms of the Original Agreement remain in full force and effect",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C3-E11",
+      "passage_id": "DOC-584674b55488131646:P000450",
+      "quote": "The table of Licensed Patents in Paragraph 2.8 of the Original Agreement is hereby deleted in its entirety and replaced with the following",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C3-E12",
+      "passage_id": "DOC-584674b55488131646:P000390",
+      "quote": "Oct 11, 2019",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C3-E13",
+      "passage_id": "DOC-584674b55488131646:P000446",
+      "quote": "Effective the 14th day of February, 2020",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C3-E14",
+      "passage_id": "DOC-584674b55488131646:P000323",
+      "quote": "the cure period under Section 15.2 will be tolled until the amount due has been finally determined in such an arbitration",
+      "role": "CONDITION"
+    },
+    {
+      "evidence_id": "C3-E15",
+      "passage_id": "DOC-584674b55488131646:P000309",
+      "quote": "any Sublicenses granted by Combangio or its Sublicensees hereunder",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "C3-E16",
+      "passage_id": "DOC-584674b55488131646:P000316",
+      "quote": "Combangio will be released of liability under this Agreement",
+      "role": "RIGHT"
+    },
+    {
+      "evidence_id": "C3-E17",
+      "passage_id": "DOC-584674b55488131646:P000392",
+      "quote": "COMBANGIO, INC.",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C3-E18",
+      "passage_id": "DOC-584674b55488131646:P000381",
+      "quote": "THE BOARD OF TRUSTEES OF THE LELAND",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C3-E19",
+      "passage_id": "DOC-584674b55488131646:P000441",
+      "quote": "LICENSE AGREEMENT EFFECTIVE THE 11TH DAY OF OCTOBER, 2019",
+      "role": "OTHER"
+    },
+    {
+      "evidence_id": "C3-E20",
+      "passage_id": "DOC-584674b55488131646:P000448",
+      "quote": "Methods to promote eye wound healing",
+      "role": "OTHER"
+    }
+  ],
+  "open_issues": [
+    {
+      "description": "Net Sales is defined and referenced as the base for amounts due under Article 7 (and 'applicable Earned Royalties'), but the Earned Royalty rate, any tiers, minimum royalties, annual fees and milestone payments are not in chunk 1 (Section 7 ends at the Purchase Right, P155). C1-T002 is a placeholder with unverified rate and must be reconciled with chunks 2-3.",
+      "issue_id": "C1-I001",
+      "kind": "CROSS_CHUNK_ECONOMICS",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000052",
+        "DOC-584674b55488131646:P000062",
+        "DOC-584674b55488131646:P000099",
+        "DOC-584674b55488131646:P000132"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "All three Section 4.6 sublicensing percentages and the date/event thresholds separating tiers are redacted, so tier boundaries and calculation method cannot be determined. Section 4.7 completion event is also redacted.",
+      "issue_id": "C1-I002",
+      "kind": "REDACTED_RATES",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000111",
+        "DOC-584674b55488131646:P000112",
+        "DOC-584674b55488131646:P000113",
+        "DOC-584674b55488131646:P000114",
+        "DOC-584674b55488131646:P000116"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Maximum percentage reduction of royalty rate for Combination Products is redacted; the amended or unredacted rate cannot be confirmed.",
+      "issue_id": "C1-I003",
+      "kind": "REDACTED_ADJUSTMENT",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000062"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Change of Control Fee (Section 16), Section 8.1 payment timing, Section 15.3(c) surviving sublicenses, Section 17 arbitration, Section 4.4 and Section 14 are referenced but outside this chunk; their economics must be reconciled.",
+      "issue_id": "C1-I004",
+      "kind": "CROSS_CHUNK_REFERENCE",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000069",
+        "DOC-584674b55488131646:P000090",
+        "DOC-584674b55488131646:P000099",
+        "DOC-584674b55488131646:P000115",
+        "DOC-584674b55488131646:P000087"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Stanford holds an equity Purchase Right (Sections 7.2-7.3) with a redacted Share percentage and redacted Threshold Qualifying Offering size/percentage. This is not classified as a royalty or payment here; the chunk ends mid-Section 7.2, with Termination Events (P147-P155) continuing and Section 7.3 in a later chunk.",
+      "issue_id": "C1-I005",
+      "kind": "EQUITY_RIGHT",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000135",
+        "DOC-584674b55488131646:P000143",
+        "DOC-584674b55488131646:P000145",
+        "DOC-584674b55488131646:P000148"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Appendix A diligence milestones are referenced (P90, P129) and may include payment consequences; they are not in this chunk and must be reviewed in a later chunk.",
+      "issue_id": "C1-I006",
+      "kind": "MILESTONES_UNAVAILABLE",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000090",
+        "DOC-584674b55488131646:P000129"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Section 4.7 says 'For purposes of this Section 4.6', suggesting a numbering inconsistency; its relation to the Section 4.6 tier triggers is uncertain. Also the Combination Product passage is split across P58/P62 by a page break.",
+      "issue_id": "C1-I007",
+      "kind": "NUMBERING_AMBIGUITY",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000116",
+        "DOC-584674b55488131646:P000058",
+        "DOC-584674b55488131646:P000062"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "No amendments are identified in this chunk and the Option dated February 11, 2019 is referenced; the amendment history and current operative status of the agreement were not checked.",
+      "issue_id": "C1-I008",
+      "kind": "AMENDMENT_HISTORY",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000014"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "All Earned Royalty tier rates and Net Sales band boundaries in Section 7.6 are redacted, as is the worked example. Table was flattened; boundary operators (>, <) and inclusivity are unclear, and tier rows 3 to 6 lack consistent operators. Tier count (6) inferred from rows present.",
+      "issue_id": "C2-I01",
+      "kind": "REDACTION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000185",
+        "DOC-584674b55488131646:P000186",
+        "DOC-584674b55488131646:P000187",
+        "DOC-584674b55488131646:P000188",
+        "DOC-584674b55488131646:P000189",
+        "DOC-584674b55488131646:P000190",
+        "DOC-584674b55488131646:P000191",
+        "DOC-584674b55488131646:P000193"
+      ],
+      "severity": "CRITICAL",
+      "status": "OPEN"
+    },
+    {
+      "description": "Definitions of Net Sales, Licensed Product, Valid Claim, Licensed Field of Use, Affiliate and Sublicensee are not in this chunk; they determine the royalty base and duration. Reconcile with the chunk containing the definitions (P000052, P000050, P000077 and others).",
+      "issue_id": "C2-I02",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000183",
+        "DOC-584674b55488131646:P000194",
+        "DOC-584674b55488131646:P000195"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Sublicensing economics (Article 4, Section 4.6, Nonroyalty Sublicensing Consideration) are referenced but not stated in this chunk; sublicense rates must be taken from another chunk.",
+      "issue_id": "C2-I03",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000215",
+        "DOC-584674b55488131646:P000286"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Milestones (A)-(C) are redacted and individual amounts in Section 7.5 are redacted; Appendix A milestones (referenced in termination) may be separate development milestones. Reconcile the $2,175,000 cap with any Appendix A economics.",
+      "issue_id": "C2-I04",
+      "kind": "CROSS_CHUNK_RECONCILIATION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000178",
+        "DOC-584674b55488131646:P000179",
+        "DOC-584674b55488131646:P000180",
+        "DOC-584674b55488131646:P000181",
+        "DOC-584674b55488131646:P000182",
+        "DOC-584674b55488131646:P000298"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Maintenance fee periods and amounts are redacted; credit examples (Section 7.8) redacted; it is unclear whether unused credit carries forward (text says offset against royalties in that year only).",
+      "issue_id": "C2-I05",
+      "kind": "REDACTION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000170",
+        "DOC-584674b55488131646:P000171",
+        "DOC-584674b55488131646:P000172",
+        "DOC-584674b55488131646:P000202",
+        "DOC-584674b55488131646:P000204",
+        "DOC-584674b55488131646:P000205"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Royalty stacking: aggregate cap and maximum reduction are redacted; it is unclear whether the maximum reduction is a percentage of the Stanford royalty or percentage points. Sentence spans a page break (P000196 to P000200).",
+      "issue_id": "C2-I06",
+      "kind": "AMBIGUITY",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000196",
+        "DOC-584674b55488131646:P000200"
+      ],
+      "severity": "HIGH",
+      "status": "OPEN"
+    },
+    {
+      "description": "Patent challenge royalty adjustments (Section 7.7) use redacted multipliers/verbs; direction and magnitude are unknown beyond context.",
+      "issue_id": "C2-I07",
+      "kind": "REDACTION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000201"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Litigation recovery sharing in Section 14.7 says shared 'as follows' but items (A)-(C) contain no percentage split; confirm no missing text. Items (A)/(B) link to royalty and sublicense rates.",
+      "issue_id": "C2-I08",
+      "kind": "INTERPRETATION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000281",
+        "DOC-584674b55488131646:P000285",
+        "DOC-584674b55488131646:P000286",
+        "DOC-584674b55488131646:P000287"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Stanford equity Purchase Right, Qualifying Offering, and information rights (Sections 7.2/7.3) are economic but non-royalty; definitions and the primary Section 7.2 text are outside this chunk and should be reviewed for equity value.",
+      "issue_id": "C2-I09",
+      "kind": "NON_ROYALTY_ECONOMICS",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000156",
+        "DOC-584674b55488131646:P000157",
+        "DOC-584674b55488131646:P000166",
+        "DOC-584674b55488131646:P000168"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Interest margin over Prime, patent cost reimbursement amounts, audit thresholds and reporting thresholds are redacted.",
+      "issue_id": "C2-I10",
+      "kind": "REDACTION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000210",
+        "DOC-584674b55488131646:P000215",
+        "DOC-584674b55488131646:P000220",
+        "DOC-584674b55488131646:P000221",
+        "DOC-584674b55488131646:P000264"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "No amendments are identified in this chunk; amendment history and current operative status have not been checked against linked documents.",
+      "issue_id": "C2-I11",
+      "kind": "AMENDMENT_STATUS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "This chunk contains no royalty rates, tiers, minimums or sublicensing percentages. All royalty and Nonroyalty Sublicensing Consideration economics (referenced in P000305) must be taken from chunks 1 and 2 and reconciled across chunks; nothing here confirms them.",
+      "issue_id": "C3-I01",
+      "kind": "CROSS_CHUNK_ECONOMICS",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000305",
+        "DOC-584674b55488131646:P000307"
+      ],
+      "severity": "CRITICAL",
+      "status": "OPEN"
+    },
+    {
+      "description": "The $100,000 Change of Control/Assignment Fee depends on 'Change of Control' and 'Affiliate' definitions located in other chunks (P000018, P000019); the interaction should be reconciled. Section 16.3 refers to 'Section 15.3(C)' for permitted assignment, which appears inconsistent with Section 16.2 and should be verified.",
+      "issue_id": "C3-I02",
+      "kind": "CROSS_CHUNK_DEFINITION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000311",
+        "DOC-584674b55488131646:P000316"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Diligence milestones 2 and 4-10 in Appendix A have redacted dates, amounts and content; any milestone-linked payment or consequence cannot be determined from this text.",
+      "issue_id": "C3-I03",
+      "kind": "REDACTION",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000407",
+        "DOC-584674b55488131646:P000409",
+        "DOC-584674b55488131646:P000410",
+        "DOC-584674b55488131646:P000411",
+        "DOC-584674b55488131646:P000412",
+        "DOC-584674b55488131646:P000413",
+        "DOC-584674b55488131646:P000414",
+        "DOC-584674b55488131646:P000415"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Stanford Purchase Rights in Sections 7.2/7.3 (equity-related) are cross-referenced in notice provisions; economics are outside this chunk and need reconciliation with chunk 2.",
+      "issue_id": "C3-I04",
+      "kind": "CROSS_REFERENCE",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000363"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Amendment No. 1 (effective Feb 14, 2020) only replaces the Licensed Patents table; other amendments after this filing were not checked and current operative status is not established. The amended table is fully redacted.",
+      "issue_id": "C3-I05",
+      "kind": "AMENDMENT",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000448",
+        "DOC-584674b55488131646:P000450",
+        "DOC-584674b55488131646:P000465"
+      ],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Appendix B (Sample Reporting Form) and Appendix C (Client and Billing Agreement) contain only headings in the supplied text; form content may have been omitted or not rendered.",
+      "issue_id": "C3-I06",
+      "kind": "MISSING_CONTENT",
+      "passage_ids": [
+        "DOC-584674b55488131646:P000431",
+        "DOC-584674b55488131646:P000435"
+      ],
+      "severity": "LOW",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensor' was worded differently by two reading tasks. Kept: 'The Board of Trustees of the Leland Stanford Junior University (Stanford)'. Task 2 gave: 'Stanford'.",
+      "issue_id": "ISSUE-MERGE-41cfdf21fc6531e724",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensee' was worded differently by two reading tasks. Kept: 'Combangio, Inc.'. Task 2 gave: 'Combangio'.",
+      "issue_id": "ISSUE-MERGE-3cf71726f062ef8b6b",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensed_ip' was worded differently by two reading tasks. Kept: \"Stanford, UIC and VA patent applications (details redacted) for the invention entitled 'Methods to promote eye wound healing'\". Task 2 gave: 'Licensed Patents (definition not in this chunk)'.",
+      "issue_id": "ISSUE-MERGE-847bbcff94ac5865e8",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'licensed_ip' was worded differently by two reading tasks. Kept: \"Stanford, UIC and VA patent applications (details redacted) for the invention entitled 'Methods to promote eye wound healing'\". Task 3 gave: 'Invention entitled \"Methods to promote eye wound healing\" (per Amendment No. 1 background); Licensed Patents table redacted'.",
+      "issue_id": "ISSUE-MERGE-e04c01b4a4495920bc",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    },
+    {
+      "description": "Agreement field 'effective_date' was worded differently by two reading tasks. Kept: '2019-10-11'. Task 3 gave: '11th day of October, 2019 (per Amendment No. 1 heading); Amendment No. 1 effective 14th day of February, 2020'.",
+      "issue_id": "ISSUE-MERGE-32f8fbb917f3b3325e",
+      "kind": "AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS",
+      "passage_ids": [],
+      "severity": "MEDIUM",
+      "status": "OPEN"
+    }
+  ],
+  "other_payments": [
+    {
+      "amount_value": "15000",
+      "basis": "License issue fee; noncreditable and nonrefundable",
+      "condition": "Payable upon signing this Agreement",
+      "currency": "USD",
+      "evidence_ids": [
+        "C1-E076"
+      ],
+      "kind": "UPFRONT",
+      "payment_id": "C1-PAY001"
+    },
+    {
+      "amount_value": null,
+      "basis": "Payment to Stanford (amount redacted as $[**]) for failure to give advance notice of first patient enrollment in a clinical study at Stanford",
+      "condition": "Payable within a redacted period of being invoiced if Combangio fails to notify Stanford Office of Licensing at least [**] before enrolling the first patient",
+      "currency": "USD",
+      "evidence_ids": [
+        "C1-E074"
+      ],
+      "kind": "OTHER",
+      "payment_id": "C1-PAY002"
+    },
+    {
+      "amount_value": null,
+      "basis": "Required Sublicense clause: on Sublicensee patent-invalidity action, Sublicensee will [**] the payment paid to Combangio during pendency and, if a challenged claim is valid and infringed, pay [**] times the payment paid under the original Sublicense; multiplier/adjustment redacted",
+      "condition": "Triggered by Sublicensee action seeking to invalidate a Licensed Patent",
+      "currency": null,
+      "evidence_ids": [
+        "C1-E054",
+        "C1-E055"
+      ],
+      "kind": "OTHER",
+      "payment_id": "C1-PAY003"
+    },
+    {
+      "amount_value": null,
+      "basis": "Annual minimum license maintenance fee, period (a): [**] through [**] anniversary of Effective Date; amount redacted",
+      "condition": "Nonrefundable; creditable each year per Section 7.8 against Earned Royalty on Net Sales in that year",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E01",
+        "C2-E02",
+        "C2-E05",
+        "C2-E32"
+      ],
+      "kind": "OTHER",
+      "payment_id": "C2-P01"
+    },
+    {
+      "amount_value": null,
+      "basis": "Annual minimum license maintenance fee, period (b): [**] anniversary of Effective Date; amount redacted",
+      "condition": "Nonrefundable; creditable per Section 7.8",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E01",
+        "C2-E03",
+        "C2-E05",
+        "C2-E32"
+      ],
+      "kind": "OTHER",
+      "payment_id": "C2-P02"
+    },
+    {
+      "amount_value": null,
+      "basis": "Annual minimum license maintenance fee, period (c): [**] anniversary and thereafter until first commercial sale; amount redacted",
+      "condition": "Nonrefundable; creditable per Section 7.8; ends at first commercial sale",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E01",
+        "C2-E04",
+        "C2-E05",
+        "C2-E32"
+      ],
+      "kind": "OTHER",
+      "payment_id": "C2-P03"
+    },
+    {
+      "amount_value": null,
+      "basis": "Milestone (A); trigger and amount redacted",
+      "condition": "One-time, first Licensed Product to achieve milestone",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E06",
+        "C2-E07",
+        "C2-E11"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "C2-P04"
+    },
+    {
+      "amount_value": null,
+      "basis": "Milestone (B); trigger and amount redacted",
+      "condition": "One-time, first Licensed Product to achieve milestone",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E06",
+        "C2-E08",
+        "C2-E11"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "C2-P05"
+    },
+    {
+      "amount_value": null,
+      "basis": "Milestone (C); trigger and amount redacted",
+      "condition": "One-time, first Licensed Product to achieve milestone",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E06",
+        "C2-E09",
+        "C2-E11"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "C2-P06"
+    },
+    {
+      "amount_value": null,
+      "basis": "Milestone (D): upon first achieving cumulative Net Sales of a redacted amount in a calendar year",
+      "condition": "One-time, first Licensed Product to achieve milestone",
+      "currency": "$ (dollar sign only; amount redacted)",
+      "evidence_ids": [
+        "C2-E06",
+        "C2-E10",
+        "C2-E11"
+      ],
+      "kind": "MILESTONE",
+      "payment_id": "C2-P07"
+    },
+    {
+      "amount_value": "2175000",
+      "basis": "Aggregate cap on Combangio's total obligation under Section 7.5 milestone payments",
+      "condition": "Each milestone payable only once irrespective of number of Licensed Products",
+      "currency": "USD",
+      "evidence_ids": [
+        "C2-E11",
+        "C2-E12"
+      ],
+      "kind": "CAP",
+      "payment_id": "C2-P08"
+    },
+    {
+      "amount_value": null,
+      "basis": "Late payments bear interest at lower of WSJ Prime Rate plus a redacted margin or the maximum lawful rate",
+      "condition": "Payments not made when due",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E37"
+      ],
+      "kind": "INTEREST",
+      "payment_id": "C2-P09"
+    },
+    {
+      "amount_value": null,
+      "basis": "Reimbursement of Stanford's pre-Effective Date patenting expenses; amount redacted",
+      "condition": "Payable within redacted period after Stanford statement",
+      "currency": "$ (dollar sign only; amount redacted)",
+      "evidence_ids": [
+        "C2-E57",
+        "C2-E43"
+      ],
+      "kind": "OTHER",
+      "payment_id": "C2-P10"
+    },
+    {
+      "amount_value": null,
+      "basis": "Reimbursement of Stanford's post-Effective Date patenting expenses (and reasonable costs of complying with Combangio's requests)",
+      "condition": "Within redacted period after Stanford statement",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E44",
+        "C2-E56",
+        "C2-E57"
+      ],
+      "kind": "OTHER",
+      "payment_id": "C2-P11"
+    },
+    {
+      "amount_value": null,
+      "basis": "Audit cost shifts to Combangio if Stanford audit reveals underreporting of a redacted percentage or more",
+      "condition": "Otherwise Stanford pays for the audit",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E40"
+      ],
+      "kind": "SERVICE",
+      "payment_id": "C2-P12"
+    },
+    {
+      "amount_value": null,
+      "basis": "Combangio pays entire cost of independent self-audit at redacted frequency if annual Licensed Product sales exceed a redacted dollar amount",
+      "condition": "Annual sales above redacted threshold",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E41"
+      ],
+      "kind": "SERVICE",
+      "payment_id": "C2-P13"
+    },
+    {
+      "amount_value": null,
+      "basis": "Sharing of litigation recovery in excess of costs in a Combangio-initiated suit; allocation described via items (A)-(C) with no percentage split in this chunk; in Stanford-initiated suit, Stanford retains excess",
+      "condition": "Suits under Article 14",
+      "currency": null,
+      "evidence_ids": [
+        "C2-E47",
+        "C2-E48",
+        "C2-E45",
+        "C2-E46"
+      ],
+      "kind": "OTHER",
+      "payment_id": "C2-P14"
+    },
+    {
+      "amount_value": "100000",
+      "basis": "Fixed Change of Control/Assignment Fee payable to Stanford",
+      "condition": "Payable if there is a Change of Control or the Agreement is assigned to a non-Affiliate third party; per Section 16.2 the full fee must be received by Stanford before assignment, except for assignment to an Affiliate. Defined terms (Change of Control, Affiliate) are in another chunk.",
+      "currency": "USD",
+      "evidence_ids": [
+        "C3-E01",
+        "C3-E02",
+        "C3-E03"
+      ],
+      "kind": "OTHER",
+      "payment_id": "C3-PAY01"
+    }
+  ],
+  "reader": {
+    "engine": "claude",
+    "model": "sonnet",
+    "read_scope": "FULL_DOCUMENT",
+    "reviewed_passage_ids": [
+      "DOC-584674b55488131646:P000001",
+      "DOC-584674b55488131646:P000002",
+      "DOC-584674b55488131646:P000003",
+      "DOC-584674b55488131646:P000004",
+      "DOC-584674b55488131646:P000005",
+      "DOC-584674b55488131646:P000006",
+      "DOC-584674b55488131646:P000007",
+      "DOC-584674b55488131646:P000008",
+      "DOC-584674b55488131646:P000009",
+      "DOC-584674b55488131646:P000010",
+      "DOC-584674b55488131646:P000011",
+      "DOC-584674b55488131646:P000012",
+      "DOC-584674b55488131646:P000013",
+      "DOC-584674b55488131646:P000014",
+      "DOC-584674b55488131646:P000015",
+      "DOC-584674b55488131646:P000016",
+      "DOC-584674b55488131646:P000017",
+      "DOC-584674b55488131646:P000018",
+      "DOC-584674b55488131646:P000019",
+      "DOC-584674b55488131646:P000020",
+      "DOC-584674b55488131646:P000021",
+      "DOC-584674b55488131646:P000022",
+      "DOC-584674b55488131646:P000023",
+      "DOC-584674b55488131646:P000024",
+      "DOC-584674b55488131646:P000025",
+      "DOC-584674b55488131646:P000026",
+      "DOC-584674b55488131646:P000027",
+      "DOC-584674b55488131646:P000028",
+      "DOC-584674b55488131646:P000029",
+      "DOC-584674b55488131646:P000030",
+      "DOC-584674b55488131646:P000031",
+      "DOC-584674b55488131646:P000032",
+      "DOC-584674b55488131646:P000033",
+      "DOC-584674b55488131646:P000034",
+      "DOC-584674b55488131646:P000035",
+      "DOC-584674b55488131646:P000036",
+      "DOC-584674b55488131646:P000037",
+      "DOC-584674b55488131646:P000038",
+      "DOC-584674b55488131646:P000039",
+      "DOC-584674b55488131646:P000040",
+      "DOC-584674b55488131646:P000041",
+      "DOC-584674b55488131646:P000042",
+      "DOC-584674b55488131646:P000043",
+      "DOC-584674b55488131646:P000044",
+      "DOC-584674b55488131646:P000045",
+      "DOC-584674b55488131646:P000046",
+      "DOC-584674b55488131646:P000047",
+      "DOC-584674b55488131646:P000048",
+      "DOC-584674b55488131646:P000049",
+      "DOC-584674b55488131646:P000050",
+      "DOC-584674b55488131646:P000051",
+      "DOC-584674b55488131646:P000052",
+      "DOC-584674b55488131646:P000053",
+      "DOC-584674b55488131646:P000054",
+      "DOC-584674b55488131646:P000055",
+      "DOC-584674b55488131646:P000056",
+      "DOC-584674b55488131646:P000057",
+      "DOC-584674b55488131646:P000058",
+      "DOC-584674b55488131646:P000059",
+      "DOC-584674b55488131646:P000060",
+      "DOC-584674b55488131646:P000061",
+      "DOC-584674b55488131646:P000062",
+      "DOC-584674b55488131646:P000063",
+      "DOC-584674b55488131646:P000064",
+      "DOC-584674b55488131646:P000065",
+      "DOC-584674b55488131646:P000066",
+      "DOC-584674b55488131646:P000067",
+      "DOC-584674b55488131646:P000068",
+      "DOC-584674b55488131646:P000069",
+      "DOC-584674b55488131646:P000070",
+      "DOC-584674b55488131646:P000071",
+      "DOC-584674b55488131646:P000072",
+      "DOC-584674b55488131646:P000073",
+      "DOC-584674b55488131646:P000074",
+      "DOC-584674b55488131646:P000075",
+      "DOC-584674b55488131646:P000076",
+      "DOC-584674b55488131646:P000077",
+      "DOC-584674b55488131646:P000078",
+      "DOC-584674b55488131646:P000079",
+      "DOC-584674b55488131646:P000080",
+      "DOC-584674b55488131646:P000081",
+      "DOC-584674b55488131646:P000082",
+      "DOC-584674b55488131646:P000083",
+      "DOC-584674b55488131646:P000084",
+      "DOC-584674b55488131646:P000085",
+      "DOC-584674b55488131646:P000086",
+      "DOC-584674b55488131646:P000087",
+      "DOC-584674b55488131646:P000088",
+      "DOC-584674b55488131646:P000089",
+      "DOC-584674b55488131646:P000090",
+      "DOC-584674b55488131646:P000091",
+      "DOC-584674b55488131646:P000092",
+      "DOC-584674b55488131646:P000093",
+      "DOC-584674b55488131646:P000094",
+      "DOC-584674b55488131646:P000095",
+      "DOC-584674b55488131646:P000096",
+      "DOC-584674b55488131646:P000097",
+      "DOC-584674b55488131646:P000098",
+      "DOC-584674b55488131646:P000099",
+      "DOC-584674b55488131646:P000100",
+      "DOC-584674b55488131646:P000101",
+      "DOC-584674b55488131646:P000102",
+      "DOC-584674b55488131646:P000103",
+      "DOC-584674b55488131646:P000104",
+      "DOC-584674b55488131646:P000105",
+      "DOC-584674b55488131646:P000106",
+      "DOC-584674b55488131646:P000107",
+      "DOC-584674b55488131646:P000108",
+      "DOC-584674b55488131646:P000109",
+      "DOC-584674b55488131646:P000110",
+      "DOC-584674b55488131646:P000111",
+      "DOC-584674b55488131646:P000112",
+      "DOC-584674b55488131646:P000113",
+      "DOC-584674b55488131646:P000114",
+      "DOC-584674b55488131646:P000115",
+      "DOC-584674b55488131646:P000116",
+      "DOC-584674b55488131646:P000117",
+      "DOC-584674b55488131646:P000118",
+      "DOC-584674b55488131646:P000119",
+      "DOC-584674b55488131646:P000120",
+      "DOC-584674b55488131646:P000121",
+      "DOC-584674b55488131646:P000122",
+      "DOC-584674b55488131646:P000123",
+      "DOC-584674b55488131646:P000124",
+      "DOC-584674b55488131646:P000125",
+      "DOC-584674b55488131646:P000126",
+      "DOC-584674b55488131646:P000127",
+      "DOC-584674b55488131646:P000128",
+      "DOC-584674b55488131646:P000129",
+      "DOC-584674b55488131646:P000130",
+      "DOC-584674b55488131646:P000131",
+      "DOC-584674b55488131646:P000132",
+      "DOC-584674b55488131646:P000133",
+      "DOC-584674b55488131646:P000134",
+      "DOC-584674b55488131646:P000135",
+      "DOC-584674b55488131646:P000136",
+      "DOC-584674b55488131646:P000137",
+      "DOC-584674b55488131646:P000138",
+      "DOC-584674b55488131646:P000139",
+      "DOC-584674b55488131646:P000140",
+      "DOC-584674b55488131646:P000141",
+      "DOC-584674b55488131646:P000142",
+      "DOC-584674b55488131646:P000143",
+      "DOC-584674b55488131646:P000144",
+      "DOC-584674b55488131646:P000145",
+      "DOC-584674b55488131646:P000146",
+      "DOC-584674b55488131646:P000147",
+      "DOC-584674b55488131646:P000148",
+      "DOC-584674b55488131646:P000149",
+      "DOC-584674b55488131646:P000150",
+      "DOC-584674b55488131646:P000151",
+      "DOC-584674b55488131646:P000152",
+      "DOC-584674b55488131646:P000153",
+      "DOC-584674b55488131646:P000154",
+      "DOC-584674b55488131646:P000155",
+      "DOC-584674b55488131646:P000156",
+      "DOC-584674b55488131646:P000157",
+      "DOC-584674b55488131646:P000158",
+      "DOC-584674b55488131646:P000159",
+      "DOC-584674b55488131646:P000160",
+      "DOC-584674b55488131646:P000161",
+      "DOC-584674b55488131646:P000162",
+      "DOC-584674b55488131646:P000163",
+      "DOC-584674b55488131646:P000164",
+      "DOC-584674b55488131646:P000165",
+      "DOC-584674b55488131646:P000166",
+      "DOC-584674b55488131646:P000167",
+      "DOC-584674b55488131646:P000168",
+      "DOC-584674b55488131646:P000169",
+      "DOC-584674b55488131646:P000170",
+      "DOC-584674b55488131646:P000171",
+      "DOC-584674b55488131646:P000172",
+      "DOC-584674b55488131646:P000173",
+      "DOC-584674b55488131646:P000174",
+      "DOC-584674b55488131646:P000175",
+      "DOC-584674b55488131646:P000176",
+      "DOC-584674b55488131646:P000177",
+      "DOC-584674b55488131646:P000178",
+      "DOC-584674b55488131646:P000179",
+      "DOC-584674b55488131646:P000180",
+      "DOC-584674b55488131646:P000181",
+      "DOC-584674b55488131646:P000182",
+      "DOC-584674b55488131646:P000183",
+      "DOC-584674b55488131646:P000184",
+      "DOC-584674b55488131646:P000185",
+      "DOC-584674b55488131646:P000186",
+      "DOC-584674b55488131646:P000187",
+      "DOC-584674b55488131646:P000188",
+      "DOC-584674b55488131646:P000189",
+      "DOC-584674b55488131646:P000190",
+      "DOC-584674b55488131646:P000191",
+      "DOC-584674b55488131646:P000192",
+      "DOC-584674b55488131646:P000193",
+      "DOC-584674b55488131646:P000194",
+      "DOC-584674b55488131646:P000195",
+      "DOC-584674b55488131646:P000196",
+      "DOC-584674b55488131646:P000197",
+      "DOC-584674b55488131646:P000198",
+      "DOC-584674b55488131646:P000199",
+      "DOC-584674b55488131646:P000200",
+      "DOC-584674b55488131646:P000201",
+      "DOC-584674b55488131646:P000202",
+      "DOC-584674b55488131646:P000203",
+      "DOC-584674b55488131646:P000204",
+      "DOC-584674b55488131646:P000205",
+      "DOC-584674b55488131646:P000206",
+      "DOC-584674b55488131646:P000207",
+      "DOC-584674b55488131646:P000208",
+      "DOC-584674b55488131646:P000209",
+      "DOC-584674b55488131646:P000210",
+      "DOC-584674b55488131646:P000211",
+      "DOC-584674b55488131646:P000212",
+      "DOC-584674b55488131646:P000213",
+      "DOC-584674b55488131646:P000214",
+      "DOC-584674b55488131646:P000215",
+      "DOC-584674b55488131646:P000216",
+      "DOC-584674b55488131646:P000217",
+      "DOC-584674b55488131646:P000218",
+      "DOC-584674b55488131646:P000219",
+      "DOC-584674b55488131646:P000220",
+      "DOC-584674b55488131646:P000221",
+      "DOC-584674b55488131646:P000222",
+      "DOC-584674b55488131646:P000223",
+      "DOC-584674b55488131646:P000224",
+      "DOC-584674b55488131646:P000225",
+      "DOC-584674b55488131646:P000226",
+      "DOC-584674b55488131646:P000227",
+      "DOC-584674b55488131646:P000228",
+      "DOC-584674b55488131646:P000229",
+      "DOC-584674b55488131646:P000230",
+      "DOC-584674b55488131646:P000231",
+      "DOC-584674b55488131646:P000232",
+      "DOC-584674b55488131646:P000233",
+      "DOC-584674b55488131646:P000234",
+      "DOC-584674b55488131646:P000235",
+      "DOC-584674b55488131646:P000236",
+      "DOC-584674b55488131646:P000237",
+      "DOC-584674b55488131646:P000238",
+      "DOC-584674b55488131646:P000239",
+      "DOC-584674b55488131646:P000240",
+      "DOC-584674b55488131646:P000241",
+      "DOC-584674b55488131646:P000242",
+      "DOC-584674b55488131646:P000243",
+      "DOC-584674b55488131646:P000244",
+      "DOC-584674b55488131646:P000245",
+      "DOC-584674b55488131646:P000246",
+      "DOC-584674b55488131646:P000247",
+      "DOC-584674b55488131646:P000248",
+      "DOC-584674b55488131646:P000249",
+      "DOC-584674b55488131646:P000250",
+      "DOC-584674b55488131646:P000251",
+      "DOC-584674b55488131646:P000252",
+      "DOC-584674b55488131646:P000253",
+      "DOC-584674b55488131646:P000254",
+      "DOC-584674b55488131646:P000255",
+      "DOC-584674b55488131646:P000256",
+      "DOC-584674b55488131646:P000257",
+      "DOC-584674b55488131646:P000258",
+      "DOC-584674b55488131646:P000259",
+      "DOC-584674b55488131646:P000260",
+      "DOC-584674b55488131646:P000261",
+      "DOC-584674b55488131646:P000262",
+      "DOC-584674b55488131646:P000263",
+      "DOC-584674b55488131646:P000264",
+      "DOC-584674b55488131646:P000265",
+      "DOC-584674b55488131646:P000266",
+      "DOC-584674b55488131646:P000267",
+      "DOC-584674b55488131646:P000268",
+      "DOC-584674b55488131646:P000269",
+      "DOC-584674b55488131646:P000270",
+      "DOC-584674b55488131646:P000271",
+      "DOC-584674b55488131646:P000272",
+      "DOC-584674b55488131646:P000273",
+      "DOC-584674b55488131646:P000274",
+      "DOC-584674b55488131646:P000275",
+      "DOC-584674b55488131646:P000276",
+      "DOC-584674b55488131646:P000277",
+      "DOC-584674b55488131646:P000278",
+      "DOC-584674b55488131646:P000279",
+      "DOC-584674b55488131646:P000280",
+      "DOC-584674b55488131646:P000281",
+      "DOC-584674b55488131646:P000282",
+      "DOC-584674b55488131646:P000283",
+      "DOC-584674b55488131646:P000284",
+      "DOC-584674b55488131646:P000285",
+      "DOC-584674b55488131646:P000286",
+      "DOC-584674b55488131646:P000287",
+      "DOC-584674b55488131646:P000288",
+      "DOC-584674b55488131646:P000289",
+      "DOC-584674b55488131646:P000290",
+      "DOC-584674b55488131646:P000291",
+      "DOC-584674b55488131646:P000292",
+      "DOC-584674b55488131646:P000293",
+      "DOC-584674b55488131646:P000294",
+      "DOC-584674b55488131646:P000295",
+      "DOC-584674b55488131646:P000296",
+      "DOC-584674b55488131646:P000297",
+      "DOC-584674b55488131646:P000298",
+      "DOC-584674b55488131646:P000299",
+      "DOC-584674b55488131646:P000300",
+      "DOC-584674b55488131646:P000301",
+      "DOC-584674b55488131646:P000302",
+      "DOC-584674b55488131646:P000303",
+      "DOC-584674b55488131646:P000304",
+      "DOC-584674b55488131646:P000305",
+      "DOC-584674b55488131646:P000306",
+      "DOC-584674b55488131646:P000307",
+      "DOC-584674b55488131646:P000308",
+      "DOC-584674b55488131646:P000309",
+      "DOC-584674b55488131646:P000310",
+      "DOC-584674b55488131646:P000311",
+      "DOC-584674b55488131646:P000312",
+      "DOC-584674b55488131646:P000313",
+      "DOC-584674b55488131646:P000314",
+      "DOC-584674b55488131646:P000315",
+      "DOC-584674b55488131646:P000316",
+      "DOC-584674b55488131646:P000317",
+      "DOC-584674b55488131646:P000318",
+      "DOC-584674b55488131646:P000319",
+      "DOC-584674b55488131646:P000320",
+      "DOC-584674b55488131646:P000321",
+      "DOC-584674b55488131646:P000322",
+      "DOC-584674b55488131646:P000323",
+      "DOC-584674b55488131646:P000324",
+      "DOC-584674b55488131646:P000325",
+      "DOC-584674b55488131646:P000326",
+      "DOC-584674b55488131646:P000327",
+      "DOC-584674b55488131646:P000328",
+      "DOC-584674b55488131646:P000329",
+      "DOC-584674b55488131646:P000330",
+      "DOC-584674b55488131646:P000331",
+      "DOC-584674b55488131646:P000332",
+      "DOC-584674b55488131646:P000333",
+      "DOC-584674b55488131646:P000334",
+      "DOC-584674b55488131646:P000335",
+      "DOC-584674b55488131646:P000336",
+      "DOC-584674b55488131646:P000337",
+      "DOC-584674b55488131646:P000338",
+      "DOC-584674b55488131646:P000339",
+      "DOC-584674b55488131646:P000340",
+      "DOC-584674b55488131646:P000341",
+      "DOC-584674b55488131646:P000342",
+      "DOC-584674b55488131646:P000343",
+      "DOC-584674b55488131646:P000344",
+      "DOC-584674b55488131646:P000345",
+      "DOC-584674b55488131646:P000346",
+      "DOC-584674b55488131646:P000347",
+      "DOC-584674b55488131646:P000348",
+      "DOC-584674b55488131646:P000349",
+      "DOC-584674b55488131646:P000350",
+      "DOC-584674b55488131646:P000351",
+      "DOC-584674b55488131646:P000352",
+      "DOC-584674b55488131646:P000353",
+      "DOC-584674b55488131646:P000354",
+      "DOC-584674b55488131646:P000355",
+      "DOC-584674b55488131646:P000356",
+      "DOC-584674b55488131646:P000357",
+      "DOC-584674b55488131646:P000358",
+      "DOC-584674b55488131646:P000359",
+      "DOC-584674b55488131646:P000360",
+      "DOC-584674b55488131646:P000361",
+      "DOC-584674b55488131646:P000362",
+      "DOC-584674b55488131646:P000363",
+      "DOC-584674b55488131646:P000364",
+      "DOC-584674b55488131646:P000365",
+      "DOC-584674b55488131646:P000366",
+      "DOC-584674b55488131646:P000367",
+      "DOC-584674b55488131646:P000368",
+      "DOC-584674b55488131646:P000369",
+      "DOC-584674b55488131646:P000370",
+      "DOC-584674b55488131646:P000371",
+      "DOC-584674b55488131646:P000372",
+      "DOC-584674b55488131646:P000373",
+      "DOC-584674b55488131646:P000374",
+      "DOC-584674b55488131646:P000375",
+      "DOC-584674b55488131646:P000376",
+      "DOC-584674b55488131646:P000377",
+      "DOC-584674b55488131646:P000378",
+      "DOC-584674b55488131646:P000379",
+      "DOC-584674b55488131646:P000380",
+      "DOC-584674b55488131646:P000381",
+      "DOC-584674b55488131646:P000382",
+      "DOC-584674b55488131646:P000383",
+      "DOC-584674b55488131646:P000384",
+      "DOC-584674b55488131646:P000385",
+      "DOC-584674b55488131646:P000386",
+      "DOC-584674b55488131646:P000387",
+      "DOC-584674b55488131646:P000388",
+      "DOC-584674b55488131646:P000389",
+      "DOC-584674b55488131646:P000390",
+      "DOC-584674b55488131646:P000391",
+      "DOC-584674b55488131646:P000392",
+      "DOC-584674b55488131646:P000393",
+      "DOC-584674b55488131646:P000394",
+      "DOC-584674b55488131646:P000395",
+      "DOC-584674b55488131646:P000396",
+      "DOC-584674b55488131646:P000397",
+      "DOC-584674b55488131646:P000398",
+      "DOC-584674b55488131646:P000399",
+      "DOC-584674b55488131646:P000400",
+      "DOC-584674b55488131646:P000401",
+      "DOC-584674b55488131646:P000402",
+      "DOC-584674b55488131646:P000403",
+      "DOC-584674b55488131646:P000404",
+      "DOC-584674b55488131646:P000405",
+      "DOC-584674b55488131646:P000406",
+      "DOC-584674b55488131646:P000407",
+      "DOC-584674b55488131646:P000408",
+      "DOC-584674b55488131646:P000409",
+      "DOC-584674b55488131646:P000410",
+      "DOC-584674b55488131646:P000411",
+      "DOC-584674b55488131646:P000412",
+      "DOC-584674b55488131646:P000413",
+      "DOC-584674b55488131646:P000414",
+      "DOC-584674b55488131646:P000415",
+      "DOC-584674b55488131646:P000416",
+      "DOC-584674b55488131646:P000417",
+      "DOC-584674b55488131646:P000418",
+      "DOC-584674b55488131646:P000419",
+      "DOC-584674b55488131646:P000420",
+      "DOC-584674b55488131646:P000421",
+      "DOC-584674b55488131646:P000422",
+      "DOC-584674b55488131646:P000423",
+      "DOC-584674b55488131646:P000424",
+      "DOC-584674b55488131646:P000425",
+      "DOC-584674b55488131646:P000426",
+      "DOC-584674b55488131646:P000427",
+      "DOC-584674b55488131646:P000428",
+      "DOC-584674b55488131646:P000429",
+      "DOC-584674b55488131646:P000430",
+      "DOC-584674b55488131646:P000431",
+      "DOC-584674b55488131646:P000432",
+      "DOC-584674b55488131646:P000433",
+      "DOC-584674b55488131646:P000434",
+      "DOC-584674b55488131646:P000435",
+      "DOC-584674b55488131646:P000436",
+      "DOC-584674b55488131646:P000437",
+      "DOC-584674b55488131646:P000438",
+      "DOC-584674b55488131646:P000439",
+      "DOC-584674b55488131646:P000440",
+      "DOC-584674b55488131646:P000441",
+      "DOC-584674b55488131646:P000442",
+      "DOC-584674b55488131646:P000443",
+      "DOC-584674b55488131646:P000444",
+      "DOC-584674b55488131646:P000445",
+      "DOC-584674b55488131646:P000446",
+      "DOC-584674b55488131646:P000447",
+      "DOC-584674b55488131646:P000448",
+      "DOC-584674b55488131646:P000449",
+      "DOC-584674b55488131646:P000450",
+      "DOC-584674b55488131646:P000451",
+      "DOC-584674b55488131646:P000452",
+      "DOC-584674b55488131646:P000453",
+      "DOC-584674b55488131646:P000454",
+      "DOC-584674b55488131646:P000455",
+      "DOC-584674b55488131646:P000456",
+      "DOC-584674b55488131646:P000457",
+      "DOC-584674b55488131646:P000458",
+      "DOC-584674b55488131646:P000459",
+      "DOC-584674b55488131646:P000460",
+      "DOC-584674b55488131646:P000461",
+      "DOC-584674b55488131646:P000462",
+      "DOC-584674b55488131646:P000463",
+      "DOC-584674b55488131646:P000464",
+      "DOC-584674b55488131646:P000465",
+      "DOC-584674b55488131646:P000466",
+      "DOC-584674b55488131646:P000467",
+      "DOC-584674b55488131646:P000468",
+      "DOC-584674b55488131646:P000469",
+      "DOC-584674b55488131646:P000470",
+      "DOC-584674b55488131646:P000471",
+      "DOC-584674b55488131646:P000472",
+      "DOC-584674b55488131646:P000473",
+      "DOC-584674b55488131646:P000474",
+      "DOC-584674b55488131646:P000475",
+      "DOC-584674b55488131646:P000476",
+      "DOC-584674b55488131646:P000477",
+      "DOC-584674b55488131646:P000478",
+      "DOC-584674b55488131646:P000479",
+      "DOC-584674b55488131646:P000480",
+      "DOC-584674b55488131646:P000481",
+      "DOC-584674b55488131646:P000482",
+      "DOC-584674b55488131646:P000483",
+      "DOC-584674b55488131646:P000484"
+    ],
+    "run_id": "MERGE-b61a68a02dccc1f803"
+  },
+  "royalty_terms": [
+    {
+      "adjustments": [
+        {
+          "description": "Pro rata reduction of the Stanford percentage where Sublicensee also receives a license to Combangio's or third-party IP applicable to a Licensed Product; example percentage redacted",
+          "evidence_ids": [
+            "C1-E065",
+            "C1-E066"
+          ]
+        },
+        {
+          "description": "Combangio may apportion a commercially reasonable percentage of sublicensing payments between Combangio patents and Stanford patents, subject to proposal and justification to Stanford",
+          "evidence_ids": [
+            "C1-E047"
+          ]
+        }
+      ],
+      "base": "Nonroyalty Sublicensing Consideration",
+      "base_definition": "Any consideration received by Combangio from any tier of its Sublicensees, excluding consideration for sublicensee product-sales royalties (treated as Combangio sales), investments in Combangio stock, fully burdened post-Sublicense R&D expenses, debt, patent prosecution reimbursement, and sale of substantially all business/assets provided the Change of Control Fee has been received",
+      "base_evidence_ids": [
+        "C1-E036",
+        "C1-E060"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C1-E060",
+            "C1-E061"
+          ],
+          "text": "Stanford share applies to sublicense of all or substantially all of the Licensed Patents; rate depends on timing of execution of the sublicense agreement (timing dates/events redacted)"
+        },
+        {
+          "evidence_ids": [
+            "C1-E036",
+            "C1-E037"
+          ],
+          "text": "Excluded from Nonroyalty Sublicensing Consideration: royalties on sublicensee product sales (treated as if Combangio made the sale)"
+        },
+        {
+          "evidence_ids": [
+            "C1-E038"
+          ],
+          "text": "Excluded: fully burdened R&D expenses incurred for development of the Licensed Product after the Sublicense effective date"
+        },
+        {
+          "evidence_ids": [
+            "C1-E039"
+          ],
+          "text": "Excluded: sale of substantially all business/assets, provided Stanford has received the Change of Control Fee (Section 16, not in this chunk)"
+        },
+        {
+          "evidence_ids": [
+            "C1-E067"
+          ],
+          "text": "Pro rata reduction only where other IP has Valid Claims that read on the Licensed Product"
+        }
+      ],
+      "disclosure_status": "REDACTED",
+      "effective_period": null,
+      "evidence_ids": [
+        "C1-E036",
+        "C1-E037",
+        "C1-E038",
+        "C1-E039",
+        "C1-E047",
+        "C1-E060",
+        "C1-E061",
+        "C1-E062",
+        "C1-E063",
+        "C1-E064",
+        "C1-E065",
+        "C1-E066",
+        "C1-E067",
+        "C1-E068"
+      ],
+      "family": "SUBLICENSING_RECEIPTS",
+      "product_scope": "Sublicense of all or substantially all of the Licensed Patents",
+      "rate_evidence_ids": [
+        "C1-E062",
+        "C1-E063",
+        "C1-E064"
+      ],
+      "rate_unit": "REDACTED",
+      "rate_value": null,
+      "structure": "TIERED",
+      "term_id": "C1-T001",
+      "territory_scope": "Licensed Territory: worldwide",
+      "tiers": [
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "C1-E062"
+          ],
+          "lower": null,
+          "measurement_period": null,
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 1,
+          "threshold_basis": "Sublicense executed prior to redacted date/event",
+          "threshold_evidence_ids": [
+            "C1-E061",
+            "C1-E062"
+          ],
+          "upper": "[**]"
+        },
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "C1-E063"
+          ],
+          "lower": "[**]",
+          "measurement_period": null,
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 2,
+          "threshold_basis": "Sublicense executed after redacted date/event (upper bound of tier 2 not stated in this chunk)",
+          "threshold_evidence_ids": [
+            "C1-E061",
+            "C1-E063"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "UNKNOWN",
+          "evidence_ids": [
+            "C1-E064"
+          ],
+          "lower": "[**]",
+          "measurement_period": null,
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 3,
+          "threshold_basis": "Sublicense executed after a second redacted date/event",
+          "threshold_evidence_ids": [
+            "C1-E061",
+            "C1-E064"
+          ],
+          "upper": null
+        }
+      ]
+    },
+    {
+      "adjustments": [
+        {
+          "description": "Combination Product: Net Sales multiplied by fraction (A-B)/A using separately listed sale prices; otherwise allocation by relative importance and proprietary protection as mutually agreed",
+          "evidence_ids": [
+            "C1-E032",
+            "C1-E033"
+          ]
+        },
+        {
+          "description": "Cap on reduction of applicable royalty rate for Combination Products; percentage redacted",
+          "evidence_ids": [
+            "C1-E034"
+          ]
+        }
+      ],
+      "base": "Net Sales",
+      "base_definition": "All gross revenue received by Combangio, its Affiliates or any tier of its Sublicensees from sale or other commercial transfer of Licensed Products to a third party customer, less listed exclusions (taxes, freight/insurance, installation, returns, discounts/rebates)",
+      "base_evidence_ids": [
+        "C1-E031",
+        "C1-E035"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C1-E037"
+          ],
+          "text": "Royalties on product sales by any tier of Sublicensees are treated as if Combangio made the sale"
+        },
+        {
+          "evidence_ids": [
+            "C1-E035"
+          ],
+          "text": "Net Sales excludes sales by Combangio to Affiliates or Sublicensees; resale invoiced by them to third parties is included"
+        },
+        {
+          "evidence_ids": [
+            "C1-E051",
+            "C1-E052"
+          ],
+          "text": "Surviving Sublicensee must pay amounts due under the Agreement including applicable Earned Royalties to Stanford if Agreement terminates"
+        }
+      ],
+      "disclosure_status": "NOT_VERIFIED",
+      "effective_period": null,
+      "evidence_ids": [
+        "C1-E031",
+        "C1-E032",
+        "C1-E033",
+        "C1-E034",
+        "C1-E035",
+        "C1-E037",
+        "C1-E051",
+        "C1-E052"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": "Licensed Products (Valid Claim of Licensed Patent); Combination Products adjusted by fraction",
+      "rate_evidence_ids": [],
+      "rate_unit": "UNKNOWN",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "C1-T002",
+      "territory_scope": "Licensed Territory: worldwide",
+      "tiers": []
+    },
+    {
+      "adjustments": [
+        {
+          "description": "Third-party royalty stacking reduction (see C2-T02, C2-T03)",
+          "evidence_ids": [
+            "C2-E26",
+            "C2-E27",
+            "C2-E28",
+            "C2-E29"
+          ]
+        },
+        {
+          "description": "Rate change if Combangio challenges a Licensed Patent (see C2-T04, C2-T05)",
+          "evidence_ids": [
+            "C2-E30",
+            "C2-E31"
+          ]
+        },
+        {
+          "description": "Annual license maintenance fee may be offset against Earned Royalty on Net Sales in that same year",
+          "evidence_ids": [
+            "C2-E32"
+          ]
+        }
+      ],
+      "base": "Net Sales of Licensed Products (annual)",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "C2-E13",
+        "C2-E14",
+        "C2-E21"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C2-E22",
+            "C2-E23"
+          ],
+          "text": "Payable country-by-country and product-by-product until the last to expire Valid Claim covering the Licensed Product in the Licensed Field of Use in the country of sale or manufacture; no Earned Royalty if no Valid Claim exists in either"
+        },
+        {
+          "evidence_ids": [
+            "C2-E24"
+          ],
+          "text": "No more than one Earned Royalty per Licensed Product unit"
+        },
+        {
+          "evidence_ids": [
+            "C2-E25"
+          ],
+          "text": "No Earned Royalty on sales of Licensed Product for research/development, clinical trials or as samples"
+        }
+      ],
+      "disclosure_status": "REDACTED",
+      "effective_period": null,
+      "evidence_ids": [
+        "C2-E13",
+        "C2-E14",
+        "C2-E15",
+        "C2-E16",
+        "C2-E17",
+        "C2-E18",
+        "C2-E19",
+        "C2-E20",
+        "C2-E21",
+        "C2-E22",
+        "C2-E23",
+        "C2-E24",
+        "C2-E25"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": "Licensed Products, on a Licensed Product-by-Licensed Product basis; Net Sales definition is outside this chunk",
+      "rate_evidence_ids": [
+        "C2-E13",
+        "C2-E15",
+        "C2-E16",
+        "C2-E17",
+        "C2-E18",
+        "C2-E19",
+        "C2-E20"
+      ],
+      "rate_unit": "REDACTED",
+      "rate_value": null,
+      "structure": "TIERED",
+      "term_id": "C2-T01",
+      "territory_scope": "Country-by-country, until the last Valid Claim expires in the country of sale and in the country of manufacture",
+      "tiers": [
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "C2-E15",
+            "C2-E21"
+          ],
+          "lower": null,
+          "measurement_period": "annual",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 1,
+          "threshold_basis": "Annual Net Sales, row '< $USD [**]'; amount redacted",
+          "threshold_evidence_ids": [
+            "C2-E15"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "C2-E16",
+            "C2-E21"
+          ],
+          "lower": null,
+          "measurement_period": "annual",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 2,
+          "threshold_basis": "Annual Net Sales band, row 2; bounds redacted",
+          "threshold_evidence_ids": [
+            "C2-E16"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "C2-E17",
+            "C2-E21"
+          ],
+          "lower": null,
+          "measurement_period": "annual",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 3,
+          "threshold_basis": "Annual Net Sales band, row 3; bounds redacted",
+          "threshold_evidence_ids": [
+            "C2-E17"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "C2-E18",
+            "C2-E21"
+          ],
+          "lower": null,
+          "measurement_period": "annual",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 4,
+          "threshold_basis": "Annual Net Sales band, row 4; bounds redacted",
+          "threshold_evidence_ids": [
+            "C2-E18"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "C2-E19",
+            "C2-E21"
+          ],
+          "lower": null,
+          "measurement_period": "annual",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 5,
+          "threshold_basis": "Annual Net Sales band, row 5; bounds redacted",
+          "threshold_evidence_ids": [
+            "C2-E19"
+          ],
+          "upper": null
+        },
+        {
+          "calculation": "MARGINAL",
+          "evidence_ids": [
+            "C2-E20",
+            "C2-E21"
+          ],
+          "lower": null,
+          "measurement_period": "annual",
+          "rate_unit": "REDACTED",
+          "rate_value": null,
+          "sequence": 6,
+          "threshold_basis": "Annual Net Sales top row; amount redacted",
+          "threshold_evidence_ids": [
+            "C2-E20"
+          ],
+          "upper": null
+        }
+      ]
+    },
+    {
+      "adjustments": [
+        {
+          "description": "Stanford and each third-party Royalty Recipient reduced proportionally by share of total percentage royalty so aggregate does not exceed a redacted percentage of Net Sales",
+          "evidence_ids": [
+            "C2-E27",
+            "C2-E28"
+          ]
+        }
+      ],
+      "base": "Net Sales of a given Licensed Product (aggregate royalties to all Royalty Recipients)",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "C2-E26",
+        "C2-E28"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C2-E26"
+          ],
+          "text": "Applies when total annual Earned Royalties to Stanford plus all other royalties payable by Combangio, Affiliates and Sublicensees to third parties for development, manufacture or commercialization of the Licensed Product exceed a redacted percentage of Net Sales in aggregate"
+        }
+      ],
+      "disclosure_status": "REDACTED",
+      "effective_period": null,
+      "evidence_ids": [
+        "C2-E26",
+        "C2-E27",
+        "C2-E28"
+      ],
+      "family": "OTHER",
+      "product_scope": "A given Licensed Product",
+      "rate_evidence_ids": [
+        "C2-E26",
+        "C2-E28"
+      ],
+      "rate_unit": "REDACTED",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "C2-T02",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Stanford Earned Royalty (maximum permitted reduction)",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "C2-E29"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C2-E29"
+          ],
+          "text": "Limit on royalty stacking reduction: Stanford Earned Royalty cannot be reduced by more than a redacted percentage"
+        }
+      ],
+      "disclosure_status": "REDACTED",
+      "effective_period": null,
+      "evidence_ids": [
+        "C2-E29"
+      ],
+      "family": "OTHER",
+      "product_scope": "A given Licensed Product",
+      "rate_evidence_ids": [
+        "C2-E29"
+      ],
+      "rate_unit": "REDACTED",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "C2-T03",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Earned Royalty rates under Section 7.6",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "C2-E30"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C2-E30"
+          ],
+          "text": "Applies if Combangio brings an action seeking to invalidate any Licensed Patent"
+        }
+      ],
+      "disclosure_status": "REDACTED",
+      "effective_period": "During pendency of an action by Combangio seeking to invalidate any Licensed Patent",
+      "evidence_ids": [
+        "C2-E30"
+      ],
+      "family": "OTHER",
+      "product_scope": "Licensed Products",
+      "rate_evidence_ids": [
+        "C2-E30"
+      ],
+      "rate_unit": "REDACTED",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "C2-T04",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Earned Royalty rates under Section 7.6",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "C2-E31"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C2-E31"
+          ],
+          "text": "Applies if the outcome determines a challenged patent claim is both valid and infringed by a Licensed Product; the operative verb/multiplier is redacted"
+        }
+      ],
+      "disclosure_status": "REDACTED",
+      "effective_period": "After outcome of challenge action",
+      "evidence_ids": [
+        "C2-E31"
+      ],
+      "family": "OTHER",
+      "product_scope": "Licensed Products",
+      "rate_evidence_ids": [
+        "C2-E31"
+      ],
+      "rate_unit": "REDACTED",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "C2-T05",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Net Sales of Licensed Product quantities made or imported before termination and sold after termination",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "C2-E34"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C2-E34"
+          ],
+          "text": "Applies where an Earned Royalty would have been due had the Agreement not been terminated"
+        }
+      ],
+      "disclosure_status": "NOT_VERIFIED",
+      "effective_period": "Post-termination",
+      "evidence_ids": [
+        "C2-E34"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": "Licensed Products made or imported before termination",
+      "rate_evidence_ids": [],
+      "rate_unit": "UNKNOWN",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "C2-T06",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Litigation payment for past sales deemed Net Sales",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "C2-E45"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C2-E47",
+            "C2-E45"
+          ],
+          "text": "Applies to recovery in excess of litigation costs in a suit initiated by Combangio"
+        }
+      ],
+      "disclosure_status": "NOT_VERIFIED",
+      "effective_period": null,
+      "evidence_ids": [
+        "C2-E45",
+        "C2-E47"
+      ],
+      "family": "PRODUCT_SALES",
+      "product_scope": null,
+      "rate_evidence_ids": [
+        "C2-E45"
+      ],
+      "rate_unit": "UNKNOWN",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "C2-T07",
+      "territory_scope": null,
+      "tiers": []
+    },
+    {
+      "adjustments": [],
+      "base": "Litigation payment for future sales deemed a payment under a Sublicense",
+      "base_definition": null,
+      "base_evidence_ids": [
+        "C2-E46"
+      ],
+      "conditions": [
+        {
+          "evidence_ids": [
+            "C2-E46"
+          ],
+          "text": "Earned Royalties shared as specified in Article 4 (outside this chunk)"
+        }
+      ],
+      "disclosure_status": "NOT_VERIFIED",
+      "effective_period": null,
+      "evidence_ids": [
+        "C2-E46",
+        "C2-E47"
+      ],
+      "family": "SUBLICENSING_RECEIPTS",
+      "product_scope": null,
+      "rate_evidence_ids": [
+        "C2-E46"
+      ],
+      "rate_unit": "UNKNOWN",
+      "rate_value": null,
+      "structure": "UNKNOWN",
+      "term_id": "C2-T08",
+      "territory_scope": null,
+      "tiers": []
+    }
+  ],
+  "schema_version": "m2.0",
+  "source_text_sha256": "9789a8164bf7da0edd184578c68265f48853681791bcb236fd3bf775967273f1",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1479419/000155837022004624/kala-20211231xex10d18.htm"
+}

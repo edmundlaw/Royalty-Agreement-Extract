@@ -940,11 +940,15 @@ def _finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False)
         if not use_b or prior.get('second_reader_used'): raise FileExistsError('Output already exists; never overwrite a prior result')
         target = root / 'output_checked'
         if target.exists(): raise FileExistsError('Checked output already exists; never overwrite a prior result')
-    first = _merged(readers['reader_a'])
+    from .m13_consolidate import consolidate
+    raw_first = _merged(readers['reader_a'])
     second = _merged(readers['reader_b']) if use_b else None
+    # v0.13.10: the exported first reading is consolidated (duplicate / threshold-variant / reduction terms);
+    # the two-reader comparison uses the RAW readings of both, so it stays symmetrical and unchanged.
+    first, consolidation = consolidate(raw_first)
     first_check = source_check(mapping, first)
     second_check = source_check(mapping, second) if use_b else None
-    comparison = compare_readers(mapping, first, second) if use_b else None
+    comparison = compare_readers(mapping, raw_first, second) if use_b else None
     state = decide_state(first_check, second_check, comparison)
     workspace = root / ('workspace' if target.name == 'output' else 'workspace_checked')
     export_map = mapping
@@ -967,6 +971,11 @@ def _finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False)
         out = Path(td) / target.name; out.mkdir()
         atomic_json(out / 'final_extraction.json', first)
         atomic_json(out / 'source_check.json', first_check)
+        if consolidation:
+            atomic_json(out / 'first_reader_extraction_before_consolidation.json', raw_first)
+            atomic_json(out / 'consolidation.json', {'schema': 'm13-consolidation.1', 'document_id': mapping['document_id'],
+                                                     'terms_before': len(raw_first.get('royalty_terms') or []),
+                                                     'terms_after': len(first.get('royalty_terms') or []), 'notes': consolidation})
         if use_b:
             atomic_json(out / 'second_reader_extraction.json', second)
             atomic_json(out / 'second_reader_source_check.json', second_check)
@@ -991,6 +1000,7 @@ def _finalize(root, *, export_xlsx=True, without_check=False, legacy_xlsx=False)
         out.rename(target)
     return {'status': 'EXPORTED', 'state': state, 'meaning': STATE_MEANING[state],
             'source_check_errors': len(first_check['errors']),
+            'consolidation_notes': len(consolidation),
             'core_differences': comparison['core'] if comparison else None,
             'structure_differences': comparison['structure'] if comparison else None,
             'note_differences': comparison['note'] if comparison else None,
