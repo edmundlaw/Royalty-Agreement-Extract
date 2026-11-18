@@ -91,7 +91,7 @@ class M3WorkspaceTests(unittest.TestCase):
         p.write_text(json.dumps(obj),encoding='utf-8')
         with self.assertRaises(ValueError):list_documents(self.root)
     def test_invalid_url_does_not_create_curated(self):
-        result=self.ingest()
+        self.ingest()
         self.assertFalse(official_sec_url(self.map.get('source_url')))
         self.assertNotIn('Human Reviewed',build_rows(self.root))
     def test_workbook_is_bounded_and_formula_safe(self):
@@ -263,6 +263,17 @@ class ChunkMergeTests(unittest.TestCase):
         merged,_=merge_chunks(self.map,self.packet,outputs)
         self.assertNotIn('other_material_terms',merged['agreement']['field_evidence'])
         self.assertEqual(merged['agreement']['other_material_terms'][0]['evidence_ids'],[eid])
+        extra=first['evidence'][1]['evidence_id']
+        first['agreement']['field_evidence']['other_material_terms']=[eid,extra]
+        merged,_=merge_chunks(self.map,self.packet,outputs)
+        self.assertEqual(merged['agreement']['other_material_terms'][0]['evidence_ids'],[eid])
+        issue=next(i for i in merged['open_issues'] if i['kind']=='UNBOUND_MATERIAL_TERM_EVIDENCE')
+        self.assertIn(extra,issue['description'])
+        self.assertIn(first['evidence'][1]['passage_id'],issue['passage_ids'])
+        first['agreement']['field_evidence']['other_material_terms']=[extra]
+        merged,_=merge_chunks(self.map,self.packet,outputs)
+        self.assertEqual(merged['agreement']['other_material_terms'][0]['evidence_ids'],[eid])
+        self.assertTrue(any(i['kind']=='UNBOUND_MATERIAL_TERM_EVIDENCE' for i in merged['open_issues']))
         first['agreement']['field_evidence']['other_material_terms']=['unknown-evidence']
         with self.assertRaisesRegex(ValueError,'Bad agreement evidence'):
             merge_chunks(self.map,self.packet,outputs)

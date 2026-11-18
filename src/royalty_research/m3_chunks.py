@@ -101,7 +101,8 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
             raise ValueError(f"Cross-chunk duplicate or missing {key}. Do not silently merge economic terms")
     base_fields=agreement_scalar_fields()
     agreement={key:None for key in base_fields}; agreement["field_evidence"]={}; agreement["other_material_terms"]=[]
-    header_conflicts=[]; kept_from={}
+    header_conflicts=[]; unbound_material_refs=[]; kept_from={}
+    known_evidence_ids={e["evidence_id"] for e in chunks_merged["evidence"]}
     for part in ordered:
         part_agreement=part.get("agreement") or {}
         for k in base_fields:
@@ -124,12 +125,15 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
             if material not in agreement["other_material_terms"]: agreement["other_material_terms"].append(material)
         for k,refs in (part_agreement.get("field_evidence") or {}).items():
             if k == "other_material_terms" and isinstance(refs,list):
-                # Material terms carry their own evidence_ids. Some readers also
-                # repeat those IDs here; accept only an exact redundant list.
+                # Individual terms retain their own links. General references that
+                # are not linked to a term need review, not an invented association.
+                if any(not isinstance(eid,str) or not eid or eid not in known_evidence_ids for eid in refs):
+                    raise ValueError("Bad agreement evidence")
                 material_refs={eid for item in (part_agreement.get("other_material_terms") or [])
                                for eid in item.get("evidence_ids",[])}
-                if all(isinstance(eid,str) for eid in refs) and set(refs)==material_refs:
-                    continue
+                extra=list(dict.fromkeys(eid for eid in refs if eid not in material_refs))
+                if extra: unbound_material_refs.append((part["chunk_index"],extra))
+                continue
             if k not in base_fields or not isinstance(refs,list):raise ValueError("Bad agreement evidence")
             agreement["field_evidence"].setdefault(k,[])
             for r in refs:
@@ -154,6 +158,14 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
             "description":(f"Agreement field '{field}' was worded differently by two reading tasks. "
                            f"Kept (task {kept_idx}, the first to give a value): {kept!r}. Task {idx} gave: {other!r}."),
             "passage_ids":[]}]
+    for idx,refs in unbound_material_refs:
+        output["open_issues"].append({
+            "issue_id":stable_id("ISSUE-MERGE","UNBOUND_MATERIAL_EVIDENCE",str(idx)),
+            "severity":"MEDIUM","status":"OPEN","kind":"UNBOUND_MATERIAL_TERM_EVIDENCE",
+            "description":(f"Task {idx} listed general material-term evidence not linked to an "
+                           f"individual term: {', '.join(refs)}. Review its relevance and association."),
+            "passage_ids":list(dict.fromkeys(e["passage_id"] for e in chunks_merged["evidence"]
+                                             if e["evidence_id"] in refs))})
     qc=validate_extraction(mapping,output)
     report={"schema":"m3-chunk-merge.1", "document_id":mapping["document_id"],
             "packet_sha256":sha256(json_bytes(packet)),
