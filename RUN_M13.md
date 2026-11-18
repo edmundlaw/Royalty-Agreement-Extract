@@ -1,4 +1,4 @@
-# M13 v0.13.8 — routine full-source run
+# M13 v0.13.9 — routine full-source run
 
 ## Routine use
 
@@ -17,6 +17,8 @@ Which agreements are read (fixed Python rules, zero AI tokens; full list in `bat
 These rules trade completeness for allowance: a genuine licence with little royalty wording can be skipped. Nothing is deleted; skipped items stay listed.
 
 **Production path:** `scripts/m13_prod.py` prepares a complete source packet for every selected agreement. The `lean_research.py` excerpt path is preliminary triage only. AI output is never certified as contract-complete by Python.
+
+**v0.13.9 workbook notes:** rate cells are real percentages (cell value 0.05, shown 5.00%; use them directly in formulas). `Nature of IA` lists every component of a mixed licence (`MIXED: patent, know-how, trademark/brand`; `(inferred)` or `(keyword hint)` labels say where the list came from). Other terms carry a `Valuation relevance` tier set by Python rules: KEY terms are summarised in sheet 01, sheet 06 lists KEY, SUPPLEMENTARY, then greyed ADMIN rows; unsure terms are SUPPLEMENTARY.
 
 ## Install and prerequisites
 

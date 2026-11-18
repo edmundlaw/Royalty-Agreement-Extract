@@ -16,6 +16,16 @@ def tab(workbook,name,header=1):
     cols=[cell.value for cell in ws[header]]
     return [dict(zip(cols,r)) for r in ws.iter_rows(min_row=header+1,values_only=True) if any(x is not None for x in r)]
 
+def expected_cell(value,unit):
+    """Rows.json keeps percent-points; the workbook cell holds the fraction (5 -> 0.05) for percent units (v0.13.9)."""
+    if isinstance(value,(int,float)) and not isinstance(value,bool) and str(unit or '').upper() in ('PERCENT','PCT'):
+        return round(float(value)/100.0,10)
+    return value
+
+def same_number(a,b):
+    if isinstance(a,(int,float)) and isinstance(b,(int,float)):return abs(float(a)-float(b))<1e-9
+    return a==b
+
 def go(original,research):
     from openpyxl import load_workbook
     w=load_workbook(original,read_only=True,data_only=True)
@@ -43,7 +53,9 @@ def go(original,research):
         for akey,bkey in [('Rate_Numeric','Royalty rate (%)'),('Royalty_Base','Royalty base'),('Family','Royalty family'),
                           ('Product_Scope','Product / field of use'),('Rate_Evidence_IDs','Rate evidence ID'),
                           ('Source_URL','SEC source link'),('QC_State','Document QC')]:
-            if old[id][akey]!=new[id][bkey]:errs.append(f'{id}: {akey} differs')
+            if akey=='Rate_Numeric':
+                if not same_number(expected_cell(old[id][akey],old[id].get('Rate_Unit')),new[id][bkey]):errs.append(f'{id}: {akey} differs')
+            elif old[id][akey]!=new[id][bkey]:errs.append(f'{id}: {akey} differs')
     checks['royalty_observations']=len(b)
     a=tab(w,'Other Payments');b=tab(v,names[2],7)
     old={r['Payment_ID']:r for r in a};new={r['Payment ID']:r for r in b}
@@ -68,6 +80,12 @@ def go(original,research):
     new_types=Counter(r['Record type'] for r in mechanics)
     for kind,old_n in old_types.items():
         if old_n !=new_types[kind]:errs.append(f'{kind} rows lost or duplicated: {old_n} vs {new_types[kind]}')
+    old_tiers={(t['Observation_ID'],t['Term_ID'],t['Sequence']):t for t in tab(w,'Tiers')}
+    for r in mechanics:
+        if r['Record type']=='TIER':
+            k=(r['Observation ID'],r['Term ID'],r['Sequence']);src=old_tiers.get(k)
+            if src is None or not same_number(expected_cell(src.get('Rate_Numeric'),src.get('Rate_Unit')),r['Rate numeric']):
+                errs.append(f'Tier {k}: rate numeric differs')
     checks['mechanics']=dict(new_types)
     q=tab(v,names[4],7)
     for typ,src in [('READER_CHECK','Reader Check'),('READER_DIFFERENCE','Reader Differences'),

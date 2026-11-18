@@ -37,7 +37,7 @@ HEADERS = {
     NAMES[4]: ['Record type','Document ID','Priority / level','Value or issue ID','Description',
         'First reader / state','Second reader','Passage / issue ID','Section','Source quotation',
         'SEC source link','Analyst action'],
-    NAMES[5]: ['Agreement ID','Document ID','Licensor','Licensee','Category','Text','Evidence IDs',
+    NAMES[5]: ['Agreement ID','Document ID','Licensor','Licensee','Category','Valuation relevance','Text','Evidence IDs',
         'Quotation of first evidence','SEC source link'],
 }
 
@@ -52,12 +52,31 @@ PASS_THROUGH_FAMILIES = {'SUBLICENSING_RECEIPTS'}
 # term sheet); "non-binding" matches, a bare "binding" does not.
 _CONDITIONAL = re.compile(r'term sheet|letter of intent|heads of terms|memorandum of understanding|\bnon-?\s?binding\b|'
                           r'(?<![A-Za-z])conditional|conditions? precedent|subject to[^.;]{0,60}conditions?', re.I)
-_IA_KEYWORDS = (('PATENT', re.compile(r'\bpatents?\b', re.I)),
-                ('TRADEMARK_BRAND', re.compile(r'\btrade ?marks?\b|\bbrand marks?\b', re.I)),
-                ('COPYRIGHT', re.compile(r'\bcopyrights?\b', re.I)),
-                ('SOFTWARE', re.compile(r'\bsoftware\b|\bsource code\b', re.I)),
-                ('KNOW_HOW', re.compile(r'\bknow-?how\b|\btrade secrets?\b', re.I)))
+# Keyword scan for readings that did not list the IP types (label shown in the workbook, regex).
+# Several types can match; every matched type is listed (v0.13.9).
+_IA_KEYWORDS = (('PATENT','patent',re.compile(r'\bpatents?\b',re.I)),
+                ('KNOW_HOW','know-how/trade secret',re.compile(r'\bknow-?how\b|\btrade secrets?\b',re.I)),
+                ('TECHNOLOGY','technology/technical information',
+                 re.compile(r'\btechnical (?:information|data)\b|\b(?:licensed|proprietary|unpatented|patented) technolog(?:y|ies)\b|\btechnology licen[cs]es?\b',re.I)),
+                ('SOFTWARE','software/source code',re.compile(r'\bsoftware\b|\bsource code\b',re.I)),
+                ('COPYRIGHT','copyright',re.compile(r'\bcopyrights?\b',re.I)),
+                ('TRADEMARK_BRAND','trademark/brand/trade name/logo',
+                 re.compile(r'\btrade ?marks?\b|\bbrand marks?\b|\btrade names?\b|\blogos?\b|\bservice marks?\b',re.I)),
+                ('FRANCHISE','franchise',re.compile(r'\bfranchis(?:e|es|ed|ing)\b',re.I)))
+# Short label per enum value for a reader's own components list.
+_IA_LABELS = {'PATENT':'patent','KNOW_HOW':'know-how','TECHNOLOGY':'technology','SOFTWARE':'software','COPYRIGHT':'copyright',
+              'TRADEMARK_BRAND':'trademark/brand','TRADE_SECRET':'trade secret','FRANCHISE':'franchise'}
 _RELATED = re.compile(r'related[- ]part(?:y|ies)|affiliated (?:entit(?:y|ies)|parties|companies)', re.I)
+
+
+PERCENT_UNITS = ('PERCENT','PCT')
+RATE_COLUMNS = ('Royalty rate (%)','Rate numeric')   # sheet 01 and sheet 02 rate cells
+RATE_NUMBER_FORMAT = '0.00%'
+
+
+def percent_points_to_fraction(value):
+    """5 (percent-points) -> 0.05, rounded so 0.1 + float noise never reaches the cell."""
+    return round(float(value)/100.0,10)
 
 
 def _short(text, limit=SHORT_LIMIT):
@@ -66,15 +85,115 @@ def _short(text, limit=SHORT_LIMIT):
 
 
 def _ia_keyword_hint(texts):
-    """Labelled fallback only: keyword scan of cited evidence text. Returns (nature, detail) or None."""
+    """Labelled fallback only: keyword scan of cited evidence text.
+
+    Returns (nature, labels, detail) or None. nature is the single matched type, or 'MIXED' when
+    several types match; labels lists ALL matched types (v0.13.9).
+    """
     found={}
-    for label,rx in _IA_KEYWORDS:
+    for key,label,rx in _IA_KEYWORDS:
         for t in texts:
             m=rx.search(t or '')
-            if m:found.setdefault(label,m.group(0).lower());break
+            if m:found.setdefault(key,(label,m.group(0).lower()));break
     if not found:return None
     nature=next(iter(found)) if len(found)==1 else 'MIXED'
-    return nature,'Keyword hint (Python, not the reader): matched '+', '.join(f"'{w}' -> {k}" for k,w in found.items())+' in cited evidence'
+    labels=[v[0] for v in found.values()]
+    return nature,labels,'Keyword hint (Python, not the reader): matched '+', '.join(f"'{w}' -> {k}" for k,(_l,w) in found.items())+' in cited evidence'
+
+
+def _ia_components(agreement):
+    """The reader's own components list as labels (deduplicated, reader order); unknown values are ignored."""
+    raw=agreement.get('licensed_ip_components')
+    if not isinstance(raw,list):return []
+    out=[]
+    for c in raw:
+        label=_IA_LABELS.get(c)
+        if label and label not in out:out.append(label)
+    return out
+
+
+# --- Other material terms: valuation relevance (Python only, v0.13.9) -------
+KEY,SUPPLEMENTARY,ADMIN='KEY','SUPPLEMENTARY','ADMIN'
+TIER_ORDER={KEY:0,SUPPLEMENTARY:1,ADMIN:2}
+_CF=re.S|re.I
+# Rules, applied in this order; the first that matches decides. Unsure -> SUPPLEMENTARY (never dropped).
+#  1. KEY keywords (label shown in the sheet-01 summary): asset/scope/field, exclusivity, royalty base,
+#     step-downs/offsets/stacking, minimums/diligence, term/termination rights such as "no sales within 5
+#     years", costs borne by the licensee (prosecution/maintenance), sublicensing economics,
+#     most-favoured terms, change of control with an economic effect.
+#  2. STRONG ADMIN keywords (publicity, use of the licensor's name, counterparts, entire agreement, headings,
+#     severability): ADMIN.
+#  3. WEAK ADMIN keywords (notices, confidentiality, waiver, force majeure, ...): ADMIN only for the reader's
+#     category OTHER and when the text does not talk about termination or expiry.
+#  4. The reader's category: SCOPE, EXCLUSIVITY, SUBLICENSING, TERMINATION, RENEWAL -> KEY (an insolvency /
+#     bankruptcy clause -> SUPPLEMENTARY); everything else (ASSIGNMENT, AUDIT_REPORTING, OTHER; i.e. payment
+#     mechanics, currency/FX, reporting, audit, insolvency, assignment/transfer restrictions, governing law,
+#     warranties/indemnities and anything unsure) -> SUPPLEMENTARY.
+#  In AUDIT_REPORTING and ASSIGNMENT clauses the royalty-base/scope/exclusivity/sublicensing keywords are
+#  ignored (an audit clause mentioning 'net sales' is not a royalty-base term).
+_ECON=r'(?:royalt|payment|fee|milestone|rate|consideration|accelerat)'
+_KEY_RULES=(
+    ('TERM/TERMINATION',re.compile(r'terminat\w*[^.;]{0,120}\b(?:no|without|failure|fail\w*|not)\b[^.;]{0,60}(?:sales?|launch|commerciali[sz]\w*)'
+                                   r'|\b(?:no|without|absence of)\s+(?:commercial\s+)?sales\b[^.;]{0,80}(?:terminat|within)',_CF)),
+    ('COSTS',re.compile(r'\b(?:prosecution|maintenance|enforcement)\b[^.;]{0,80}\b(?:costs?|expenses?|fees?)\b'
+                        r'|\b(?:costs?|expenses?)\b[^.;]{0,60}\b(?:borne|paid|reimburs\w+)\b[^.;]{0,40}\b(?:licensee|licensor)\b'
+                        r'|\b(?:licensee|licensor)\b[^.;]{0,40}\b(?:bear|pay|reimburse)\w*\b[^.;]{0,60}\b(?:costs?|expenses?)\b',_CF)),
+    ('DILIGENCE',re.compile(r'\bdiligence\b|\bminimum (?:annual |royalt|payment|sales|purchase)|\bcommercially reasonable efforts\b|\bmilestone\b',_CF)),
+    ('STEP-DOWN/OFFSET',re.compile(r'\bstep[- ]?downs?\b|\breduc\w+\b[^.;]{0,60}\b(?:royalt|rate)|\b(?:royalt\w*|rate)\b[^.;]{0,60}\breduc\w+|\boffsets?\b|\bcredits? against\b|\bstacking\b|\bdeduct\w*\b[^.;]{0,60}\broyalt',_CF)),
+    ('ROYALTY BASE',re.compile(r'\bnet sales\b|\broyalty (?:base|rate|computation|calculation|term)\b|\bcalculat\w+ (?:of )?(?:the )?royalt',_CF)),
+    ('SUBLICENSING',re.compile(r'\bsub-?licens\w+\b[^.;]{0,100}\b(?:income|revenue|receipts?|consideration|royalt\w*|share|percent|%)|\b(?:income|revenue|receipts?|consideration|royalt\w*|share)\b[^.;]{0,100}\bsub-?licens',_CF)),
+    ('MOST-FAVOURED',re.compile(r'\bmost[- ]favou?red\b',_CF)),
+    ('CHANGE OF CONTROL',re.compile(r'change (?:of|in) control[^.;]{0,200}'+_ECON+r'|'+_ECON+r'[^.;]{0,200}change (?:of|in) control',_CF)),
+    ('EXCLUSIVITY',re.compile(r'\bexclusiv\w*\b|\bsole licen[cs]e\b',_CF)),
+    ('SCOPE',re.compile(r'\bfield of use\b|\blicensed (?:products?|patents?|technolog\w+|ip|intellectual property|marks?|rights)\b|\bterritory\b|\bscope of (?:the )?licen[cs]e\b',_CF)),
+)
+_STRONG_ADMIN=re.compile(r'\b(?:publicity|press releases?|public announcements?|counterparts?|entire agreement|headings?|severab\w+|further assurances)\b'
+                         r'|\buse of (?:the )?(?:licensor|licensee|either party|a party|its|their|\w+.s)\b[^.;]{0,30}\b(?:name|names|logos?|marks?)\b[^.;]{0,80}\b(?:publicity|advertis\w+|promot\w+|marketing|press)',_CF)
+_WEAK_ADMIN=re.compile(r'\bnotices?\b|\bconfidential\w*\b|\bwaivers?\b|\bforce majeure\b|\bindependent contractors?\b|\bamend\w* in writing\b|\bsurviv\w+\b',_CF)
+_KEY_CATEGORIES={'SCOPE':'SCOPE','EXCLUSIVITY':'EXCLUSIVITY','SUBLICENSING':'SUBLICENSING','TERMINATION':'TERM/TERMINATION','RENEWAL':'TERM/TERMINATION'}
+_CATEGORY_SENSITIVE=('ROYALTY BASE','SCOPE','EXCLUSIVITY','SUBLICENSING')
+_TERM_TALK=re.compile(r'terminat|expir|renew',re.I)
+
+
+def classify_other_term(category, text):
+    """Python-only valuation relevance of one other_material_term: returns (tier, label).
+
+    tier is KEY, SUPPLEMENTARY or ADMIN; label is a short heading used in the sheet-01 summary.
+    Rules and their order are documented above. When unsure -> SUPPLEMENTARY.
+    """
+    cat=str(category or 'OTHER').upper(); body=str(text or '')
+    for label,rx in _KEY_RULES:
+        if label in _CATEGORY_SENSITIVE and cat in ('AUDIT_REPORTING','ASSIGNMENT'):continue   # e.g. 'net sales' inside an audit clause
+        if rx.search(body):return KEY,label
+    if _STRONG_ADMIN.search(body):return ADMIN,'ADMIN'
+    if cat=='OTHER' and _WEAK_ADMIN.search(body) and not _TERM_TALK.search(body):return ADMIN,'ADMIN'
+    if cat in _KEY_CATEGORIES:
+        # A termination clause that is only about insolvency stays supplementary.
+        if re.search(r'insolven|bankrupt',body,re.I):return SUPPLEMENTARY,cat
+        return KEY,_KEY_CATEGORIES[cat]
+    return SUPPLEMENTARY,cat
+
+
+def key_terms_summary(material, limit=120):
+    """Sheet-01 text: only KEY terms, as category labels plus a count; at most `limit` characters."""
+    if not material:return 'none recorded'
+    labels=[];n=0;other=0
+    for m in material:
+        tier,label=classify_other_term(m.get('category'),m.get('text'))
+        if tier==KEY:
+            n+=1
+            if label not in labels:labels.append(label)
+        else:other+=1
+    if not n:return _short(f'no key terms ({other} other term{"" if other==1 else "s"}) \u2013 see sheet 06',limit)
+    tail=f' ({n} key term{"" if n==1 else "s"}) \u2013 see sheet 06'
+    head=', '.join(labels)
+    if len(head)+len(tail)>limit:
+        keep=[]
+        for lab in labels:
+            if len(', '.join(keep+[lab]))+len(', ...')+len(tail)<=limit:keep.append(lab)
+            else:break
+        head=', '.join(keep)+', ...'
+    return head+tail
 
 
 def _related_hint(texts):
@@ -257,12 +376,24 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
         nature=agreement.get('licensed_ip_nature')
         nature='NOT_ASSESSED' if nature is None else nature
         ia_detail=agreement.get('licensed_ip_nature_details')
-        if nature=='UNDETERMINED' or (nature=='NOT_ASSESSED' and agreement):
-            hint=_ia_keyword_hint(field_ev('licensed_ip','licensed_ip_nature','licensed_ip_nature_details','duration'))
+        inferred_basis=agreement.get('licensed_ip_nature_basis')=='INFERRED'
+        components=_ia_components(agreement)
+        ia_texts=lambda:field_ev('licensed_ip','licensed_ip_nature','licensed_ip_components','licensed_ip_nature_details','duration')
+        if nature=='MIXED':
+            if components:   # the reader's own list
+                nature='MIXED: '+', '.join(components)+(' (inferred)' if inferred_basis else '')
+            else:            # reader said MIXED without listing; add the components as a labelled keyword hint
+                hint=_ia_keyword_hint(ia_texts())
+                if hint:
+                    nature='MIXED: '+', '.join(hint[1])+' (keyword hint)'
+                    ia_detail=(str(ia_detail)+' | ' if ia_detail else '')+hint[2]
+                elif inferred_basis:nature='MIXED (inferred)'
+        elif nature=='UNDETERMINED' or (nature=='NOT_ASSESSED' and agreement):
+            hint=_ia_keyword_hint(ia_texts())
             if hint:  # never overrides a reader's own non-UNDETERMINED value
-                nature=f'{hint[0]} (keyword hint)'
-                ia_detail=(str(ia_detail)+' | ' if ia_detail else '')+hint[1]
-        elif nature not in ('NOT_ASSESSED','UNDETERMINED') and agreement.get('licensed_ip_nature_basis')=='INFERRED':
+                nature=(f'MIXED: {", ".join(hint[1])}' if hint[0]=='MIXED' else hint[0])+' (keyword hint)'
+                ia_detail=(str(ia_detail)+' | ' if ia_detail else '')+hint[2]
+        elif nature!='NOT_ASSESSED' and inferred_basis:
             nature=f'{nature} (inferred)'
         related=agreement.get('related_party')
         if related is None:
@@ -279,9 +410,8 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
         license_text=doc.get('Licensed_IP') or agreement.get('licensed_ip')
         rights=agreement.get('sublicensing_rights') or 'NOT_ASSESSED'
         material=agreement.get('other_material_terms') or []
-        cats=sorted({str(m.get('category','OTHER')) for m in material})
         n_cond=len(conditions.get((did,t['Term_ID']),[])); n_adj=len(adjustments.get((did,t['Term_ID']),[]))
-        summary=(', '.join(cats)+f' ({len(material)} term{"" if len(material)==1 else "s"}) \u2013 see sheet 06') if material else 'none recorded'
+        summary=key_terms_summary(material)   # KEY terms only (short); everything stays in sheet 06
         if n_cond or n_adj:summary+=f'; {n_cond} condition(s), {n_adj} adjustment(s) \u2013 see sheet 02'
         summary=_short(summary,120)
         payments_present=payments_by_doc.get(did,[])
@@ -305,12 +435,13 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
             upfront_hint,summary,payment_ids,rate_ids,quote,
             t.get('Source_URL'),t.get('Disclosure_Status'),doc.get('Second_AI_Review_Status'),
             t.get('QC_State'),action,t.get('Agreement_ID'),did,
-            _join(field_refs.get('licensed_ip_nature')),_join(field_refs.get('sublicensing_rights')),
+            _join(list(dict.fromkeys(_ids(field_refs.get('licensed_ip_nature'))+_ids(field_refs.get('licensed_ip_components'))))),_join(field_refs.get('sublicensing_rights')),
             _join(field_refs.get('exclusivity')),
             _join(field_refs.get('exclusivity_scope')),
             _join([x for m in material for x in (m.get('evidence_ids') or [])]),
             ia_detail,doc.get('Contract_Status'),exclusivity_scope])
 
+    other_terms=[]
     for did,ex in first_readings.items():
         agreement=(ex or {}).get('agreement') or {}
         doc=docs.get(did,{})
@@ -319,9 +450,12 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
         for m in agreement.get('other_material_terms') or []:
             ids=[str(x) for x in (m.get('evidence_ids') or [])]
             quote=(evid_by_doc.get((did,ids[0])) or {}).get('Exact_Quotation') if ids else ''
-            result[NAMES[5]].append([first_term.get('Agreement_ID'),did,agreement.get('licensor') or doc.get('Licensor'),
-                agreement.get('licensee') or doc.get('Licensee'),m.get('category','OTHER'),m.get('text'),
-                _join(ids),quote,doc.get('Source_URL') or first_term.get('Source_URL')])
+            tier,_label=classify_other_term(m.get('category'),m.get('text'))
+            other_terms.append((TIER_ORDER[tier],[first_term.get('Agreement_ID'),did,agreement.get('licensor') or doc.get('Licensor'),
+                agreement.get('licensee') or doc.get('Licensee'),m.get('category','OTHER'),tier,m.get('text'),
+                _join(ids),quote,doc.get('Source_URL') or first_term.get('Source_URL')]))
+    # KEY first, then SUPPLEMENTARY, then ADMIN; stable inside a tier (sorted() keeps reading order).
+    result[NAMES[5]].extend(row for _rank,row in sorted(other_terms,key=lambda x:x[0]))
 
     for row in _records(rows,'Tiers'):
         result[NAMES[1]].append(['TIER',row.get('Observation_ID'),row.get('Term_ID'),row.get('Sequence'),
@@ -456,7 +590,7 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
         raise RuntimeError('M13 research XLSX needs the existing optional openpyxl dependency') from exc
     sheets=research_rows(legacy_rows,first_readings,source_texts,source_errors)
     wb=Workbook();wb.remove(wb.active)
-    orange='FD5108'; gray='DFE3E6'; light='F5F7F8'; black='000000'
+    orange='FD5108'; gray='DFE3E6'; light='F5F7F8'; black='000000'; grey='808080'
     for idx,(name,matrix) in enumerate(sheets.items()):
         ws=wb.create_sheet(name)
         ws.sheet_view.showGridLines=False
@@ -476,12 +610,12 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
                'One record per extracted fee or guarantee; totals may duplicate component amounts',
                'Original quotations and passage identifiers; do not replace with paraphrases',
                'Machine source checks and reader differences when a second reading was used',
-               'Full text of each other material term recorded by the reader; sheet 01 shows only a short summary'][idx]
+               'Other material terms by valuation relevance (KEY, SUPPLEMENTARY, ADMIN; Python rules, not the reader); sheet 01 summarises only the KEY terms'][idx]
         ws.cell(3,1,intro).font=Font(name='Arial',size=10,color=black)
         ws.merge_cells(start_row=3,start_column=1,end_row=3,end_column=min(n,9))
         ws.cell(4,1,f'{len(matrix)-1} records | source-document-specific | no unverified assumptions auto-filled').font=Font(name='Arial',size=10,bold=True,color=black)
         ws.merge_cells(start_row=4,start_column=1,end_row=4,end_column=min(n,9))
-        ws.cell(5,1,('Missing fee categories = NOT_ASSESSED (not zero); agreement-level fees repeat on rate rows, NEVER SUM. Rates: 30 = 30%. '
+        ws.cell(5,1,('Missing fee categories = NOT_ASSESSED (not zero); agreement-level fees repeat on rate rows, NEVER SUM. Rates are real percentages (30% is stored as 0.30). '
                      'Reader agreement is not proof of recall.' if idx==0 else
                      'Full unmodified M13 technical evidence remains in rows.json and optional Detailed XLSX.')).font=Font(name='Arial',size=10,color=black)
         ws.merge_cells(start_row=5,start_column=1,end_row=5,end_column=min(n,9))
@@ -497,16 +631,22 @@ def write_research_xlsx(legacy_rows: dict, destination, first_readings: dict | N
             if title in ('Royalty rate (%)','Rate numeric','Amount numeric'):width=16
             ws.column_dimensions[get_column_letter(c)].width=min(width,45)
         ws.row_dimensions[7].height=37
+        rate_cols={c for c,h in enumerate(matrix[0],1) if h in RATE_COLUMNS}
+        unit_col=matrix[0].index('Rate unit') if 'Rate unit' in matrix[0] else 0
         for ridx,row in enumerate(matrix[1:],8):
             ws.row_dimensions[ridx].height=33 if idx in (0,4) else 30
+            admin_row=idx==5 and row[5]==ADMIN
             for c,val in enumerate(row,1):
                 cell=ws.cell(ridx,c,_clean(val))
                 if isinstance(cell.value,str):cell.data_type='s'
-                cell.font=Font(name='Arial',size=10,color=black)
+                cell.font=Font(name='Arial',size=10,color=(grey if admin_row else black))
                 cell.alignment=Alignment(vertical='center',wrap_text=True)
-                if idx==0 and c==4 and isinstance(cell.value,(int,float)):
-                    # Rates are stored as percent-points (30 means 30%).
-                    cell.number_format='0.0"%"'
+                if c in rate_cols and isinstance(cell.value,(int,float)) and not isinstance(cell.value,bool) \
+                        and str(row[unit_col] or '').upper() in PERCENT_UNITS:
+                    # Excel cell holds the real fraction (5 percent-points -> 0.05, shown 5.00%).
+                    # Rows.json / CSV keep percent-points; per-unit amounts, FORMULA, UNKNOWN stay as they are.
+                    cell.value=percent_points_to_fraction(cell.value)
+                    cell.number_format=RATE_NUMBER_FORMAT
                 if ridx%2==1:cell.fill=PatternFill('solid',fgColor=light)
                 # A subtle separator every fifth row rather than an orange grid.
                 if (ridx-7)%5==0:

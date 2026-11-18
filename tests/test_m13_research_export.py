@@ -73,7 +73,7 @@ class ResearchRows(unittest.TestCase):
         row=dict(zip(v[NAMES[0]][0],v[NAMES[0]][1]))
         self.assertEqual(row['Nature of IA'],'PATENT')
         self.assertIn('Requires prior written consent',row['Sublicensing rights'])
-        self.assertEqual(row['Other material terms'],'TERMINATION (1 term) \u2013 see sheet 06; 1 condition(s), 1 adjustment(s) \u2013 see sheet 02')
+        self.assertEqual(row['Other material terms'],'TERM/TERMINATION (1 key term) \u2013 see sheet 06; 1 condition(s), 1 adjustment(s) \u2013 see sheet 02')
         t6=v[NAMES[5]]
         self.assertEqual(len(t6)-1,1)
         self.assertEqual(dict(zip(t6[0],t6[1]))['Text'],'Termination for cause')
@@ -226,8 +226,9 @@ class ResearchRows(unittest.TestCase):
             self.assertEqual(s['A1'].font.name,'Georgia')
             self.assertEqual(s['A7'].font.name,'Arial')
             self.assertEqual(s['A7'].border.bottom.color.rgb[-6:].upper(),'FD5108')
-            self.assertEqual(s['D8'].value,3.5)
+            self.assertEqual(s['D8'].value,0.035)
             self.assertIsInstance(s['D8'].value,float)
+            self.assertEqual(s['D8'].number_format,'0.00%')
 
 
 class AdditionalSourceEvidence(unittest.TestCase):
