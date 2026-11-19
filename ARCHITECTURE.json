@@ -1,0 +1,33 @@
+{
+  "title": "Royalty Agreement Extract",
+  "views": {
+    "main": {
+      "nodes": [
+        {"id": "prepare", "label": "SEC preparation", "s": "built", "d": {
+          "what": "Prepare the text of one screened SEC exhibit for a single reading.",
+          "how": "Use the existing SEC parser, numbered passages and licence screening. Save the source, the effective 2023 GICS reference and the complete prompt.",
+          "why": "Keep each agreement's surrounding terms and schedules available in the same reading.",
+          "assume": ["The summary route accepts one exhibit URL or a date range through the existing SEC discovery and candidate order."],
+          "tech": "Python", "metrics": [], "built": "2026-11",
+          "open": ["Embedded images are recorded as unread. Prompts beyond the existing CLI bound are reported."], "conn": ["SEC EDGAR"]
+        }},
+        {"id": "read", "label": "Agreement reading", "s": "built", "d": {
+          "what": "Produce one structured commercial terms summary per agreement, with source evidence.",
+          "how": "Send the saved prompt to the existing ChatGPT-signed-in Codex CLI and save its raw answer.",
+          "why": "Preserve agreement boundaries and make the reader's answers inspectable before Excel mapping.",
+          "assume": [], "tech": "Codex CLI, JSON", "metrics": [], "built": "2026-11",
+          "open": [], "conn": ["ChatGPT"]
+        }},
+        {"id": "write", "label": "Excel export", "s": "built", "d": {
+          "what": "Map each saved agreement to one row on the Agreement Summary sheet.",
+          "how": "Map reader fields into 16 columns, with material qualifications and references together in one cell. Expand the selected GICS code through its official names. Store the full raw response separately.",
+          "why": "Keep all terms for an agreement together and distinguish percentage from per-unit rates.",
+          "assume": ["The legacy launcher is a separate entry point."],
+          "tech": "Python, openpyxl", "metrics": [], "built": "2026-11",
+          "open": [], "conn": []
+        }}
+      ],
+      "edges": [["prepare", "read", "Full text prompt"], ["read", "write", "Saved reader response"]]
+    }
+  }
+}
