@@ -48,6 +48,34 @@ def fixture_rows():
 
 
 class ResearchRows(unittest.TestCase):
+    def test_blank_disclosed_rate_uses_only_clear_own_evidence(self):
+        raw=fixture_rows(); term=raw['Royalty Terms'][1]; th=raw['Royalty Terms'][0]
+        for k,v in {'Rate_Value_Text':None,'Rate_Numeric':None,'Rate_Unit':'UNKNOWN',
+                    'Disclosure_Status':'DISCLOSED','QC_State':'SINGLE_READER_NOT_CHECKED'}.items(): term[th.index(k)]=v
+        raw['Tiers']=raw['Tiers'][:1]
+        ev=raw['Evidence'][1]; eh=raw['Evidence'][0]
+        def row(quote):
+            ev[eh.index('Exact_Quotation')]=quote
+            out=research_rows(raw)
+            return dict(zip(out[NAMES[0]][0],out[NAMES[0]][1]))
+        grant='TSE hereby grants Sponsor a non-exclusive and non-transferable license to use the TSE Marks on a royalty-free basis, exclusively for the purpose of promoting Sponsor’s affiliation with TSE in advertising, promotional activities or materials.'
+        recipient='Sponsor will not receive royalties or other consideration from the sale of Licensed Products, other goods or any other licenses granted herein.'
+        for quote, label in [(grant,'On a royalty-free basis'),(recipient,'Sponsor will not receive royalties')]:
+            r=row(quote); self.assertIn(label,r['Royalty rate as reported']); self.assertEqual(r['Usable for royalty benchmark'],'NO')
+            self.assertNotIn('rate not disclosed',r['Benchmark note']); self.assertIsNone(r['Royalty rate (%)'])
+        for quote in ['The license is not on a royalty-free basis.', 'If sales cease, the license is on a royalty-free basis.',
+                      'The license is on a royalty-free basis but royalties are payable elsewhere.', 'No license is granted on a royalty-free basis.', 'Sponsor will not receive royalties. Royalties are payable to TSE.',
+                      'The license is on a royalty-free basis after payment of 5%.', 'The license is on a royalty-free basis [*].',
+                      'A royalty-free basis is mentioned.']:
+            r=row(quote); self.assertFalse(r['Royalty rate as reported'],quote); self.assertIn('rate not disclosed',r['Benchmark note'])
+        ev[eh.index('Exact_Quotation')]=grant
+        for field,value in [('Disclosure_Status','REDACTED'),('Rate_Value_Text','5%'),('Rate_Numeric',5),('Structure','TIERED')]:
+            old=term[th.index(field)]; term[th.index(field)]=value
+            r=row(grant); self.assertNotEqual(r['Royalty rate as reported'],'On a royalty-free basis (see rate evidence)')
+            term[th.index(field)]=old
+        raw['Tiers'].append([{'Document_ID':'DOC-DEMO','Term_ID':'R1'}.get(k) for k in raw['Tiers'][0]])
+        self.assertFalse(row(grant)['Royalty rate as reported'])
+
     def test_revenue_share_rules_preserve_real_and_undisclosed_rates(self):
         term={'Family':'REVENUE_SHARE','Rate_Numeric':5,'Rate_Unit':'PERCENT','Disclosure_Status':'DISCLOSED'}
         self.assertEqual(benchmark_usable(term,'NOT_STATED',None)[0],'YES')

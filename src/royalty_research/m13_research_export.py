@@ -226,8 +226,38 @@ def _royalty_free_value(value):
     return bool(re.fullmatch(r'\s*royalty[ -]free(?:\s+licen[cs]e)?\s*[.]?\s*',str(value or ''),re.I))
 
 
+def _source_free_display(term, tiers, quotes):
+    """Display only explicit, unconditional free terms from this row's rate evidence."""
+    if (term.get('Structure') != 'FLAT' or term.get('Disclosure_Status') != 'DISCLOSED'
+            or str(term.get('Rate_Unit') or '').upper() != 'UNKNOWN'
+            or term.get('Rate_Numeric') not in (None, '') or term.get('Rate_Value_Text') not in (None, '')
+            or tiers or not quotes):
+        return None
+    labels=[]
+    for quote in quotes:
+        q=str(quote or '').strip()
+        # Refuse mixed, conditional, redacted or negated wording rather than infer its effect.
+        if (not q or re.search(r'\[\s*\*\s*\]|\d|%|\b(?:if|unless|until|except|provided|subject to|however|but|otherwise|after|before)\b', q, re.I)
+                or re.search(r'\b(?:not|never|no longer)\s+(?:on\s+)?(?:a\s+)?royalty[ -]free\b', q, re.I)):
+            return None
+        recipient=re.search(r'\b([A-Za-z][A-Za-z &.]*?)\s+will not receive royalties(?:\s+or\s+other consideration)?\b', q, re.I)
+        grant=(re.search(r'\bon a royalty[ -]free basis\b', q, re.I)
+               and re.search(r'\b(?:grants?|licen[cs]e|right to utilize)\b', q, re.I))
+        remainder=q[:recipient.start()]+q[recipient.end():] if recipient else q
+        if re.search(r'\b(?:not|never|no|neither|nor|royalties?\s+(?:will|shall|are|is)\s+(?:be\s+)?(?:paid|payable|due))\b', remainder, re.I):
+            return None
+        if recipient:
+            label=f"{recipient.group(1).strip()} will not receive royalties (see rate evidence)"
+        elif grant:
+            label='On a royalty-free basis (see rate evidence)'
+        else:
+            return None
+        if label not in labels: labels.append(label)
+    return '; '.join(labels)
+
+
 def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc_state=None, record_errors=None,
-                     tier_summary=None, unresolved=False, period_limited=None, rate_quotes=()):
+                     tier_summary=None, unresolved=False, period_limited=None, rate_quotes=(), source_free_display=None):
     """Python rule, zero AI. Returns ('YES'|'NO', note). Any one reason makes it NO.
 
     nature is the reader's own licensed_ip_nature; grant_found is True/False when the source text was
@@ -260,7 +290,9 @@ def benchmark_usable(term, related, status, *, nature=None, grant_found=None, qc
                       and term.get('Disclosure_Status') not in ('REDACTED','AMBIGUOUS','NOT_VERIFIED')
                       and bool(re.search(r'\b(?:litigation|lawsuit|infringement action)\b',str(term.get('Royalty_Base') or ''),re.I))
                       and any(re.search(r'\b(?:divided|split|shared)\s+equally\b|\b(?:equal|50[ /-]50)\s+(?:share|split)',str(q or ''),re.I) for q in rate_quotes))
-    if rate in (None,'') and _royalty_free_value(term.get('Rate_Value_Text')):
+    if source_free_display:
+        reasons.append('source states '+source_free_display+'; not a royalty benchmark')
+    elif rate in (None,'') and _royalty_free_value(term.get('Rate_Value_Text')):
         reasons.append('royalty-free licence, not a royalty benchmark')
     elif unresolved:
         reasons.append('unresolved cross-chunk duplicate \u2013 see sheet 05')
@@ -802,12 +834,13 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
                                    + list(source_texts.get(did) or []))
                 if word:related=f'YES (keyword hint: "{word}")'
         tier_text=_tier_summary(tiers_by_term.get((did,t.get('Term_ID')),[])) if t.get('Disclosure_Status') not in ('AMBIGUOUS','NOT_VERIFIED') else None
+        source_free=_source_free_display(t,tiers_by_term.get((did,t.get('Term_ID')),[]),quotes_of_term(t))
         grant_text=' '.join(list(source_texts.get(did) or [])+[e.get('Exact_Quotation') or '' for (d_,_i),e in evid_by_doc.items() if d_==did])
         usable,usable_note=benchmark_usable(t,related,doc.get('Contract_Status'),nature=agreement.get('licensed_ip_nature'),
                                             grant_found=(grant_hits(grant_text)>0 if grant_text.strip() else None),
                                             qc_state=t.get('QC_State') or doc.get('Extraction_Status'),
                                             record_errors=_record_error_codes(t.get('Term_ID'),(source_errors or {}).get(did)),
-                                            tier_summary=tier_text,unresolved=(did,t.get('Term_ID')) in unresolved_terms,rate_quotes=quotes_of_term(t),
+                                            tier_summary=tier_text,unresolved=(did,t.get('Term_ID')) in unresolved_terms,rate_quotes=quotes_of_term(t), source_free_display=source_free,
                                             period_limited=((pl_wording[(did,t.get('Term_ID'))],
                                                              obs_of[pl_link[(did,t.get('Term_ID'))][1]] if pl_link[(did,t.get('Term_ID'))][0]=='base' else None)
                                                             if pl_wording.get((did,t.get('Term_ID'))) else None))
@@ -859,7 +892,7 @@ def research_rows(rows: dict, first_readings: dict | None = None, source_texts: 
                 exclusivity_refs=scope_refs=_join(refs)
         rate_ids=_join(t.get('Rate_Evidence_IDs'))
         quote=shown_quote(_best_evidence(_ids(t.get('Rate_Evidence_IDs')),did,evid_by_doc,t.get('Rate_Value_Text')))
-        rate_reported=_reported_rate(t,tiers_by_term.get((did,t.get('Term_ID')),[]))
+        rate_reported=source_free or _reported_rate(t,tiers_by_term.get((did,t.get('Term_ID')),[]))
         action='Review CORE differences' if doc.get('Extraction_Status')=='TWO_READERS_DIFFER' else 'Point-of-use source review'
         result[NAMES[0]].append([
             t.get('Observation_ID'),nature,license_text,_percent_cell(t),per_unit_rate(t,quotes_of_term(t)),usable,usable_note,pl_cell,link_cell,rate_reported,t.get('Family'),t.get('Structure'),
