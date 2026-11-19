@@ -180,15 +180,20 @@ def batch(candidates, root, *, user_agent, mode, engine, model, check_engine=Non
 def run_boundary(runs, *, max_calls, max_prompt_chars, max_reported_tokens=None, max_retries=0, execute=False,
                  confirm_subscription=False,confirm_credit_controls=False,timeout=900):
     """One bounded Python invocation. Never waits/polls or automatically retries."""
-    if not 1<=max_calls<=1000 or max_prompt_chars<1000:raise ValueError('Invalid call/prompt budget')
+    if max_calls<1 or max_prompt_chars<1000:raise ValueError('Invalid call/prompt budget')
     if not 0<=max_retries<=10:raise ValueError('Invalid retry budget')
     if max_reported_tokens is not None and max_reported_tokens<1:raise ValueError('Invalid token budget')
-    outcomes=[]
+    outcomes=[];calls_attempted=0
+    if any(Path(runs).glob('*/reader_*/limit_stop.json')):
+        print('A subscription limit stop is active; check the account reset before m4-clear-limit.', file=sys.stderr, flush=True)
+        return {'calls_attempted':0,'outcomes':[{'status':'STOPPED_LIMIT_OR_BILLING_SIGNAL'}]}
     reported=0;unknown=False
-    for receipt in Path(runs).glob('*/reader_*/results/*.receipt.json'):
-        u=read_json(receipt).get('usage') or {}
-        if not u:unknown=True
-        reported+=sum(v for k,v in u.items() if k in {'input_tokens','output_tokens'} and isinstance(v,int))
+    if max_reported_tokens is not None:
+        for receipt in Path(runs).glob('*/reader_*/results/*.receipt.json'):
+            try:u=read_json(receipt).get('usage') or {}
+            except (OSError, ValueError):u={}
+            if not u:unknown=True
+            reported+=sum(v for k,v in u.items() if k in {'input_tokens','output_tokens'} and isinstance(v,int))
     if max_reported_tokens is not None and unknown:
         return {'calls_attempted':0,'outcomes':[{'status':'STOPPED_USAGE_UNAVAILABLE'}]}
     if max_reported_tokens is not None and reported>=max_reported_tokens:
@@ -200,13 +205,22 @@ def run_boundary(runs, *, max_calls, max_prompt_chars, max_reported_tokens=None,
         # Keep reading the SAME agreement until all its tasks are captured (v0.13.7; v0.13.6 made one
         # call per agreement and left multi-chunk agreements half read), then move to the next.
         while True:
-            if len(outcomes)>=max_calls:stop=True;break
-            st=m13.status(root)
+            if execute and calls_attempted>=max_calls:stop=True;break
+            try:
+                st=m13.status(root)
+            except (OSError, ValueError) as exc:
+                outcomes.append({'run':root.name,'status':'STOPPED_INVALID_AGREEMENT','error':str(exc)});break
             if all(v['captured']==v['total'] for v in st['readers'].values()):break
             next_reader=next((name for name,v in st['readers'].items() if v['captured']<v['total']),None)
             if not next_reader:break
             folder=root/next_reader
-            rs=reader_status(folder)
+            try:
+                rs=reader_status(folder)
+            except (OSError, ValueError) as exc:
+                outcomes.append({'run':root.name,'status':'STOPPED_INVALID_AGREEMENT','error':str(exc)});break
+            if rs.get('limit_stopped'):
+                print('A subscription limit stop is active; check the account reset before m4-clear-limit.', file=sys.stderr, flush=True)
+                outcomes.append({'run':root.name,'status':'STOPPED_LIMIT_OR_BILLING_SIGNAL'});stop=True;break
             task=next((t for t in rs['tasks'] if t['state']!='CAPTURED_NOT_QC_APPROVED'),None)
             if task is None:break
             if task['state']!='PENDING':
@@ -222,35 +236,43 @@ def run_boundary(runs, *, max_calls, max_prompt_chars, max_reported_tokens=None,
                 else:
                     print(f'Inspect the reader status and saved output in {folder} before proceeding.',
                           file=sys.stderr, flush=True)
-                if rs.get('limit_stopped'):
-                    print('A subscription limit stop is active; check the account reset before m4-clear-limit.',
-                          file=sys.stderr, flush=True)
-                outcomes.append({'run':root.name,'status':'STOPPED_TASK_REQUIRES_MANUAL_ACTION','task':task['task_id']});stop=True;break
+                outcomes.append({'run':root.name,'status':'STOPPED_TASK_REQUIRES_MANUAL_ACTION','task':task['task_id']});break
             if task['attempts']>=max_retries+1:
                 print(f"Stopped: document {st.get('document_id', root.name)}, {next_reader}, "
                       f"task {task['task_id']} is {task['state']}; its authorized retry exceeds "
                       f"--max-retries {max_retries}. Check for an active reader lock and recoverable "
                       'saved output before proceeding. If neither applies, raise the retry budget to '
                       f"--max-retries {task['attempts']}.", file=sys.stderr, flush=True)
-                outcomes.append({'run':root.name,'status':'STOPPED_RETRY_BUDGET','task':task['task_id']});stop=True;break
+                outcomes.append({'run':root.name,'status':'STOPPED_RETRY_BUDGET','task':task['task_id']});break
             prompt=folder/'prompts'/(task['task_id']+'.txt')
-            if len(prompt.read_text())>max_prompt_chars:
-                outcomes.append({'run':root.name,'status':'STOPPED_PROMPT_BUDGET','task':task['task_id']});stop=True;break
-            plan=read_json(folder/'plan.json')
+            try:
+                prompt_length=len(prompt.read_text())
+                plan=read_json(folder/'plan.json')
+            except (OSError, ValueError) as exc:
+                outcomes.append({'run':root.name,'status':'STOPPED_INVALID_AGREEMENT','error':str(exc)});break
+            if prompt_length>max_prompt_chars:
+                outcomes.append({'run':root.name,'status':'STOPPED_PROMPT_BUDGET','task':task['task_id']});break
             if plan['engine']=='manual':
-                outcomes.append({'run':root.name,'status':'MANUAL_RESULT_REQUIRED','task':task['task_id']});stop=True;break
+                outcomes.append({'run':root.name,'status':'MANUAL_RESULT_REQUIRED','task':task['task_id']});break
             if execute:
-                print(f"Reader call {len(outcomes)+1}: document {st.get('document_id', root.name)}, "
+                print(f"Reader call {calls_attempted+1}: document {st.get('document_id', root.name)}, "
                       f"{next_reader}, {task['task_id']}, model {plan.get('model', 'unknown')} started", file=sys.stderr, flush=True)
                 started=time.monotonic()
             result=m13.next_call(root,execute=execute,confirm_subscription=confirm_subscription,
                                  confirm_credit_controls=confirm_credit_controls,timeout=timeout)
             if execute:
-                print(f"Reader call {len(outcomes)+1}: {result.get('status', 'finished')} "
+                print(f"Reader call {calls_attempted+1}: {result.get('status', 'finished')} "
                       f"({time.monotonic()-started:.1f}s)", file=sys.stderr, flush=True)
             outcomes.append({'run':root.name,'result':result})
+            if execute:calls_attempted+=1
             if not execute:break          # dry run: show the next call of each agreement, then go on to the next agreement
-            if result.get('status') not in {'CAPTURED_MORE_PENDING','ALL_READINGS_CAPTURED'}:stop=True;break
+            if result.get('status') not in {'CAPTURED_MORE_PENDING','ALL_READINGS_CAPTURED'}:
+                if (folder/'limit_stop.json').exists() or reader_status(folder).get('limit_stopped'):
+                    print('A subscription limit stop is active; check the account reset before m4-clear-limit.', file=sys.stderr, flush=True)
+                    outcomes.append({'run':root.name,'status':'STOPPED_LIMIT_OR_BILLING_SIGNAL'});stop=True
+                elif max_reported_tokens is not None:
+                    outcomes.append({'run':root.name,'status':'STOPPED_USAGE_UNAVAILABLE'});stop=True
+                break
             if max_reported_tokens is not None:
                 receipt=folder/'results'/(task['task_id']+'.receipt.json')
                 u=read_json(receipt).get('usage') if receipt.exists() else None
@@ -260,7 +282,7 @@ def run_boundary(runs, *, max_calls, max_prompt_chars, max_reported_tokens=None,
                 if reported>=max_reported_tokens:
                     print(f'Token budget reached: {reported} reported / {max_reported_tokens} limit', file=sys.stderr, flush=True)
                     outcomes.append({'run':root.name,'status':'STOPPED_TOKEN_BUDGET'});stop=True;break
-    return {'calls_attempted':sum('result' in o and execute for o in outcomes),'outcomes':outcomes}
+    return {'calls_attempted':calls_attempted,'outcomes':outcomes}
 
 
 def _main(argv=None):
@@ -278,7 +300,10 @@ def _main(argv=None):
         p.add_argument('--check-model');p.add_argument('--check-effort',choices=['low','medium','high'])
         p.add_argument('--max-chars',type=int,default=64000)
     p=sub.add_parser('run');p.add_argument('--runs',type=Path,required=True)
-    p.add_argument('--max-calls',type=int,default=1);p.add_argument('--max-prompt-chars',type=int,default=300000)
+    calls=p.add_mutually_exclusive_group()
+    calls.add_argument('--max-calls',type=int);calls.add_argument('--all-pending',action='store_true',
+        help='Allow one call per prepared task; still subject to all other stops')
+    p.add_argument('--max-prompt-chars',type=int,default=300000)
     p.add_argument('--max-reported-tokens',type=int)
     p.add_argument('--max-retries',type=int,default=0,help='Cap prior explicitly authorized retries; never authorizes a retry')
     p.add_argument('--execute',action='store_true');p.add_argument('--confirm-subscription',action='store_true')
@@ -294,7 +319,20 @@ def _main(argv=None):
         engine=a.engine,model=a.model,check_engine=a.check_engine,check_model=a.check_model,
         effort=a.effort,check_effort=a.check_effort,max_agreements=a.max_agreements,max_chars=a.max_chars,
         max_source_chars=a.max_source_chars)
-    elif a.command=='run':result=run_boundary(a.runs,max_calls=a.max_calls,max_prompt_chars=a.max_prompt_chars,
+    elif a.command=='run':
+        max_calls=a.max_calls if a.max_calls is not None else 1
+        if a.max_calls is not None and not 1<=a.max_calls<=1000:
+            raise ValueError('Explicit --max-calls must be between 1 and 1000')
+        if a.all_pending:
+            max_calls=0
+            for root in a.runs.iterdir():
+                if not root.is_dir() or not (root/'m13_run.json').exists():continue
+                for folder in root.glob('reader_*'):
+                    if not (folder/'plan.json').is_file():continue
+                    try:max_calls+=len(read_json(folder/'plan.json')['tasks'])
+                    except (OSError, ValueError, KeyError, TypeError):continue
+            max_calls=max(1,max_calls)
+        result=run_boundary(a.runs,max_calls=max_calls,max_prompt_chars=a.max_prompt_chars,
         max_reported_tokens=a.max_reported_tokens,max_retries=a.max_retries,
         execute=a.execute,confirm_subscription=a.confirm_subscription,
         confirm_credit_controls=a.confirm_credit_controls,timeout=a.timeout)

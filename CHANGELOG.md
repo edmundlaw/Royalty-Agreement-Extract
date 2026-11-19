@@ -1,3 +1,7 @@
+# v0.13.14 changes
+
+Standard `royalty.sh --go` runs allow one reader call per prepared task. This replaces a fixed two-calls-per-agreement estimate and a 200,000-reported-token cutoff that paused multi-chunk batches. Use `--max-reported-tokens N` to set a per-invocation budget. Provider limits still stop the batch. Agreement-specific failures leave other prepared agreements eligible to run. Partial exports exit with status 3 and the launcher reports source QC failures separately from completed readings.
+
 # v0.13.13 changes
 
 Sheet 01 now shows the disclosed portion of a redacted tier schedule and uses the cited row terms for royalty-free improvements licences. Territory mismatches on possible duplicates trigger review. The reader can record design rights, and differences in readers’ IA classifications trigger a core review issue. Manual chunk prompts identify their own candidates and output format. See the [seven-agreement audit](docs/V01312_LIVE_AUDIT.md) for the source comparisons and verification limits.

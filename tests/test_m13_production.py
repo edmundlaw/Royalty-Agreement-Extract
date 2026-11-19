@@ -162,6 +162,25 @@ class FullSourceProduction(unittest.TestCase):
         self.assertTrue(licence_gate(page('EXCLUSIVE LICENSE AGREEMENT. Royalty 5%. Royalties quarterly. Royalty report.'))['passed'])
 
 class RunBoundaryContinuesAgreement(unittest.TestCase):
+    def test_all_pending_covers_twelve_tasks_across_five_agreements(self):
+        from royalty_research.m13_production import main
+
+        with tempfile.TemporaryDirectory() as d:
+            sizes = {'A': 4, 'B': 2, 'C': 1, 'D': 3, 'E': 2}
+            runs, state = self._runs(d, sizes)
+            for name, size in sizes.items():
+                plan = runs / name / 'reader_a' / 'plan.json'
+                plan.write_text(json.dumps({'engine': 'codex', 'model': 'mock-a', 'tasks': [{}] * size}))
+            calls, patches = self._patches(state)
+            for dependency in patches:
+                dependency.start()
+                self.addCleanup(dependency.stop)
+            with patch('builtins.print'):
+                self.assertEqual(main(['run', '--runs', str(runs), '--all-pending', '--execute',
+                                       '--confirm-subscription', '--confirm-credit-controls']), 0)
+            self.assertEqual(calls, [(name, index) for name, size in sizes.items()
+                                     for index in range(1, size + 1)])
+
     """v0.13.7: all tasks of one agreement are called before the next agreement; every stop still applies."""
     def _runs(self,d,sizes):
         runs=Path(d)/'runs';state={}
@@ -244,6 +263,55 @@ class RunBoundaryContinuesAgreement(unittest.TestCase):
                 out=run_boundary(runs,max_calls=1,max_prompt_chars=300000,max_reported_tokens=10,execute=True)
             self.assertIn('11 reported / 10 limit',stderr.getvalue())
             self.assertEqual(out['outcomes'][-1]['status'],'STOPPED_TOKEN_BUDGET')
+
+    def test_invalid_status_skips_agreement(self):
+        with tempfile.TemporaryDirectory() as d:
+            runs,state=self._runs(d,{'A':1,'B':1})
+            calls,ps=self._patches(state)
+            for x in ps:x.start();self.addCleanup(x.stop)
+            original=ps[0].new
+            def status(root):
+                if Path(root).name=='A':raise ValueError('damaged plan')
+                return original(root)
+            with patch('royalty_research.m13_production.m13.status',side_effect=status):
+                out=run_boundary(runs,max_calls=1,max_prompt_chars=300000,execute=True)
+            self.assertEqual(out['outcomes'][0]['status'],'STOPPED_INVALID_AGREEMENT')
+            self.assertEqual(calls,[('B',1)])
+            self.assertEqual(out['calls_attempted'],1)
+
+    def test_local_failure_skips_agreement_and_counts_only_calls(self):
+        with tempfile.TemporaryDirectory() as d:
+            runs,state=self._runs(d,{'A':1,'B':1,'C':1})
+            calls,ps=self._patches(state)
+            for x in ps:x.start();self.addCleanup(x.stop)
+            (runs/'A'/'reader_a'/'prompts'/'CHUNK-0001.txt').write_text('x'*2000)
+            def fail_then_capture(root,**kw):
+                calls.append(Path(root).name)
+                if Path(root).name=='B':
+                    return {'status':'STOPPED_TASK_NOT_CAPTURED','calls':[{'status':'FAILED_MANUAL_RETRY_REQUIRED'}]}
+                state['C']['captured']=1
+                return {'status':'ALL_READINGS_CAPTURED'}
+            with patch('royalty_research.m13_production.m13.next_call',side_effect=fail_then_capture):
+                out=run_boundary(runs,max_calls=2,max_prompt_chars=1000,execute=True)
+            self.assertEqual(calls,['B','C'])
+            self.assertEqual(out['calls_attempted'],2)
+            self.assertEqual(out['outcomes'][0]['status'],'STOPPED_PROMPT_BUDGET')
+
+    def test_provider_stop_ends_batch_and_existing_stop_prevents_calls(self):
+        with tempfile.TemporaryDirectory() as d:
+            runs,state=self._runs(d,{'A':1,'B':1})
+            calls,ps=self._patches(state)
+            for x in ps:x.start();self.addCleanup(x.stop)
+            marker=runs/'A'/'reader_a'/'limit_stop.json'
+            def provider_stop(root,**kw):
+                calls.append(Path(root).name);marker.write_text('{}')
+                return {'status':'STOPPED_TASK_NOT_CAPTURED','calls':[{'status':'FAILED_MANUAL_RETRY_REQUIRED'}]}
+            with patch('royalty_research.m13_production.m13.next_call',side_effect=provider_stop):
+                out=run_boundary(runs,max_calls=2,max_prompt_chars=300000,execute=True)
+            self.assertEqual(calls,['A']);self.assertEqual(out['calls_attempted'],1)
+            self.assertEqual(out['outcomes'][-1]['status'],'STOPPED_LIMIT_OR_BILLING_SIGNAL')
+            out=run_boundary(runs,max_calls=2,max_prompt_chars=300000,execute=True)
+            self.assertEqual(out['calls_attempted'],0)
 
     def test_prompt_budget_still_stops(self):
         with tempfile.TemporaryDirectory() as d:
@@ -455,7 +523,7 @@ class ResumeScript(unittest.TestCase):
             fake.chmod(0o755)
             env=dict(os.environ,ROYALTY_PYTHON=str(fake),ROYALTY_SEC_UA='Test test@example.com',TEST_COMBINED=str(root/'combined'),HOME=str(root))
             r=subprocess.run(['bash',str(ROOT/'royalty.sh'),'--resume',d,'--go'],capture_output=True,text=True,env=env,timeout=30,cwd=ROOT)
-            self.assertEqual(r.returncode,1,r.stderr+r.stdout)
+            self.assertEqual(r.returncode,3,r.stderr+r.stdout)
             self.assertIn('2 agreement(s) unfinished',r.stdout)
             self.assertIn('No workbook created: no agreements finished',r.stdout)
             self.assertIn('./royalty.sh --resume',r.stdout)

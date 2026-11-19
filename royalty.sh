@@ -5,6 +5,7 @@
 #   ./royalty.sh --resume RUNS_FOLDER [--go]       skip discover/prepare; finish the remaining reader calls of an earlier
 #                                                  run folder (dry run shows them; --go makes them), then finalize/combine/copy
 #   --max-retries N   on resume, allow up to N previously authorized retries per task (0-10; default 0)
+#   --max-reported-tokens N   optional reported-token budget for this invocation
 #   --big   also read licences over 120,000 characters (several calls each; off by default)
 # Dates are YYYY-MM-DD. MAX_AGREEMENTS defaults to 5. Candidate choice is the fixed rule in
 # `m13_prod.py batch`; nobody (human or AI) picks agreements.
@@ -27,19 +28,23 @@ UA_FILE="$HOME/.config/royalty-research/sec_user_agent"
 [ -n "$UA" ] || { [ -f "$UA_FILE" ] && UA="$(head -n1 "$UA_FILE")"; } || true
 [ -n "$UA" ] || { echo "Missing SEC contact: put 'Name contact@email' in $UA_FILE (or set ROYALTY_SEC_UA)." >&2; exit 2; }
 
-GO=0; BIG=0; CANDS=""; RESUME=""; MAX_RETRIES=""; ARGS=()
+GO=0; BIG=0; CANDS=""; RESUME=""; MAX_RETRIES=""; MAX_TOKENS=""; ARGS=()
 while [ $# -gt 0 ]; do
   case "$1" in
     --go) GO=1 ;;
     --big) BIG=1 ;;
     --candidates) shift; CANDS="${1:?--candidates needs a file}" ;;
     --max-retries) shift; MAX_RETRIES="${1:?--max-retries needs a number from 0 to 10}" ;;
+    --max-reported-tokens) shift; MAX_TOKENS="${1:?--max-reported-tokens needs a positive number}" ;;
     --resume) shift; RESUME="${1:?--resume needs a runs_... folder}" ;;
     -h|--help) sed -n 2,10p "$0"; exit 0 ;;
     *) ARGS+=("$1") ;;
   esac
   shift
 done
+if [ -n "$MAX_TOKENS" ]; then
+  [[ "$MAX_TOKENS" =~ ^[0-9]+$ && "$MAX_TOKENS" =~ [1-9] ]] || { echo "--max-reported-tokens must be a positive integer" >&2; exit 2; }
+fi
 if [ -n "$RESUME" ]; then
   [ "${#ARGS[@]}" -eq 0 ] || { echo "--resume takes only the folder (and optional --go and --max-retries)" >&2; exit 2; }
   if [ -n "$MAX_RETRIES" ]; then
@@ -55,8 +60,6 @@ if [ -n "$RESUME" ]; then
     START="unknown"; END="unknown"
     if [[ "$(basename "${prev:-x}")" =~ ^Royalty_Research_([0-9-]{10})_([0-9-]{10}) ]]; then START="${BASH_REMATCH[1]}"; END="${BASH_REMATCH[2]}"; fi
   fi
-  NRUNS=$(find "$BATCH/batch/runs" -maxdepth 2 -name m13_run.json | wc -l | tr -d ' ')
-  MAX=$(( NRUNS > 0 ? NRUNS : 1 ))
 else
 [ -z "$MAX_RETRIES" ] || { echo "--max-retries requires --resume" >&2; exit 2; }
 [ "${#ARGS[@]}" -ge 2 ] && [ "${#ARGS[@]}" -le 3 ] || { echo "Usage: ./royalty.sh START END [MAX_AGREEMENTS] [--go]   or   ./royalty.sh --resume RUNS_FOLDER [--go]" >&2; exit 2; }
@@ -106,19 +109,19 @@ else
   [ "$GO" = 1 ] && echo "MODE: LIVE (AI calls will be made)" || echo "MODE: DRY RUN (no AI calls; add --go to run for real)"
 fi
 
-step "3/4 Reader calls (max $((2*MAX)) calls)"
-TOKENS=200000
-if [ -n "$RESUME" ]; then   # the budget is for the NEW calls: add what earlier calls of this folder already used
-  USED=$("$PY" -I -c '
+step "3/4 Reader calls (all prepared tasks)"
+RUNARGS=(run --runs "$BATCH/batch/runs" --all-pending --max-prompt-chars 300000)
+if [ -n "$MAX_TOKENS" ]; then
+  # The controller's limit includes prior usage; the requested cap is for this invocation.
+  TOKENS=$("$PY" -I -c '
 import json,sys,glob
-t=0
+t=int(sys.argv[2])
 for f in glob.glob(sys.argv[1]+"/*/reader_*/results/*.receipt.json"):
     u=json.load(open(f)).get("usage") or {}
     t+=sum(v for k,v in u.items() if k in ("input_tokens","output_tokens") and isinstance(v,int))
-print(t)' "$BATCH/batch/runs")
-  TOKENS=$((TOKENS + USED))
+print(t)' "$BATCH/batch/runs" "$MAX_TOKENS")
+  RUNARGS+=(--max-reported-tokens "$TOKENS")
 fi
-RUNARGS=(run --runs "$BATCH/batch/runs" --max-calls $((2*MAX)) --max-prompt-chars 300000 --max-reported-tokens "$TOKENS")
 [ -n "$MAX_RETRIES" ] && RUNARGS+=(--max-retries "$MAX_RETRIES")
 [ "$GO" = 1 ] && RUNARGS+=(--execute --confirm-subscription --confirm-credit-controls)
 if "$PY" scripts/m13_prod.py "${RUNARGS[@]}"; then
@@ -129,10 +132,9 @@ else
   fail "run"
 fi
 
-echo; echo "Prompt sizes (characters):"
-find "$BATCH/batch/runs" -path '*prompts/*.txt' -exec wc -c {} + 2>/dev/null | sed 's|'"$BATCH"'/||' || true
-
 if [ "$GO" != 1 ]; then
+  echo; echo "Prompt sizes (characters):"
+  find "$BATCH/batch/runs" -path '*prompts/*.txt' -exec wc -c {} + 2>/dev/null | sed 's|'"$BATCH"'/||' || true
   echo; echo "Dry run finished. Nothing was sent to an AI. Re-run with --go to do it for real."
   exit 0
 fi
@@ -159,8 +161,25 @@ done
 [ "$UNFINISHED" -gt 0 ] && echo "  $UNFINISHED agreement(s) unfinished; resume with: ./royalty.sh --resume $BATCH --go (add --max-retries N if retries are authorized)"
 if [ "$READY" -eq 0 ]; then
   echo "No workbook created: no agreements finished. Check the messages above and the candidate summary before resuming or starting a new batch."
-  exit 1
+  exit 3
 fi
+echo "  $READY agreement(s) finalized; $UNFINISHED unfinished."
+"$PY" -I -c '
+import json, pathlib, sys
+runs = pathlib.Path(sys.argv[1])
+review = {"SOURCE_CHECK_FAILED", "SECOND_READER_FAILED_SOURCE_CHECK", "TWO_READERS_DIFFER"}
+counts = {}; unknown = 0
+for run in runs.iterdir():
+    if not (run / "m13_run.json").is_file(): continue
+    out = next((run / n for n in ("output_checked", "output") if (run / n / "rows.json").is_file()), None)
+    if out is None: continue
+    try:
+        state = json.loads((out / "reader_check.json").read_text())["state"]
+        if state in review: counts[state] = counts.get(state, 0) + 1
+    except (OSError, ValueError, KeyError, TypeError): unknown += 1
+print("  Needs review: " + str(sum(counts.values())) + (" (" + ", ".join(f"{k}: {v}" for k,v in sorted(counts.items())) + ")" if counts else ""))
+if unknown: print(f"  QC state unavailable: {unknown}")
+' "$BATCH/batch/runs" || fail "QC summary"
 BASE="Royalty_Research_${START}_${END}"
 SUFFIX=""
 if [ -e "$BATCH/$BASE.xlsx" ] || [ -e "$HOME/Downloads/$BASE.xlsx" ]; then   # never overwrite an earlier workbook
@@ -173,7 +192,8 @@ mkdir -p "$HOME/Downloads"
 cp "$OUT" "$HOME/Downloads/$BASE$SUFFIX.xlsx" || fail "copy to Downloads"
 echo
 if [ "$UNFINISHED" -gt 0 ]; then
-  echo "Partial workbook: $HOME/Downloads/$BASE$SUFFIX.xlsx"
+  echo "Partial workbook ($READY finished, $UNFINISHED unfinished): $HOME/Downloads/$BASE$SUFFIX.xlsx"
+  exit 3
 else
   echo "Done: $HOME/Downloads/$BASE$SUFFIX.xlsx"
 fi
