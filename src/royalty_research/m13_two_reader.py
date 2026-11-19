@@ -1120,10 +1120,19 @@ def combine(runs_dir, destination, *, legacy_xlsx=False) -> dict:
     combined = None; states = Counter(); used = []; unfinished = []; first_readings = {}; source_texts = {}
     source_errors = {}; summary_rows = []
     for run in sorted(p for p in runs_dir.iterdir() if p.is_dir() and (p / 'm13_run.json').is_file()):
-        _, _, run_map, _ = _load(run)                          # refuses a run folder that was altered
-        out = next((run / n for n in ('output_checked', 'output') if (run / n / 'rows.json').is_file()), None)
+        out = next((run / n for n in ('output_checked', 'output') if (run / n).is_dir()), None)
         if out is None:
-            unfinished.append(run.name); summary_rows.append(_unfinished_row(run, run_map)); continue
+            unfinished.append(run.name)
+            try:
+                _, _, run_map, _ = _load(run)
+                summary_rows.append(_unfinished_row(run, run_map))
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                reason = ' '.join(str(exc).split())[:160]
+                summary_rows.append(_summary_row({'document_id':run.name},
+                    f'FAILED – {type(exc).__name__}: {reason}', '', None,
+                    note='Invalid unfinished run; inspect its saved files before resuming'))
+            continue
+        _, _, run_map, _ = _load(run)  # Finalized runs remain subject to strict integrity checks.
         manifest = read_json(out / 'output_manifest.json')
         if manifest['output_files_sha256'].get('rows.json') != sha256((out / 'rows.json').read_bytes()):
             raise ValueError(f'{run.name}: exported rows were changed after export')

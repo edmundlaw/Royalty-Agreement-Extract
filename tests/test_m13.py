@@ -386,6 +386,26 @@ class Pipeline(unittest.TestCase):
         (runs / 'checked' / 'output' / 'rows.json').write_text('{}')
         with self.assertRaises(ValueError): combine(runs, self.base / 'again.xlsx')
 
+    def test_combine_reports_invalid_unfinished_plan_and_keeps_valid_output(self):
+        from openpyxl import load_workbook
+        runs = self.base / 'runs'
+        self.root = runs / 'good'
+        prepare(SYNTHETIC_MAP, self.root, engine='codex', model='mock-a')
+        self.run_all({'reader_a': self.fake('reader_a_cli', 'mock-a')})
+        finalize(self.root)
+        bad = runs / 'damaged'
+        prepare(SYNTHETIC_MAP, bad, engine='codex', model='mock-a')
+        (bad / 'reader_a' / 'plan.json').write_text('{broken')
+        dest = self.base / 'combined.xlsx'
+        result = combine(runs, dest)
+        self.assertEqual(result['agreements'], 1)
+        self.assertEqual(result['not_finished'], ['damaged'])
+        sheet = load_workbook(dest)['00 Run Summary']
+        rows = [r for r in sheet.iter_rows(min_row=8, values_only=True) if r[0]]
+        damaged = next(r for r in rows if r[0] == 'damaged')
+        self.assertTrue(damaged[3].startswith('FAILED – '))
+        self.assertEqual(sum(r[3] == 'EXPORTED' for r in rows), 1)
+
     def test_run_folder_is_never_overwritten_and_is_tamper_evident(self):
         prepare(SYNTHETIC_MAP, self.root, engine='codex', model='mock-a')
         with self.assertRaises(FileExistsError): prepare(SYNTHETIC_MAP, self.root, engine='codex', model='mock-a')
