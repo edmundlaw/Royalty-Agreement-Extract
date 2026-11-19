@@ -253,6 +253,31 @@ class ChunkMergeTests(unittest.TestCase):
             self.assertIn('AGREEMENT_HEADER_DIFFERS_ACROSS_AI_TASKS',kinds)
         else:
             self.assertEqual(merged['agreement']['title'],'Contradictory title')
+
+    def test_component_evidence_alias_is_narrow_and_unioned(self):
+        outputs=copy.deepcopy(self.outputs)
+        first=outputs[0]
+        eid,other=[e['evidence_id'] for e in first['evidence'][:2]]
+        first['agreement']['licensed_ip_components']=['PATENT']
+        refs=first['agreement'].setdefault('field_evidence',{})
+        refs['licensed_ip_components']=[eid]
+        refs['licensed_ip_nature_components']=[eid,other]
+        merged,_=merge_chunks(self.map,self.packet,outputs)
+        self.assertEqual(merged['agreement']['field_evidence']['licensed_ip_components'],[eid,other])
+        self.assertNotIn('licensed_ip_nature_components',merged['agreement']['field_evidence'])
+        for invalid in (['unknown-evidence'], [None], 'not-a-list'):
+            refs['licensed_ip_nature_components']=invalid
+            with self.assertRaisesRegex(ValueError,'Bad agreement evidence'):
+                merge_chunks(self.map,self.packet,outputs)
+        refs['licensed_ip_nature_components']=[eid]
+        first['agreement']['licensed_ip_components']=[]
+        with self.assertRaisesRegex(ValueError,'Bad agreement evidence'):
+            merge_chunks(self.map,self.packet,outputs)
+        del refs['licensed_ip_nature_components']
+        refs['licensed_ip_component_typo']=[eid]
+        with self.assertRaisesRegex(ValueError,'Bad agreement evidence'):
+            merge_chunks(self.map,self.packet,outputs)
+
     def test_redundant_material_term_evidence_is_accepted(self):
         outputs=copy.deepcopy(self.outputs)
         first=outputs[0]

@@ -124,17 +124,27 @@ def merge_chunks(mapping: dict, packet: dict, chunk_outputs: list[dict]):
         for material in (part_agreement.get("other_material_terms") or []):
             if material not in agreement["other_material_terms"]: agreement["other_material_terms"].append(material)
         for k,refs in (part_agreement.get("field_evidence") or {}).items():
+            if k == "licensed_ip_nature_components":
+                # A known reader typo for the component list, never a general
+                # license to accept unknown agreement evidence fields.
+                components=part_agreement.get("licensed_ip_components")
+                if (not isinstance(components,list) or not components or
+                    not isinstance(refs,list) or
+                    any(not isinstance(eid,str) or not eid or eid not in known_evidence_ids for eid in refs)):
+                    raise ValueError(f"Bad agreement evidence in chunk {part['chunk_index']} for {k}")
+                k="licensed_ip_components"
             if k == "other_material_terms" and isinstance(refs,list):
                 # Individual terms retain their own links. General references that
                 # are not linked to a term need review, not an invented association.
                 if any(not isinstance(eid,str) or not eid or eid not in known_evidence_ids for eid in refs):
-                    raise ValueError("Bad agreement evidence")
+                    raise ValueError(f"Bad agreement evidence in chunk {part['chunk_index']} for {k}")
                 material_refs={eid for item in (part_agreement.get("other_material_terms") or [])
                                for eid in item.get("evidence_ids",[])}
                 extra=list(dict.fromkeys(eid for eid in refs if eid not in material_refs))
                 if extra: unbound_material_refs.append((part["chunk_index"],extra))
                 continue
-            if k not in base_fields or not isinstance(refs,list):raise ValueError("Bad agreement evidence")
+            if k not in base_fields or not isinstance(refs,list):
+                raise ValueError(f"Bad agreement evidence in chunk {part['chunk_index']} for {k}")
             agreement["field_evidence"].setdefault(k,[])
             for r in refs:
                 if r not in agreement["field_evidence"][k]:agreement["field_evidence"][k].append(r)
