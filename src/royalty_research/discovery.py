@@ -130,30 +130,44 @@ def parse_search_page(data: bytes) -> tuple[int, str, list[dict]]:
 
 def search_range(client, query: str, start: date, end: date, *, page_size: int = 100,
                  cap: int = 10_000) -> list[dict]:
-    """Exhaust a query/date window or fail. Split at saturation or API hit cap."""
+    """Exhaust a query/date window or fail. Split saturated or unstable windows."""
     if end < start or page_size < 1 or page_size > 100 or cap < page_size:
         raise ValueError("Invalid date range, page size or hit cap")
+
+    def split_window():
+        mid = start + timedelta(days=(end - start).days // 2)
+        return search_range(client, query, start, mid, page_size=page_size, cap=cap) + \
+               search_range(client, query, mid + timedelta(days=1), end, page_size=page_size, cap=cap)
+
     count, relation, first = parse_search_page(client.fetch(build_search_url(query, start, end, 0, page_size)))
     if relation != "eq" or count >= cap:
         if start == end:
             raise SearchCoverageError(f"Single-day window saturated for {query}: {start}")
-        mid = start + timedelta(days=(end - start).days // 2)
-        return search_range(client, query, start, mid, page_size=page_size, cap=cap) + \
-               search_range(client, query, mid + timedelta(days=1), end, page_size=page_size, cap=cap)
+        return split_window()
     if count == 0:
         return []
     if len(first) != min(count, page_size):
         raise SearchCoverageError(f"First EFTS page incomplete for {query} {start}..{end}: {count} hits")
-    hits = list(first)
-    for offset in range(page_size, count, page_size):
-        _, _, batch = parse_search_page(client.fetch(build_search_url(query, start, end, offset, page_size)))
-        expected = min(page_size, count - offset)
-        if len(batch) != expected:
-            raise SearchCoverageError(f"Truncated EFTS page at {offset}: expected {expected}, got {len(batch)}")
+    hits = []
+    ids = set()
+    for offset in range(0, count, page_size):
+        if offset == 0:
+            batch = first
+        else:
+            _, _, batch = parse_search_page(client.fetch(build_search_url(query, start, end, offset, page_size)))
+            expected = min(page_size, count - offset)
+            if len(batch) != expected:
+                raise SearchCoverageError(f"Truncated EFTS page at {offset}: expected {expected}, got {len(batch)}")
+        for hit in batch:
+            hit_id = hit.get("_id")
+            if hit_id in ids:
+                if start == end:
+                    raise SearchCoverageError(
+                        f"Duplicate hit identifiers in single-day EFTS page series for {query} {start}; "
+                        "unstable pagination")
+                return split_window()
+            ids.add(hit_id)
         hits.extend(batch)
-    ids = [h.get("_id") for h in hits]
-    if len(set(ids)) != len(ids):
-        raise SearchCoverageError("Duplicate hit identifiers inside a query/date page series; unstable pagination")
     return hits
 
 

@@ -11,14 +11,14 @@ from urllib.error import HTTPError
 
 from royalty_research.cli import main
 from royalty_research.discovery import (
-    SearchCoverageError, build_search_url, discover, hit_to_record,
+    SearchCoverageError, discover,
     parse_master_idx, parse_search_page, search_range, source_url,
 )
 from royalty_research.inventory import parse_filing_index_html
 from royalty_research.mapping import map_contract, validate_map
 from royalty_research.parsing import ParseError, UnsupportedDocument, parse_document
 from royalty_research.sec_client import SECClient, SECRequestError, validate_sec_url, validate_user_agent
-from royalty_research.storage import read_json, sha256, stable_id
+from royalty_research.storage import read_json, sha256
 
 FIX = Path(__file__).parent / "fixtures"
 
@@ -128,6 +128,33 @@ class TestDiscovery(unittest.TestCase):
         rows = search_range(c, "royalty", date(2025, 1, 1), date(2025, 1, 2))
         self.assertEqual(len(rows), 2)
         self.assertEqual(len(c.urls), 3)
+
+    def test_duplicate_pages_split_and_requery_entire_window(self):
+        def handler(url):
+            if "startdt=2025-01-01&enddt=2025-01-02" in url:
+                # Both pages contain the same hit; an unseen result may be missing.
+                return page([make_hit(fname="duplicate.htm")], total=2)
+            if "startdt=2025-01-01&enddt=2025-01-01" in url:
+                return page([make_hit(fname="one.htm")])
+            if "startdt=2025-01-02&enddt=2025-01-02" in url:
+                return page([make_hit(fname="two.htm")])
+            raise AssertionError(url)
+        c = FakeClient(handler)
+        rows = search_range(c, "royalty", date(2025, 1, 1), date(2025, 1, 2), page_size=1)
+        self.assertEqual([hit["_id"].split(":")[1] for hit in rows], ["one.htm", "two.htm"])
+        self.assertEqual(len(c.urls), 4)
+
+    def test_single_day_duplicate_pages_fail(self):
+        c = FakeClient(lambda url: page([make_hit()], total=2))
+        with self.assertRaisesRegex(SearchCoverageError, "single-day.*unstable pagination"):
+            search_range(c, "royalty", date(2025, 1, 1), date(2025, 1, 1), page_size=1)
+        self.assertEqual(len(c.urls), 2)
+
+    def test_split_window_propagates_single_day_instability(self):
+        c = FakeClient(lambda url: page([make_hit()], total=2))
+        with self.assertRaisesRegex(SearchCoverageError, "single-day.*unstable pagination"):
+            search_range(c, "royalty", date(2025, 1, 1), date(2025, 1, 2), page_size=1)
+        self.assertEqual(len(c.urls), 4)
 
     def test_detect_incomplete_page(self):
         c = FakeClient(lambda u: page([make_hit()], total=200))
