@@ -11,23 +11,31 @@
           "tech": "Python", "metrics": [], "built": "2026-11",
           "open": ["Embedded images are recorded as unread. Prompts beyond the existing CLI bound are reported."], "conn": ["SEC EDGAR"]
         }},
+        {"id": "royalty_screen", "label": "Royalty rate screening", "s": "built", "d": {
+          "what": "Screen prepared exhibits before dispatch to Codex.",
+          "how": "Verify the Nov 22 prototype hashes and check each frozen KEEP pointer against the same exhibit's extracted text. Record decisions in the batch screening log.",
+          "why": "Send only pointer-confirmed KEEPs to the reader and retain uncertain sources for review.",
+          "assume": ["A version-pinned per-batch opt-in can additionally apply the version-4 exclusion gate to frozen KEEPs."],
+          "tech": "Python", "metrics": [], "built": "2026-11",
+          "open": ["Screening and workbook outputs require manual confirmation against the original filings."], "conn": []
+        }},
         {"id": "read", "label": "Agreement reading", "s": "built", "d": {
           "what": "Produce one structured commercial terms summary per agreement, with source evidence.",
-          "how": "Send the saved prompt to the existing ChatGPT-signed-in Codex CLI and save its raw answer.",
+          "how": "Send the saved prompt to the existing ChatGPT-signed-in Codex CLI, save its raw answer and check the response fields before export.",
           "why": "Preserve agreement boundaries and make the reader's answers inspectable before Excel mapping.",
           "assume": [], "tech": "Codex CLI, JSON", "metrics": [], "built": "2026-11",
           "open": [], "conn": ["ChatGPT"]
         }},
         {"id": "write", "label": "Excel export", "s": "built", "d": {
           "what": "Map each saved agreement to one row on the Agreement Summary sheet.",
-          "how": "Map reader fields into 16 columns, with material qualifications and references together in one cell. Expand the selected GICS code through its official names. Store the full raw response separately.",
+          "how": "Map reader fields into 16 columns, label source and transaction type in material conditions, and expand the selected GICS code through its official names. Preserve long text in cell notes and the raw response.",
           "why": "Keep all terms for an agreement together and distinguish percentage from per-unit rates.",
           "assume": ["The legacy launcher is a separate entry point."],
           "tech": "Python, openpyxl", "metrics": [], "built": "2026-11",
           "open": [], "conn": []
         }}
       ],
-      "edges": [["prepare", "read", "Full text prompt"], ["read", "write", "Saved reader response"]]
+      "edges": [["prepare", "royalty_screen", "Full normalized exhibit"], ["royalty_screen", "read", "Unmodified full text prompt"], ["read", "write", "Saved reader response"]]
     }
   }
 }

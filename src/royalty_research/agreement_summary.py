@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import shutil
@@ -11,17 +12,19 @@ import tempfile
 from datetime import date, datetime
 from io import BytesIO
 from pathlib import Path
+from textwrap import TextWrapper
 from urllib.error import URLError
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlsplit
 from urllib.request import urlopen
 
 from .discovery import discover
+from . import frozen_prescreen as frozen
 from .m13_production import DOWNLOADS_PER_AGREEMENT, candidate_rank, licence_gate
-from .m13_research_export import estimate_row_height
 from .m4_operator import _command, _preflight_subscription, _safe_environment
 from .m7_triage import triage_document
 from .mapping import map_contract
-from .parsing import parse_document
+from .parsing import ParseError, parse_document
+from .royalty_screen import SCREEN_VERSION, audit_screen, record_exclusion
 from .sec_client import SECClient, SECRequestError
 from .storage import atomic_bytes, atomic_json, read_json, sha256
 
@@ -34,6 +37,23 @@ GICS_URLS = (
 )
 GICS_SHEET = 'Effective close of Mar 17 2023'
 SAVED_GICS = PROMPT.parents[1] / 'runs_agreement_summary_ex103_gics' / 'gics_reference.xlsx'
+SOURCE_TYPES = {'Agreement', 'Amendment', 'Term sheet', 'Press release', 'Other disclosure', 'Unclear'}
+TRANSACTION_TYPES = {'Licence', 'Rights transfer', 'Royalty interest acquisition', 'Other', 'Unclear'}
+NON_LICENCES = TRANSACTION_TYPES - {'Licence', 'Unclear'}
+CONTROLLED = {
+    'source_type': SOURCE_TYPES,
+    'transaction_type': TRANSACTION_TYPES,
+    'royalty_basis': {'Gross Sales', 'Net Sales', 'Other', 'Not stated'},
+    'royalty_structure': {'Flat', 'Tiered', 'Not stated'},
+    'exclusivity': {'Exclusive', 'Non-exclusive', 'Sole', 'Co-exclusive', 'Mixed', 'Conditional',
+                    'Ambiguous', 'Not stated', 'Not applicable'},
+}
+MAX_VISIBLE_LINES = 27
+LINE_HEIGHT = 14
+
+
+class OutputError(ValueError):
+    """A saved reader response could not be mapped safely to the sheet."""
 
 
 def download_gics():
@@ -65,7 +85,7 @@ def gics_names(source):
     return names
 
 
-def prepare(url, run, user_agent, source_file=None, gics_reference=None, *, client=None, reference=None):
+def prepare(url, run, user_agent, source_file=None, gics_reference=None, *, client=None, reference=None, audit_royalty_screen=True):
     parsed = urlparse(url)
     if parsed.hostname not in {'sec.gov', 'www.sec.gov'} or not parsed.path.startswith('/Archives/edgar/data/'):
         raise ValueError('Provide an SEC Archives exhibit URL.')
@@ -102,15 +122,24 @@ def prepare(url, run, user_agent, source_file=None, gics_reference=None, *, clie
     (run / 'source.htm').write_bytes(raw)
     (run / 'gics_reference.xlsx').write_bytes(reference)
     (run / 'prompt.txt').write_text(prompt, encoding='utf-8')
-    atomic_json(run / 'prepared.json', {
+    prepared = {
         'document_id': document_id, 'source_url': url, 'source_sha256': sha256(raw),
         'parser': parser, 'screening': gate, 'priority': priority,
         'passages': len(mapping['passages']), 'prompt_chars': len(prompt), 'limitation': limitation,
         'gics_reference_url': reference_url, 'gics_reference_sheet': GICS_SHEET,
-    })
+        'reader_format': 2,
+    }
+    atomic_json(run / 'prepared.json', prepared)
+    audit = None
+    if audit_royalty_screen:
+        audit = audit_screen(run, '\n'.join(p['text'] for p in mapping['passages']),
+                         raw, prepared, verified_identity=source_file is None,
+                         prompt_sha256=sha256(prompt.encode('utf-8')))
+        print(f"Royalty screen: {audit['status'] if audit else 'KEEP'} (preparation).")
     print(f'Prepared one prompt with {len(mapping["passages"])} passages and {len(prompt):,} characters.')
     if limitation:
         print(limitation)
+    return audit
 
 
 def read(run):
@@ -132,6 +161,7 @@ def read(run):
         raise RuntimeError(f'Codex exited with {result.returncode}: {result.stderr.strip()}')
     if not response.is_file():
         raise RuntimeError('Codex did not save a final response.')
+    load_agreements(run, read_json(run / 'prepared.json'), gics_names((run / 'gics_reference.xlsx').read_bytes()))
     print(f'Saved raw Codex response to {response}')
 
 
@@ -166,12 +196,69 @@ def write(run):
     write_workbook([run], run / 'Royalty_Agreement_Summary.xlsx')
 
 
+def load_agreements(run, prepared, names):
+    try:
+        payload = read_json(run / 'raw_response.txt')
+    except json.JSONDecodeError as exc:
+        raise OutputError(f'{run.name}: saved Codex response is not JSON ({exc})') from exc
+    agreements = payload.get('agreements') if isinstance(payload, dict) else None
+    if not isinstance(agreements, list):
+        raise OutputError(f'{run.name}: expected an agreements list in the saved response')
+    keys = {key for _, key, _ in COLUMNS} - {'industry', 'source_url'} | {'gics_code'}
+    if prepared.get('reader_format') == 2:
+        keys |= {'source_type', 'transaction_type'}
+    for number, agreement in enumerate(agreements, 1):
+        label = f'{run.name}, agreement {number}'
+        if not isinstance(agreement, dict):
+            raise OutputError(f'{label}: expected an agreement object')
+        missing = sorted(key for key in keys if not isinstance(agreement.get(key), str))
+        if missing:
+            raise OutputError(f'{label}: missing or non-text fields: {", ".join(missing)}')
+        for key, allowed in CONTROLLED.items():
+            if key in keys and agreement[key] not in allowed:
+                raise OutputError(f'{label}: unrecognized {key}: {agreement[key]!r}')
+        try:
+            gics_path(agreement['gics_code'], names)
+            stated_date = agreement['agreement_date']
+            if stated_date and date.fromisoformat(stated_date).isoformat() != stated_date:
+                raise ValueError('Expected YYYY-MM-DD')
+        except (KeyError, ValueError) as exc:
+            raise OutputError(f'{label}: invalid GICS code or agreement date') from exc
+    return agreements
+
+
 def agreement_rows(runs):
     for run in runs:
         prepared = read_json(run / 'prepared.json')
         names = gics_names((run / 'gics_reference.xlsx').read_bytes())
-        for agreement in read_json(run / 'raw_response.txt')['agreements']:
+        for agreement in load_agreements(run, prepared, names):
             yield agreement, prepared, names
+
+
+def display_fields(agreement, names):
+    fields = dict(agreement, industry=gics_path(agreement['gics_code'], names), source_url='Original document')
+    source = agreement.get('source_type')
+    transaction = agreement.get('transaction_type')
+    context = []
+    if source and source != 'Agreement':
+        context.append(f'Source: {source}.')
+    if transaction and transaction != 'Licence':
+        context.append(f'Transaction: {transaction}.')
+    if transaction in NON_LICENCES:
+        fields.update(licensor='Not applicable', licensee='Not applicable', exclusivity='Not applicable')
+    notes = agreement['other_material_conditions']
+    fields['other_material_conditions'] = '\n'.join(filter(None, [' '.join(context), notes]))
+    return fields
+
+
+def fit_cell(value, width):
+    """Return display text, wrapped line count, and full text if the Excel row cannot fit it."""
+    wrapper = TextWrapper(width=max(1, int(width * 0.9)))
+    lines = [line for paragraph in value.split('\n') for line in (wrapper.wrap(paragraph) or [''])]
+    if len(lines) <= MAX_VISIBLE_LINES:
+        return value, len(lines), None
+    preview = '\n'.join(lines[:MAX_VISIBLE_LINES - 2] + ['… See note.'])
+    return preview, MAX_VISIBLE_LINES, value
 
 
 def write_workbook(runs, destination):
@@ -199,7 +286,7 @@ def write_workbook(runs, destination):
     body_font = Font(name='Arial', size=10, color='000000')
     link_font = Font(name='Arial', size=10, color='000000', underline='single')
     band_fill = PatternFill('solid', fgColor='F5F7F8')
-    wrapped = Alignment(vertical='top', wrap_text=True)
+    wrapped = Alignment(horizontal='left', vertical='top', wrap_text=True)
     for number, (_, _, width) in enumerate(COLUMNS, 1):
         sheet.column_dimensions[get_column_letter(number)].width = width
         cell = sheet.cell(1, number)
@@ -210,29 +297,35 @@ def write_workbook(runs, destination):
     sheet['E1'].comment = Comment('Analytical mapping of the licensed activity using the March 2023 GICS hierarchy. '
                                   'This does not classify the contracting companies.', 'Source preparation')
 
-    widths = [width * 0.9 for _, _, width in COLUMNS]
     for number, (agreement, prepared, names) in enumerate(agreement_rows(runs), 2):
-        fields = dict(agreement, industry=gics_path(agreement['gics_code'], names), source_url='Original document')
-        row = [fields[key] for _, key, _ in COLUMNS]
-        sheet.row_dimensions[number].height = estimate_row_height(row, widths, minimum=45, maximum=409)
-        for column, (_, key, _) in enumerate(COLUMNS, 1):
+        fields = display_fields(agreement, names)
+        row_lines = 1
+        for column, (_, key, width) in enumerate(COLUMNS, 1):
             cell = sheet.cell(number, column)
             value = fields[key]
             if key == 'agreement_date':
                 cell.value = date.fromisoformat(value) if value else None
                 cell.number_format = 'yyyy-mm-dd'
             else:
-                cell.value = value
+                cell.value, lines, full = fit_cell(value, width)
+                row_lines = max(row_lines, lines)
                 cell.data_type = 's'
+                if full is not None:
+                    note_lines = sum(max(1, len(TextWrapper(width=95).wrap(line))) for line in full.split('\n'))
+                    cell.comment = Comment(full, 'Full reader text', width=760, height=max(180, note_lines * 17 + 30))
             cell.alignment = wrapped
             cell.font = link_font if key == 'source_url' else body_font
             if number % 2 == 1:
                 cell.fill = band_fill
+        sheet.row_dimensions[number].height = max(45, row_lines * LINE_HEIGHT + 8)
         source_cell = sheet.cell(number, len(COLUMNS))
         source_cell.hyperlink = prepared['source_url']
         if prepared['limitation']:
             source_cell.comment = Comment(prepared['limitation'], 'Source preparation')
 
+    if sheet.max_row == 1:
+        print('No reportable agreements or transactions in the completed exhibits. No workbook written.')
+        return
     sheet.auto_filter.ref = sheet.dimensions
     output = BytesIO()
     workbook.save(output)
@@ -245,52 +338,156 @@ def sec_user_agent():
             or (Path.home() / '.config/royalty-research/sec_user_agent').read_text().strip())
 
 
-def batch(start, end, limit, *, execute=False, gics_reference=None):
-    if end < start or (end - start).days >= 31:
-        raise ValueError('Provide an inclusive date range of 1 to 31 days.')
-    if limit < 1:
-        raise ValueError('The exhibit limit must be positive.')
+def legacy_exclusion(run, document):
+    """Run the explicitly selected version-4 gate on a frozen KEEP."""
+    prepared = read_json(run / 'prepared.json')
+    paragraphs, parser = parse_document(document.body, Path(urlsplit(document.url).path).name)
+    mapping = map_contract(paragraphs, {'document_id': prepared['document_id'], 'source_url': document.url},
+                           raw_hash=prepared['source_sha256'], parser_type=parser)
+    audit = audit_screen(run, '\n'.join(p['text'] for p in mapping['passages']), document.body, prepared,
+                         verified_identity=True, prompt_sha256=sha256((run / 'prompt.txt').read_bytes()))
+    return record_exclusion(run, audit)
 
+
+def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_royalty_screen=None,
+          urls=None, output_root=None):
+    if urls is None and (not 0 <= (end - start).days < 31 or limit < 1):
+        raise ValueError('Provide an inclusive date range of 1 to 31 days and a positive exhibit limit.')
+    if exclude_royalty_screen is not None and (not execute or exclude_royalty_screen != SCREEN_VERSION):
+        raise ValueError(f'Exclusions require --go and the screen version {SCREEN_VERSION}.')
+
+    screen = frozen.load_screen()
     agent = sec_user_agent()
     client = SECClient(agent)
-    candidates = discover(client, ['royalty rate', 'license agreement', 'royalties'], start, end)
-    ranked = sorted(candidates, key=candidate_rank)
-    urls = list(dict.fromkeys(item['source_url'] for item in ranked if item.get('source_url')))
-    if not urls:
-        raise ValueError('SEC discovery returned no exhibit URLs for those dates.')
-
-    reference_file = gics_reference or (SAVED_GICS if SAVED_GICS.is_file() else None)
-    reference = ((reference_file.read_bytes(), GICS_URLS[1]) if reference_file else download_gics())
-    prefix = f'runs_summary_{start}_{end}_{datetime.now():%H%M%S}_'
-    root = Path(tempfile.mkdtemp(prefix=prefix, dir=Path.cwd()))
+    fetcher = screen.Fetcher(agent)
+    if urls is None:
+        prefix = f'runs_summary_{start}_{end}_{datetime.now():%H%M%S}_'
+    else:
+        prefix = 'runs_frozen_prescreen_'
+    root = Path(tempfile.mkdtemp(prefix=prefix, dir=output_root or Path.cwd()))
     print(f'Batch folder: {root}', flush=True)
+    log = {'notice': frozen.DRAFT, 'prototype_root': str(frozen.PROTOTYPE), 'sha256_before': frozen.FREEZE,
+           'documents': [], 'preparation_failures': [], 'errors': [], 'workbook': None,
+           'legacy_exclusion': exclude_royalty_screen, 'execute': execute}
     prepared = []
-    for url in urls[:limit * DOWNLOADS_PER_AGREEMENT]:
-        run = root / f'exhibit-{len(prepared) + 1:03}'
-        try:
-            prepare(url, run, agent, client=client, reference=reference)
-        except (ValueError, SECRequestError) as exc:
-            print(f'Skipped {url}: {exc}', file=sys.stderr)
-            continue
-        prepared.append(run)
-        print(f'Prepared {len(prepared)}/{limit}: {url}', flush=True)
-        if len(prepared) == limit:
-            break
-    if not prepared:
-        raise ValueError('No exhibit passed preparation in the candidate sample.')
-    if not execute:
-        print(f'Prepared {len(prepared)} exhibit(s). Add --go to run Codex and write Excel.')
-        return
-
     completed = []
     try:
-        for run in prepared:
-            read(run)
-            completed.append(run)
+        if urls is None:
+            ranked = sorted(discover(client, ['royalty rate', 'license agreement', 'royalties'], start, end),
+                            key=candidate_rank)
+            candidates = list(dict.fromkeys(item['source_url'] for item in ranked if item.get('source_url')))
+            candidate_cap = limit * DOWNLOADS_PER_AGREEMENT
+            print(f'SEC candidates: {len(ranked)} ranked, {len(candidates)} unique URLs, '
+                  f'at most {candidate_cap} attempted.', flush=True)
+            candidates = candidates[:candidate_cap]
+        else:
+            candidates = []
+            for url in urls:
+                try:
+                    documents, warnings = frozen.filing_documents(screen, fetcher, url)
+                    candidates.extend(documents)
+                    log['errors'].extend(warnings)
+                except (OSError, ValueError) as exc:
+                    log['errors'].append(str(exc))
+            candidates = list(dict.fromkeys(candidates))
+        if not candidates:
+            raise ValueError('No candidate documents to prepare.')
+
+        reference_file = gics_reference or (SAVED_GICS if SAVED_GICS.is_file() else None)
+        reference = ((reference_file.read_bytes(), GICS_URLS[1]) if reference_file else download_gics())
+        print(f'Royalty screening mode: frozen{f" and opt-in {SCREEN_VERSION}" if exclude_royalty_screen else ""}.',
+              flush=True)
+        for url in candidates:
+            document = None
+            run = root / f'exhibit-{len(prepared) + 1:03}'
+            try:
+                document = fetcher.get(url)
+                if document.issue:
+                    raise ParseError(document.issue.detail)
+                prepare(url, run, agent, client=frozen.DownloadedSource(document), reference=reference,
+                        audit_royalty_screen=False)
+            except (ValueError, OSError, SECRequestError) as exc:
+                unreadable = document is None or isinstance(exc, (ParseError, UnicodeError, OSError, SECRequestError))
+                if document is not None and not unreadable:
+                    _, issue = screen.parse(document)
+                    unreadable = bool(issue and issue.reason != screen.OTHER_UNCERTAINTY)
+                failure = {'source_url': url, 'error': str(exc), 'extractor_status': 'not_sent',
+                           'flags': ['unreadable_source'] if unreadable else []}
+                if unreadable:
+                    log['documents'].append(dict(failure, decision='REVIEW', prescreen_decision=None,
+                                                 captured_rate_text='', captured_excerpt='',
+                                                 evidence_pointer='', skip_reason=''))
+                else:
+                    log['preparation_failures'].append(failure)
+                print(f'Preparation rejected {url}: {exc}', file=sys.stderr)
+                continue
+            prepared.append((run, document))
+            print(f'Prepared {len(prepared)}/{limit if limit is not None else len(candidates)}: {url}', flush=True)
+            if len(prepared) == limit:
+                break
+
+        ready = []
+        for number, (run, document) in enumerate(prepared, 1):
+            try:
+                row = frozen.screen_document(screen, document, number)
+            except Exception as exc:
+                row = {'source_url': document.url, 'prescreen_decision': None, 'decision': 'REVIEW',
+                       'captured_rate_text': '', 'captured_excerpt': '', 'evidence_pointer': '',
+                       'flags': ['pointer_uncheckable'], 'skip_reason': '', 'extractor_status': 'not_sent',
+                       'error': f'{type(exc).__name__}: {exc}'}
+                log['errors'].append(row['error'])
+            log['documents'].append(row)
+            print(f'{row["decision"]} {document.url} {", ".join(row["flags"])}', flush=True)
+            if row['decision'] == 'KEEP':
+                ready.append((run, document, row))
+        if not prepared:
+            raise ValueError('No exhibit passed preparation in the candidate sample.')
+        if not execute:
+            print(f'Prepared {len(prepared)} exhibit(s). Add --go to run Codex and write Excel.')
+        else:
+            excluded = 0
+            for run, document, row in ready:
+                try:
+                    if exclude_royalty_screen and legacy_exclusion(run, document):
+                        excluded += 1
+                        row['extractor_status'] = 'excluded_by_royalty_screen.4'
+                        print(f'Excluded {run.name} before reading. Evidence: {run / "royalty_exclusion.json"}')
+                        continue
+                    row['extractor_status'] = 'started'
+                    read(run)
+                except Exception as exc:
+                    row['extractor_status'] = 'error'
+                    row['extractor_error'] = f'{type(exc).__name__}: {exc}'
+                    log['errors'].append(f'{run.name}: {row["extractor_error"]}')
+                    if not isinstance(exc, OutputError):
+                        break
+                else:
+                    row['extractor_status'] = 'completed'
+                    completed.append(run)
+            if completed:
+                name = ('Royalty_Agreement_Summary.xlsx' if len(completed) + excluded == len(ready)
+                        else 'Royalty_Agreement_Summary_partial.xlsx')
+                workbook = root / name
+                write_workbook(completed, workbook)
+                if workbook.is_file():
+                    log['workbook'] = str(workbook)
+    except Exception as exc:
+        log['errors'].append(f'{type(exc).__name__}: {exc}')
     finally:
-        if completed:
-            name = 'Royalty_Agreement_Summary.xlsx' if len(completed) == len(prepared) else 'Royalty_Agreement_Summary_partial.xlsx'
-            write_workbook(completed, root / name)
+        log['prepared_count'] = len(prepared)
+        try:
+            frozen.verified_sources()
+            log['sha256_after'] = frozen.FREEZE
+        except (OSError, ValueError) as exc:
+            log['errors'].append(f'Final freeze check failed: {exc}')
+        path = root / 'screening_log.json'
+        with path.open('x', encoding='utf-8') as handle:
+            json.dump(log, handle, ensure_ascii=False, indent=2)
+            handle.write('\n')
+        print(f'Screening log: {path}', flush=True)
+    for error in log['errors']:
+        print(error, file=sys.stderr)
+    return int(bool(log['errors']))
 
 
 def main(argv=None):
@@ -309,6 +506,8 @@ def main(argv=None):
     sampler.add_argument('end', type=date.fromisoformat)
     sampler.add_argument('max_exhibits', type=int)
     sampler.add_argument('--go', action='store_true', help='Run Codex and write the workbook')
+    sampler.add_argument('--exclude-royalty-screen', choices=(SCREEN_VERSION,),
+                         help='Explicitly opt in to this screen version for one --go batch')
     sampler.add_argument('--gics-reference', type=Path, help='Use a saved copy of the official MSCI workbook')
     for command in (prep, reader, writer):
         command.add_argument('--run', type=Path, required=True)
@@ -324,7 +523,8 @@ def main(argv=None):
         elif args.step == 'write':
             write(args.run)
         else:
-            batch(args.start, args.end, args.max_exhibits, execute=args.go, gics_reference=args.gics_reference)
+            return batch(args.start, args.end, args.max_exhibits, execute=args.go, gics_reference=args.gics_reference,
+                  exclude_royalty_screen=args.exclude_royalty_screen)
     except (OSError, ValueError, KeyError, TypeError, RuntimeError, subprocess.TimeoutExpired) as exc:
         print(f'{args.step}: {exc}', file=sys.stderr)
         return 1

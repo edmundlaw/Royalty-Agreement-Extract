@@ -1,4 +1,38 @@
-# Royalty Research M13 v0.13.12
+# Royalty Agreement Extract
+
+Run the one-sheet agreement summary from the repository:
+
+```sh
+./royalty-summary.sh 2026-01-12 2026-01-14 5 --go
+```
+
+Replace the inclusive SEC filing dates and the maximum number of exhibits
+that pass preparation. Discovery can attempt up to ten candidates per slot.
+Each prepared exhibit goes through the frozen Nov 22 pre-screen and evidence
+pointer check. With `--go`, the launcher sends the remaining KEEPs to Codex,
+and one exhibit can produce several rows. Omit `--go` to prepare and screen
+without making model calls or writing a workbook.
+
+The batch prints its output folder and writes a separate `screening_log.json`.
+For a `--go` batch, `--exclude-royalty-screen royalty-screen.4` explicitly adds
+the version-4 exclusions to the frozen KEEPs. See the
+[version-4 validation notes](docs/ROYALTY_SCREEN_VALIDATION.md).
+
+The frozen files must be available at
+`../royalty_prescreen_prototype/validation_v3/` relative to this checkout.
+The launcher verifies both hashes before using them. Install the existing
+`pdf` and `xlsx` extras in the launcher's Python environment for PDF parsing
+and workbook export.
+
+The launcher uses the existing SEC contact configuration (`ROYALTY_SEC_UA` or
+`~/.config/royalty-research/sec_user_agent`) and Codex CLI signed in through
+ChatGPT. The workbook keeps 16 columns. Other material conditions identifies
+sources such as press releases, amendments and term sheets, and describes
+non-licence roles. Cells too long for Excel retain their full text in a cell
+note and the saved raw response. Verify consequential terms against the
+original SEC link. The reader cannot see redactions or embedded images.
+
+## Earlier research workflow
 
 Start with [RUN_M13.md](RUN_M13.md). Production uses complete source packets by default. The separate `lean_research.py` excerpt path is preliminary triage only.
 

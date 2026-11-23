@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # ./royalty-summary.sh START END MAX_EXHIBITS [--go]
+# The batch entry point prepares exhibits, runs the frozen screen, then reads KEEPs with --go.
 set -euo pipefail
 cd "$(dirname "$0")"
 python_path="${ROYALTY_PYTHON:-../.venv/bin/python}"
