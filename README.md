@@ -9,11 +9,16 @@ Run the one-sheet agreement summary from the repository:
 Replace the inclusive SEC filing dates and the maximum number of exhibits
 that pass preparation. Discovery can attempt up to ten candidates per slot.
 Each prepared exhibit goes through the frozen Nov 22 pre-screen and evidence
-pointer check. With `--go`, the launcher sends the remaining KEEPs to Codex,
-and one exhibit can produce several rows. Omit `--go` to prepare and screen
-without making model calls or writing a workbook.
+pointer check. With `--go`, the launcher sends eligible KEEPs and readable
+REVIEWs to Codex. REVIEW rows carry a pending-human-review notice in Other
+material conditions, and one exhibit can produce several rows. Omit `--go`
+to prepare and screen without making model calls or writing a workbook.
 
 The batch prints its output folder and writes a separate `screening_log.json`.
+For a prepared HTML exhibit missing its closing root tag, a separate recovery
+check may allow a REVIEW to proceed if the extractor recovered a substantive
+agreement body with evidence of an ending. The log preserves the original
+decision and evidence, and the workbook flags that completeness is unverified.
 For a `--go` batch, `--exclude-royalty-screen royalty-screen.4` explicitly adds
 the version-4 exclusions to the frozen KEEPs. See the
 [version-4 validation notes](docs/ROYALTY_SCREEN_VALIDATION.md).

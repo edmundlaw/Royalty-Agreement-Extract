@@ -2,11 +2,14 @@
 import contextlib
 from datetime import date
 import io
+import json
 from pathlib import Path
 import tempfile
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
+
+from openpyxl import load_workbook
 
 from royalty_research import agreement_summary as summary
 from royalty_research import royalty_screen as screen
@@ -335,3 +338,259 @@ class AuditTests(unittest.TestCase):
             self.assertEqual(summary.batch(date(2026, 11, 16), date(2026, 11, 16), 2, execute=True), 1)
             workbook.assert_called_once_with([self.root / "exhibit-001"],
                                              self.root / "Royalty_Agreement_Summary_partial.xlsx")
+
+    def test_readable_reviews_export_without_changing_screen_decisions(self):
+        raw = ("<html><body><p>License Agreement</p><p>" + PADDING
+               + REDACTED + "</p><p>Final source clause.</p></body></html>").encode()
+        cases = {
+            "review": ("REVIEW", [], "REVIEW_SOURCE_OR_RATE_UNCERTAIN", "Royalty scope needs confirmation"),
+            "mismatch": ("REVIEW", ["pointer_mismatch"], "DISCLOSED_CONTRACTUAL_RATE", ""),
+            "unreadable": ("REVIEW", ["unreadable_source", "pointer_uncheckable"], "DISCLOSED_CONTRACTUAL_RATE",
+                           "Missing text"),
+            "fetch": ("REVIEW", ["unreadable_source"], "REVIEW_FETCH_FAILURE", ""),
+            "keep": ("KEEP", ["pointer_ok"], "DISCLOSED_CONTRACTUAL_RATE", ""),
+            "skip": ("SKIP", [], "REDACTED_NUMERICAL_RATE", ""),
+        }
+        urls = {key: URL.replace("ex10.htm", f"{key}.htm") for key in cases}
+
+        def fetch(url):
+            issue = SimpleNamespace(detail="HTTP 504") if url == urls["fetch"] else None
+            return SimpleNamespace(url=url, body=b"" if issue else raw, issue=issue)
+
+        def decision(_, document, number):
+            key = Path(document.url).stem
+            outcome, flags, reason, caveat = cases[key]
+            return dict(source_url=document.url, decision=outcome,
+                        prescreen_decision="KEEP" if key in {"mismatch", "unreadable"} else outcome,
+                        prescreen_reason=reason, prescreen_caveat=caveat, flags=flags,
+                        captured_rate_text="99%", captured_excerpt="Screener excerpt",
+                        evidence_pointer=f"{document.url} # block 3", extractor_status="not_sent")
+
+        agreement = {key: "" for _, key, _ in summary.COLUMNS if key not in {"industry", "source_url"}}
+        agreement.update(title="Mock agreement", source_type="Agreement", transaction_type="Licence",
+                         gics_code="Not stated", royalty_rate_percent="Undisclosed", royalty_basis="Net Sales",
+                         royalty_structure="Not stated", exclusivity="Not stated")
+        sent = {}
+
+        def mock_reader(command, **kwargs):
+            destination = Path(command[command.index("--output-last-message") + 1])
+            prompt = kwargs["input"]
+            meta = read_json(destination.parent / "prepared.json")
+            key = Path(meta["source_url"]).stem
+            sent[key] = prompt
+            response = dict(agreement, title=key, other_material_conditions="Existing contract details.")
+            if key == "review":
+                response["other_material_conditions"] = "Preserve these contract details. " * 180
+            destination.write_text(json.dumps({"agreements": [response]}))
+            return SimpleNamespace(returncode=0)
+
+        with (
+            patch.object(summary, "sec_user_agent", return_value="test"),
+            patch.object(summary, "SECClient"),
+            patch.object(summary, "discover", return_value=[{"source_url": url} for url in urls.values()]),
+            patch.object(summary, "candidate_rank", return_value=0),
+            patch.object(summary.frozen, "load_screen",
+                         return_value=SimpleNamespace(Fetcher=lambda _: SimpleNamespace(get=fetch))),
+            patch.object(summary.frozen, "screen_document", side_effect=decision),
+            patch.object(summary.frozen, "verified_sources"),
+            patch.object(summary, "licence_gate", return_value={"passed": True}),
+            patch.object(summary, "triage_document", return_value={"priority": "HIGH"}),
+            patch.object(summary, "gics_names", return_value={}),
+            patch.object(summary, "_preflight_subscription"),
+            patch.object(summary.shutil, "which", return_value="/codex"),
+            patch.object(summary.subprocess, "run", side_effect=mock_reader),
+        ):
+            gics = self.root / "reference.xlsx"
+            gics.write_bytes(b"stub")
+            self.assertEqual(summary.batch(date(2026, 11, 16), date(2026, 11, 16), 6, execute=True,
+                                           gics_reference=gics, output_root=self.root), 0)
+        root, = self.root.glob("runs_summary_*")
+        self.assertEqual(set(sent), {"review", "mismatch", "keep"})
+        self.assertTrue(sent["mismatch"].startswith(summary.REVIEW_INSTRUCTIONS))
+        stored = (root / "exhibit-002" / "prompt.txt").read_text()
+        self.assertEqual(sent["mismatch"], summary.REVIEW_INSTRUCTIONS + stored)
+        self.assertIn(REDACTED, stored)
+        self.assertIn("Final source clause.", stored)
+        self.assertNotIn("99%", sent["mismatch"])
+        self.assertNotIn(summary.REVIEW_INSTRUCTIONS, sent["keep"])
+
+        log = read_json(root / "screening_log.json")
+        records = {Path(r["source_url"]).stem: r for r in log["documents"]}
+        for key, (outcome, flags, _, _) in cases.items():
+            self.assertEqual((records[key]["decision"], records[key]["flags"]), (outcome, flags))
+        self.assertEqual(records["review"]["prescreen_reason"], "REVIEW_SOURCE_OR_RATE_UNCERTAIN")
+        self.assertEqual(records["mismatch"]["evidence_pointer"], f'{urls["mismatch"]} # block 3')
+        self.assertEqual(records["mismatch"]["captured_excerpt"], "Screener excerpt")
+        self.assertEqual(records["fetch"]["error"], "HTTP 504")
+        for key in {"unreadable", "fetch", "skip"}:
+            self.assertEqual(records[key]["extractor_status"], "not_sent")
+        for key in {"review", "mismatch"}:
+            self.assertEqual(records[key]["extractor_status"], "completed")
+
+        workbook = load_workbook(log["workbook"])
+        self.assertEqual(workbook.sheetnames, ["Agreement Summary"])
+        sheet = workbook.active
+        self.assertEqual((sheet.max_row, sheet.max_column), (4, 16))
+        self.assertEqual(tuple(c.value for c in sheet[1]), tuple(heading for heading, _, _ in summary.COLUMNS))
+        for row, title in zip(range(2, 5), ("review", "mismatch", "keep")):
+            self.assertEqual(sheet.cell(row, 1).value, title)
+            self.assertEqual(sheet.cell(row, 8).value, "Undisclosed")
+        self.assertIn("PENDING HUMAN REVIEW — REVIEW_SOURCE_OR_RATE_UNCERTAIN", sheet["O2"].value)
+        self.assertIn("Preserve these contract details. " * 179, sheet["O2"].comment.text)
+        self.assertTrue(sheet["O3"].value.startswith("Existing contract details.\n"))
+        self.assertIn("PENDING HUMAN REVIEW — pointer_mismatch", sheet["O3"].value)
+        self.assertEqual(sheet["O4"].value, "Existing contract details.")
+
+    def test_malformed_html_recovery_with_saved_and_synthetic_sources(self):
+        prototype = summary.frozen.load_screen()
+        title = "<h1>Patent Licence and Royalty Agreement</h1>"
+        clauses = (
+            "<p>This Agreement is made between Example Licensor and Example Licensee for the use of patented devices.</p>"
+            "<p>Licensor hereby grants Licensee an exclusive licence to manufacture and sell the patented devices.</p>"
+            "<p>Licensee shall pay a royalty of [***]% of Net Sales under the licence for each accounted period.</p>"
+            "<p>The parties shall retain royalty records for inspection following termination of this Agreement.</p>"
+        )
+        body = "<html><body>" + title + clauses
+        recovered = (body + "</body>").encode()
+        test_sources = {
+            "recoverable": (recovered, None),
+            "empty": (b"", None),
+            "snippet": (("<html><body>" + title + "<p>Royalty rate: 8%.</p></body>").encode(), None),
+            "binary": (b"\xff\xd8\x00" + recovered, None),
+            "denied": (("<html><head><title>503 Service Unavailable</title></head><body>"
+                        + title + clauses * 12 + "</body>").encode(), None),
+            "truncated": ((body + "<p>[DOCUMENT TRUNCATED]</p></body>").encode(), None),
+            "cutoff": ((body + "<p>Licensee shall provide a final report to").encode(), None),
+            "open_wrapper": (b"<DOCUMENT><TEXT>" + recovered, None),
+            "hidden": ((body + "<script>unfinished</body>").encode(), None),
+            "partial_http": (recovered, prototype.SourceIssue(prototype.UNREADABLE, "HTTP partial content")),
+            "fetch": (b"", prototype.SourceIssue(prototype.FETCH_FAILURE, "HTTP 504")),
+            "independent_gate": ((body.replace(title, "<h1>Loan Agreement</h1>") + clauses + "</body>").encode(), None),
+            "oversized": ((body + clauses * 900 + "</body>").encode(), None),
+        }
+        urls = {key: URL.replace("ex10.htm", f"{key}.htm") for key in test_sources}
+        historical = (Path(__file__).resolve().parents[1]
+                      / "runs_summary_2024-06-01_2024-06-30_152435_j6b_9o0n")
+        original = historical / "exhibit-012" / "source.htm"
+        reference = summary.SAVED_GICS
+        if original.is_file():
+            meta = read_json(original.with_name("prepared.json"))
+            urls["saved_rmed"] = meta["source_url"]
+            test_sources["saved_rmed"] = (original.read_bytes(), None)
+            self.assertEqual(sha256(test_sources["saved_rmed"][0]), meta["source_sha256"])
+            reference = original.with_name("gics_reference.xlsx")
+            print(f"Saved rmed original: {len(test_sources['saved_rmed'][0])} bytes, SHA-256 {meta['source_sha256']}")
+        else:
+            print("Saved rmed original unavailable. Cases below use synthetic sources.")
+
+        keys = {url: key for key, url in urls.items()}
+        documents = {url: prototype.RawDocument(url, *test_sources[key]) for url, key in keys.items()}
+        original_rows = {}
+        screen_document = summary.frozen.screen_document
+
+        def capture_decision(reader, document, number):
+            row = screen_document(reader, document, number)
+            if keys[document.url] == "recoverable":
+                self.assertEqual(row["decision"], "REVIEW")
+                row.update(captured_rate_text="99.99%", captured_excerpt="Seeded false rate: 99.99%",
+                           evidence_pointer=f"{document.url} # block 1")
+            original_rows[keys[document.url]] = row.copy()
+            return row
+
+        sent = {}
+        conditions = "Preserve these mock contract details. " * 180
+
+        def mock_reader(command, **kwargs):
+            destination = Path(command[command.index("--output-last-message") + 1])
+            meta = read_json(destination.parent / "prepared.json")
+            key = keys[meta["source_url"]]
+            sent[key] = kwargs["input"]
+            agreement = {field: "" for _, field, _ in summary.COLUMNS
+                         if field not in {"industry", "source_url"}}
+            agreement.update(title=f"Mock output for {key}", source_type="Agreement", transaction_type="Licence",
+                             gics_code="Not stated", royalty_rate_percent="Undisclosed", royalty_basis="Net Sales",
+                             royalty_structure="Not stated", exclusivity="Not stated", other_material_conditions=conditions)
+            destination.write_text(json.dumps({"agreements": [agreement]}), encoding="utf-8")
+            return SimpleNamespace(returncode=0)
+
+        with (
+            patch.object(summary, "sec_user_agent", return_value="local-evidence-test"),
+            patch.object(summary, "SECClient"),
+            patch.object(summary, "discover", return_value=[{"source_url": url} for url in urls.values()]),
+            patch.object(summary, "candidate_rank", return_value=0),
+            patch.object(prototype.Fetcher, "get", side_effect=documents.__getitem__),
+            patch.object(summary.frozen, "screen_document", side_effect=capture_decision),
+            patch.object(summary, "download_gics", side_effect=AssertionError("No network allowed")),
+            patch.object(summary, "_preflight_subscription"),
+            patch.object(summary.shutil, "which", return_value="/mock-codex"),
+            patch.object(summary.subprocess, "run", side_effect=mock_reader),
+        ):
+            if not reference.is_file():
+                from openpyxl import Workbook
+
+                reference = self.root / "mock_gics.xlsx"
+                workbook = Workbook()
+                workbook.active.title = summary.GICS_SHEET
+                workbook.save(reference)
+            self.assertEqual(summary.batch(date(2024, 6, 1), date(2024, 6, 30), len(urls), execute=True,
+                                           gics_reference=reference, output_root=self.root), 0)
+
+        root, = self.root.glob("runs_summary_*")
+        log = read_json(root / "screening_log.json")
+        rows = {keys[row["source_url"]]: row for row in log["documents"] + log["preparation_failures"]}
+        expected = {"recoverable"} | ({"saved_rmed"} if original.is_file() else set())
+        self.assertEqual(set(sent), expected)
+        self.assertEqual(set(rows), set(urls))
+        self.assertEqual(log["sha256_before"], log["sha256_after"])
+        for key, row in rows.items():
+            with self.subTest(source=key):
+                if key in original_rows:
+                    for field, value in original_rows[key].items():
+                        if field != "extractor_status":
+                            self.assertEqual(row[field], value)
+                if key in expected:
+                    self.assertEqual(row["decision"], "REVIEW")
+                    self.assertIn("unreadable_source", row["flags"])
+                    self.assertEqual(row["html_recovery"]["result"], "eligible")
+                    self.assertEqual(row["extractor_status"], "completed")
+                else:
+                    self.assertEqual(row["extractor_status"], "not_sent")
+                    self.assertTrue(row.get("error") or row["html_recovery"]["reason"])
+        self.assertIn("above the current CLI bound", rows["oversized"]["error"])
+        self.assertIn("existing screening", rows["independent_gate"]["error"])
+        self.assertEqual(rows["fetch"]["error"], "HTTP 504")
+        self.assertEqual(rows["recoverable"]["captured_rate_text"], "99.99%")
+        self.assertNotIn("99.99%", sent["recoverable"])
+        self.assertIn("a royalty of [***]% of Net Sales", sent["recoverable"])
+        if "saved_rmed" in expected:
+            previous = next(row for row in read_json(historical / "screening_log.json")["documents"]
+                            if row["source_url"] == urls["saved_rmed"])
+            for field in ("decision", "prescreen_decision", "flags", "prescreen_reason", "prescreen_flags",
+                          "source_issue", "captured_rate_text", "captured_excerpt", "evidence_pointer"):
+                self.assertEqual(rows["saved_rmed"][field], previous[field])
+
+        workbook = load_workbook(log["workbook"])
+        self.assertEqual(workbook.sheetnames, ["Agreement Summary"])
+        sheet = workbook.active
+        self.assertEqual((sheet.max_row, sheet.max_column), (1 + len(expected), 16))
+        self.assertEqual(tuple(cell.value for cell in sheet[1]), tuple(name for name, _, _ in summary.COLUMNS))
+        for row_number in range(2, sheet.max_row + 1):
+            key = sheet.cell(row_number, 1).value.removeprefix("Mock output for ")
+            prompt = sent[key]
+            self.assertTrue(prompt.startswith(summary.REVIEW_INSTRUCTIONS))
+            self.assertIn(summary.RECOVERY_CAVEAT, prompt)
+            supplied = prompt.split("\n\nSEC EXHIBIT TEXT\n\n", 1)[1]
+            supplied = [line.split("] ", 1)[1] for line in supplied.splitlines() if line]
+            paragraphs, _ = summary.parse_document(test_sources[key][0], Path(urls[key]).name)
+            self.assertEqual(supplied, paragraphs)
+            cell = sheet.cell(row_number, 15)
+            visible = " ".join(cell.value.split())
+            self.assertIn("PENDING HUMAN REVIEW", visible)
+            self.assertIn("HTML root has no closing tag", visible)
+            self.assertIn(summary.RECOVERY_CAVEAT, visible)
+            self.assertIn(conditions.strip(), cell.comment.text)
+            self.assertEqual(sheet.cell(row_number, 8).value, "Undisclosed")
+            self.assertEqual(sheet.cell(row_number, 16).hyperlink.target, urls[key])
+        workbook.close()
+        print("Verified workbook headers, REVIEW reasons and caveats, overflow notes, and source hyperlinks.")
+        print("Mock reader received every extracted passage for: " + ", ".join(sorted(expected)))

@@ -14,7 +14,7 @@
         {"id": "royalty_screen", "label": "Royalty rate screening", "s": "built", "d": {
           "what": "Screen prepared exhibits before dispatch to Codex.",
           "how": "Verify the Nov 22 prototype hashes and check each frozen KEEP pointer against the same exhibit's extracted text. Record decisions in the batch screening log.",
-          "why": "Send only pointer-confirmed KEEPs to the reader and retain uncertain sources for review.",
+          "why": "Send confirmed KEEPs and readable REVIEWs to the reader while retaining the original decision and review reason.",
           "assume": ["A version-pinned per-batch opt-in can additionally apply the version-4 exclusion gate to frozen KEEPs."],
           "tech": "Python", "metrics": [], "built": "2026-11",
           "open": ["Screening and workbook outputs require manual confirmation against the original filings."], "conn": []

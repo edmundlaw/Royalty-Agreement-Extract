@@ -23,7 +23,7 @@ from .m13_production import DOWNLOADS_PER_AGREEMENT, candidate_rank, licence_gat
 from .m4_operator import _command, _preflight_subscription, _safe_environment
 from .m7_triage import triage_document
 from .mapping import map_contract
-from .parsing import ParseError, parse_document
+from .parsing import ParseError, decode_bytes, extract_sgml_text, parse_document
 from .royalty_screen import SCREEN_VERSION, audit_screen, record_exclusion
 from .sec_client import SECClient, SECRequestError
 from .storage import atomic_bytes, atomic_json, read_json, sha256
@@ -50,6 +50,17 @@ CONTROLLED = {
 }
 MAX_VISIBLE_LINES = 27
 LINE_HEIGHT = 14
+REVIEW_INSTRUCTIONS = (
+    'This exhibit is pending human review. Check the full available SEC exhibit text independently. '
+    'Treat any pre-screen rate or pointer as an unconfirmed hint. Use only rates supported by the '
+    'source, keep the existing Undisclosed and Not stated conventions, and describe unresolved '
+    'evidence in other_material_conditions. Keep reportable agreements even when no numeric rate '
+    'is disclosed. Never guess a rate.\n\n'
+)
+RECOVERY_CAVEAT = (
+    'Full available agreement text recovered from malformed HTML. Source completeness is unverified. '
+    'Confirm against the original filing.'
+)
 
 
 class OutputError(ValueError):
@@ -144,6 +155,13 @@ def prepare(url, run, user_agent, source_file=None, gics_reference=None, *, clie
 
 def read(run):
     prompt = (run / 'prompt.txt').read_text(encoding='utf-8')
+    prepared = read_json(run / 'prepared.json')
+    if prepared.get('human_review'):
+        caveat = prepared.get('html_recovery_caveat')
+        recovery_note = f'Source limitation: {caveat}\n\n' if caveat else ''
+        prompt = REVIEW_INSTRUCTIONS + recovery_note + prompt
+        if len(prompt) > MAX_PROMPT_CHARS:
+            raise ValueError('Full review prompt exceeds the CLI bound. No partial reading was sent.')
     response = (run / 'raw_response.txt').resolve()
     if response.exists():
         raise FileExistsError('Raw response already exists. Use the write step to import it.')
@@ -161,7 +179,7 @@ def read(run):
         raise RuntimeError(f'Codex exited with {result.returncode}: {result.stderr.strip()}')
     if not response.is_file():
         raise RuntimeError('Codex did not save a final response.')
-    load_agreements(run, read_json(run / 'prepared.json'), gics_names((run / 'gics_reference.xlsx').read_bytes()))
+    load_agreements(run, prepared, gics_names((run / 'gics_reference.xlsx').read_bytes()))
     print(f'Saved raw Codex response to {response}')
 
 
@@ -251,13 +269,17 @@ def display_fields(agreement, names):
     return fields
 
 
-def fit_cell(value, width):
+def fit_cell(value, width, *, footer=''):
     """Return display text, wrapped line count, and full text if the Excel row cannot fit it."""
     wrapper = TextWrapper(width=max(1, int(width * 0.9)))
+    if footer:
+        value = '\n'.join(filter(None, (value, footer)))
     lines = [line for paragraph in value.split('\n') for line in (wrapper.wrap(paragraph) or [''])]
     if len(lines) <= MAX_VISIBLE_LINES:
         return value, len(lines), None
-    preview = '\n'.join(lines[:MAX_VISIBLE_LINES - 2] + ['… See note.'])
+    footer_lines = wrapper.wrap(footer)[:MAX_VISIBLE_LINES - 2]
+    available = MAX_VISIBLE_LINES - 2 - len(footer_lines)
+    preview = '\n'.join([*lines[:available], '… See note.', *footer_lines])
     return preview, MAX_VISIBLE_LINES, value
 
 
@@ -299,6 +321,7 @@ def write_workbook(runs, destination):
 
     for number, (agreement, prepared, names) in enumerate(agreement_rows(runs), 2):
         fields = display_fields(agreement, names)
+        review = prepared.get('human_review')
         row_lines = 1
         for column, (_, key, width) in enumerate(COLUMNS, 1):
             cell = sheet.cell(number, column)
@@ -307,7 +330,8 @@ def write_workbook(runs, destination):
                 cell.value = date.fromisoformat(value) if value else None
                 cell.number_format = 'yyyy-mm-dd'
             else:
-                cell.value, lines, full = fit_cell(value, width)
+                footer = f'PENDING HUMAN REVIEW — {review}' if review and key == 'other_material_conditions' else ''
+                cell.value, lines, full = fit_cell(value, width, footer=footer)
                 row_lines = max(row_lines, lines)
                 cell.data_type = 's'
                 if full is not None:
@@ -347,6 +371,76 @@ def legacy_exclusion(run, document):
     audit = audit_screen(run, '\n'.join(p['text'] for p in mapping['passages']), document.body, prepared,
                          verified_identity=True, prompt_sha256=sha256((run / 'prompt.txt').read_bytes()))
     return record_exclusion(run, audit)
+
+
+def html_review_recovery(screen, document):
+    """Allow an already prepared REVIEW only for a demonstrably recoverable HTML root."""
+    method = 'parse_document/HTML_TEXT on unchanged source bytes'
+
+    def blocked(reason):
+        return {'method': method, 'result': 'blocked', 'reason': reason}
+
+    filename = Path(urlsplit(document.url).path).name
+    if document.issue or not document.body or Path(filename).suffix.lower() not in {'.htm', '.html'}:
+        return blocked('Missing or partial response, transport failure, or non-HTML source.')
+    try:
+        source = decode_bytes(document.body)
+        payload = extract_sgml_text(source)
+        paragraphs, parser = parse_document(document.body, filename)
+    except (ValueError, AssertionError) as exc:
+        return blocked(f'Text extraction failed: {exc}')
+    if parser != 'HTML_TEXT' or re.search(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f\ufffd]', source):
+        return blocked('Binary data, invalid text characters, or an unsupported parser.')
+
+    # Recognize the markup defect directly. Require an actual HTML body and
+    # exclude other incomplete wrappers instead of inferring from an error string.
+    html = re.sub(r'<!--.*?-->', '', payload, flags=re.S)
+    if not re.match(r'\s*(?:<!doctype html[^>]*>\s*)?<html\b[^>]*>', html, re.I) or re.search(r'</html\s*>', html, re.I):
+        return blocked('Source is outside the missing HTML root closure recovery.')
+    body = re.search(r'<body\b[^>]*>(.*)\Z', html, re.I | re.S)
+    if not body:
+        return blocked('No HTML body was found.')
+
+    _, issue = screen.parse(document)
+    if issue and issue.reason == screen.FETCH_FAILURE:
+        return blocked(f'Fetch failure: {issue.detail}')
+    title = re.search(r'<title\b[^>]*>(.*?)</title\s*>', html, re.I | re.S)
+    headings = [title[1] if title else '', *paragraphs[:6]]
+    if any(re.match(r'\s*(?:SEC\.gov\s*\||(?:HTTP\s+)?(?:Error\s+)?[45]\d\d\b(?!\s*\.\d)|'
+                    r'Access Denied\b|Forbidden\b|Request Rate Threshold Exceeded\b|'
+                    r'Service Unavailable\b|Bad Gateway\b|Gateway Time.?out\b|'
+                    r'Internal Server Error\b|Page Not Found\b|Request blocked\b|'
+                    r'An error occurred\b|Security Violation\b)', line, re.I)
+           for line in headings):
+        return blocked('An access-denied or server error page was detected.')
+    text = '\n'.join(paragraphs)
+    if re.search(r'\[(?:document |text )?(?:truncated|incomplete)\]|'
+                 r'\bunexpected end of (?:file|document)\b', text, re.I) or re.search(
+                     r'<!--\s*(?:document |response )?truncated\b', payload, re.I):
+        return blocked('The source explicitly indicates truncation.')
+    if re.search(r'<(?:sec-document|document|text)\b', source, re.I) and not (
+        payload != source and re.fullmatch(r'\s*<DOCUMENT>\s*.*?</TEXT>\s*</DOCUMENT>\s*', source, re.I | re.S)
+    ):
+        return blocked('The SEC exhibit wrapper is incomplete or unsupported.')
+
+    prose = [line for line in paragraphs if len(line.split()) >= 12 and len(line) >= 60]
+    operative = re.compile(r'\b(?:shall|hereby|agrees? to|is entitled to|must)\b', re.I)
+    if len(prose) < 3 or sum(bool(operative.search(line)) for line in prose) < 2:
+        return blocked('Recovered text lacks a substantive agreement body.')
+    # A closing wrapper alone is insufficient: require a finished body or a
+    # visible execution block with signatures near the end of a SEC exhibit.
+    body_text = body[1].rstrip()
+    closed_body = re.search(r'</(?:p|div|table|section|center|li|article)>\s*</body\s*>\Z', body_text, re.I)
+    signed_exhibit = (
+        payload != source
+        and re.search(r'</(?:p|div|table|section|center)>\s*(?:<body\b[^>]*>)?\s*\Z', body_text, re.I)
+        and re.search(r'\bin witness whereof\b', '\n'.join(paragraphs[-20:]), re.I)
+        and any(re.match(r'/s/\s*\S', line, re.I) for line in paragraphs[-15:])
+    )
+    if not signed_exhibit and not (closed_body and paragraphs[-1].endswith(('.', '!', '?'))):
+        return blocked('Agreement text was found, but there is no supported end of the body.')
+    return {'method': method, 'result': 'eligible', 'reason': 'Substantive agreement body recovered.',
+            'caveat': RECOVERY_CAVEAT}
 
 
 def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_royalty_screen=None,
@@ -436,9 +530,15 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
                        'flags': ['pointer_uncheckable'], 'skip_reason': '', 'extractor_status': 'not_sent',
                        'error': f'{type(exc).__name__}: {exc}'}
                 log['errors'].append(row['error'])
+            if row['decision'] == 'REVIEW' and 'unreadable_source' in row['flags'] and not row.get('error'):
+                row['html_recovery'] = html_review_recovery(screen, document)
             log['documents'].append(row)
             print(f'{row["decision"]} {document.url} {", ".join(row["flags"])}', flush=True)
-            if row['decision'] == 'KEEP':
+            if row['decision'] == 'KEEP' or (
+                row['decision'] == 'REVIEW' and not row.get('error')
+                and ('unreadable_source' not in row['flags']
+                     or row.get('html_recovery', {}).get('result') == 'eligible')
+            ):
                 ready.append((run, document, row))
         if not prepared:
             raise ValueError('No exhibit passed preparation in the candidate sample.')
@@ -448,7 +548,16 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
             excluded = 0
             for run, document, row in ready:
                 try:
-                    if exclude_royalty_screen and legacy_exclusion(run, document):
+                    if row['decision'] == 'REVIEW':
+                        caveat = row.get('html_recovery', {}).get('caveat')
+                        reasons = [*row['flags'], row.get('prescreen_reason'), row.get('prescreen_caveat'),
+                                   row.get('source_issue'), caveat]
+                        prepared_meta = read_json(run / 'prepared.json')
+                        prepared_meta['human_review'] = ' | '.join(dict.fromkeys(filter(None, reasons)))
+                        if caveat:
+                            prepared_meta['html_recovery_caveat'] = caveat
+                        atomic_json(run / 'prepared.json', prepared_meta)
+                    if row['decision'] == 'KEEP' and exclude_royalty_screen and legacy_exclusion(run, document):
                         excluded += 1
                         row['extractor_status'] = 'excluded_by_royalty_screen.4'
                         print(f'Excluded {run.name} before reading. Evidence: {run / "royalty_exclusion.json"}')
