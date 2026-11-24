@@ -459,39 +459,57 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
     root = Path(tempfile.mkdtemp(prefix=prefix, dir=output_root or Path.cwd()))
     print(f'Batch folder: {root}', flush=True)
     log = {'notice': frozen.DRAFT, 'prototype_root': str(frozen.PROTOTYPE), 'sha256_before': frozen.FREEZE,
-           'documents': [], 'preparation_failures': [], 'errors': [], 'workbook': None,
+           'documents': [], 'errors': [], 'workbook': None,
            'legacy_exclusion': exclude_royalty_screen, 'execute': execute}
     prepared_count = 0
     completed = []
     try:
+        discovered = {}
         if urls is None:
             ranked = sorted(discover(client, ['royalty rate', 'license agreement', 'royalties'], start, end),
                             key=candidate_rank)
-            candidates = list(dict.fromkeys(item['source_url'] for item in ranked if item.get('source_url')))
-            candidate_cap = limit * DOWNLOADS_PER_AGREEMENT
-            print(f'SEC candidates: {len(ranked)} ranked, {len(candidates)} unique URLs, '
-                  f'at most {candidate_cap} attempted.', flush=True)
-            candidates = candidates[:candidate_cap]
+            for item in ranked:
+                if item.get('source_url'):
+                    discovered.setdefault(item['source_url'], item.get('file_type'))
         else:
-            candidates = []
             for url in urls:
                 try:
                     documents, warnings = frozen.filing_documents(screen, fetcher, url)
-                    candidates.extend(documents)
+                    for item, file_type in documents:
+                        if item not in discovered or not discovered[item]:
+                            discovered[item] = file_type
                     log['errors'].extend(warnings)
                 except (OSError, ValueError) as exc:
                     log['errors'].append(str(exc))
-            candidates = list(dict.fromkeys(candidates))
-        if not candidates:
+        if not discovered:
             raise ValueError('No candidate documents to prepare.')
 
-        reference_file = gics_reference or (SAVED_GICS if SAVED_GICS.is_file() else None)
-        reference = ((reference_file.read_bytes(), GICS_URLS[1]) if reference_file else download_gics())
+        candidates = []
+        for url, file_type in discovered.items():
+            document_type = (file_type or '').strip().upper()
+            # EX-101 and EX-104 are separate SEC exhibit types.
+            if re.match(r'^EX-10(?![0-9])', document_type):
+                candidates.append((url, document_type))
+            else:
+                log['documents'].append({
+                    'source_url': url, 'document_type': document_type or 'Unknown',
+                    'decision': 'EXCLUDED', 'prescreen_decision': None, 'extractor_status': 'not_sent',
+                    'reason': 'not EX-10' if document_type else 'document type unverified',
+                })
+        if urls is None:
+            candidate_cap = limit * DOWNLOADS_PER_AGREEMENT
+            print(f'SEC candidates: {len(ranked)} ranked, {len(discovered)} unique URLs, '
+                  f'{len(candidates)} EX-10, at most {candidate_cap} EX-10 attempted.', flush=True)
+            candidates = candidates[:candidate_cap]
+        reference = None
+        if candidates:
+            reference_file = gics_reference or (SAVED_GICS if SAVED_GICS.is_file() else None)
+            reference = ((reference_file.read_bytes(), GICS_URLS[1]) if reference_file else download_gics())
         print(f'Royalty screening mode: frozen{f" and opt-in {SCREEN_VERSION}" if exclude_royalty_screen else ""}.',
               flush=True)
         ready = []
-        for number, url in enumerate(candidates, 1):
-            run = root / f'exhibit-{prepared_count + 1:03}'
+        for number, (url, document_type) in enumerate(candidates, 1):
+            run = root / f'exhibit-{number:03}'
             try:
                 document = fetcher.get(url)
             except (ValueError, OSError, SECRequestError) as exc:
@@ -505,23 +523,21 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
                        'flags': ['pointer_uncheckable'], 'skip_reason': '', 'extractor_status': 'not_sent',
                        'error': f'{type(exc).__name__}: {exc}'}
                 log['errors'].append(row['error'])
+            row['document_type'] = document_type
             try:
                 if document.issue:
                     raise ParseError(document.issue.detail)
                 prepare(url, run, agent, client=frozen.DownloadedSource(document), reference=reference,
                         audit_royalty_screen=False)
-            except (ValueError, OSError, SECRequestError) as exc:
+            except Exception as exc:
                 row['error'] = str(exc)
-                if document.issue and document.issue.reason == screen.FETCH_FAILURE:
-                    row['failure_stage'] = 'fetch'
+                row['failure_stage'] = 'fetch' if document.issue and document.issue.reason == screen.FETCH_FAILURE else 'prepare'
                 if isinstance(exc, (SourceTooLarge, ParseError, UnicodeError)):
                     flag = 'source_too_large' if isinstance(exc, SourceTooLarge) else 'unreadable_source'
                     if flag not in row['flags']:
                         row['flags'].append(flag)
-                    row['decision'] = 'REVIEW'
-                    log['documents'].append(row)
-                else:
-                    log['preparation_failures'].append(row)
+                row['decision'] = 'REVIEW'
+                log['documents'].append(row)
                 print(f'Preparation rejected {url}: {exc}', file=sys.stderr)
                 continue
             prepared_count += 1
@@ -538,7 +554,7 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
                 ready.append((run, document, row))
             if prepared_count == limit:
                 break
-        if not prepared_count:
+        if candidates and not prepared_count:
             raise ValueError('No exhibit passed preparation in the candidate sample.')
         if not execute:
             print(f'Prepared {prepared_count} exhibit(s). Add --go to run Codex and write Excel.')

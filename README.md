@@ -7,10 +7,11 @@ Run the one-sheet agreement summary from the repository:
 ```
 
 Replace the inclusive SEC filing dates and the maximum number of exhibits
-that pass preparation. Discovery can attempt up to ten candidates per slot.
-Each candidate goes through the frozen Nov 22 pre-screen and evidence
-pointer check. Unreadable sources and exhibits above the prompt limit are
-logged as REVIEW. With `--go`, the launcher sends eligible KEEPs and readable
+that pass preparation. The batch attempts up to ten EX-10 candidates per slot.
+Only SEC documents identified as EX-10 exhibits go through the frozen Nov 22
+pre-screen and evidence pointer check. Other document types are logged as
+excluded. Preparation errors, including unreadable and oversized sources,
+are logged as REVIEW. With `--go`, the launcher sends eligible KEEPs and readable
 REVIEWs to Codex. REVIEW rows carry a pending-human-review notice in Other
 material conditions, and one exhibit can produce several rows. Omit `--go`
 to prepare and screen without making model calls or writing a workbook.

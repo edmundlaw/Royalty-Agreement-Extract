@@ -157,6 +157,10 @@ def frozen_keep(_, document, number):
             'extractor_status': 'not_sent'}
 
 
+def hit(url, file_type="EX-10.1"):
+    return {"source_url": url, "file_type": file_type}
+
+
 class AuditTests(unittest.TestCase):
     def setUp(self):
         self.context = tempfile.TemporaryDirectory()
@@ -243,7 +247,7 @@ class AuditTests(unittest.TestCase):
                     patch.object(summary, "SECClient"),
                     patch.object(summary.frozen, "load_screen", return_value=stub_frozen_source(raw)),
                     patch.object(summary.frozen, "screen_document", side_effect=frozen_keep),
-                    patch.object(summary, "discover", return_value=[{"source_url": URL}]),
+                    patch.object(summary, "discover", return_value=[hit(URL)]),
                     patch.object(summary, "gics_names", return_value={}),
                     patch.object(summary, "_preflight_subscription"),
                     patch.object(summary, "load_agreements"),
@@ -302,7 +306,7 @@ class AuditTests(unittest.TestCase):
             patch.object(summary, "SECClient"),
             patch.object(prototype.Fetcher, "get",
                          return_value=prototype.RawDocument(URL, b"<html><body></body></html>")),
-            patch.object(summary, "discover", return_value=[{"source_url": URL}]),
+            patch.object(summary, "discover", return_value=[hit(URL)]),
             patch.object(summary, "candidate_rank", return_value=0),
             patch.object(summary.tempfile, "mkdtemp", return_value=str(self.root)),
             patch.object(summary, "read") as reader,
@@ -315,8 +319,9 @@ class AuditTests(unittest.TestCase):
             self.assertEqual((row["decision"], row["flags"]), ("REVIEW", ["unreadable_source"]))
 
     def test_preparation_limits_preserve_frozen_evidence_for_review(self):
-        candidates = [URL, URL.replace("ex10.htm", "ex11.htm")]
-        failures = [summary.SourceTooLarge("Above 300,000 characters"), summary.ParseError("No readable text found")]
+        candidates = [URL, URL.replace("ex10.htm", "ex11.htm"), URL.replace("ex10.htm", "ex12.htm")]
+        failures = [summary.SourceTooLarge("Above 300,000 characters"), summary.ParseError("No readable text found"),
+                    RuntimeError("Writing prompt failed")]
 
         def screen_candidate(_, document, number):
             return dict(frozen_keep(_, document, number), prescreen_decision="KEEP", captured_rate_text="7%")
@@ -326,21 +331,75 @@ class AuditTests(unittest.TestCase):
             patch.object(summary, "SECClient"),
             patch.object(summary.frozen, "load_screen", return_value=stub_frozen_source(b"source")),
             patch.object(summary.frozen, "screen_document", side_effect=screen_candidate) as frozen_screen,
-            patch.object(summary, "discover", return_value=[{"source_url": url} for url in candidates]),
+            patch.object(summary, "discover", return_value=[hit(url) for url in candidates]),
             patch.object(summary, "candidate_rank", return_value=0),
             patch.object(summary, "prepare", side_effect=failures),
             patch.object(summary, "read") as reader,
         ):
             self.assertEqual(summary.batch(date(2026, 1, 1), date(2026, 1, 10), 2, execute=True,
                                            output_root=self.root), 1)
-            self.assertEqual(frozen_screen.call_count, 2)
+            self.assertEqual(frozen_screen.call_count, 3)
             reader.assert_not_called()
         log, = self.root.glob("*/screening_log.json")
-        rows = read_json(log)["documents"]
-        for row, flag in zip(rows, ("source_too_large", "unreadable_source"), strict=True):
+        report = read_json(log)
+        self.assertNotIn("preparation_failures", report)
+        for row, flags in zip(report["documents"],
+                              (["pointer_ok", "source_too_large"], ["pointer_ok", "unreadable_source"],
+                               ["pointer_ok"]), strict=True):
             self.assertEqual((row["prescreen_decision"], row["decision"]), ("KEEP", "REVIEW"))
             self.assertEqual(row["captured_rate_text"], "7%")
-            self.assertIn(flag, row["flags"])
+            self.assertEqual(row["flags"], flags)
+            self.assertEqual(row["failure_stage"], "prepare")
+
+    def test_non_ex10_is_excluded_before_fetch_or_screen(self):
+        non_ex10 = [hit(URL, "EX-99.1"), hit(URL.replace("ex10.htm", "form.htm"), "8-K"),
+                    hit(URL.replace("ex10.htm", "offer.htm"), "424B3"),
+                    hit(URL.replace("ex10.htm", "xbrl.htm"), "EX-101.INS"),
+                    hit(URL.replace("ex10.htm", "unknown.htm"), None)]
+        eligible = hit(URL.replace("ex10.htm", "description.htm"), "ex-10.17")
+        fetcher = SimpleNamespace(get=lambda url: SimpleNamespace(url=url, body=b"source", issue=None))
+        with (
+            patch.object(summary, "sec_user_agent", return_value="test"),
+            patch.object(summary, "SECClient"),
+            patch.object(summary.frozen, "load_screen", return_value=SimpleNamespace(Fetcher=lambda _: fetcher)),
+            patch.object(fetcher, "get", wraps=fetcher.get) as fetch,
+            patch.object(summary.frozen, "screen_document", side_effect=frozen_keep) as frozen_screen,
+            patch.object(summary, "discover", return_value=[*non_ex10, eligible, non_ex10[0]]),
+            patch.object(summary, "prepare") as prepare,
+        ):
+            self.assertEqual(summary.batch(date(2026, 1, 1), date(2026, 1, 10), 1, output_root=self.root), 0)
+            fetch.assert_called_once_with(eligible["source_url"])
+            frozen_screen.assert_called_once()
+            self.assertEqual(frozen_screen.call_args.args[1].url, eligible["source_url"])
+            prepare.assert_called_once()
+            self.assertEqual(prepare.call_args.args[0], eligible["source_url"])
+        path, = self.root.glob("*/screening_log.json")
+        rows = {row["source_url"]: row for row in read_json(path)["documents"]}
+        self.assertEqual(len(rows), 6)
+        self.assertEqual(rows[eligible["source_url"]]["document_type"], "EX-10.17")
+        for item in non_ex10:
+            row = rows[item["source_url"]]
+            self.assertEqual((row["decision"], row["prescreen_decision"], row["extractor_status"]),
+                             ("EXCLUDED", None, "not_sent"))
+            self.assertEqual(row["document_type"], item["file_type"] or "Unknown")
+            self.assertEqual(row["reason"], "not EX-10" if item["file_type"] else "document type unverified")
+
+    def test_explicit_urls_get_document_types_from_filing_index(self):
+        prototype = summary.frozen.load_screen()
+        base = URL.rsplit("/", 1)[0]
+        index_url = base + "/0000000001-26-000001-index.htm"
+        html = b"""<html><body><table>
+            <tr><th>Seq</th><th>Description</th><th>Document</th><th>Type</th></tr>
+            <tr><td>1</td><td>Current report with disclosures</td><td><a href="form.htm">form.htm</a></td><td>8-K</td></tr>
+            <tr><td>2</td><td>Contract agreement</td><td><a href="ex10.htm">ex10.htm</a></td><td>EX-10.1</td></tr>
+            <tr><td>3</td><td>Press release</td><td><a href="release.htm">release.htm</a></td><td>EX-99.1</td></tr>
+            </table></body></html>"""
+        fetcher = SimpleNamespace(get=lambda url: prototype.RawDocument(url, html))
+        rows, warnings = summary.frozen.filing_documents(prototype, fetcher, index_url)
+        self.assertFalse(warnings)
+        self.assertEqual(dict(rows), {base + "/form.htm": "8-K", URL: "EX-10.1", base + "/release.htm": "EX-99.1"})
+        self.assertEqual(summary.frozen.filing_documents(prototype, fetcher, base + "/release.htm"),
+                         ([(base + "/release.htm", "EX-99.1")], []))
 
     def test_exclusions_require_execution_and_exact_version(self):
         for execute, version in ((False, screen.SCREEN_VERSION), (True, "royalty-screen.stale")):
@@ -357,7 +416,7 @@ class AuditTests(unittest.TestCase):
             patch.object(summary, "SECClient"),
             patch.object(summary.frozen, "load_screen", return_value=stub_frozen_source(b"source")),
             patch.object(summary.frozen, "screen_document", side_effect=frozen_keep),
-            patch.object(summary, "discover", return_value=[{"source_url": URL}, {"source_url": other}]),
+            patch.object(summary, "discover", return_value=[hit(URL), hit(other)]),
             patch.object(summary, "candidate_rank", return_value=0),
             patch.object(summary.tempfile, "mkdtemp", return_value=str(self.root)),
             patch.object(summary, "prepare"),
@@ -416,7 +475,7 @@ class AuditTests(unittest.TestCase):
         with (
             patch.object(summary, "sec_user_agent", return_value="test"),
             patch.object(summary, "SECClient"),
-            patch.object(summary, "discover", return_value=[{"source_url": url} for url in urls.values()]),
+            patch.object(summary, "discover", return_value=[hit(url) for url in urls.values()]),
             patch.object(summary, "candidate_rank", return_value=0),
             patch.object(summary.frozen, "load_screen",
                          return_value=SimpleNamespace(FETCH_FAILURE="REVIEW_FETCH_FAILURE",
@@ -550,7 +609,7 @@ class AuditTests(unittest.TestCase):
         with (
             patch.object(summary, "sec_user_agent", return_value="local-evidence-test"),
             patch.object(summary, "SECClient"),
-            patch.object(summary, "discover", return_value=[{"source_url": url} for url in urls.values()]),
+            patch.object(summary, "discover", return_value=[hit(url) for url in urls.values()]),
             patch.object(summary, "candidate_rank", return_value=0),
             patch.object(prototype.Fetcher, "get", side_effect=documents.__getitem__),
             patch.object(summary.frozen, "screen_document", side_effect=capture_decision),
@@ -571,7 +630,7 @@ class AuditTests(unittest.TestCase):
 
         root, = self.root.glob("runs_summary_*")
         log = read_json(root / "screening_log.json")
-        rows = {keys[row["source_url"]]: row for row in log["documents"] + log["preparation_failures"]}
+        rows = {keys[row["source_url"]]: row for row in log["documents"]}
         recovered = {"recoverable"} | ({"saved_rmed"} if original.is_file() else set())
         expected = recovered | {"former_gate"}
         self.assertEqual(set(sent), expected)

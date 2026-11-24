@@ -9,7 +9,8 @@ from types import ModuleType
 import unicodedata
 from urllib.parse import parse_qs, urldefrag, urlsplit
 
-from .parsing import parse_document
+from .inventory import parse_filing_index_html
+from .parsing import decode_bytes, parse_document
 
 
 PROTOTYPE = Path(__file__).resolve().parents[3] / 'royalty_prescreen_prototype' / 'validation_v3'
@@ -128,17 +129,23 @@ def filing_documents(screen, fetcher, url):
     dashed = f'{accession[:10]}-{accession[10:12]}-{accession[12:]}'
     is_index = parts.path.endswith(('-index.htm', '-index.html'))
     index_url = url if is_index else f'https://{parts.netloc}{filing[0]}{dashed}-index.htm'
-    index, issue = screen.parse(fetcher.get(index_url))
+    index_document = fetcher.get(index_url)
+    index, issue = screen.parse(index_document)
     if issue:
         if is_index:
             raise ValueError(f'{index_url}: {issue.detail}')
-        return [url], [f'Filing index unavailable for {url}. Screened only the supplied document. {issue.detail}']
+        return [(url, None)], [f'Filing index unavailable for {url}. {issue.detail}']
+    cik = filing[1].rstrip('/').rsplit('/', 1)[-1]
+    inventory = parse_filing_index_html(decode_bytes(index_document.body), cik, dashed)
+    types = {urlsplit(direct_url(item['source_url'])).path: item['file_type'] for item in inventory}
     primary, attachments = screen.filing_links(index, index_url)
     if is_index or parts.path in {urlsplit(item).path for item in primary}:
         if not primary and not attachments:
             raise ValueError(f'No candidate document links in {index_url}')
-        return primary + attachments, []
-    return [url], []
+        urls = primary + attachments
+    else:
+        urls = [url]
+    return [(item, types.get(urlsplit(item).path)) for item in urls], []
 
 
 class DownloadedSource:
