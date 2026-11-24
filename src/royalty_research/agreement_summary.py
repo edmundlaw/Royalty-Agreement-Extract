@@ -19,9 +19,8 @@ from urllib.request import urlopen
 
 from .discovery import discover
 from . import frozen_prescreen as frozen
-from .m13_production import DOWNLOADS_PER_AGREEMENT, candidate_rank, licence_gate
+from .m13_production import DOWNLOADS_PER_AGREEMENT, candidate_rank
 from .m4_operator import _command, _preflight_subscription, _safe_environment
-from .m7_triage import triage_document
 from .mapping import map_contract
 from .parsing import ParseError, decode_bytes, extract_sgml_text, parse_document
 from .royalty_screen import SCREEN_VERSION, audit_screen, record_exclusion
@@ -67,6 +66,10 @@ class OutputError(ValueError):
     """A saved reader response could not be mapped safely to the sheet."""
 
 
+class SourceTooLarge(ValueError):
+    """The full readable source exceeds the single-prompt limit."""
+
+
 def download_gics():
     for url in GICS_URLS:
         try:
@@ -106,11 +109,6 @@ def prepare(url, run, user_agent, source_file=None, gics_reference=None, *, clie
     document_id = 'DOC-' + sha256(url.encode())[:16]
     mapping = map_contract(paragraphs, {'document_id': document_id, 'source_url': url},
                            raw_hash=sha256(raw), parser_type=parser)
-    gate = licence_gate(mapping)
-    priority = triage_document(mapping)['priority']
-    if priority.startswith('LOW_SIGNAL') or not gate['passed']:
-        raise ValueError(f'Exhibit did not pass existing screening ({priority}): {gate["reason"]}')
-
     limitation = IMAGE_LIMITATION if re.search(rb'<img\b', raw, re.I) else ''
     source_note = f'\n\nPREPARATION LIMITATION\n\n{limitation}' if limitation else ''
     passages = '\n\n'.join(f'[{p["passage_id"].split(":")[-1]}] {p["text"]}' for p in mapping['passages'])
@@ -126,8 +124,8 @@ def prepare(url, run, user_agent, source_file=None, gics_reference=None, *, clie
               f'\n\nOFFICIAL GICS HIERARCHY ({GICS_SHEET})\n\n{hierarchy}'
               f'\n\nSEC EXHIBIT TEXT\n\n{passages}\n')
     if len(prompt) > MAX_PROMPT_CHARS:
-        raise ValueError(f'Full prompt is {len(prompt):,} characters, above the current CLI bound '
-                         f'of {MAX_PROMPT_CHARS:,}. No split or partial reading was prepared.')
+        raise SourceTooLarge(f'Full prompt is {len(prompt):,} characters, above the current CLI bound '
+                             f'of {MAX_PROMPT_CHARS:,}. No split or partial reading was prepared.')
 
     run.mkdir(parents=True)
     (run / 'source.htm').write_bytes(raw)
@@ -135,7 +133,7 @@ def prepare(url, run, user_agent, source_file=None, gics_reference=None, *, clie
     (run / 'prompt.txt').write_text(prompt, encoding='utf-8')
     prepared = {
         'document_id': document_id, 'source_url': url, 'source_sha256': sha256(raw),
-        'parser': parser, 'screening': gate, 'priority': priority,
+        'parser': parser,
         'passages': len(mapping['passages']), 'prompt_chars': len(prompt), 'limitation': limitation,
         'gics_reference_url': reference_url, 'gics_reference_sheet': GICS_SHEET,
         'reader_format': 2,
@@ -463,7 +461,7 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
     log = {'notice': frozen.DRAFT, 'prototype_root': str(frozen.PROTOTYPE), 'sha256_before': frozen.FREEZE,
            'documents': [], 'preparation_failures': [], 'errors': [], 'workbook': None,
            'legacy_exclusion': exclude_royalty_screen, 'execute': execute}
-    prepared = []
+    prepared_count = 0
     completed = []
     try:
         if urls is None:
@@ -491,37 +489,14 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
         reference = ((reference_file.read_bytes(), GICS_URLS[1]) if reference_file else download_gics())
         print(f'Royalty screening mode: frozen{f" and opt-in {SCREEN_VERSION}" if exclude_royalty_screen else ""}.',
               flush=True)
-        for url in candidates:
-            document = None
-            run = root / f'exhibit-{len(prepared) + 1:03}'
+        ready = []
+        for number, url in enumerate(candidates, 1):
+            run = root / f'exhibit-{prepared_count + 1:03}'
             try:
                 document = fetcher.get(url)
-                if document.issue:
-                    raise ParseError(document.issue.detail)
-                prepare(url, run, agent, client=frozen.DownloadedSource(document), reference=reference,
-                        audit_royalty_screen=False)
             except (ValueError, OSError, SECRequestError) as exc:
-                unreadable = document is None or isinstance(exc, (ParseError, UnicodeError, OSError, SECRequestError))
-                if document is not None and not unreadable:
-                    _, issue = screen.parse(document)
-                    unreadable = bool(issue and issue.reason != screen.OTHER_UNCERTAINTY)
-                failure = {'source_url': url, 'error': str(exc), 'extractor_status': 'not_sent',
-                           'flags': ['unreadable_source'] if unreadable else []}
-                if unreadable:
-                    log['documents'].append(dict(failure, decision='REVIEW', prescreen_decision=None,
-                                                 captured_rate_text='', captured_excerpt='',
-                                                 evidence_pointer='', skip_reason=''))
-                else:
-                    log['preparation_failures'].append(failure)
-                print(f'Preparation rejected {url}: {exc}', file=sys.stderr)
-                continue
-            prepared.append((run, document))
-            print(f'Prepared {len(prepared)}/{limit if limit is not None else len(candidates)}: {url}', flush=True)
-            if len(prepared) == limit:
-                break
+                document = screen.RawDocument(url, issue=screen.SourceIssue(screen.FETCH_FAILURE, str(exc)))
 
-        ready = []
-        for number, (run, document) in enumerate(prepared, 1):
             try:
                 row = frozen.screen_document(screen, document, number)
             except Exception as exc:
@@ -530,6 +505,27 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
                        'flags': ['pointer_uncheckable'], 'skip_reason': '', 'extractor_status': 'not_sent',
                        'error': f'{type(exc).__name__}: {exc}'}
                 log['errors'].append(row['error'])
+            try:
+                if document.issue:
+                    raise ParseError(document.issue.detail)
+                prepare(url, run, agent, client=frozen.DownloadedSource(document), reference=reference,
+                        audit_royalty_screen=False)
+            except (ValueError, OSError, SECRequestError) as exc:
+                row['error'] = str(exc)
+                if document.issue and document.issue.reason == screen.FETCH_FAILURE:
+                    row['failure_stage'] = 'fetch'
+                if isinstance(exc, (SourceTooLarge, ParseError, UnicodeError)):
+                    flag = 'source_too_large' if isinstance(exc, SourceTooLarge) else 'unreadable_source'
+                    if flag not in row['flags']:
+                        row['flags'].append(flag)
+                    row['decision'] = 'REVIEW'
+                    log['documents'].append(row)
+                else:
+                    log['preparation_failures'].append(row)
+                print(f'Preparation rejected {url}: {exc}', file=sys.stderr)
+                continue
+            prepared_count += 1
+            print(f'Prepared {prepared_count}/{limit if limit is not None else len(candidates)}: {url}', flush=True)
             if row['decision'] == 'REVIEW' and 'unreadable_source' in row['flags'] and not row.get('error'):
                 row['html_recovery'] = html_review_recovery(screen, document)
             log['documents'].append(row)
@@ -540,10 +536,12 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
                      or row.get('html_recovery', {}).get('result') == 'eligible')
             ):
                 ready.append((run, document, row))
-        if not prepared:
+            if prepared_count == limit:
+                break
+        if not prepared_count:
             raise ValueError('No exhibit passed preparation in the candidate sample.')
         if not execute:
-            print(f'Prepared {len(prepared)} exhibit(s). Add --go to run Codex and write Excel.')
+            print(f'Prepared {prepared_count} exhibit(s). Add --go to run Codex and write Excel.')
         else:
             excluded = 0
             for run, document, row in ready:
@@ -583,7 +581,7 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
     except Exception as exc:
         log['errors'].append(f'{type(exc).__name__}: {exc}')
     finally:
-        log['prepared_count'] = len(prepared)
+        log['prepared_count'] = prepared_count
         try:
             frozen.verified_sources()
             log['sha256_after'] = frozen.FREEZE

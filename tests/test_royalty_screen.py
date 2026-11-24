@@ -13,6 +13,8 @@ from openpyxl import load_workbook
 
 from royalty_research import agreement_summary as summary
 from royalty_research import royalty_screen as screen
+from royalty_research.m13_production import licence_gate
+from royalty_research.mapping import map_contract
 from royalty_research.storage import read_json, sha256
 
 
@@ -242,8 +244,6 @@ class AuditTests(unittest.TestCase):
                     patch.object(summary.frozen, "load_screen", return_value=stub_frozen_source(raw)),
                     patch.object(summary.frozen, "screen_document", side_effect=frozen_keep),
                     patch.object(summary, "discover", return_value=[{"source_url": URL}]),
-                    patch.object(summary, "licence_gate", return_value={"passed": True}),
-                    patch.object(summary, "triage_document", return_value={"priority": "HIGH"}),
                     patch.object(summary, "gics_names", return_value={}),
                     patch.object(summary, "_preflight_subscription"),
                     patch.object(summary, "load_agreements"),
@@ -296,11 +296,12 @@ class AuditTests(unittest.TestCase):
                         self.assertEqual(normalized[evidence["start"]:evidence["end"]], evidence["excerpt"])
 
     def test_invalid_prepare_source_never_reaches_reader(self):
+        prototype = summary.frozen.load_screen()
         with (
             patch.object(summary, "sec_user_agent", return_value="test"),
             patch.object(summary, "SECClient"),
-            patch.object(summary.frozen, "load_screen",
-                         return_value=stub_frozen_source(b"<html><body></body></html>")),
+            patch.object(prototype.Fetcher, "get",
+                         return_value=prototype.RawDocument(URL, b"<html><body></body></html>")),
             patch.object(summary, "discover", return_value=[{"source_url": URL}]),
             patch.object(summary, "candidate_rank", return_value=0),
             patch.object(summary.tempfile, "mkdtemp", return_value=str(self.root)),
@@ -312,6 +313,34 @@ class AuditTests(unittest.TestCase):
             reader.assert_not_called()
             row, = read_json(self.root / "screening_log.json")["documents"]
             self.assertEqual((row["decision"], row["flags"]), ("REVIEW", ["unreadable_source"]))
+
+    def test_preparation_limits_preserve_frozen_evidence_for_review(self):
+        candidates = [URL, URL.replace("ex10.htm", "ex11.htm")]
+        failures = [summary.SourceTooLarge("Above 300,000 characters"), summary.ParseError("No readable text found")]
+
+        def screen_candidate(_, document, number):
+            return dict(frozen_keep(_, document, number), prescreen_decision="KEEP", captured_rate_text="7%")
+
+        with (
+            patch.object(summary, "sec_user_agent", return_value="test"),
+            patch.object(summary, "SECClient"),
+            patch.object(summary.frozen, "load_screen", return_value=stub_frozen_source(b"source")),
+            patch.object(summary.frozen, "screen_document", side_effect=screen_candidate) as frozen_screen,
+            patch.object(summary, "discover", return_value=[{"source_url": url} for url in candidates]),
+            patch.object(summary, "candidate_rank", return_value=0),
+            patch.object(summary, "prepare", side_effect=failures),
+            patch.object(summary, "read") as reader,
+        ):
+            self.assertEqual(summary.batch(date(2026, 1, 1), date(2026, 1, 10), 2, execute=True,
+                                           output_root=self.root), 1)
+            self.assertEqual(frozen_screen.call_count, 2)
+            reader.assert_not_called()
+        log, = self.root.glob("*/screening_log.json")
+        rows = read_json(log)["documents"]
+        for row, flag in zip(rows, ("source_too_large", "unreadable_source"), strict=True):
+            self.assertEqual((row["prescreen_decision"], row["decision"]), ("KEEP", "REVIEW"))
+            self.assertEqual(row["captured_rate_text"], "7%")
+            self.assertIn(flag, row["flags"])
 
     def test_exclusions_require_execution_and_exact_version(self):
         for execute, version in ((False, screen.SCREEN_VERSION), (True, "royalty-screen.stale")):
@@ -354,7 +383,7 @@ class AuditTests(unittest.TestCase):
         urls = {key: URL.replace("ex10.htm", f"{key}.htm") for key in cases}
 
         def fetch(url):
-            issue = SimpleNamespace(detail="HTTP 504") if url == urls["fetch"] else None
+            issue = SimpleNamespace(detail="HTTP 504", reason="REVIEW_FETCH_FAILURE") if url == urls["fetch"] else None
             return SimpleNamespace(url=url, body=b"" if issue else raw, issue=issue)
 
         def decision(_, document, number):
@@ -390,11 +419,10 @@ class AuditTests(unittest.TestCase):
             patch.object(summary, "discover", return_value=[{"source_url": url} for url in urls.values()]),
             patch.object(summary, "candidate_rank", return_value=0),
             patch.object(summary.frozen, "load_screen",
-                         return_value=SimpleNamespace(Fetcher=lambda _: SimpleNamespace(get=fetch))),
+                         return_value=SimpleNamespace(FETCH_FAILURE="REVIEW_FETCH_FAILURE",
+                                                      Fetcher=lambda _: SimpleNamespace(get=fetch))),
             patch.object(summary.frozen, "screen_document", side_effect=decision),
             patch.object(summary.frozen, "verified_sources"),
-            patch.object(summary, "licence_gate", return_value={"passed": True}),
-            patch.object(summary, "triage_document", return_value={"priority": "HIGH"}),
             patch.object(summary, "gics_names", return_value={}),
             patch.object(summary, "_preflight_subscription"),
             patch.object(summary.shutil, "which", return_value="/codex"),
@@ -465,7 +493,8 @@ class AuditTests(unittest.TestCase):
             "hidden": ((body + "<script>unfinished</body>").encode(), None),
             "partial_http": (recovered, prototype.SourceIssue(prototype.UNREADABLE, "HTTP partial content")),
             "fetch": (b"", prototype.SourceIssue(prototype.FETCH_FAILURE, "HTTP 504")),
-            "independent_gate": ((body.replace(title, "<h1>Loan Agreement</h1>") + clauses + "</body>").encode(), None),
+            "former_gate": ((body.replace(title, "<h1>Asset Purchase Agreement</h1>")
+                             .replace("[***]%", "7%") + "</body></html>").encode(), None),
             "oversized": ((body + clauses * 900 + "</body>").encode(), None),
         }
         urls = {key: URL.replace("ex10.htm", f"{key}.htm") for key in test_sources}
@@ -485,6 +514,11 @@ class AuditTests(unittest.TestCase):
 
         keys = {url: key for key, url in urls.items()}
         documents = {url: prototype.RawDocument(url, *test_sources[key]) for url, key in keys.items()}
+        former_gate_raw = test_sources["former_gate"][0]
+        paragraphs, parser = summary.parse_document(former_gate_raw, "former_gate.htm")
+        mapping = map_contract(paragraphs, {"document_id": "DOC-TEST", "source_url": urls["former_gate"]},
+                               raw_hash=sha256(former_gate_raw), parser_type=parser)
+        self.assertFalse(licence_gate(mapping)["passed"])
         original_rows = {}
         screen_document = summary.frozen.screen_document
 
@@ -538,26 +572,31 @@ class AuditTests(unittest.TestCase):
         root, = self.root.glob("runs_summary_*")
         log = read_json(root / "screening_log.json")
         rows = {keys[row["source_url"]]: row for row in log["documents"] + log["preparation_failures"]}
-        expected = {"recoverable"} | ({"saved_rmed"} if original.is_file() else set())
+        recovered = {"recoverable"} | ({"saved_rmed"} if original.is_file() else set())
+        expected = recovered | {"former_gate"}
         self.assertEqual(set(sent), expected)
         self.assertEqual(set(rows), set(urls))
         self.assertEqual(log["sha256_before"], log["sha256_after"])
         for key, row in rows.items():
             with self.subTest(source=key):
-                if key in original_rows:
+                if key in original_rows and key not in {"oversized", "empty", "hidden", "partial_http", "fetch", "binary"}:
                     for field, value in original_rows[key].items():
                         if field != "extractor_status":
                             self.assertEqual(row[field], value)
-                if key in expected:
+                if key in recovered:
                     self.assertEqual(row["decision"], "REVIEW")
                     self.assertIn("unreadable_source", row["flags"])
                     self.assertEqual(row["html_recovery"]["result"], "eligible")
                     self.assertEqual(row["extractor_status"], "completed")
-                else:
+                elif key != "former_gate":
                     self.assertEqual(row["extractor_status"], "not_sent")
                     self.assertTrue(row.get("error") or row["html_recovery"]["reason"])
         self.assertIn("above the current CLI bound", rows["oversized"]["error"])
-        self.assertIn("existing screening", rows["independent_gate"]["error"])
+        self.assertEqual(rows["former_gate"]["decision"], "KEEP")
+        self.assertEqual(rows["former_gate"]["extractor_status"], "completed")
+        self.assertEqual(rows["oversized"]["decision"], "REVIEW")
+        self.assertIn("source_too_large", rows["oversized"]["flags"])
+        self.assertEqual(rows["oversized"]["prescreen_decision"], original_rows["oversized"]["prescreen_decision"])
         self.assertEqual(rows["fetch"]["error"], "HTTP 504")
         self.assertEqual(rows["recoverable"]["captured_rate_text"], "99.99%")
         self.assertNotIn("99.99%", sent["recoverable"])
@@ -577,6 +616,9 @@ class AuditTests(unittest.TestCase):
         for row_number in range(2, sheet.max_row + 1):
             key = sheet.cell(row_number, 1).value.removeprefix("Mock output for ")
             prompt = sent[key]
+            if key == "former_gate":
+                self.assertNotIn("PENDING HUMAN REVIEW", sheet.cell(row_number, 15).value)
+                continue
             self.assertTrue(prompt.startswith(summary.REVIEW_INSTRUCTIONS))
             self.assertIn(summary.RECOVERY_CAVEAT, prompt)
             supplied = prompt.split("\n\nSEC EXHIBIT TEXT\n\n", 1)[1]
