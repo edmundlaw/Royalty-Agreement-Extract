@@ -401,6 +401,70 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(summary.frozen.filing_documents(prototype, fetcher, base + "/release.htm"),
                          ([(base + "/release.htm", "EX-99.1")], []))
 
+    def test_opt_in_title_filter_keeps_unknown_and_excludes_known_nonmatches(self):
+        names = ("agreement", "warrant", "unknown", "press", "royalty", "technology", "trademark", "brand")
+        kinds = ("EX-4.31", "EX-4.8", "EX-10.1", "EX-99.1", "EX-4.1", "EX-4.2", "EX-4.3", "EX-4.4")
+        titles = ("License Agreement", "Common Stock Warrant", "EXHIBIT 10.1", "Press Release",
+                  "Royalty", "Technology", "Trademark", "Brand Name")
+        candidates = [dict(hit(URL.replace("ex10", name), kind), file_description=title)
+                      for name, kind, title in zip(names, kinds, titles)]
+        fetcher = SimpleNamespace(get=lambda url: SimpleNamespace(
+            url=url, body=b"<html><body><p>Exhibit 10.1</p></body></html>", issue=None))
+        with (
+            patch.object(summary, "sec_user_agent", return_value="test"),
+            patch.object(summary, "SECClient"),
+            patch.object(summary.frozen, "load_screen", return_value=SimpleNamespace(Fetcher=lambda _: fetcher)),
+            patch.object(summary.frozen, "screen_document", side_effect=frozen_keep) as frozen_screen,
+            patch.object(summary, "discover", return_value=candidates),
+            patch.object(summary, "prepare") as prepare,
+            patch.object(summary, "read") as reader,
+        ):
+            self.assertEqual(summary.batch(date(2026, 1, 1), date(2026, 1, 31), 10, output_root=self.root,
+                                           exhibits=summary.exhibit_prefixes("ex-10, EX-4"),
+                                           contract_title_only=True), 0)
+            self.assertEqual(frozen_screen.call_count, 6)
+            self.assertEqual(prepare.call_count, 6)
+            reader.assert_not_called()
+        path, = self.root.glob("*/screening_log.json")
+        rows = {Path(row["source_url"]).stem: row for row in read_json(path)["documents"]}
+        self.assertEqual(rows["agreement"]["title"], "License Agreement")
+        self.assertEqual(rows["warrant"]["decision"], "EXCLUDED_NOT_CONTRACT_TITLE")
+        self.assertEqual(rows["warrant"]["title"], "Common Stock Warrant")
+        self.assertEqual(rows["unknown"]["decision"], "KEEP")
+        self.assertEqual(rows["unknown"]["title_status"], "TITLE_UNKNOWN")
+        self.assertIn("TITLE_UNKNOWN", rows["unknown"]["flags"])
+        self.assertEqual(rows["press"]["decision"], "EXCLUDED")
+        for name, title in zip(names[-4:], titles[-4:]):
+            with self.subTest(title=title):
+                self.assertEqual(rows[name]["title"], title)
+                self.assertEqual(rows[name]["decision"], "KEEP")
+
+    def test_new_title_keywords_are_recognized_in_source_only_when_enabled(self):
+        for title in ("Royalty", "Technology", "Trademark", "Brand Name"):
+            with self.subTest(title=title):
+                document = SimpleNamespace(url=URL, issue=None, body=f"<h1>{title}</h1>".encode())
+                self.assertEqual(summary.candidate_title(document, "", contract_title_only=True), title)
+                self.assertEqual(summary.candidate_title(document, ""), "")
+        document = SimpleNamespace(url=URL, issue=None,
+                                   body=b"<p>Example Royalties Corporation</p><h1>Credit Facilities</h1>")
+        self.assertEqual(summary.candidate_title(document, "", contract_title_only=True), "Credit Facilities")
+
+    def test_exhibit_prefixes_match_number_families(self):
+        prefixes = summary.exhibit_prefixes("EX-10, EX-4,424b2")
+        for kind in ("EX-10", "EX-10.1", "EX-4.31", "424B2"):
+            self.assertTrue(summary.matches_exhibit(kind, prefixes))
+        for kind in ("EX-101.INS", "EX-40", "EX-99.1", "424B3"):
+            self.assertFalse(summary.matches_exhibit(kind, prefixes))
+
+    def test_candidate_title_checks_source_when_sec_description_is_shorthand(self):
+        document = SimpleNamespace(url=URL, issue=None,
+                                   body=b"<p>Information contained in this exhibit has been excluded.</p>"
+                                        b"<p>EXAMPLE COMPANY, as Parent</p>"
+                                        b"<h1>Trust and Servicing Agreement</h1>")
+        self.assertEqual(summary.candidate_title(document, "Series 2026 TSA"), "Trust and Servicing Agreement")
+        document.body = b"<p>EXAMPLE COMPANY, as Parent</p>"
+        self.assertEqual(summary.candidate_title(document, ""), "")
+
     def test_exclusions_require_execution_and_exact_version(self):
         for execute, version in ((False, screen.SCREEN_VERSION), (True, "royalty-screen.stale")):
             with self.subTest(execute=execute, version=version), patch.object(summary, "discover") as discover:

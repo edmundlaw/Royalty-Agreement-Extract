@@ -9,6 +9,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from collections import Counter
 from datetime import date, datetime
 from io import BytesIO
 from pathlib import Path
@@ -29,6 +30,24 @@ from .storage import atomic_bytes, atomic_json, read_json, sha256
 
 PROMPT = Path(__file__).resolve().parents[2] / 'prompts' / 'AGREEMENT_SUMMARY.md'
 MAX_PROMPT_CHARS = 300_000  # Same prompt bound as the existing Codex launcher.
+DEFAULT_EXHIBITS = ('EX-10',)
+BASE_CONTRACT_TITLE = re.compile(r'\b(?:agreement|contract|lease|licen[cs]e|assignment|purchase|amendment)s?\b', re.I)
+CONTRACT_TITLE = re.compile(
+    rf'{BASE_CONTRACT_TITLE.pattern}|\b(?:royalt(?:y|ies)|technolog(?:y|ies)|trademarks?|brand\s+names?)\b',
+    re.I,
+)
+TITLE_KIND = re.compile(
+    r'\b(?:agreements?|contracts?|leases?|licen[cs]es?|assignments?|purchases?|amendments?|indentures?|'
+    r'warrants?|notes?|debentures?|plans?|deeds?|letters?|bylaws?|certificates?|opinions?|'
+    r'credit facilities|annual information form|press release|securities description|'
+    r'description of (?:securities|capital stock))\b', re.I
+)
+TITLE_BOILERPLATE = re.compile(
+    r'^(?:whereas\b|pursuant to\b|as\b|party to\b|certificate administrator\b|'
+    r'(?:section|article)\s+[\w.]+|\d+[.)]\s)|'
+    r'\b(?:information (?:contained|has been|that)|not material|not been registered|'
+    r'as private or confidential|hereby|is made|is entered into)\b|\||,\s*$', re.I
+)
 IMAGE_LIMITATION = 'Embedded images in the SEC exhibit were not read. The supplied source covers the exhibit text.'
 GICS_URLS = (
     'https://www.spglobal.com/spdji/en/documents/index-policies/2023-gics-structure-english.xlsx',
@@ -441,8 +460,53 @@ def html_review_recovery(screen, document):
             'caveat': RECOVERY_CAVEAT}
 
 
+def exhibit_prefixes(value):
+    prefixes = tuple(dict.fromkeys(part.strip().upper() for part in value.split(',')))
+    if any(not re.fullmatch(r'[A-Z0-9][A-Z0-9./-]*', part) for part in prefixes):
+        raise argparse.ArgumentTypeError('Provide comma-separated SEC document-type prefixes, such as EX-10,EX-4.')
+    return prefixes
+
+
+def matches_exhibit(document_type, prefixes):
+    for prefix in prefixes:
+        if document_type.startswith(prefix):
+            suffix = document_type[len(prefix):]
+            if not re.fullmatch(r'EX-\d+', prefix) or not suffix[:1].isdigit():
+                return True
+    return False
+
+
+def descriptive_title(value, url):
+    title = ' '.join((value or '').split())
+    filename = Path(urlsplit(url).path).name
+    if not title or title.casefold() == filename.casefold() or re.fullmatch(
+        r'(?:EX(?:HIBIT)?[\s.-]*[\d.]+[A-Z]?|DOCUMENT|UNTITLED|TABLE OF CONTENTS)', title, re.I
+    ):
+        return ''
+    return title
+
+
+def candidate_title(document, description, *, contract_title_only=False):
+    if BASE_CONTRACT_TITLE.search(description) or document.issue:
+        return description
+    additional_title = description if contract_title_only and CONTRACT_TITLE.search(description) else ''
+    try:
+        paragraphs, _ = parse_document(document.body, Path(urlsplit(document.url).path).name)
+    except (ValueError, RuntimeError, AssertionError):
+        return description if TITLE_KIND.search(description) else additional_title
+    for text in paragraphs[:35]:
+        title = descriptive_title(text, document.url).lstrip('\u200b\ufeff')
+        if len(title) <= 180 and not TITLE_BOILERPLATE.search(title):
+            if TITLE_KIND.search(title):
+                return title
+            if contract_title_only and not additional_title and CONTRACT_TITLE.search(title):
+                if not re.search(r'\b(?:corporation|corp|inc|llc|ltd|limited|plc|llp)\.?$', title, re.I):
+                    additional_title = title
+    return description if TITLE_KIND.search(description) else additional_title
+
+
 def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_royalty_screen=None,
-          urls=None, output_root=None):
+          urls=None, output_root=None, exhibits=DEFAULT_EXHIBITS, contract_title_only=False):
     if urls is None and (not 0 <= (end - start).days < 31 or limit < 1):
         raise ValueError('Provide an inclusive date range of 1 to 31 days and a positive exhibit limit.')
     if exclude_royalty_screen is not None and (not execute or exclude_royalty_screen != SCREEN_VERSION):
@@ -460,7 +524,8 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
     print(f'Batch folder: {root}', flush=True)
     log = {'notice': frozen.DRAFT, 'prototype_root': str(frozen.PROTOTYPE), 'sha256_before': frozen.FREEZE,
            'documents': [], 'errors': [], 'workbook': None,
-           'legacy_exclusion': exclude_royalty_screen, 'execute': execute}
+           'legacy_exclusion': exclude_royalty_screen, 'execute': execute,
+           'exhibits': list(exhibits), 'contract_title_only': contract_title_only}
     prepared_count = 0
     completed = []
     try:
@@ -470,14 +535,14 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
                             key=candidate_rank)
             for item in ranked:
                 if item.get('source_url'):
-                    discovered.setdefault(item['source_url'], item.get('file_type'))
+                    discovered.setdefault(item['source_url'], (item.get('file_type'), item.get('file_description')))
         else:
             for url in urls:
                 try:
                     documents, warnings = frozen.filing_documents(screen, fetcher, url)
                     for item, file_type in documents:
-                        if item not in discovered or not discovered[item]:
-                            discovered[item] = file_type
+                        if item not in discovered or not discovered[item][0]:
+                            discovered[item] = (file_type, None)
                     log['errors'].extend(warnings)
                 except (OSError, ValueError) as exc:
                     log['errors'].append(str(exc))
@@ -485,21 +550,21 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
             raise ValueError('No candidate documents to prepare.')
 
         candidates = []
-        for url, file_type in discovered.items():
+        for url, (file_type, description) in discovered.items():
             document_type = (file_type or '').strip().upper()
-            # EX-101 and EX-104 are separate SEC exhibit types.
-            if re.match(r'^EX-10(?![0-9])', document_type):
-                candidates.append((url, document_type))
+            title = descriptive_title(description, url)
+            if matches_exhibit(document_type, exhibits):
+                candidates.append((url, document_type, title))
             else:
                 log['documents'].append({
-                    'source_url': url, 'document_type': document_type or 'Unknown',
+                    'source_url': url, 'document_type': document_type or 'Unknown', 'title': title,
                     'decision': 'EXCLUDED', 'prescreen_decision': None, 'extractor_status': 'not_sent',
-                    'reason': 'not EX-10' if document_type else 'document type unverified',
+                    'reason': f'not {", ".join(exhibits)}' if document_type else 'document type unverified',
                 })
         if urls is None:
             candidate_cap = limit * DOWNLOADS_PER_AGREEMENT
             print(f'SEC candidates: {len(ranked)} ranked, {len(discovered)} unique URLs, '
-                  f'{len(candidates)} EX-10, at most {candidate_cap} EX-10 attempted.', flush=True)
+                  f'{len(candidates)} matching {", ".join(exhibits)}, at most {candidate_cap} attempted.', flush=True)
             candidates = candidates[:candidate_cap]
         reference = None
         if candidates:
@@ -508,12 +573,22 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
         print(f'Royalty screening mode: frozen{f" and opt-in {SCREEN_VERSION}" if exclude_royalty_screen else ""}.',
               flush=True)
         ready = []
-        for number, (url, document_type) in enumerate(candidates, 1):
+        for number, (url, document_type, description) in enumerate(candidates, 1):
             run = root / f'exhibit-{number:03}'
             try:
                 document = fetcher.get(url)
             except (ValueError, OSError, SECRequestError) as exc:
                 document = screen.RawDocument(url, issue=screen.SourceIssue(screen.FETCH_FAILURE, str(exc)))
+
+            title = candidate_title(document, description, contract_title_only=contract_title_only)
+            if contract_title_only and title and not CONTRACT_TITLE.search(title):
+                log['documents'].append({
+                    'source_url': url, 'document_type': document_type, 'title': title,
+                    'decision': 'EXCLUDED_NOT_CONTRACT_TITLE', 'prescreen_decision': None,
+                    'extractor_status': 'not_sent', 'reason': 'no contract-title keyword',
+                })
+                print(f'EXCLUDED_NOT_CONTRACT_TITLE {url} {title}', flush=True)
+                continue
 
             try:
                 row = frozen.screen_document(screen, document, number)
@@ -524,6 +599,11 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
                        'error': f'{type(exc).__name__}: {exc}'}
                 log['errors'].append(row['error'])
             row['document_type'] = document_type
+            row['title'] = title
+            if contract_title_only and not title:
+                row['title_status'] = 'TITLE_UNKNOWN'
+                row['flags'].append('TITLE_UNKNOWN')
+                print(f'TITLE_UNKNOWN {url} continuing to pre-screen', flush=True)
             try:
                 if document.issue:
                     raise ParseError(document.issue.detail)
@@ -554,7 +634,9 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
                 ready.append((run, document, row))
             if prepared_count == limit:
                 break
-        if candidates and not prepared_count:
+        if candidates and not prepared_count and any(
+            row['decision'] not in {'EXCLUDED', 'EXCLUDED_NOT_CONTRACT_TITLE'} for row in log['documents']
+        ):
             raise ValueError('No exhibit passed preparation in the candidate sample.')
         if not execute:
             print(f'Prepared {prepared_count} exhibit(s). Add --go to run Codex and write Excel.')
@@ -598,6 +680,11 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
         log['errors'].append(f'{type(exc).__name__}: {exc}')
     finally:
         log['prepared_count'] = prepared_count
+        counts = Counter(row['decision'] for row in log['documents'])
+        passed = sum(counts[decision] for decision in ('KEEP', 'SKIP', 'REVIEW'))
+        print(f'Filter summary: {passed} passed; {counts["EXCLUDED"]} excluded by type; '
+              f'{counts["EXCLUDED_NOT_CONTRACT_TITLE"]} excluded by title; '
+              f'{sum(row.get("title_status") == "TITLE_UNKNOWN" for row in log["documents"])} title unknown.', flush=True)
         try:
             frozen.verified_sources()
             log['sha256_after'] = frozen.FREEZE
@@ -632,6 +719,10 @@ def main(argv=None):
     sampler.add_argument('--exclude-royalty-screen', choices=(SCREEN_VERSION,),
                          help='Explicitly opt in to this screen version for one --go batch')
     sampler.add_argument('--gics-reference', type=Path, help='Use a saved copy of the official MSCI workbook')
+    sampler.add_argument('--exhibits', type=exhibit_prefixes, default=DEFAULT_EXHIBITS, metavar='PREFIX[,PREFIX]',
+                         help='SEC document-type prefixes to include (default: EX-10)')
+    sampler.add_argument('--contract-title-only', action='store_true',
+                         help='Exclude known titles without a contract keyword and flag unknown titles')
     for command in (prep, reader, writer):
         command.add_argument('--run', type=Path, required=True)
     args = parser.parse_args(argv)
@@ -647,7 +738,8 @@ def main(argv=None):
             write(args.run)
         else:
             return batch(args.start, args.end, args.max_exhibits, execute=args.go, gics_reference=args.gics_reference,
-                  exclude_royalty_screen=args.exclude_royalty_screen)
+                         exclude_royalty_screen=args.exclude_royalty_screen, exhibits=args.exhibits,
+                         contract_title_only=args.contract_title_only)
     except (OSError, ValueError, KeyError, TypeError, RuntimeError, subprocess.TimeoutExpired) as exc:
         print(f'{args.step}: {exc}', file=sys.stderr)
         return 1

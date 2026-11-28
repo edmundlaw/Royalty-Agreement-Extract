@@ -8,9 +8,12 @@ Run the one-sheet agreement summary from the repository:
 
 Replace the inclusive SEC filing dates and the maximum number of exhibits
 that pass preparation. The batch attempts up to ten EX-10 candidates per slot.
-Only SEC documents identified as EX-10 exhibits go through the frozen Nov 22
-pre-screen and evidence pointer check. Other document types are logged as
-excluded. Preparation errors, including unreadable and oversized sources,
+By default only EX-10 exhibits go through the frozen Nov 22 pre-screen and
+evidence pointer check. Use `--exhibits EX-10,EX-4` to select other SEC
+document-type prefixes. Add `--contract-title-only` to exclude known titles
+without a contract keyword. Unknown titles continue and are flagged. The
+screening log records document type, title and exclusions. Preparation errors,
+including unreadable and oversized sources,
 are logged as REVIEW. With `--go`, the launcher sends eligible KEEPs and readable
 REVIEWs to Codex. REVIEW rows carry a pending-human-review notice in Other
 material conditions, and one exhibit can produce several rows. Omit `--go`
