@@ -616,7 +616,8 @@ def batch(start, end, limit, *, execute=False, gics_reference=None, exclude_roya
                     flag = 'source_too_large' if isinstance(exc, SourceTooLarge) else 'unreadable_source'
                     if flag not in row['flags']:
                         row['flags'].append(flag)
-                row['decision'] = 'REVIEW'
+                if not isinstance(exc, SourceTooLarge) or row['decision'] != 'SKIP':
+                    row['decision'] = 'REVIEW'
                 log['documents'].append(row)
                 print(f'Preparation rejected {url}: {exc}', file=sys.stderr)
                 continue

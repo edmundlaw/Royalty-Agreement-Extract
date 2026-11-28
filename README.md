@@ -12,10 +12,10 @@ By default only EX-10 exhibits go through the frozen Nov 22 pre-screen and
 evidence pointer check. Use `--exhibits EX-10,EX-4` to select other SEC
 document-type prefixes. Add `--contract-title-only` to exclude known titles
 without a contract keyword. Unknown titles continue and are flagged. The
-screening log records document type, title and exclusions. Preparation errors,
-including unreadable and oversized sources,
-are logged as REVIEW. With `--go`, the launcher sends eligible KEEPs and readable
-REVIEWs to Codex. REVIEW rows carry a pending-human-review notice in Other
+screening log records document type, title and exclusions. Preparation errors
+are logged as REVIEW. An otherwise valid SKIP stays SKIP when preparation fails
+only because the prompt exceeds 300,000 characters. With `--go`, the launcher
+sends eligible KEEPs and readable REVIEWs to Codex. REVIEW rows carry a pending-human-review notice in Other
 material conditions, and one exhibit can produce several rows. Omit `--go`
 to prepare and screen without making model calls or writing a workbook.
 

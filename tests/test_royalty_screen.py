@@ -318,13 +318,26 @@ class AuditTests(unittest.TestCase):
             row, = read_json(self.root / "screening_log.json")["documents"]
             self.assertEqual((row["decision"], row["flags"]), ("REVIEW", ["unreadable_source"]))
 
-    def test_preparation_limits_preserve_frozen_evidence_for_review(self):
-        candidates = [URL, URL.replace("ex10.htm", "ex11.htm"), URL.replace("ex10.htm", "ex12.htm")]
-        failures = [summary.SourceTooLarge("Above 300,000 characters"), summary.ParseError("No readable text found"),
-                    RuntimeError("Writing prompt failed")]
+    def test_preparation_failures_preserve_frozen_evidence_and_oversized_skips(self):
+        oversized = summary.SourceTooLarge("Above 300,000 characters")
+        unreadable = summary.ParseError("No readable text found")
+        cases = [
+            ("KEEP", "KEEP", ["pointer_ok"], oversized, "REVIEW", ["pointer_ok", "source_too_large"]),
+            ("REVIEW", "REVIEW", [], oversized, "REVIEW", ["source_too_large"]),
+            ("SKIP", "SKIP", [], oversized, "SKIP", ["source_too_large"]),
+            ("SKIP", "REVIEW", ["unreadable_source"], oversized, "REVIEW",
+             ["unreadable_source", "source_too_large"]),
+            ("SKIP", "SKIP", [], unreadable, "REVIEW", ["unreadable_source"]),
+            ("KEEP", "KEEP", ["pointer_ok"], unreadable, "REVIEW", ["pointer_ok", "unreadable_source"]),
+            ("KEEP", "KEEP", ["pointer_ok"], RuntimeError("Writing prompt failed"), "REVIEW", ["pointer_ok"]),
+        ]
+        candidates = [URL.replace("ex10.htm", f"case-{index}.htm") for index in range(len(cases))]
+        by_url = dict(zip(candidates, cases, strict=True))
 
         def screen_candidate(_, document, number):
-            return dict(frozen_keep(_, document, number), prescreen_decision="KEEP", captured_rate_text="7%")
+            original, decision, flags, *_ = by_url[document.url]
+            return dict(frozen_keep(_, document, number), prescreen_decision=original,
+                        decision=decision, flags=flags.copy(), captured_rate_text="7%" if original == "KEEP" else "")
 
         with (
             patch.object(summary, "sec_user_agent", return_value="test"),
@@ -333,23 +346,25 @@ class AuditTests(unittest.TestCase):
             patch.object(summary.frozen, "screen_document", side_effect=screen_candidate) as frozen_screen,
             patch.object(summary, "discover", return_value=[hit(url) for url in candidates]),
             patch.object(summary, "candidate_rank", return_value=0),
-            patch.object(summary, "prepare", side_effect=failures),
+            patch.object(summary, "prepare", side_effect=[case[3] for case in cases]),
             patch.object(summary, "read") as reader,
         ):
             self.assertEqual(summary.batch(date(2026, 1, 1), date(2026, 1, 10), 2, execute=True,
                                            output_root=self.root), 1)
-            self.assertEqual(frozen_screen.call_count, 3)
+            self.assertEqual(frozen_screen.call_count, len(cases))
             reader.assert_not_called()
         log, = self.root.glob("*/screening_log.json")
         report = read_json(log)
         self.assertNotIn("preparation_failures", report)
-        for row, flags in zip(report["documents"],
-                              (["pointer_ok", "source_too_large"], ["pointer_ok", "unreadable_source"],
-                               ["pointer_ok"]), strict=True):
-            self.assertEqual((row["prescreen_decision"], row["decision"]), ("KEEP", "REVIEW"))
-            self.assertEqual(row["captured_rate_text"], "7%")
-            self.assertEqual(row["flags"], flags)
-            self.assertEqual(row["failure_stage"], "prepare")
+        self.assertEqual(len(report["documents"]), len(cases))
+        for row in report["documents"]:
+            with self.subTest(url=row["source_url"]):
+                original, _, _, failure, decision, flags = by_url[row["source_url"]]
+                self.assertEqual((row["prescreen_decision"], row["decision"]), (original, decision))
+                self.assertEqual(row["captured_rate_text"], "7%" if original == "KEEP" else "")
+                self.assertEqual(row["flags"], flags)
+                self.assertEqual(row["failure_stage"], "prepare")
+                self.assertEqual(row["error"], str(failure))
 
     def test_non_ex10_is_excluded_before_fetch_or_screen(self):
         non_ex10 = [hit(URL, "EX-99.1"), hit(URL.replace("ex10.htm", "form.htm"), "8-K"),
